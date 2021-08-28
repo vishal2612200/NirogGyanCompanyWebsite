@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     width: "100%",
-    padding: "0rem 0rem 0rem 3rem",
     fontFamily: 'arial',
     justifyContent: "space-around",
     alignItems: "center",
@@ -21,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
   imgBox: {
     display: "flex",
     flex: "2 1 auto",
-    justifyContent: "flex-start",
+    justifyContent: "center",
   },
   navItemsBox: {
-    flex: "3 1 auto",
+    flex: "5 2 auto",
     display: "flex",
     justifyContent: "space-evenly",
   
@@ -41,7 +40,7 @@ export default function NavBar() {
 
   const [selected, setSelected] = useState(0);
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('xs'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   let navBarItems;
 
