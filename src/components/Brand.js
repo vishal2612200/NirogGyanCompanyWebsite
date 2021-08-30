@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
+import { Typography, Box } from "@material-ui/core";
+import * as path from 'path';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,14 +29,14 @@ export default function NavBar() {
   const classes = useStyles();
 
   const trustedBrandsLogoImages = [
-    // "https: //www.affoy.com/wp-content/uploads/2019/01/medlife-300x134.jpg",
-    "https://s3-ap-southeast-1.amazonaws.com/livehealthuser/images/CL-logo-green-black-text-1000px.svg",
-    "http://www.niramayahealthcare.com/img/img/logo.png",
-    "https://drdangslab.com/images/DDL-Logo-ICMR.png",
+    path.join(process.env.PUBLIC_URL, "brands", "crelio-health.png"),
+    path.join(process.env.PUBLIC_URL, "brands", "dr-dang-labs.png"),
+    path.join(process.env.PUBLIC_URL, "brands", "medlife.png"),
+    path.join(process.env.PUBLIC_URL, "brands", "niramaya.png")
   ];
   return (
     <div className={classes.root}>
-      <Typography variant="h2" color="primary" className={classes.title}>
+      <Typography variant="h2" color="textPrimary" className={classes.title}>
         Trusted HealthCare Brands
       </Typography>
       <Box

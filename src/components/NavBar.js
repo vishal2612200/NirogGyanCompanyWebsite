@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link, IconButton, AppBar, Toolbar, Typography, Box, useTheme } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
+import * as path from "path";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +61,6 @@ export default function NavBar() {
 
   const [activeLinkIndex, setActiveLinkIndex] = useState(0);
   const [isButtonPressed, setIsButtonPressed] = useState(false);
-  console.log(isButtonPressed)
   const theme = useTheme();
 
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -89,9 +89,9 @@ export default function NavBar() {
     <div className={classes.root}>
       <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
         <Toolbar className={classes.toolbar}>
-          <Box className={classes.imgBox} >
+          <Box className={classes.imgBox} key='imgBox'>
             <img
-              src={process.env.PUBLIC_URL + "/logo-icon.png"}
+              src={path.join(process.env.PUBLIC_URL, "/logo-icon.png")}
               alt="Broken"
               className={classes.imgLogo}
             />
@@ -106,7 +106,7 @@ export default function NavBar() {
               : ""}
           </Box>
 
-          <Box className={classes.navItemsBox}>
+          <Box className={classes.navItemsBox} key='navItems'>
             {!isSmallScreen || (isSmallScreen && isButtonPressed) ? navItems : ""}
           </Box>
         </Toolbar>

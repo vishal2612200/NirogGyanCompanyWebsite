@@ -1,10 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Card from "./Card";
-
+import { HeadingWithText } from "./utils/headingWithText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,34 +44,38 @@ export default function CenteredGrid() {
       },
     }
   ];
+
+  const videos = [
+    "https://www.youtube.com/embed/H0cHIewcQ2M",
+    "https://www.youtube.com/embed/MlLAXpoxNvQ",
+    "https://www.youtube.com/embed/L4aPen8hCL8"
+  ]
   return (
-    <div className={classes.root}>
-      <Typography variant="h2" color="primary" className={classes.title}>
-        NirogGyan Bytes
-      </Typography>
+    <Grid container>
+      <Grid item>
 
-      <Typography
-        variant="body1"
-        color="textSecondary"
-        className={classes.typography}
-        gutterBottom
-      >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
-        commodi iure sequi. Sint, quibusdam. Voluptatibus atque eaque
-        accusantium impedit obcaecati maxime odio debitis ratione quam ipsa
-        aperiam, architecto fugit voluptas?
-      </Typography>
-
-      <Grid container spacing={3} width="80%">
-        {cardList.map(({ media, content }) => (
-          <Grid item xs={12} lg={4}>
-            <Paper className={classes.paper}>
-              <Card media={media} content={content}></Card>
-            </Paper>
+        <HeadingWithText
+          heading="NirogGyan Bytes"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
+        />
+      </Grid>
+      <Grid container item spacing={4}>
+        {videos.map((link, index) => (
+          <Grid item>
+            <iframe
+              width="auto"
+              height="inherit"
+              src={link}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              key={index} />
           </Grid>
         ))}
       </Grid>
-    </div>
+
+    </Grid>
   );
 
 }
+

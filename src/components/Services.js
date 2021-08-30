@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Card from "./Card";
-import { Container } from "@material-ui/core"
+import { HeadingWithText } from "./utils/headingWithText";
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,86 +15,92 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
-  typography: {
-    align: "center",
-    padding: "2% 10%",
+  feature: {
+    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+    fontSize: "2rem",
+    border: "1px solid #B8BBBD",
+    borderRadius: "10px",
+    "&__image-box": {
+      backgroundColor: "#E9F5FF",
+      padding: "1rem 3rem"
+    }
   },
-}));
+  "&__content": {
+  }
+}
 
-export default function CenteredGrid() {
+));
+
+
+
+const Card = ({ imgPath, heading, content }) => {
+  const classes = useStyles();
+  console.log(imgPath);
+  return (
+    <Grid container direction="column" className={classes.feature}>
+      <Grid item xs={12}>
+        <img src={imgPath} alt="service" />
+      </Grid>
+      <Grid item xs={12} >
+        <Typography variant="h5">{heading}</Typography>
+      </Grid>
+      <Grid item xs={12} >
+        <Typography variant="body1">{content}</Typography>
+      </Grid>
+    </Grid>
+  );
+}
+
+
+export default function Services() {
   const classes = useStyles();
   const cardList = [
     {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Search Doctor",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
+      imgPath: process.env.PUBLIC_URL + "/services/services-templates.png",
+      heading: "Multiple Reporting Templates",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,"
     },
     {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Online Pharmacy",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
+      imgPath: process.env.PUBLIC_URL + "/services/services-instant.png",
+      heading: "Instant, Automated, Secure",
+      content: "Buy  your medicines with our mobile application with a simple delivery system"
     },
     {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Consultation",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
+      imgPath: process.env.PUBLIC_URL + "/services/services-pdf-whatsapp.png",
+      heading: "PDF, App, E-mail, Whatsapp",
+      content: "Free consultation with our trusted doctors and get the best recomendations"
     },
     {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Details Info",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
-    }, {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Emergency core",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
+      imgPath: process.env.PUBLIC_URL + "/services/services-marketing.png",
+      heading: "Whitelabel + Marketing",
+      content: "Free consultation with our trusted doctors and get the best recomendations"
+    }
+    ,
+    {
+      imgPath: process.env.PUBLIC_URL + "/services/services-affordable.png",
+      heading: "Special Corporate Offerings",
+      content: "You can get 24/7 urgent care for yourself or your children and your lovely family"
     },
     {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Tracking",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
-    },
+      imgPath: process.env.PUBLIC_URL + "/services/services-corporate-offerings.png",
+      heading: "Affordable & Doctor-friendly", content: "Track and save your medical history and health data"
+    }
+
   ];
   return (
-    <div className={classes.root}>
-      <Container >
-        <Typography variant="h2" color="primary" className={classes.title}>
-        Our services
-      </Typography>
 
-      <Typography
-        variant="body1"
-        color="textSecondary"
-        className={classes.typography}
-        gutterBottom
-      >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
-        commodi iure sequi. Sint, quibusdam. Voluptatibus atque eaque
-        accusantium impedit obcaecati maxime odio debitis ratione quam ipsa
-        aperiam, architecto fugit voluptas?
-      </Typography>
-
-      <Grid container spacing={3} width="80%">
-        {cardList.map(({ media, content }) => (
-          <Grid item xs={12} lg={4}>
-            <Paper className={classes.paper}>
-              <Card media={media} content={content}></Card>
-            </Paper>
+    <Grid container direction="column">
+      <Grid item>
+        <HeadingWithText
+          heading="The best Patient-Engagement Tool out there"
+          content="We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case." />
+      </Grid>
+      <Grid container spacing={3}>
+        {cardList.map(({ imgPath, heading, content }, index) => (
+          <Grid item xs={12} lg={4} key={index}>
+            <Card {...{ imgPath, heading, content }} />
           </Grid>
         ))}
       </Grid>
-</Container>
-    </div>
-  );
+    </Grid>);
 }
