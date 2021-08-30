@@ -5,7 +5,9 @@ import Services from './components/Services';
 import Bytes from './components/Bytes';
 import HeroSection from './components/HeroSection';
 import Features from './components/Features';
-import Report  from './components/Report';
+import Report from './components/Report';
+import Achievements from './components/Achievements';
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +17,8 @@ function App() {
       <Features />
       <Services />
       <Bytes />
-      <Report />/
+      <Report />
+      <Achievements />
     </div>
   );
 }

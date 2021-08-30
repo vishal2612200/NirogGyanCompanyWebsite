@@ -52,7 +52,7 @@ const Feature = ({ imgPath, name }) => {
     const classes = useStyles();
 
     return (
-        <Grid container item direction="column" sm={6}>
+        <Grid item direction="column" sm={6} >
             <Grid item sm={12} >
                 <img src={imgPath} alt="feature" />
             </Grid>
@@ -74,18 +74,22 @@ export default function SimpleContainer() {
 
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} style={{backgroundColor:"#EAEEF3"}}>
             <Grid container item direction="column" sm={12} md={6}>
                 <Grid item xs={12}>
                     <HeadingWithText
                         heading="Believe what you see"
                         content="Checkout our SmartReports below and know the difference" />
-
-                    <Grid container item xs={12} spacing={2} flexWrap="wrap">
+                    <Grid container item xs={12} spacing={2} >
                         {features}
                     </Grid>
+                    <Grid item>
 
+                        My Smart Diabetes Report helped me get the timely shock that I needed to correct myself. Thank you!
+                        <Typography variant="h6"  >Zubair Ahmed, veteran journalist</Typography>
+                    </Grid>
                 </Grid>
+
             </Grid>
 
             <Grid item xs={12} sm={12} md={6}>
@@ -114,6 +118,9 @@ function useFeatures() {
             imgPath: path.join(process.env.PUBLIC_URL, "/report/report-diabetes.png"),
             name: "Diabetes"
         }
-    ].map(({ imgPath, name }, index) => (<Feature {...{ imgPath, name }} key={index} />));
+    ].map(
+        ({ imgPath, name }, index) => (
+            <Feature {...{ imgPath, name }} key={index} />)
+    );
 }
 
