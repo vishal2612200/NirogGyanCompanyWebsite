@@ -84,28 +84,28 @@ export default function Achievements() {
   return (
     <Grid
       container
-      spacing={4}
+      spacing={4} 
       sm={12}
-      justifyContent="space-evenly"
+      justifyContent="space-between"
       className={classes.root}
     >
-      <Grid item style={{ top: 0 }}>
+      <Grid container item style={{ top: 0 }} sm={12}>
         <Grid
           item
           sm={4}
           justifyContent="flex-start"
           className={classes.imgLeft}
-        ></Grid>
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora veritatis est. Velit accusamus nisi fugit accusantium optio cupiditate voluptatum, corrupti nostrum, asperiores nam exercitationem fuga officiis quis a dicta. </Grid>
         <Grid
           item
           sm={4}
           justifyContent="flex-end"
           className={classes.imgRight}
-        ></Grid>
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quia neque doloribus fuga, totam voluptatibus? Corrupti ut nostrum ratione dolorum, dolorem consequuntur ab totam repudiandae eum porro necessitatibus illum repellendus.</Grid>
       </Grid>
-      <Grid item style={{ top: 0 }}>
+      {/* <Grid item style={{ top: 0 }}>
         {achievements}
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }

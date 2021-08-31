@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function NavBar() {
+export default function NavBar({ state: navBar }) {
   const classes = useStyles();
 
   const [activeLinkIndex, setActiveLinkIndex] = useState(0);
@@ -65,10 +65,9 @@ export default function NavBar() {
 
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const navItemsNames = ["Home", "About Us", "How It Works", "Blog", "FAQs"];
 
   let navItems = (
-    navItemsNames.map((text, index) => (
+    navBar.navLinks.map((text, index) => (
       // eslint-disable-next-line eqeqeq
       <Link key={index}
         onClick={() => setActiveLinkIndex(index)}
@@ -89,7 +88,7 @@ export default function NavBar() {
     <div className={classes.root}>
       <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
         <Toolbar className={classes.toolbar}>
-          <Box className={classes.imgBox} key='imgBox'>
+          <Box className={classes.imgBox} key='imgBox' flexWrap="wrap">
             <img
               src={path.join(process.env.PUBLIC_URL, "/logo-icon.png")}
               alt="Broken"
@@ -111,6 +110,8 @@ export default function NavBar() {
           </Box>
         </Toolbar>
       </AppBar>
+
+
     </div>
   );
 }

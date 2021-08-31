@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { HeadingWithText } from "./utils/headingWithText";
-
+import Carousal from "./utils/Carousal";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -51,30 +51,27 @@ export default function CenteredGrid() {
     "https://www.youtube.com/embed/L4aPen8hCL8"
   ]
   return (
-    <Grid container>
-      <Grid item>
-
-        <HeadingWithText
-          heading="NirogGyan Bytes"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
+    <div>
+      <Grid container>
+        <Grid item>
+          <HeadingWithText
+            heading="NirogGyan Bytes"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
+          />
+        </Grid>
+        </Grid>
+        
+      <Carousal links={videos} component={(link) => <iframe
+        width="auto"
+        height="inherit"
+        src={link}
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />
-      </Grid>
-      <Grid container item spacing={4}>
-        {videos.map((link, index) => (
-          <Grid item>
-            <iframe
-              width="auto"
-              height="inherit"
-              src={link}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              key={index} />
-          </Grid>
-        ))}
-      </Grid>
-
-    </Grid>
+    } />
+      
+    </div>
   );
 
 }
