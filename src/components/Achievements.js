@@ -1,102 +1,136 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import {
-    Grid,
-    Button,
-} from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { HeadingWithText } from "./utils/headingWithText"
+import { HeadingWithText } from "./utils/headingWithText";
+import StarIcon from "@material-ui/icons/Star";
 import * as path from "path";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
-
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
+  root: {
+    flexGrow: 1,
+    backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
+  },
+  imgLeft: {
+    backgroundImage: `url(${path.join(
+      process.env.PUBLIC_URL,
+      "achievements",
+      "achievements-background1.png"
+    )})`,
+    backgroundRepeat: "no-repeat",
+  },
+
+  imgRight: {
+    backgroundImage: `url(${path.join(
+      process.env.PUBLIC_URL,
+      "achievements",
+      "achievements-background2.png"
+    )})`,
+    backgroundRepeat: "no-repeat",
+  },
+  title: {
+    wordWrap: "break-word",
+    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+    fontWeight: "700",
+  },
+  text: {
+    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+    textAlign: "left",
+  },
+  feature: {
+    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+    fontSize: "2rem",
+    border: "1px solid #B8BBBD",
+    "&__image-box": {
+      backgroundColor: "#E9F5FF",
+      padding: "1rem 3rem",
     },
-    title: {
-        wordWrap: "break-word",
-        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-        fontWeight: "700",
-    },
-    text: {
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textAlign: "left",
-    },
-    watchVideoButton: {
-        backgroundColor: "transparent",
-        textTransform: "none",
-        "&:hover": { backgroundColor: "transparent" },
-    },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: "center",
-        color: theme.palette.text.secondary,
-    },
-    feature: {
-        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-        fontSize: "2rem",
-        border: "1px solid #B8BBBD",
-        "&__image-box": {
-            backgroundColor: "#E9F5FF",
-            padding: "1rem 3rem"
-        }
-    },
-    "&__content": {
-    }
-}
-));
+  },
+  "&__content": {},
+}));
 
 const Item = ({ textBig, textSmall }) => {
-    return (<>
-        <Grid container item style={{ backgroundColor: "#1242AC" }} direction="column">
-        <Grid item >
-            <Typography variant="h6">
-                {textBig}
-            </Typography>
+  return (
+    <>
+      <Grid
+        container
+        item
+        sm={2}
+        style={{
+          backgroundColor: "#1242AC",
+          borderRadius: "2rem",
+          color: "#fff",
+          padding: "2rem 1rem",
+        }}
+        direction="column"
+      >
+        <Grid item>
+          <Typography variant="h4">{textBig}</Typography>
         </Grid>
-        <Grid item >
-            <Typography variant="h6">
-                {textSmall}
-            </Typography>
+        <Grid item>
+          <Typography variant="h6">{textSmall}</Typography>
         </Grid>
-        </Grid>
-    </>)
-
-}
+      </Grid>
+    </>
+  );
+};
 
 export default function Achievements() {
-    const classes = useStyles();
-    const achievements = useAchievements();
+  const classes = useStyles();
+  const achievements = useAchievements();
 
-    return (<Grid container spacing={2} sm={4} >
-        {
-            achievements
-        
-        }
-    </Grid>)
-
+  return (
+    <Grid
+      container
+      spacing={4}
+      sm={12}
+      justifyContent="space-evenly"
+      className={classes.root}
+    >
+      <Grid item style={{ top: 0 }}>
+        <Grid
+          item
+          sm={4}
+          justifyContent="flex-start"
+          className={classes.imgLeft}
+        ></Grid>
+        <Grid
+          item
+          sm={4}
+          justifyContent="flex-end"
+          className={classes.imgRight}
+        ></Grid>
+      </Grid>
+      <Grid item style={{ top: 0 }}>
+        {achievements}
+      </Grid>
+    </Grid>
+  );
 }
 
 const useAchievements = () => {
-    const achievements = [
-        {
-            textBig: "40 +", textSmall: "Labs Running",
-        },
-        {
-            textBig: "300,000", textSmall: "Reports Generated",
-        },
+  const achievements = [
+    {
+      textBig: "40+",
+      textSmall: "Labs Running",
+    },
+    {
+      textBig: "300,000",
+      textSmall: "Reports Generated",
+    },
 
-        {
-            textBig: "4.7", textSmall: "Rating from Users",
-        },
-        {
-            textBig: "04", textSmall: "Countries Reached",
-        },
-
-    ]
-    return achievements.map(
-        ({ textBig, textSmall }) => <Item textBig={textBig} textSmall={textSmall} />
-    )
-}
+    {
+      textBig: <>4.7 &#x2B50;</>,
+      textSmall: "Rating from Users",
+    },
+    {
+      textBig: "04",
+      textSmall: "Countries Reached",
+    },
+  ];
+  return achievements.map(({ textBig, textSmall }) => (
+    <Item textBig={textBig} textSmall={textSmall} />
+  ));
+};
