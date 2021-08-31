@@ -1,21 +1,19 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import {
-  Container,
-  Box,
   Grid,
   Button,
   IconButton,
-  Avatar,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import DetailsIcon from "@material-ui/icons/Details";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
   },
   title: {
     wordWrap: "break-word",
@@ -39,78 +37,93 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleContainer() {
+
+export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
-  return (
-    <Grid
-      container
-      spacing={2}
+  return <Grid container spacing={2} className={classes.root}>
+    <Content content={heroSection.info} />
+    <ImageBox imagePath={heroSection.imagePath} />
+  </Grid>
+
+}
+const Content = ({ content }) => {
+  const classes = useStyles();
+  return <Grid item container direction="row" justifyContent="flex-start" alignItems="space-around" sm={12} md={6} >
+    <Heading text={content.heading} />
+    <Description content={content.description} />
+    <ButtonSet content={content.buttons} />
+  </Grid>
+}
+
+const Heading = ({ text }) => {
+  const classes = useStyles();
+  console.log(text);
+
+  return <Grid item xs={12}>
+    <Typography
+      variant="h2"
+      // eslint-disable-next-line eqeqeq
+      className={classes.title}>
+      {text.line1}
+    </Typography>
+    <Typography
+      variant="h2"
+      // eslint-disable-next-line eqeqeq
+      className={classes.title}>
+      {text.line2}
+    </Typography>
+  </Grid>
+}
+const Description = ({ content }) => {
+  const classes = useStyles();
+  return <Grid item xs={12} className={classes.text}>
+    {content}
+  </Grid>
+}
+
+const ImageBox = ({ imagePath }) => {
+
+  return <Grid item xs={12} sm={12} md={6}>
+    <img src={imagePath} alt="hero" />
+  </Grid>
+}
+
+const ButtonSet = ({ content }) => {
+  return <>  <ButtonServices text={content.services} />
+    <ButtonWatchVideo text={content.watchVideo} />
+  </>
+}
+
+const ButtonServices = ({ text }) => {
+  return <Grid item xs={6}>
+    <Button
+      variant="contained"
+      color="primary"
       style={{
-        backgroundImage:
-          "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
+        borderRadius: "20px",
+        padding: "0.5rem 2rem",
+        textTransform: "none",
       }}
     >
-      <Grid
-        item
-        container
-        direction="row"
-        justifyContent="flex-start"
-        alignItems="space-around"
-        flexShrink="1"
-        spacing={0}
-        sm={12}
-        md={6}
-      >
-        <Grid item xs={12}>
-          <Typography
-            variant="h2"
-            // eslint-disable-next-line eqeqeq
-            className={classes.title}>
-            Simplifying
-          </Typography>
-          <Typography
-            variant="h2"
-            // eslint-disable-next-line eqeqeq
-            className={classes.title}>
-            Medical Reports
-          </Typography>
-        </Grid>
-        <Grid item xs={12} className={classes.text}>
-          NirogGyan makes lab tests engaging so that you understand your health
-          better, with easy-to-understand and visual SmartReports. We are B2B
-          and work with healthcare providers.{" "}
-        </Grid>
-        <Grid item xs={6}>
-          <Button
-            variant="contained"
-            color="primary"
-            style={{
-              borderRadius: "20px",
-              padding: "0.5rem 2rem",
-              textTransform: "none",
-            }}
-          >
-            our Services
-          </Button>
-        </Grid>
-        <Grid item xs={6}>
-          <IconButton>
-            <PlayCircleFilledIcon
-              style={{ color: "#102554", fontSize: "3rem" }}
-            />
-          </IconButton>
-          <Typography
-            variant="h8"
-            // eslint-disable-next-line eqeqeq
-          >
-            Watch Video
-          </Typography>
-        </Grid>
-      </Grid>
+      {text}
+    </Button>
+  </Grid>
+}
 
-      <Grid item xs={12} sm={12} md={6}>
-        <img src={process.env.PUBLIC_URL + "/hero-image.png"} alt="hero" />
-      </Grid>
-    </Grid>
-  );
+
+const ButtonWatchVideo = ({ text }) => {
+  return <>
+    <Grid item xs={6}>
+      <IconButton>
+        <PlayCircleFilledIcon
+          style={{ color: "#102554", fontSize: "3rem" }}
+        />
+      </IconButton>
+      <Typography
+        variant="subtitle1"
+      // eslint-disable-next-line eqeqeq
+      >
+        {text}
+      </Typography>
+    </Grid></>
 }
