@@ -66,7 +66,7 @@ export default function NavBar({ state: navBar }) {
       <animated.div className={classes.root} style={props}>
         <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
           <Toolbar className={classes.toolbar} >
-            <Grid container flexWrap="wrap">
+            <Grid container >
               <ImageBox imgPath={navBar.logoImg} />
               <MenuOpenButton />
               <NavItemsMediumScreen links={navBar.navLinks} />

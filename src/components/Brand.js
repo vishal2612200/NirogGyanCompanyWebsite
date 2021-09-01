@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { useSpring, animated, useTransition } from "react-spring";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imagesContainer: {
     justifyContent: "space-evenly",
+    overflowX: "hidden"
   },
 }));
 
@@ -27,21 +28,25 @@ export default function Brand({ state: brand }) {
   const logoImages = brand.trustedBrandsLogoImages;
   const [startingIndex, setStartingIndex] = useState(0);
 
-  useEffect(() => {
-    setTimeout(
-      () => setStartingIndex((state) => ++state % logoImages.length),
-      2000
-    );
+  const styles = useTransition(startingIndex, {
+    key: startingIndex,
+    loop: true,
+    to: { opacity: 0 },
+    from: { opacity: 1 },
+    config: { duration: 4000 },
   });
+
   let images = [];
   const numItemsCarousal = 3;
-  for (let i = startingIndex; i < startingIndex + numItemsCarousal; i++) {
+
+  for (let i = 0; i < logoImages.length; i++) {
     images.push(
-      <Grid item>
-        <img src={logoImages[i]} alt="img" />
+      <Grid item key={i}>
+        <img src={logoImages[i]} alt="client logo" />
       </Grid>
     );
   }
+
   return (
     <Grid container className={classes.root}>
       <Grid item className={classes.title}>
