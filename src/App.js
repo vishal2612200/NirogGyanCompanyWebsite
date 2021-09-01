@@ -17,10 +17,9 @@ function App() {
   return (
     <div className="App">
       <NavBar state={state.NavBar} />
-      
-       <HeroSection state={state.HeroSection} />
-      {/*<Brand state={state.Brand} />
-      <Features state={state.Features} />
+      <HeroSection state={state.HeroSection} />
+      <Brand state={state.Brand} />
+      {/*<Features state={state.Features} />
       <Services state={state.Services} />
       <Bytes state={state.Bytes} />
       <Report state={state.Report} />

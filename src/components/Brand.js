@@ -1,56 +1,57 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box } from "@material-ui/core";
-import * as path from 'path';
+import { Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    direction: "column",
+    justifyContent: "center",
+    alignItems: "center",
     padding: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
+    textAlign: "center",
   },
-  containerImgLogo: {
-    border: "2px solid #666666",
-  },
-  imgLogo: {
-    width: "250px",
-    filter: "grayscale(100%)",
-  },
-  imageList: {
-    flexWrap: "nowrap",
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: "translateZ(0)",
+  imagesContainer: {
+    justifyContent: "space-evenly",
   },
 }));
 
-export default function NavBar() {
+export default function Brand({ state: brand }) {
   const classes = useStyles();
+  const logoImages = brand.trustedBrandsLogoImages;
+  const [startingIndex, setStartingIndex] = useState(0);
 
-  const trustedBrandsLogoImages = [
-    path.join(process.env.PUBLIC_URL, "brands", "crelio-health.png"),
-    path.join(process.env.PUBLIC_URL, "brands", "dr-dang-labs.png"),
-    path.join(process.env.PUBLIC_URL, "brands", "medlife.png"),
-    path.join(process.env.PUBLIC_URL, "brands", "niramaya.png")
-  ];
+  useEffect(() => {
+    setTimeout(
+      () => setStartingIndex((state) => ++state % logoImages.length),
+      2000
+    );
+  });
+  let images = [];
+  const numItemsCarousal = 3;
+  for (let i = startingIndex; i < startingIndex + numItemsCarousal; i++) {
+    images.push(
+      <Grid item>
+        <img src={logoImages[i]} alt="img" />
+      </Grid>
+    );
+  }
   return (
-    <div className={classes.root}>
-      <Typography variant="h2" color="textPrimary" className={classes.title}>
-        Trusted HealthCare Brands
-      </Typography>
-      <Box
-        display="flex"
-        justifyContent="space-evenly"
-        padding="2rem"
-        flexWrap="wrap"
-        alignContent="center"
-        alignItems="center"
-      >
-        {trustedBrandsLogoImages.map((image) => (
-          <img className={classes.imgLogo} src={image} alt="" />
-        ))}
-      </Box>
-    </div>
+    <Grid container className={classes.root}>
+      <Grid item className={classes.title}>
+        <Typography variant="h2" color="textPrimary" className={classes.title}>
+          {brand.heading}
+        </Typography>
+      </Grid>
+      <Grid container item className={classes.imagesContainer}>
+        {images}
+      </Grid>
+    </Grid>
   );
 }

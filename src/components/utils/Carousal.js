@@ -52,27 +52,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const useItems = (links, component) => {
-    const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const numOfVisibleLinks = isSmallScreen ? 2 : 3;
-    const [startingIndex, setStartingIndex] = useState(0);
-
-    let items = []
-    for (let i = startingIndex; i < startingIndex + numOfVisibleLinks; i++) {
-        items.push(
-            component(links[i > 0 ? i : links.length + i])
-        );
-    }
-
-    return [startingIndex, setStartingIndex, items]
-}
 
 export default function Carousal({ links, component }) {
-
+    
     const classes = useStyles();
     const [startingIndex, setStartingIndex, items] = useItems(links, component);
-
+    
     return (
         <Grid container className={classes.root} direction="row">
             <Grid item xs={1}>
@@ -95,3 +80,18 @@ export default function Carousal({ links, component }) {
     );
 }
 
+const useItems = (links, component) => {
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const numOfVisibleLinks = isSmallScreen ? 2 : 3;
+    const [startingIndex, setStartingIndex] = useState(0);
+
+    let items = []
+    for (let i = startingIndex; i < startingIndex + numOfVisibleLinks; i++) {
+        items.push(
+            component(links[i > 0 ? i : links.length + i])
+        );
+    }
+
+    return [startingIndex, setStartingIndex, items]
+}

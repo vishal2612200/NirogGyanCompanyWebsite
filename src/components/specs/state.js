@@ -13,6 +13,15 @@ export default (function () {
                 buttons: { services: "our Services", watchVideo: "Watch Video" }
             },
             imagePath: path.join(process.env.PUBLIC_URL, "/hero-image.png"),
+        },
+        Brand: {
+            heading: "Trusted HealthCare Brands",
+            trustedBrandsLogoImages: [
+                path.join(process.env.PUBLIC_URL, "brands", "crelio-health.png"),
+                path.join(process.env.PUBLIC_URL, "brands", "dr-dang-labs.png"),
+                path.join(process.env.PUBLIC_URL, "brands", "medlife.png"),
+                path.join(process.env.PUBLIC_URL, "brands", "niramaya.png")
+            ]
         }
     }
 
