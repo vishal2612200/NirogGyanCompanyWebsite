@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
   },
   title: {
-    wordWrap: "break-word",
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
     fontWeight: "700",
@@ -28,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   watchVideoButton: {
     backgroundColor: "transparent",
     textTransform: "none",
+
     "&:hover": { backgroundColor: "transparent" },
   },
   paper: {
@@ -35,76 +35,90 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
+  buttonServices: {
+    borderRadius: "20px",
+    padding: "0.5rem 2rem",
+    textTransform: "none",
+  },
+  videoButtonIcon: {
+    color: "#102554",
+    fontSize: "3rem"
+  }
 }));
 
 
 export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
-  return <Grid container spacing={2} className={classes.root}>
-    <Content content={heroSection.info} />
-    <ImageBox imagePath={heroSection.imagePath} />
-  </Grid>
+  return (
+    <Grid container spacing={2} className={classes.root}>
+      <Content content={heroSection.info} />
+      <ImageBox imagePath={heroSection.imagePath} />
+    </Grid>
+  )
 
 }
+
 const Content = ({ content }) => {
   const classes = useStyles();
-  return <Grid item container direction="row" justifyContent="flex-start" alignItems="space-around" sm={12} md={6} >
+  return <Grid container item sm={12} md={6} direction="column">
     <Heading text={content.heading} />
-    <Description content={content.description} />
+    <Description text={content.description} />
     <ButtonSet content={content.buttons} />
   </Grid>
 }
 
 const Heading = ({ text }) => {
   const classes = useStyles();
-  console.log(text);
 
-  return <Grid item xs={12}>
-    <Typography
-      variant="h2"
-      // eslint-disable-next-line eqeqeq
-      className={classes.title}>
-      {text.line1}
-    </Typography>
-    <Typography
-      variant="h2"
-      // eslint-disable-next-line eqeqeq
-      className={classes.title}>
-      {text.line2}
-    </Typography>
+  return <Grid container item md={12} direction="column">
+    <Grid item >
+      <Typography
+        variant="h2"
+        className={classes.title}>
+        {text.line1}
+      </Typography>
+    </Grid>
+
+    <Grid item>
+      <Typography
+        variant="h2"
+        className={classes.title}
+      >
+        {text.line2}
+      </Typography>
+    </Grid>
   </Grid>
 }
-const Description = ({ content }) => {
+
+const Description = ({ text }) => {
   const classes = useStyles();
-  return <Grid item xs={12} className={classes.text}>
-    {content}
+  return <Grid item xs={12} className={classes.text} >
+    <Typography variant="body2" style={{ textWrap: "normal" }}>
+      {text}
+    </Typography>
   </Grid>
 }
 
 const ImageBox = ({ imagePath }) => {
 
-  return <Grid item xs={12} sm={12} md={6}>
+  return <Grid item xs={12} md={6}>
     <img src={imagePath} alt="hero" />
   </Grid>
 }
 
 const ButtonSet = ({ content }) => {
-  return <>  <ButtonServices text={content.services} />
+  return <Grid container item md={12}>
+    <ButtonServices text={content.services} />
     <ButtonWatchVideo text={content.watchVideo} />
-  </>
+  </Grid>
 }
 
 const ButtonServices = ({ text }) => {
+  const classes = useStyles();
   return <Grid item xs={6}>
     <Button
       variant="contained"
-      color="primary"
-      style={{
-        borderRadius: "20px",
-        padding: "0.5rem 2rem",
-        textTransform: "none",
-      }}
-    >
+      color="primary" className={classes.buttonServices}    >
       {text}
     </Button>
   </Grid>
@@ -112,18 +126,17 @@ const ButtonServices = ({ text }) => {
 
 
 const ButtonWatchVideo = ({ text }) => {
-  return <>
+  const classes = useStyles();
+  return <Grid container item spacing={2} >
     <Grid item xs={6}>
       <IconButton>
-        <PlayCircleFilledIcon
-          style={{ color: "#102554", fontSize: "3rem" }}
-        />
+        <PlayCircleFilledIcon className={classes.videoButtonIcon} />
       </IconButton>
-      <Typography
-        variant="subtitle1"
-      // eslint-disable-next-line eqeqeq
-      >
+    </Grid>
+    <Grid item xs={6}>
+      <Typography variant="subtitle1">
         {text}
       </Typography>
-    </Grid></>
+    </Grid>
+  </Grid>
 }
