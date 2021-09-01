@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import { HeadingWithText } from "./utils/headingWithText";
+import { HeadingWithText } from "./utils/HeadingWithText";
 import Carousal from "./utils/Carousal";
 const useStyles = makeStyles((theme) => ({
   root: {

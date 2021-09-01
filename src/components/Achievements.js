@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { HeadingWithText } from "./utils/headingWithText";
+import { HeadingWithText } from "./utils/HeadingWithText";
 import StarIcon from "@material-ui/icons/Star";
 import * as path from "path";
 import "@fontsource/nunito-sans";

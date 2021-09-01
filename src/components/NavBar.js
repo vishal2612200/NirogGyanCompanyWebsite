@@ -1,9 +1,8 @@
-import React, { createContext, useState } from "react";
+import React, { useState, useContext, createContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link, IconButton, AppBar, Toolbar, Typography, Grid, useTheme } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
-import * as path from "path";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
   },
   [theme.breakpoints.up('sm')]: {
     toolbar: {
-      width: "100%",
       fontFamily: 'arial',
       justifyContent: "space-around",
       alignItems: "center",
@@ -32,11 +30,9 @@ const useStyles = makeStyles((theme) => ({
   },
   [theme.breakpoints.down('sm')]: {
     toolbar: {
-      width: "100%",
       fontFamily: 'arial',
       justifyContent: "space-around",
       alignItems: "center",
-      flexWrap: "wrap"
     },
     imgBox: {
       display: "flex",
@@ -56,34 +52,40 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+const NavContext = createContext();
 
 export default function NavBar({ state: navBar }) {
   const classes = useStyles();
   const [isButtonPressed, setIsButtonPressed] = useState(false);
+  const [activeLinkIndex, setActiveLinkIndex] = useState(0);
 
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
-        <Toolbar className={classes.toolbar} >
-          <Grid container style={{ margin: "0 3rem 0 1rem" }}>
-            <ImageBox imgPath={navBar.logoImg} />
-            <MenuOpenButton setIsButtonPressed={setIsButtonPressed} />
-            <NavItems links={navBar.navLinks} />
-          </Grid>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <NavContext.Provider value={{ isButtonPressed, setIsButtonPressed, activeLinkIndex, setActiveLinkIndex }}>
+      <div className={classes.root}>
+        <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
+          <Toolbar className={classes.toolbar} >
+            <Grid container flexWrap="wrap">
+              <ImageBox imgPath={navBar.logoImg} />
+              <MenuOpenButton />
+              <NavItemsMediumScreen links={navBar.navLinks} />
+            </Grid>
+
+          </Toolbar>
+          <NavItemsSmallScreen links={navBar.navLinks} />
+        </AppBar>
+      </div>
+    </NavContext.Provider>
   );
 }
 
 
 
-const MenuOpenButton = ({ setIsButtonPressed }) => {
+const MenuOpenButton = () => {
 
   const classes = useStyles();
   const isSmallScreen = useSmallScreen();
-
+  const { setIsButtonPressed } = useContext(NavContext);
   return <>
     {
       isSmallScreen ? (
@@ -93,38 +95,37 @@ const MenuOpenButton = ({ setIsButtonPressed }) => {
             className={classes.menuButton}
             color="primary"
             aria-label="menu"
-            onClick={(state) => setIsButtonPressed(!state)}>
+            onClick={() => setIsButtonPressed(state => !state)}>
             <MenuIcon />
           </IconButton>
-
         </Grid>
       ) : ""
-    }</>
+    }
+  </>
 }
 
 
 
 
-
-const NavItems = ({ links }) => {
+const NavItemsSmallScreen = ({ links }) => {
   const isSmallScreen = useSmallScreen();
-  const [activeLinkIndex, setActiveLinkIndex] = useState(0);
+  const { isButtonPressed } = useContext(NavContext);
 
-  let navItems = links.map(
-    (text, index) => {
-      return <Grid item key={index}>
-        <Link
-          onClick={() => setActiveLinkIndex(index)}
-          underline={activeLinkIndex === index ? "always" : "none"}>
-          <Typography
-            variant="h6"
-            color={activeLinkIndex == index ? "primary" : "textSecondary"}
-          >
-            {text}
-          </Typography>
-        </Link>
-      </Grid>
-    })
+  let navItems = useNavItems(links);
+
+  return <> {isSmallScreen && isButtonPressed ? (
+    <Grid container item key='navItems' sm={12} direction="column" justifyContent="flex-start" alignItems="center" >
+      {navItems}
+    </Grid>
+  ) : ""
+  }</>
+}
+
+
+const NavItemsMediumScreen = ({ links }) => {
+  const isSmallScreen = useSmallScreen();
+
+  let navItems = useNavItems(links);
 
   return <> {!isSmallScreen ? (
     <Grid container item key='navItems' spacing={7} md={9} justifyContent="flex-end">
@@ -134,6 +135,37 @@ const NavItems = ({ links }) => {
   }</>
 }
 
+function useNavItems(links) {
+  const { activeLinkIndex, setActiveLinkIndex } = useContext(NavContext);
+  return links.map(
+    (text, index) => {
+      return <Grid item key={index} >
+        <Link
+          onClick={() => setActiveLinkIndex(index)}
+          underline={activeLinkIndex === index ? "always" : "none"}>
+          <Typography
+            variant="h6"
+            color={activeLinkIndex == index ? "primary" : "textSecondary"}>
+            {text}
+          </Typography>
+        </Link>
+      </Grid>;
+    });
+}
+
+function useSmallScreen() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const { setIsButtonPressed } = useContext(NavContext);
+  
+  useEffect(() => {
+    if (!isSmallScreen)
+      setIsButtonPressed(false);
+  })
+  return isSmallScreen;
+}
+
+
 const ImageBox = ({ imgPath }) => (
   <Grid container key='imgBox' item xs={6} md={3} justifyContent="flex-start">
     <img
@@ -141,11 +173,3 @@ const ImageBox = ({ imgPath }) => (
       alt="Logo"
     />
   </Grid>)
-
-function useSmallScreen() {
-  const theme = useTheme();
-
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  return isSmallScreen;
-}
-

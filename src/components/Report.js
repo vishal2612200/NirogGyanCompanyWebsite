@@ -5,7 +5,7 @@ import {
     Button,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { HeadingWithText } from "./utils/headingWithText"
+import { HeadingWithText } from "./utils/HeadingWithText"
 import * as path from "path";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";

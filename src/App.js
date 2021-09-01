@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './components/NavBar';
 import Brand from './components/Brand';
 import Services from './components/Services';
@@ -17,13 +16,13 @@ function App() {
   return (
     <div className="App">
       <NavBar state={state.NavBar} />
-      <HeroSection state={state.HeroSection} />
+      {/* <HeroSection state={state.HeroSection} />
       <Brand state={state.Brand} />
       <Features state={state.Features} />
       <Services state={state.Services} />
       <Bytes state={state.Bytes} />
       <Report state={state.Report} />
-      <Achievements state={state.Achievements} />
+      <Achievements state={state.Achievements} /> */}
     </div>
   );
 }

@@ -6,15 +6,15 @@ import {
   IconButton,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
-  },
+    marginTop: "0.5rem",  },
   title: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
   return (
-    <Grid container spacing={2} className={classes.root}>
+    <Grid container spacing={4} className={classes.root}  >
       <Content content={heroSection.info} />
       <ImageBox imagePath={heroSection.imagePath} />
     </Grid>
@@ -60,7 +60,7 @@ export default function HeroSection({ state: heroSection }) {
 
 const Content = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item sm={12} md={6} direction="column">
+  return <Grid container className={classes.content} item direction="column" md={6} justifyContent="space-around" alignItems="flex-start">
     <Heading text={content.heading} />
     <Description text={content.description} />
     <ButtonSet content={content.buttons} />
@@ -70,7 +70,7 @@ const Content = ({ content }) => {
 const Heading = ({ text }) => {
   const classes = useStyles();
 
-  return <Grid container item md={12} direction="column">
+  return <Grid container item direction="column" >
     <Grid item >
       <Typography
         variant="h2"
@@ -82,32 +82,25 @@ const Heading = ({ text }) => {
     <Grid item>
       <Typography
         variant="h2"
-        className={classes.title}
-      >
+        className={classes.title}>
         {text.line2}
       </Typography>
     </Grid>
   </Grid>
 }
 
+
 const Description = ({ text }) => {
   const classes = useStyles();
-  return <Grid item xs={12} className={classes.text} >
-    <Typography variant="body2" style={{ textWrap: "normal" }}>
+  return <Grid item style={{ textAlign: "left" }}>
+    <Typography variant="body2" >
       {text}
     </Typography>
   </Grid>
 }
 
-const ImageBox = ({ imagePath }) => {
-
-  return <Grid item xs={12} md={6}>
-    <img src={imagePath} alt="hero" />
-  </Grid>
-}
-
 const ButtonSet = ({ content }) => {
-  return <Grid container item md={12}>
+  return <Grid container item alignItems="center">
     <ButtonServices text={content.services} />
     <ButtonWatchVideo text={content.watchVideo} />
   </Grid>
@@ -115,10 +108,8 @@ const ButtonSet = ({ content }) => {
 
 const ButtonServices = ({ text }) => {
   const classes = useStyles();
-  return <Grid item xs={6}>
-    <Button
-      variant="contained"
-      color="primary" className={classes.buttonServices}    >
+  return <Grid item md={6} >
+    <Button variant="contained" color="primary" className={classes.buttonServices}>
       {text}
     </Button>
   </Grid>
@@ -127,16 +118,22 @@ const ButtonServices = ({ text }) => {
 
 const ButtonWatchVideo = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item spacing={2} >
-    <Grid item xs={6}>
+  return <Grid container item alignItems="center" md={6}>
+    <Grid item >
       <IconButton>
         <PlayCircleFilledIcon className={classes.videoButtonIcon} />
       </IconButton>
     </Grid>
-    <Grid item xs={6}>
+    <Grid item >
       <Typography variant="subtitle1">
         {text}
       </Typography>
     </Grid>
+  </Grid>
+}
+
+const ImageBox = ({ imagePath }) => {
+  return <Grid item xs={12} md={6}>
+    <img src={imagePath} alt="hero" />
   </Grid>
 }
