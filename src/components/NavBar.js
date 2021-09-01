@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link, IconButton, AppBar, Toolbar, Typography, Grid, useTheme } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
+import { useSpring, animated } from 'react-spring'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,11 +59,11 @@ export default function NavBar({ state: navBar }) {
   const classes = useStyles();
   const [isButtonPressed, setIsButtonPressed] = useState(false);
   const [activeLinkIndex, setActiveLinkIndex] = useState(0);
-
+  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
 
   return (
     <NavContext.Provider value={{ isButtonPressed, setIsButtonPressed, activeLinkIndex, setActiveLinkIndex }}>
-      <div className={classes.root}>
+      <animated.div className={classes.root} style={props}>
         <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
           <Toolbar className={classes.toolbar} >
             <Grid container flexWrap="wrap">
@@ -72,9 +73,12 @@ export default function NavBar({ state: navBar }) {
             </Grid>
 
           </Toolbar>
-          <NavItemsSmallScreen links={navBar.navLinks} />
+          {
+            <NavItemsSmallScreen links={navBar.navLinks} />
+
+          }
         </AppBar>
-      </div>
+      </animated.div>
     </NavContext.Provider>
   );
 }
@@ -86,6 +90,7 @@ const MenuOpenButton = () => {
   const classes = useStyles();
   const isSmallScreen = useSmallScreen();
   const { setIsButtonPressed } = useContext(NavContext);
+
   return <>
     {
       isSmallScreen ? (
@@ -110,13 +115,16 @@ const MenuOpenButton = () => {
 const NavItemsSmallScreen = ({ links }) => {
   const isSmallScreen = useSmallScreen();
   const { isButtonPressed } = useContext(NavContext);
+  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, config: { duration: 500 }, reset:true})
 
   let navItems = useNavItems(links);
 
   return <> {isSmallScreen && isButtonPressed ? (
-    <Grid container item key='navItems' sm={12} direction="column" justifyContent="flex-start" alignItems="center" >
-      {navItems}
-    </Grid>
+    <animated.div style={props}>
+      <Grid container item key='navItems' sm={12} direction="column" justifyContent="flex-start" alignItems="center">
+        {navItems}
+      </Grid>
+    </animated.div>
   ) : ""
   }</>
 }
@@ -157,7 +165,7 @@ function useSmallScreen() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const { setIsButtonPressed } = useContext(NavContext);
-  
+
   useEffect(() => {
     if (!isSmallScreen)
       setIsButtonPressed(false);

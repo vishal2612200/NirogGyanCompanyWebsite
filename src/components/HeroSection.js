@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
-    marginTop: "0.5rem",  },
+    marginTop: "0.5rem",
+    justifyContent: "space-between",
+    padding: "0.5rem",
+  },
   title: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
@@ -30,11 +33,6 @@ const useStyles = makeStyles((theme) => ({
 
     "&:hover": { backgroundColor: "transparent" },
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
   buttonServices: {
     borderRadius: "20px",
     padding: "0.5rem 2rem",
@@ -43,6 +41,11 @@ const useStyles = makeStyles((theme) => ({
   videoButtonIcon: {
     color: "#102554",
     fontSize: "3rem"
+  },
+  content: {
+    overflow: "hidden",
+    flexDirection: "column",
+    justifyContent: "space-around",
   }
 }));
 
@@ -50,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
   return (
-    <Grid container spacing={4} className={classes.root}  >
+    <Grid container className={classes.root}  >
       <Content content={heroSection.info} />
       <ImageBox imagePath={heroSection.imagePath} />
     </Grid>
@@ -60,7 +63,7 @@ export default function HeroSection({ state: heroSection }) {
 
 const Content = ({ content }) => {
   const classes = useStyles();
-  return <Grid container className={classes.content} item direction="column" md={6} justifyContent="space-around" alignItems="flex-start">
+  return <Grid container item sm={12} md={5} className={classes.content} >
     <Heading text={content.heading} />
     <Description text={content.description} />
     <ButtonSet content={content.buttons} />
@@ -92,7 +95,7 @@ const Heading = ({ text }) => {
 
 const Description = ({ text }) => {
   const classes = useStyles();
-  return <Grid item style={{ textAlign: "left" }}>
+  return <Grid container item>
     <Typography variant="body2" >
       {text}
     </Typography>
@@ -133,7 +136,7 @@ const ButtonWatchVideo = ({ text }) => {
 }
 
 const ImageBox = ({ imagePath }) => {
-  return <Grid item xs={12} md={6}>
+  return <Grid container item sm={12} md={5} justifyContent="flex-end">
     <img src={imagePath} alt="hero" />
   </Grid>
 }

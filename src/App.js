@@ -8,6 +8,7 @@ import Report from './components/Report';
 import Achievements from './components/Achievements';
 import { useReducer } from 'react';
 import specs from "./components/specs/state"
+import progressJS from "progress"
 
 function App() {
 
@@ -16,8 +17,9 @@ function App() {
   return (
     <div className="App">
       <NavBar state={state.NavBar} />
-      {/* <HeroSection state={state.HeroSection} />
-      <Brand state={state.Brand} />
+      
+       <HeroSection state={state.HeroSection} />
+      {/*<Brand state={state.Brand} />
       <Features state={state.Features} />
       <Services state={state.Services} />
       <Bytes state={state.Bytes} />
