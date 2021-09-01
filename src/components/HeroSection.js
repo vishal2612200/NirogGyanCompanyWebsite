@@ -12,20 +12,43 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
     marginTop: "0.5rem",
-    justifyContent: "space-between",
     padding: "0.5rem",
+    minHeight: "75vh"
   },
   title: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
     fontWeight: "700",
+    [theme.breakpoints.down('md')]: {
+      textAlign: "center",
+    }
+  },
+  content: {
+    justifyContent: "space-evenly",
+    alignItems: "left",
+    [theme.breakpoints.down('md')]: {
+  justifyContent: "left",
+}
   },
   text: {
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
+    [theme.breakpoints.down('md')]: {
+      textAlign: "center",
+      padding: "3rem"
+    }
+  },
+  buttonSet: {
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  buttonServices: {
+    borderRadius: "20px",
+    padding: "0.5rem 2rem",
+    textTransform: "none",
+
   },
   watchVideoButton: {
     backgroundColor: "transparent",
@@ -33,19 +56,19 @@ const useStyles = makeStyles((theme) => ({
 
     "&:hover": { backgroundColor: "transparent" },
   },
-  buttonServices: {
-    borderRadius: "20px",
-    padding: "0.5rem 2rem",
-    textTransform: "none",
-  },
+
   videoButtonIcon: {
     color: "#102554",
     fontSize: "3rem"
   },
-  content: {
-    overflow: "hidden",
-    flexDirection: "column",
-    justifyContent: "space-around",
+  imageBox: {
+    minHeight: "70vh",
+    backgroundSize: "contain", backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    [theme.breakpoints.down('md')]: {
+      minHeight: "50vh",
+
+    }
   }
 }));
 
@@ -53,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
 export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
   return (
-    <Grid container className={classes.root}  >
+    <Grid container className={classes.root} justifyContent="space-around">
       <Content content={heroSection.info} />
       <ImageBox imagePath={heroSection.imagePath} />
     </Grid>
@@ -63,7 +86,7 @@ export default function HeroSection({ state: heroSection }) {
 
 const Content = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item sm={12} md={5} className={classes.content} >
+  return <Grid container item md={4} direction="column" className={classes.content}>
     <Heading text={content.heading} />
     <Description text={content.description} />
     <ButtonSet content={content.buttons} />
@@ -73,8 +96,8 @@ const Content = ({ content }) => {
 const Heading = ({ text }) => {
   const classes = useStyles();
 
-  return <Grid container item direction="column" >
-    <Grid item >
+  return <Grid container item direction="column">
+    <Grid item>
       <Typography
         variant="h2"
         className={classes.title}>
@@ -95,7 +118,7 @@ const Heading = ({ text }) => {
 
 const Description = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item>
+  return <Grid container item className={classes.text}>
     <Typography variant="body2" >
       {text}
     </Typography>
@@ -103,7 +126,8 @@ const Description = ({ text }) => {
 }
 
 const ButtonSet = ({ content }) => {
-  return <Grid container item alignItems="center">
+  const classes = useStyles();
+  return <Grid container item className={classes.buttonSet}>
     <ButtonServices text={content.services} />
     <ButtonWatchVideo text={content.watchVideo} />
   </Grid>
@@ -111,7 +135,7 @@ const ButtonSet = ({ content }) => {
 
 const ButtonServices = ({ text }) => {
   const classes = useStyles();
-  return <Grid item md={6} >
+  return <Grid container item xs={6} flexShrink="1">
     <Button variant="contained" color="primary" className={classes.buttonServices}>
       {text}
     </Button>
@@ -121,13 +145,13 @@ const ButtonServices = ({ text }) => {
 
 const ButtonWatchVideo = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item alignItems="center" md={6}>
-    <Grid item >
-      <IconButton>
+  return <Grid container item xs={6} alignItems="center" flexWrap="wrap">
+    <Grid item sm={3} >
+      <IconButton className={classes.watchVideoButton}>
         <PlayCircleFilledIcon className={classes.videoButtonIcon} />
       </IconButton>
     </Grid>
-    <Grid item >
+    <Grid item sm={6} >
       <Typography variant="subtitle1">
         {text}
       </Typography>
@@ -136,7 +160,9 @@ const ButtonWatchVideo = ({ text }) => {
 }
 
 const ImageBox = ({ imagePath }) => {
-  return <Grid container item sm={12} md={5} justifyContent="flex-end">
-    <img src={imagePath} alt="hero" />
+  const classes = useStyles();
+  return <Grid container item sm={12} md={5} justifyContent="flex-start" className={classes.imageBox}
+    style={{ backgroundImage: `url(${imagePath})` }}>
+
   </Grid>
 }
