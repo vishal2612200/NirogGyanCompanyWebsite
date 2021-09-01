@@ -21,34 +21,51 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
     fontWeight: "700",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       textAlign: "center",
     }
   },
   content: {
     justifyContent: "space-evenly",
     alignItems: "left",
-    [theme.breakpoints.down('md')]: {
-  justifyContent: "left",
-}
+    padding: "2rem",
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: "center",
+    }
   },
   text: {
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       textAlign: "center",
-      padding: "3rem"
+      padding: "1rem"
     }
   },
   buttonSet: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  buttonServices: {
-    borderRadius: "20px",
-    padding: "0.5rem 2rem",
-    textTransform: "none",
 
+    alignItems: "center",
+    justifyContent: "space-evenly"
+  },
+  buttonServicesContainer: {
+    
+    "&>button": {
+      borderRadius: "20px",
+      padding: "0.5rem 2rem",
+      textTransform: "none",
+   
+    },
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: "space-evenly",
+    }
+
+  },
+  buttonWatchVideoContainer: {
+    alignItems: "center",
+    "&>button": {
+    },
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: "space-evenly",
+    }
   },
   watchVideoButton: {
     backgroundColor: "transparent",
@@ -86,7 +103,7 @@ export default function HeroSection({ state: heroSection }) {
 
 const Content = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item md={4} direction="column" className={classes.content}>
+  return <Grid container item md={7} direction="column" className={classes.content}>
     <Heading text={content.heading} />
     <Description text={content.description} />
     <ButtonSet content={content.buttons} />
@@ -135,8 +152,8 @@ const ButtonSet = ({ content }) => {
 
 const ButtonServices = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item xs={6} flexShrink="1">
-    <Button variant="contained" color="primary" className={classes.buttonServices}>
+  return <Grid container item xs={6} className={classes.buttonServicesContainer}>
+    <Button variant="contained" color="primary">
       {text}
     </Button>
   </Grid>
@@ -145,17 +162,16 @@ const ButtonServices = ({ text }) => {
 
 const ButtonWatchVideo = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item xs={6} alignItems="center" flexWrap="wrap">
-    <Grid item sm={3} >
-      <IconButton className={classes.watchVideoButton}>
+  return <Grid container item xs={6} className={classes.buttonWatchVideoContainer}>
+    <Grid item>
+      <IconButton className={classes.watchVideoButton} style={{ display: "inline-block", textAlign: "center" }}>
         <PlayCircleFilledIcon className={classes.videoButtonIcon} />
+        <Typography variant="subtitle2">
+          {text}
+        </Typography>
       </IconButton>
     </Grid>
-    <Grid item sm={6} >
-      <Typography variant="subtitle1">
-        {text}
-      </Typography>
-    </Grid>
+
   </Grid>
 }
 
