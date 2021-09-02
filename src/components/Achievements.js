@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
     padding: "2rem"
   },
+  headerContainer: {
+    textAlign: "center",
+  },
   card: {
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     backgroundColor: "#1242AC",
@@ -37,7 +40,7 @@ export default function Achievements({ state: achievements }) {
   return (
     <Grid container justifyContent="space-evenly" className={classes.root}>
       <Grid container justifyContent="space-evenly" className={classes.root}>
-      
+
       </Grid>
       {achievements.cardsData.map((achievement) => (<Card content={achievement} />))}
     </Grid>

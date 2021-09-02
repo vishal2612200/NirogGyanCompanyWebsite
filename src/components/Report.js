@@ -28,13 +28,17 @@ const useStyles = makeStyles((theme) => ({
     contentRight: {
 
     },
+    headerContainer: {
+        textAlign: "center",
+    },
     cardList: {
         justifyContent: "space-evenly",
         alignItems: "center",
-        "&:nth-child(2)": {
-        flexBasis: "100%",
-    }
+        "&:nth-child(2n)": {
+            flexBasis: "100%",
+        }
     },
+
     feature: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         fontSize: "2rem",
@@ -91,7 +95,7 @@ const ContentRight = ({ content }) => {
 
 const Header = ({ content }) => {
     const classes = useStyles();
-    return <Grid item className={classes.headingContainer}>
+    return <Grid item className={classes.headerContainer}>
         <Typography
             variant="h3"
             className={classes.heading}>

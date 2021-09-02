@@ -170,7 +170,7 @@ export default (function () {
       }
     },
     Achievements: {
-       cardsData:[
+      cardsData: [
         {
           textBig: "40+",
           textSmall: "Labs Running",
@@ -189,6 +189,28 @@ export default (function () {
           textSmall: "Countries Reached",
         },
       ]
+    },
+    ClientMessage: {
+      header: {
+        heading: "What Our Clients Say",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
+      },
+      backgroundImage: path.join(process.env.PUBLIC_URL, "clientMessage", "client-message-background.png"),
+      cardsData: [
+        {
+          message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: path.join(process.env.PUBLIC_URL, "clientMessage", "client-message-1.png"),
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        }
+        , {
+          message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: path.join(process.env.PUBLIC_URL, "clientMessage", "client-message-1.png"),
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        }
+      ]
+
     }
 
   };

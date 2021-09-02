@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection';
 import Features from './components/Features';
 import Report from './components/Report';
 import Achievements from './components/Achievements';
+import ClientMessage from './components/ClientMessage';
 import { useReducer } from 'react';
 import specs from "./components/specs/state"
 import progressJS from "progress"
@@ -24,6 +25,7 @@ function App() {
       <Bytes state={state.Bytes} />
       <Report state={state.Report} />
       <Achievements state={state.Achievements} />
+      <ClientMessage state={state.ClientMessage} />
     </div>
   );
 }
