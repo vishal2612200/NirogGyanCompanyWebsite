@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-evenly",
         fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
         textAlign: "left",
+        padding: "3rem",
     },
     title: {
         wordWrap: "break-word",
@@ -27,13 +28,12 @@ const useStyles = makeStyles((theme) => ({
     contentRight: {
 
     },
-
-    text: {
-    }
-    ,
     cardList: {
         justifyContent: "space-evenly",
         alignItems: "center",
+        "&:nth-child(2)": {
+        flexBasis: "100%",
+    }
     },
     feature: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -119,9 +119,8 @@ const CardList = ({ content }) => {
 const Card = ({ imagePath, name }) => {
 
     const classes = useStyles();
-
     return (
-        <Grid container item direction="column" className={classes.card} sm={6}>
+        <Grid container item direction="column" className={classes.card} >
             <Grid item>
                 <img src={imagePath} alt="feature" />
             </Grid>

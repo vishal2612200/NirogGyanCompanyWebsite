@@ -23,7 +23,7 @@ function App() {
       <Services state={state.Services} />
       <Bytes state={state.Bytes} />
       <Report state={state.Report} />
-      {/* <Achievements state={state.Achievements} /> */}
+      <Achievements state={state.Achievements} />
     </div>
   );
 }

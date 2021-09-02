@@ -168,6 +168,28 @@ export default (function () {
       contentRight: {
         imagePath: path.join(process.env.PUBLIC_URL, "/report/report-big-report.png"),
       }
+    },
+    Achievements: {
+       cardsData:[
+        {
+          textBig: "40+",
+          textSmall: "Labs Running",
+        },
+        {
+          textBig: "300,000",
+          textSmall: "Reports Generated",
+        },
+
+        {
+          textBig: <>4.7 &#x2B50;</>,
+          textSmall: "Rating from Users",
+        },
+        {
+          textBig: "04",
+          textSmall: "Countries Reached",
+        },
+      ]
     }
+
   };
 })();
