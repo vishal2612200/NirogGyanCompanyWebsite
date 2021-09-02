@@ -1,78 +1,88 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import { HeadingWithText } from "./utils/HeadingWithText";
-import Carousal from "./utils/Carousal";
+import Typography from "@material-ui/core/Typography";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#05152E"
+    alignItems: "space-evenly",
+    justifyContent: "center",
+    minHeight: "20vh",
   },
-  paper: {
-    padding: theme.spacing(2),
+  headingContainer: {
     textAlign: "center",
-    color: theme.palette.text.secondary,
   },
-  typography: {
-    align: "center",
-    padding: "2% 10%",
+  cardList: {
+    
+    padding: "1rem auto",
+    margin: "1rem auto",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    backgroundColor: "#05152E",
   },
+  card: {
+    padding: "1rem",
+    textAlign: "center",
+  }
+
 }));
 
-export default function CenteredGrid() {
+export default function Bytes({ state: bytes }) {
   const classes = useStyles();
-  const cardList = [
-    {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Search Doctor",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
-    },
-    {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Online Pharmacy",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
-    },
-    {
-      media: { icon: "fa-solid fa-magnifying-glass" },
-      content: {
-        heading: "Consultation",
-        body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-      },
-    }
-  ];
 
-  const videos = [
-    "https://www.youtube.com/embed/H0cHIewcQ2M",
-    "https://www.youtube.com/embed/MlLAXpoxNvQ",
-    "https://www.youtube.com/embed/L4aPen8hCL8"
-  ]
   return (
-    <div>
-      <Grid container>
-        <Grid item>
-          <HeadingWithText
-            heading="NirogGyan Bytes"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
-          />
-        </Grid>
-        </Grid>
-        
-      <Carousal links={videos} component={(link) => <iframe
-        width="auto"
-        height="inherit"
-        src={link}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        />
-    } />
-      
-    </div>
+    <Grid container direction="column" className={classes.root}>
+      <Heading content={bytes.content} />
+      <CardList cardsData={bytes.videoLinks} />
+    </Grid>
   );
 
 }
 
+const Heading = ({ content }) => {
+  const classes = useStyles();
+  return <Grid item className={classes.headingContainer}>
+    <Typography
+      variant="h3"
+      className={classes.heading}>
+      {content.heading}
+    </Typography>
+    <Typography
+      variant="h6"
+      color="textSecondary"
+      className={classes.description}>
+      {content.description}
+    </Typography>
+  </Grid>
+
+}
+
+const CardList = ({ cardsData }) => {
+  const classes = useStyles();
+  return <Grid container item className={classes.cardList}>
+    {cardsData.map((link, index) => (
+      <Card link={link} key={index} />
+    ))
+    }
+  </Grid>
+}
+
+const Card = ({ link, title = "YouTube video player" }) => {
+  const classes = useStyles();
+
+  return (
+    <Grid item className={classes.card} sm={4}>
+      <iframe
+        style={{ borderRadius: "20px" }}
+        width="auto"
+        height="inherit"
+        src={link}
+        title={title}
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
+    </Grid>
+
+  );
+}

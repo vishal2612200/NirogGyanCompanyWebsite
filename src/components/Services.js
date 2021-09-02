@@ -8,13 +8,13 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-  },
+overflow: 'hidden',  },
   headingContainer: {
     textAlign: "center",
   },
   cardList: {
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "stretch",
   },
 
   serviceCard: {
@@ -24,11 +24,12 @@ const useStyles = makeStyles((theme) => ({
     alignContent: "center",
     border: "1px solid #B8BBBD",
     margin: "2rem",
-    flexGrow:1,
+    flexGrow: 1,
     "&__logo-box": {
       textAlign: "center",
       textWrap: "word-break",
-   padding:"2rem" },
+      padding: "2rem"
+    },
     "&__heading": {
       textAlign: "center",
     },
@@ -36,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
       padding: "2rem",
       textAlign: "center",
     }
-
   }
 }
 
@@ -57,7 +57,7 @@ const CardList = ({ cardsData }) => {
   const classes = useStyles();
   return <Grid container item className={classes.cardList} spacing={2}>
     {cardsData.map(({ imgPath, heading, content }, index) => (
-      <Card {...{ imgPath, heading, content }} />
+      <Card {...{ imgPath, heading, content  }} key={index} />
     ))
     }
   </Grid>
@@ -68,7 +68,7 @@ const Card = ({ imgPath, heading, content }) => {
   const classes = useStyles();
 
   return (
-    <Grid container item direction="column" className={classes.serviceCard}  sm={3}>
+    <Grid container item direction="column" className={classes.serviceCard} sm={3}>
       <Grid item className={`${classes.serviceCard}__logo-box`} >
         <img src={imgPath} alt="service" />
         <Typography variant="h5">{heading}</Typography>
@@ -81,6 +81,7 @@ const Card = ({ imgPath, heading, content }) => {
 
   );
 }
+
 const Heading = ({ content }) => {
   const classes = useStyles();
   return <Grid item className={classes.headingContainer}>
