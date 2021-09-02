@@ -49,8 +49,47 @@ export default (function () {
 
         },
 
+        Services: {
+            content: {
+                heading: "The best Patient-Engagement Tool out there",
+                description: "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case."
+            },
+            servicesList: [
+                {
+                    imgPath: path.join(process.env.PUBLIC_URL, "/services/services-templates.png"),
+                    heading: "Multiple Reporting Templates",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,"
+                },
+                {
+                    imgPath: path.join(process.env.PUBLIC_URL, "/services/services-instant.png"),
+                    heading: "Instant, Automated, Secure",
+                    content: "Buy  your medicines with our mobile application with a simple delivery system"
+                },
+                {
+                    imgPath: path.join(process.env.PUBLIC_URL, "/services/services-pdf-whatsapp.png"),
+                    heading: "PDF, App, E-mail, Whatsapp",
+                    content: "Free consultation with our trusted doctors and get the best recomendations"
+                },
+                {
+                    imgPath: path.join(process.env.PUBLIC_URL, "/services/services-marketing.png"),
+                    heading: "Whitelabel + Marketing",
+                    content: "Free consultation with our trusted doctors and get the best recomendations"
+                }
+                ,
+                {
+                    imgPath: path.join(process.env.PUBLIC_URL, "/services/services-affordable.png"),
+                    heading: "Special Corporate Offerings",
+                    content: "You can get 24/7 urgent care for yourself or your children and your lovely family"
+                },
+                {
+                    imgPath: path.join(process.env.PUBLIC_URL, "/services/services-corporate-offerings.png"),
+                    heading: "Affordable & Doctor-friendly",
+                    content: "Track and save your medical history and health data"
+                }
+
+            ]
+        }
 
     }
-
 
 })();

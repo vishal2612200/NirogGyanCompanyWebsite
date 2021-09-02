@@ -13,9 +13,13 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem"
 
   },
-  title: {
+  heading: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontWeight: "700",
+    marginBottom: "2rem",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    }
   },
   featureBox: {
     justifyContent: "space-between"
@@ -25,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontSize: "2rem",
     border: "1px solid #B8BBBD",
+    marginBottom: "2rem",
     borderRadius: "10px",
     "&__image-box": {
       justifyContent: "center",
@@ -34,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#E9F5FF",
     },
     "&__text-box": {
-      
+
       "&>*": {
         textAlign: "left",
         fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
@@ -90,8 +95,8 @@ const Content = ({ content }) => {
 
 const Heading = ({ heading }) => {
   const classes = useStyles();
-  return <Grid container item direction="column">
-    <Grid item xs={12} style={{ textAlign: "left" }}>
+  return <Grid container item direction="column" className={classes.heading}>
+    <Grid item xs={12} className={`${classes.heading}__line-1`}>
       <Typography
         style={{ display: "inline-block" }}
         variant="h4"
@@ -105,7 +110,7 @@ const Heading = ({ heading }) => {
         variant="h4"
         className={classes.title}>{heading.line1[1]} {heading.line1[2]}</Typography>
     </Grid>
-    <Grid item xs={12}>
+    <Grid item xs={12} className={`${classes.heading}__line-2`}>
 
       <Typography
         variant="h5"
@@ -114,8 +119,7 @@ const Heading = ({ heading }) => {
         {heading.line2}
       </Typography>
     </Grid>
-    <Grid item xs={12}>
-
+    <Grid item xs={12} className={`${classes.heading}__line-3`}>
       <Typography
         variant="h4"
         className={classes.title}>

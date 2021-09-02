@@ -20,8 +20,8 @@ function App() {
       <HeroSection state={state.HeroSection} />
       <Brand state={state.Brand} />
       <Features state={state.Features} />
-      {/*  <Services state={state.Services} />
-      <Bytes state={state.Bytes} />
+        <Services state={state.Services} />
+      {/*<Bytes state={state.Bytes} />
       <Report state={state.Report} />
       <Achievements state={state.Achievements} /> */}
     </div>
