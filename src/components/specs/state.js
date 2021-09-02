@@ -137,5 +137,37 @@ export default (function () {
         "https://www.youtube.com/embed/L4aPen8hCL8",
       ],
     },
+
+    Report: {
+
+      contentLeft: {
+        header: {
+          heading: "Believe what you see.",
+          description: "Checkout our SmartReports below and know the difference",
+        },
+        cardsData: [
+          {
+            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-vitamin.png"),
+            name: "Vitamin"
+          },
+
+          {
+            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-kidney.png"),
+            name: "Kidney"
+          },
+          {
+            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-electrolyte.png"),
+            name: "Electrolyte"
+          },
+          {
+            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-diabetes.png"),
+            name: "Diabetes"
+          }
+        ]
+      },
+      contentRight: {
+        imagePath: path.join(process.env.PUBLIC_URL, "/report/report-big-report.png"),
+      }
+    }
   };
 })();

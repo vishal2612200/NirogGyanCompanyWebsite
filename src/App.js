@@ -22,8 +22,8 @@ function App() {
       <Features state={state.Features} />
       <Services state={state.Services} />
       <Bytes state={state.Bytes} />
-      {/*<Report state={state.Report} />
-      <Achievements state={state.Achievements} /> */}
+      <Report state={state.Report} />
+      {/* <Achievements state={state.Achievements} /> */}
     </div>
   );
 }
