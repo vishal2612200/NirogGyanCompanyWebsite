@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -11,17 +11,32 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        justifyContent: "space-evenly",
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+        justifyContent: "center",
+        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     },
     headerContainer: {
         textAlign: "center",
+        margin: "2rem"
     },
     card: {
         backgroundColor: "#fff",
         borderRadius: "10px",
         textAlign: "center",
-        margin:"0 auto"
+        alignItems: "space-evenly",
+        padding: "2rem"
+    },
+    message: {
+        fontSize: "1rem",
+        "&::before": {
+            content: "open-quote",
+            fontSize: "4rem"
+        },
+        "&::after": {
+            content: "close-quote",
+            fontSize: "4rem",
+            transform: "translate(10px, 10px)"
+        },
+        paddingBottom: "1rem"
     }
 }
 
@@ -57,10 +72,10 @@ const Header = ({ content }) => {
 const Card = ({ message, imagePath, name, organisation }) => {
     const classes = useStyles();
     return (
-        <Grid container direction="column" item justifyContent="center" className={classes.card} onDragStart={handleDragStart} >
+        <Grid container direction="column" item justifyContent="center" alignItems="space-around" className={classes.card} onDragStart={handleDragStart} >
             <Grid item>
-                <Typography variant="h6" color="textSecondary">
-                    <blockquote> {message}</blockquote>
+                <Typography variant="h6" color="textSecondary" className={classes.message}>
+                    <i>{message}</i>
                 </Typography>
 
             </Grid>
@@ -68,7 +83,7 @@ const Card = ({ message, imagePath, name, organisation }) => {
                 <img src={imagePath} alt="client" />
             </Grid>
             <Grid item>
-                <Typography variant="h6" color="textSecondary">
+                <Typography variant="h4" color="textPrimary">
                     {name}
                 </Typography>
 
@@ -84,22 +99,23 @@ const Card = ({ message, imagePath, name, organisation }) => {
 
 
 
-const Carousal = (props) => {
-    const responsive = {
-        0: { items: 1 },
-        568: { items: 1 },
-        1024: { items: 1 },
-    };
+const Carousel = (props) => {
+
     return <Grid >
-        <AliceCarousel mouseTracking {...props} responsive={responsive} controlsStrategy="alternate" autoPlay infinite paddingLeft="5rem" paddingRight="5rem" />
+        <AliceCarousel mouseTracking {...props} autoHeight infinite autoPlay />
     </Grid>
 }
 
 export default function ClientMessage({ state: clientMessage }) {
     const items = clientMessage.cardsData.map(props => <Card {...props} />);
-    return <Grid container direction="column" justifyContent="center" alignItems="space-evenly" style={{ backgroundImage: `url(${clientMessage.backgroundImage})` }}>
-        <Header content={clientMessage.header} />
-        <Carousal items={items} />
+    const classes = useStyles();
+    return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})` }}>
+        <Grid item>
+            <Container maxWidth="md">
+                <Header content={clientMessage.header} />
+                <Carousel items={items} />
+            </Container>
+        </Grid>
     </Grid>
 
 

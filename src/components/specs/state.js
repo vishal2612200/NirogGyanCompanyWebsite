@@ -212,6 +212,8 @@ export default (function () {
       ]
 
     }
-
+    , MailingList: {
+  
+}
   };
 })();
