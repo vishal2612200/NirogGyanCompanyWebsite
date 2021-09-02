@@ -74,7 +74,6 @@ const Card = ({ link, title = "YouTube video player" }) => {
   return (
     <Grid item className={classes.card} sm={4}>
       <iframe
-        style={{ borderRadius: "20px" }}
         width="auto"
         height="inherit"
         src={link}

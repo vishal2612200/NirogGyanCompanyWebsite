@@ -8,13 +8,14 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-overflow: 'hidden',  },
+   },
   headingContainer: {
     textAlign: "center",
   },
   cardList: {
     justifyContent: "center",
     alignItems: "stretch",
+    overflow: 'hidden',
   },
 
   serviceCard: {
@@ -55,9 +56,9 @@ export default function Services({ state: services }) {
 
 const CardList = ({ cardsData }) => {
   const classes = useStyles();
-  return <Grid container item className={classes.cardList} spacing={2}>
+  return <Grid container item className={classes.cardList} >
     {cardsData.map(({ imgPath, heading, content }, index) => (
-      <Card {...{ imgPath, heading, content  }} key={index} />
+      <Card {...{ imgPath, heading, content }} key={index} />
     ))
     }
   </Grid>
