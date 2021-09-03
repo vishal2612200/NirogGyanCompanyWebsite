@@ -9,32 +9,12 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
-        marginTop: "0.5rem",
-        padding: "0.5rem",
+        background: "#3567D6",
+        padding: "2rem"
+    },
+    block1: {
+        textAlign: "left",
         color: "#fff"
-    },
-    title: {
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        textAlign: "left",
-        fontWeight: "700",
-        [theme.breakpoints.down('sm')]: {
-            textAlign: "center",
-        }
-    },
-    headerContainer: {
-        textAlign: "left",
-        margin: "2rem",
-        color: "#fff"
-    },
-    contentLeft: {
-        textAlign: "left",
-        justifyContent: "space-evenly",
-        alignItems: "left",
-        padding: "2rem",
-        [theme.breakpoints.down('sm')]: {
-            justifyContent: "center",
-        }
     },
 
     button: {
@@ -42,76 +22,77 @@ const useStyles = makeStyles((theme) => ({
         padding: "0.5rem 2rem",
         textTransform: "none",
         backgroundColor: "#052E88",
-        color:"white"
+        color: "white"
     },
     inputBox: {
         padding: "0.5rem 2rem",
-        borderRadius: "20px"
+        borderRadius: "20px",
+        background: "transparent",
+        "&::placeholder": {
+            color: "#fff"
+        }
     }
 }));
 
 
 
-const Header = ({ content, children }) => {
-    const classes = useStyles();
-    return <Grid item className={classes.headerContainer}>
-        <Typography
-            variant="h4"
-            className={classes.heading}>
-            {content.heading}
-        </Typography>
-        <Typography
-            variant="h6"
-            className={classes.description}>
-            {content.description}
-        </Typography>
-        {children}
-    </Grid>
-
-}
-
-
-const ImageBox = ({ imagePath }) => (
-    <Grid item >
-        <img src={imagePath} alt="logo" />
-    </Grid>)
 
 
 
-const ContentLeft = ({ content }) => {
+
+const Block1 = ({ content }) => {
     const classes = useStyles()
-    return <Grid container item direction="column" sm={5} justifyContent="stretch" alignItems="flex-start" className={classes.contentLeft}>
-        <Header content={content} >
-            <Typography variant="h5" style={{marginTop:"1rem"}}>
+    return <Grid container item direction="column" sm={5} justifyContent="space-around" alignItems="flex-start" className={classes.block1}>
+        <Grid item>
+            <Typography
+                variant="h4"
+                className={classes.heading}>
+                {content.heading}
+            </Typography>
+        </Grid>
+        <Grid item>
+            <Typography
+                variant="h6"
+                className={classes.description}>
+                {content.description}
+            </Typography>
+        </Grid>
+
+        <Grid item>
+            <Typography variant="h5" style={{ marginTop: "1rem" }}>
                 {content.footer}
             </Typography>
-        </Header>
+        </Grid>
+    </Grid>
+}
+
+const Block2 = ({ content }) => {
+    const classes = useStyles()
+
+    return <Grid item sm={6} md={5} style={{ justifySelf: "stretch", padding: "1rem" }}>
+        <input placeholder={content.placeholderText} className={classes.inputBox} style={{width:"100%"}} />
     </Grid>
 
 }
 
+const Block3 = ({ content }) => {
+    const classes = useStyles()
 
-
-const ContentRight = ({ content }) => {
-    const classes = useStyles();
-
-    return <Grid container item sm={7} justifyContent="space-evenly" alignItems="center">
-        <Grid item>
-            <input placeholder={content.placeholderText} className={classes.inputBox} />
-        </Grid>
-        <Grid item>
-            <Button variant="contained" className={classes.button}>
-                {content.buttonText}
-            </Button>
-        </Grid>
+    return <Grid item sm={6} md={2}>
+        <Button variant="contained" className={classes.button}>
+            {content.buttonText}
+        </Button>
     </Grid>
+
 }
+
 
 export default function MailingList({ state: mailingList }) {
     const classes = useStyles();
-    return <Grid container justifyContent="space-evenly" alignItems="center" style={{ background: "#3567D6" }}>
-        <ContentLeft content={mailingList.contentLeft} />
-        <ContentRight content={mailingList.contentRight} />
+    return <Grid container spacing={2} justifyContent="space-evenly" alignItems="center" className={classes.root}>
+        <Block1 content={mailingList.block1} />
+        <Block2 content={mailingList.block2} />
+        <Block3 content={mailingList.block3} />
     </Grid>
 
 }

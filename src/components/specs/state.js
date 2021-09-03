@@ -213,6 +213,17 @@ export default (function () {
 
     },
     MailingList: {
+      block1: {
+        heading: "Subscribe to our mailing list",
+        description: "We'll send you updates about NirogGyan",
+        footer: ["Get In Touch", ".", "contact@niroggyan.com"],
+      },
+      block2: {
+        placeholderText: "Enter your email address",
+      },
+      block3: {
+        buttonText: "Subscribe",
+      },
       contentLeft: {
         heading: "Subscribe to our mailing list",
         description: "We'll send you updates about NirogGyan",

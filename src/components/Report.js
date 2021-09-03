@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-evenly",
     },
     contentRight: {
+        textAlign:"center",
         "& >img": {
             maxWidth: "100%",
             maxHeight: "100%"
@@ -35,14 +36,21 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
     },
     cardList: {
-        justifyContent: "space-between",
+        justifyContent: "space-around",
+        padding: "2rem",
+        flexGrow: 0
+    },
+    cardContainer: {
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        padding:"2rem"
 
     },
     card: {
-        marginBottom: "3rem",
-        textAlign: "center",
-        backgroundColor: "#fff",
-        borderRadius: "20px",
+        padding: "2rem 3rem", 
+        borderRadius:"20px",
+        backgroundColor: "#fff"
     }
 }
 ));
@@ -67,7 +75,7 @@ export default function Report({ state: report }) {
 
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item direction="column" sm={6} className={classes.contentLeft}>
+    return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
         <Header content={content.header} />
         <CardList content={content.cardsData} />
     </Grid>
@@ -76,7 +84,7 @@ const ContentLeft = ({ content }) => {
 const ContentRight = ({ content }) => {
     const classes = useStyles();
 
-    return <Grid container item direction="column" sm={6} className={classes.contentRight}>
+    return <Grid container item direction="column" xs={12} md={6} className={classes.contentRight}>
         <Grid item>
             <img src={content.imagePath} alt="report-sample" />
         </Grid>
@@ -103,7 +111,7 @@ const Header = ({ content }) => {
 
 const CardList = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item spacing={2} className={classes.cardList} >
+    return <Grid container item className={classes.cardList} >
         {content.map(({ imagePath, name }, index) => (
             <Card {...{ imagePath, name }} key={index} />
         ))}
@@ -114,14 +122,11 @@ const Card = ({ imagePath, name }) => {
 
     const classes = useStyles();
     return (
-        <Grid container direction="column" item spacing={3} sm={6} className={classes.card} >
-            <Grid item><img src={imagePath} alt="feature" /></Grid>
-            <Grid item>
-                <Typography variant="h6">
-                    {name}
-                </Typography>
+        <Grid container item xs={12} sm={6} justifyContent="center" className={classes.cardContainer} >
+            <Grid item className={classes.card}>
+                <img src={imagePath} alt="feature" />
+                <Typography variant="h6">{name}</Typography>
             </Grid>
         </Grid>
-
     );
 }

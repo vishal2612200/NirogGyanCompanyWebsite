@@ -11,19 +11,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
     padding: "2rem",
     justifyContent: "space-around",
-    alignItems: "stretch"
+    alignItems: "center"
   },
 
   headerContainer: {
     textAlign: "center",
 
   },
+  cardContainer: {
+    padding:"2rem",
+    justifyContent: "space-around",
+    alignItems: "stretch"
+  },
   card: {
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     backgroundColor: "#1242AC",
     borderRadius: "10px",
     color: "#fff",
-    padding: "2rem 1rem",
+    padding: "3rem",
     textAlign: "center",
   }
 }));
@@ -31,9 +36,11 @@ const useStyles = makeStyles((theme) => ({
 const Card = ({ content }) => {
   const classes = useStyles();
   return (
-    <Grid item className={classes.card}>
-      <Typography variant="h4">{content.textBig}</Typography>
-      <Typography variant="h6">{content.textSmall}</Typography>
+    <Grid container item xs={6} md={3} className={classes.cardContainer}>
+      <Grid item className={classes.card}>
+        <Typography variant="h4">{content.textBig}</Typography>
+        <Typography variant="h6">{content.textSmall}</Typography>
+      </Grid>
     </Grid>
   );
 };
