@@ -138,7 +138,6 @@ export default (function () {
     },
 
     Report: {
-
       contentLeft: {
         header: {
           heading: "Believe what you see.",
@@ -146,26 +145,26 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-vitamin.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report","report-vitamin.png"),
             name: "Vitamin"
           },
 
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-kidney.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report","report-kidney.png"),
             name: "Kidney"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-electrolyte.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report","report-electrolyte.png"),
             name: "Electrolyte"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "/report/report-diabetes.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report","report-diabetes.png"),
             name: "Diabetes"
           }
         ]
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "/report/report-big-report.png"),
+        imagePath: path.join(process.env.PUBLIC_URL, "report","report-big-report.png"),
       }
     },
     Achievements: {
