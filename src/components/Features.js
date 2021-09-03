@@ -13,6 +13,13 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem"
 
   },
+  contentRight: {
+    textAlign: "center",
+    "& >img": {
+      maxWidth: "100%",
+      maxHeight: "100%"
+    }
+  },
   heading: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontWeight: "700",
@@ -21,50 +28,28 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
     }
   },
-  featureBox: {
-    justifyContent: "space-between"
-
-  },
-  feature: {
+  contentLeft: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-    fontSize: "2rem",
-    border: "1px solid #B8BBBD",
-    marginBottom: "2rem",
     borderRadius: "10px",
-    "&__image-box": {
-      justifyContent: "center",
-      alignItems: "center",
-
-      padding: "1rem",
-      backgroundColor: "#E9F5FF",
-    },
-    "&__text-box": {
-
-      "&>*": {
-        textAlign: "left",
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        padding: "1rem",
-        textWrap: "word-break",
-        [theme.breakpoints.down("sm")]: {
-          textAlign: "center",
-
-        }
-      }
-    }
   },
-
   imageBox: {
-    minHeight: "70vh",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    [theme.breakpoints.down('md')]: {
-      minHeight: "50vh",
-    }
-
+    textAlign: "center",
+    padding: "1rem",
+    backgroundColor: "#E9F5FF",
   },
-  content: {
-    justifyContent: "space-between"
+  textBox: {
+
+    "&>*": {
+      textAlign: "left",
+      fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+      padding: "1rem",
+      textWrap: "word-break"
+    }
+  },
+  card: {
+    border: "1px solid #B8BBBD",
+    marginBottom: "2rem"
+
   }
 
 })
@@ -76,24 +61,22 @@ export default function Features({ state: features }) {
 
   return (
     <Grid container className={classes.root}>
-      <Content content={features.content} />
-      <ImageBox imagePath={features.imagePath} />
+      <ContentLeft content={features.contentLeft} />
+      <ContentRight content={features.contentRight} />
     </Grid>
   );
 }
 
 
-const Content = ({ content }) => {
+const ContentLeft = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item md={6} direction="column" className={classes.content}>
-    <Heading heading={content.heading} />
-    <AllFeatures featureList={content.featureList} />
-    {/* <ButtonSet content={content.buttons} /> */}
+  return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
+    <Header content={content.header} />
+    <CardsList content={content.cardsData} />
   </Grid>
 }
 
-
-const Heading = ({ heading }) => {
+const Header = ({ content }) => {
   const classes = useStyles();
   return <Grid container item direction="column" className={classes.heading}>
     <Grid item xs={12} className={`${classes.heading}__line-1`}>
@@ -102,13 +85,13 @@ const Heading = ({ heading }) => {
         variant="h4"
         className={classes.title}
         color="primary">
-        {heading.line1[0]}
+        {content.line1[0]}
       </Typography>
       <Typography
         color="textPrimary"
         style={{ display: "inline-block" }}
         variant="h4"
-        className={classes.title}>{heading.line1[1]} {heading.line1[2]}</Typography>
+        className={classes.title}>{content.line1[1]} {content.line1[2]}</Typography>
     </Grid>
     <Grid item xs={12} className={`${classes.heading}__line-2`}>
 
@@ -116,14 +99,14 @@ const Heading = ({ heading }) => {
         variant="h5"
         className={classes.title}
       >
-        {heading.line2}
+        {content.line2}
       </Typography>
     </Grid>
     <Grid item xs={12} className={`${classes.heading}__line-3`}>
       <Typography
         variant="h4"
         className={classes.title}>
-        {heading.line3}
+        {content.line3}
       </Typography>
     </Grid>
   </Grid>
@@ -131,29 +114,25 @@ const Heading = ({ heading }) => {
 
 
 
-
-const AllFeatures = ({ featureList }) => {
+const CardsList = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" className={classes.featureBox}>
-    {featureList.map(({ imagePath, textThin, textBold }, index) => (<Feature {...{ imagePath, textThin, textBold }} key={index} />))}
+  return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}>
+    {content.map(({ imagePath, textThin, textBold }, index) => (<Card {...{ imagePath, textThin, textBold }} key={index} />))}
   </Grid>
 
 
 }
 
 
-
-const Feature = ({ imagePath, textThin, textBold }) => {
+const Card = ({ imagePath, textThin, textBold }) => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.feature}  >
-      <Grid container item sm={4} className={`${classes.feature}__image-box`}>
-        <Grid item>
-          <img src={imagePath} alt="feature" />
-        </Grid>
+    <Grid container className={classes.card}  >
+      <Grid item xs={4} className={classes.imageBox}>
+        <img src={imagePath} alt="feature" />
       </Grid>
-      <Grid item sm={6} className={`${classes.feature}__text-box`}>
+      <Grid item xs={8} className={classes.textBox}>
         <Typography variant="h6" color="textSecondary">
           {textThin}
         </Typography>
@@ -165,9 +144,16 @@ const Feature = ({ imagePath, textThin, textBold }) => {
   )
 }
 
-const ImageBox = ({ imagePath }) => {
+const ContentRight = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item md={6} className={classes.imageBox}
-    style={{ backgroundImage: `url(${imagePath})` }}>
+
+  return <Grid item xs={12} md={6} className={classes.contentRight}>
+    <img src={content.imagePath} alt="doctor" />
   </Grid>
 }
+
+
+
+
+
+

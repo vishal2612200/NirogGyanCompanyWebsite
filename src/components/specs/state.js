@@ -25,13 +25,13 @@ export default (function () {
       ],
     },
     Features: {
-      content: {
-        heading: {
+      contentLeft: {
+        header: {
           line1: ["Health Knowledge", "   +   ", "Modern Design"],
           line2: "combine to give you the most",
           line3: "Understandable Medical Reports",
         },
-        featureList: [
+        cardsData: [
           {
             imagePath: path.join(
               process.env.PUBLIC_URL,
@@ -58,10 +58,9 @@ export default (function () {
           },
         ],
       },
-      imagePath: path.join(
-        process.env.PUBLIC_URL,
-        "/features/features-big.png"
-      ),
+      contentRight: {
+        imagePath: path.join(process.env.PUBLIC_URL, "features", "features-big.png")
+      }
     },
 
     Services: {
