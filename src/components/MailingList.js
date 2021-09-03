@@ -10,13 +10,21 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles((theme) => ({
     root: {
         background: "#3567D6",
-        padding: "2rem"
-    },
-    block1: {
-        textAlign: "left",
-        color: "#fff"
+        padding: "2rem",
+        "&>*": {
+            padding: "1rem"
+        }
     },
 
+    block1: {
+        textAlign: "left",
+        color: "#fff",
+    },
+
+    block2: {
+        textAlign: "left",
+        color: "#fff",
+    },
     button: {
         borderRadius: "20px",
         padding: "0.5rem 2rem",
@@ -25,11 +33,18 @@ const useStyles = makeStyles((theme) => ({
         color: "white"
     },
     inputBox: {
-        padding: "0.5rem 2rem",
-        borderRadius: "20px",
-        background: "transparent",
-        "&::placeholder": {
-            color: "#fff"
+
+        "&>input": {
+            minWidth: "min-content",
+            width: "60%",
+            color: "#fff",
+            padding: "0.5rem 2rem",
+            borderRadius: "20px",
+            background: "transparent",
+            "&::placeholder": {
+                color: "#fff"
+            }
+
         }
     }
 }));
@@ -42,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Block1 = ({ content }) => {
     const classes = useStyles()
-    return <Grid container item direction="column" sm={5} justifyContent="space-around" alignItems="flex-start" className={classes.block1}>
+    return <Grid container item direction="column" sm={12} md={5} justifyContent="space-around" alignItems="flex-start" className={classes.block1}>
         <Grid item>
             <Typography
                 variant="h4"
@@ -69,8 +84,8 @@ const Block1 = ({ content }) => {
 const Block2 = ({ content }) => {
     const classes = useStyles()
 
-    return <Grid item sm={6} md={5} style={{ justifySelf: "stretch", padding: "1rem" }}>
-        <input placeholder={content.placeholderText} className={classes.inputBox} style={{width:"100%"}} />
+    return <Grid item sm={12} md={5} className={classes.inputBox}>
+        <input placeholder={content.placeholderText} />
     </Grid>
 
 }
@@ -78,7 +93,7 @@ const Block2 = ({ content }) => {
 const Block3 = ({ content }) => {
     const classes = useStyles()
 
-    return <Grid item sm={6} md={2}>
+    return <Grid item sm={12} md={2}>
         <Button variant="contained" className={classes.button}>
             {content.buttonText}
         </Button>
@@ -89,7 +104,7 @@ const Block3 = ({ content }) => {
 
 export default function MailingList({ state: mailingList }) {
     const classes = useStyles();
-    return <Grid container spacing={2} justifyContent="space-evenly" alignItems="center" className={classes.root}>
+    return <Grid container justifyContent="flex-start" alignItems="center" className={classes.root}>
         <Block1 content={mailingList.block1} />
         <Block2 content={mailingList.block2} />
         <Block3 content={mailingList.block3} />

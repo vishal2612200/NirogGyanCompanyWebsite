@@ -27,7 +27,7 @@ export default (function () {
     Features: {
       content: {
         heading: {
-          line1: ["Health Knowledge", "+", "Modern Design"],
+          line1: ["Health Knowledge", "   +   ", "Modern Design"],
           line2: "combine to give you the most",
           line3: "Understandable Medical Reports",
         },
