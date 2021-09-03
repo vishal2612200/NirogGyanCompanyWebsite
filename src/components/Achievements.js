@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
-    padding: "2rem",
+    padding: "1.5rem",
     justifyContent: "space-around",
     alignItems: "center"
   },
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   cardContainer: {
-    padding:"2rem",
+    padding:"1.5rem",
     justifyContent: "space-around",
     alignItems: "stretch"
   },
