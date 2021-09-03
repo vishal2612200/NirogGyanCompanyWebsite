@@ -216,8 +216,9 @@ export default (function () {
       contentLeft: {
         heading: "Subscribe to our mailing list",
         description: "We'll send you updates about NirogGyan",
-        footer: ["Get In Touch", "contact@niroggyan.com"]
-      },
+        footer: ["Get In Touch",".", "contact@niroggyan.com"],
+      logoImage: path.join(process.env.PUBLIC_URL, "mailingList", "logo-icon.png"),
+        },
       contentRight: {
         placeholderText: "Enter your email address",
         buttonText: "Subscribe",
