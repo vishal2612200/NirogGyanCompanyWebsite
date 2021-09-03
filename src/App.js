@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Report from './components/Report';
 import Achievements from './components/Achievements';
 import ClientMessage from './components/ClientMessage';
+import MailingList from './components/MailingList';
 import { useReducer } from 'react';
 import specs from "./components/specs/state"
 import progressJS from "progress"
@@ -26,6 +27,7 @@ function App() {
       <Report state={state.Report} />
       <Achievements state={state.Achievements} />
       <ClientMessage state={state.ClientMessage} />
+      <MailingList state={state.MailingList} />
     </div>
   );
 }

@@ -211,9 +211,17 @@ export default (function () {
         }
       ]
 
+    },
+    MailingList: {
+      contentLeft: {
+        heading: "Subscribe to our mailing list",
+        description: "We'll send you updates about NirogGyan",
+        footer: ["Get In Touch", "contact@niroggyan.com"]
+      },
+      contentRight: {
+        placeholderText: "Enter your email address",
+        buttonText: "Subscribe",
+      }
     }
-    , MailingList: {
-  
-}
   };
 })();
