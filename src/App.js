@@ -11,7 +11,7 @@ import MailingList from './components/MailingList';
 import { useReducer } from 'react';
 import specs from "./components/specs/state"
 import progressJS from "progress"
-
+import Footer from "./components/Footer"
 function App() {
 
   const [state, setState] = useReducer(function (state, action) { }, specs);
@@ -28,6 +28,7 @@ function App() {
       <Achievements state={state.Achievements} />
       <ClientMessage state={state.ClientMessage} />
       <MailingList state={state.MailingList} />
+      <Footer state={state.Footer} />
     </div>
   );
 }

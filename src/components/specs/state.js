@@ -216,12 +216,31 @@ export default (function () {
       contentLeft: {
         heading: "Subscribe to our mailing list",
         description: "We'll send you updates about NirogGyan",
-        footer: ["Get In Touch",".", "contact@niroggyan.com"],
-      logoImage: path.join(process.env.PUBLIC_URL, "mailingList", "logo-icon.png"),
-        },
+        footer: ["Get In Touch", ".", "contact@niroggyan.com"],
+      },
       contentRight: {
         placeholderText: "Enter your email address",
         buttonText: "Subscribe",
+      }
+    },
+    Footer: {
+      block1: {
+        logoImage: path.join(process.env.PUBLIC_URL, "footer", "logo-icon.png"),
+        copyrightText: "Copyright 2020 © NirogGyan All rights reserved"
+      },
+      block2: {
+        heading: "Company",
+        items: ["About us", "How it works", "Blog"]
+      },
+      block3: {
+        heading: "Further information",
+        items: ["Community", "Guidelines", "Terms of Services", "Privacy Policy"]
+      },
+      block4: {
+        heading: "Community",
+        items: [path.join(process.env.PUBLIC_URL, "footer", "facebook.png"),
+        path.join(process.env.PUBLIC_URL, "footer", "twitter.png"),
+        path.join(process.env.PUBLIC_URL, "footer", "instagram.png")]
       }
     }
   };
