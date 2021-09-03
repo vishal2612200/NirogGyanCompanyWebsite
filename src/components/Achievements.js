@@ -9,10 +9,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
-    padding: "2rem"
+    padding: "2rem",
+    justifyContent: "space-around",
+    alignItems: "stretch"
   },
+
   headerContainer: {
     textAlign: "center",
+
   },
   card: {
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
@@ -24,12 +28,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Card = ({ content: { textBig, textSmall } }) => {
+const Card = ({ content }) => {
   const classes = useStyles();
   return (
-    <Grid item direction="column" className={classes.card}>
-      <Typography variant="h4">{textBig}</Typography>
-      <Typography variant="h6">{textSmall}</Typography>
+    <Grid item className={classes.card}>
+      <Typography variant="h4">{content.textBig}</Typography>
+      <Typography variant="h6">{content.textSmall}</Typography>
     </Grid>
   );
 };
@@ -38,10 +42,7 @@ export default function Achievements({ state: achievements }) {
   const classes = useStyles();
 
   return (
-    <Grid container justifyContent="space-evenly" className={classes.root}>
-      <Grid container justifyContent="space-evenly" className={classes.root}>
-
-      </Grid>
+    <Grid container className={classes.root}>
       {achievements.cardsData.map((achievement) => (<Card content={achievement} />))}
     </Grid>
   );
