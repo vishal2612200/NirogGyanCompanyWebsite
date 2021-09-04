@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 const Card = ({ content }) => {
   const classes = useStyles();
   return (
-    <Grid container item xs={6} md={3} className={classes.cardContainer}>
+    <Grid container item xs={12} sm={6} md={3} className={classes.cardContainer}>
       <Grid item className={classes.card}>
         <Typography variant="h4">{content.textBig}</Typography>
         <Typography variant="h6">{content.textSmall}</Typography>

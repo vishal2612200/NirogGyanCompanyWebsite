@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
   },
   headingContainer: {
     textAlign: "center",
+    padding:"2rem"
   },
   cardList: {
-    
     padding: "1rem auto",
     margin: "1rem auto",
     justifyContent: "space-evenly",

@@ -26,10 +26,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-evenly",
     },
     contentRight: {
-        textAlign:"center",
+        textAlign: "center",
         "& >img": {
             maxWidth: "100%",
-            maxHeight: "100%"
+            maxHeight: "100%",
+            minWidth: ""
         }
     },
     headerContainer: {
@@ -44,12 +45,12 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        padding:"2rem"
+        padding: "2rem"
 
     },
     card: {
-        padding: "2rem 3rem", 
-        borderRadius:"20px",
+        padding: "2rem 3rem",
+        borderRadius: "20px",
         backgroundColor: "#fff"
     }
 }

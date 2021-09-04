@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "@fontsource/nunito-sans";
@@ -9,8 +9,8 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: "0.5rem",
-        padding: "2rem",
+        marginTop: "1rem",
+        padding: "1.5rem",
         color: "#fff",
         backgroundColor: "#163B76",
         "&>div": {
@@ -21,15 +21,22 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "1rem"
     },
     block: {
-        marginRight: "1rem",
+        minWidth:"min-content",
+        margin: "1rem",
     }
 }));
 
 const Block1 = ({ content }) => {
     const classes = useStyles()
-    return <Grid container item direction="column" justifyContent="space-between" md={3} className={classes.block}>
-        <Grid item><img src={content.logoImage} alt="logo" /></Grid>
-        <Grid item>  <Typography variant="h6">{content.copyrightText}</Typography></Grid>
+    return <Grid container item direction="column" justifyContent="flex-start" md={3} className={classes.block}>
+        <Grid item>
+            <img src={content.logoImage} alt="logo" />
+        </Grid>
+        <Grid item>  
+            <Typography variant="h6">
+                {content.copyrightText}
+            </Typography>
+        </Grid>
     </Grid>
 }
 

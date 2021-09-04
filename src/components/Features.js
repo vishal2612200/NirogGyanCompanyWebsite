@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     padding: "1rem",
     backgroundColor: "#E9F5FF",
+    "&>img": {
+      margin:"auto "
+    }
   },
   textBox: {
 

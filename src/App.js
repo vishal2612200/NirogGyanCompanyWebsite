@@ -10,7 +10,6 @@ import ClientMessage from './components/ClientMessage';
 import MailingList from './components/MailingList';
 import { useReducer } from 'react';
 import specs from "./components/specs/state"
-import progressJS from "progress"
 import Footer from "./components/Footer"
 function App() {
 
