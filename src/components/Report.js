@@ -27,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
     },
     contentRight: {
         textAlign: "center",
-        "& >img": {
+        margin: "auto",
+        "& img": {
             maxWidth: "100%",
-            maxHeight: "100%",
-            minWidth: ""
+            height: "auto"
         }
     },
     headerContainer: {
