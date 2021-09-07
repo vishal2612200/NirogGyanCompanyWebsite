@@ -4,6 +4,7 @@ import { Link, IconButton, AppBar, Toolbar, Typography, Grid, useTheme } from "@
 import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
 import { useSpring, animated } from 'react-spring'
+import { PageContext } from "../App";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -115,7 +116,7 @@ const MenuOpenButton = () => {
 const NavItemsSmallScreen = ({ links }) => {
   const isSmallScreen = useSmallScreen();
   const { isButtonPressed } = useContext(NavContext);
-  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, config: { duration: 500 }, reset:true})
+  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, config: { duration: 500 }, reset: true })
 
   let navItems = useNavItems(links);
 
@@ -145,14 +146,21 @@ const NavItemsMediumScreen = ({ links }) => {
 
 function useNavItems(links) {
   const { activeLinkIndex, setActiveLinkIndex } = useContext(NavContext);
+  const { setPage } = useContext(PageContext);
   return links.map(
-    (text, index) => {
+    ({text, id}, index) => {
       return <Grid item key={index} >
         <Link
-          onClick={() => setActiveLinkIndex(index)}
+          onClick={
+            () => {
+              setActiveLinkIndex(index)
+              setPage(id)
+            }
+          }
           underline={activeLinkIndex === index ? "always" : "none"}>
           <Typography
             variant="h6"
+            // eslint-disable-next-line eqeqeq
             color={activeLinkIndex == index ? "primary" : "textSecondary"}>
             {text}
           </Typography>

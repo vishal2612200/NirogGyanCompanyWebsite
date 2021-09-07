@@ -3,7 +3,13 @@ import * as path from "path";
 export default (function () {
   return {
     NavBar: {
-      navLinks: ["Home", "About Us", "How It Works", "Blog", "FAQs"],
+      navLinks: [
+        { text: "Home", id: "home" },
+        { text: "About Us", id: "about" },
+        { text: "How It Works", id: "how-it-works" },
+        { text: "Blog", id: "blog" },
+        { text: "FAQs", id: "faqs" }
+      ],
       logoImg: path.join(process.env.PUBLIC_URL, "/logo-icon.png"),
     },
     HeroSection: {
@@ -145,26 +151,26 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report","report-vitamin.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-vitamin.png"),
             name: "Vitamin"
           },
 
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report","report-kidney.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-kidney.png"),
             name: "Kidney"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report","report-electrolyte.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-electrolyte.png"),
             name: "Electrolyte"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report","report-diabetes.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-diabetes.png"),
             name: "Diabetes"
           }
         ]
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "report","report-big-report.png"),
+        imagePath: path.join(process.env.PUBLIC_URL, "report", "report-big-report.png"),
       }
     },
     Achievements: {

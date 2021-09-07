@@ -1,3 +1,4 @@
+import React, { createContext } from 'react';
 import NavBar from './components/NavBar';
 import Brand from './components/Brand';
 import Services from './components/Services';
@@ -8,25 +9,45 @@ import Report from './components/Report';
 import Achievements from './components/Achievements';
 import ClientMessage from './components/ClientMessage';
 import MailingList from './components/MailingList';
-import { useReducer } from 'react';
-import specs from "./components/specs/state"
+import { useReducer, useState } from 'react';
+import specs from "./components/specs/home"
 import Footer from "./components/Footer"
+
+export const PageContext = createContext()
+
 function App() {
 
   const [state, setState] = useReducer(function (state, action) { }, specs);
+  const [page, setPage] = useState("home");
+  let pageData;
+  switch (page) {
+
+    case "about":
+      pageData = (<React.Fragment>
+        <Brand state={state.Brand} />
+
+      </React.Fragment>)
+      break;
+    default:
+      pageData = (<React.Fragment >
+        <HeroSection state={state.HeroSection} />
+        <Brand state={state.Brand} />
+        <Features state={state.Features} />
+        <Services state={state.Services} />
+        <Bytes state={state.Bytes} />
+        <Report state={state.Report} />
+        <Achievements state={state.Achievements} />
+        <ClientMessage state={state.ClientMessage} />
+        <MailingList state={state.MailingList} />
+      </React.Fragment>)
+  }
 
   return (
     <div className="App">
-      <NavBar state={state.NavBar} />
-      <HeroSection state={state.HeroSection} />
-      <Brand state={state.Brand} />
-      <Features state={state.Features} />
-      <Services state={state.Services} />
-      <Bytes state={state.Bytes} />
-      <Report state={state.Report} />
-      <Achievements state={state.Achievements} />
-      <ClientMessage state={state.ClientMessage} />
-      <MailingList state={state.MailingList} />
+      <PageContext.Provider value={{ page, setPage }}>
+        <NavBar state={state.NavBar} />
+      </PageContext.Provider>
+      {pageData}
       <Footer state={state.Footer} />
     </div>
   );
