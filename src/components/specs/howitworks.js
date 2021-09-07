@@ -10,14 +10,14 @@ export default (function () {
                     "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
                 buttons: { services: "our Services", watchVideo: "Watch Video" },
             },
-            imagePath: path.join(process.env.PUBLIC_URL, "aboutpage", "hero-image.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "hero-image.png"),
         },
         RecognisedBy: {
             heading: "Recognized By",
             trustedBrandsLogoImages: [
-                path.join(process.env.PUBLIC_URL, "aboutpage", "recognised-by-1.png"),
-                path.join(process.env.PUBLIC_URL, "aboutpage", "recognised-by-2.png"),
-                path.join(process.env.PUBLIC_URL, "aboutpage", "recognised-by-3.png"),
+                path.join(process.env.PUBLIC_URL, "howitworks", "recognised-by-1.png"),
+                path.join(process.env.PUBLIC_URL, "howitworks", "recognised-by-2.png"),
+                path.join(process.env.PUBLIC_URL, "howitworks", "recognised-by-3.png"),
             ],
         },
         Features: {

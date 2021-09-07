@@ -2,16 +2,7 @@ import * as path from "path";
 
 export default (function () {
   return {
-    NavBar: {
-      navLinks: [
-        { text: "Home", id: "home" },
-        { text: "About Us", id: "about" },
-        { text: "How It Works", id: "how-it-works" },
-        { text: "Blog", id: "blog" },
-        { text: "FAQs", id: "faqs" }
-      ],
-      logoImg: path.join(process.env.PUBLIC_URL, "/logo-icon.png"),
-    },
+
     HeroSection: {
       info: {
         heading: { line1: "Simplifying", line2: "Medical Reports" },
@@ -19,15 +10,15 @@ export default (function () {
           "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
         buttons: { services: "our Services", watchVideo: "Watch Video" },
       },
-      imagePath: path.join(process.env.PUBLIC_URL, "/hero-image.png"),
+      imagePath: path.join(process.env.PUBLIC_URL, "homepage", "hero-image.png"),
     },
     Brand: {
       heading: "Trusted HealthCare Brands",
       trustedBrandsLogoImages: [
-        path.join(process.env.PUBLIC_URL, "brands", "crelio-health.png"),
-        path.join(process.env.PUBLIC_URL, "brands", "dr-dang-labs.png"),
-        path.join(process.env.PUBLIC_URL, "brands", "medlife.png"),
-        path.join(process.env.PUBLIC_URL, "brands", "niramaya.png"),
+        path.join(process.env.PUBLIC_URL, "homepage", "brand-crelio-health.png"),
+        path.join(process.env.PUBLIC_URL, "homepage", "brand-dr-dang-labs.png"),
+        path.join(process.env.PUBLIC_URL, "homepage", "brand-medlife.png"),
+        path.join(process.env.PUBLIC_URL, "homepage", "brand-niramaya.png"),
       ],
     },
     Features: {
@@ -39,17 +30,14 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(
-              process.env.PUBLIC_URL,
-              "/features/features-item-1.png"
-            ),
+            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-item-1.png"),
             textThin: "Software covering 250+",
             textBold: "Pathology Biomarkers",
           },
           {
             imagePath: path.join(
               process.env.PUBLIC_URL,
-              "/features/features-item-2.png"
+              "homepage", "features-item-2.png"
             ),
             textThin: "Knowledge Bank based by",
             textBold: "Evidence-backed, Vetted Content",
@@ -57,7 +45,8 @@ export default (function () {
           {
             imagePath: path.join(
               process.env.PUBLIC_URL,
-              "/features/features-item-3.png"
+              "homepage",
+              "features-item-3.png"
             ),
             textThin: "Add-ons : Multi - language",
             textBold: "Content, Graphs, Analytics",
@@ -65,7 +54,7 @@ export default (function () {
         ],
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "features", "features-big.png")
+        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
       }
     },
 
@@ -88,7 +77,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "/services/services-instant.png"
+            "homepage", "services-instant.png"
           ),
           heading: "Instant, Automated, Secure",
           content:
@@ -97,7 +86,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "/services/services-pdf-whatsapp.png"
+            "homepage", "services-pdf-whatsapp.png"
           ),
           heading: "PDF, App, E-mail, Whatsapp",
           content:
@@ -106,7 +95,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "/services/services-marketing.png"
+            "homepage", "services-marketing.png"
           ),
           heading: "Whitelabel + Marketing",
           content:
@@ -115,7 +104,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "/services/services-affordable.png"
+            "homepage", "services-affordable.png"
           ),
           heading: "Special Corporate Offerings",
           content:
@@ -124,7 +113,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "/services/services-corporate-offerings.png"
+            "homepage", "services-corporate-offerings.png"
           ),
           heading: "Affordable & Doctor-friendly",
           content: "Track and save your medical history and health data",
@@ -151,26 +140,26 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-vitamin.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-vitamin.png"),
             name: "Vitamin"
           },
 
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-kidney.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-kidney.png"),
             name: "Kidney"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-electrolyte.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-electrolyte.png"),
             name: "Electrolyte"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "report", "report-diabetes.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-diabetes.png"),
             name: "Diabetes"
           }
         ]
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "report", "report-big-report.png"),
+        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-big-report.png"),
       }
     },
     Achievements: {
@@ -199,17 +188,17 @@ export default (function () {
         heading: "What Our Clients Say",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
       },
-      backgroundImage: path.join(process.env.PUBLIC_URL, "clientMessage", "client-message-background.png"),
+      backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "client-message-background.png"),
       cardsData: [
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: path.join(process.env.PUBLIC_URL, "clientMessage", "client-message-1.png"),
+          imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         }
         , {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: path.join(process.env.PUBLIC_URL, "clientMessage", "client-message-1.png"),
+          imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         }
@@ -238,25 +227,6 @@ export default (function () {
         buttonText: "Subscribe",
       }
     },
-    Footer: {
-      block1: {
-        logoImage: path.join(process.env.PUBLIC_URL, "footer", "logo-icon.png"),
-        copyrightText: "Copyright 2020 © NirogGyan All rights reserved"
-      },
-      block2: {
-        heading: "Company",
-        items: ["About us", "How it works", "Blog"]
-      },
-      block3: {
-        heading: "Further information",
-        items: ["Community", "Guidelines", "Terms of Services", "Privacy Policy"]
-      },
-      block4: {
-        heading: "Community",
-        items: [path.join(process.env.PUBLIC_URL, "footer", "facebook.png"),
-        path.join(process.env.PUBLIC_URL, "footer", "twitter.png"),
-        path.join(process.env.PUBLIC_URL, "footer", "instagram.png")]
-      }
-    }
+
   };
 })();
