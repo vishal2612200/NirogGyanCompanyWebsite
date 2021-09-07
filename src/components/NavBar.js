@@ -1,6 +1,6 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {Link, IconButton, AppBar, Toolbar, Typography, Grid, useTheme } from "@material-ui/core";
+import { Link, IconButton, AppBar, Toolbar, Typography, Grid, useTheme } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
 import { useSpring, animated } from 'react-spring'
@@ -150,9 +150,9 @@ function useNavItems(links) {
   const { activeLinkIndex, setActiveLinkIndex } = useContext(NavContext);
   const { setPage } = useContext(PageContext);
   return links.map(
-    ({text, id}, index) => {
+    ({ text, id }, index) => {
       return <Grid item key={index} >
-        <Link href={`/${id}`}
+        <Link href={process.env.PUBLIC_URL + `/${id}`}
           onClick={
             () => {
               setActiveLinkIndex(index)
