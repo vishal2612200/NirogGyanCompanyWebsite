@@ -13,7 +13,7 @@ import { useReducer, useState } from 'react';
 import specs from "./components/specs/home"
 import Footer from "./components/Footer"
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
@@ -59,7 +59,7 @@ function App() {
       <PageContext.Provider value={{ page, setPage }}>
         <NavBar state={state.NavBar} />
       </PageContext.Provider>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/home">
             <Home state={state} />
@@ -71,7 +71,7 @@ function App() {
             <Home state={state} />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
       <Footer state={state.Footer} />
     </div>
   );
