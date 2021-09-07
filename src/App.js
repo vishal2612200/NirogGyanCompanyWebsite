@@ -48,7 +48,8 @@ const About = ({ state }) => {
 }
 
 function App() {
-
+  // https://github.com/facebook/create-react-app/issues/1765
+  
   const [state, setState] = useReducer(function (state, action) { }, specs);
   const [page, setPage] = useState("home");
 
@@ -59,13 +60,13 @@ function App() {
       </PageContext.Provider>
       <Router>
         <Switch>
-          <Route path="/home">
+          <Route path={process.env.PUBLIC_URL + "/home"}>
             <Home state={state} />
           </Route>
-          <Route path="/about">
+          <Route path={process.env.PUBLIC_URL + "/about"}>
             <About state={state} />
           </Route>
-          <Route path="/">
+          <Route path={process.env.PUBLIC_URL + "/"}>
             <Home state={state} />
           </Route>
         </Switch>
