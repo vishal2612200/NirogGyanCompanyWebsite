@@ -5,19 +5,18 @@ export default (function () {
 
         HeroSection: {
             info: {
-                heading: { line1: "About Us", line2: "Medical Reports" },
-                description:
-                    "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
+                heading: { line1: "About Us", line2: "" },
+                description: "",
                 buttons: { services: "our Services", watchVideo: "Watch Video" },
             },
-            imagePath: path.join(process.env.PUBLIC_URL, "aboutpage", "hero-image.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "about", "hero-image.png"),
         },
         RecognisedBy: {
             heading: "Recognized By",
             trustedBrandsLogoImages: [
-                path.join(process.env.PUBLIC_URL, "aboutpage", "recognised-by-1.png"),
-                path.join(process.env.PUBLIC_URL, "aboutpage", "recognised-by-2.png"),
-                path.join(process.env.PUBLIC_URL, "aboutpage", "recognised-by-3.png"),
+                path.join(process.env.PUBLIC_URL, "about", "recognised-by-1.png"),
+                path.join(process.env.PUBLIC_URL, "about", "recognised-by-2.png"),
+                path.join(process.env.PUBLIC_URL, "about", "recognised-by-3.png"),
             ],
         },
         Features: {
@@ -57,78 +56,80 @@ export default (function () {
             }
         },
 
-        Services: {
+        ExpertTeam: {
             content: {
-                heading: "The best Patient-Engagement Tool out there",
-                description:
-                    "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
+                heading: "Our Expert Team",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
-            servicesList: [
+            cardsList: [
                 {
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "/services/services-templates.png"
+                        "about", "expertteam-shweta.png"
                     ),
-                    heading: "Multiple Reporting Templates",
+                    heading: "Shweta Gandhi",
                     content:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
                 },
                 {
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "homepage", "services-instant.png"
+                        "about", "expertteam-joy.png"
                     ),
-                    heading: "Instant, Automated, Secure",
-                    content:
-                        "Buy  your medicines with our mobile application with a simple delivery system",
+                    heading: "Joyneel Acharya",
+                    content: "Buy  your medicines with our mobile application with a simple delivery system",
                 },
                 {
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "homepage", "services-pdf-whatsapp.png"
+                        "about", "expertteam-kartik.png"
                     ),
-                    heading: "PDF, App, E-mail, Whatsapp",
-                    content:
-                        "Free consultation with our trusted doctors and get the best recomendations",
-                },
-                {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-marketing.png"
-                    ),
-                    heading: "Whitelabel + Marketing",
-                    content:
-                        "Free consultation with our trusted doctors and get the best recomendations",
-                },
-                {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-affordable.png"
-                    ),
-                    heading: "Special Corporate Offerings",
-                    content:
-                        "You can get 24/7 urgent care for yourself or your children and your lovely family",
-                },
-                {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-corporate-offerings.png"
-                    ),
-                    heading: "Affordable & Doctor-friendly",
-                    content: "Track and save your medical history and health data",
-                },
+                    heading: "Kartik Tyagi",
+                    content: "Free consultation with our trusted doctors and get the best recomendations",
+                }
             ],
         },
-        Bytes: {
+
+        ProductConsultant: {
             content: {
-                heading: "NirogGyan Bytes",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto pariatur quas repellendus numquam assumenda, mollitia possimus similique sed modi, iure dicta velit, quaerat voluptatibus saepe aliquam in libero est commodi.",
+                heading: "Product Consultant",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
-            videoLinks: [
-                "https://www.youtube.com/embed/H0cHIewcQ2M",
-                "https://www.youtube.com/embed/MlLAXpoxNvQ",
-                "https://www.youtube.com/embed/L4aPen8hCL8",
+            cardsList: [
+                {
+                    imgPath: path.join(
+                        process.env.PUBLIC_URL,
+                        "about", "product-consultant-ayush.png"
+                    ),
+                    heading: "Ayush Vora",
+                    content: "Technology Expert at NirogGyan",
+                },
+                {
+                    imgPath: path.join(
+                        process.env.PUBLIC_URL,
+                        "about", "product-consultant-erik.png"
+                    ),
+                    heading: "Erik Azulay",
+                    content: "Serial Entrepreneur, International Strategy",
+                },
+                {
+                    imgPath: path.join(
+                        process.env.PUBLIC_URL,
+                        "about", "product-consultant-kartik.png"
+                    ),
+                    heading: "Kartik Tyagi",
+                    content: "Technical Head",
+                }
             ],
+        },
+        HelpedOrganisations: {
+            content: {
+                heading: "We have helped 100+ organizations",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar maximus leo, non dignissim risus aliquam eget",
+            },
+            buttonText: "Discover & Get Support From Our Team"
+            ,
+            backgroundImage: path.join(process.env.PUBLIC_URL, "about", "helped-organisations-background.png"),
         },
 
         Report: {
@@ -204,26 +205,19 @@ export default (function () {
             ]
 
         },
-        MailingList: {
+        GetInTouch: {
+
             block1: {
-                heading: "Subscribe to our mailing list",
-                description: "We'll send you updates about NirogGyan",
-                footer: ["Get In Touch", ".", "contact@niroggyan.com"],
+                imagePath: path.join(process.env.PUBLIC_URL, "about", "get-in-touch-1.png"),
+
             },
             block2: {
-                placeholderText: "Enter your email address",
+                line1: "Get In Touch",
+                line2: "contact@niroggyan.com",
+                line3: "+91-7678277891",
             },
             block3: {
-                buttonText: "Subscribe",
-            },
-            contentLeft: {
-                heading: "Subscribe to our mailing list",
-                description: "We'll send you updates about NirogGyan",
-                footer: ["Get In Touch", ".", "contact@niroggyan.com"],
-            },
-            contentRight: {
-                placeholderText: "Enter your email address",
-                buttonText: "Subscribe",
+                imagePath: path.join(process.env.PUBLIC_URL, "about", "get-in-touch-2.png"),
             }
         },
 

@@ -5,19 +5,18 @@ export default (function () {
 
         HeroSection: {
             info: {
-                heading: { line1: "How it Works", line2: "Medical Reports" },
-                description:
-                    "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
-                buttons: { services: "our Services", watchVideo: "Watch Video" },
+                heading: { line1: "FAQS", line2: undefined },
+                description: undefined,
+                buttons: { services: "", watchVideo: "" },
             },
-            imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "hero-image.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "faqs", "hero-image.png"),
         },
         RecognisedBy: {
             heading: "Recognized By",
             trustedBrandsLogoImages: [
-                path.join(process.env.PUBLIC_URL, "howitworks", "recognised-by-1.png"),
-                path.join(process.env.PUBLIC_URL, "howitworks", "recognised-by-2.png"),
-                path.join(process.env.PUBLIC_URL, "howitworks", "recognised-by-3.png"),
+                path.join(process.env.PUBLIC_URL, "faqs", "recognised-by-1.png"),
+                path.join(process.env.PUBLIC_URL, "faqs", "recognised-by-2.png"),
+                path.join(process.env.PUBLIC_URL, "faqs", "recognised-by-3.png"),
             ],
         },
         Features: {
