@@ -13,11 +13,12 @@ import { useReducer, useState } from 'react';
 import specs from "./components/specs/home"
 import Footer from "./components/Footer"
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+
+
 export const PageContext = createContext()
 
 
@@ -49,7 +50,7 @@ const About = ({ state }) => {
 
 function App() {
   // https://github.com/facebook/create-react-app/issues/1765
-  
+
   const [state, setState] = useReducer(function (state, action) { }, specs);
   const [page, setPage] = useState("home");
 
@@ -58,19 +59,19 @@ function App() {
       <PageContext.Provider value={{ page, setPage }}>
         <NavBar state={state.NavBar} />
       </PageContext.Provider>
-      <Router>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path={process.env.PUBLIC_URL + "/home"}>
+          <Route path="/home">
             <Home state={state} />
           </Route>
-          <Route path={process.env.PUBLIC_URL + "/about"}>
+          <Route path="/about">
             <About state={state} />
           </Route>
-          <Route path={process.env.PUBLIC_URL + "/"}>
+          <Route path="/">
             <Home state={state} />
           </Route>
         </Switch>
-      </Router>
+      </BrowserRouter>
       <Footer state={state.Footer} />
     </div>
   );
