@@ -1,10 +1,12 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link, IconButton, AppBar, Toolbar, Typography, Grid, useTheme } from "@material-ui/core";
+import {Link, IconButton, AppBar, Toolbar, Typography, Grid, useTheme } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
 import { useSpring, animated } from 'react-spring'
 import { PageContext } from "../App";
+//import { Link } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -150,7 +152,7 @@ function useNavItems(links) {
   return links.map(
     ({text, id}, index) => {
       return <Grid item key={index} >
-        <Link
+        <Link href={`/${id}`}
           onClick={
             () => {
               setActiveLinkIndex(index)
