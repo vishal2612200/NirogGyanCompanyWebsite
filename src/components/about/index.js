@@ -5,11 +5,15 @@ import GetInTouch from './GetInTouch';
 import ExpertTeam from './ExpertTeam';
 import ProductConsultant from './ProductConsultant';
 import HelpedOrganisations from './HelpedOrganisations';
+import Market from './Market';
+import Believe from './Believe';
 
-export default function Home({ state }) {
+export default function About({ state }) {
 
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
+        <Market state={state.Market} />
+        <Believe state={state.Believe} />
         <ExpertTeam state={state.ExpertTeam} />
         <HelpedOrganisations state={state.HelpedOrganisations} />
         <ProductConsultant state={state.ProductConsultant} />

@@ -1,10 +1,10 @@
 import React from 'react';
 import HeroSection from './HeroSection';
-import RecognisedBy from './RecognisedBy';
+import Report from './Report';
 
 export default function HowItWorks({ state }) {
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
-        <RecognisedBy state={state.RecognisedBy} />
+        <Report state={state.Report} />
     </React.Fragment>
 }

@@ -15,7 +15,6 @@ const useStyles = makeStyles({
 
 export default function HeadingWithText({ content }) {
     const classes = useStyles();
-    console.log(content)
     return <Grid item className={classes.headingContainer}>
         <Typography
             variant="h3"

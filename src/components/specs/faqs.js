@@ -11,112 +11,43 @@ export default (function () {
             },
             imagePath: path.join(process.env.PUBLIC_URL, "faqs", "hero-image.png"),
         },
-        RecognisedBy: {
-            heading: "Recognized By",
-            trustedBrandsLogoImages: [
-                path.join(process.env.PUBLIC_URL, "faqs", "recognised-by-1.png"),
-                path.join(process.env.PUBLIC_URL, "faqs", "recognised-by-2.png"),
-                path.join(process.env.PUBLIC_URL, "faqs", "recognised-by-3.png"),
-            ],
-        },
-        Features: {
-            contentLeft: {
-                header: {
-                    line1: ["Health Knowledge", "   +   ", "Modern Design"],
-                    line2: "combine to give you the most",
-                    line3: "Understandable Medical Reports",
-                },
-                cardsData: [
-                    {
-                        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-item-1.png"),
-                        textThin: "Software covering 250+",
-                        textBold: "Pathology Biomarkers",
-                    },
-                    {
-                        imagePath: path.join(
-                            process.env.PUBLIC_URL,
-                            "homepage", "features-item-2.png"
-                        ),
-                        textThin: "Knowledge Bank based by",
-                        textBold: "Evidence-backed, Vetted Content",
-                    },
-                    {
-                        imagePath: path.join(
-                            process.env.PUBLIC_URL,
-                            "homepage",
-                            "features-item-3.png"
-                        ),
-                        textThin: "Add-ons : Multi - language",
-                        textBold: "Content, Graphs, Analytics",
-                    },
-                ],
-            },
-            contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
-            }
-        },
-
-        Services: {
+        FrequentQuestions: {
             content: {
-                heading: "The best Patient-Engagement Tool out there",
-                description:
-                    "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
+                heading: "Frequently Asked Questions",
+                description: ""
             },
-            servicesList: [
+            cardsList: [
                 {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "/services/services-templates.png"
-                    ),
-                    heading: "Multiple Reporting Templates",
+                    heading: "What does NirogGyan offer?",
+                    content:
+                        "For the 21st century patients, NirogGyan offers diagnostic test reports which are 'SmartReports' - all terms explained in simple language, interesting content, and world-class design. While a normal test report is just an A4 sheet with terms & measurements on it, our SmartReport is comprehensive but concise at the same time. Labs, doctors and patients in the post-pandemic world are all evolving with these informative reports.",
+                },
+                {
+                    heading: "What does NirogGyan offer?",
                     content:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
                 },
                 {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-instant.png"
-                    ),
-                    heading: "Instant, Automated, Secure",
+                    heading: "What does NirogGyan offer?",
                     content:
-                        "Buy  your medicines with our mobile application with a simple delivery system",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
                 },
                 {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-pdf-whatsapp.png"
-                    ),
-                    heading: "PDF, App, E-mail, Whatsapp",
+                    heading: "What does NirogGyan offer?",
                     content:
-                        "Free consultation with our trusted doctors and get the best recomendations",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
                 },
                 {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-marketing.png"
-                    ),
-                    heading: "Whitelabel + Marketing",
+                    heading: "What does NirogGyan offer?",
                     content:
-                        "Free consultation with our trusted doctors and get the best recomendations",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
                 },
                 {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-affordable.png"
-                    ),
-                    heading: "Special Corporate Offerings",
+                    heading: "What does NirogGyan offer?",
                     content:
-                        "You can get 24/7 urgent care for yourself or your children and your lovely family",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
                 },
-                {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "homepage", "services-corporate-offerings.png"
-                    ),
-                    heading: "Affordable & Doctor-friendly",
-                    content: "Track and save your medical history and health data",
-                },
-            ],
+            ]
         },
         Bytes: {
             content: {

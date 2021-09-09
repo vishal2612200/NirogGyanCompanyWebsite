@@ -7,7 +7,6 @@ export default (function () {
             info: {
                 heading: { line1: "About Us", line2: "" },
                 description: "",
-                buttons: { services: "our Services", watchVideo: "Watch Video" },
             },
             imagePath: path.join(process.env.PUBLIC_URL, "about", "hero-image.png"),
         },
@@ -19,40 +18,37 @@ export default (function () {
                 path.join(process.env.PUBLIC_URL, "about", "recognised-by-3.png"),
             ],
         },
-        Features: {
+        Market: {
             contentLeft: {
                 header: {
-                    line1: ["Health Knowledge", "   +   ", "Modern Design"],
-                    line2: "combine to give you the most",
-                    line3: "Understandable Medical Reports",
+                    heading: "Lorem ipsum dolor sit amet",
+                    description: "Good health is complex, till someone explains it simply. We, at NirogGyan, make medical reports so simple, that people feel engaged and health- literate enough to change their lives through these test reports.",
                 },
-                cardsData: [
+                cardsList: [
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-item-1.png"),
-                        textThin: "Software covering 250+",
-                        textBold: "Pathology Biomarkers",
-                    },
-                    {
-                        imagePath: path.join(
-                            process.env.PUBLIC_URL,
-                            "homepage", "features-item-2.png"
-                        ),
-                        textThin: "Knowledge Bank based by",
-                        textBold: "Evidence-backed, Vetted Content",
-                    },
-                    {
-                        imagePath: path.join(
-                            process.env.PUBLIC_URL,
-                            "homepage",
-                            "features-item-3.png"
-                        ),
-                        textThin: "Add-ons : Multi - language",
-                        textBold: "Content, Graphs, Analytics",
-                    },
+                        imagePath: path.join(process.env.PUBLIC_URL, "about", "market-card-item-1.png"),
+                        textThin: "5+ Years",
+                        textBold: "On the market",
+                    }
                 ],
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
+                imagePath: path.join(process.env.PUBLIC_URL, "about", "market-background.png")
+            }
+        },
+
+        Believe: {
+            contentLeft: {
+                header: {
+                    heading: "We believe that",
+                    description: ["The world & our lives are changing fast",
+                        "People have gone ‘Digital’. For good.",
+                        "Good Health is easy once Understood"]
+                },
+                cardsList: [],
+            },
+            contentRight: {
+                imagePath: path.join(process.env.PUBLIC_URL, "about", "believe-background.png")
             }
         },
 
@@ -138,32 +134,32 @@ export default (function () {
                     heading: "Believe what you see.",
                     description: "Checkout our SmartReports below and know the difference",
                 },
-                cardsData: [
+                cardsList: [
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-vitamin.png"),
+                        imagePath: path.join(process.env.PUBLIC_URL, "about", "report-vitamin.png"),
                         name: "Vitamin"
                     },
 
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-kidney.png"),
+                        imagePath: path.join(process.env.PUBLIC_URL, "about", "report-kidney.png"),
                         name: "Kidney"
                     },
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-electrolyte.png"),
+                        imagePath: path.join(process.env.PUBLIC_URL, "about", "report-electrolyte.png"),
                         name: "Electrolyte"
                     },
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-diabetes.png"),
+                        imagePath: path.join(process.env.PUBLIC_URL, "about", "report-diabetes.png"),
                         name: "Diabetes"
                     }
                 ]
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-big-report.png"),
+                imagePath: path.join(process.env.PUBLIC_URL, "about", "report-big-report.png"),
             }
         },
         Achievements: {
-            cardsData: [
+            cardsList: [
                 {
                     textBig: "40+",
                     textSmall: "Labs Running",
@@ -188,17 +184,17 @@ export default (function () {
                 heading: "What Our Clients Say",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
-            backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "client-message-background.png"),
-            cardsData: [
+            backgroundImage: path.join(process.env.PUBLIC_URL, "about", "client-message-background.png"),
+            cardsList: [
                 {
                     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-                    imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
+                    imagePath: path.join(process.env.PUBLIC_URL, "about", "client-message-1.png"),
                     name: "Sanjeev Malhotra",
                     organisation: "Niramaya Pathlab"
                 }
                 , {
                     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-                    imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
+                    imagePath: path.join(process.env.PUBLIC_URL, "about", "client-message-1.png"),
                     name: "Sanjeev Malhotra",
                     organisation: "Niramaya Pathlab"
                 }

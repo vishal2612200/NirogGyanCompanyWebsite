@@ -12,13 +12,13 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundImage:"linear-gradient(to right, #455BCD, #52BBE8)",
+        backgroundImage: "linear-gradient(to right, #455BCD, #52BBE8)",
         marginTop: "0.5rem",
         padding: "0.5rem",
         minHeight: "75vh"
     },
     title: {
-       color: "#fff",
+        color: "#fff",
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         textAlign: "left",
         fontWeight: "700",
@@ -107,7 +107,7 @@ const Content = ({ content }) => {
     return <Grid container item md={7} direction="column" className={classes.content}>
         <Heading text={content.heading} />
         <Description text={content.description} />
-        <ButtonSet content={content.buttons} />
+        {content.buttons ? <ButtonSet content={content.buttons} /> : ""}
     </Grid>
 }
 

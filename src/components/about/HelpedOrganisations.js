@@ -6,9 +6,10 @@ import HeadingWithText from "../utils/HeadingWithText";
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        padding: "4rem",
         flexGrow: 1,
         backgroundColor: "#3567D6",
-        backgroundPosition: "20% 80%",
+        backgroundPosition: "30% 70%",
         backgroundRepeat: "no-repeat",
     }
 }));

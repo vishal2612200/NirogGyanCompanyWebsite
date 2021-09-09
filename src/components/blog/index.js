@@ -1,10 +1,10 @@
 import React from 'react';
 import HeroSection from './HeroSection';
-import RecognisedBy from './RecognisedBy';
+import Main from './Main';
 
 export default function Blog({ state }) {
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
-        <RecognisedBy state={state.RecognisedBy} />
+        <Main state={state.Main} />
     </React.Fragment>
 }

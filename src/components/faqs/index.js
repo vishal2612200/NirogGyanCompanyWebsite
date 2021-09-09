@@ -1,11 +1,12 @@
 import React from 'react';
 import HeroSection from './HeroSection';
-import RecognisedBy from './RecognisedBy';
-
+import FrequentQuestions from './FrequentQuestions';
+import Form from './Form';
 export default function FAQS({ state }) {
 
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
-        <RecognisedBy state={state.RecognisedBy} />
+        <FrequentQuestions state={state.FrequentQuestions} />
+        <Form state={state.Form} />
     </React.Fragment>
 }
