@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Report({ state: report }) {
     const classes = useStyles();
     return (
-        <Grid container spacing={8} className={classes.root}>
+        <Grid container className={classes.root}>
             <ContentLeft content={report.contentLeft} />
             <ContentRight content={report.contentRight} />
         </Grid>

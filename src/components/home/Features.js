@@ -1,11 +1,11 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import {
-  Grid,
-} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
+import Box from '@material-ui/core/Box';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,9 +63,11 @@ export default function Features({ state: features }) {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root}>
+    <Grid container >
+      <Grid item md={1}></Grid>
       <ContentLeft content={features.contentLeft} />
       <ContentRight content={features.contentRight} />
+      <Grid item md={1}></Grid>
     </Grid>
   );
 }
@@ -73,46 +75,44 @@ export default function Features({ state: features }) {
 
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
-    <Header content={content.header} />
-    <CardsList content={content.cardsData} />
+  return <Grid container item direction="column" md={5} alignContent="center" >
+    <Grid item style={{ marginBottom: "4%"}}>
+      <Header content={content.header} />
+    </Grid>
+    <Grid item>
+      <CardsList content={content.cardsData} />  
+    </Grid>
   </Grid>
 }
 
 const Header = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" className={classes.heading}>
-    <Grid item xs={12} className={`${classes.heading}__line-1`}>
-      <Typography
-        style={{ display: "inline-block" }}
-        variant="h4"
-        className={classes.title}
-        color="primary">
-        {content.line1[0]}
-      </Typography>
-      <Typography
-        color="textPrimary"
-        style={{ display: "inline-block" }}
-        variant="h4"
-        className={classes.title}>{content.line1[1]} {content.line1[2]}</Typography>
-    </Grid>
-    <Grid item xs={12} className={`${classes.heading}__line-2`}>
-
-      <Typography
-        variant="h5"
-        className={classes.title}
-      >
-        {content.line2}
-      </Typography>
-    </Grid>
-    <Grid item xs={12} className={`${classes.heading}__line-3`}>
-      <Typography
-        variant="h4"
-        className={classes.title}>
-        {content.line3}
-      </Typography>
-    </Grid>
-  </Grid>
+  return <div>
+          <Typography
+            style={{ display: "inline-block" }}
+            variant="h4"
+            className={classes.title}
+            color="primary">
+            {content.line1[0]} 
+          </Typography>
+          <Typography
+            color="textPrimary"
+            style={{ display: "inline-block", fontSize: "2.025rem" }}
+            variant="h4"
+            >{content.line1[1]} {content.line1[2]}</Typography>
+          <Typography
+            variant="h6"
+            className={classes.title}
+            style={{ fontWeight: "bold" }}
+          >
+            {content.line2}
+          </Typography>
+          <Typography
+            variant="h4"
+            className={classes.title}>
+            {content.line3}
+          </Typography>
+        </div>
 }
 
 
@@ -136,12 +136,14 @@ const Card = ({ imagePath, textThin, textBold }) => {
         <img src={imagePath} alt="feature" />
       </Grid>
       <Grid item xs={8} className={classes.textBox}>
-        <Typography variant="h6" color="textSecondary">
-          {textThin}
-        </Typography>
-        <Typography variant="h6" color="textSecondary" style={{ fontWeight: "bolder" }}>
-          {textBold}
-        </Typography>
+      <Typography component="div">
+        <Box fontWeight="fontWeightLight" m={1}>
+        {textThin}
+        </Box>
+        <Box fontWeight="fontWeightBold" m={1}>
+        {textBold}
+      </Box>
+      </Typography>
       </Grid>
     </Grid>
   )
@@ -150,13 +152,7 @@ const Card = ({ imagePath, textThin, textBold }) => {
 const ContentRight = ({ content }) => {
   const classes = useStyles();
 
-  return <Grid item xs={12} md={6} className={classes.contentRight}>
+  return <Grid item xs={12} md={5} className={classes.contentRight}>
     <img src={content.imagePath} alt="doctor" />
   </Grid>
 }
-
-
-
-
-
-

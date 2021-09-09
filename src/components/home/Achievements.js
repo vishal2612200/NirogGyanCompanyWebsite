@@ -7,22 +7,17 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
     padding: "1.5rem",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom: "3%"
   },
 
   headerContainer: {
     textAlign: "center",
+  },
 
-  },
-  cardContainer: {
-    padding:"1.5rem",
-    justifyContent: "space-around",
-    alignItems: "stretch"
-  },
   card: {
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     backgroundColor: "#1242AC",
@@ -30,17 +25,17 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     padding: "3rem",
     textAlign: "center",
+    margin: "3%",
+    border: "2px dashed #fff"
   }
 }));
 
 const Card = ({ content }) => {
   const classes = useStyles();
   return (
-    <Grid container item xs={12} sm={6} md={3} className={classes.cardContainer}>
-      <Grid item className={classes.card}>
+    <Grid item xs={12} sm={6} md={2} className={classes.card}>     
         <Typography variant="h4">{content.textBig}</Typography>
         <Typography variant="h6">{content.textSmall}</Typography>
-      </Grid>
     </Grid>
   );
 };

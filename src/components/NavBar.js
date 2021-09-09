@@ -158,7 +158,8 @@ function useNavItems(links) {
               setPage(id)
             }
           }
-          underline={activeLinkIndex === index ? "always" : "none"}>
+          underline={activeLinkIndex === index ? "always" : "none"}
+          style={{ textDecoration: 'none' }}>
           <Typography
             variant="h6"
             // eslint-disable-next-line eqeqeq

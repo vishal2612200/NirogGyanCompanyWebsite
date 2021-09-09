@@ -72,12 +72,12 @@ const Block1 = ({ content }) => {
                 {content.description}
             </Typography>
         </Grid>
-
+{/* 
         <Grid item>
             <Typography variant="h5" style={{ marginTop: "1rem" }}>
                 {content.footer}
             </Typography>
-        </Grid>
+        </Grid> */}
     </Grid>
 }
 

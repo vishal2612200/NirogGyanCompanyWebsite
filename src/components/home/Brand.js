@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useSpring, animated, useTransition } from "react-spring";
+import { useTransition } from "react-spring";
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     textAlign: "center",
+    marginBottom: "4%"
   },
   imagesContainer: {
     justifyContent: "space-evenly",
@@ -41,22 +42,27 @@ export default function Brand({ state: brand }) {
 
   for (let i = 0; i < logoImages.length; i++) {
     images.push(
-      <Grid item key={i}>
-        <img src={logoImages[i]} alt="client logo" />
+      <Grid item md={3} sx={{ marginRight: "10px"}} key={i}>
+        <img width="90%" src={logoImages[i]} alt="client logo" />
       </Grid>
     );
   }
 
   return (
     <Grid container className={classes.root}>
-      <Grid item className={classes.title}>
-        <Typography variant="h2" color="textPrimary" className={classes.title}>
+      <Grid item md={1}></Grid>
+      <Grid item md={10} className={classes.title}>
+        <Grid item>
+        <Typography variant="h3" color="textPrimary" className={classes.title}>
           {brand.heading}
         </Typography>
+        </Grid>
+        
+        <Grid item container display={{ sm: 'grid'}} >
+          {images}
+        </Grid>
       </Grid>
-      <Grid container item className={classes.imagesContainer}>
-        {images}
-      </Grid>
+      <Grid item md={1}></Grid>
     </Grid>
   );
 }

@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Services({ state: services }) {
   const classes = useStyles();
   return (
-    <Grid container direction="column" >
+    <Grid container direction="column" style={{marginTop:"7%"}}>
       <Heading content={services.content}></Heading>
       <CardList cardsData={services.servicesList}></CardList>
     </Grid>);
@@ -89,7 +89,7 @@ const Heading = ({ content }) => {
     <Typography
       variant="h3"
       className={classes.heading}>
-      {content.heading}
+      The best <span style={{color:"blue"}}> Patient-Engagement Tool </span> out there
     </Typography>
     <Typography
       variant="h6"

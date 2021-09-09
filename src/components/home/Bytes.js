@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardList: {
     padding: "1rem auto",
-    margin: "1rem auto",
+   
     justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: "#05152E",
@@ -32,9 +33,19 @@ export default function Bytes({ state: bytes }) {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" className={classes.root}>
-      <Heading content={bytes.content} />
-      <CardList cardsData={bytes.videoLinks} />
+    <Grid container alignText="center">
+      <Grid item container alignItems="center">
+        <Grid item md={2}>
+
+        </Grid>
+        <Grid item md={8} >
+        <Heading content={bytes.content} />
+        </Grid>
+        <Grid item md={2}></Grid>
+      </Grid>
+      <Grid item container>
+        <CardList cardsData={bytes.videoLinks} />
+      </Grid>
     </Grid>
   );
 
@@ -60,7 +71,7 @@ const Heading = ({ content }) => {
 
 const CardList = ({ cardsData }) => {
   const classes = useStyles();
-  return <Grid container item className={classes.cardList}>
+  return <Grid container md={12} className={classes.cardList}>
     {cardsData.map((link, index) => (
       <Card link={link} key={index} />
     ))
@@ -72,7 +83,7 @@ const Card = ({ link, title = "YouTube video player" }) => {
   const classes = useStyles();
 
   return (
-    <Grid item className={classes.card} sm={4}>
+    <Grid item className={classes.card} md={3} sm={4} >
       <iframe
         width="auto"
         height="inherit"
