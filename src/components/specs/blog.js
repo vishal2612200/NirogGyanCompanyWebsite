@@ -52,7 +52,7 @@ export default (function () {
                 },
                 categoriesButtons: {
                     heading: "Categories",
-                    cardsList: [{ text: "Adventure" }, { text: "Portfolio" }, { text: "Digital" }, { text: "Adventure" }, { text: "Portfolio" }, { text: "Digital" },],
+                    cardsList: [{ text: "Adventure", key: "1" }, { text: "Portfolio", key: "2" }, { text: "Digital", key: "3" }, { text: "Adventure", key: "4" }, { text: "Portfolio", key: "5" }, { text: "Digital", key: "6"},],
                 },
 
 

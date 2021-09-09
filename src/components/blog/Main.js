@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     textWrap: "word-break"
   },
   contentRight: {
-    textAlign: "center",
+
     "& >img": {
       maxWidth: "100%",
       maxHeight: "100%"
@@ -23,36 +23,37 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontWeight: "700",
     marginBottom: "2rem",
+    borderBottom:"2px solid ##808080",
     [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
-    }
+  textAlign: "center",
+}
   },
-  contentLeft: {
-    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+contentLeft: {
+  fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     borderRadius: "10px",
   },
-  imageBox: {
-    textAlign: "center",
+imageBox: {
+  textAlign: "center",
     padding: "1rem",
-    backgroundColor: "#E9F5FF",
-    "&>img": {
-      margin: "auto "
-    }
-  },
-  textBox: {
+      backgroundColor: "#E9F5FF",
+        "&>img": {
+    margin: "auto "
+  }
+},
+textBox: {
 
-    "&>*": {
-      textAlign: "left",
+  "&>*": {
+    textAlign: "left",
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      padding: "1rem",
-      textWrap: "word-break"
-    }
-  },
-  card: {
-    border: "1px solid #B8BBBD",
+        padding: "1rem",
+          textWrap: "word-break"
+  }
+},
+card: {
+  border: "1px solid #B8BBBD",
     marginBottom: "2rem"
 
-  }
+}
 
 })
 );
@@ -61,7 +62,7 @@ export default function Main({ state: main }) {
 
   const classes = useStyles();
   return (
-    <Grid container className={classes.root}>
+    <Grid container className={classes.root} spacing={2}>
       <ContentLeft content={main.contentLeft} />
       <ContentRight content={main.contentRight} />
     </Grid>
@@ -122,12 +123,12 @@ const ContentRight = ({ content }) => {
       return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}>
         {
           cardsList.map(
-            (props, index) => (React.cloneElement(card, { ...props, key: index })))
+            (props, index) => (React.cloneElement(card, { ...props })))
         }
       </Grid>
     }
 
-    return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList} >
+    return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}  >
       <Grid item>
         <Typography variant="h4" color="textPrimary" className={classes.heading}>
           {heading}
@@ -141,26 +142,30 @@ const ContentRight = ({ content }) => {
     const classes = useStyles();
 
     return (
-      <Grid container className={classes.card} flexWrap="no-wrap"  >
-        <Grid item xs={6} className={classes.imageBox}>
-          <img src={imagePath} alt="feature" />
+      <Grid container className={classes.card}   >
+        <Grid item xs={6} className={classes.imageBox} >
+          <img src={imagePath} alt="doctor" />
         </Grid>
-        <Grid item xs={6} className={classes.textBox}>
+        <Grid item xs={6} className={classes.textBox} flexGrow="2">
           <Typography variant="h6" color="textSecondary">
             {date}
           </Typography>
         </Grid>
-        <Typography variant="h5" color="textPrimary" >
+        <Typography variant="h5" color="textPrimary" paragraph>
           {heading}
         </Typography>
 
       </Grid>
     )
   }
-  const Card2 = ({ text }) => {
-    return (<Grid item>
-      <Typography variant="h6" color="textSecondary">
-        {text}
+  const Card2 = ({ text, key }) => {
+
+    return (<Grid container item alignItems="center" >
+      <Grid item style={{ marginRight: "10px" }}>
+        <Typography variant="h4" color="primary" > <>  &#8226; </></Typography>
+      </Grid>
+      <Typography variant="h6" color="textSecondary" >
+        {text}.......................{key}
       </Typography>
     </Grid>)
 
