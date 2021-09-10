@@ -13,7 +13,8 @@ export default (function () {
       },
       contentRight: {
         imagePath: path.join(process.env.PUBLIC_URL, "homepage", "hero-image.png"),
-      }
+      },
+      linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
     Brand: {
       heading: "Trusted HealthCare Brands",

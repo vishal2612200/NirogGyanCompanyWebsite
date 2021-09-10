@@ -4,14 +4,21 @@ import {
     Grid,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import { ListSubheader } from '@material-ui/core';
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import HeadingWithText from "../utils/HeadingWithText";
+
+import clsx from 'clsx';
+import "../component.css"
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        padding: "2rem"
 
     },
     contentRight: {
@@ -21,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: "100%"
         }
     },
-    heading: {
+    header: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         fontWeight: "700",
-        marginBottom: "2rem",
+        "&>*": { marginBottom: "1rem" },
         [theme.breakpoints.down("sm")]: {
             textAlign: "center",
         }
@@ -41,19 +48,20 @@ const useStyles = makeStyles((theme) => ({
             margin: "auto "
         }
     },
-    textBox: {
-
-        "&>*": {
-            textAlign: "left",
-            fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-            padding: "1rem",
-            textWrap: "word-break"
-        }
+    cardsList: {
+        marginTop: "2rem",
     },
+
     card: {
         border: "1px solid #B8BBBD",
         marginBottom: "2rem"
 
+    },
+    textBox: {
+        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+        padding: "1rem",
+        textWrap: "word-break",
+        alignItems: "flex-end",
     }
 
 })
@@ -64,7 +72,7 @@ export default function Believe({ state: believe }) {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.root}>
+        <Grid container className={clsx(classes.root, 'padding-heavy-side-low-bottom')}  >
             <ContentLeft content={believe.contentLeft} />
             <ContentRight content={believe.contentRight} />
         </Grid>
@@ -75,17 +83,47 @@ export default function Believe({ state: believe }) {
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
     return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
-        <Header content={content.header} />
+        <Header content={content.content} />
         <CardsList content={content.cardsList} />
     </Grid>
 }
 
+
 const Header = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item direction="column" className={classes.heading}>
-        <HeadingWithText content={content} />
+    return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly">
+        <Grid item>
+
+            <List >
+
+                <ListSubheader color="primary" style={{position:"relative"}}>
+                    <Typography variant="h3" color="textPrimary" h3>
+                        {content.heading}
+                    </Typography>
+
+                </ListSubheader>
+                {content.description.map(item => (
+                    <ListItem>
+                        <ListItemIcon>
+                            <FiberManualRecordIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={
+                                <Typography variant="h6" color="textSecondary">
+                                    {item}
+                                </Typography>
+                            }
+
+                        />
+                    </ListItem>
+
+                )
+                )}
+            </List>
+        </Grid>
     </Grid>
 }
+
 
 
 

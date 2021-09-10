@@ -6,12 +6,12 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import HeadingWithText from "../utils/HeadingWithText";
+import clsx from 'clsx';
+import "../component.css"
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: "2rem"
 
   },
   contentRight: {
@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
       maxHeight: "100%"
     }
   },
-  heading: {
+  header: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontWeight: "700",
-    marginBottom: "2rem",
+    "&>*": { marginBottom: "1rem" },
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
     }
@@ -41,19 +41,20 @@ const useStyles = makeStyles((theme) => ({
       margin: "auto "
     }
   },
-  textBox: {
-
-    "&>*": {
-      textAlign: "left",
-      fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      padding: "1rem",
-      textWrap: "word-break"
-    }
+  cardsList: {
+    marginTop: "2rem",
   },
+  
   card: {
     border: "1px solid #B8BBBD",
     marginBottom: "2rem"
 
+  },
+  textBox: {
+  fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+  padding: "1rem",
+  textWrap: "word-break",
+  alignItems: "flex-end",
   }
 
 })
@@ -64,7 +65,7 @@ export default function Market({ state: market }) {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root}>
+    <Grid container className={clsx(classes.root, 'padding-heavy-side-low-bottom')}  >
       <ContentLeft content={market.contentLeft} />
       <ContentRight content={market.contentRight} />
     </Grid>
@@ -82,9 +83,25 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" className={classes.heading}>
-    <HeadingWithText content={content} />
+  return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly">
+    <Grid item>
+      <Typography variant="h3" color="textPrimary" h3>
+        {content.heading}
+      </Typography>
+    </Grid>
+    <Grid item>
+      <Typography variant="h6" color="textSecondary">
+        {content.description.paragraph1}
+      </Typography>
 
+    </Grid>
+
+    <Grid item>
+      <Typography variant="h6" color="textSecondary">
+        {content.description.paragraph2}
+      </Typography>
+
+    </Grid>
   </Grid>
 }
 
@@ -109,10 +126,10 @@ const Card = ({ imagePath, textThin, textBold }) => {
         <img src={imagePath} alt="market" />
       </Grid>
       <Grid item xs={8} className={classes.textBox}>
-        <Typography variant="h6" color="textSecondary">
+        <Typography variant="h5" color="textSecondary">
           {textThin}
         </Typography>
-        <Typography variant="h6" color="textSecondary" style={{ fontWeight: "bolder" }}>
+        <Typography variant="h5" color="textSecondary" style={{ fontWeight: "bolder" }}>
           {textBold}
         </Typography>
       </Grid>

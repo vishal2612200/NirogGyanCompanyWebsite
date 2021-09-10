@@ -2,14 +2,20 @@ import * as path from "path";
 
 export default (function () {
     return {
-
         HeroSection: {
-            info: {
-                heading: { line1: "FAQS", line2: undefined },
-                description: undefined,
-                buttons: { services: "", watchVideo: "" },
+            contentLeft: {
+
+                heading: "FAQS",
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "About", link: "/about" }],
+                backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
+
+
             },
-            imagePath: path.join(process.env.PUBLIC_URL, "faqs", "hero-image.png"),
+            contentRight: {
+                imagePath: path.join(process.env.PUBLIC_URL, "faqs", "hero-image.png"),
+            },
+            linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
+             
         },
         FrequentQuestions: {
             content: {

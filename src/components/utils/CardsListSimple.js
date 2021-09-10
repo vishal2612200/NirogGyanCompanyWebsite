@@ -19,9 +19,10 @@ const useStyles = makeStyles({
         margin: "2%",
         alignContent: "center",
         border: "1px solid #B8BBBD",
-        padding: "2rem",
         textAlign: "center",
+        borderRadius: "10px",
     },
+
     image: {
         maxWidth: "100%",
         maxHeight: "auto"
@@ -36,7 +37,7 @@ const useStyles = makeStyles({
 
 export default function CardsList({ cardsList }) {
     const classes = useStyles();
-    return <Grid container item className={classes.cardsList} >
+    return <Grid container item className={classes.cardsList} spacing={1}>
         {cardsList.map(({ imgPath, heading, content }, index) => (
             <Card {...{ imgPath, heading, content }} key={index} />
         ))
@@ -58,7 +59,7 @@ const Card = ({ imgPath, heading, content }) => {
                 <img src={imgPath} alt="service" className={classes.image} />
             </Grid>
             <Grid item className={classes.personName}>
-                <Typography variant="h6" color="textSecondary">{heading}</Typography>
+                <Typography variant="h6" style={{color:"#716A6A", fontWeight:"bolder"}}>{heading}</Typography>
             </Grid>
             <Grid item className={classes.personName}>
                 <Typography variant="body1" color="textSecondary">{content}</Typography>
@@ -69,16 +70,16 @@ const Card = ({ imgPath, heading, content }) => {
                 {
                     icons.map(icon => (
                         <Grid item className={classes.icon}>
-                        <IconButton>
-                            {icon}
-                        </IconButton>
+                            <IconButton>
+                                {icon}
+                            </IconButton>
                         </Grid>
                     )
                     )
                 }
 
             </Grid>
-        </Grid>
+        </Grid >
 
     );
 }

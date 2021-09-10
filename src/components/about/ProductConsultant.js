@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
 import HeadingWithText from "../utils/HeadingWithText";
-import CardsList from "../utils/CardsList";
+import CardsListSimple from "../utils/CardsListSimple";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,7 +18,7 @@ export default function ProductConsultant({ state: productConsultant }) {
     return (
         <Grid container direction="column" >
             <HeadingWithText content={productConsultant.content}></HeadingWithText>
-            <CardsList cardsList={productConsultant.cardsList}></CardsList>
+            <CardsListSimple cardsList={productConsultant.cardsList}></CardsListSimple>
         </Grid>);
 }
 

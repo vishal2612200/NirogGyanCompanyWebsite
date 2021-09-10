@@ -2,14 +2,19 @@ import * as path from "path";
 
 export default (function () {
     return {
-
         HeroSection: {
-            info: {
-                heading: { line1: "Blog", line2: undefined },
-                description: undefined,
-                buttons: { services: "", watchVideo: "" },
+            contentLeft: {
+
+                heading: "Blog",
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "About", link: "/about" }],
+                backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
+
+
             },
-            imagePath: path.join(process.env.PUBLIC_URL, "blog", "hero-image.png"),
+            contentRight: {
+                imagePath: path.join(process.env.PUBLIC_URL, "blog", "hero-image.png"),
+            },
+            linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
         Main: {
             contentLeft: {
@@ -52,7 +57,7 @@ export default (function () {
                 },
                 categoriesButtons: {
                     heading: "Categories",
-                    cardsList: [{ text: "Adventure", key: "1" }, { text: "Portfolio", key: "2" }, { text: "Digital", key: "3" }, { text: "Adventure", key: "4" }, { text: "Portfolio", key: "5" }, { text: "Digital", key: "6"},],
+                    cardsList: [{ text: "Adventure", key: "1" }, { text: "Portfolio", key: "2" }, { text: "Digital", key: "3" }, { text: "Adventure", key: "4" }, { text: "Portfolio", key: "5" }, { text: "Digital", key: "6" },],
                 },
 
 

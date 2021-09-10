@@ -2,15 +2,20 @@ import * as path from "path";
 
 export default (function () {
     return {
-
         HeroSection: {
-            info: {
-                heading: { line1: "How it Works", line2: "Medical Reports" },
-                description:
-                    "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
-                buttons: { services: "our Services", watchVideo: "Watch Video" },
+            contentLeft: {
+
+                heading: "How it Works",
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "About", link: "/about" }],
+                backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
+
+
             },
-            imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "hero-image.png"),
+            contentRight: {
+
+                imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "hero-image.png"),
+            },
+            linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
         Features: {
             contentLeft: {
@@ -48,7 +53,7 @@ export default (function () {
                 imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
             }
         },
-           
+
         Report: {
             block1: {
                 heading: "One idea, branched into multiple avatars",
@@ -56,8 +61,8 @@ export default (function () {
                 footer: ["Get In Touch", ".", "contact@niroggyan.com"],
             },
             block2: {
-                buttonDigitalReport: { text: "Digital Smart Report", link: "#"},
-                buttonPDFReport: {text: "PDF Smart Report", link: "#"},
+                buttonDigitalReport: { text: "Digital Smart Report", link: "#" },
+                buttonPDFReport: { text: "PDF Smart Report", link: "#" },
 
             },
             block3: {
