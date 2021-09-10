@@ -89,10 +89,10 @@ const Header = ({ content }) => {
   const classes = useStyles();
   return <div>
           <Typography
-            style={{ display: "inline-block" }}
+      style={{ display: "inline-block", color:"#3567D6" }}
             variant="h4"
             className={classes.title}
-            color="primary">
+           >
             {content.line1[0]} 
           </Typography>
           <Typography

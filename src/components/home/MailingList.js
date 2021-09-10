@@ -10,7 +10,7 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles((theme) => ({
     root: {
         background: "#3567D6",
-        padding: "2rem",
+        padding: "2rem 9rem",
         "&>*": {
             padding: "1rem"
         }
@@ -46,6 +46,11 @@ const useStyles = makeStyles((theme) => ({
             }
 
         }
+    },
+    footertext: {
+        display: "inline",
+        marginRight: "1rem",
+        fontWeight: "bolder"
     }
 }));
 
@@ -72,19 +77,19 @@ const Block1 = ({ content }) => {
                 {content.description}
             </Typography>
         </Grid>
-{/* 
-        <Grid item>
-            <Typography variant="h5" style={{ marginTop: "1rem" }}>
-                {content.footer}
-            </Typography>
-        </Grid> */}
+
+        <Grid item style={{ marginTop: "1rem" }}>
+            {content.footer.map(item => <Typography variant="h5" className={classes.footertext}>
+                {item}
+            </Typography>)}
+        </Grid>
     </Grid>
 }
 
 const Block2 = ({ content }) => {
     const classes = useStyles()
 
-    return <Grid item sm={12} md={5} className={classes.inputBox}>
+    return <Grid item  md={4} className={classes.inputBox}>
         <input placeholder={content.placeholderText} />
     </Grid>
 
@@ -93,7 +98,7 @@ const Block2 = ({ content }) => {
 const Block3 = ({ content }) => {
     const classes = useStyles()
 
-    return <Grid item sm={12} md={2}>
+    return <Grid item  md={3}>
         <Button variant="contained" className={classes.button}>
             {content.buttonText}
         </Button>

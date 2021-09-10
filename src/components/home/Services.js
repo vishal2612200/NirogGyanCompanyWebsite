@@ -89,7 +89,7 @@ const Heading = ({ content }) => {
     <Typography
       variant="h3"
       className={classes.heading}>
-      The best <span style={{color:"blue"}}> Patient-Engagement Tool </span> out there
+      The best <span style={{ color:"#3567D6"}}> Patient-Engagement Tool </span> out there
     </Typography>
     <Typography
       variant="h6"

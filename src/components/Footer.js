@@ -61,7 +61,7 @@ const Block = ({ content }) => {
 const Block4 = ({ content }) => {
     const classes = useStyles();
 
-    return <Grid item md={3}>
+    return <Grid item>
         <Typography variant="h5">
             <Box fontWeight="fontWeightMedium" m={1}>
                 {content.heading}
