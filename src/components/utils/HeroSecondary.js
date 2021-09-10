@@ -11,7 +11,6 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: "0.5rem",
         minHeight: "75vh"
 
     },
