@@ -4,13 +4,16 @@ export default (function () {
   return {
 
     HeroSection: {
-      info: {
+      contentLeft: {
+
         heading: { line1: "Simplifying", line2: "Medical Reports" },
         description:
           "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
         buttons: { services: "our Services", watchVideo: "Watch Video" },
       },
-      imagePath: path.join(process.env.PUBLIC_URL, "homepage", "hero-image.png"),
+      contentRight: {
+        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "hero-image.png"),
+      }
     },
     Brand: {
       heading: "Trusted HealthCare Brands",

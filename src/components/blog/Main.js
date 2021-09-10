@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button , Divider} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontWeight: "700",
     marginBottom: "2rem",
-    borderBottom:"2px solid ##808080",
     [theme.breakpoints.down("sm")]: {
   textAlign: "center",
 }
@@ -133,6 +132,7 @@ const ContentRight = ({ content }) => {
         <Typography variant="h4" color="textPrimary" className={classes.heading}>
           {heading}
         </Typography>
+        <Divider />
       </Grid>
       <CardsList />
     </Grid>

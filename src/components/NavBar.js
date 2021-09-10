@@ -138,7 +138,7 @@ const NavItemsMediumScreen = ({ links }) => {
   let navItems = useNavItems(links);
 
   return <> {!isSmallScreen ? (
-    <Grid container item key='navItems' spacing={7} md={9} justifyContent="flex-end">
+    <Grid container item key='navItems' spacing={7} md={10} justifyContent="flex-end">
       {navItems}
     </Grid>
   ) : ""
@@ -151,7 +151,7 @@ function useNavItems(links) {
   return links.map(
     ({ text, id }, index) => {
       return <Grid item key={index} >
-        <Link href={process.env.PUBLIC_URL + "/" + `${id}`}
+        <Link href={process.env.PUBLIC_URL +  `/${id}`}
           onClick={
             () => {
               setActiveLinkIndex(index)
@@ -185,7 +185,7 @@ function useSmallScreen() {
 
 
 const ImageBox = ({ imgPath }) => (
-  <Grid container key='imgBox' item xs={6} md={3} justifyContent="flex-start">
+  <Grid  key='imgBox' item xs={6} md={2} style={{textAlign:"right"}}>
     <img
       src={imgPath}
       alt="Logo"

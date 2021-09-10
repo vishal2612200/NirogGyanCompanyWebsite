@@ -4,11 +4,18 @@ export default (function () {
     return {
 
         HeroSection: {
-            info: {
-                heading: { line1: "About Us", line2: "" },
-                description: "",
+            contentLeft: {
+
+                heading: "About Us",
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "About", link: "/about" }],
+                backgroundImage: path.join(process.env.PUBLIC_URL,  "background-curve.png"),
+
+
             },
-            imagePath: path.join(process.env.PUBLIC_URL, "about", "hero-image.png"),
+            contentRight: {
+                imagePath: path.join(process.env.PUBLIC_URL, "about", "hero-image.png"),
+            }
+
         },
         RecognisedBy: {
             heading: "Recognized By",
