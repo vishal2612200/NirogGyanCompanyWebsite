@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button , Divider} from "@material-ui/core";
+import { Grid, Button, Divider, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -24,35 +24,35 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "700",
     marginBottom: "2rem",
     [theme.breakpoints.down("sm")]: {
-  textAlign: "center",
-}
+      textAlign: "center",
+    }
   },
-contentLeft: {
-  fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+  contentLeft: {
+    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     borderRadius: "10px",
   },
-imageBox: {
-  textAlign: "center",
+  imageBox: {
+    textAlign: "center",
     padding: "1rem",
-      backgroundColor: "#E9F5FF",
-        "&>img": {
-    margin: "auto "
-  }
-},
-textBox: {
+    backgroundColor: "#E9F5FF",
+    "&>img": {
+      margin: "auto "
+    }
+  },
+  textBox: {
 
-  "&>*": {
-    textAlign: "left",
+    "&>*": {
+      textAlign: "left",
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        padding: "1rem",
-          textWrap: "word-break"
-  }
-},
-card: {
-  border: "1px solid #B8BBBD",
+      padding: "1rem",
+      textWrap: "word-break"
+    }
+  },
+  card: {
+    border: "1px solid #B8BBBD",
     marginBottom: "2rem"
 
-}
+  }
 
 })
 );
@@ -61,12 +61,17 @@ export default function Main({ state: main }) {
 
   const classes = useStyles();
   return (
-    <Grid container className={classes.root} spacing={2}>
-      <ContentLeft content={main.contentLeft} />
-      <ContentRight content={main.contentRight} />
+    <Grid container className={classes.root} justifyContent="center">
+      <HeadingWithText content={main.header} />
+      <Box p={2}>
+        {/* <ImagePanel content={main.imagePanel} /> */}
+      </Box>
     </Grid>
   );
 }
+
+
+
 
 
 const ContentLeft = ({ content }) => {

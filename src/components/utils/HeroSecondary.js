@@ -41,9 +41,10 @@ const useStyles = makeStyles((theme) => ({
     },
     contentRight: {
         alignItems: "flex-end",
+
         "& >img": {
             maxWidth: "100%",
-            maxHeight: "100%"
+            maxHeight: "auto"
         }
     }
 }));

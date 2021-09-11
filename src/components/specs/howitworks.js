@@ -26,53 +26,55 @@ export default (function () {
             imagePanel: {
                 digital: {
                     buttonText: "Digital Smart Report",
-                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-digital.png")]
+                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "report-digital.png")]
                 },
                 pdf: {
                     buttonText: "PDF Smart Report",
-                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-pdf.png"),
-                    path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-pdf.png"),
-                    path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-pdf.png")]
+                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "report-pdf.png"),
+                    path.join(process.env.PUBLIC_URL, "howitworks", "report-pdf.png"),
+                    path.join(process.env.PUBLIC_URL, "howitworks", "report-pdf.png")]
                 },
 
             }
         },
 
-        Features: {
-            contentLeft: {
-                header: {
-                    line1: ["Health Knowledge", "   +   ", "Modern Design"],
-                    line2: "combine to give you the most",
-                    line3: "Understandable Medical Reports",
-                },
-                cardsData: [
-                    {
-                        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-item-1.png"),
-                        textThin: "Software covering 250+",
-                        textBold: "Pathology Biomarkers",
-                    },
-                    {
-                        imagePath: path.join(
-                            process.env.PUBLIC_URL,
-                            "homepage", "features-item-2.png"
-                        ),
-                        textThin: "Knowledge Bank based by",
-                        textBold: "Evidence-backed, Vetted Content",
-                    },
-                    {
-                        imagePath: path.join(
-                            process.env.PUBLIC_URL,
-                            "homepage",
-                            "features-item-3.png"
-                        ),
-                        textThin: "Add-ons : Multi - language",
-                        textBold: "Content, Graphs, Analytics",
-                    },
-                ],
+        Main: {
+            header: {
+                heading: "How It Works",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
-            contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
-            }
+            cardsData: [
+                {
+                    imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "main-api-integration.png"),
+                    heading: "API Integration",
+                    description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
+                },
+                {
+                    imagePath: path.join(
+                        process.env.PUBLIC_URL,
+                        "howitworks", "main-software.png"
+                    ),
+                    heading: "Software",
+                    description: "NirogGyan’s software creates the perfect SmartReport - each test is atomised as ‘card’ & each panel is linked witth the ‘knowledge bank’",
+                },
+                {
+                    imagePath: path.join(
+                        process.env.PUBLIC_URL,
+                        "howitworks",
+                        "main-report.png"
+                    ),
+                    heading: "Reports",
+                    description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
+                },
+                {
+                    imagePath: path.join(
+                        process.env.PUBLIC_URL,
+                        "howitworks",
+                        "main-customer.png"),
+                    heading: "Customers",
+                    description: "Complete Automation ensures seamless delivery to all customers of clients (the labs)",
+                },
+            ],
         },
     };
 })();
