@@ -101,9 +101,13 @@ export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} justifyContent="space-around">
-      <ContentLeft content={heroSection.contentLeft} />
-      <ContentRight content={heroSection.contentRight} />
-    </Grid>
+      <Grid item md={6}>
+        <ContentLeft content={heroSection.contentLeft} />
+      </Grid>
+      <Grid item md={6}>
+        <ContentRight content={heroSection.contentRight} />
+      </Grid>
+  </Grid>
   )
 
 }
@@ -111,56 +115,70 @@ export default function HeroSection({ state: heroSection }) {
 
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item md={7} direction="column" className={classes.content}>
-    <Heading text={content.heading} />
-    <Description text={content.description} />
-    <ButtonSet content={content.buttons} />
-  </Grid>
+  return <Grid container item direction="column" className={classes.content}>
+            <Grid item style={{ marginBottom:"12%"}}></Grid>
+            <Grid item >
+              <Heading text={content.heading} />
+            </Grid>
+            <Grid item>
+              <Description text={content.description} />
+            </Grid>
+            <Grid item>
+              <ButtonSet content={content.buttons} />
+            </Grid>
+          </Grid>
 }
 
 const Heading = ({ text }) => {
   const classes = useStyles();
 
   return <Grid container item direction="column">
-    <Grid item>
-      <Typography
-        variant="h2"
-        className={classes.title}>
-        {text.line1}
-      </Typography>
-    </Grid>
+            <Grid item style={{marginBottom:"3%"}}>
+              <Typography
+                variant="h3"
+                className={classes.title}>
+                {text.line1}
+              </Typography>
+            </Grid>
 
-    <Grid item>
-      <Typography
-        variant="h2"
-        className={classes.title}>
-        {text.line2}
-      </Typography>
-    </Grid>
-  </Grid>
+            <Grid item>
+              <Typography
+                variant="h3"
+                className={classes.title}>
+                {text.line2}
+              </Typography>
+            </Grid>
+          </Grid>
 }
 
 
 const Description = ({ text }) => {
   const classes = useStyles();
-  return <Grid item className={classes.text}>
+  return <Grid container item className={classes.text} style={{ marginTop:"5%", marginBottom:"5%"}}>
     <Typography variant="body2" >
       {text}
     </Typography>
   </Grid>
 }
 
+
 const ButtonSet = ({ content }) => {
   const classes = useStyles();
   return <Grid container item className={classes.buttonSet}>
-    <ButtonServices text={content.services} />
-    <ButtonWatchVideo text={content.watchVideo} />
+    <Grid item md={4}>
+      <ButtonServices text={content.services} />
+    </Grid>
+    <Grid item md={4}>
+      <ButtonWatchVideo text={content.watchVideo} />
+    </Grid>
+    <Grid item md={4}></Grid>
   </Grid>
 }
 
+
 const ButtonServices = ({ text }) => {
   const classes = useStyles();
-  return <Grid item xs={6} className={classes.buttonServicesContainer}>
+  return <Grid container item className={classes.buttonServicesContainer}>
     <Button variant="contained" color="primary">
       {text}
     </Button>
@@ -170,11 +188,11 @@ const ButtonServices = ({ text }) => {
 
 const ButtonWatchVideo = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item xs={6} className={classes.buttonWatchVideoContainer}>
+  return <Grid container item className={classes.buttonWatchVideoContainer}>
     <Grid item>
       <IconButton className={classes.watchVideoButton} style={{ display: "inline-block", textAlign: "center" }}>
         <PlayCircleFilledIcon className={classes.videoButtonIcon} />
-        <Typography variant="subtitle2">
+        <Typography variant="subtitle2" >
           {text}
         </Typography>
       </IconButton>
@@ -187,7 +205,7 @@ const ButtonWatchVideo = ({ text }) => {
 const ContentRight = ({ content }) => {
   const classes = useStyles();
 
-  return <Grid item xs={12} md={5} className={classes.contentRight}>
-    <img src={content.imagePath} alt="doctor" />
-  </Grid>
+  return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
+          <img src={content.imagePath}  width="100%" />
+        </Grid>
 }

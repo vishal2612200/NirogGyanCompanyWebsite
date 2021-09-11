@@ -7,7 +7,7 @@ import CardsListSimple from "../utils/CardsListSimple";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
+        marginBottom: theme.spacing(2),
     }
 }));
 
@@ -16,9 +16,17 @@ const useStyles = makeStyles((theme) => ({
 export default function ProductConsultant({ state: productConsultant }) {
     const classes = useStyles();
     return (
-        <Grid container direction="column" >
-            <HeadingWithText content={productConsultant.content}></HeadingWithText>
-            <CardsListSimple cardsList={productConsultant.cardsList}></CardsListSimple>
+        <Grid container direction="column" className={classes.root}>
+            <Grid item conatiner>
+                <HeadingWithText content={productConsultant.content}></HeadingWithText>
+            </Grid>
+            <Grid item container>
+                <Grid item md={1}></Grid>
+                <Grid item md={10}>
+                    <CardsListSimple cardsList={productConsultant.cardsList}></CardsListSimple>
+                </Grid>
+                <Grid item md={1}></Grid>
+            </Grid>
         </Grid>);
 }
 

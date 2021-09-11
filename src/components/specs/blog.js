@@ -48,12 +48,32 @@ export default (function () {
                             imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-doctor.png"),
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
+                        },
+                        {
+                            imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-doctor.png"),
+                            date: "Sept 02, 2021",
+                            heading: "No Health Literacy? No Health.",
+                        },
+                        {
+                            imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-doctor.png"),
+                            date: "Sept 02, 2021",
+                            heading: "No Health Literacy? No Health.",
                         }
                     ]
                 },
                 categoriesList: {
                     heading: "Categories",
-                    cardsList: [{ text: "Corporate Business" }]
+                    cardsList: [
+                        { 
+                            text: "Corporate Business" 
+                        },
+                        { 
+                            text: "Corporate Business" 
+                        },
+                        { 
+                            text: "Corporate Business" 
+                        }
+                    ]
                 },
                 categoriesButtons: {
                     heading: "Categories",
