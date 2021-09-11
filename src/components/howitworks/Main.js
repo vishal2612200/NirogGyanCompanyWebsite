@@ -6,18 +6,13 @@ import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import HeadingWithText from "../utils/HeadingWithText";
 
+import clsx from 'clsx';
+import "../component.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: "2rem",
     textWrap: "word-break"
-  },
-  contentRight: {
-
-    "& >img": {
-      maxWidth: "100%",
-      maxHeight: "100%"
-    }
   },
   heading: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -26,33 +21,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
     }
-  },
-  contentLeft: {
-    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-    borderRadius: "10px",
-  },
-  imageBox: {
-    textAlign: "center",
-    padding: "1rem",
-    backgroundColor: "#E9F5FF",
-    "&>img": {
-      margin: "auto "
-    }
-  },
-  textBox: {
-
-    "&>*": {
-      textAlign: "left",
-      fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      padding: "1rem",
-      textWrap: "word-break"
-    }
-  },
-  card: {
-    border: "1px solid #B8BBBD",
-    marginBottom: "2rem"
-
   }
+  
 
 })
 );
@@ -64,7 +34,7 @@ export default function Main({ state: main }) {
     <Grid container className={classes.root} justifyContent="center">
       <HeadingWithText content={main.header} />
       <Box p={2}>
-        {/* <ImagePanel content={main.imagePanel} /> */}
+        <CardsList cardsList={main.cardsList}></CardsList>
       </Box>
     </Grid>
   );
@@ -74,121 +44,41 @@ export default function Main({ state: main }) {
 
 
 
-const ContentLeft = ({ content }) => {
+const CardsList = ({ cardsList }) => {
   const classes = useStyles();
-
-  const Card = ({ imagePath, date, content, readmore }) => {
-    const classes = useStyles();
-
-    return (
-      <Grid container item className={classes.card} direction="column">
-        <Grid item className={classes.imageBox}>
-          <img src={imagePath} alt="main" />
-        </Grid>
-        <Grid item className={classes.textBox}>
-          <Typography variant="h6" color="textSecondary">
-            {date}
-          </Typography>
-          <HeadingWithText content={content} />
-          <Typography variant="h6" color="primary">
-            {readmore}
-          </Typography>
-
-        </Grid>
-      </Grid>
-    )
-  }
-
-  const CardsList = ({ content }) => {
-    const classes = useStyles();
-    return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList} md={8}>
-      {
-        content.map(
-          ({ imagePath, date, content, readmore }, index) => (<Card {...{ imagePath, date, content, readmore }} key={index} />))}
-    </Grid>
-  }
-
-
-  return <CardsList content={content.cardsList} />
-
+  return <Grid container item direction="column" justifyContent="space-evenly" className={clsx("cardsList")}>
+    {
+      cardsList.map(({ imagePath, heading, description }) => {
+        return <Card {...{ imagePath, heading, description }} />
+      })
+    }
+  </Grid>
 }
 
 
 
-const ContentRight = ({ content }) => {
+const Card = ({ imagePath, heading, description, ...props }) => {
   const classes = useStyles();
-  const { popularPosts, categoriesList, categoriesButtons } = content;
 
-  const HeadingWithCardsList = ({ heading, cardsList, card }) => {
-
-
-    const CardsList = () => {
-      const classes = useStyles();
-      return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}>
-        {
-          cardsList.map(
-            (props, index) => (React.cloneElement(card, { ...props })))
-        }
-      </Grid>
-    }
-
-    return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}  >
-      <Grid item>
-        <Typography variant="h4" color="textPrimary" className={classes.heading}>
-          {heading}
-        </Typography>
-        <Divider />
-      </Grid>
-      <CardsList />
-    </Grid>
-  }
-
-  const Card1 = ({ imagePath, date, heading }) => {
-    const classes = useStyles();
-
-    return (
-      <Grid container className={classes.card}   >
-        <Grid item xs={6} className={classes.imageBox} >
+  return (
+    <Grid container item className={classes.card} {...props}>
+      <Grid container item xs={6}>
+        <Grid item style={{ borderRadius: "50%", background: "#3567D6" }}>
           <img src={imagePath} alt="doctor" />
         </Grid>
-        <Grid item xs={6} className={classes.textBox} flexGrow="2">
-          <Typography variant="h6" color="textSecondary">
-            {date}
-          </Typography>
-        </Grid>
-        <Typography variant="h5" color="textPrimary" paragraph>
+      </Grid>
+      <Grid item xs={4} style={{ height: "fit-content", borderBottom: "3px dashed gray" }} >
+        <Typography variant="h6" color="textPrimary">
           {heading}
         </Typography>
-
+        <Typography variant="h5" color="textSecondary" >
+          {description}
+        </Typography>
       </Grid>
-    )
-  }
-  const Card2 = ({ text, key }) => {
+      <Grid item md={2} ></Grid>
 
-    return (<Grid container item alignItems="center" >
-      <Grid item style={{ marginRight: "10px" }}>
-        <Typography variant="h4" color="primary" > <>  &#8226; </></Typography>
-      </Grid>
-      <Typography variant="h6" color="textSecondary" >
-        {text}.......................{key}
-      </Typography>
-    </Grid>)
-
-
-
-  }
-  const Card3 = ({ text }) => {
-    return (<Grid item>
-      <Button variant="contained">{text}</Button>
     </Grid>
-    )
-
-  }
-  return <Grid container item direction="column" justifyContent="space-evenly" className={classes.contentRight} md={4}>
-    <HeadingWithCardsList heading={popularPosts.heading} cardsList={popularPosts.cardsList} card={<Card1 />} />
-    <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} />
-    <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} />
-  </Grid>
-
+  )
 }
+
 

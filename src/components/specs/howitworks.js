@@ -43,7 +43,7 @@ export default (function () {
                 heading: "How It Works",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
-            cardsData: [
+            cardsList: [
                 {
                     imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "main-api-integration.png"),
                     heading: "API Integration",

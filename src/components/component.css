@@ -2,3 +2,7 @@
   padding: 8rem;
   padding-bottom:1rem;
 }
+
+.cardsList:nth-child(even) {
+direction: row-reverse;
+}

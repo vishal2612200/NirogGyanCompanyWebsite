@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function HeroSecondary({ state: heroSection }) {
+export default function HeroSecondary({ state: heroSection, props }) {
     const classes = useStyles();
 
     return (
