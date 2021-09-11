@@ -14,7 +14,8 @@ import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
 import clsx from 'clsx';
-import "../component.css"
+import "../component.css";
+import ListSimple from "../utils/ListSimple";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -93,33 +94,7 @@ const Header = ({ content }) => {
     const classes = useStyles();
     return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly">
         <Grid item>
-
-            <List >
-
-                <ListSubheader color="primary" style={{position:"relative"}}>
-                    <Typography variant="h3" color="textPrimary" h3>
-                        {content.heading}
-                    </Typography>
-
-                </ListSubheader>
-                {content.description.map(item => (
-                    <ListItem>
-                        <ListItemIcon>
-                            <FiberManualRecordIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary={
-                                <Typography variant="h6" color="textSecondary">
-                                    {item}
-                                </Typography>
-                            }
-
-                        />
-                    </ListItem>
-
-                )
-                )}
-            </List>
+            <ListSimple content={content} />;
         </Grid>
     </Grid>
 }

@@ -17,6 +17,27 @@ export default (function () {
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
+
+        Report: {
+            header: {
+                heading: "One idea, branched into multiple avatars",
+                description: "Every human being is at a different stage of ‘health’. Our SmartReports come in various forms, for the best impact on your diagnostics business.",
+            },
+            imagePanel: {
+                digital: {
+                    buttonText: "Digital Smart Report",
+                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-digital.png")]
+                },
+                pdf: {
+                    buttonText: "PDF Smart Report",
+                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-pdf.png"),
+                    path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-pdf.png"),
+                    path.join(process.env.PUBLIC_URL, "howitworks", "howitworks-report-pdf.png")]
+                },
+
+            }
+        },
+
         Features: {
             contentLeft: {
                 header: {
@@ -53,22 +74,5 @@ export default (function () {
                 imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
             }
         },
-
-        Report: {
-            block1: {
-                heading: "One idea, branched into multiple avatars",
-                description: "Every human being is at a different stage of ‘health’. Our SmartReports come in various forms, for the best impact on your diagnostics business.",
-                footer: ["Get In Touch", ".", "contact@niroggyan.com"],
-            },
-            block2: {
-                buttonDigitalReport: { text: "Digital Smart Report", link: "#" },
-                buttonPDFReport: { text: "PDF Smart Report", link: "#" },
-
-            },
-            block3: {
-                buttonText: "Subscribe",
-            }
-        },
-
     };
 })();
