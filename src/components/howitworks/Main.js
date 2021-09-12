@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button, Divider, Box } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -83,7 +83,7 @@ const Card = ({ imagePath, heading, description, ...props }) => {
       </Grid>
       <Grid container item xs={4} className={classes.textContainer}>
 
-        <Grid item  style={{ height: "min-content", borderBottom: "3px dashed gray" }} >
+        <Grid item style={{ height: "min-content", borderBottom: "3px dashed gray" }} >
           <Typography variant="h6" color="textPrimary">
             {heading}
           </Typography>
