@@ -1,19 +1,28 @@
 
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, TextField } from "@material-ui/core";
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import FormControl from '@material-ui/core/FormControl';
+import { Grid, TextField, Typography } from "@material-ui/core";
+import Paper from '@material-ui/core/Paper';
+import Fab from '@material-ui/core/Fab';
+import Box from '@material-ui/core/Box';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
+        border:"2px dashed white",
         "&>*": {
             marginBottom: "2rem"
         }
-    }
+    },
+    margin: {
+        margin: theme.spacing(3),
+    },
+    textfieldmargin: {
+        margin: theme.spacing(1),
+    },
+    buttonfieldmargin: {
+        margin: theme.spacing(4),
+    },
 }));
 
 
@@ -21,39 +30,55 @@ const useStyles = makeStyles((theme) => ({
 export default function Form({ state: form }) {
     const classes = useStyles();
     return (
-        <Grid container direction="column" className={classes.root}>
-            <Grid container item xs={12} justifyContent="space-evenly">
-
-                <Grid item>
-                    <TextField label="Name" variant="outlined" />
+        <Grid container alignContent="center">
+            <Grid item container className={classes.textfieldmargin}>
+                <Grid item md={3}></Grid>
+                <Grid item md={6} >
+                    <Typography variant="h3" gutterBottom>
+                        <Box fontWeight="fontWeightMedium" m={1}>
+                            Reach Out with any query
+                        </Box>   
+                    </Typography>
                 </Grid>
-                <Grid item>
-                    <TextField label="Email" variant="outlined" />
-                </Grid>
+                <Grid item md={3}></Grid>
             </Grid>
-            <Grid container item xs={12} justifyContent="space-evenly">
-
-                <Grid item>
-                    <TextField label="Phone No" variant="outlined" />
-                </Grid>
-                <Grid item>
-                    <TextField label="Subject" variant="outlined" />
-                </Grid>
+            <Grid item container className={classes.margin} >
+            <Grid item md={2}></Grid>
+            <Grid item md={8}>
+                <Paper style={{border:"2px dashed #E5E5E5"}}>
+                    <Grid container>
+                        <Grid item container className={classes.textfieldmargin}>
+                            
+                            <Grid item md={5}>
+                                <TextField fullWidth className={classes.margin}  label="Name" variant="outlined" required />
+                            </Grid>
+                            <Grid item md={1}></Grid>
+                            <Grid item md={5}>
+                                <TextField fullWidth className={classes.margin}  label="Email" variant="outlined" required/>
+                            </Grid>
+                        </Grid>
+                        <Grid item container className={classes.textfieldmargin}>
+                        
+                            <Grid item md={5} >
+                                <TextField fullWidth className={classes.margin} label="Phone No" variant="outlined" required/>
+                            </Grid>
+                            <Grid item md={1}></Grid>
+                            <Grid item md={5}>
+                                <TextField fullWidth className={classes.margin} label="Subject" variant="outlined" required/>
+                            </Grid>
+                        </Grid>
+                        <Grid item container className={classes.textfieldmargin}>
+                            <Grid item md={11}>
+                                <TextField  multiline rows={4} fullWidth className={classes.margin} label="Your Message" variant="outlined" required/>    
+                            </Grid>
+                        </Grid>
+                        <Fab variant="extended" color="primary" aria-label="add" className={classes.buttonfieldmargin}>
+                            Send Message
+                        </Fab>
+                    </Grid>
+                </Paper>
             </Grid>
-            <Grid container item xs={12} justifyContent="space-evenly">
-
-                <Grid item>
-                    <FormControl fullWidth className={classes.margin} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
-                    <OutlinedInput
-                    id="outlined-adornment-amount"
-                    value={"78"}
-                    startAdornment={<InputAdornment position="start">$</InputAdornment>}
-                    labelWidth={60}
-                    />
-                    </FormControl>    </Grid>
-            </Grid>
-
-        </Grid>);
+            <Grid item md={2}></Grid>
+        </Grid>
+    </Grid>);
 }
-
