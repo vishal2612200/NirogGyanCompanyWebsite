@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { Children } from 'react';
 import HeroSection from './HeroSection';
 import RecognisedBy from './RecognisedBy';
-import GetInTouch from './GetInTouch';
 import ExpertTeam from './ExpertTeam';
 import ProductConsultant from './ProductConsultant';
 import HelpedOrganisations from './HelpedOrganisations';
 import Market from './Market';
 import Believe from './Believe';
 
-export default function About({ state }) {
+export default function About({ state, children }) {
 
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
@@ -18,6 +17,6 @@ export default function About({ state }) {
         <HelpedOrganisations state={state.HelpedOrganisations} />
         <ProductConsultant state={state.ProductConsultant} />
         <RecognisedBy state={state.RecognisedBy} />
-        <GetInTouch state={state.GetInTouch} />
+        {children}
     </React.Fragment>
 }

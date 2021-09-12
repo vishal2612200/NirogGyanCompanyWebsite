@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import { useReducer, useState } from 'react';
 import specs from "./components/specs/state"
 import Footer from "./components/Footer"
+import GetInTouch from "./components/GetInTouch"
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,14 +16,14 @@ import Blog from './components/blog';
 import FAQS from './components/faqs';
 import specsfooter from "./components/specs/footer"
 import specsnavbar from "./components/specs/navbar"
-
+import specsgetintouch from "./components/specs/getintouch"
 
 export const PageContext = createContext()
 
 function App() {
   // https://github.com/facebook/create-react-app/issues/1765
  // BUG FIX: state is undefined , look in state.js and the corresponding state file of the component 
-  const [state, setState] = useReducer(function (state, action) { }, { ...specsnavbar, ...specs, ...specsfooter });
+  const [state, setState] = useReducer(function (state, action) { }, { ...specsnavbar, ...specs, ...specsgetintouch, ...specsfooter });
 
   const [page, setPage] = useState("home");
 
@@ -38,13 +39,20 @@ function App() {
             <Home state={state.home} />
           </Route>
           <Route path="/about">
-            <About state={state.about} />
+            <About state={state.about} >
+              <GetInTouch state={state.GetInTouch} />
+
+            </About>
           </Route>
           <Route path="/how-it-works">
-            <HowItWorks state={state.howitworks} />
+            <HowItWorks state={state.howitworks} >
+              <GetInTouch state={state.GetInTouch} />
+            </HowItWorks>
           </Route>       
           <Route path="/blog">
-            <Blog state={state.blog} />
+            <Blog state={state.blog} >
+              <GetInTouch state={state.GetInTouch} />
+            </Blog>
           </Route>
           <Route path="/faqs">
             <FAQS state={state.faqs} />
