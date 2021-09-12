@@ -5,7 +5,6 @@ import HeadingWithText from "../utils/HeadingWithText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     direction: "column",
     justifyContent: "center",
     alignItems: "center",

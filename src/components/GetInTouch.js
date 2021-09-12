@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/open-sans";
+import Box from '@material-ui/core/Box';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     block2: {
         flexGrow: 1,
         textAlign: "left",
-        color: "#fff",
+        color: "#fff !important",
     },
     image: {
         maxWidth: "100%",
@@ -56,24 +57,20 @@ const Block = ({ content }) => {
 
 const Block2 = ({ content }) => {
     const classes = useStyles()
-    return <Grid container item className={classes.block2} direction="column" alignItems="flex-start" justifyContent="flex-start" md={4}>
-        <Grid item>
-            <Typography variant="h6" >
-                {content.line1}
+    return <Grid item md={4}>
+            <Typography variant="paragraph" style={{color:"#fff"}}>
+                <Box fontWeight="fontWeightBold" m={1}>
+                    {content.line1}
+                </Box>
             </Typography>
-        </Grid>
-        <Grid item>
-            <Typography variant="h4" >
-                {content.line2}
+            <Typography variant="h4" style={{color:"#fff"}}>
+                <Box fontWeight="fontWeightBold"  m={1}>
+                    {content.line2}
+                </Box>
             </Typography>
-        </Grid>
-
-        <Grid item>
             <Typography variant="h4" className={classes.block2}>
                 {content.line3}
             </Typography>
-        </Grid>
-
     </Grid>
 
 }

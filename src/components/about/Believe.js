@@ -73,9 +73,13 @@ export default function Believe({ state: believe }) {
     const classes = useStyles();
 
     return (
-        <Grid container className={clsx(classes.root, 'padding-heavy-side-low-bottom')}  >
-            <ContentLeft content={believe.contentLeft} />
-            <ContentRight content={believe.contentRight} />
+        <Grid container>
+            <Grid item md={1}></Grid>
+            <Grid item container md={10}>
+                <ContentLeft content={believe.contentLeft} />
+                <ContentRight content={believe.contentRight} />
+            </Grid>
+            <Grid item md={1}></Grid>
         </Grid>
     );
 }

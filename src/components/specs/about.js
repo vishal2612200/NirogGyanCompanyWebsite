@@ -122,7 +122,7 @@ export default (function () {
                         "about", "product-consultant-erik.png"
                     ),
                     heading: "Erik Azulay",
-                    content: "Serial Entrepreneur, International Strategy",
+                    content: "International Strategy",
                 },
                 {
                     imgPath: path.join(

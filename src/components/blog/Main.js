@@ -5,12 +5,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import HeadingWithText from "../utils/HeadingWithText";
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    padding: "2rem",
-    textWrap: "word-break"
+    marginTop: theme.spacing(10),
+  },
+  commonmargin:{
+    marginTop: theme.spacing(2),
   },
   contentRight: {
 
@@ -61,9 +63,17 @@ export default function Main({ state: main }) {
 
   const classes = useStyles();
   return (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes.root}>
+      <Grid item md={1}></Grid>
+      <Grid item md={6}>
       <ContentLeft content={main.contentLeft} />
+      </Grid>
+      <Grid item md={1}>
+        </Grid>
+      <Grid item md={3}>
       <ContentRight content={main.contentRight} />
+      </Grid>
+      <Grid item md={1}></Grid>
     </Grid>
   );
 }
@@ -76,19 +86,31 @@ const ContentLeft = ({ content }) => {
     const classes = useStyles();
 
     return (
-      <Grid container item className={classes.card} direction="column">
-        <Grid item className={classes.imageBox}>
-          <img src={imagePath} alt="main" />
+      <Grid container item  alignContent="center" style={{marginBottom:"4%"}}>
+        <Grid item>
+          <img width="100%" src={imagePath} alt="main" />
         </Grid>
-        <Grid item className={classes.textBox}>
+        <Grid item className={classes.commonmargin}>
           <Typography variant="h6" color="textSecondary">
             {date}
           </Typography>
-          <HeadingWithText content={content} />
+        </Grid>
+        <Grid item className={classes.commonmargin}>
+          <Typography variant="h4">
+            {content.heading}
+          </Typography>
+          <Typography
+            variant="h6"
+            color="textSecondary"
+            className={classes.commonmargin}
+            >
+            {content.description}
+          </Typography>
+        </Grid>
+        <Grid item className={classes.commonmargin}>
           <Typography variant="h6" color="primary">
             {readmore}
           </Typography>
-
         </Grid>
       </Grid>
     )
@@ -96,7 +118,7 @@ const ContentLeft = ({ content }) => {
 
   const CardsList = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList} md={8}>
+    return <Grid container item>
       {
         content.map(
           ({ imagePath, date, content, readmore }, index) => (<Card {...{ imagePath, date, content, readmore }} key={index} />))}
@@ -119,7 +141,7 @@ const ContentRight = ({ content }) => {
 
     const CardsList = () => {
       const classes = useStyles();
-      return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}>
+      return <Grid container item className={classes.commonmargin}>
         {
           cardsList.map(
             (props, index) => (React.cloneElement(card, { ...props })))
@@ -127,7 +149,7 @@ const ContentRight = ({ content }) => {
       </Grid>
     }
 
-    return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}  >
+    return <Grid container item direction="column" className={classes.commonmargin}>
       <Grid item>
         <Typography variant="h4" color="textPrimary" className={classes.heading}>
           {heading}
@@ -142,30 +164,34 @@ const ContentRight = ({ content }) => {
     const classes = useStyles();
 
     return (
-      <Grid container className={classes.card}   >
-        <Grid item xs={6} className={classes.imageBox} >
-          <img src={imagePath} alt="doctor" />
+      <Grid container className={classes.commonmargin}>
+        <Grid item md={5}  >
+          <img src={imagePath}  alt="doctor" />
         </Grid>
-        <Grid item xs={6} className={classes.textBox} flexGrow="2">
-          <Typography variant="h6" color="textSecondary">
+        <Grid item md={1}></Grid>
+        <Grid item md={6} className={classes.textBox}>
+          <Typography variant="paragraph" color="textSecondary">
             {date}
           </Typography>
-        </Grid>
-        <Typography variant="h5" color="textPrimary" paragraph>
-          {heading}
+          <Typography color="textPrimary" paragraph>
+            <Box fontWeight="fontWeightBold" m={1}>
+              {heading}
+            </Box>
         </Typography>
+        </Grid>
+        
 
       </Grid>
     )
   }
   const Card2 = ({ text, key }) => {
 
-    return (<Grid container item alignItems="center" >
+    return (<Grid container item className={classes.commonmargin}>
       <Grid item style={{ marginRight: "10px" }}>
         <Typography variant="h4" color="primary" > <>  &#8226; </></Typography>
       </Grid>
       <Typography variant="h6" color="textSecondary" >
-        {text}.......................{key}
+        {text}...{key}
       </Typography>
     </Grid>)
 
@@ -173,13 +199,13 @@ const ContentRight = ({ content }) => {
 
   }
   const Card3 = ({ text }) => {
-    return (<Grid item>
-      <Button variant="contained">{text}</Button>
+    return (<Grid item md={6} className={classes.commonmargin}>
+      <Button variant="outlined">{text}</Button>
     </Grid>
     )
 
   }
-  return <Grid container item direction="column" justifyContent="space-evenly" className={classes.contentRight} md={4}>
+  return <Grid container item >
     <HeadingWithCardsList heading={popularPosts.heading} cardsList={popularPosts.cardsList} card={<Card1 />} />
     <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} />
     <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} />

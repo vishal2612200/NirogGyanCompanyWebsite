@@ -14,11 +14,21 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     "&>*": {
       marginBottom: "1rem"
-    }
+    },
+    margin: theme.spacing(3),
   },
   heading: {
     fontWeight: "700",
   },
+  accord:{
+    '& >MuiAccordion-root::before': {
+      backgroundColor: 'none !important'
+    }
+  },
+  summary:{
+      backgroundColor: '#F2F0F0',
+    }
+  
 }));
 
 export default function FrequentQuestions({ state: frequentquestions }) {
@@ -35,16 +45,16 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 
 const Card = ({ question, answer }) => {
   const classes = useStyles();
-  return <Accordion>
+  return <Accordion elevation={0} className={classes.accord}>
     <AccordionSummary
-      expandIcon={<ExpandMoreIcon />}
+      expandIcon={<ExpandMoreIcon style={{backgroundColor: '#C4C4C4', borderRadius:'50%'}} />}
       aria-controls="panel1a-content"
       id="panel1a-header"
-      style={{ backgroundColor: '#F2F0F0'}}
+      className={classes.summary}
     >
       <Typography variant="h6" className={classes.heading}>{question}</Typography>
     </AccordionSummary>
-    <AccordionDetails>
+    <AccordionDetails elevation={3} boxShadow={3}>
       <Typography>
         {answer}
       </Typography>

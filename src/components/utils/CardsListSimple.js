@@ -1,11 +1,18 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { IconButton } from "@material-ui/core";
+
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles({
     cardsList: {
@@ -30,6 +37,18 @@ const useStyles = makeStyles({
     iconContainer: {
         justifyContent: "center",
         alignContent: "center",
+    },
+    root: {
+        maxWidth: "90%",
+    },
+    media: {
+        height: 280,
+    },
+    iconStyle:{
+        border: "1px solid #B8BBBD",
+        borderRadius: "50%",
+        padding: "5px",
+
     }
 }
 )
@@ -37,49 +56,98 @@ const useStyles = makeStyles({
 
 export default function CardsList({ cardsList }) {
     const classes = useStyles();
-    return <Grid container item className={classes.cardsList} spacing={1}>
+    return <Grid container item >
         {cardsList.map(({ imgPath, heading, content }, index) => (
-            <Card {...{ imgPath, heading, content }} key={index} />
+            <Grid item md={4}>
+                <TeamCard {...{ imgPath, heading, content }} key={index} />
+            </Grid>
         ))
         }
     </Grid>
 }
 
 
-const Card = ({ imgPath, heading, content }) => {
+const TeamCard = ({ imgPath, heading, content }) => {
 
     const classes = useStyles();
     const icons = [
-        <FacebookIcon />,
-        <InstagramIcon />,
-        <TwitterIcon />]
+        <FacebookIcon className={classes.iconStyle}/>,
+        <InstagramIcon className={classes.iconStyle}/>,
+        <TwitterIcon className={classes.iconStyle}/>]
     return (
-        <Grid container item direction="column" className={classes.card} sm={3} >
-            <Grid item className={classes.imageBox} >
-                <img src={imgPath} alt="service" className={classes.image} />
+        <Card className={classes.root} >
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={imgPath}
+            title="Contemplative Reptile"
+          />
+          <CardContent >
+          <Typography variant="h4" color="textSecondary">
+                <Box textAlign="center">
+                {heading}
+                </Box>
+            </Typography>
+            <Typography variant="body1" color="textSecondary">
+                <Box textAlign="center">
+                    {content}
+                </Box>
+            </Typography>
+            <Typography variant="h5">
+              
+            </Typography>
+            
+            {/* <Typography variant="body2" color="textSecondary" component="p">
+              {content}
+            </Typography> */}
+            
+          </CardContent>
+        </CardActionArea>
+        <CardActions >
+            <Grid container alignItem="center">
+                <Grid item md={2}></Grid>
+                <Grid item container md={9}>
+                    {
+                            icons.map(icon => (
+                                <Grid item className={classes.icon}>
+                                    <IconButton>
+                                        {icon}
+                                    </IconButton>
+                                </Grid>
+                            )
+                            )
+                        }
+                </Grid>
+                <Grid item md={1}></Grid>
             </Grid>
-            <Grid item className={classes.personName}>
-                <Typography variant="h6" style={{color:"#716A6A", fontWeight:"bolder"}}>{heading}</Typography>
-            </Grid>
-            <Grid item className={classes.personName}>
-                <Typography variant="body1" color="textSecondary">{content}</Typography>
-            </Grid>
+        </CardActions>
+      </Card>
+        // <Grid container item className={classes.card} sm={3} >
+        //     <Grid item container>
+        //         <img src={imgPath} width="100%" alt="service"  />
+        //     </Grid>
+        //     <Grid item className={classes.personName}>
+        //         <Typography variant="h6" style={{color:"#716A6A", fontWeight:"bolder"}}>{heading}</Typography>
+        //     </Grid>
+        //     <Grid item className={classes.personName}>
+        //         <Typography variant="body1" color="textSecondary">{content}</Typography>
+        //     </Grid>
 
-            <Grid container item className={classes.iconContainer}>
+        //     <Grid container item className={classes.iconContainer}>
 
-                {
-                    icons.map(icon => (
-                        <Grid item className={classes.icon}>
-                            <IconButton>
-                                {icon}
-                            </IconButton>
-                        </Grid>
-                    )
-                    )
-                }
+        //         {
+        //             icons.map(icon => (
+        //                 <Grid item className={classes.icon}>
+        //                     <IconButton>
+        //                         {icon}
+        //                     </IconButton>
+        //                 </Grid>
+        //             )
+        //             )
+        //         }
 
-            </Grid>
-        </Grid >
+        //     </Grid>
+        // </Grid >
 
     );
 }
