@@ -10,12 +10,11 @@ import HeadingWithText from "../utils/HeadingWithText"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: "3rem",
+    padding: "2rem",
     width: '100%',
     "&>*": {
       marginBottom: "1rem"
     },
-    margin: theme.spacing(3),
   },
   heading: {
     fontWeight: "700",

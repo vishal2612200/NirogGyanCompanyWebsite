@@ -5,7 +5,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
 import { useSpring, animated } from 'react-spring'
 import { PageContext } from "../App";
-
+import { LInk } from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -146,24 +146,17 @@ const NavItemsMediumScreen = ({ links }) => {
 }
 
 function useNavItems(links) {
-  const { activeLinkIndex, setActiveLinkIndex } = useContext(NavContext);
-  const { setPage } = useContext(PageContext);
+  const { page } = useContext(PageContext);
   return links.map(
     ({ text, id }, index) => {
       return <Grid item key={index} >
-        <Link href={process.env.PUBLIC_URL +  `/${id}`}
-          onClick={
-            () => {
-              setActiveLinkIndex(index)
-              setPage(id)
-            }
-          }
-          underline={activeLinkIndex === index ? "always" : "none"}
+        <Link href={process.env.PUBLIC_URL + `/${id}`}
+          underline={page === id ? "always" : "none"}
           style={{ textDecoration: 'none' }}>
           <Typography
             variant="h6"
             // eslint-disable-next-line eqeqeq
-            color={activeLinkIndex == index ? "primary" : "textSecondary"}>
+            color={page === id ? "primary" : "textSecondary"}>
             {text}
           </Typography>
         </Link>
@@ -185,7 +178,7 @@ function useSmallScreen() {
 
 
 const ImageBox = ({ imgPath }) => (
-  <Grid  key='imgBox' item xs={6} md={2} style={{textAlign:"right"}}>
+  <Grid key='imgBox' item xs={6} md={2} style={{ textAlign: "right" }}>
     <img
       src={imgPath}
       alt="Logo"

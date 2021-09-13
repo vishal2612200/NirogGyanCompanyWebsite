@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import HeroSection from './HeroSection';
 import FrequentQuestions from './FrequentQuestions';
 import Form from './Form';
-export default function FAQS({ state, children }) {
+import { PageContext } from '../../App';
 
+
+export default function FAQS({ state, children }) {
+    const { page, setPage } = useContext(PageContext);
+    useEffect(() => {
+        setPage("faqs")
+    })
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
         <FrequentQuestions state={state.FrequentQuestions} />

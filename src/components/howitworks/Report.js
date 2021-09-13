@@ -7,6 +7,7 @@ import HeadingWithText from "../utils/HeadingWithText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: "#E5E5E5"
   },
 
   buttonSet: {},

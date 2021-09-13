@@ -31,8 +31,7 @@ function App() {
     <div className="App">
       <PageContext.Provider value={{ page, setPage }}>
         <NavBar state={state.NavBar} />
-      </PageContext.Provider>
-
+     
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/home">
@@ -63,6 +62,8 @@ function App() {
         </Switch>
       </Router>
       <Footer state={state.Footer} />
+      </PageContext.Provider>
+
     </div>
   );
 }
