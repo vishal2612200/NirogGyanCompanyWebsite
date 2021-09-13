@@ -8,9 +8,13 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
-    padding: "1.5rem",
     alignItems: "center",
-    overflow: "hidden"
+    overflow: "hidden",
+
+    "&>*": {
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    }
   },
 
   headerContainer: {
@@ -42,11 +46,18 @@ export default function Achievements({ state: achievements }) {
 
   return (
     <Grid container className={classes.root} justifyContent="center" alignItems="center"    >
-      <Grid container item height="100%">
-
-        {achievements.cardsData.map((achievement) => (<Card content={achievement} />))}
+      <Grid container md={6} justifyContent="space-around" style={{
+        backgroundImage: `url(${achievements.backgroundImage.left})`,
+      }}>
+        {achievements.cardsData.slice(0, 2).map((achievement) => (<Card content={achievement} />))}
       </Grid>
-      <Grid container item className={classes.imageBox} justifyContent="space-between" alignItems="stretch">
+      <Grid container item md={6} justifyContent="space-around" style={{ backgroundImage: `url(${achievements.backgroundImage.right})` }}>
+
+        {achievements.cardsData.slice(2).map((achievement) => (<Card content={achievement} />))}
+
+
+      </Grid>
+      {/* <Grid container item className={classes.imageBox} justifyContent="space-between" alignItems="stretch">
         <Grid item>
           <img src={achievements.backgroundImage.left} alt="Achievements" />
         </Grid>
@@ -54,7 +65,7 @@ export default function Achievements({ state: achievements }) {
           <img src={achievements.backgroundImage.right} alt="Achievements" />
 
         </Grid>
-      </Grid>
+      </Grid> */}
 
     </Grid>
   );
