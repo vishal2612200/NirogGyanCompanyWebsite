@@ -17,13 +17,18 @@ export default (function () {
       linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
     Brand: {
-      heading: "Trusted HealthCare Brands",
+      header: {
+        heading: "Trusted HealthCare Brands",
+        description: ""
+      },
       trustedBrandsLogoImages: [
         path.join(process.env.PUBLIC_URL, "homepage", "brand-crelio-health.png"),
         path.join(process.env.PUBLIC_URL, "homepage", "brand-dr-dang-labs.png"),
         path.join(process.env.PUBLIC_URL, "homepage", "brand-medlife.png"),
         path.join(process.env.PUBLIC_URL, "homepage", "brand-niramaya.png"),
       ],
+      whatsapp: path.join(process.env.PUBLIC_URL, "homepage", "brand-whatsapp-icon.png"),
+
     },
     Features: {
       contentLeft: {
@@ -59,7 +64,7 @@ export default (function () {
       },
       contentRight: {
         imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
-      }
+      },
     },
 
     Services: {
@@ -72,7 +77,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "/services/services-templates.png"
+            "homepage", "services-templates.png"
           ),
           heading: "Multiple Reporting Templates",
           content:
@@ -123,6 +128,8 @@ export default (function () {
           content: "Track and save your medical history and health data",
         },
       ],
+      backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "services-background.png"),
+
     },
     Bytes: {
       content: {
@@ -167,6 +174,10 @@ export default (function () {
       }
     },
     Achievements: {
+      backgroundImage: {
+        left: path.join(process.env.PUBLIC_URL, "homepage", "achievements-background1.png"),
+        right: path.join(process.env.PUBLIC_URL, "homepage", "achievements-background2.png"),
+      },
       cardsData: [
         {
           textBig: "40+",
@@ -217,19 +228,9 @@ export default (function () {
       },
       block2: {
         placeholderText: "Enter your email address",
-      },
-      block3: {
         buttonText: "Subscribe",
       },
-      contentLeft: {
-        heading: "Subscribe to our mailing list",
-        description: "We'll send you updates about NirogGyan",
-        footer: ["Get In Touch", ".", "contact@niroggyan.com"],
-      },
-      contentRight: {
-        placeholderText: "Enter your email address",
-        buttonText: "Subscribe",
-      }
+      actionurl: "https://niroggyan.us1.list-manage.com/subscribe/post?u=a8e8a8e8c9c8c8c8c8c8c8c8c&amp;id=8c8c8c8c8c8c8c8c8c8c8c8c8c",
     },
 
   };

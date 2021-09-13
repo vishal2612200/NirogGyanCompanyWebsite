@@ -1,68 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
-import { Grid } from "@material-ui/core";
-import { useTransition } from "react-spring";
-
+import { Grid, Box, Button } from "@material-ui/core";
+import HeadingWithText from "../utils/HeadingWithText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    direction: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: theme.spacing(2),
+    margin: "1.5rem 0"
   },
-  title: {
-    flexGrow: 1,
-    textAlign: "center",
-    marginBottom: "4%"
-  },
-  imagesContainer: {
-    justifyContent: "space-evenly",
-    overflowX: "hidden"
-  },
+  whatsapp: {
+    padding: "0 1rem"
+  }
 }));
 
 export default function Brand({ state: brand }) {
   const classes = useStyles();
   const logoImages = brand.trustedBrandsLogoImages;
-  const [startingIndex, setStartingIndex] = useState(0);
-
-  const styles = useTransition(startingIndex, {
-    key: startingIndex,
-    loop: true,
-    to: { opacity: 0 },
-    from: { opacity: 1 },
-    config: { duration: 4000 },
-  });
-
-  let images = [];
-  const numItemsCarousal = 3;
-
-  for (let i = 0; i < logoImages.length; i++) {
-    images.push(
-      <Grid item md={3} sx={{ marginRight: "10px"}} key={i}>
-        <img width="90%" src={logoImages[i]} alt="client logo" />
-      </Grid>
-    );
-  }
 
   return (
-    <Grid container className={classes.root}>
-      <Grid item md={1}></Grid>
-      <Grid item md={10} className={classes.title}>
-        <Grid item>
-        <Typography variant="h3" color="textPrimary" className={classes.title}>
-          {brand.heading}
-        </Typography>
+    <Grid container className={classes.root} direction="column" justifyContent="center" alignItems="center">
+      <Grid container item>
+        <Grid item className={classes.whatsapp}>
+          <Button aria-label="whatsapp" >
+            <img src={brand.whatsapp} alt="logo" />
+          </Button>
         </Grid>
-        
-        <Grid item container display={{ sm: 'grid'}} >
-          {images}
+        <HeadingWithText content={brand.header} />
+      </Grid>
+
+      <Grid container item xs={10} spacing={2} justifyContent="center">
+
+        {logoImages.map(item =>
+          <Grid item><img src={item} alt="logo" /></Grid>
+        )}
+        <Grid item>
+          <Box p={3} />
         </Grid>
       </Grid>
-      <Grid item md={1}></Grid>
     </Grid>
   );
 }

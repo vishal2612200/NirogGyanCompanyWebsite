@@ -34,12 +34,11 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     headerContainer: {
-        textAlign: "center",
+        textAlign: "left",
     },
     cardList: {
         justifyContent: "space-around",
         padding: "2rem",
-        flexGrow: 0
     },
     cardContainer: {
         justifyContent: "center",
@@ -49,10 +48,13 @@ const useStyles = makeStyles((theme) => ({
 
     },
     card: {
+        width: "220px",
+        height: "180px",
         padding: "2rem 3rem",
         borderRadius: "20px",
         backgroundColor: "#fff"
-    }
+    },
+    description:{fontSize:"1rem"}
 }
 ));
 
@@ -94,7 +96,7 @@ const ContentRight = ({ content }) => {
 
 const Header = ({ content }) => {
     const classes = useStyles();
-    return <Grid item className={classes.headerContainer}>
+    return <Grid item className={classes.headerContainer} >
         <Typography
             variant="h3"
             className={classes.heading}>

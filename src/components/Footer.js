@@ -10,9 +10,10 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: "1.5rem",
+        padding: "2rem 6rem",
         color: "#fff",
         backgroundColor: "#163B76",
+
         "&>div": {
             marginBottom: "2rem"
         }
@@ -21,18 +22,32 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "1rem"
     },
     block: {
-        minWidth:"min-content",
-        margin: "1rem",
-    }
+        minWidth: "min-content",
+    },
+    container: { marginRight: "2rem" }
 }));
 
-const Block1 = ({ content }) => {
+
+export default function Footer({ state: footer }) {
+    const classes = useStyles();
+    return <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch">
+
+        <Block1 content={footer.block1} md={3} />
+        <Block content={footer.block2} md={3} />
+        <Block content={footer.block3} md={3} />
+        <Block4 content={footer.block4} md={3} />
+    </Grid>
+
+}
+
+
+const Block1 = ({ content, ...props }) => {
     const classes = useStyles()
-    return <Grid item className={classes.block}>
+    return <Grid item className={classes.block} {...props}>
         <Grid item>
             <img src={content.logoImage} alt="logo" />
         </Grid>
-        <Grid item>  
+        <Grid item>
             <Typography variant="h6">
                 <Box fontWeight="fontWeightMedium" m={1}>
                     {content.copyrightText}
@@ -42,26 +57,26 @@ const Block1 = ({ content }) => {
     </Grid>
 }
 
-const Block = ({ content }) => {
+const Block = ({ content, ...props }) => {
     const classes = useStyles();
-    return <Grid item  className={classes.block}>
+    return <Grid item className={classes.block} {...props}>
         <Typography variant="h5">
             <Box fontWeight="fontWeightMedium" m={1}>
                 {content.heading}
             </Box>
         </Typography>
         {content.items.map(link => <Typography>
-                <Box fontWeight="fontWeightMedium" m={1}>
-                    {link}
-                </Box>
-            </Typography>)}
+            <Box fontWeight="fontWeightMedium" m={1}>
+                {link}
+            </Box>
+        </Typography>)}
     </Grid>
 }
 
-const Block4 = ({ content }) => {
+const Block4 = ({ content, ...props }) => {
     const classes = useStyles();
 
-    return <Grid item>
+    return <Grid item {...props}>
         <Typography variant="h5">
             <Box fontWeight="fontWeightMedium" m={1}>
                 {content.heading}
@@ -70,25 +85,4 @@ const Block4 = ({ content }) => {
         {content.items.map(imagePath => <img src={imagePath} alt="logo" />)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
-}
-
-export default function Footer({ state: footer }) {
-    const classes = useStyles();
-    return <Grid container className={classes.root}>
-        <Grid item md={1}></Grid>
-        <Grid item md={3}>
-            <Block1 content={footer.block1} />
-        </Grid>
-        <Grid item md={2}>
-            <Block content={footer.block2} />
-        </Grid>
-        <Grid item md={3}>
-            <Block content={footer.block3} />
-        </Grid>
-        <Grid item md={2}>
-            <Block4 content={footer.block4} />
-        </Grid>
-        <Grid item md={1}></Grid>
-    </Grid>
-
 }

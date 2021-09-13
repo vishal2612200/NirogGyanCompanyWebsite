@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-
+import { Grid, Box } from "@material-ui/core";
+import HeadingWithText from "../utils/HeadingWithText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,13 +10,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     minHeight: "20vh",
   },
-  headingContainer: {
-    textAlign: "center",
-    padding:"2rem"
-  },
   cardList: {
     padding: "1rem auto",
-   
+
     justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: "#05152E",
@@ -33,45 +28,17 @@ export default function Bytes({ state: bytes }) {
   const classes = useStyles();
 
   return (
-    <Grid container alignText="center">
-      <Grid item container alignItems="center">
-        <Grid item md={2}>
-
-        </Grid>
-        <Grid item md={8} >
-        <Heading content={bytes.content} />
-        </Grid>
-        <Grid item md={2}></Grid>
-      </Grid>
-      <Grid item container>
+    <Grid container direction="column">    
+        <HeadingWithText content={bytes.content} />
         <CardList cardsData={bytes.videoLinks} />
-      </Grid>
     </Grid>
   );
 
 }
 
-const Heading = ({ content }) => {
-  const classes = useStyles();
-  return <Grid item className={classes.headingContainer}>
-    <Typography
-      variant="h3"
-      className={classes.heading}>
-      {content.heading}
-    </Typography>
-    <Typography
-      variant="h6"
-      color="textSecondary"
-      className={classes.description}>
-      {content.description}
-    </Typography>
-  </Grid>
-
-}
-
 const CardList = ({ cardsData }) => {
   const classes = useStyles();
-  return <Grid container md={12} className={classes.cardList}>
+  return <Grid container className={classes.cardList}>
     {cardsData.map((link, index) => (
       <Card link={link} key={index} />
     ))
@@ -84,14 +51,18 @@ const Card = ({ link, title = "YouTube video player" }) => {
 
   return (
     <Grid item className={classes.card} md={3} sm={4} >
-      <iframe
-        width="auto"
-        height="inherit"
-        src={link}
-        title={title}
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
+      <Box p={4}>
+        <iframe style={{
+          borderRadius: "10px",
+        }}
+          width="auto"
+          height="200px"
+          src={link}
+          title={title}
+          frameborder="2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </Box>
     </Grid>
 
   );

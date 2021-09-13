@@ -1,10 +1,9 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
+import { Grid, IconButton, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import Box from '@material-ui/core/Box';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -63,11 +62,11 @@ export default function Features({ state: features }) {
   const classes = useStyles();
 
   return (
-    <Grid container >
-      <Grid item md={1}></Grid>
-      <ContentLeft content={features.contentLeft} />
-      <ContentRight content={features.contentRight} />
-      <Grid item md={1}></Grid>
+    <Grid container justifyContent="center" alignItems="center" >
+      <Grid container item xs={10} spacing={2} justifyContent="space-around" alignItems="stretch">
+        <ContentLeft content={features.contentLeft} />
+        <ContentRight content={features.contentRight} />
+      </Grid>
     </Grid>
   );
 }
@@ -87,7 +86,7 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content }) => {
   const classes = useStyles();
-  return <div>
+  return <Grid item >
           <Typography
       style={{ display: "inline-block", color:"#3567D6" }}
             variant="h4"
@@ -112,7 +111,7 @@ const Header = ({ content }) => {
             className={classes.title}>
             {content.line3}
           </Typography>
-        </div>
+        </Grid>
 }
 
 

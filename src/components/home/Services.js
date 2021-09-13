@@ -7,16 +7,15 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-   },
+    backgroundRepeat: "no-repeat",
+  },
   headingContainer: {
     textAlign: "center",
   },
   cardList: {
     justifyContent: "center",
     alignItems: "stretch",
-    overflow: 'hidden',
-  },
+   },
 
   serviceCard: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -26,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #B8BBBD",
     margin: "2rem",
     flexGrow: 1,
+    boxShadow: "39px 11px 83px -53px #B8BBBD",
     "&__logo-box": {
       textAlign: "center",
       textWrap: "word-break",
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Services({ state: services }) {
   const classes = useStyles();
   return (
-    <Grid container direction="column" style={{marginTop:"7%"}}>
+    <Grid container direction="column" className={classes.root} style={{ marginTop: "7%", backgroundImage: `url(${services.backgroundImage})` }}>
       <Heading content={services.content}></Heading>
       <CardList cardsData={services.servicesList}></CardList>
     </Grid>);
@@ -89,7 +89,7 @@ const Heading = ({ content }) => {
     <Typography
       variant="h3"
       className={classes.heading}>
-      The best <span style={{ color:"#3567D6"}}> Patient-Engagement Tool </span> out there
+      The best <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span> out there
     </Typography>
     <Typography
       variant="h6"

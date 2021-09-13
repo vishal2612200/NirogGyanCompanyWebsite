@@ -1,29 +1,58 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import 'react-alice-carousel/lib/alice-carousel.css';
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
-        background: "#3567D6",
-        padding: "2rem 9rem",
-        "&>*": {
-            padding: "1rem"
+        padding: "2rem 6rem",
+        color: "#fff",
+        backgroundColor: "#3567D6",
+
+        "&>div": {
+            marginBottom: "2rem"
         }
     },
-
+    heading: {
+        paddingBottom: "1rem",
+        fontWeight: "bolder"
+    },
     block1: {
-        textAlign: "left",
+        fontSize: "1.5rem",
+    },
+    block2: {
+        "&>*": {
+            margin: "1rem 0"
+        }
+    },
+    buttonContainer: {
+        textAlign: "center"
+
+    },
+    container: {
+        marginRight: "2rem"
+    },
+    footertext: {
+        display: "inline-block",
+        fontWeight: "bolder"
+    },
+    input: {
         color: "#fff",
+        borderRadius: "40px",
+        border: "2px solid white",
+        background: "transparent",
+        padding: "1rem 1.5rem",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
+        width: "100%",
     },
 
-    block2: {
-        textAlign: "left",
-        color: "#fff",
+    inputContainer:
+    {
+        width: "inherit",
+        paddingRight: "2rem",
     },
     button: {
         borderRadius: "20px",
@@ -31,26 +60,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: "none",
         backgroundColor: "#052E88",
         color: "white"
-    },
-    inputBox: {
 
-        "&>input": {
-            minWidth: "min-content",
-            width: "60%",
-            color: "#fff",
-            padding: "0.5rem 2rem",
-            borderRadius: "20px",
-            background: "transparent",
-            "&::placeholder": {
-                color: "#fff"
-            }
-
-        }
-    },
-    footertext: {
-        display: "inline",
-        marginRight: "1rem",
-        fontWeight: "bolder"
     }
 }));
 
@@ -58,61 +68,60 @@ const useStyles = makeStyles((theme) => ({
 
 
 
+export default function MailingList({ state: mailingList }) {
+    const classes = useStyles();
+    return <form action={mailingList.actionurl} method="post">
+        <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch">
+            <Block1 content={mailingList.block1} md={4} />
+            <Block2 content={mailingList.block2} md={8} />
+        </Grid>
+    </form>
+}
 
-
-const Block1 = ({ content }) => {
+const Block1 = ({ content, ...props }) => {
     const classes = useStyles()
-    return <Grid container item direction="column" sm={12} md={5} justifyContent="space-around" alignItems="flex-start" className={classes.block1}>
+    return <Grid container item direction="column" justifyContent="space-around" alignItems="flex-start" className={classes.block1} {...props}>
         <Grid item>
             <Typography
-                variant="h4"
+                variant="h5"
                 className={classes.heading}>
                 {content.heading}
             </Typography>
         </Grid>
         <Grid item>
             <Typography
-                variant="h6"
+                variant="body1"
                 className={classes.description}>
                 {content.description}
             </Typography>
         </Grid>
 
         <Grid item style={{ marginTop: "1rem" }}>
-            {content.footer.map(item => <Typography variant="h5" className={classes.footertext}>
+            {content.footer.map(item => <Typography variant="h6" className={classes.footertext}>
                 {item}
             </Typography>)}
         </Grid>
     </Grid>
 }
 
-const Block2 = ({ content }) => {
+const Block2 = ({ content, ...props }) => {
     const classes = useStyles()
+    const [email, setEmail] = useState("")
+    return <Grid container item className={classes.block2} alignItems="center" {...props}>
+        <Grid item md={5} className={classes.inputContainer}>
+            <input className={classes.input}
+                name="email"
+                value={email}
+                placeholder={content.placeholderText}
+                onChange={e => setEmail(e.target.value)} />
+        </Grid>
+        <Grid item className={classes.buttonContainer} md={7}>
 
-    return <Grid item  md={4} className={classes.inputBox}>
-        <input placeholder={content.placeholderText} />
-    </Grid>
+            <Button variant="contained" className={classes.button}>
+                {content.buttonText}
+            </Button>
+        </Grid>
 
-}
-
-const Block3 = ({ content }) => {
-    const classes = useStyles()
-
-    return <Grid item  md={3}>
-        <Button variant="contained" className={classes.button}>
-            {content.buttonText}
-        </Button>
-    </Grid>
-
-}
-
-
-export default function MailingList({ state: mailingList }) {
-    const classes = useStyles();
-    return <Grid container justifyContent="flex-start" alignItems="center" className={classes.root}>
-        <Block1 content={mailingList.block1} />
-        <Block2 content={mailingList.block2} />
-        <Block3 content={mailingList.block3} />
     </Grid>
 
 }

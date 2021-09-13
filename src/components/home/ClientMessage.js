@@ -8,7 +8,7 @@ import "@fontsource/open-sans";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Box from '@material-ui/core/Box';
-
+import HeadingWithText from "../utils/HeadingWithText"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -56,73 +56,18 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const handleDragStart = (e) => e.preventDefault();
-
-
-const Header = ({ content }) => {
-    const classes = useStyles();
-    return <Grid item className={classes.headerContainer}>
-        <Typography
-            variant="h3"
-            className={classes.heading}>
-            {content.heading}
-        </Typography>
-        <Typography
-            variant="h6"
-            color="textSecondary"
-            className={classes.description}>
-            {content.description}
-        </Typography>
-    </Grid>
-
-}
-
-
-
-
-const Card = ({ message, imagePath, name, organisation }) => {
-    const classes = useStyles();
-    return (
-        <Grid container justifyContent="center"  className={classes.card} onDragStart={handleDragStart} >
-            <Grid item>
-                <Typography variant="h6" color="textSecondary" className={classes.message}>
-                    <i>{message}</i>
-                </Typography>
-
-            </Grid>
-            <Grid item >
-                <img src={imagePath} alt="client" />
-            </Grid>
-            <Grid item>
-                <Typography variant="h4" color="textPrimary">
-                    {name}
-                </Typography>
-
-            </Grid>
-            <Grid item >
-                <Typography variant="h6" color="textSecondary">
-                    {organisation}
-                </Typography>
-            </Grid>
-        </Grid>
-    )
-}
-
 
 export default function ClientMessage({ state: clientMessage }) {
-    const items = clientMessage.cardsData.map(props => <Card {...props} />);
 
     const classes = useStyles();
-    return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})` }}>
-        <Grid item md={10} style={{ marginTop:"3%"}}>
-            <Header content={clientMessage.header} />
-        </Grid>
+    return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})` }} >
+            <HeadingWithText content={clientMessage.header} />
         
             
-        <Grid item sm={8} md={8}>
+        <Grid container item sm={8}style={{marginLeft:"1rem"}}>
 
         <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
-        <Grid  justifyContent="center"  className={classes.card} >
+        <Grid  container justifyContent="center"  className={classes.card} >
             <Grid item>
                 <Typography variant="h6" color="textSecondary" className={classes.message}>
                     <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,

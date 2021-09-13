@@ -9,43 +9,63 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
     padding: "1.5rem",
-    justifyContent: "space-around",
     alignItems: "center",
-    marginBottom: "3%"
+    overflow: "hidden"
   },
 
   headerContainer: {
     textAlign: "center",
   },
+  imageBox: {
+    position: "absolute",
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: "column"
+    }
+  },
 
   card: {
+    width: "250px",
+    height: "200px",
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     backgroundColor: "#1242AC",
     borderRadius: "10px",
     color: "#fff",
-    padding: "3rem",
+    padding: "3rem 1rem",
     textAlign: "center",
     margin: "3%",
     border: "2px dashed #fff"
   }
 }));
 
-const Card = ({ content }) => {
-  const classes = useStyles();
-  return (
-    <Grid item xs={12} sm={6} md={2} className={classes.card}>     
-        <Typography variant="h4">{content.textBig}</Typography>
-        <Typography variant="h6">{content.textSmall}</Typography>
-    </Grid>
-  );
-};
-
 export default function Achievements({ state: achievements }) {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root}>
-      {achievements.cardsData.map((achievement) => (<Card content={achievement} />))}
+    <Grid container className={classes.root} justifyContent="center" alignItems="center"    >
+      <Grid container item height="100%">
+
+        {achievements.cardsData.map((achievement) => (<Card content={achievement} />))}
+      </Grid>
+      <Grid container item className={classes.imageBox} justifyContent="space-between" alignItems="stretch">
+        <Grid item>
+          <img src={achievements.backgroundImage.left} alt="Achievements" />
+        </Grid>
+        <Grid item>
+          <img src={achievements.backgroundImage.right} alt="Achievements" />
+
+        </Grid>
+      </Grid>
+
     </Grid>
   );
 }
+
+const Card = ({ content }) => {
+  const classes = useStyles();
+  return (
+    <Grid item className={classes.card} >
+      <Typography variant="h4">{content.textBig}</Typography>
+      <Typography variant="h6">{content.textSmall}</Typography>
+    </Grid>
+  );
+};
