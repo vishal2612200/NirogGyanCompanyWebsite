@@ -5,7 +5,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { useMediaQuery } from "@material-ui/core";
 import { useSpring, animated } from 'react-spring'
 import { PageContext } from "../App";
-import { LInk } from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -55,7 +55,6 @@ const useStyles = makeStyles({
 
 
 export default function CardsList({ cardsList }) {
-    const classes = useStyles();
     return <Grid container item >
         {cardsList.map(({ imgPath, heading, content }, index) => (
             <Grid item md={4}>

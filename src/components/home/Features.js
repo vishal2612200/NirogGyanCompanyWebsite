@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, IconButton, Box } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -59,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Features({ state: features }) {
 
-  const classes = useStyles();
 
   return (
     <Grid container justifyContent="center" alignItems="center" >
@@ -73,7 +72,6 @@ export default function Features({ state: features }) {
 
 
 const ContentLeft = ({ content }) => {
-  const classes = useStyles();
   return <Grid container item direction="column" md={5} alignContent="center" >
     <Grid item style={{ marginBottom: "4%"}}>
       <Header content={content.header} />

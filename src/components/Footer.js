@@ -74,7 +74,6 @@ const Block = ({ content, ...props }) => {
 }
 
 const Block4 = ({ content, ...props }) => {
-    const classes = useStyles();
 
     return <Grid item {...props}>
         <Typography variant="h5">

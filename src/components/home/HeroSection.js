@@ -206,6 +206,6 @@ const ContentRight = ({ content }) => {
   const classes = useStyles();
 
   return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
-          <img src={content.imagePath}  width="100%" />
+          <img src={content.imagePath} alt="hero" width="100%" />
         </Grid>
 }

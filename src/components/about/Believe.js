@@ -4,12 +4,6 @@ import {
     Grid,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import { ListSubheader } from '@material-ui/core';
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
@@ -98,7 +92,7 @@ const Header = ({ content }) => {
     const classes = useStyles();
     return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly">
         <Grid item>
-            <ListSimple content={content} />;
+            <ListSimple content={content} />
         </Grid>
     </Grid>
 }

@@ -6,7 +6,7 @@ import { PageContext } from '../../App';
 
 
 export default function HowItWorks({ state, children }) {
-    const { page, setPage } = useContext(PageContext);
+    const {  setPage } = useContext(PageContext);
     useEffect(() => {
         setPage("how-it-works")
     })

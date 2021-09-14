@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -47,12 +47,20 @@ const useStyles = makeStyles((theme) => ({
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
         width: "100%",
+        "&::placeholder": {
+            color: "#fff"
+        },
+        "&:focus": {
+            outline: "none"
+        }
+
     },
 
     inputContainer:
     {
         width: "inherit",
         paddingRight: "2rem",
+
     },
     button: {
         borderRadius: "20px",

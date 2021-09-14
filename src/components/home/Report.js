@@ -6,7 +6,6 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import HeadingWithText from "../utils/HeadingWithText"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     contentLeft: {
         alignItems: "center",
         justifyContent: "space-evenly",
-    },
+        },
     contentRight: {
         textAlign: "center",
         margin: "auto",
@@ -36,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
     headerContainer: {
         textAlign: "left",
+        paddingLeft: "4rem",
     },
     cardList: {
         justifyContent: "space-around",
@@ -61,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
     footer: {
         textAlign: "left",
         padding:"1rem",
+        paddingLeft: "4rem",
         "&>*": {
             paddingBottom:"1rem"
         }
@@ -88,10 +89,11 @@ export default function Report({ state: report }) {
 
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
-        <Header content={content.header} />
-        <CardList content={content.cardsData} />
-        <Footer content={content.footer} />
+    return <Grid item direction="column" xs={12} md={6} className={classes.contentLeft}>
+            <Header content={content.header} />
+            <CardList content={content.cardsData} />
+            <Footer content={content.footer} />
+      
     </Grid>
 }
 

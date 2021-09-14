@@ -23,7 +23,7 @@ export const PageContext = createContext()
 function App() {
   // https://github.com/facebook/create-react-app/issues/1765
  // BUG FIX: state is undefined , look in state.js and the corresponding state file of the component 
-  const [state, setState] = useReducer(function (state, action) { }, { ...specsnavbar, ...specs, ...specsgetintouch, ...specsfooter });
+  const [state, ] = useReducer(function (state, action) { }, { ...specsnavbar, ...specs, ...specsgetintouch, ...specsfooter });
 
   const [page, setPage] = useState("home");
 

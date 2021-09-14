@@ -4,7 +4,6 @@ import { Grid, Button , Divider} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import HeadingWithText from "../utils/HeadingWithText";
 import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
@@ -80,7 +79,6 @@ export default function Main({ state: main }) {
 
 
 const ContentLeft = ({ content }) => {
-  const classes = useStyles();
 
   const Card = ({ imagePath, date, content, readmore }) => {
     const classes = useStyles();
@@ -117,7 +115,6 @@ const ContentLeft = ({ content }) => {
   }
 
   const CardsList = ({ content }) => {
-    const classes = useStyles();
     return <Grid container item>
       {
         content.map(

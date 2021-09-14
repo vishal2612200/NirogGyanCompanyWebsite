@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Bytes({ state: bytes }) {
-  const classes = useStyles();
 
   return (
     <Grid container direction="column">    
