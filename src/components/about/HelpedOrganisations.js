@@ -21,22 +21,13 @@ const useStyles = makeStyles((theme) => ({
         padding: "3rem 0",
         textAlign: "center",
     },
-    heading: {
-        width: "60%"
-
-    },
-    description: {
-        width: "50%"
-
-    },
     button: {
         fontWeight: "bolder",
         padding: "1.5rem 3rem",
         backgroundColor: "#3CD0FF",
         fontSize: "larger",
-        "& span": {
-            textOverflow: "ellipsis"
-        }
+        textOverflow: "ellipsis"
+
     }
 }));
 
@@ -69,7 +60,7 @@ const HeadingWithText = ({ content }) => {
                 {content.heading}
             </Typography>
         </Grid>
-        <Grid item className={classes.description}>
+        <Grid item md={8} className={classes.description}>
             <Typography
                 variant="h6"
                 style={{ color: "#fff" }}>

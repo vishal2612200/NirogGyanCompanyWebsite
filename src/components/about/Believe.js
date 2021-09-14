@@ -20,6 +20,7 @@ import ListSimple from "../utils/ListSimple";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        paddingTop: "3rem"
 
     },
     contentRight: {
@@ -73,13 +74,12 @@ export default function Believe({ state: believe }) {
     const classes = useStyles();
 
     return (
-        <Grid container>
-            <Grid item md={1}></Grid>
-            <Grid item container md={10}>
+        <Grid container className={clsx(classes.root)} justifyContent="center" alignItems="center">
+            <Grid container item xs={10}>
+
                 <ContentLeft content={believe.contentLeft} />
                 <ContentRight content={believe.contentRight} />
             </Grid>
-            <Grid item md={1}></Grid>
         </Grid>
     );
 }

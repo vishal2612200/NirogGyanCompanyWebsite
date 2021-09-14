@@ -11,10 +11,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     overflow: "hidden",
 
-    "&>*": {
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-    }
+
+
   },
 
   headerContainer: {
@@ -22,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageBox: {
     position: "absolute",
+
     [theme.breakpoints.down('sm')]: {
       flexDirection: "column"
     }
@@ -48,11 +47,19 @@ export default function Achievements({ state: achievements }) {
     <Grid container className={classes.root} justifyContent="center" alignItems="center"    >
       <Grid container md={6} justifyContent="space-around" style={{
         backgroundImage: `url(${achievements.backgroundImage.left})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        padding: "2.5rem 0"
       }}>
         {achievements.cardsData.slice(0, 2).map((achievement) => (<Card content={achievement} />))}
       </Grid>
       <Grid container item md={6} justifyContent="space-around" style={{
-        backgroundImage: `url(${achievements.backgroundImage.right})`
+        backgroundImage: `url(${achievements.backgroundImage.right})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        padding: "2.5rem 0"
+
+
       }}>
         {achievements.cardsData.slice(2).map((achievement) => (<Card content={achievement} />))}
       </Grid>

@@ -12,7 +12,7 @@ import "../component.css"
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-
+    paddingTop: "3rem"
   },
   contentRight: {
     textAlign: "center",
@@ -44,17 +44,17 @@ const useStyles = makeStyles((theme) => ({
   cardsList: {
     marginTop: "2rem",
   },
-  
+
   card: {
     border: "1px solid #B8BBBD",
     marginBottom: "2rem"
 
   },
   textBox: {
-  fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-  padding: "1rem",
-  textWrap: "word-break",
-  alignItems: "flex-end",
+    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+    padding: "1rem",
+    textWrap: "word-break",
+    alignItems: "flex-end",
   }
 
 })
@@ -65,9 +65,11 @@ export default function Market({ state: market }) {
   const classes = useStyles();
 
   return (
-    <Grid container className={clsx(classes.root, 'padding-heavy-side-low-bottom')}  >
-      <ContentLeft content={market.contentLeft} />
-      <ContentRight content={market.contentRight} />
+    <Grid container className={clsx(classes.root)} justifyContent="center" alignItems="center">
+      <Grid container item xs={10}>
+        <ContentLeft content={market.contentLeft} />
+        <ContentRight content={market.contentRight} />
+      </Grid>
     </Grid>
   );
 }

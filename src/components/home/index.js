@@ -22,7 +22,7 @@ export default function Home({ state }) {
             <Bytes state={state.Bytes} />
             <Report state={state.Report} />
             <Achievements state={state.Achievements} />
-            <ClientMessage state={state.ClientMessage} />
+             <ClientMessage state={state.ClientMessage} />
             <MailingList state={state.MailingList} />
         </React.Fragment>)
 }

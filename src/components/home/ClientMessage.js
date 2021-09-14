@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#fff",
         borderRadius: "15px",
         textAlign: "center",
-        alignItems: "space-evenly",
+        alignItems: "center",
         padding: "2rem",
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
         width:"90%",
@@ -64,7 +64,7 @@ export default function ClientMessage({ state: clientMessage }) {
             <HeadingWithText content={clientMessage.header} />
         
             
-        <Grid container item sm={8}style={{marginLeft:"1rem"}}>
+        <Grid container item md={8} >
 
         <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
         <Grid  container justifyContent="center"  className={classes.card} >
@@ -91,7 +91,7 @@ export default function ClientMessage({ state: clientMessage }) {
                 </Typography>
             </Grid>
         </Grid>
-        <Grid  justifyContent="center"  className={classes.card} >
+        <Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
             <Grid item>
                 <Typography variant="h6" color="textSecondary" className={classes.message}>
                     <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,
