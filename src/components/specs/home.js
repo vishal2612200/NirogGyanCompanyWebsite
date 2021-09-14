@@ -149,6 +149,11 @@ export default (function () {
           heading: "Believe what you see.",
           description: "Checkout our SmartReports below and know the difference",
         },
+        footer: {
+          textThin: "My Smart Diabetes Report helped me get the timely shock that I needed to correct myself. Thank you!",
+          textBold: "Zubair Ahmed, veteran journalist"
+        }
+        ,
         cardsData: [
           {
             imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-vitamin.png"),

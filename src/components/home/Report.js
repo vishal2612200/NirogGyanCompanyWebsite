@@ -6,6 +6,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
+import HeadingWithText from "../utils/HeadingWithText"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,16 +46,25 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         textAlign: "center",
         padding: "2rem"
-
     },
     card: {
+        boxShadow: "0px 2px 4px 4px #B8BBBD",
         width: "220px",
         height: "180px",
         padding: "2rem 3rem",
         borderRadius: "20px",
         backgroundColor: "#fff"
     },
-    description:{fontSize:"1rem"}
+    description: {
+        fontSize: "1rem"
+    },
+    footer: {
+        textAlign: "left",
+        padding:"1rem",
+        "&>*": {
+            paddingBottom:"1rem"
+        }
+    }
 }
 ));
 
@@ -81,6 +91,7 @@ const ContentLeft = ({ content }) => {
     return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
         <Header content={content.header} />
         <CardList content={content.cardsData} />
+        <Footer content={content.footer} />
     </Grid>
 }
 
@@ -132,4 +143,27 @@ const Card = ({ imagePath, name }) => {
             </Grid>
         </Grid>
     );
+}
+const Footer = ({ content }) => {
+    const classes = useStyles();
+    return <Grid container direction="column" item className={classes.footer} md={10} justifyContent="flex-start">
+        <Grid item>
+            <Typography
+                variant="h5"
+                color="textSecondary"
+                className={classes.textThin}>
+                {content.textThin}
+            </Typography>
+        </Grid>
+        <Grid item>
+
+            <Typography
+                variant="h5"
+                color="textPrimary"
+                className={classes.textBold}>
+                {content.textBold}
+            </Typography>
+        </Grid>
+    </Grid>
+
 }
