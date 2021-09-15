@@ -106,7 +106,7 @@ export default (function () {
             process.env.PUBLIC_URL,
             "homepage", "services-marketing.png"
           ),
-          heading: "Whitelabel + Marketing",
+          heading: "Unique Whitelabel - Marketing",
           content:
             "Free consultation with our trusted doctors and get the best recomendations",
         },

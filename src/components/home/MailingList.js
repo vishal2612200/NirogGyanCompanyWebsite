@@ -116,14 +116,15 @@ const Block2 = ({ content, ...props }) => {
     const classes = useStyles()
     const [email, setEmail] = useState("")
     return <Grid container item className={classes.block2} alignItems="center" {...props}>
-        <Grid item md={5} className={classes.inputContainer}>
+        <Grid item md={1}></Grid>
+        <Grid item md={7} className={classes.inputContainer}>
             <input className={classes.input}
                 name="email"
                 value={email}
                 placeholder={content.placeholderText}
                 onChange={e => setEmail(e.target.value)} />
         </Grid>
-        <Grid item className={classes.buttonContainer} md={7}>
+        <Grid item className={classes.buttonContainer} md={4}>
 
             <Button variant="contained" className={classes.button}>
                 {content.buttonText}

@@ -50,7 +50,7 @@ const Card = ({ link, title = "YouTube video player" }) => {
 
   return (
     <Grid item className={classes.card} md={3} sm={4} >
-      <Box p={4}>
+      <Box mt={4} mb={4}>
         <iframe style={{
           borderRadius: "10px",
         }}

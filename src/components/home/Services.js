@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
   },
   cardList: {
     justifyContent: "center",
-    alignItems: "stretch",
+    // alignItems: "stretch",
    },
 
   serviceCard: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-    borderRadius: "10px",
-    justifyContent: "space-around",
+    borderRadius: "15px",
+    // justifyContent: "space-around",
     alignContent: "center",
     border: "1px solid #B8BBBD",
     margin: "2rem",
@@ -29,13 +29,13 @@ const useStyles = makeStyles((theme) => ({
     "&__logo-box": {
       textAlign: "center",
       textWrap: "word-break",
-      padding: "2rem"
+      padding: "1rem"
     },
     "&__heading": {
       textAlign: "center",
     },
     "&__content": {
-      padding: "2rem",
+      padding: "1rem",
       textAlign: "center",
     }
   }
