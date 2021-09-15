@@ -32,8 +32,8 @@ export default function Footer({ state: footer }) {
     const classes = useStyles();
     return <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch">
 
-        <Block1 content={footer.block1} md={3} />
-        <Block content={footer.block2} md={3} />
+        <Block1 content={footer.block1} md={4} />
+        <Block content={footer.block2} md={2} />
         <Block content={footer.block3} md={3} />
         <Block4 content={footer.block4} md={3} />
     </Grid>

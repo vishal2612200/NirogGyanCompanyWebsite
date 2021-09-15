@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     input: {
         color: "#fff",
         borderRadius: "40px",
-        border: "2px solid white",
+        border: "1px solid white",
         background: "transparent",
         padding: "1rem 1.5rem",
         textOverflow: "ellipsis",

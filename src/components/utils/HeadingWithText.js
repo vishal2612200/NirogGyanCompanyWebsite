@@ -7,7 +7,6 @@ import "@fontsource/nunito-sans";
 
 const useStyles = makeStyles({
     root: {
-        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         padding:"3rem 0",
         textAlign: "center",
         "&>div": {
@@ -28,7 +27,11 @@ export default function HeadingWithText({ content, ...props }) {
             </Typography>
             <Typography
                 variant="h6"
-                color="textSecondary">
+                color="textSecondary"
+                style={{
+                    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+                    fontWeight: "700"
+                }}>
                 {content.description}
             </Typography>
         </Grid>

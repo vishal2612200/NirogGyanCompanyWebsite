@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     headerContainer: {
         textAlign: "center",
-        
+
     },
     card: {
         backgroundColor: "#fff",
@@ -26,10 +26,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         padding: "2rem",
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
-        width:"90%",
-       
+        width: "90%",
+
         marginTop: "3%",
-        marginLeft:"3%",
+        marginLeft: "3%",
         marginBottom: "5%"
     },
     message: {
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     large: {
         width: theme.spacing(20),
         height: theme.spacing(20),
-      },    
+    },
 }
 
 ));
@@ -60,62 +60,61 @@ const useStyles = makeStyles((theme) => ({
 export default function ClientMessage({ state: clientMessage }) {
 
     const classes = useStyles();
-    return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})` }} >
-            <HeadingWithText content={clientMessage.header} />
-        
-            
-        <Grid container item md={8} >
+    return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})`, paddingTop: "2rem" }} >
+        <HeadingWithText content={clientMessage.header} />
 
-        <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
-        <Grid  container justifyContent="center"  className={classes.card} >
-            <Grid item>
-                <Typography variant="h6" color="textSecondary" className={classes.message}>
-                    <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,
-                         et viverra ex ultrices. Aliquam quis sodales massa, 
-                        ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.</i>
-                </Typography>
+        <Grid container item md={8} style={{ marginTop:"-3rem"}}>
 
-            </Grid>
-            
-            <Grid item>
-                <img src="https://thumbs.dreamstime.com/b/flat-male-avatar-image-beard-hairstyle-businessman-profile-icon-vector-179285629.jpg"
-                  alt="client" style={{height:"150px", width:"150px", borderRadius: "50%", border:"1px dashed grey" }} />
-            
-                <Typography variant="h5">
-                    <Box fontWeight="fontWeightBold" m={1}>
-                        Vishal Sharma
-                    </Box>
-                    <Box color="textSecondary" m={1}>
-                        Niroggyan
-                    </Box>
-                </Typography>
-            </Grid>
-        </Grid>
-        <Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
-            <Grid item>
-                <Typography variant="h6" color="textSecondary" className={classes.message}>
-                    <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,
-                         et viverra ex ultrices. Aliquam quis sodales massa, 
-                        ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.</i>
-                </Typography>
+            <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
+                <Grid container justifyContent="center" className={classes.card} >
+                    <Grid item>
+                        <Typography variant="h6" color="textSecondary" className={classes.message}>
+                            <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,
+                                et viverra ex ultrices. Aliquam quis sodales massa,
+                                ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.</i>
+                        </Typography>
 
-            </Grid>
-            
-            <Grid item>
-                <img src="https://thumbs.dreamstime.com/b/flat-male-avatar-image-beard-hairstyle-businessman-profile-icon-vector-179285629.jpg"
-                  alt="client" style={{height:"150px", width:"150px", borderRadius: "50%" }} />
-                <Typography variant="h5">
-                    <Box fontWeight="fontWeightBold" m={1}>
-                        Vishal Sharma
-                    </Box>
-                    <Box color="textSecondary" m={1}>
-                        Niroggyan
-                    </Box>
-                </Typography>
-            </Grid>
+                    </Grid>
+
+                    <Grid item>
+                        <img src="https://thumbs.dreamstime.com/b/flat-male-avatar-image-beard-hairstyle-businessman-profile-icon-vector-179285629.jpg"
+                            alt="client" style={{ height: "150px", width: "150px", borderRadius: "50%", border: "1px dashed grey" }} />
+
+                        <Typography variant="h5">
+                            <Box fontWeight="fontWeightBold" m={1}>
+                                Vishal Sharma
+                            </Box>
+                            <Box color="textSecondary" m={1}>
+                                Niroggyan
+                            </Box>
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
+                    <Grid item>
+                        <Typography variant="h6" color="textSecondary" className={classes.message}>
+                            <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,
+                                et viverra ex ultrices. Aliquam quis sodales massa,
+                                ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.</i>
+                        </Typography>
+
+                    </Grid>
+
+                    <Grid item>
+                        <img src="https://thumbs.dreamstime.com/b/flat-male-avatar-image-beard-hairstyle-businessman-profile-icon-vector-179285629.jpg"
+                            alt="client" style={{ height: "150px", width: "150px", borderRadius: "50%" }} />
+                        <Typography variant="h5">
+                            <Box fontWeight="fontWeightBold" m={1}>
+                                Vishal Sharma
+                            </Box>
+                            <Box color="textSecondary" m={1}>
+                                Niroggyan
+                            </Box>
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Carousel>
         </Grid>
-        </Carousel>
-        </Grid>
-        <Grid item></Grid>      
+        <Grid item></Grid>
     </Grid>
 }
