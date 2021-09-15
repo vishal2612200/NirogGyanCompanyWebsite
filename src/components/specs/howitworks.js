@@ -48,6 +48,14 @@ export default (function () {
                     imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "main-api-integration.png"),
                     heading: "API Integration",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
+                    arrowPath: path.join(
+                        process.env.PUBLIC_URL, 
+                        "howitworks", "arrow3.svg"
+                        ),
+                    linePath: path.join(
+                        process.env.PUBLIC_URL, 
+                        "howitworks", "line2.svg"
+                        ),
                 },
                 {
                     imagePath: path.join(
@@ -65,6 +73,14 @@ export default (function () {
                     ),
                     heading: "Reports",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
+                    arrowPath: path.join(
+                        process.env.PUBLIC_URL, 
+                        "howitworks", "arrow1.svg"
+                        ),
+                    linePath: path.join(
+                            process.env.PUBLIC_URL, 
+                            "howitworks", "line1.svg"
+                            ),
                 },
                 {
                     imagePath: path.join(
@@ -73,6 +89,14 @@ export default (function () {
                         "main-customer.png"),
                     heading: "Customers",
                     description: "Complete Automation ensures seamless delivery to all customers of clients (the labs)",
+                    arrowPath: path.join(
+                        process.env.PUBLIC_URL, 
+                        "howitworks", "arrow2.svg"
+                        ),
+                    linePath: path.join(
+                        process.env.PUBLIC_URL, 
+                        "howitworks", "line1.svg"
+                        ),
                 },
             ],
         },

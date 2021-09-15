@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Box, Button } from "@material-ui/core";
-import HeadingWithText from "../utils/HeadingWithText";
+import { Grid, Box, Button, Typography } from "@material-ui/core";
+// import HeadingWithText from "../utils/HeadingWithText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,14 +24,21 @@ export default function Brand({ state: brand }) {
             <img src={brand.whatsapp} alt="logo" />
           </Button>
         </Grid>
-        <HeadingWithText content={brand.header} />
+        
       </Grid>
 
-      <Grid container item xs={10} spacing={2} justifyContent="center">
-
-        {logoImages.map(item =>
-          <Grid item><img src={item} alt="logo" /></Grid>
-        )}
+      <Grid container item xs={10} >
+        <Grid item container justifyContent="center">
+          <Typography variant="h3" color="textPrimary" className={classes.title}>
+            {brand.header.heading }
+          </Typography>
+      
+        </Grid>
+        <Grid item container style={{marginTop:"5%"}} justifyContent="center">
+          {logoImages.map(item =>
+            <Grid item md={3}><img width="100%" src={item} alt="logo" /></Grid>
+          )}
+        </Grid>
         <Grid item>
           <Box p={3} />
         </Grid>
