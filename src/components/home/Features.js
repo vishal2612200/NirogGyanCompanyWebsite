@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Box } from "@material-ui/core";
+import { Grid, IconButton, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -59,10 +59,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Features({ state: features }) {
 
+  const classes = useStyles();
 
   return (
-    <Grid container justifyContent="center" alignItems="center" >
-      <Grid container item xs={10} spacing={2} justifyContent="space-around" alignItems="stretch">
+    <Grid container justifyContent="center"  >
+      <Grid container item xs={10} justifyContent="space-around" >
         <ContentLeft content={features.contentLeft} />
         <ContentRight content={features.contentRight} />
       </Grid>
@@ -72,7 +73,8 @@ export default function Features({ state: features }) {
 
 
 const ContentLeft = ({ content }) => {
-  return <Grid container item direction="column" md={5} alignContent="center" >
+  const classes = useStyles();
+  return <Grid container item direction="column" md={6} alignContent="center" >
     <Grid item style={{ marginBottom: "4%"}}>
       <Header content={content.header} />
     </Grid>
@@ -149,7 +151,7 @@ const Card = ({ imagePath, textThin, textBold }) => {
 const ContentRight = ({ content }) => {
   const classes = useStyles();
 
-  return <Grid item xs={12} md={5} className={classes.contentRight}>
+  return <Grid item xs={12} md={6} className={classes.contentRight}>
     <img src={content.imagePath} alt="doctor" />
   </Grid>
 }
