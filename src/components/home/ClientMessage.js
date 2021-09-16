@@ -90,8 +90,11 @@ const Card = ({ message, imagePath, name, organisation, }) => {
     const classes = useStyles();
     return (<Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
         <Grid item>
+
             <Typography variant="h6" color="textSecondary" className={classes.message}>
-                <i>{message}</i>
+                <i><q style={{ fontSize: "2rem" }} >
+                    {message}  </q></i>
+
             </Typography>
 
         </Grid>
