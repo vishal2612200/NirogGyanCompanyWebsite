@@ -28,6 +28,13 @@ const useStyles = makeStyles((theme) => ({
     buttonfieldmargin: {
         margin: theme.spacing(4),
     },
+    sendButton: {
+        justifyContent: "flex-start",
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: "center",
+
+        }
+    }
 
 }));
 
@@ -68,9 +75,14 @@ export default function Form({ state: form }) {
                                     <TextField multiline rows={4} fullWidth className={classes.margin} label="Your Message" variant="outlined" required />
                                 </Grid>
                             </Grid>
-                            <Fab variant="extended" color="primary" aria-label="add" className={classes.buttonfieldmargin}>
-                                Send Message
-                            </Fab>
+                            <Grid container item xs={12} className={classes.sendButton}>
+                                <Grid item>
+
+                                    <Fab variant="extended" color="primary" aria-label="add" className={classes.buttonfieldmargin}>
+                                        Send Message
+                                    </Fab>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Paper>
                 </Grid>
