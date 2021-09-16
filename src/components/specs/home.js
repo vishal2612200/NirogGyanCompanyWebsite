@@ -69,7 +69,7 @@ export default (function () {
 
     Services: {
       content: {
-        heading: "The best Patient-Engagement Tool out there",
+        heading: <> The best <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span> out there</>,
         description:
           "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
       },

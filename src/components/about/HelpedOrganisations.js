@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     text: {
         margin: theme.spacing(1),
         color: "05152E"
-        
+
     },
 }));
 
@@ -61,20 +61,27 @@ const HeadingWithText = ({ content }) => {
     return <Grid container item className={classes.headingWithText} justifyContent="center" alignItems="center">
         <Grid item className={classes.heading}>
             <Typography
-                variant="h3" gutterBottom style={{
+                variant="h3" gutterBottom
+                style={{
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
                     fontWeight: "700"
                 }}>
                 {content.heading}
             </Typography>
+
         </Grid>
         <Grid item md={8} className={classes.description}>
             <Typography
-                variant="h6"
-                style={{ color: "#fff" }}>
+                variant="body1"
+                color="textSecondary"
+                style={{
+                    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+                    color: "#fff"
+                }}>
                 {content.description}
             </Typography>
         </Grid>
     </Grid>
 
 }
+

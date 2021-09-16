@@ -81,7 +81,7 @@ const Block4 = ({ content, ...props }) => {
                 {content.heading}
             </Box>
         </Typography>
-        <Box style={{ height: ".25rem" }} />
+        <Box style={{ height: ".4rem" }} />
         {content.items.map(imagePath => <img src={imagePath} alt="logo" />)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
