@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 export default function HeadingWithText({ content, ...props }) {
     const classes = useStyles();
     return <Grid container item className={classes.root} justifyContent="center" alignItems="center" {...props}>
-        <Grid item md={10}>
+        <Grid item sm={10} md={8}>
 
             <Typography
                 variant="h3" gutterBottom

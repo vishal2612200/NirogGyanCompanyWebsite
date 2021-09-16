@@ -7,7 +7,6 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: theme.spacing(4),
         padding: "2rem 6rem",
         color: "#fff",
         backgroundColor: "#3567D6",

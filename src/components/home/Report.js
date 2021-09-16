@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     contentLeft: {
         alignItems: "center",
         justifyContent: "space-evenly",
-        },
+    },
     contentRight: {
         textAlign: "center",
         margin: "auto",
@@ -42,16 +42,20 @@ const useStyles = makeStyles((theme) => ({
         padding: "2rem",
     },
     cardContainer: {
-        justifyContent: "center",
+        justifyContent: "stretch",
         alignItems: "center",
         textAlign: "center",
-        padding: "2rem"
+        padding: "2rem",
+        "&:first-child>div": {
+
+            backgroundColor: "#E9F5FF"
+        }
     },
     card: {
         boxShadow: "0px 2px 4px 4px #B8BBBD",
         width: "220px",
         height: "180px",
-        padding: "2rem 3rem",
+        padding: "2rem",
         borderRadius: "20px",
         backgroundColor: "#fff"
     },
@@ -60,10 +64,10 @@ const useStyles = makeStyles((theme) => ({
     },
     footer: {
         textAlign: "left",
-        padding:"1rem",
+        padding: "1rem",
         paddingLeft: "4rem",
         "&>*": {
-            paddingBottom:"1rem"
+            paddingBottom: "1rem"
         }
     }
 }
@@ -90,10 +94,10 @@ export default function Report({ state: report }) {
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
     return <Grid item direction="column" xs={12} md={6} className={classes.contentLeft}>
-            <Header content={content.header} />
-            <CardList content={content.cardsData} />
-            <Footer content={content.footer} />
-      
+        <Header content={content.header} />
+        <CardList content={content.cardsData} />
+        <Footer content={content.footer} />
+
     </Grid>
 }
 

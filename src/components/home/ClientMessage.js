@@ -13,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         justifyContent: "center",
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+        paddingBottom: theme.spacing(4),
+
     },
     headerContainer: {
         textAlign: "center",
@@ -78,7 +80,6 @@ export default function ClientMessage({ state: clientMessage }) {
 
 const CardsList = ({ content }) => {
     return <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
-
         {content.map((props, index) => (<Card {...props} key={index} />))}
     </Carousel>
 
@@ -92,7 +93,7 @@ const Card = ({ message, imagePath, name, organisation, }) => {
         <Grid item>
 
             <Typography variant="h6" color="textSecondary" className={classes.message}>
-                <i><q style={{ fontSize: "2rem" }} >
+                <i><q style={{ fontSize: "1rem" }} >
                     {message}  </q></i>
 
             </Typography>
