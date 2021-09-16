@@ -209,7 +209,7 @@ export default (function () {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
       },
       backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "client-message-background.png"),
-      cardsData: [
+      cardsList: [
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
           imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),

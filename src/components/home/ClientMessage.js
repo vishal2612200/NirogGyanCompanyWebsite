@@ -65,56 +65,46 @@ export default function ClientMessage({ state: clientMessage }) {
 
         <Grid container item md={8} style={{ marginTop: "-3rem" }}>
 
-            <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
-                <Grid container justifyContent="center" className={classes.card} >
-                    <Grid item>
-                        <Typography variant="h6" color="textSecondary" className={classes.message}>
-                            <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,
-                                et viverra ex ultrices. Aliquam quis sodales massa,
-                                ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.</i>
-                        </Typography>
-
-                    </Grid>
-
-                    <Grid item>
-                        <img src="https://thumbs.dreamstime.com/b/flat-male-avatar-image-beard-hairstyle-businessman-profile-icon-vector-179285629.jpg"
-                            alt="client" style={{ height: "150px", width: "150px", borderRadius: "50%", border: "1px dashed grey" }} />
-
-                        <Typography variant="h5">
-                            <Box fontWeight="fontWeightBold" m={1}>
-                                Vishal Sharma
-                            </Box>
-                            <Box color="textSecondary" m={1}>
-                                Niroggyan
-                            </Box>
-                        </Typography>
-                    </Grid>
-                </Grid>
-                <Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
-                    <Grid item>
-                        <Typography variant="h6" color="textSecondary" className={classes.message}>
-                            <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada,
-                                et viverra ex ultrices. Aliquam quis sodales massa,
-                                ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.</i>
-                        </Typography>
-
-                    </Grid>
-
-                    <Grid item>
-                        <img src="https://thumbs.dreamstime.com/b/flat-male-avatar-image-beard-hairstyle-businessman-profile-icon-vector-179285629.jpg"
-                            alt="client" style={{ height: "150px", width: "150px", borderRadius: "50%" }} />
-                        <Typography variant="h5">
-                            <Box fontWeight="fontWeightBold" m={1}>
-                                Vishal Sharma
-                            </Box>
-                            <Box color="textSecondary" m={1}>
-                                Niroggyan
-                            </Box>
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </Carousel>
+            <CardsList content={clientMessage.cardsList} ></CardsList>
         </Grid>
         <Grid item></Grid>
     </Grid>
+}
+
+
+const CardsList = ({ content }) => {
+    return <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
+
+        {content.map((props, index) => (<Card {...props} key={index} />))}
+    </Carousel>
+
+
+}
+
+
+const Card = ({ message, imagePath, name, organisation, }) => {
+    const classes = useStyles();
+    return (<Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
+        <Grid item>
+            <Typography variant="h6" color="textSecondary" className={classes.message}>
+                <i>{message}</i>
+            </Typography>
+
+        </Grid>
+
+        <Grid item>
+            <img src={imagePath} alt="client"
+                style={{ height: "100px", width: "100px", borderRadius: "50%", border: "1px dashed grey" }} />
+
+            <Typography variant="h5">
+                <Typography color="textPrimary" variant="h5">
+                    {name}
+                </Typography>
+                <Typography color="textSecondary" variant="h6">
+                    {organisation}
+                </Typography>
+            </Typography>
+        </Grid>
+    </Grid>
+    )
 }
