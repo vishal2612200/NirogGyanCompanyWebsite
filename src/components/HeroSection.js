@@ -79,7 +79,8 @@ const useStyles = makeStyles((theme) => ({
   },
   imageBox: {
     minHeight: "70vh",
-    backgroundSize: "contain", backgroundRepeat: "no-repeat",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     [theme.breakpoints.down('md')]: {
       minHeight: "50vh",
@@ -196,7 +197,7 @@ const ButtonWatchVideo = ({ text }) => {
 const ImageBox = ({ imagePath }) => {
   const classes = useStyles();
   return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
-      <img src={imagePath}  width="100%" />
+      <img src={imagePath} alt="hero" width="100%" />
 
   </Grid>
 }
