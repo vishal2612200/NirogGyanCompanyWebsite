@@ -142,7 +142,6 @@ export default (function () {
         "https://www.youtube.com/embed/L4aPen8hCL8",
       ],
     },
-
     Report: {
       contentLeft: {
         header: {
@@ -152,14 +151,12 @@ export default (function () {
         footer: {
           textThin: "My Smart Diabetes Report helped me get the timely shock that I needed to correct myself. Thank you!",
           textBold: "Zubair Ahmed, veteran journalist"
-        }
-        ,
+        },
         cardsData: [
           {
             imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-vitamin.png"),
             name: "Vitamin"
           },
-
           {
             imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-kidney.png"),
             name: "Kidney"
@@ -215,8 +212,8 @@ export default (function () {
           imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
-        }
-        , {
+        },
+        {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
           imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
           name: "Sanjeev Malhotra",
