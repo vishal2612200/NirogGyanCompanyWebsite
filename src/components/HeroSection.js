@@ -196,8 +196,10 @@ const ButtonWatchVideo = ({ text }) => {
 
 const ImageBox = ({ imagePath }) => {
   const classes = useStyles();
-  return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
+  return <Grid container item justifyContent="center" className={classes.imageBox}>
+    <Grid item>
       <img src={imagePath} alt="hero" width="100%" />
+    </Grid>
 
   </Grid>
 }
