@@ -80,8 +80,8 @@ export default function MailingList({ state: mailingList }) {
     const classes = useStyles();
     return <form action={mailingList.actionurl} method="post">
         <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch">
-            <Block1 content={mailingList.block1} md={4} />
-            <Block2 content={mailingList.block2} md={8} />
+            <Block1 content={mailingList.block1} md={5} />
+            <Block2 content={mailingList.block2} md={7} />
         </Grid>
     </form>
 }

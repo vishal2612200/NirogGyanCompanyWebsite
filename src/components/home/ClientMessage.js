@@ -7,7 +7,6 @@ import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Box from '@material-ui/core/Box';
 import HeadingWithText from "../utils/HeadingWithText"
 
 const useStyles = makeStyles((theme) => ({
