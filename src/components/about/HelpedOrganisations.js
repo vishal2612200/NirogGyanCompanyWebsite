@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Box from '@material-ui/core/Box';
 import { Grid, Fab, Typography } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,13 +24,19 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
     },
     button: {
-        fontWeight: "bolder",
-        padding: "1.5rem 3rem",
+        fontWeight: "bold",
+        // padding: "1.5rem 3rem",
         backgroundColor: "#3CD0FF",
-        fontSize: "larger",
-        textOverflow: "ellipsis"
-
-    }
+        fontFamily: '"Nunito Sans"',
+        fontSize: "24px",
+        // textOverflow: "ellipsis"
+        borderRadius: "30px"
+    },
+    text: {
+        margin: theme.spacing(1),
+        color: "05152E"
+        
+    },
 }));
 
 
@@ -38,12 +46,12 @@ export default function HelpedOrganisations({ state: helpedOrganisations }) {
     return (
         <Grid container direction="column" justifyContent="center" alignItems="center" className={classes.root} style={
             { backgroundImage: `url(${helpedOrganisations.backgroundImage})` }}>
-
-
             <HeadingWithText content={helpedOrganisations.content}></HeadingWithText>
-            <Fab variant="extended" aria-label="add" className={classes.button}>
-                {helpedOrganisations.buttonText}
-            </Fab>
+            <Button variant="contained" size="large" className={classes.button}>
+                <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3}>
+                    {helpedOrganisations.buttonText}
+                </Box>
+            </Button>
         </Grid>)
 }
 

@@ -40,6 +40,10 @@ const useStyles = makeStyles({
     },
     root: {
         maxWidth: "90%",
+        '@media (max-width: 780px)' : {
+            margin:'5%',
+            maxWidth:'100%'
+          }
     },
     media: {
         height: 280,
@@ -55,9 +59,11 @@ const useStyles = makeStyles({
 
 
 export default function CardsList({ cardsList }) {
-    return <Grid container item >
+    const classes = useStyles();
+
+    return <Grid container item alignItems="center">
         {cardsList.map(({ imgPath, heading, content }, index) => (
-            <Grid item md={4}>
+            <Grid item md={4} xs={12} justifyContent="center">
                 <TeamCard {...{ imgPath, heading, content }} key={index} />
             </Grid>
         ))
@@ -102,23 +108,18 @@ const TeamCard = ({ imgPath, heading, content }) => {
             
           </CardContent>
         </CardActionArea>
-        <CardActions >
-            <Grid container alignItem="center">
-                <Grid item md={2}></Grid>
-                <Grid item container md={9}>
+        <CardActions style={{justifyContent: 'center'}}>
+                <Box >
                     {
-                            icons.map(icon => (
-                                <Grid item className={classes.icon}>
-                                    <IconButton>
-                                        {icon}
-                                    </IconButton>
-                                </Grid>
+                        icons.map(icon => (
+                            <IconButton>
+                                {icon}
+                            </IconButton>  
                             )
                             )
                         }
-                </Grid>
-                <Grid item md={1}></Grid>
-            </Grid>
+                </Box>
+            
         </CardActions>
       </Card>
         // <Grid container item className={classes.card} sm={3} >
