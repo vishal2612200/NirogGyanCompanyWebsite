@@ -5,6 +5,7 @@ import { Grid, TextField, Typography } from "@material-ui/core";
 import Paper from '@material-ui/core/Paper';
 import Fab from '@material-ui/core/Fab';
 import Box from '@material-ui/core/Box';
+import HeadingWithText from "../utils/HeadingWithText"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,17 +37,7 @@ export default function Form({ state: form }) {
     const classes = useStyles();
     return (
         <Grid container alignContent="center">
-            <Grid item container className={classes.textfieldmargin}>
-                <Grid item md={3}></Grid>
-                <Grid item md={6} >
-                    <Typography variant="h3" gutterBottom>
-                        <Box fontWeight="fontWeightMedium" m={1} className={classes.heading} style={{ textAlign: "center" }}>
-                            Reach Out with any query
-                        </Box>
-                    </Typography>
-                </Grid>
-                <Grid item md={3}></Grid>
-            </Grid>
+            <HeadingWithText content={form.header} />
             <Grid item container className={classes.margin} >
                 <Grid item md={2}></Grid>
                 <Grid item md={8}>
