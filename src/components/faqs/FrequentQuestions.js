@@ -19,15 +19,12 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     fontWeight: "700",
   },
-  accord:{
-    '& >MuiAccordion-root::before': {
-      backgroundColor: 'none !important'
-    }
+  accord: {
   },
-  summary:{
-      backgroundColor: '#F2F0F0',
-    }
-  
+  summary: {
+    backgroundColor: '#F2F0F0',
+  }
+
 }));
 
 export default function FrequentQuestions({ state: frequentquestions }) {
@@ -35,7 +32,7 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 
   return (
     <Grid container direction="column" className={classes.root} alignItems="space-evenly">
-      <HeadingWithText content={ frequentquestions.content}/>
+      <HeadingWithText content={frequentquestions.content} />
       {frequentquestions.cardsList.map(({ heading, content }, index) => <Card key={index} question={heading} answer={content} />)}
     </Grid>
   );
@@ -44,12 +41,15 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 
 const Card = ({ question, answer }) => {
   const classes = useStyles();
-  return <Accordion elevation={0} className={classes.accord}>
+  const [expanded, setExpanded] = React.useState(false);
+  return <Accordion className={classes.accord}>
     <AccordionSummary
-      expandIcon={<ExpandMoreIcon style={{backgroundColor: '#C4C4C4', borderRadius:'50%'}} />}
+      expandIcon={<ExpandMoreIcon style={{ backgroundColor: expanded ? '#3567D6' :'#C4C4C4', color: "#fff", borderRadius: '50%' }} />}
       aria-controls="panel1a-content"
       id="panel1a-header"
       className={classes.summary}
+      IconButtonProps={{ onClick: () => setExpanded(state=>!state) }}
+
     >
       <Typography variant="h6" className={classes.heading}>{question}</Typography>
     </AccordionSummary>
