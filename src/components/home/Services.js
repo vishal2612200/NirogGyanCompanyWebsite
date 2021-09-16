@@ -9,13 +9,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundRepeat: "no-repeat",
   },
-  headingContainer: {
-    textAlign: "center",
-  },
   cardList: {
     justifyContent: "center",
     // alignItems: "stretch",
-   },
+  },
 
   serviceCard: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -50,6 +47,7 @@ export default function Services({ state: services }) {
   return (
     <Grid container direction="column" className={classes.root} style={{ marginTop: "7%", backgroundImage: `url(${services.backgroundImage})` }}>
       <Heading content={services.content}></Heading>
+      <Grid item style={{ height: "1rem" }}></Grid>
       <CardList cardsData={services.servicesList}></CardList>
     </Grid>);
 }
@@ -85,18 +83,23 @@ const Card = ({ imgPath, heading, content }) => {
 
 const Heading = ({ content }) => {
   const classes = useStyles();
-  return <Grid item className={classes.headingContainer}>
-    <Typography
-      variant="h3"
-      className={classes.heading}>
-      The best <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span> out there
-    </Typography>
-    <Typography
-      variant="h6"
-      color="textSecondary"
-      className={classes.description}>
-      {content.description}
-    </Typography>
+  return <Grid container item className={classes.headingContainer} direction="column" alignItems="center" justifyContent="space-evenly">
+    <Grid item>
+      <Typography
+        variant="h3"
+        className={classes.heading}>
+        The best <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span> out there
+      </Typography>
+    </Grid>
+    <Grid item>
+
+      <Typography
+        variant="h6"
+        color="textSecondary"
+        className={classes.description}>
+        {content.description}
+      </Typography>
+    </Grid>
   </Grid>
 
 }

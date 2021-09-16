@@ -229,7 +229,7 @@ export default (function () {
       block1: {
         heading: "Subscribe to our mailing list",
         description: "We'll send you updates about NirogGyan",
-        footer: ["Get In Touch", ".", "contact@niroggyan.com"],
+        footer: <>Get In Touch  <b>.</b>   contact@niroggyan.com</>,
       },
       block2: {
         placeholderText: "Enter your email address",

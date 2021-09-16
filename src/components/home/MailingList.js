@@ -105,9 +105,9 @@ const Block1 = ({ content, ...props }) => {
         </Grid>
 
         <Grid item style={{ marginTop: "1rem" }}>
-            {content.footer.map(item => <Typography variant="h6" className={classes.footertext}>
-                {item}
-            </Typography>)}
+            {<Typography variant="h6" className={classes.footertext}>
+                {content.footer}
+            </Typography>}
         </Grid>
     </Grid>
 }
@@ -117,14 +117,14 @@ const Block2 = ({ content, ...props }) => {
     const [email, setEmail] = useState("")
     return <Grid container item className={classes.block2} alignItems="center" {...props}>
         <Grid item md={1}></Grid>
-        <Grid item md={7} className={classes.inputContainer}>
+        <Grid item md={6} className={classes.inputContainer}>
             <input className={classes.input}
                 name="email"
                 value={email}
                 placeholder={content.placeholderText}
                 onChange={e => setEmail(e.target.value)} />
         </Grid>
-        <Grid item className={classes.buttonContainer} md={4}>
+        <Grid item className={classes.buttonContainer} md={5}>
 
             <Button variant="contained" className={classes.button}>
                 {content.buttonText}

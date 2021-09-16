@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: "#05152E",
+    
   },
   card: {
     padding: "1rem",

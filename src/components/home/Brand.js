@@ -18,10 +18,10 @@ export default function Brand({ state: brand }) {
 
   return (
     <Grid container className={classes.root} direction="column" justifyContent="center" alignItems="center">
-      <Grid container item>
+      <Grid container item justifyContent="flex-end">
         <Grid item className={classes.whatsapp}>
           <Button aria-label="whatsapp" >
-            <img src={brand.whatsapp} alt="logo" />
+            <img src={brand.whatsapp} alt="whatsapp" />
           </Button>
         </Grid>
         

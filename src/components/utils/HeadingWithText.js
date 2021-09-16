@@ -19,6 +19,7 @@ export default function HeadingWithText({ content, ...props }) {
     const classes = useStyles();
     return <Grid container item className={classes.root} justifyContent="center" alignItems="center" {...props}>
         <Grid item>
+            
             <Typography
                 variant="h3" gutterBottom style={{
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -30,7 +31,6 @@ export default function HeadingWithText({ content, ...props }) {
                 color="textSecondary"
                 style={{
                     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-                    fontWeight: "700"
                 }}>
                 {content.description}
             </Typography>

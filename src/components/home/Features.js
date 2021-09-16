@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "1rem",
     backgroundColor: "#E9F5FF",
     "&>img": {
-      margin:"auto "
+      margin: "auto "
     }
   },
   textBox: {
@@ -75,11 +75,11 @@ export default function Features({ state: features }) {
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
   return <Grid container item direction="column" md={6} alignContent="center" >
-    <Grid item style={{ marginBottom: "4%"}}>
+    <Grid item style={{ marginBottom: "4%" }}>
       <Header content={content.header} />
     </Grid>
     <Grid item>
-      <CardsList content={content.cardsData} />  
+      <CardsList content={content.cardsData} />
     </Grid>
   </Grid>
 }
@@ -87,31 +87,25 @@ const ContentLeft = ({ content }) => {
 const Header = ({ content }) => {
   const classes = useStyles();
   return <Grid item >
-          <Typography
-      style={{ display: "inline-block", color:"#3567D6" }}
-            variant="h4"
-            className={classes.title}
-           >
-            {content.line1[0]} 
-          </Typography>
-          <Typography
-            color="textPrimary"
-            style={{ display: "inline-block", fontSize: "2.025rem" }}
-            variant="h4"
-            >{content.line1[1]} {content.line1[2]}</Typography>
-          <Typography
-            variant="h6"
-            className={classes.title}
-            style={{ fontWeight: "bold" }}
-          >
-            {content.line2}
-          </Typography>
-          <Typography
-            variant="h4"
-            className={classes.title}>
-            {content.line3}
-          </Typography>
-        </Grid>
+    <Typography
+      variant="h4"
+      style={{ fontWeight: "bold", color: "#051733" }}>
+      {content.line1.join("")}
+    </Typography>
+
+    <Typography
+      variant="h6"
+
+      style={{ fontWeight: "bold", color: "#05152E" }}    >
+      {content.line2}
+    </Typography>
+    <Typography
+      variant="h4"
+      style={{ fontWeight: "bold", color: "#05152E" }}    >
+      {content.line3}
+    </Typography>
+
+  </Grid>
 }
 
 
@@ -135,14 +129,14 @@ const Card = ({ imagePath, textThin, textBold }) => {
         <img src={imagePath} alt="feature" />
       </Grid>
       <Grid item xs={8} className={classes.textBox}>
-      <Typography component="div">
-        <Box fontWeight="fontWeightLight" m={1}>
-        {textThin}
-        </Box>
-        <Box fontWeight="fontWeightBold" m={1}>
-        {textBold}
-      </Box>
-      </Typography>
+        <Typography component="div">
+          <Box fontWeight="fontWeightLight" m={1}>
+            {textThin}
+          </Box>
+          <Box fontWeight="fontWeightBold" m={1}>
+            {textBold}
+          </Box>
+        </Typography>
       </Grid>
     </Grid>
   )
