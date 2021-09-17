@@ -17,11 +17,9 @@ const useStyles = makeStyles((theme) => ({
   serviceCard: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     borderRadius: "15px",
-    // justifyContent: "space-around",
     alignContent: "center",
     border: "1px solid #B8BBBD",
     margin: "2rem",
-    flexGrow: 1,
     boxShadow: "39px 11px 83px -53px #B8BBBD",
     "&__logo-box": {
       textAlign: "center",
@@ -44,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Services({ state: services }) {
   const classes = useStyles();
   return (
-    <Grid container direction="column" className={classes.root} style={{  backgroundImage: `url(${services.backgroundImage})` }}>
+    <Grid container direction="column" className={classes.root} style={{ backgroundImage: `url(${services.backgroundImage})` }}>
       <HeadingWithText content={services.content}></HeadingWithText>
       <Grid item style={{ height: "1rem" }}></Grid>
       <CardList cardsData={services.servicesList}></CardList>
@@ -66,7 +64,7 @@ const Card = ({ imgPath, heading, content }) => {
   const classes = useStyles();
 
   return (
-    <Grid container item direction="column" className={classes.serviceCard} sm={3}>
+    <Grid container item direction="column" className={classes.serviceCard} xs={12} sm={6} md={4} lg={3}  >
       <Grid item className={`${classes.serviceCard}__logo-box`} >
         <img src={imgPath} alt="service" />
         <Typography variant="h5">{heading}</Typography>

@@ -52,16 +52,26 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "2rem",
     borderRadius: "10px",
   },
+  
   contentRight: {
     textAlign: "center",
     "& >img": {
-      maxHeight: "100%",
       maxWidth: "100%",
-    }
-  },
+      maxHeight: "100%"
+    },
+    imageBox: {
+      minHeight: "70vh",
+      backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      [theme.breakpoints.down('md')]: {
+        minHeight: "50vh",
 
-})
-);
+      }
+    }
+  }
+}));
+
 
 export default function Features({ state: features }) {
 
@@ -143,11 +153,10 @@ const Card = ({ imagePath, textThin, textBold }) => {
     </Grid>
   )
 }
-
 const ContentRight = ({ content }) => {
   const classes = useStyles();
 
-  return <Grid item xs={12} md={6} className={classes.contentRight}>
-    <img src={content.imagePath} alt="doctor" />
+  return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
+    <img src={content.imagePath} alt="hero" width="100%" />
   </Grid>
 }
