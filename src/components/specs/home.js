@@ -18,7 +18,7 @@ export default (function () {
     },
     Brand: {
       header: {
-        heading: "Trusted HealthCare Brands",
+        heading: <><b>Trusted by the best</b> <span style={{ color: "#3567D6" }}>Healthcare Brands</span></>,
         description: ""
       },
       trustedBrandsLogoImages: [
@@ -27,14 +27,14 @@ export default (function () {
         path.join(process.env.PUBLIC_URL, "homepage", "brand-medlife.png"),
         path.join(process.env.PUBLIC_URL, "homepage", "brand-niramaya.png"),
       ],
-      whatsapp: path.join(process.env.PUBLIC_URL, "homepage", "brand-whatsapp-icon.png"),
+      whatsapp: path.join(process.env.PUBLIC_URL, "homepage", "brand-whatsapp-icon.svg"),
 
     },
     Features: {
       contentLeft: {
         header: {
-          line1: ["Health Knowledge", "   +   ", "Modern Design"],
-          line2: "combine to give you the most",
+          line1: <><span style={{ color: "#3567D6" }}>Health Knowledge</span>  +   <b>Modern Design</b></>,
+          line2: <b>Combine to give you the most</b>,
           line3: "Understandable Medical Reports",
         },
         cardsData: [
@@ -69,7 +69,7 @@ export default (function () {
 
     Services: {
       content: {
-        heading: <> The best <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span> out there</>,
+        heading: <> <b>The best</b> <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span><b> out there</b></>,
         description:
           "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
       },
@@ -133,7 +133,7 @@ export default (function () {
     },
     Bytes: {
       content: {
-        heading: "NirogGyan Bytes",
+        heading: <b>NirogGyan Bytes</b>,
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto pariatur quas repellendus numquam assumenda, mollitia possimus similique sed modi, iure dicta velit, quaerat voluptatibus saepe aliquam in libero est commodi.",
       },
       videoLinks: [
@@ -145,7 +145,7 @@ export default (function () {
     Report: {
       contentLeft: {
         header: {
-          heading: "Believe what you see.",
+          heading: <b>Believe what you see.</b>,
           description: "Checkout our SmartReports below and know the difference",
         },
         footer: {
@@ -180,7 +180,7 @@ export default (function () {
         left: path.join(process.env.PUBLIC_URL, "homepage", "achievements-background1.png"),
         right: path.join(process.env.PUBLIC_URL, "homepage", "achievements-background2.png"),
       },
-      cardsData: [
+      cardsList: [
         {
           textBig: "40+",
           textSmall: "Labs Running",
@@ -202,7 +202,7 @@ export default (function () {
     },
     ClientMessage: {
       header: {
-        heading: "What Our Clients Say",
+        heading: <b>What Our Clients Say</b>,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
       },
       backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "client-message-background.png"),
@@ -226,7 +226,7 @@ export default (function () {
       block1: {
         heading: "Subscribe to our mailing list",
         description: "We'll send you updates about NirogGyan",
-        footer: <>Get In Touch  <b>&#8226;</b>   contact@niroggyan.com</>,
+        footer: <><span style={{ color: "#fff" }}>Get In Touch</span>  :   contact@niroggyan.com</>,
       },
       block2: {
         placeholderText: "Enter your email address",

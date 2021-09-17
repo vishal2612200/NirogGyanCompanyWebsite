@@ -34,10 +34,6 @@ const useStyles = makeStyles((theme) => ({
     container: {
         marginRight: "2rem"
     },
-    footertext: {
-        display: "inline-block",
-        fontWeight: "bolder"
-    },
     input: {
         color: "#fff",
         borderRadius: "40px",
@@ -69,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#052E88",
         color: "white"
 
+    },
+    footertext: {
+        display: "inline-block",
     }
 }));
 
@@ -99,13 +98,13 @@ const Block1 = ({ content, ...props }) => {
         <Grid item>
             <Typography
                 variant="body1"
-                className={classes.description}>
+                className={classes.description} style={{ color: "#CBDBFF" }}>
                 {content.description}
             </Typography>
         </Grid>
 
-        <Grid item style={{ marginTop: "1rem" }}>
-            {<Typography variant="h6" className={classes.footertext}>
+        <Grid item style={{ marginTop: "0.5rem" }}>
+            {<Typography variant="body1" className={classes.footertext} style={{ color: "#CBDBFF" }}>
                 {content.footer}
             </Typography>}
         </Grid>

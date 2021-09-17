@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Box, Button, Typography } from "@material-ui/core";
-// import HeadingWithText from "../utils/HeadingWithText";
+import HeadingWithText from "../utils/HeadingWithText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,6 +9,11 @@ const useStyles = makeStyles((theme) => ({
   },
   whatsapp: {
     padding: "0 1rem"
+  },
+  image: {
+      maxWidth: "100%",
+      maxHeight: "100%"
+
   }
 }));
 
@@ -24,24 +29,19 @@ export default function Brand({ state: brand }) {
             <img src={brand.whatsapp} alt="whatsapp" />
           </Button>
         </Grid>
-        
+
       </Grid>
 
-      <Grid container item xs={10} >
-        <Grid item container justifyContent="center">
-          <Typography variant="h3" color="textPrimary" className={classes.title}>
-            {brand.header.heading }
-          </Typography>
-      
-        </Grid>
-        <Grid item container style={{marginTop:"5%"}} justifyContent="center">
-          {logoImages.map(item =>
-            <Grid item md={3}><img width="100%" src={item} alt="logo" /></Grid>
-          )}
-        </Grid>
-        <Grid item>
-          <Box p={3} />
-        </Grid>
+      <HeadingWithText content={brand.header} />
+      <Grid container item justifyContent="space-evenly" alignItems="center" md={10}>
+        {logoImages.map(item =>
+          <Grid item md={3} style={{textAlign:"center"}}>
+            <img src={item} alt="logo" className={ classes.image}/>
+          </Grid>
+        )}
+      </Grid>
+      <Grid item>
+        <Box p={3} />
       </Grid>
     </Grid>
   );

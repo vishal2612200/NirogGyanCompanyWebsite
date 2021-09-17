@@ -18,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         wordWrap: "break-word",
-        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         fontWeight: "700",
     },
     contentLeft: {
         alignItems: "center",
         justifyContent: "space-evenly",
+        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     },
     contentRight: {
         textAlign: "center",
@@ -116,13 +116,17 @@ const Header = ({ content }) => {
     return <Grid item className={classes.headerContainer} >
         <Typography
             variant="h3"
-            className={classes.heading}>
+            className={classes.heading}
+            style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
+        >
             {content.heading}
         </Typography>
         <Typography
             variant="h6"
             color="textSecondary"
-            className={classes.description}>
+            className={classes.description}
+            style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
+       >
             {content.description}
         </Typography>
     </Grid>
@@ -157,7 +161,9 @@ const Footer = ({ content }) => {
             <Typography
                 variant="h5"
                 color="textSecondary"
-                className={classes.textThin}>
+                className={classes.textThin}
+            style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
+            >
                 {content.textThin}
             </Typography>
         </Grid>
@@ -166,7 +172,9 @@ const Footer = ({ content }) => {
             <Typography
                 variant="h5"
                 color="textPrimary"
-                className={classes.textBold}>
+                className={classes.textBold}
+                style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif', fontWeight: 'bolder' }}
+            >
                 {content.textBold}
             </Typography>
         </Grid>

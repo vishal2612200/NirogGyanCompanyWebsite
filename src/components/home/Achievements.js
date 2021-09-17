@@ -51,7 +51,7 @@ export default function Achievements({ state: achievements }) {
         backgroundSize: "cover",
         padding: "2.5rem 0"
       }}>
-        {achievements.cardsData.slice(0, 2).map((achievement) => (<Card content={achievement} />))}
+        {achievements.cardsList.slice(0, 2).map((achievement) => (<Card content={achievement} />))}
       </Grid>
       <Grid container item md={6} justifyContent="space-around" style={{
         backgroundImage: `url(${achievements.backgroundImage.right})`,
@@ -61,7 +61,7 @@ export default function Achievements({ state: achievements }) {
 
 
       }}>
-        {achievements.cardsData.slice(2).map((achievement) => (<Card content={achievement} />))}
+        {achievements.cardsList.slice(2).map((achievement) => (<Card content={achievement} />))}
       </Grid>
     </Grid>
   );

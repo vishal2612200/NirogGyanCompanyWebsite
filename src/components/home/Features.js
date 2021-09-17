@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, IconButton, Box } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -11,13 +11,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: "2rem"
 
-  },
-  contentRight: {
-    textAlign: "center",
-    "& >img": {
-      maxWidth: "100%",
-      maxHeight: "100%"
-    }
   },
   heading: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -35,8 +28,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     padding: "1rem",
     backgroundColor: "#E9F5FF",
+    borderTopLeftRadius: "10px",
+    borderBottomLeftRadius: "10px",
+
     "&>img": {
-      margin: "auto "
+      margin: "auto",
+      maxHeight: "100%",
+      maxWidth: "auto",
+
     }
   },
   textBox: {
@@ -50,9 +49,16 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     border: "1px solid #B8BBBD",
-    marginBottom: "2rem"
-
-  }
+    marginBottom: "2rem",
+    borderRadius: "10px",
+  },
+  contentRight: {
+    textAlign: "center",
+    "& >img": {
+      maxHeight: "100%",
+      maxWidth: "auto",
+    }
+  },
 
 })
 );
@@ -88,20 +94,16 @@ const Header = ({ content }) => {
   const classes = useStyles();
   return <Grid item >
     <Typography
-      variant="h4"
-      style={{ fontWeight: "bold", color: "#051733" }}>
-      {content.line1.join("")}
+      variant="h4">
+      {content.line1}
     </Typography>
 
     <Typography
-      variant="h6"
-
-      style={{ fontWeight: "bold", color: "#05152E" }}    >
+      variant="h4">
       {content.line2}
     </Typography>
     <Typography
-      variant="h4"
-      style={{ fontWeight: "bold", color: "#05152E" }}    >
+      variant="h4">
       {content.line3}
     </Typography>
 
