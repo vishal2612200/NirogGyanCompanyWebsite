@@ -31,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Footer({ state: footer }) {
     const classes = useStyles();
     return <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch">
-        <Block1 content={footer.block1} md={4}  />
-        <Block content={footer.block2} md={2}  />
-        <Block content={footer.block3} md={3}  />
-        <Block4 content={footer.block4} md={3}  />
+        <Block1 content={footer.block1} md={4} />
+        <Block content={footer.block2} md={2} />
+        <Block content={footer.block3} md={3} />
+        <Block4 content={footer.block4} md={3} />
     </Grid>
 
 }
@@ -48,9 +48,7 @@ const Block1 = ({ content, ...props }) => {
         </Grid>
         <Grid item>
             <Typography variant="h6">
-                <Box fontWeight="fontWeightMedium" m={1}>
-                    {content.copyrightText}
-                </Box>
+                {content.copyrightText}
             </Typography>
         </Grid>
     </Grid>
@@ -60,15 +58,10 @@ const Block = ({ content, ...props }) => {
     const classes = useStyles();
     return <Grid item className={classes.block} {...props}>
         <Typography variant="h5">
-            <Box fontWeight="fontWeightMedium" m={1}>
-                {content.heading}
-            </Box>
+            {content.heading}
         </Typography>
-        <Box style={{ height: ".25rem" }} />
         {content.items.map(link => <Typography>
-            <Box fontWeight="fontWeightMedium" m={2}>
-                {link}
-            </Box>
+            {link}
         </Typography>)}
     </Grid>
 }
@@ -77,12 +70,10 @@ const Block4 = ({ content, ...props }) => {
 
     return <Grid item {...props}>
         <Typography variant="h5">
-            <Box fontWeight="fontWeightMedium" m={1}>
-                {content.heading}
-            </Box>
+            {content.heading}
         </Typography>
         <Box style={{ height: ".4rem" }} />
-        {content.svgitems.map(imagePath => <img style={{marginRight:"1rem"}} src={imagePath} alt="logo" />)}
+        {content.svgitems.map(imagePath => <img style={{ marginRight: "1rem" }} src={imagePath} alt="logo" />)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
 }

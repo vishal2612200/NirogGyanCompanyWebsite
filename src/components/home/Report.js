@@ -173,7 +173,7 @@ const Footer = ({ content }) => {
                 variant="h5"
                 style={{
                     fontSize: "2rem",
-                    fontWeight: "900",
+                    fontWeight: "950",
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
                     color: "#05152E"
                 }}
