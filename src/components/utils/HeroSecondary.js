@@ -11,7 +11,6 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        minHeight: "75vh"
 
     },
     title: {
@@ -41,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     },
     contentRight: {
         alignItems: "flex-end",
-
+       verticalAlign: "middle",
+    
         "& >img": {
             maxWidth: "100%",
             maxHeight: "auto"
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function HeroSecondary({ state: heroSection, props }) {
+export default function HeroSecondary({ state: heroSection}) {
     const classes = useStyles();
 
     return (
@@ -107,7 +107,7 @@ const ContentLeft = ({ content }) => {
 const ContentRight = ({ content }) => {
     const classes = useStyles();
 
-    return <Grid item md={6} className={classes.contentRight}>
+    return <Grid  item md={6} className={classes.contentRight}>
         <img src={content.imagePath} alt="doctor" />
     </Grid>
 }
