@@ -25,9 +25,9 @@ export default function Brand({ state: brand }) {
       <Grid container item justifyContent="space-around">
 
         <HeadingWithText content={brand.header} md={11} />
-        <Grid item className={classes.whatsapp} md={1} >
+         <Grid item className={classes.whatsapp} md={1} >
           <img src={brand.whatsapp} alt="whatsapp" className={classes.image} />
-        </Grid>
+        </Grid> 
 
       </Grid>
       <Grid container item justifyContent="space-evenly" alignItems="center" md={10}>
