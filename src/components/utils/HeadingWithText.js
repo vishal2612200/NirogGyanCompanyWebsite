@@ -21,6 +21,7 @@ export default function HeadingWithText({ content, ...props }) {
                 variant="h3" gutterBottom
                 style={{
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+                    fontSize: "2.7rem",
                 }}>
                 {content.heading}
             </Typography>

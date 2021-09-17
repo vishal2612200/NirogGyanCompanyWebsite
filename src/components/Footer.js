@@ -48,7 +48,9 @@ const Block1 = ({ content, ...props }) => {
         </Grid>
         <Grid item>
             <Typography variant="h6">
-                {content.copyrightText}
+                <Box fontWeight="fontWeightMedium" m={1}>
+                    {content.copyrightText}
+                </Box>
             </Typography>
         </Grid>
     </Grid>
@@ -58,10 +60,15 @@ const Block = ({ content, ...props }) => {
     const classes = useStyles();
     return <Grid item className={classes.block} {...props}>
         <Typography variant="h5">
-            {content.heading}
+            <Box fontWeight="fontWeightMedium" m={1}>
+                {content.heading}
+            </Box>
         </Typography>
+        <Box style={{ height: ".25rem" }} />
         {content.items.map(link => <Typography>
-            {link}
+            <Box fontWeight="fontWeightMedium" m={2}>
+                {link}
+            </Box>
         </Typography>)}
     </Grid>
 }
@@ -70,7 +77,9 @@ const Block4 = ({ content, ...props }) => {
 
     return <Grid item {...props}>
         <Typography variant="h5">
-            {content.heading}
+            <Box fontWeight="fontWeightMedium" mb={2} mt={1} >
+                {content.heading}
+            </Box>
         </Typography>
         <Box style={{ height: ".4rem" }} />
         {content.svgitems.map(imagePath => <img style={{ marginRight: "1rem" }} src={imagePath} alt="logo" />)}
