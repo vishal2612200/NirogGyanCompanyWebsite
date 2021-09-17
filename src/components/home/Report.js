@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         "&>*": {
             paddingBottom: "1rem"
         }
-    }
+    },
 }
 ));
 
@@ -126,7 +126,7 @@ const Header = ({ content }) => {
             color="textSecondary"
             className={classes.description}
             style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
-       >
+        >
             {content.description}
         </Typography>
     </Grid>
@@ -162,7 +162,7 @@ const Footer = ({ content }) => {
                 variant="h5"
                 color="textSecondary"
                 className={classes.textThin}
-            style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
+                style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
             >
                 {content.textThin}
             </Typography>
@@ -171,11 +171,14 @@ const Footer = ({ content }) => {
 
             <Typography
                 variant="h5"
-                color="textPrimary"
-                className={classes.textBold}
-                style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif', fontWeight: 'bolder' }}
+                style={{
+                    fontSize: "2rem",
+                    fontWeight: "900",
+                    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+                    color: "#05152E"
+                }}
             >
-                {content.textBold}
+                <b>{content.textBold}</b>
             </Typography>
         </Grid>
     </Grid>

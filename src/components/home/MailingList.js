@@ -23,9 +23,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "1.5rem",
     },
     block2: {
-        "&>*": {
-            margin: "1rem 0"
-        }
     },
     buttonContainer: {
         textAlign: "center"
@@ -55,8 +52,9 @@ const useStyles = makeStyles((theme) => ({
     inputContainer:
     {
         width: "inherit",
-        paddingRight: "2rem",
-
+        padding: "0.5rem",
+        paddingLeft: "0rem",
+        paddingTop: "0rem",
     },
     button: {
         borderRadius: "20px",
@@ -115,15 +113,14 @@ const Block2 = ({ content, ...props }) => {
     const classes = useStyles()
     const [email, setEmail] = useState("")
     return <Grid container item className={classes.block2} alignItems="center" {...props}>
-        <Grid item md={1}></Grid>
-        <Grid item md={6} className={classes.inputContainer}>
+        <Grid item md={5} className={classes.inputContainer}>
             <input className={classes.input}
                 name="email"
                 value={email}
                 placeholder={content.placeholderText}
                 onChange={e => setEmail(e.target.value)} />
         </Grid>
-        <Grid item className={classes.buttonContainer} md={5}>
+        <Grid item className={classes.buttonContainer} md={6}>
 
             <Button variant="contained" className={classes.button}>
                 {content.buttonText}
