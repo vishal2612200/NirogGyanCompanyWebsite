@@ -30,7 +30,7 @@ export default function HeadingWithText({ content, ...props }) {
                 color="textSecondary"
                 style={{
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-                }}>
+               padding:"1rem" }}>
                 {content.description}
             </Typography>
         </Grid>

@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "@fontsource/nunito-sans";
@@ -98,8 +98,7 @@ const Card = ({ message, imagePath, name, organisation, }) => {
 
         <Grid item>
             <img src={imagePath} alt="client"
-                style={{ height: "100px", width: "100px", borderRadius: "50%", border: "1px dashed grey" }} />
-
+                style={{ height: "100px", width: "100px", padding: "4px", borderRadius: "50%", border: "1px dashed grey" }} />
             <Typography variant="h5">
                 <Typography color="textPrimary" variant="h5">
                     {name}
