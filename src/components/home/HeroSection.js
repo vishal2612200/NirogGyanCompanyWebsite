@@ -12,9 +12,10 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    position: "sticky",
+    
     backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
     padding: "0.5rem",
-    minHeight: "75vh"
   },
   title: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "left",
     padding: "2rem",
-    paddingLeft:"5rem",
+    paddingLeft: "5rem",
     [theme.breakpoints.down('sm')]: {
       justifyContent: "center",
     }
@@ -107,7 +108,7 @@ export default function HeroSection({ state: heroSection }) {
       <Grid item md={6}>
         <ContentRight content={heroSection.contentRight} />
       </Grid>
-  </Grid>
+    </Grid>
   )
 
 }
@@ -116,45 +117,45 @@ export default function HeroSection({ state: heroSection }) {
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
   return <Grid container item direction="column" className={classes.content}>
-            <Grid item style={{ marginBottom:"12%"}}></Grid>
-            <Grid item >
-              <Heading text={content.heading} />
-            </Grid>
-            <Grid item>
-              <Description text={content.description} />
-            </Grid>
-            <Grid item>
-              <ButtonSet content={content.buttons} />
-            </Grid>
-          </Grid>
+    <Grid item style={{ marginBottom: "12%" }}></Grid>
+    <Grid item >
+      <Heading text={content.heading} />
+    </Grid>
+    <Grid item>
+      <Description text={content.description} />
+    </Grid>
+    <Grid item>
+      <ButtonSet content={content.buttons} />
+    </Grid>
+  </Grid>
 }
 
 const Heading = ({ text }) => {
   const classes = useStyles();
 
   return <Grid container item direction="column">
-            <Grid item style={{marginBottom:"3%"}}>
-              <Typography
-                variant="h3"
-                className={classes.title}>
-                {text.line1}
-              </Typography>
-            </Grid>
+    <Grid item style={{ marginBottom: "3%" }}>
+      <Typography
+        variant="h3"
+        className={classes.title}>
+        {text.line1}
+      </Typography>
+    </Grid>
 
-            <Grid item>
-              <Typography
-                variant="h3"
-                className={classes.title}>
-                {text.line2}
-              </Typography>
-            </Grid>
-          </Grid>
+    <Grid item>
+      <Typography
+        variant="h3"
+        className={classes.title}>
+        {text.line2}
+      </Typography>
+    </Grid>
+  </Grid>
 }
 
 
 const Description = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item className={classes.text} style={{ marginTop:"5%", marginBottom:"5%"}}>
+  return <Grid container item className={classes.text} style={{ marginTop: "5%", marginBottom: "5%" }}>
     <Typography variant="body2" >
       {text}
     </Typography>
@@ -206,6 +207,6 @@ const ContentRight = ({ content }) => {
   const classes = useStyles();
 
   return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
-          <img src={content.imagePath} alt="hero" width="100%" />
-        </Grid>
+    <img src={content.imagePath} alt="hero" width="100%" />
+  </Grid>
 }
