@@ -20,7 +20,10 @@ export default (
                     heading: "Community",
                     items: [path.join(process.env.PUBLIC_URL, "footer", "facebook.png"),
                     path.join(process.env.PUBLIC_URL, "footer", "twitter.png"),
-                    path.join(process.env.PUBLIC_URL, "footer", "instagram.png")]
+                    path.join(process.env.PUBLIC_URL, "footer", "instagram.png")],
+                    svgitems: [path.join(process.env.PUBLIC_URL, "footer", "facebook.svg"),
+                    path.join(process.env.PUBLIC_URL, "footer", "twitter.svg"),
+                    path.join(process.env.PUBLIC_URL, "footer", "instagram.svg")]
                 }
             }
         }

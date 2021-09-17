@@ -44,7 +44,7 @@ const Block1 = ({ content, ...props }) => {
     const classes = useStyles()
     return <Grid item className={classes.block} {...props}>
         <Grid item>
-            <img src={content.logoImage} alt="logo" />
+            <img width="83%" src={content.logoImage} alt="logo" />
         </Grid>
         <Grid item>
             <Typography variant="h6">
@@ -66,7 +66,7 @@ const Block = ({ content, ...props }) => {
         </Typography>
         <Box style={{ height: ".25rem" }} />
         {content.items.map(link => <Typography>
-            <Box fontWeight="fontWeightMedium" m={1}>
+            <Box fontWeight="fontWeightMedium" m={2}>
                 {link}
             </Box>
         </Typography>)}
@@ -82,7 +82,7 @@ const Block4 = ({ content, ...props }) => {
             </Box>
         </Typography>
         <Box style={{ height: ".4rem" }} />
-        {content.items.map(imagePath => <img src={imagePath} alt="logo" />)}
+        {content.svgitems.map(imagePath => <img style={{marginRight:"1rem"}} src={imagePath} alt="logo" />)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
 }
