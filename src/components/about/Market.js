@@ -8,6 +8,7 @@ import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import clsx from 'clsx';
 import "../component.css"
+import Card from "../utils/FeatureCard"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -118,26 +119,6 @@ const CardsList = ({ content }) => {
 
 }
 
-
-const Card = ({ imagePath, textThin, textBold }) => {
-  const classes = useStyles();
-
-  return (
-    <Grid container className={classes.card}  >
-      <Grid item xs={4} className={classes.imageBox}>
-        <img src={imagePath} alt="market" />
-      </Grid>
-      <Grid item xs={8} className={classes.textBox}>
-        <Typography variant="h5" color="textSecondary">
-          {textThin}
-        </Typography>
-        <Typography variant="h5" color="textSecondary" style={{ fontWeight: "bolder" }}>
-          {textBold}
-        </Typography>
-      </Grid>
-    </Grid>
-  )
-}
 
 const ContentRight = ({ content }) => {
   const classes = useStyles();
