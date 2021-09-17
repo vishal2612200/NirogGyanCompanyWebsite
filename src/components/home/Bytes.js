@@ -16,21 +16,33 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: "#05152E",
-    
+
   },
   card: {
-    padding: "1rem",
+    margin: "1rem",
     textAlign: "center",
+  },
+  videoWrapper: {
+    //moreInfo: https://css-tricks.com/fluid-width-video/#iframe-video-youtube-vimeo-etc
+    position: "relative",
+    paddingBottom: "56.25%",
+    height: "0",
+    "&>iframe": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }
   }
-
 }));
 
 export default function Bytes({ state: bytes }) {
 
   return (
-    <Grid container direction="column">    
-        <HeadingWithText content={bytes.content} />
-        <CardList cardsData={bytes.videoLinks} />
+    <Grid container direction="column">
+      <HeadingWithText content={bytes.content} />
+      <CardList cardsData={bytes.videoLinks} />
     </Grid>
   );
 
@@ -48,21 +60,18 @@ const CardList = ({ cardsData }) => {
 
 const Card = ({ link, title = "YouTube video player" }) => {
   const classes = useStyles();
-
   return (
-    <Grid item className={classes.card} md={3} sm={4} >
-      <Box mt={4} mb={4}>
-        <iframe style={{
-          borderRadius: "10px",
-        }}
-          width="auto"
-          height="200px"
-          src={link}
-          title={title}
-          frameborder="2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-      </Box>
+    <Grid item className={classes.card}  >
+      <iframe style={{
+        borderRadius: "10px",
+      }}
+        width="auto"
+        height="inherit"
+        src={link}
+        title={title}
+        frameborder="2"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
     </Grid>
 
   );
