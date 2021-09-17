@@ -12,7 +12,6 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
         padding: "0.5rem",
         minHeight: "75vh"
     },
@@ -35,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function BigRightImageSection({ contentLeft, image }) {
+export default function BigRightImageSection({ contentLeft, image, ...props }) {
     const classes = useStyles();
     return (
-        <Grid container className={classes.root} justifyContent="space-around">
+        <Grid container className={classes.root} justifyContent="space-around" {...props} >
             <Grid item md={6}>
                 {contentLeft}
             </Grid>

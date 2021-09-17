@@ -36,16 +36,16 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "1rem",
         "&::before": {
             content: "open-quote",
-            fontSize: "4rem",
+            fontSize: "2rem",
             lineHeight: 0,
-            verticalAlign: "bottom",
+            verticalAlign: "middle",
 
         },
         "&::after": {
             content: "close-quote",
-            fontSize: "4rem",
+            fontSize: "2rem",
             lineHeight: 0,
-            verticalAlign: "bottom",
+            verticalAlign: "middle",
         },
         paddingBottom: "1rem"
     },

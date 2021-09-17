@@ -4,7 +4,8 @@ import { Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-
+import BigRightImageSection from "../utils/BigRightImageSection";
+import Card from "../utils/FeatureCard"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "2rem",
     borderRadius: "10px",
   },
-  
+
   contentRight: {
     textAlign: "center",
     "& >img": {
@@ -78,19 +79,19 @@ export default function Features({ state: features }) {
   const classes = useStyles();
 
   return (
-    <Grid container justifyContent="center"  >
-      <Grid container item xs={10} justifyContent="space-around" >
-        <ContentLeft content={features.contentLeft} />
-        <ContentRight content={features.contentRight} />
-      </Grid>
-    </Grid>
+    <BigRightImageSection
+      contentLeft={<ContentLeft content={features.contentLeft} />}
+      image={{
+        imagePath: features.contentRight.imagePath, altText: "feature"
+      }} />
+
   );
 }
 
 
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" md={6} alignContent="center" >
+  return <Grid container item direction="column" alignContent="center" >
     <Grid item style={{ marginBottom: "4%" }}>
       <Header content={content.header} />
     </Grid>
@@ -132,31 +133,24 @@ const CardsList = ({ content }) => {
 }
 
 
-const Card = ({ imagePath, textThin, textBold }) => {
-  const classes = useStyles();
+// const Card = ({ imagePath, textThin, textBold }) => {
+//   const classes = useStyles();
 
-  return (
-    <Grid container className={classes.card}  >
-      <Grid item xs={4} className={classes.imageBox}>
-        <img src={imagePath} alt="feature" />
-      </Grid>
-      <Grid item xs={8} className={classes.textBox}>
-        <Typography component="div">
-          <Box fontWeight="fontWeightLight" m={1}>
-            {textThin}
-          </Box>
-          <Box fontWeight="fontWeightBold" m={1}>
-            {textBold}
-          </Box>
-        </Typography>
-      </Grid>
-    </Grid>
-  )
-}
-const ContentRight = ({ content }) => {
-  const classes = useStyles();
-
-  return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
-    <img src={content.imagePath} alt="hero" width="100%" />
-  </Grid>
-}
+//   return (
+//     <Grid container className={classes.card}  >
+//       <Grid item xs={4} className={classes.imageBox}>
+//         <img src={imagePath} alt="feature" />
+//       </Grid>
+//       <Grid item xs={8} className={classes.textBox}>
+//         <Typography component="div">
+//           <Box fontWeight="fontWeightLight" m={1}>
+//             {textThin}
+//           </Box>
+//           <Box fontWeight="fontWeightBold" m={1}>
+//             {textBold}
+//           </Box>
+//         </Typography>
+//       </Grid>
+//     </Grid>
+//   )
+// }
