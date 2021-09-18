@@ -191,7 +191,7 @@ export default (function () {
         },
 
         {
-          textBig: <>4.7 <span style={{color:"yellow", fontSize:"1.25em"}}>&#9733;</span></>,
+          textBig: <>4.7 <span style={{ color: "yellow", fontSize: "1.25em" }}>&#9733;</span></>,
           textSmall: "Rating from Users",
         },
         {
