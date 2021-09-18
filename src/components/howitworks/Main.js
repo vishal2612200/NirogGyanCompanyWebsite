@@ -50,7 +50,10 @@ export default function Main({ state: main }) {
       <Grid container item  justifyContent="space-evenly" md={10}>
         <Grid container item className={classes.evenCard}>
           <Grid item xs={5}>
-              <img width="95%" src={main.cardsList[0].imagePath} alt="doctor" />
+            <img width="95%" src={main.cardsList[0].imagePath} style={{
+              borderRadius: "50%",
+              background: "red"
+            }} alt="doctor" />
           </Grid>
           <Grid container item xs={7} >
           
