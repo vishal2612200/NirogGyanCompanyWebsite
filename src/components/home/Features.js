@@ -1,11 +1,14 @@
-import React from "react";
+import {React, useState} from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import BigRightImageSection from "../utils/BigRightImageSection";
-import Card from "../utils/FeatureCard"
+import Card from "../utils/FeatureCard";
+import Grow from "@material-ui/core/Grow"
+import { useInView } from "react-intersection-observer"
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -91,12 +94,22 @@ export default function Features({ state: features }) {
 
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
+  const [slideIn, setSlideIn] = useState(true);
+  const [slideDirection, setSlideDirection] = useState('down');
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  })
+
   return <Grid container item direction="column" alignContent="center" >
     <Grid item style={{ marginBottom: "4%" }}>
       <Header content={content.header} />
     </Grid>
     <Grid item>
-      <CardsList content={content.cardsData} />
+      <Grow in={inView} direction={slideDirection} {...(slideIn ? { timeout: 3000 } : {})} >
+        <div>
+          <CardsList content={content.cardsData} />
+        </div>
+      </Grow>
     </Grid>
   </Grid>
 }
