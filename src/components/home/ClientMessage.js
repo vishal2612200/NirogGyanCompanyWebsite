@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ClientMessage({ state: clientMessage }) {
 
     const classes = useStyles();
-    return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})`, paddingTop: "2rem" }} >
+    return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})`, padding: "2rem" }} >
         <HeadingWithText content={clientMessage.header} />
 
         <Grid container item md={8} style={{ marginTop: "-3rem" }}>

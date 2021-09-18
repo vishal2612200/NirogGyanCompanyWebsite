@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   card: {
+    padding: "2rem 0",
     margin: "1rem",
     textAlign: "center",
   },

@@ -1,8 +1,23 @@
 .padding-heavy-side-low-bottom {
   padding: 8rem;
-  padding-bottom:1rem;
+  padding-bottom: 1rem;
 }
 
 .cardsList:nth-child(even) {
-direction: row-reverse;
+  direction: row-reverse;
+}
+
+.background-change {
+  animation: background-transition-smooth 2s ease-in-out;
+  background: #3567d6ff;
+}
+
+@keyframes background-transition-smooth {
+  0% {
+    background: #3567d600;
+  }
+
+  100% {
+    background: #3567d6ff;
+  }
 }

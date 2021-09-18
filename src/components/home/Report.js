@@ -34,8 +34,12 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     headerContainer: {
-        textAlign: "left",
-        paddingLeft: "4rem",
+        textAlign: "center",
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: "4rem",
+            textAlign: "left",
+
+        }
     },
     cardList: {
         justifyContent: "space-around",
@@ -65,7 +69,10 @@ const useStyles = makeStyles((theme) => ({
     footer: {
         textAlign: "left",
         padding: "1rem",
-        paddingLeft: "4rem",
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: "4rem",
+
+        },
         "&>*": {
             paddingBottom: "1rem"
         }
