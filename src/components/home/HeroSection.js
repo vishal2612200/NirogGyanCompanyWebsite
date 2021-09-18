@@ -13,7 +13,7 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "sticky",
-    
+
     backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
     padding: "0.5rem",
   },
@@ -29,9 +29,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "left",
     padding: "2rem",
-    paddingLeft: "5rem",
+    [theme.breakpoints.up('sm')]: {
+
+      paddingLeft: "5rem",
+    },
     [theme.breakpoints.down('sm')]: {
       justifyContent: "center",
+      alignItems: "center",
     }
   },
   text: {
@@ -101,22 +105,18 @@ const useStyles = makeStyles((theme) => ({
 export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
   return (
-    <Grid container className={classes.root} justifyContent="space-around">
-      <Grid item md={6}>
-        <ContentLeft content={heroSection.contentLeft} />
-      </Grid>
-      <Grid item md={6}>
-        <ContentRight content={heroSection.contentRight} />
-      </Grid>
+    <Grid container className={classes.root} justifyContent="space-evenly">
+      <ContentLeft content={heroSection.contentLeft} md={6} />
+      <ContentRight content={heroSection.contentRight} md={6} />
     </Grid>
   )
 
 }
 
 
-const ContentLeft = ({ content }) => {
+const ContentLeft = ({ content, ...props }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" className={classes.content}>
+  return <Grid container item direction="column" className={classes.content} {...props}>
     <Grid item style={{ marginBottom: "12%" }}></Grid>
     <Grid item >
       <Heading text={content.heading} />
@@ -203,10 +203,10 @@ const ButtonWatchVideo = ({ text }) => {
 }
 
 
-const ContentRight = ({ content }) => {
+const ContentRight = ({ content, ...props }) => {
   const classes = useStyles();
 
-  return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
+  return <Grid item justifyContent="flex-start" className={classes.imageBox} {...props}>
     <img src={content.imagePath} alt="hero" width="100%" />
   </Grid>
 }
