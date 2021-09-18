@@ -6,7 +6,7 @@ export default (function () {
             contentLeft: {
 
                 heading: "FAQS",
-                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "About", link: "/about" }],
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "Faqs", link: "/faqs" }],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
 
 
@@ -18,9 +18,8 @@ export default (function () {
 
         },
         FrequentQuestions: {
-            content: {
-                heading: "Frequently Asked Questions",
-                description: ""
+            header: {
+                heading: [{ text: "Frequently Asked Questions" }],
             },
             cardsList: [
                 {
@@ -57,8 +56,7 @@ export default (function () {
         },
         Form: {
             header: {
-                heading: "Reach Out with any query",
-                description: ""
+                heading: [{ text: "Reach Out with any query" }],
 
             }
         }

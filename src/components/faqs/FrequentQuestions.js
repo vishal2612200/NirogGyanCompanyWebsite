@@ -32,7 +32,7 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 
   return (
     <Grid container direction="column" className={classes.root} alignItems="space-evenly">
-      <HeadingWithText content={frequentquestions.content} />
+      <HeadingWithText content={frequentquestions.header} />
       {frequentquestions.cardsList.map(({ heading, content }, index) => <Card key={index} question={heading} answer={content} />)}
     </Grid>
   );

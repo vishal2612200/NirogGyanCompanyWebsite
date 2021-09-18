@@ -206,7 +206,7 @@ const ButtonWatchVideo = ({ text }) => {
 const ContentRight = ({ content, ...props }) => {
   const classes = useStyles();
 
-  return <Grid item justifyContent="flex-start" className={classes.imageBox} {...props}>
+  return <Grid item  className={classes.imageBox} {...props}>
     <img src={content.imagePath} alt="hero" width="100%" />
   </Grid>
 }

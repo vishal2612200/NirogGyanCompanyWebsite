@@ -1,8 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from '@material-ui/core/Box';
-import { Grid, Fab, Typography } from "@material-ui/core";
+import { Grid,  Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import "@fontsource/nunito-sans";
+import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,7 +48,7 @@ export default function HelpedOrganisations({ state: helpedOrganisations }) {
     return (
         <Grid container direction="column" justifyContent="center" alignItems="center" className={classes.root} style={
             { backgroundImage: `url(${helpedOrganisations.backgroundImage})` }}>
-            <HeadingWithText content={helpedOrganisations.content}></HeadingWithText>
+            <HeadingWithText content={helpedOrganisations.header}></HeadingWithText>
             <Button variant="contained" size="large" className={classes.button}>
                 <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3}>
                     {helpedOrganisations.buttonText}
@@ -64,22 +66,22 @@ const HeadingWithText = ({ content }) => {
                 variant="h3" gutterBottom
                 style={{
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-                    fontWeight: "700"
                 }}>
-                {content.heading}
+                {content.heading.map(
+                    ({ text, style = {} }, index) => <span key={index} style={style}>{text}</span>
+                )}
             </Typography>
-
         </Grid>
         <Grid item md={8} className={classes.description}>
-            <Typography
+            {content?.description && <Typography
                 variant="body1"
                 color="textSecondary"
                 style={{
-                    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+                    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
                     color: "#fff"
                 }}>
                 {content.description}
-            </Typography>
+            </Typography>}
         </Grid>
     </Grid>
 

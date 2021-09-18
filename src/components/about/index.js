@@ -9,7 +9,7 @@ import Believe from './Believe';
 import { PageContext } from '../../App';
 
 export default function About({ state, children }) {
-    const {  setPage } = useContext(PageContext);
+    const { setPage } = useContext(PageContext);
     useEffect(() => {
         setPage("about")
     })
@@ -17,11 +17,11 @@ export default function About({ state, children }) {
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
-        <Believe state={state.Believe} />
+         <Believe state={state.Believe} /> 
         <ExpertTeam state={state.ExpertTeam} />
         <HelpedOrganisations state={state.HelpedOrganisations} />
         <ProductConsultant state={state.ProductConsultant} />
-        <RecognisedBy state={state.RecognisedBy} />
+        <RecognisedBy state={state.RecognisedBy} /> 
         {children}
     </React.Fragment>
 }

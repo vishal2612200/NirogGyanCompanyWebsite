@@ -18,7 +18,7 @@ export default function ProductConsultant({ state: productConsultant }) {
     return (
         <Grid container direction="column" className={classes.root}>
             <Grid item conatiner>
-                <HeadingWithText content={productConsultant.content}></HeadingWithText>
+                <HeadingWithText content={productConsultant.header}></HeadingWithText>
             </Grid>
             <Grid item container>
                 <Grid item md={1}></Grid>

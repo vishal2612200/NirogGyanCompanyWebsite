@@ -18,7 +18,7 @@ export default function RecognisedBy({ state: recognisedBy }) {
 
   return (
     <Grid container className={classes.root}>
-      <HeadingWithText content={recognisedBy.content} />
+      <HeadingWithText content={recognisedBy.header} />
       <Grid container item className={classes.imagesContainer}  justifyContent="space-evenly">
         {recognisedBy.trustedBrandsLogoImages.map(item => <Grid item><img src={item} alt="client logo" /></Grid>)}
       </Grid>

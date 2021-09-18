@@ -5,7 +5,6 @@ export default (function () {
 
     HeroSection: {
       contentLeft: {
-
         heading: { line1: "Simplifying", line2: "Medical Reports" },
         description:
           "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
@@ -18,8 +17,7 @@ export default (function () {
     },
     Brand: {
       header: {
-        heading: <><b>Trusted by the best</b> <span style={{ color: "#3567D6" }}>Healthcare Brands</span></>,
-        description: ""
+        heading: [{ text: "Trusted by the best" }, { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight:"200" } }],
       },
       trustedBrandsLogoImages: [
         path.join(process.env.PUBLIC_URL, "homepage", "brand-crelio-health.png"),
@@ -68,12 +66,12 @@ export default (function () {
     },
 
     Services: {
-      content: {
-        heading: <> <b>The best</b> <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span><b> out there</b></>,
+      header: {
+        heading: [{ text: "The best" }, { text: "Patient-Engagement Tool", style: { color: "#3567D6", fontWeight:"200" } }, { text: " out there" }],
         description:
           "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
       },
-      servicesList: [
+      cardsList: [
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
@@ -132,8 +130,8 @@ export default (function () {
 
     },
     Bytes: {
-      content: {
-        heading: <b>NirogGyan Bytes</b>,
+      header: {
+        heading: [{ text: "NirogGyan Bytes" }],
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto pariatur quas repellendus numquam assumenda, mollitia possimus similique sed modi, iure dicta velit, quaerat voluptatibus saepe aliquam in libero est commodi.",
       },
       videoLinks: [
@@ -145,7 +143,7 @@ export default (function () {
     Report: {
       contentLeft: {
         header: {
-          heading: <b>Believe what you see.</b>,
+          heading:  "Believe what you see." ,
           description: "Checkout our SmartReports below and know the difference",
         },
         footer: {
@@ -202,7 +200,7 @@ export default (function () {
     },
     ClientMessage: {
       header: {
-        heading: <b>What Our Clients Say</b>,
+        heading: [{ text: "What Our Clients Say" }],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
       },
       backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "client-message-background.png"),

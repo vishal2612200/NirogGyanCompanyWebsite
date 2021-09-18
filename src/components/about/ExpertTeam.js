@@ -18,7 +18,7 @@ export default function ExpertTeam({ state: expertTeam }) {
   return (
     <Grid container direction="column" className={classes.root}>
       <Grid item conatiner>
-        <HeadingWithText content={expertTeam.content}></HeadingWithText>
+        <HeadingWithText content={expertTeam.header}></HeadingWithText>
       </Grid>
       <Grid item container>
         <Grid item md={1}></Grid>

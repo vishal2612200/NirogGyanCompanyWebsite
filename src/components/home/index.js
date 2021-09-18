@@ -12,7 +12,7 @@ import MailingList from './MailingList';
 
 
 export default function Home({ state }) {
-    
+
     return (
         <React.Fragment>
             <HeroSection state={state.HeroSection} />
@@ -22,7 +22,7 @@ export default function Home({ state }) {
             <Bytes state={state.Bytes} />
             <Report state={state.Report} />
             <Achievements state={state.Achievements} />
-             <ClientMessage state={state.ClientMessage} />
-            <MailingList state={state.MailingList} />
+            <ClientMessage state={state.ClientMessage} />
+            <MailingList state={state.MailingList} /> 
         </React.Fragment>)
 }
