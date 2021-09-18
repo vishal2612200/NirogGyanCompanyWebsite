@@ -49,7 +49,8 @@ export default function Achievements({ state: achievements }) {
         backgroundImage: `url(${achievements.backgroundImage.left})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        padding: "2.5rem 0"
+        padding: "2.5rem 0",
+        backgroundAttachment: "fixed"
       }}>
         {achievements.cardsList.slice(0, 2).map((achievement) => (<Card content={achievement} />))}
       </Grid>

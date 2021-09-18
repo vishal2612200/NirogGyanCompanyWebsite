@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Services({ state: services }) {
   const classes = useStyles();
   return (
-    <Grid container direction="column" className={classes.root} style={{ backgroundImage: `url(${services.backgroundImage})` }}>
+    <Grid container direction="column" className={classes.root} style={{ backgroundImage: `url(${services.backgroundImage})`, backgroundAttachment: "fixed" }}>
       <HeadingWithText content={services.content}></HeadingWithText>
       <Grid item style={{ height: "1rem" }}></Grid>
       <CardList cardsData={services.servicesList}></CardList>
