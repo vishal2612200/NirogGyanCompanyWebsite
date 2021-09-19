@@ -6,7 +6,7 @@ export default (function () {
             contentLeft: {
 
                 heading: "Blog",
-                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "About", link: "/about" }],
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "Blog", link: "/blog" }],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
 
 

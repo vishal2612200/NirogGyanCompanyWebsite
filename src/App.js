@@ -182,25 +182,24 @@ function App() {
             <Route path="/home">
               <Home state={state.home} />
             </Route>
-            <Route path="/about">
+          <Route path="/about">
               <About state={state.about} >
                 <GetInTouch state={state.GetInTouch} />
-
               </About>
             </Route>
-            <Route path="/how-it-works">
+             <Route path="/how-it-works">
               <HowItWorks state={state.howitworks} >
                 <GetInTouch state={state.GetInTouch} />
               </HowItWorks>
             </Route>
-            <Route path="/blog">
+             <Route path="/blog">
               <Blog state={state.blog} >
                 <GetInTouch state={state.GetInTouch} />
               </Blog>
             </Route>
             <Route path="/faqs">
               <FAQS state={state.faqs} />
-            </Route>
+            </Route> 
             <Route path="/">
               <Home state={state.home} />
             </Route>

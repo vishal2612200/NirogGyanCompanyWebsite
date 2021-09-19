@@ -87,19 +87,19 @@ const ContentLeft = ({ content }) => {
 const Header = ({ content }) => {
   const classes = useStyles();
   return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly">
-    <Grid item>
+    <Grid item key={1}>
       <Typography variant="h3" color="textPrimary" h3>
         {content.heading}
       </Typography>
     </Grid>
-    <Grid item>
+    <Grid item key={2}>
       <Typography variant="h6" color="textSecondary">
         {content.description.paragraph1}
       </Typography>
 
     </Grid>
 
-    <Grid item>
+    <Grid item key={3}>
       <Typography variant="h6" color="textSecondary">
         {content.description.paragraph2}
       </Typography>

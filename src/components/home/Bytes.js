@@ -44,7 +44,7 @@ export default function Bytes({ state: bytes }) {
 
   return (
     <Grid container direction="column">
-      <HeadingWithText content={bytes.content} />
+      <HeadingWithText content={bytes.header} />
       <CardList cardsData={bytes.videoLinks} />
     </Grid>
   );

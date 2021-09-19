@@ -6,7 +6,7 @@ export default (function () {
             contentLeft: {
 
                 heading: "How it Works",
-                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "About", link: "/about" }],
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "How It Works", link: "/how-it-works" }],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
 
 
@@ -20,7 +20,7 @@ export default (function () {
 
         Report: {
             header: {
-                heading: "One idea, branched into multiple avatars",
+                heading: [{ text: "One idea, branched into multiple avatars" }],
                 description: "Every human being is at a different stage of ‘health’. Our SmartReports come in various forms, for the best impact on your diagnostics business.",
             },
             imagePanel: {
@@ -40,7 +40,7 @@ export default (function () {
 
         Main: {
             header: {
-                heading: "How It Works",
+                heading: [{ text: "How It Works" }],
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
             cardsList: [

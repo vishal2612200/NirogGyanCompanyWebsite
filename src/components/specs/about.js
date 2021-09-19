@@ -20,9 +20,8 @@ export default (function () {
 
         },
         RecognisedBy: {
-            content: {
-                heading: "Recognised By",
-                description: ""
+            header: {
+                heading: [{ text: "Recognised By" }],
 
             },
             trustedBrandsLogoImages: [
@@ -56,7 +55,9 @@ export default (function () {
         Believe: {
             contentLeft: {
                 content: {
-                    heading: "We believe that",
+
+                    heading:"We believe that" ,
+
                     description: ["The world & our lives are changing fast",
                         "People have gone ‘Digital’. For good.",
                         "Good Health is easy once Understood"]
@@ -69,8 +70,9 @@ export default (function () {
         },
 
         ExpertTeam: {
-            content: {
-                heading: "Our Expert Team",
+            header: {
+
+                heading: [{ text: "Our Expert Team" }],
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
             cardsList: [
@@ -103,8 +105,9 @@ export default (function () {
         },
 
         ProductConsultant: {
-            content: {
-                heading: "Product Consultant",
+            header: {
+
+                heading: [{ text: "Product Consultant" }],
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
             cardsList: [
@@ -135,8 +138,8 @@ export default (function () {
             ],
         },
         HelpedOrganisations: {
-            content: {
-                heading: "We have helped 100+ organizations",
+            header: {
+                heading: [{ text: "We have helped 100+ organizations" }],
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar maximus leo, non dignissim risus aliquam eget",
             },
             buttonText: "Discover & Get Support From Our Team",

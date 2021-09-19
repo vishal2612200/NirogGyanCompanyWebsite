@@ -5,29 +5,27 @@ export default (function () {
 
     HeroSection: {
       contentLeft: {
-
         heading: { line1: "Simplifying", line2: "Medical Reports" },
         description:
           "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
         buttons: { services: "our Services", watchVideo: "Watch Video" },
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "hero-image.png"),
+        imagePath: path.join(process.env.PUBLIC_URL, "home", "hero-image.png"),
       },
       linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
     Brand: {
       header: {
-        heading: <><b>Trusted by the best</b> <span style={{ color: "#3567D6" }}>Healthcare Brands</span></>,
-        description: ""
+        heading: [{ text: "Trusted by the best" }, { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight:"200" } }],
       },
       trustedBrandsLogoImages: [
-        path.join(process.env.PUBLIC_URL, "homepage", "brand-crelio-health.png"),
-        path.join(process.env.PUBLIC_URL, "homepage", "brand-dr-dang-labs.png"),
-        path.join(process.env.PUBLIC_URL, "homepage", "brand-medlife.png"),
-        path.join(process.env.PUBLIC_URL, "homepage", "brand-niramaya.png"),
+        path.join(process.env.PUBLIC_URL, "home", "brand-crelio-health.png"),
+        path.join(process.env.PUBLIC_URL, "home", "brand-dr-dang-labs.png"),
+        path.join(process.env.PUBLIC_URL, "home", "brand-medlife.png"),
+        path.join(process.env.PUBLIC_URL, "home", "brand-niramaya.png"),
       ],
-      whatsapp: path.join(process.env.PUBLIC_URL, "homepage", "brand-whatsapp-icon.svg"),
+      whatsapp: path.join(process.env.PUBLIC_URL, "home", "brand-whatsapp-icon.svg"),
 
     },
     Features: {
@@ -39,14 +37,14 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-item-1.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "home", "features-item-1.png"),
             textThin: "Software covering 250+",
             textBold: "Pathology Biomarkers",
           },
           {
             imagePath: path.join(
               process.env.PUBLIC_URL,
-              "homepage", "features-item-2.png"
+              "home", "features-item-2.png"
             ),
             textThin: "Knowledge Bank based by",
             textBold: "Evidence-backed, Vetted Content",
@@ -54,7 +52,7 @@ export default (function () {
           {
             imagePath: path.join(
               process.env.PUBLIC_URL,
-              "homepage",
+              "home",
               "features-item-3.png"
             ),
             textThin: "Add-ons : Multi - language",
@@ -63,21 +61,21 @@ export default (function () {
         ],
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "features-big.png")
+        imagePath: path.join(process.env.PUBLIC_URL, "home", "features-big.png")
       },
     },
 
     Services: {
-      content: {
-        heading: <> <b>The best</b> <span style={{ color: "#3567D6" }}> Patient-Engagement Tool </span><b> out there</b></>,
+      header: {
+        heading: [{ text: "The best" }, { text: "Patient-Engagement Tool", style: { color: "#3567D6", fontWeight:"200" } }, { text: " out there" }],
         description:
           "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
       },
-      servicesList: [
+      cardsList: [
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "homepage", "services-templates.png"
+            "home", "services-templates.png"
           ),
           heading: "Multiple Reporting Templates",
           content:
@@ -86,7 +84,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "homepage", "services-instant.png"
+            "home", "services-instant.png"
           ),
           heading: "Instant, Automated, Secure",
           content:
@@ -95,7 +93,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "homepage", "services-pdf-whatsapp.png"
+            "home", "services-pdf-whatsapp.png"
           ),
           heading: "PDF, App, E-mail, Whatsapp",
           content:
@@ -104,7 +102,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "homepage", "services-marketing.png"
+            "home", "services-marketing.png"
           ),
           heading: "Unique Whitelabel - Marketing",
           content:
@@ -113,7 +111,7 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "homepage", "services-affordable.png"
+            "home", "services-affordable.png"
           ),
           heading: "Special Corporate Offerings",
           content:
@@ -122,18 +120,18 @@ export default (function () {
         {
           imgPath: path.join(
             process.env.PUBLIC_URL,
-            "homepage", "services-corporate-offerings.png"
+            "home", "services-corporate-offerings.png"
           ),
           heading: "Affordable & Doctor-friendly",
           content: "Track and save your medical history and health data",
         },
       ],
-      backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "services-background.png"),
+      backgroundImage: path.join(process.env.PUBLIC_URL, "home", "services-background.png"),
 
     },
     Bytes: {
-      content: {
-        heading: <b>NirogGyan Bytes</b>,
+      header: {
+        heading: [{ text: "NirogGyan Bytes" }],
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto pariatur quas repellendus numquam assumenda, mollitia possimus similique sed modi, iure dicta velit, quaerat voluptatibus saepe aliquam in libero est commodi.",
       },
       videoLinks: [
@@ -145,7 +143,7 @@ export default (function () {
     Report: {
       contentLeft: {
         header: {
-          heading: <b>Believe what you see.</b>,
+          heading:  "Believe what you see." ,
           description: "Checkout our SmartReports below and know the difference",
         },
         footer: {
@@ -154,31 +152,31 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-vitamin.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "home", "report-vitamin.png"),
             name: "Vitamin"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-kidney.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "home", "report-kidney.png"),
             name: "Kidney"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-electrolyte.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "home", "report-electrolyte.png"),
             name: "Electrolyte"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-diabetes.png"),
+            imagePath: path.join(process.env.PUBLIC_URL, "home", "report-diabetes.png"),
             name: "Diabetes"
           }
         ]
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "homepage", "report-big-report.png"),
+        imagePath: path.join(process.env.PUBLIC_URL, "home", "report-big-report.png"),
       }
     },
     Achievements: {
       backgroundImage: {
-        left: path.join(process.env.PUBLIC_URL, "homepage", "achievements-background1.png"),
-        right: path.join(process.env.PUBLIC_URL, "homepage", "achievements-background2.png"),
+        left: path.join(process.env.PUBLIC_URL, "home", "achievements-background1.png"),
+        right: path.join(process.env.PUBLIC_URL, "home", "achievements-background2.png"),
       },
       cardsList: [
         {
@@ -202,20 +200,20 @@ export default (function () {
     },
     ClientMessage: {
       header: {
-        heading: <b>What Our Clients Say</b>,
+        heading: [{ text: "What Our Clients Say" }],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
       },
-      backgroundImage: path.join(process.env.PUBLIC_URL, "homepage", "client-message-background.png"),
+      backgroundImage: path.join(process.env.PUBLIC_URL, "home", "client-message-background.png"),
       cardsList: [
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
+          imagePath: path.join(process.env.PUBLIC_URL, "home", "client-message-1.png"),
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         },
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: path.join(process.env.PUBLIC_URL, "homepage", "client-message-1.png"),
+          imagePath: path.join(process.env.PUBLIC_URL, "home", "client-message-1.png"),
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         }

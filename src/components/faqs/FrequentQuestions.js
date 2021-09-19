@@ -32,7 +32,7 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 
   return (
     <Grid container direction="column" className={classes.root} alignItems="space-evenly">
-      <HeadingWithText content={frequentquestions.content} />
+      <HeadingWithText content={frequentquestions.header} />
       {frequentquestions.cardsList.map(({ heading, content }, index) => <Card key={index} question={heading} answer={content} />)}
     </Grid>
   );
@@ -56,7 +56,7 @@ const Card = ({ question, answer }) => {
     >
       <Typography variant="h6" className={classes.heading}>{question}</Typography>
     </AccordionSummary>
-    <AccordionDetails elevation={3} boxShadow={3}>
+    <AccordionDetails elevation={3} boxshadow={3}>
       <Typography>
         {answer}
       </Typography>
