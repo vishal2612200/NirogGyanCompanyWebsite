@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme) => ({
   },
   contentRight: {
 
-    "& >img": {
-      maxWidth: "100%",
-      maxHeight: "100%"
-    },
+    // "& >img": {
+    //   maxWidth: "100%",
+    //   maxHeight: "100%"
+    // },
     [theme.breakpoints.down("sm")]: {
       width: "90%",
       margin: "0 5%",
@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 contentLeft: {
-  fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-  borderRadius: "10px",
+  // fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+  // borderRadius: "10px",
   [theme.breakpoints.down("sm")]: {
     width: "90%",
     margin: "0 5%",
@@ -101,7 +101,7 @@ const ContentLeft = ({ content }) => {
     const classes = useStyles();
 
     return (
-      <Grid container item  alignContent="center" style={{marginBottom:"4%"}}>
+      <Grid className={classes.contentLeft} container item  alignContent="center" style={{marginBottom:"4%"}}>
         <Grid item>
           <img width="100%" src={imagePath} alt="main" />
         </Grid>
@@ -218,7 +218,7 @@ const ContentRight = ({ content }) => {
     )
 
   }
-  return <Grid container item >
+  return <Grid className={classes.contentRight} container item >
     <HeadingWithCardsList heading={popularPosts.heading} cardsList={popularPosts.cardsList} card={<Card1 />} />
     <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} />
     <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} />
