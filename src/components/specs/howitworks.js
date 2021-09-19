@@ -103,7 +103,7 @@ export default (function () {
 
         Video:{
             header:{
-                heading: "Digital Solutions for Smart Labs & Patients",
+                heading: [{ text: "Digital Solutions for Smart Labs & Patients" }],
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
             },
             videoPanel:{
