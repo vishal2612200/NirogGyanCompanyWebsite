@@ -23,8 +23,6 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
     }
   },
-  card: {
-  },
   evenCard: {
     flexDirection: "row"
   },
