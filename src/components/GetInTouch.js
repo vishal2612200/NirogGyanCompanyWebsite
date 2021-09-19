@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         background: "#3567D6",
         "&> *": {
-            padding: "0.5rem"
+            // padding: "0.5rem"
         },
     },
     block2: {
@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
         color: "#fff !important",
     },
     image: {
-        maxWidth: "100%",
-        maxHeight: "auto"
+        maxWidth: "85%",
+        // maxHeight: "auto"
     },
 
 }));
@@ -35,7 +35,7 @@ export default function GetInTouch({ state: mailingList }) {
 
         <Block content={mailingList.block1} />
         <Block2 content={mailingList.block2} />
-        <Block content={mailingList.block3} padding />
+        <Block content={mailingList.block3}/>
     </Grid>
 
 }

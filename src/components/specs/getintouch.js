@@ -6,7 +6,7 @@ export default (
             GetInTouch: {
 
                 block1: {
-                    imagePath: path.join(process.env.PUBLIC_URL, "about", "get-in-touch-1.png"),
+                    imagePath: path.join(process.env.PUBLIC_URL, "about", "get-in-touch-1.svg"),
 
                 },
                 block2: {
@@ -15,7 +15,7 @@ export default (
                     line3: "+91-7678277891",
                 },
                 block3: {
-                    imagePath: path.join(process.env.PUBLIC_URL, "about", "get-in-touch-2.png"),
+                    imagePath: path.join(process.env.PUBLIC_URL, "about", "get-in-touch-2.svg"),
                 }
             }
         }

@@ -100,5 +100,16 @@ export default (function () {
                 },
             ],
         },
+
+        Video:{
+            header:{
+                heading: "Digital Solutions for Smart Labs & Patients",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
+            },
+            videoPanel:{
+                title: "Main Video",
+                videoLink: "https://www.youtube.com/embed/H0cHIewcQ2M"
+            },
+        },
     };
 })();
