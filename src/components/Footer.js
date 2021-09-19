@@ -73,7 +73,7 @@ const Block = ({ content, ...props }) => {
             </Box>
         </Typography>
         <Box style={{ height: ".25rem" }} />
-        {content.items.map(link => <Typography>
+        {content.items.map((link,  index) => <Typography key={index}>
             <Box fontWeight="fontWeightMedium" m={2}>
                 {link}
             </Box>
@@ -90,7 +90,7 @@ const Block4 = ({ content, ...props }) => {
             </Box>
         </Typography>
         <Box style={{ height: ".4rem" }} />
-        {content.svgitems.map(imagePath => <img style={{ marginRight: "1rem" }} src={imagePath} alt="logo" />)}
+        {content.svgitems.map((imagePath, index) => <img key={index} style={{ marginRight: "1rem" }} src={imagePath} alt="logo" />)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
 }

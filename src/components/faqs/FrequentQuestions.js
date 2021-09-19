@@ -56,7 +56,7 @@ const Card = ({ question, answer }) => {
     >
       <Typography variant="h6" className={classes.heading}>{question}</Typography>
     </AccordionSummary>
-    <AccordionDetails elevation={3} boxShadow={3}>
+    <AccordionDetails elevation={3} boxshadow={3}>
       <Typography>
         {answer}
       </Typography>
