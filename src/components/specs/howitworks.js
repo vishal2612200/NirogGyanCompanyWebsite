@@ -13,7 +13,7 @@ export default (function () {
             },
             contentRight: {
 
-                imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "hero-image.png"),
+                imagePath: path.join(process.env.PUBLIC_URL, "static","howitworks", "hero-image.png"),
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
@@ -26,13 +26,13 @@ export default (function () {
             imagePanel: {
                 digital: {
                     buttonText: "Digital Smart Report",
-                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "report-digital.png")]
+                    images: [path.join(process.env.PUBLIC_URL, "static","howitworks", "report-digital.png")]
                 },
                 pdf: {
                     buttonText: "PDF Smart Report",
-                    images: [path.join(process.env.PUBLIC_URL, "howitworks", "report-pdf.png"),
-                    path.join(process.env.PUBLIC_URL, "howitworks", "report-pdf.png"),
-                    path.join(process.env.PUBLIC_URL, "howitworks", "report-pdf.png")]
+                    images: [path.join(process.env.PUBLIC_URL, "static","howitworks", "report-pdf.png"),
+                    path.join(process.env.PUBLIC_URL, "static","howitworks", "report-pdf.png"),
+                    path.join(process.env.PUBLIC_URL, "static","howitworks", "report-pdf.png")]
                 },
 
             }
@@ -45,7 +45,7 @@ export default (function () {
             },
             cardsList: [
                 {
-                    imagePath: path.join(process.env.PUBLIC_URL, "howitworks", "main-api-integration.svg"),
+                    imagePath: path.join(process.env.PUBLIC_URL, "static","howitworks", "main-api-integration.svg"),
                     heading: "API Integration",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
                     arrowPath: path.join(

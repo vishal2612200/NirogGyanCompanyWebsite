@@ -73,7 +73,7 @@ function App() {
             <Skeleton animation="wave" variant="rect" className={classes.media} />
           <CardContent>
           <Grid container wrap="nowrap">
-            {Array.from(new Array(3)) .map((item, index) => (
+            {Array.from(new Array(3)).map((item, index) => (
               <Box width="33%" marginRight={2} >
                 <Box pt={0.5}>
                   <Skeleton />

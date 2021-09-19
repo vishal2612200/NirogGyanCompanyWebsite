@@ -13,7 +13,7 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "about", "hero-image.png"),
+                imagePath: path.join(process.env.PUBLIC_URL, "static",  "aboutt", "hero-image.png"),
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
 
@@ -25,9 +25,9 @@ export default (function () {
 
             },
             trustedBrandsLogoImages: [
-                path.join(process.env.PUBLIC_URL, "about", "recognised-by-1.png"),
-                path.join(process.env.PUBLIC_URL, "about", "recognised-by-2.png"),
-                path.join(process.env.PUBLIC_URL, "about", "recognised-by-3.png"),
+                path.join(process.env.PUBLIC_URL, "static", "aboutt", "recognised-by-1.png"),
+                path.join(process.env.PUBLIC_URL, "static", "aboutt", "recognised-by-2.png"),
+                path.join(process.env.PUBLIC_URL, "static", "aboutt", "recognised-by-3.png"),
             ],
         },
         Market: {
@@ -41,14 +41,14 @@ export default (function () {
                 },
                 cardsList: [
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "about", "market-card-item-1.png"),
+                        imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "market-card-item-1.png"),
                         textThin: "5+ Years",
                         textBold: "On the market",
                     }
                 ],
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "about", "market-background.png")
+                imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "market-background.png")
             }
         },
 
@@ -65,7 +65,7 @@ export default (function () {
                 cardsList: [],
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "about", "believe-background.png")
+                imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "believe-background.png")
             }
         },
 
@@ -143,7 +143,7 @@ export default (function () {
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar maximus leo, non dignissim risus aliquam eget",
             },
             buttonText: "Discover & Get Support From Our Team",
-            backgroundImage: path.join(process.env.PUBLIC_URL, "about", "helped-organisations-background.png"),
+            backgroundImage: path.join(process.env.PUBLIC_URL, "static", "about", "helped-organisations-background.png"),
         },
 
     };
