@@ -16,10 +16,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem"
 
   },
-  heading: {
-    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-    fontWeight: "700",
-    marginBottom: "2rem",
+  header: {
+     marginBottom: "2rem",
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
     }
@@ -116,9 +114,10 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content }) => {
   const classes = useStyles();
-  return <Grid item >
+  
+  return <Grid item  className={classes.header}>
     <Typography
-      variant="h4">
+      variant="h4" >
       {content.line1}
     </Typography>
 
@@ -144,26 +143,3 @@ const CardsList = ({ content }) => {
 
 
 }
-
-
-// const Card = ({ imagePath, textThin, textBold }) => {
-//   const classes = useStyles();
-
-//   return (
-//     <Grid container className={classes.card}  >
-//       <Grid item xs={4} className={classes.imageBox}>
-//         <img src={imagePath} alt="feature" />
-//       </Grid>
-//       <Grid item xs={8} className={classes.textBox}>
-//         <Typography component="div">
-//           <Box fontWeight="fontWeightLight" m={1}>
-//             {textThin}
-//           </Box>
-//           <Box fontWeight="fontWeightBold" m={1}>
-//             {textBold}
-//           </Box>
-//         </Typography>
-//       </Grid>
-//     </Grid>
-//   )
-// }

@@ -21,8 +21,14 @@ const useStyles = makeStyles((theme) => ({
     },
     block1: {
         fontSize: "1.5rem",
+        [theme.breakpoints.down('sm')]: {
+            "& *": { textAlign: "center", }
+        }
     },
     block2: {
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: "center",
+        }
     },
     buttonContainer: {
         textAlign: "center"
@@ -41,7 +47,10 @@ const useStyles = makeStyles((theme) => ({
         whiteSpace: "nowrap",
         width: "100%",
         "&::placeholder": {
-            color: "#fff"
+            color: "#fff",
+            [theme.breakpoints.down('sm')]: {
+                textAlign: "center",
+            }
         },
         "&:focus": {
             outline: "none"
@@ -57,11 +66,12 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "0rem",
     },
     button: {
+
         borderRadius: "20px",
         padding: "0.5rem 2rem",
         textTransform: "none",
         backgroundColor: "#052E88",
-        color: "white"
+        color: "white",
 
     },
     footertext: {

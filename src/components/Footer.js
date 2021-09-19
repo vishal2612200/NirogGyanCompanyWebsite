@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
 
         "&>div": {
             marginBottom: "2rem"
+        },
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "center",
+            justifyContent: "center",
         }
     },
     heading: {
@@ -23,8 +27,12 @@ const useStyles = makeStyles((theme) => ({
     },
     block: {
         minWidth: "min-content",
+       
+
     },
-    container: { marginRight: "2rem" }
+    container: {
+        marginRight: "2rem"
+    }
 }));
 
 
