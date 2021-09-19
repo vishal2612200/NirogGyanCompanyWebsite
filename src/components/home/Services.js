@@ -10,6 +10,7 @@ import { useInView } from "react-intersection-observer"
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
   },
   cardList: {
     justifyContent: "center",
