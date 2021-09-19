@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const NavContext = createContext();
+export const NavContext = createContext();
 
 export default function NavBar({ state: navBar }) {
   const classes = useStyles();

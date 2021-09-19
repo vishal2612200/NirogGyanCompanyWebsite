@@ -46,6 +46,11 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: "100%",
             maxHeight: "auto"
         }
+    },
+    breadcrumbs: {
+        [theme.breakpoints.down('sm')]:{
+        justifyContent: "center",
+        }
     }
 }));
 
@@ -79,7 +84,7 @@ const ContentLeft = ({ content }) => {
                     {content.heading}
                 </Typography>
             </Grid>
-            <Grid item>
+            <Grid container item className={classes.breadcrumbs}>
                 <Breadcrumbs separator={<Typography
                     variant="h6"
                     style={{ color: "#fff" }}
