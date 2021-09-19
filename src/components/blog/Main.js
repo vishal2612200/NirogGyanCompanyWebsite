@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button , Divider} from "@material-ui/core";
+import { Grid, Button , Divider, Hidden} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -12,25 +12,37 @@ const useStyles = makeStyles((theme) => ({
   },
   commonmargin:{
     marginTop: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+    }
   },
   contentRight: {
 
     "& >img": {
       maxWidth: "100%",
       maxHeight: "100%"
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+      margin: "0 5%",
     }
+
   },
   heading: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontWeight: "700",
     marginBottom: "2rem",
     [theme.breakpoints.down("sm")]: {
-  textAlign: "center",
-}
+      textAlign: "center",
+    }
   },
 contentLeft: {
   fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-    borderRadius: "10px",
+  borderRadius: "10px",
+  [theme.breakpoints.down("sm")]: {
+    width: "90%",
+    margin: "0 5%",
+  }
   },
 imageBox: {
   textAlign: "center",
@@ -63,16 +75,21 @@ export default function Main({ state: main }) {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid item md={1}></Grid>
+      <Hidden smDown>
+        <Grid item md={1}></Grid>
+      </Hidden>
       <Grid item md={6}>
-      <ContentLeft content={main.contentLeft} />
+        <ContentLeft content={main.contentLeft} />
       </Grid>
-      <Grid item md={1}>
-        </Grid>
+      <Hidden smDown>
+        <Grid item md={1}></Grid>
+      </Hidden>
       <Grid item md={3}>
-      <ContentRight content={main.contentRight} />
+        <ContentRight content={main.contentRight} />
       </Grid>
-      <Grid item md={1}></Grid>
+      <Hidden smDown>
+        <Grid item md={1}></Grid>
+      </Hidden>
     </Grid>
   );
 }
@@ -122,7 +139,6 @@ const ContentLeft = ({ content }) => {
     </Grid>
   }
 
-
   return <CardsList content={content.cardsList} />
 
 }
@@ -162,7 +178,7 @@ const ContentRight = ({ content }) => {
 
     return (
       <Grid container className={classes.commonmargin}>
-        <Grid item md={5}  >
+        <Grid item md={5}>
           <img src={imagePath}  alt="doctor" />
         </Grid>
         <Grid item md={1}></Grid>
@@ -171,7 +187,7 @@ const ContentRight = ({ content }) => {
             {date}
           </Typography>
           <Typography color="textPrimary" paragraph>
-            <Box fontWeight="fontWeightBold" m={1}>
+            <Box fontWeight="fontWeightBold">
               {heading}
             </Box>
         </Typography>
