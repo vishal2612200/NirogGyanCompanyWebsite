@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "700",
   },
   accord: {
-  },
+    margin:"auto",
+width:"80%"  },
   summary: {
     backgroundColor: '#F2F0F0',
   }
@@ -44,9 +45,7 @@ const Card = ({ question, answer }) => {
   const [expanded, setExpanded] = React.useState(false);
   return <Accordion className={classes.accord}
     expanded={expanded}
-    elevation={expanded ? 1 : 0}
-
-  >
+    elevation={expanded ? 1 : 0}  >
     <AccordionSummary
       expandIcon={<ExpandMoreIcon style={{ backgroundColor: expanded ? '#3567D6' : '#C4C4C4', color: "#fff", borderRadius: '50%' }} />}
       aria-controls="panel1a-content"
