@@ -98,7 +98,7 @@ const ContentLeft = ({ content }) => {
     threshold: 0.1,
   })
 
-  return <Grid container item direction="column" alignContent="center" >
+  return <Grid container item direction="column" alignContent="center" ref={ref}>
     <Grid item style={{ marginBottom: "4%" }}>
       <Header content={content.header} />
     </Grid>
