@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -94,8 +94,6 @@ export default function Features({ state: features }) {
 
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
-  const [slideIn, setSlideIn] = useState(true);
-  const [slideDirection, setSlideDirection] = useState('down');
   const [ref, inView] = useInView({
     threshold: 0.1,
   })
@@ -105,7 +103,7 @@ const ContentLeft = ({ content }) => {
       <Header content={content.header} />
     </Grid>
     <Grid item>
-      <Grow in={inView} direction={slideDirection} {...(slideIn ? { timeout: 3000 } : {})} >
+      <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
         <div>
           <CardsList content={content.cardsData} />
         </div>

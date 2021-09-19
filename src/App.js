@@ -39,9 +39,89 @@ const useStyles = makeStyles((theme) => ({
     height: '100%'
   },
   media: {
-    height: '77vh',
+    height: '54vh',
   },
+  section: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "77vh",
+    backgroundColor: "#001d30",
+    animation: `$changeBg 5s linear infinite`,
+  },
+  
+  loader: {
+    // position: "absolute",
+    width: "150px",
+    height: "150px",
+    backgroundImage: "linear-gradient(to top, transparent 40%, #03a9f4)",
+    backgroundColor: "inherit",
+    borderRadius: "50%",
+    animation: `$rotate 1s linear infinite`,
+    // outline: 1px solid green;
+  
+    "&::before": {
+      content: `""`,
+      position: "absolute",
+      inset: "20px 20px 0 0",
+      backgroundColor: "inherit",
+      borderRadius: "inherit",
+    },
+  
+    "&::after": {
+      content: `""`,
+      position: "absolute",
+      color: "#03a9f4",
+      top: "50px",
+      right: "-8px",
+      width: "40px",
+      height: "40px",
+      backgroundColor: "currentcolor",
+      borderRadius: "inherit",
+      boxShadow: "0 0 4px, 0 0 16px, 0 0 32px, 0 0 48px, 0 0 96px",
+    }
+  },
+  
+  "@keyframes rotate": {
+    "100%": {
+      transform: "rotate(1turn)"
+    }
+  },
+  
+  "@keyframes changeBg": {
+    "100%": {
+      filter: "hue-rotate(1turn)"
+    }
+  }
 }));
+
+
+function Media(props) {
+  const { loading = false } = props;
+  const classes = useStyles();
+
+  return (
+    <section className={classes.section}>
+      {/* 
+      <Grid container wrap="nowrap">
+      {Array.from(new Array(3)).map((item, index) => (
+        <Box key={index} width="33%" marginRight={2} my={5}>
+            <Skeleton variant="rect"  className={classes.media}/>
+            <Box pt={0.5}>
+              <Skeleton />
+              <Skeleton width="85%"/>
+              <Skeleton width="75%"/>
+              <Skeleton width="50%" />
+            </Box>
+        </Box>
+    ))} 
+    </Grid> */}
+      <div className={classes.loader}></div>
+    </section>
+
+  );
+}
+
 
 function App() {
   // https://github.com/facebook/create-react-app/issues/1765
@@ -70,7 +150,12 @@ function App() {
               }
               subheader={ <Skeleton animation="wave" height={10} width="40%" /> }
             />
-            <Skeleton animation="wave" variant="rect" className={classes.media} />
+            {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
+
+            <Box overflow="hidden">
+              <Media loading />
+            </Box>
+             
           <CardContent>
           <Grid container wrap="nowrap">
             {Array.from(new Array(3)) .map((item, index) => (

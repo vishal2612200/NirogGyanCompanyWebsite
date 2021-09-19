@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Box } from "@material-ui/core";
 import HeadingWithText from "../utils/HeadingWithText";
+import Slide from '@material-ui/core/Slide';
+import { useInView } from "react-intersection-observer"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,18 +63,26 @@ const CardList = ({ cardsData }) => {
 
 const Card = ({ link, title = "YouTube video player" }) => {
   const classes = useStyles();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  })
+
   return (
-    <Grid item className={classes.card}  >
-      <iframe style={{
-        borderRadius: "10px",
-      }}
-        width="auto"
-        height="inherit"
-        src={link}
-        title={title}
-        frameborder="2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
+    <Grid item className={classes.card}   ref={ref}>
+      <Slide direction="up" in={inView} mountOnEnter unmountOnExit>
+        <span>
+        <iframe style={{
+          borderRadius: "10px",
+        }}
+          width="auto"
+          height="inherit"
+          src={link}
+          title={title}
+          frameborder="2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </span>
+      </Slide>
     </Grid>
 
   );

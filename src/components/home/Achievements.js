@@ -4,6 +4,9 @@ import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
+import Grow from "@material-ui/core/Grow"
+import { useInView } from "react-intersection-observer"
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,10 +73,18 @@ export default function Achievements({ state: achievements }) {
 
 const Card = ({ content }) => {
   const classes = useStyles();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  })
+
   return (
-    <Grid item className={classes.card} >
-      <Typography variant="h4">{content.textBig}</Typography>
-      <Typography variant="h6">{content.textSmall}</Typography>
+    <Grid item className={classes.card} ref={ref}>
+      <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
+        <span>
+          <Typography variant="h4">{content.textBig}</Typography>
+          <Typography variant="h6">{content.textSmall}</Typography>
+        </span>
+      </Grow>
     </Grid>
   );
 };
