@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Box } from "@material-ui/core";
+import { Grid, Box, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card1: {
     borderRadius: "50%",
+    boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
 
   },
   "@keyframes backgroundTransitionSmooth": {
@@ -126,7 +127,7 @@ export default function Main({ state: main }) {
         </Grid>
 
         <Grid container item className={classes.evenCard}>
-          <Image reference={refReport} inView={inViewReport} imagePath={main.cardsList[2].imagePath} />
+            <Image reference={refReport} inView={inViewReport} imagePath={main.cardsList[2].imagePath} />
           <Grid container item xs={7} >
 
             <Grid item xs={8}>
