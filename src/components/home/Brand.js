@@ -10,7 +10,10 @@ const useStyles = makeStyles((theme) => ({
   whatsapp: {
     position: "fixed",
     right: "0",
-    top: "50%"
+    top: "50%",
+    [theme.breakpoints.down("sm")]: {
+      width:"80px",
+    }
   },
   image: {
     width: "90%",

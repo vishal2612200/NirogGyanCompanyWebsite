@@ -97,7 +97,7 @@ const Card = ({ message, imagePath, name, organisation, }) => {
 
         </Grid>
 
-        <Grid item>
+        <Grid item style={{ marginTop:"5%" }}>
             <img src={imagePath} alt="client"
                 style={{ height: "100px", width: "100px", padding: "4px", borderRadius: "50%", border: "1px dashed grey" }} />
             <Typography variant="h5">
