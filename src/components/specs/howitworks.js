@@ -50,17 +50,17 @@ export default (function () {
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
                     arrowPath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks", "arrow3.svg"
+                        "static", "howitworks", "arrow3.svg"
                     ),
                     linePath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks", "line2.svg"
+                        "static", "howitworks", "line2.svg"
                     ),
                 },
                 {
                     imagePath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks", "main-software.svg"
+                        "static", "howitworks", "main-software.svg"
                     ),
                     heading: "Software",
                     description: "NirogGyan’s software creates the perfect SmartReport - each test is atomised as ‘card’ & each panel is linked witth the ‘knowledge bank’",
@@ -68,34 +68,32 @@ export default (function () {
                 {
                     imagePath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks",
-                        "main-report.svg"
+                        "static", "howitworks", "main-report.svg"
                     ),
                     heading: "Reports",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
                     arrowPath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks", "arrow1.svg"
+                        "static", "howitworks", "arrow1.svg"
                     ),
                     linePath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks", "line1.svg"
+                        "static", "howitworks", "line1.svg"
                     ),
                 },
                 {
                     imagePath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks",
-                        "main-customer.svg"),
+                        "static", "howitworks", "main-customer.svg"),
                     heading: "Customers",
                     description: "Complete Automation ensures seamless delivery to all customers of clients (the labs)",
                     arrowPath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks", "arrow2.svg"
+                        "static", "howitworks", "arrow2.svg"
                     ),
                     linePath: path.join(
                         process.env.PUBLIC_URL,
-                        "howitworks", "line1.svg"
+                        "static", "howitworks", "line1.svg"
                     ),
                 },
             ],
