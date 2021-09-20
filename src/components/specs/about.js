@@ -87,7 +87,7 @@ export default (function () {
             cardsList: [{
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "about", "expertteam-shweta.png"
+                        "static", "about", "expertteam-shweta.png"
                     ),
                     heading: "Shweta Gandhi",
                     content: "Co-Founder and CEO",
@@ -95,7 +95,7 @@ export default (function () {
                 {
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "about", "expertteam-joy.png"
+                        "static", "about", "expertteam-joy.png"
                     ),
                     heading: "Joyneel Acharya",
                     content: "Product Management",
@@ -103,7 +103,7 @@ export default (function () {
                 {
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "about", "expertteam-kartik.png"
+                        "static", "about", "expertteam-kartik.png"
                     ),
                     heading: "Kartik Tyagi",
                     content: "Technical Head",
@@ -122,7 +122,7 @@ export default (function () {
             cardsList: [{
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "about", "product-consultant-ayush.png"
+                        "static", "about", "product-consultant-ayush.png"
                     ),
                     heading: "Ayush Vora",
                     content: "Technology Expert at NirogGyan",
@@ -135,7 +135,7 @@ export default (function () {
                 {
                     imgPath: path.join(
                         process.env.PUBLIC_URL,
-                        "about", "product-consultant-kartik.png"
+                        "static", "about", "product-consultant-kartik.png"
                     ),
                     heading: "Kartik Tyagi",
                     content: "Technical Head",

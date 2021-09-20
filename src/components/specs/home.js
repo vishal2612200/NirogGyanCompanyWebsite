@@ -44,7 +44,7 @@ export default (function () {
           {
             imagePath: path.join(
               process.env.PUBLIC_URL,
-              "home", "features-item-2.png"
+              "static", "home", "features-item-2.png"
             ),
             textThin: "Knowledge Bank based by",
             textBold: "Evidence-backed, Vetted Content",
@@ -52,7 +52,7 @@ export default (function () {
           {
             imagePath: path.join(
               process.env.PUBLIC_URL,
-              "home",
+              "static", "home",
               "features-item-3.png"
             ),
             textThin: "Add-ons : Multi - language",
