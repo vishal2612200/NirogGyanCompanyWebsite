@@ -103,7 +103,7 @@ const ContentLeft = ({ content }) => {
     return (
       <Grid className={classes.contentLeft} container item  alignContent="center" style={{marginBottom:"4%"}}>
         <Grid item>
-          <img width="100%" src={imagePath} alt="main" />
+          <img width="100%" style={{ borderRadius: "15px"}} src={imagePath} alt="main" />
         </Grid>
         <Grid item className={classes.commonmargin}>
           <Typography variant="h6" color="textSecondary">

@@ -23,7 +23,8 @@ export default function HeadingWithText({ content, ...props }) {
                 variant="h3" gutterBottom
                 style={{
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-                    fontWeight: 600
+                    fontWeight: 900,
+                    fontSize: "2.5rem"
                 }}>
                 {
                     content.heading.map(

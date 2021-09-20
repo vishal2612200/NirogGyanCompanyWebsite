@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: "2rem"
-
+  },
+  headingfont:{
+    fontSize: "1.7rem",
+    fontWeight: "900"
   },
   header: {
      marginBottom: "2rem",
@@ -114,16 +117,16 @@ const Header = ({ content }) => {
   const classes = useStyles();
   
   return <Grid item  className={classes.header}>
-    <Typography
+    <Typography className={classes.headingfont}
       variant="h4" >
       {content.line1}
     </Typography>
 
-    <Typography
+    <Typography className={classes.headingfont}
       variant="h4">
       {content.line2}
     </Typography>
-    <Typography
+    <Typography className={classes.headingfont}
       variant="h4">
       {content.line3}
     </Typography>

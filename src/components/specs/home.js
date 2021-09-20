@@ -31,7 +31,7 @@ export default (function () {
     Features: {
       contentLeft: {
         header: {
-          line1: <><span style={{ color: "#3567D6" }}>Health Knowledge</span>  +   <b>Modern Design</b></>,
+          line1: <><span style={{ color: "#3567D6", fontWeight:"200" }}>Health Knowledge</span>  +   <b>Modern Design</b></>,
           line2: <b>Combine to give you the most</b>,
           line3: "Understandable Medical Reports",
         },

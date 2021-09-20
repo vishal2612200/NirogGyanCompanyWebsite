@@ -50,10 +50,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         textAlign: "center",
         padding: "2rem",
-        "&:first-child>div": {
+        // "&:first-child>div": {
 
-            backgroundColor: "#E9F5FF"
-        }
+        //     backgroundColor: "#E9F5FF"
+        // }
     },
     card: {
         boxShadow: "0px 2px 4px 4px #B8BBBD",
@@ -61,7 +61,8 @@ const useStyles = makeStyles((theme) => ({
         height: "180px",
         padding: "2rem",
         borderRadius: "20px",
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        "&:hover": { backgroundColor: "#E9F5FF" },
     },
     description: {
         fontSize: "1rem"

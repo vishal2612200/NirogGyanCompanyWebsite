@@ -13,9 +13,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
     alignItems: "center",
     overflow: "hidden",
-
-
-
   },
 
   headerContainer: {
@@ -34,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
     backgroundColor: "#1242AC",
-    borderRadius: "10px",
+    borderRadius: "26px",
     color: "#fff",
     padding: "3rem 1rem",
     textAlign: "center",

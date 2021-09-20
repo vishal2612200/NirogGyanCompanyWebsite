@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::after": {
             content: "close-quote",
+            paddingTop: "0.5rem",
             fontSize: "2rem",
             lineHeight: 0,
             verticalAlign: "middle",
