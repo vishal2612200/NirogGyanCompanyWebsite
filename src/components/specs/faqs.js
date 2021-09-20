@@ -12,7 +12,7 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "faqs", "hero-image.png"),
+                imagePath: path.join(process.env.PUBLIC_URL, "static", "faqs", "hero-image.png"),
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
 

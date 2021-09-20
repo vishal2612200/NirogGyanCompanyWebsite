@@ -5,7 +5,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Grid } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 import HeadingWithText from "../utils/HeadingWithText"
 
 const useStyles = makeStyles((theme) => ({
@@ -18,10 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontWeight: "700",
-  },
-  accord: {
-  },
-  summary: {
+  }, summary: {
     backgroundColor: '#F2F0F0',
   }
 
@@ -33,7 +30,10 @@ export default function FrequentQuestions({ state: frequentquestions }) {
   return (
     <Grid container direction="column" className={classes.root} alignItems="space-evenly">
       <HeadingWithText content={frequentquestions.header} />
-      {frequentquestions.cardsList.map(({ heading, content }, index) => <Card key={index} question={heading} answer={content} />)}
+      <Container>{
+        frequentquestions.cardsList.map(
+          ({ heading, content }, index) => <Card key={index} question={heading} answer={content} />)
+      }</Container>
     </Grid>
   );
 }
@@ -42,11 +42,15 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 const Card = ({ question, answer }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  let boxShadow ={};
+  if (expanded)
+    boxShadow = {
+      boxShadow: "-1px 6px 13px 4px rgba(0,0,0,0.31)"
+    }
+  
   return <Accordion className={classes.accord}
-    expanded={expanded}
-    elevation={expanded ? 1 : 0}
-
-  >
+    onClick={()=>setExpanded(!expanded)}
+    elevation={expanded ? 1 : 0}  style={{marginBottom:"20px", ...boxShadow}}>
     <AccordionSummary
       expandIcon={<ExpandMoreIcon style={{ backgroundColor: expanded ? '#3567D6' : '#C4C4C4', color: "#fff", borderRadius: '50%' }} />}
       aria-controls="panel1a-content"

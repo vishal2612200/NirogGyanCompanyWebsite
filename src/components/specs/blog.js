@@ -12,7 +12,7 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "blog", "hero-image.png"),
+                imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "hero-image.png"),
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
@@ -20,7 +20,7 @@ export default (function () {
             contentLeft: {
                 cardsList: [
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-health-literacy.png"),
+                        imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-health-literacy.png"),
                         date: "Sept 02, 2021",
                         content: {
                             heading: "No Health Literacy? No Health.",
@@ -29,7 +29,7 @@ export default (function () {
                         readmore: <>Read More &rarr;</>
                     },
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-health-literacy.png"),
+                        imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-health-literacy.png"),
                         date: "Sept 02, 2021",
                         content: {
                             heading: "No Health Literacy? No Health.",
@@ -45,17 +45,17 @@ export default (function () {
                     heading: "Popular Posts",
                     cardsList: [
                         {
-                            imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-doctor.png"),
+                            imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-doctor.png"),
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         },
                         {
-                            imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-doctor.png"),
+                            imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-doctor.png"),
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         },
                         {
-                            imagePath: path.join(process.env.PUBLIC_URL, "blog", "blog-doctor.png"),
+                            imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-doctor.png"),
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         }

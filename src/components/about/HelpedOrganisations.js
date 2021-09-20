@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Nunito Sans"',
         fontSize: "24px",
         // textOverflow: "ellipsis"
-        borderRadius: "30px"
+        borderRadius: "40px"
     },
     text: {
         margin: theme.spacing(1),

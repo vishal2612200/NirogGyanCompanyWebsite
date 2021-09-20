@@ -66,21 +66,18 @@ const Card = ({ link, title = "YouTube video player" }) => {
   })
 
   return (
-    <Grid item className={classes.card}   ref={ref}>
-      <Slide direction="up" in={inView} mountOnEnter unmountOnExit>
-        <span>
-        <iframe style={{
-          borderRadius: "10px",
-        }}
-          width="auto"
-          height="inherit"
-          src={link}
-          title={title}
-          frameborder="2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-      </span>
-      </Slide>
+    <Grid item className={classes.card}  >
+      <iframe style={{
+        borderRadius: "10px",
+        aspectRatio: "425/280"
+      }}
+        
+        height="220rem"
+        src={link}
+        title={title}
+        frameborder="2"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
     </Grid>
 
   );

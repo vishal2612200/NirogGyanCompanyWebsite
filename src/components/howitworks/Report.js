@@ -4,13 +4,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import HeadingWithText from "../utils/HeadingWithText";
-
+import { useMediaQuery, useTheme } from "@material-ui/core"
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#E5E5E5"
   },
 
-  buttonSet: {},
+  buttonSet: {
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: "center"
+    }
+  },
   imagesContainer: {},
   image: {
     maxWidth: "100%",
@@ -31,9 +35,14 @@ export default function Report({ state: report }) {
   );
 }
 
+
+
 const ImagePanel = ({ content }) => {
   const classes = useStyles();
   const [activeReport, setActiveReport] = useState("pdf");
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  
   return (
 
     <Grid container item className={classes.imagePanel} direction="column" justifyContent="flex-start">
@@ -55,8 +64,8 @@ const ImagePanel = ({ content }) => {
         </Grid>
       </Box>
 
-      <Grid container item className={classes.imagesContainer}>
-        {content[activeReport].images.map((imagePath) => (
+      <Grid container item className={classes.imagesContainer} justifyContent="center">
+        {content[activeReport].images.slice(0, isSmallScreen ? 1 : 3).map((imagePath) => (
           <Grid item>
             <img src={imagePath} alt="report" className={classes.image} />
           </Grid>

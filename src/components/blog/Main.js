@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import Box from '@material-ui/core/Box';
+import { useTheme, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,7 +54,6 @@ imageBox: {
   }
 },
 textBox: {
-
   "&>*": {
     textAlign: "left",
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
@@ -63,9 +63,8 @@ textBox: {
 },
 card: {
   border: "1px solid #B8BBBD",
-    marginBottom: "2rem"
-
-}
+  marginBottom: "2rem"
+  }
 
 })
 );
@@ -135,7 +134,7 @@ const ContentLeft = ({ content }) => {
     return <Grid container item>
       {
         content.map(
-          ({ imagePath, date, content, readmore }, index) => (<Card {...{ imagePath, date, content, readmore }} key={index} />))}
+          (props, index) => (<Card {...props } key={index} />))}
     </Grid>
   }
 
@@ -149,15 +148,26 @@ const ContentRight = ({ content }) => {
   const classes = useStyles();
   const { popularPosts, categoriesList, categoriesButtons } = content;
 
-  const HeadingWithCardsList = ({ heading, cardsList, card }) => {
+  return <Grid container item >
+    <HeadingWithCardsList heading={popularPosts.heading} cardsList={popularPosts.cardsList} card={<Card1 />} />
+    <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} />
+    <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} />
+  </Grid>
+
+}
 
 
+const HeadingWithCardsList = ({ heading, cardsList, card }) => {
+
+    const classes = useStyles();
+    
     const CardsList = () => {
       const classes = useStyles();
-      return <Grid container item className={classes.commonmargin}>
+      return <Grid container item className={classes.commonmargin} justifyContent="center" style={{ padding:"2rem 0" }} >
         {
           cardsList.map(
-            (props, index) => (React.cloneElement(card, { ...props })))
+            (props, index) => <card.type  {...card.props} {...props}  />
+          )
         }
       </Grid>
     }
@@ -173,9 +183,11 @@ const ContentRight = ({ content }) => {
     </Grid>
   }
 
+  
+ 
   const Card1 = ({ imagePath, date, heading }) => {
     const classes = useStyles();
-
+ const isSmallScreen = useSmallScreen();
     return (
       <Grid container className={classes.commonmargin}>
         <Grid item md={5}>
@@ -192,15 +204,15 @@ const ContentRight = ({ content }) => {
             </Box>
         </Typography>
         </Grid>
-        
-
       </Grid>
     )
   }
-  const Card2 = ({ text, key }) => {
-
-    return (<Grid container item className={classes.commonmargin}>
-      <Grid item style={{ marginRight: "10px" }}>
+const Card2 = ({ text, key }) => {
+    
+  const classes = useStyles();
+  const isSmallScreen = useSmallScreen();
+  return (<Grid container item className={classes.commonmargin} justifyContent={isSmallScreen?"center":"flex-start"}>
+      <Grid item style={{ marginRight: "10px"}}>
         <Typography variant="h4" color="primary" > <>  &#8226; </></Typography>
       </Grid>
       <Typography variant="h6" color="textSecondary" >
@@ -223,6 +235,13 @@ const ContentRight = ({ content }) => {
     <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} />
     <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} />
   </Grid>
-
+  )
 }
 
+
+function useSmallScreen() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+ 
+  return isSmallScreen;
+}
