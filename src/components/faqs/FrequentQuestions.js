@@ -42,9 +42,10 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 const Card = ({ question, answer }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+
   return <Accordion className={classes.accord}
-    expanded={expanded}
-    elevation={expanded ? 1 : 0}  >
+    onClick={()=>setExpanded(!expanded)}
+    elevation={expanded ? 1 : 0}  style={{marginBottom:"20px"}}>
     <AccordionSummary
       expandIcon={<ExpandMoreIcon style={{ backgroundColor: expanded ? '#3567D6' : '#C4C4C4', color: "#fff", borderRadius: '50%' }} />}
       aria-controls="panel1a-content"
