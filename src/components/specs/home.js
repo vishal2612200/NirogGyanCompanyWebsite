@@ -135,9 +135,9 @@ export default (function () {
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto pariatur quas repellendus numquam assumenda, mollitia possimus similique sed modi, iure dicta velit, quaerat voluptatibus saepe aliquam in libero est commodi.",
       },
       videoLinks: [
-        "https://www.youtube.com/embed/H0cHIewcQ2M",
-        "https://www.youtube.com/embed/MlLAXpoxNvQ",
-        "https://www.youtube.com/embed/L4aPen8hCL8",
+        "https://www.youtube.com/embed/H0cHIewcQ2M/",
+        "https://www.youtube.com/embed/MlLAXpoxNvQ/",
+        "https://www.youtube.com/embed/L4aPen8hCL8/",
       ],
     },
     Report: {

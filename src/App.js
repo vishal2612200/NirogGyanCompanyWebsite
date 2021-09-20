@@ -52,77 +52,77 @@ function App() {
   const [loading, setLoading] = useState("true");
   const classes = useStyles();
   useEffect(() => {
-      setTimeout(() => setLoading(false), 2000)
+    setTimeout(() => setLoading(false), 2000)
   }, []);
 
   return (
     <div className="App">
-      { loading
-  ?
-          <Card className={classes.card}>
-            <CardHeader
-              avatar={
-                  <Skeleton animation="wave" variant="circle" width={40} height={40} />
-              }
-              title={ 
-                // 'Niroggyan'
-                  <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
-              }
-              subheader={ <Skeleton animation="wave" height={10} width="40%" /> }
-            />
-            <Skeleton animation="wave" variant="rect" className={classes.media} />
+      {loading
+        ?
+        <Card className={classes.card}>
+          <CardHeader
+            avatar={
+              <Skeleton animation="wave" variant="circle" width={40} height={40} />
+            }
+            title={
+              // 'Niroggyan'
+              <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
+            }
+            subheader={<Skeleton animation="wave" height={10} width="40%" />}
+          />
+          <Skeleton animation="wave" variant="rect" className={classes.media} />
           <CardContent>
-          <Grid container wrap="nowrap">
-            {Array.from(new Array(3)).map((item, index) => (
-              <Box width="33%" marginRight={2} >
-                <Box pt={0.5}>
-                  <Skeleton />
-                  <Skeleton width="60%" />
+            <Grid container wrap="nowrap">
+              {Array.from(new Array(3)).map((item, index) => (
+                <Box width="33%" marginRight={2} >
+                  <Box pt={0.5}>
+                    <Skeleton />
+                    <Skeleton width="60%" />
+                  </Box>
                 </Box>
-              </Box>
-            ))}
-          </Grid>
-          {/* <React.Fragment>
+              ))}
+            </Grid>
+            {/* <React.Fragment>
                 <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
                 <Skeleton animation="wave" height={10} width="80%" />
               </React.Fragment> */}
           </CardContent>
         </Card>
         :
-      <PageContext.Provider value={{ page, setPage }}>
-        <NavBar state={state.NavBar} />
+        <PageContext.Provider value={{ page, setPage }}>
+          <NavBar state={state.NavBar} />
 
-        <Router basename={process.env.PUBLIC_URL}>
-          <Switch>
-            <Route path="/home">
-              <Home state={state.home} />
-            </Route>
-          <Route path="/about">
-              <About state={state.about} >
-                <GetInTouch state={state.GetInTouch} />
-              </About>
-            </Route>
-             <Route path="/how-it-works">
-              <HowItWorks state={state.howitworks} >
-                <GetInTouch state={state.GetInTouch} />
-              </HowItWorks>
-            </Route>
-             <Route path="/blog">
-              <Blog state={state.blog} >
-                <GetInTouch state={state.GetInTouch} />
-              </Blog>
-            </Route>
-            <Route path="/faqs">
-              <FAQS state={state.faqs} />
-            </Route> 
-            <Route path="/">
-              <Home state={state.home} />
-            </Route>
-          </Switch>
-        </Router>
-        <Footer state={state.Footer} />
-      </PageContext.Provider>
-     }
+          <Router basename={process.env.PUBLIC_URL}>
+            <Switch>
+              <Route path="/home">
+                <Home state={state.home} />
+              </Route>
+              <Route path="/about">
+                <About state={state.about} >
+                  <GetInTouch state={state.GetInTouch} />
+                </About>
+              </Route>
+              <Route path="/how-it-works">
+                <HowItWorks state={state.howitworks} >
+                  <GetInTouch state={state.GetInTouch} />
+                </HowItWorks>
+              </Route>
+              <Route path="/blog">
+                <Blog state={state.blog} >
+                  <GetInTouch state={state.GetInTouch} />
+                </Blog>
+              </Route>
+              <Route path="/faqs">
+                <FAQS state={state.faqs} />
+              </Route>
+              <Route path="/">
+                <Home state={state.home} />
+              </Route>
+            </Switch>
+          </Router>
+          <Footer state={state.Footer} />
+        </PageContext.Provider>
+      }
     </div>
   );
 }

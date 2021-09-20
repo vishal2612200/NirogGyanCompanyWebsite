@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         textAlign: "left",
         color: "#fff !important",
+        [theme.breakpoints.down('sm')]: {
+            textAlign: "center",
+            margin: "auto auto",
+        }
     },
     image: {
         maxWidth: "100%",
@@ -57,7 +61,7 @@ const Block = ({ content }) => {
 
 const Block2 = ({ content }) => {
     const classes = useStyles()
-    return <Grid item md={4}>
+    return <Grid item md={4} className={classes.block2} >
             <Typography variant="paragraph" style={{color:"#fff"}}>
                 <Box fontWeight="fontWeightBold" m={1}>
                     {content.line1}

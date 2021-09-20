@@ -41,10 +41,15 @@ const useStyles = makeStyles((theme) => ({
     contentRight: {
         alignItems: "flex-end",
        verticalAlign: "middle",
-    
+    padding:"2rem 2rem 0 0",
         "& >img": {
             maxWidth: "100%",
             maxHeight: "auto"
+        }
+    },
+    breadcrumbs: {
+        [theme.breakpoints.down('sm')]:{
+        justifyContent: "center",
         }
     }
 }));
@@ -70,7 +75,11 @@ const ContentLeft = ({ content }) => {
 
         { backgroundImage: `url(${content.backgroundImage})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "bottom" }}>
 
+<<<<<<< HEAD
         <Grid container md={6}  direction="column">
+=======
+        <Grid container md={8} direction="column">
+>>>>>>> main
             <Grid item>
                 <Typography
                     variant="h2"
@@ -79,7 +88,7 @@ const ContentLeft = ({ content }) => {
                     {content.heading}
                 </Typography>
             </Grid>
-            <Grid item>
+            <Grid container item className={classes.breadcrumbs}>
                 <Breadcrumbs separator={<Typography
                     variant="h6"
                     style={{ color: "#fff" }}
@@ -107,7 +116,7 @@ const ContentLeft = ({ content }) => {
 const ContentRight = ({ content }) => {
     const classes = useStyles();
 
-    return <Grid  item md={6} className={classes.contentRight}>
+    return <Grid  item md={6} className={classes.contentRight} >
         <img src={content.imagePath} alt="doctor" />
     </Grid>
 }
