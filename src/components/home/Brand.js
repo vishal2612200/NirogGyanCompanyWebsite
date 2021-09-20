@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "1.5rem 0"
   },
   whatsapp: {
+    position: "fixed",
     textAlign: "center",
   },
   image: {
