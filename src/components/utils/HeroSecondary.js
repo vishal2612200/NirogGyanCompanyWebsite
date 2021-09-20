@@ -75,11 +75,7 @@ const ContentLeft = ({ content }) => {
 
         { backgroundImage: `url(${content.backgroundImage})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "bottom" }}>
 
-<<<<<<< HEAD
-        <Grid container md={6}  direction="column">
-=======
         <Grid container md={8} direction="column">
->>>>>>> main
             <Grid item>
                 <Typography
                     variant="h2"
