@@ -42,10 +42,15 @@ export default function FrequentQuestions({ state: frequentquestions }) {
 const Card = ({ question, answer }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
+  let boxShadow ={};
+  if (expanded)
+    boxShadow = {
+      boxShadow: "-1px 6px 13px 4px rgba(0,0,0,0.31)"
+    }
+  
   return <Accordion className={classes.accord}
     onClick={()=>setExpanded(!expanded)}
-    elevation={expanded ? 1 : 0}  style={{marginBottom:"20px"}}>
+    elevation={expanded ? 1 : 0}  style={{marginBottom:"20px", ...boxShadow}}>
     <AccordionSummary
       expandIcon={<ExpandMoreIcon style={{ backgroundColor: expanded ? '#3567D6' : '#C4C4C4', color: "#fff", borderRadius: '50%' }} />}
       aria-controls="panel1a-content"
