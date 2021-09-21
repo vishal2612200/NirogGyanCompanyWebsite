@@ -13,10 +13,7 @@ const useStyles = makeStyles((theme) => ({
     top: "50%",
     [theme.breakpoints.down("sm")]: {
       width:"80px",
-    }
-  },
-  image: {
-    width: "90%",
+    } 
   }
 }));
 

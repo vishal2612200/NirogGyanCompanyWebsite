@@ -1,5 +1,28 @@
 import * as path from "path";
 
+import heroImage from "../about/static/imgs/hero-image.png"
+
+import recognisedBy1 from "../about/static/imgs/recognised-by-1.png"
+import recognisedBy2 from "../about/static/imgs/recognised-by-2.png"
+import recognisedBy3 from "../about/static/imgs/recognised-by-3.png"
+
+import marketCardItem1 from "../about/static/imgs/market-card-item-1.png"
+import marketBackground from "../about/static/imgs/market-background.png"
+
+import believeBackground from "../about/static/imgs/believe-background.png"
+
+
+import expertTeamShweta from "../about/static/imgs/expertteam-shweta.png"
+import expertTeamJoy from "../about/static/imgs/expertteam-joy.png"
+import expertTeamKartik from "../about/static/imgs/expertteam-kartik.png"
+
+import productConsultantAyush from "../about/static/imgs/product-consultant-ayush.png"
+import productConsultantErik from "../about/static/imgs/product-consultant-erik.png"
+import productConsultantKartik from "../about/static/imgs/product-consultant-kartik.png"
+
+import helpedOrganisationsBackground from "../about/static/imgs/helped-organisations-background.png"
+
+
 export default (function () {
     return {
 
@@ -14,12 +37,12 @@ export default (function () {
                     text: "About",
                     link: "/about"
                 }],
-                backgroundImage: "static/background-curve.png",
+                backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
 
 
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "static", "aboutt", "hero-image.png"),
+                imagePath: heroImage,
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
 
@@ -32,11 +55,7 @@ export default (function () {
                 }],
 
             },
-            trustedBrandsLogoImages: [
-                path.join(process.env.PUBLIC_URL, "static", "about-t", "recognised-by-1.png"),
-                path.join(process.env.PUBLIC_URL, "static", "about-t", "recognised-by-2.png"),
-                path.join(process.env.PUBLIC_URL, "static", "about-t", "recognised-by-3.png"),
-            ],
+            trustedBrandsLogoImages: [recognisedBy1, recognisedBy2, recognisedBy3],
         },
         Market: {
             contentLeft: {
@@ -48,13 +67,13 @@ export default (function () {
                     },
                 },
                 cardsList: [{
-                    imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "market-card-item-1.png"),
+                    imagePath: marketCardItem1,
                     textThin: "5+ Years",
                     textBold: "On the market",
                 }],
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "market-background.png")
+                imagePath: marketBackground
             }
         },
 
@@ -72,7 +91,7 @@ export default (function () {
                 cardsList: [],
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "believe-background.png")
+                imagePath: believeBackground
             }
         },
 
@@ -85,29 +104,20 @@ export default (function () {
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
             cardsList: [{
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "about", "expertteam-shweta.png"
-                    ),
-                    heading: "Shweta Gandhi",
-                    content: "Co-Founder and CEO",
-                },
-                {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "about", "expertteam-joy.png"
-                    ),
-                    heading: "Joyneel Acharya",
-                    content: "Product Management",
-                },
-                {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "about", "expertteam-kartik.png"
-                    ),
-                    heading: "Kartik Tyagi",
-                    content: "Technical Head",
-                }
+                imgPath: expertTeamShweta,
+                heading: "Shweta Gandhi",
+                content: "Co-Founder and CEO",
+            },
+            {
+                imgPath: expertTeamJoy,
+                heading: "Joyneel Acharya",
+                content: "Product Management",
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Kartik Tyagi",
+                content: "Technical Head",
+            }
             ],
         },
 
@@ -120,26 +130,20 @@ export default (function () {
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
             cardsList: [{
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "about", "product-consultant-ayush.png"
-                    ),
-                    heading: "Ayush Vora",
-                    content: "Technology Expert at NirogGyan",
-                },
-                {
-                    imgPath: "static/about/product-consultant-erik.png",
-                    heading: "Erik Azulay",
-                    content: "International Strategy",
-                },
-                {
-                    imgPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "about", "product-consultant-kartik.png"
-                    ),
-                    heading: "Kartik Tyagi",
-                    content: "Technical Head",
-                }
+                imgPath: productConsultantAyush,
+                heading: "Ayush Vora",
+                content: "Technology Expert at NirogGyan",
+            },
+            {
+                imgPath: productConsultantErik,
+                heading: "Erik Azulay",
+                content: "International Strategy",
+            },
+            {
+                imgPath: productConsultantKartik,
+                heading: "Kartik Tyagi",
+                content: "Technical Head",
+            }
             ],
         },
         HelpedOrganisations: {
@@ -150,7 +154,7 @@ export default (function () {
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar maximus leo, non dignissim risus aliquam eget",
             },
             buttonText: "Discover & Get Support From Our Team",
-            backgroundImage: path.join(process.env.PUBLIC_URL, "static", "about", "helped-organisations-background.png"),
+            backgroundImage: helpedOrganisationsBackground
         },
 
     };

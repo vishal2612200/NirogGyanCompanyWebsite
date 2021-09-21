@@ -1,5 +1,8 @@
 import * as path from "path";
 
+
+import heroImage from "../faqs/static/imgs/hero-image.png"
+
 export default (function () {
     return {
         HeroSection: {
@@ -12,7 +15,7 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL, "static", "faqs", "hero-image.png"),
+                imagePath: heroImage,
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
 

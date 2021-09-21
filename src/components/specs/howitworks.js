@@ -1,5 +1,19 @@
 import * as path from "path";
 
+
+import heroImage from "../howitworks/static/imgs/hero-image.png"
+import reportDigital from "../howitworks/static/imgs/report-digital.png"
+import reportPdf from "../howitworks/static/imgs/report-pdf.png"
+import arrow3 from "../howitworks/static/imgs/arrow3.svg"
+import line2 from "../howitworks/static/imgs/line2.svg"
+import mainSoftware from "../howitworks/static/imgs/main-software.png"
+import mainReport from "../howitworks/static/imgs/main-report.png"
+import arrow1 from "../howitworks/static/imgs/arrow1.svg"
+import line1 from "../howitworks/static/imgs/line1.svg"
+import mainCustomer from "../howitworks/static/imgs/main-customer.png"
+import arrow2 from "../howitworks/static/imgs/arrow2.svg"
+
+
 export default (function () {
     return {
         HeroSection: {
@@ -8,12 +22,10 @@ export default (function () {
                 heading: "How it Works",
                 breadcrumbs: [{ text: "Home", link: "/home" }, { text: "How It Works", link: "/how-it-works" }],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
-
-
             },
             contentRight: {
 
-                imagePath: path.join(process.env.PUBLIC_URL, "static","howitworks", "hero-image.png"),
+                imagePath: heroImage,
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
@@ -26,13 +38,15 @@ export default (function () {
             imagePanel: {
                 digital: {
                     buttonText: "Digital Smart Report",
-                    images: [path.join(process.env.PUBLIC_URL, "static","howitworks", "report-digital.png")]
+                    images: [reportDigital]
                 },
                 pdf: {
                     buttonText: "PDF Smart Report",
-                    images: [path.join(process.env.PUBLIC_URL, "static","howitworks", "report-pdf.png"),
-                    path.join(process.env.PUBLIC_URL, "static","howitworks", "report-pdf.png"),
-                    path.join(process.env.PUBLIC_URL, "static","howitworks", "report-pdf.png")]
+                    images: [
+                        reportPdf,
+                        reportPdf,
+                        reportPdf
+                    ]
                 },
 
             }
@@ -45,56 +59,30 @@ export default (function () {
             },
             cardsList: [
                 {
-                    imagePath: path.join(process.env.PUBLIC_URL, "static","howitworks", "main-api-integration.svg"),
+                    imagePath: "main-api-integration.svg",
                     heading: "API Integration",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
-                    arrowPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "arrow3.svg"
-                    ),
-                    linePath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "line2.svg"
-                    ),
+                    arrowPath:  arrow3 ,
+                    linePath:  line2 ,
                 },
                 {
-                    imagePath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "main-software.svg"
-                    ),
+                    imagePath:  mainSoftware ,
                     heading: "Software",
                     description: "NirogGyan’s software creates the perfect SmartReport - each test is atomised as ‘card’ & each panel is linked witth the ‘knowledge bank’",
                 },
                 {
-                    imagePath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "main-report.svg"
-                    ),
+                    imagePath:  mainReport ,
                     heading: "Reports",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
-                    arrowPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "arrow1.svg"
-                    ),
-                    linePath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "line1.svg"
-                    ),
+                    arrowPath:  arrow1 ,
+                    linePath:  line1 ,
                 },
                 {
-                    imagePath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "main-customer.svg"),
+                    imagePath:  mainCustomer ,
                     heading: "Customers",
                     description: "Complete Automation ensures seamless delivery to all customers of clients (the labs)",
-                    arrowPath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "arrow2.svg"
-                    ),
-                    linePath: path.join(
-                        process.env.PUBLIC_URL,
-                        "static", "howitworks", "line1.svg"
-                    ),
+                    arrowPath:  arrow2 ,
+                    linePath:  line1 ,
                 },
             ],
         },

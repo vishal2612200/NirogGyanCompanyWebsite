@@ -1,5 +1,13 @@
 import * as path from "path";
 
+import heroImage from "../blog/static/imgs/hero-image.png"
+
+import blogHealthLiteracy from "../blog/static/imgs/blog-health-literacy.png"
+import blogDoctor from "../blog/static/imgs/blog-doctor.png"
+
+
+
+
 export default (function () {
     return {
         HeroSection: {
@@ -12,7 +20,7 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "hero-image.png"),
+                imagePath: heroImage,
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
@@ -20,7 +28,7 @@ export default (function () {
             contentLeft: {
                 cardsList: [
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-health-literacy.png"),
+                        imagePath: blogHealthLiteracy,
                         date: "Sept 02, 2021",
                         content: {
                             heading: "No Health Literacy? No Health.",
@@ -29,7 +37,7 @@ export default (function () {
                         readmore: <>Read More &rarr;</>
                     },
                     {
-                        imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-health-literacy.png"),
+                        imagePath: blogHealthLiteracy,
                         date: "Sept 02, 2021",
                         content: {
                             heading: "No Health Literacy? No Health.",
@@ -45,17 +53,17 @@ export default (function () {
                     heading: "Popular Posts",
                     cardsList: [
                         {
-                            imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-doctor.png"),
+                            imagePath: blogDoctor,
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         },
                         {
-                            imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-doctor.png"),
+                            imagePath: blogDoctor,
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         },
                         {
-                            imagePath: path.join(process.env.PUBLIC_URL,"static" ,"blog", "blog-doctor.png"),
+                            imagePath: blogDoctor,
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         }
@@ -64,20 +72,26 @@ export default (function () {
                 categoriesList: {
                     heading: "Categories",
                     cardsList: [
-                        { 
-                            text: "Corporate Business" 
+                        {
+                            text: "Corporate Business"
                         },
-                        { 
-                            text: "Corporate Business" 
+                        {
+                            text: "Corporate Business"
                         },
-                        { 
-                            text: "Corporate Business" 
+                        {
+                            text: "Corporate Business"
                         }
                     ]
                 },
                 categoriesButtons: {
                     heading: "Categories",
-                    cardsList: [{ text: "Adventure", key: "1" }, { text: "Portfolio", key: "2" }, { text: "Digital", key: "3" }, { text: "Adventure", key: "4" }, { text: "Portfolio", key: "5" }, { text: "Digital", key: "6" },],
+                    cardsList: [
+                        { text: "Adventure", key: "1" },
+                        { text: "Portfolio", key: "2" },
+                        { text: "Digital", key: "3" }, 
+                        { text: "Adventure", key: "4" }, 
+                        { text: "Portfolio", key: "5" }, 
+                        { text: "Digital", key: "6" },],
                 },
 
 

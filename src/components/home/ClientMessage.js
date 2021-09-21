@@ -89,7 +89,7 @@ const CardsList = ({ content }) => {
 
 const Card = ({ message, imagePath, name, organisation, }) => {
     const classes = useStyles();
-    return (<Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
+    return (<Grid container  item justifyContent="space-around" alignItems="center" className={classes.card} >
         <Grid item>
             <Typography variant="h6" color="textSecondary" className={classes.message}>
                 <i>{message}</i>
@@ -97,7 +97,7 @@ const Card = ({ message, imagePath, name, organisation, }) => {
 
         </Grid>
 
-        <Grid item style={{ marginTop:"5%" }}>
+        <Grid item style={{marginTop:"5%"}}>
             <img src={imagePath} alt="client"
                 style={{ height: "100px", width: "100px", padding: "4px", borderRadius: "50%", border: "1px dashed grey" }} />
             <Typography variant="h5">

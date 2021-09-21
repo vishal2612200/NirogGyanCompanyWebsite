@@ -1,5 +1,45 @@
 import * as path from "path";
 
+import heroImage from "../home/static/imgs/hero-image.png"
+
+import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.png"
+import brandDrDangLabs from "../home/static/imgs/brand-dr-dang-labs.png"
+import brandMedlife from "../home/static/imgs/brand-medlife.png"
+import brandNiramaya from "../home/static/imgs/brand-niramaya.png"
+
+
+import brandWhatsappIcon from "../home/static/imgs/brand-whatsapp-icon.svg"
+
+import featuresItem1 from "../home/static/imgs/features-item-1.png"
+import featuresItem2 from "../home/static/imgs/features-item-2.png"
+import featuresItem3 from "../home/static/imgs/features-item-3.png"
+
+
+import servicesPdfWhatsapp from "../home/static/imgs/services-pdf-whatsapp.png"
+import servicesMarketing from "../home/static/imgs/services-marketing.png"
+import servicesAffordable from "../home/static/imgs/services-affordable.png"
+import servicesBackground from "../home/static/imgs/services-background.png"
+import servicesTemplates from "../home/static/imgs/services-templates.png"
+import servicesCorporateOfferings from "../home/static/imgs/services-corporate-offerings.png"
+import servicesInstant from "../home/static/imgs/services-instant.png"
+
+import reportVitamin from "../home/static/imgs/report-vitamin.png"
+import reportKidney from "../home/static/imgs/report-kidney.png"
+import reportElectrolyte from "../home/static/imgs/report-electrolyte.png"
+import reportDiabetes from "../home/static/imgs/report-diabetes.png"
+import reportBigReport from "../home/static/imgs/report-big-report.png"
+
+import achievementsBackground1 from "../home/static/imgs/achievements-background-1.png"
+import achievementsBackground2 from "../home/static/imgs/achievements-background-2.png"
+
+import clientMessage1 from "../home/static/imgs/client-message-1.png"
+import clientMessageBackground from "../home/static/imgs/client-message-background.png"
+
+
+import featuresBig from "../home/static/imgs/features-big.png"
+
+
+
 export default (function () {
   return {
 
@@ -11,21 +51,24 @@ export default (function () {
         buttons: { services: "our Services", watchVideo: "Watch Video" },
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "static","home", "hero-image.png"),
+        imagePath: heroImage,
       },
       linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
     Brand: {
       header: {
-        heading: [{ text: "Trusted by the best" }, { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight:"200" } }],
+        heading: [
+          { text: "Trusted by the best" },
+          { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight: "200" } }
+        ],
       },
       trustedBrandsLogoImages: [
-        path.join(process.env.PUBLIC_URL, "static","home", "brand-crelio-health.png"),
-        path.join(process.env.PUBLIC_URL, "static","home", "brand-dr-dang-labs.png"),
-        path.join(process.env.PUBLIC_URL, "static","home", "brand-medlife.png"),
-        path.join(process.env.PUBLIC_URL, "static","home", "brand-niramaya.png"),
+        brandCrelioHealth,
+        brandDrDangLabs,
+        brandMedlife,
+        brandNiramaya,
       ],
-      whatsapp: path.join(process.env.PUBLIC_URL, "static","home", "brand-whatsapp-icon.svg"),
+      whatsapp: brandWhatsappIcon,
 
     },
     Features: {
@@ -37,96 +80,75 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "static","home", "features-item-1.png"),
+            imagePath: featuresItem1,
             textThin: "Software covering 250+",
             textBold: "Pathology Biomarkers",
           },
           {
-            imagePath: path.join(
-              process.env.PUBLIC_URL,
-              "static", "home", "features-item-2.png"
-            ),
+            imagePath: featuresItem2,
             textThin: "Knowledge Bank based by",
             textBold: "Evidence-backed, Vetted Content",
           },
           {
-            imagePath: path.join(
-              process.env.PUBLIC_URL,
-              "static", "home",
-              "features-item-3.png"
-            ),
+            imagePath: featuresItem3,
             textThin: "Add-ons : Multi - language",
             textBold: "Content, Graphs, Analytics",
           },
         ],
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "static","home", "features-big.png")
+        imagePath: featuresBig
       },
     },
 
     Services: {
       header: {
-        heading: [{ text: "The best" }, { text: "Patient-Engagement Tool", style: { color: "#3567D6", fontWeight:"200" } }, { text: " out there" }],
+        heading: [
+          { text: "The best" },
+          { text: "Patient-Engagement Tool", style: { color: "#3567D6", fontWeight: "200" } },
+          { text: " out there" }
+        ],
         description:
           "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
       },
       cardsList: [
         {
-          imgPath: path.join(
-            process.env.PUBLIC_URL,
-            "static", "home", "services-templates.png"
-          ),
+          imgPath: servicesTemplates,
           heading: "Multiple Reporting Templates",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
         },
         {
-          imgPath: path.join(
-            process.env.PUBLIC_URL,
-            "static", "home", "services-instant.png"
-          ),
+          imgPath: servicesInstant,
           heading: "Instant, Automated, Secure",
           content:
             "Buy  your medicines with our mobile application with a simple delivery system",
         },
         {
-          imgPath: path.join(
-            process.env.PUBLIC_URL,
-            "static", "home", "services-pdf-whatsapp.png"
-          ),
+          imgPath: servicesPdfWhatsapp,
           heading: "PDF, App, E-mail, Whatsapp",
           content:
             "Free consultation with our trusted doctors and get the best recomendations",
         },
         {
-          imgPath: path.join(
-            process.env.PUBLIC_URL,
-            "static", "home", "services-marketing.png"
-          ),
+          imgPath: servicesMarketing,
           heading: "Unique Whitelabel - Marketing",
           content:
             "Free consultation with our trusted doctors and get the best recomendations",
         },
         {
-          imgPath: path.join(
-            process.env.PUBLIC_URL,
-            "static", "home", "services-affordable.png"
-          ),
+          imgPath: servicesAffordable,
           heading: "Special Corporate Offerings",
           content:
             "You can get 24/7 urgent care for yourself or your children and your lovely family",
         },
         {
-          imgPath: path.join(
-            process.env.PUBLIC_URL,
-            "static", "home", "services-corporate-offerings.png"
-          ),
+          imgPath: servicesCorporateOfferings,
           heading: "Affordable & Doctor-friendly",
           content: "Track and save your medical history and health data",
         },
       ],
-      backgroundImage: path.join(process.env.PUBLIC_URL, "static","home", "services-background.png"),
+      backgroundImage: servicesBackground
 
     },
     Bytes: {
@@ -143,7 +165,7 @@ export default (function () {
     Report: {
       contentLeft: {
         header: {
-          heading:  "Believe what you see." ,
+          heading: "Believe what you see.",
           description: "Checkout our SmartReports below and know the difference",
         },
         footer: {
@@ -152,31 +174,31 @@ export default (function () {
         },
         cardsData: [
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "static","home", "report-vitamin.png"),
+            imagePath: reportVitamin,
             name: "Vitamin"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "static","home", "report-kidney.png"),
+            imagePath: reportKidney,
             name: "Kidney"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "static","home", "report-electrolyte.png"),
+            imagePath: reportElectrolyte,
             name: "Electrolyte"
           },
           {
-            imagePath: path.join(process.env.PUBLIC_URL, "static","home", "report-diabetes.png"),
+            imagePath: reportDiabetes,
             name: "Diabetes"
           }
         ]
       },
       contentRight: {
-        imagePath: path.join(process.env.PUBLIC_URL, "static","home", "report-big-report.png"),
+        imagePath: reportBigReport
       }
     },
     Achievements: {
       backgroundImage: {
-        left: path.join(process.env.PUBLIC_URL, "static","home", "achievements-background1.png"),
-        right: path.join(process.env.PUBLIC_URL, "static","home", "achievements-background2.png"),
+        left: achievementsBackground1,
+        right: achievementsBackground2,
       },
       cardsList: [
         {
@@ -203,17 +225,17 @@ export default (function () {
         heading: [{ text: "What Our Clients Say" }],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
       },
-      backgroundImage: path.join(process.env.PUBLIC_URL, "static","home", "client-message-background.png"),
+      backgroundImage: clientMessageBackground,
       cardsList: [
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: path.join(process.env.PUBLIC_URL, "static","home", "client-message-1.png"),
+          imagePath: clientMessage1 ,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         },
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: path.join(process.env.PUBLIC_URL, "static","home", "client-message-1.png"),
+          imagePath: clientMessage1 ,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         }
