@@ -2,16 +2,22 @@ import * as path from "path";
 
 
 import heroImage from "../howitworks/static/imgs/hero-image.png"
+
 import reportDigital from "../howitworks/static/imgs/report-digital.png"
 import reportPdf from "../howitworks/static/imgs/report-pdf.png"
-import arrow3 from "../howitworks/static/imgs/arrow3.svg"
-import line2 from "../howitworks/static/imgs/line2.svg"
-import mainSoftware from "../howitworks/static/imgs/main-software.png"
-import mainReport from "../howitworks/static/imgs/main-report.png"
+
+import mainApiIntegration from "../howitworks/static/imgs/main-api-integration.svg"
+import mainSoftware from "../howitworks/static/imgs/main-software.svg"
+import mainReport from "../howitworks/static/imgs/main-report.svg"
+import mainCustomer from "../howitworks/static/imgs/main-customer.svg"
+
 import arrow1 from "../howitworks/static/imgs/arrow1.svg"
-import line1 from "../howitworks/static/imgs/line1.svg"
-import mainCustomer from "../howitworks/static/imgs/main-customer.png"
 import arrow2 from "../howitworks/static/imgs/arrow2.svg"
+import arrow3 from "../howitworks/static/imgs/arrow3.svg"
+
+import line1 from "../howitworks/static/imgs/line1.svg"
+import line2 from "../howitworks/static/imgs/line2.svg"
+
 
 
 export default (function () {
@@ -62,7 +68,7 @@ export default (function () {
             },
             cardsList: [
                 {
-                    imagePath: "main-api-integration.svg",
+                    imagePath: mainApiIntegration,
                     heading: "API Integration",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
                     arrowPath: arrow3,
