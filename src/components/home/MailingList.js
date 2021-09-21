@@ -132,7 +132,7 @@ const Block2 = ({ content, ...props }) => {
         </Grid>
         <Grid item className={classes.buttonContainer} md={6}>
 
-            <Button variant="contained" className={classes.button}>
+            <Button variant="contained" className={classes.button} type="submit">
                 {content.buttonText}
             </Button>
         </Grid>

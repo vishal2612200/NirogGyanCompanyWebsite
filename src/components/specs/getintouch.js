@@ -1,4 +1,6 @@
-import * as path from "path";
+import getInTouch1 from "../getintouch/static/imgs/get-in-touch-1.svg"
+import getInTouch2 from "../getintouch/static/imgs/get-in-touch-2.svg"
+
 
 export default (
     function () {
@@ -6,7 +8,7 @@ export default (
             GetInTouch: {
 
                 block1: {
-                    imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "get-in-touch-1.svg"),
+                    imagePath:getInTouch1,
 
                 },
                 block2: {
@@ -15,7 +17,7 @@ export default (
                     line3: "+91-7678277891",
                 },
                 block3: {
-                    imagePath: path.join(process.env.PUBLIC_URL, "static", "about", "get-in-touch-2.svg"),
+                    imagePath:getInTouch2,
                 }
             }
         }

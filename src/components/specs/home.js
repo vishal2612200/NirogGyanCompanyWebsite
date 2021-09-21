@@ -297,8 +297,7 @@ export default (function () {
           imagePath: clientMessage1,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
-        }
-        ,
+        },
         {
           message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
           imagePath: clientMessage1,

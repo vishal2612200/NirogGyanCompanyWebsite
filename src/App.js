@@ -2,28 +2,28 @@ import React, { createContext } from 'react';
 import NavBar from './components/NavBar';
 import { useReducer, useState, useEffect } from 'react';
 import specs from "./components/specs/state"
-import Footer from "./components/Footer"
-import GetInTouch from "./components/GetInTouch"
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+
 import Home from './components/home';
 import About from './components/about';
 import HowItWorks from './components/howitworks';
 import Blog from './components/blog';
 import FAQS from './components/faqs';
+
 import specsfooter from "./components/specs/footer"
 import specsnavbar from "./components/specs/navbar"
 import specsgetintouch from "./components/specs/getintouch"
+
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import Skeleton from '@material-ui/lab/Skeleton';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+import { Card, CardHeader, CardContent, Grid, Box } from '@material-ui/core';
+import { Skeleton } from "@material-ui/lab"
+import Footer from './components/footer/Footer';
+import GetInTouch from "./components/getintouch/GetInTouch"
 
 export const PageContext = createContext()
 
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#001d30",
     animation: `$changeBg 5s linear infinite`,
   },
-  
+
   loader: {
     // position: "absolute",
     width: "150px",
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50%",
     animation: `$rotate 1s linear infinite`,
     // outline: 1px solid green;
-  
+
     "&::before": {
       content: `""`,
       position: "absolute",
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "inherit",
       borderRadius: "inherit",
     },
-  
+
     "&::after": {
       content: `""`,
       position: "absolute",
@@ -81,13 +81,13 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: "0 0 4px, 0 0 16px, 0 0 32px, 0 0 48px, 0 0 96px",
     }
   },
-  
+
   "@keyframes rotate": {
     "100%": {
       transform: "rotate(1turn)"
     }
   },
-  
+
   "@keyframes changeBg": {
     "100%": {
       filter: "hue-rotate(1turn)"
@@ -102,20 +102,6 @@ function Media(props) {
 
   return (
     <section className={classes.section}>
-      {/* 
-      <Grid container wrap="nowrap">
-      {Array.from(new Array(3)).map((item, index) => (
-        <Box key={index} width="33%" marginRight={2} my={5}>
-            <Skeleton variant="rect"  className={classes.media}/>
-            <Box pt={0.5}>
-              <Skeleton />
-              <Skeleton width="85%"/>
-              <Skeleton width="75%"/>
-              <Skeleton width="50%" />
-            </Box>
-        </Box>
-    ))} 
-    </Grid> */}
       <div className={classes.loader}></div>
     </section>
 
@@ -137,25 +123,25 @@ function App() {
 
   return (
     <div className="App">
-      { loading
-          ?
-          <Card className={classes.card}>
-            <CardHeader
-              avatar={
-                  <Skeleton animation="wave" variant="circle" width={40} height={40} />
-              }
-              title={ 
-                // 'Niroggyan'
-                  <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
-              }
-              subheader={ <Skeleton animation="wave" height={10} width="40%" /> }
-            />
-            {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
+      {loading
+        ?
+        <Card className={classes.card}>
+          <CardHeader
+            avatar={
+              <Skeleton animation="wave" variant="circle" width={40} height={40} />
+            }
+            title={
+              // 'Niroggyan'
+              <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
+            }
+            subheader={<Skeleton animation="wave" height={10} width="40%" />}
+          />
+          {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
 
-            <Box overflow="hidden">
-              <Media loading />
-            </Box>
-             
+          <Box overflow="hidden">
+            <Media loading />
+          </Box>
+
           <CardContent>
             <Grid container wrap="nowrap">
               {Array.from(new Array(3)).map((item, index) => (

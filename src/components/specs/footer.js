@@ -1,11 +1,14 @@
-import * as path from "path";
+import logoIcon from "../footer/static/imgs/logo-icon.png"
+import facebook from "../footer/static/imgs/facebook.svg"
+import twitter from "../footer/static/imgs/twitter.svg"
+import instagram from "../footer/static/imgs/instagram.svg"
 
 export default (
     function () {
         return {
             Footer: {
                 block1: {
-                    logoImage: path.join(process.env.PUBLIC_URL, "static","footer", "logo-icon.png"),
+                    logoImage: logoIcon,
                     copyrightText: <>Copyright 2020 © NirogGyan<br />All rights reserved.</>,
                 },
                 block2: {
@@ -18,12 +21,8 @@ export default (
                 },
                 block4: {
                     heading: "Community",
-                    items: [path.join(process.env.PUBLIC_URL, "static","footer", "facebook.png"),
-                    path.join(process.env.PUBLIC_URL, "static","footer", "twitter.png"),
-                    path.join(process.env.PUBLIC_URL, "static","footer", "instagram.png")],
-                    svgitems: [path.join(process.env.PUBLIC_URL, "static","footer", "facebook.svg"),
-                    path.join(process.env.PUBLIC_URL, "static","footer", "twitter.svg"),
-                    path.join(process.env.PUBLIC_URL, "static","footer", "instagram.svg")]
+
+                    svgitems: [facebook, twitter, instagram]
                 }
             }
         }
