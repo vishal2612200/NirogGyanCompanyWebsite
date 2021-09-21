@@ -2,6 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Box } from "@material-ui/core";
 import HeadingWithText from "../utils/HeadingWithText";
+import Carousel, { autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import { useMediaQuery, useTheme } from "@material-ui/core"
+
+import '@brainhubeu/react-carousel/lib/style.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,6 +19,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "80px",
     }
+  },
+  image: {
+    width: "95%",
+  },
+  card: {
+    padding: "2rem 0",
+    margin: "1rem",
+    textAlign: "center",
   }
 }));
 
@@ -22,6 +34,8 @@ export default function Brand({ state: brand }) {
   const classes = useStyles();
   const logoImages = brand.trustedBrandsLogoImages;
 
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Grid container className={classes.root} direction="column" justifyContent="center" alignItems="center">
 
@@ -31,15 +45,31 @@ export default function Brand({ state: brand }) {
         <img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} />
 
       </Grid>
-      <Grid container item justifyContent="space-evenly" alignItems="center" md={10}>
-        {logoImages.map(item =>
-          <Grid item md={3} style={{ textAlign: "center" }}>
-            <img src={item} alt="logo" className={classes.image} />
-          </Grid>
+
+      <Carousel
+        plugins={[
+          'infinite',
+          {
+            resolve: slidesToShowPlugin,
+            options: {
+              numberOfSlides: isSmallScreen ? 1 : 4
+            }
+          },
+          {
+            resolve: autoplayPlugin,
+            options: {
+              interval: 1000,
+            }
+          },
+        ]}
+        animationSpeed={1000}
+      >
+        {logoImages.map((item, index) =>
+          <img key={index} src={item} alt="logo" />
         )}
-      </Grid>
-      <Grid item>
-        <Box p={3} />
+      </Carousel>
+      <Grid item >
+        <Box p={2}></Box>
       </Grid>
     </Grid>
   );
