@@ -20,7 +20,10 @@ export default (function () {
             contentLeft: {
 
                 heading: "How it Works",
-                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "How It Works", link: "/how-it-works" }],
+                breadcrumbs: [
+                    { text: "Home", link: "/home" },
+                    { text: "How It Works", link: "/how-it-works" }
+                ],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
             },
             contentRight: {
@@ -62,37 +65,37 @@ export default (function () {
                     imagePath: "main-api-integration.svg",
                     heading: "API Integration",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
-                    arrowPath:  arrow3 ,
-                    linePath:  line2 ,
+                    arrowPath: arrow3,
+                    linePath: line2,
                 },
                 {
-                    imagePath:  mainSoftware ,
+                    imagePath: mainSoftware,
                     heading: "Software",
                     description: "NirogGyan’s software creates the perfect SmartReport - each test is atomised as ‘card’ & each panel is linked witth the ‘knowledge bank’",
                 },
                 {
-                    imagePath:  mainReport ,
+                    imagePath: mainReport,
                     heading: "Reports",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
-                    arrowPath:  arrow1 ,
-                    linePath:  line1 ,
+                    arrowPath: arrow1,
+                    linePath: line1,
                 },
                 {
-                    imagePath:  mainCustomer ,
+                    imagePath: mainCustomer,
                     heading: "Customers",
                     description: "Complete Automation ensures seamless delivery to all customers of clients (the labs)",
-                    arrowPath:  arrow2 ,
-                    linePath:  line1 ,
+                    arrowPath: arrow2,
+                    linePath: line1,
                 },
             ],
         },
 
-        Video:{
-            header:{
+        Video: {
+            header: {
                 heading: [{ text: "Digital Solutions for Smart Labs & Patients" }],
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
             },
-            videoPanel:{
+            videoPanel: {
                 title: "Main Video",
                 videoLink: "https://www.youtube.com/embed/H0cHIewcQ2M"
             },

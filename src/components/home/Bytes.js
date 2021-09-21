@@ -1,9 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Box } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import HeadingWithText from "../utils/HeadingWithText";
-import Slide from '@material-ui/core/Slide';
 import { useInView } from "react-intersection-observer"
+import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+import { useMediaQuery, useTheme } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,35 +45,50 @@ export default function Bytes({ state: bytes }) {
   return (
     <Grid container direction="column">
       <HeadingWithText content={bytes.header} />
-      <CardList cardsData={bytes.videoLinks} />
+      <CardList cardsList={bytes.videoLinks} />
     </Grid>
   );
 
 }
 
-const CardList = ({ cardsData }) => {
+const CardList = ({ cardsList }) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+
   return <Grid container className={classes.cardList}>
-    {cardsData.map((link, index) => (
-      <Card link={link} key={index} />
-    ))
-    }
+
+    <Carousel
+      plugins={[
+        'infinite',
+        'arrows',
+        {
+          resolve: slidesToShowPlugin,
+          options: {
+            numberOfSlides: isSmallScreen ? 1 : 3
+          }
+        },
+      ]}
+    >
+      {cardsList.map((link, index) => (
+        <Card link={link} key={index} />
+      ))}
+    </Carousel>
+
+
   </Grid>
 }
 
 const Card = ({ link, title = "YouTube video player" }) => {
   const classes = useStyles();
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-  })
-
   return (
     <Grid item className={classes.card}  >
       <iframe style={{
         borderRadius: "10px",
         aspectRatio: "425/280"
       }}
-        
+
         height="220rem"
         src={link}
         title={title}
@@ -82,3 +99,5 @@ const Card = ({ link, title = "YouTube video player" }) => {
 
   );
 }
+
+

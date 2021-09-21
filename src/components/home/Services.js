@@ -48,15 +48,15 @@ export default function Services({ state: services }) {
     <Grid container direction="column" className={classes.root} style={{ backgroundImage: `url(${services.backgroundImage})` }}>
       <HeadingWithText content={services.header}/>
       <Grid item style={{ height: "1rem" }}></Grid>
-      <CardList cardsData={services.cardsList}/>
+      <CardList cardsList={services.cardsList}/>
     </Grid>);
 }
 
-const CardList = ({ cardsData }) => {
+const CardList = ({ cardsList }) => {
   const classes = useStyles();
 
   return <Grid container item className={classes.cardList} >
-    {cardsData.map(({ imgPath, heading, content }, index) => (
+    {cardsList.map(({ imgPath, heading, content }, index) => (
       <Card {...{ imgPath, heading, content }} key={index} />
     ))
     }

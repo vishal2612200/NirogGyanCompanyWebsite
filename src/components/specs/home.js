@@ -74,11 +74,11 @@ export default (function () {
     Features: {
       contentLeft: {
         header: {
-          line1: <><span style={{ color: "#3567D6", fontWeight:"200" }}>Health Knowledge</span>  +   <b>Modern Design</b></>,
+          line1: <><span style={{ color: "#3567D6", fontWeight: "200" }}>Health Knowledge</span>  +   <b>Modern Design</b></>,
           line2: <b>Combine to give you the most</b>,
           line3: "Understandable Medical Reports",
         },
-        cardsData: [
+        cardsList: [
           {
             imagePath: featuresItem1,
             textThin: "Software covering 250+",
@@ -172,7 +172,7 @@ export default (function () {
           textThin: "My Smart Diabetes Report helped me get the timely shock that I needed to correct myself. Thank you!",
           textBold: "Zubair Ahmed, veteran journalist"
         },
-        cardsData: [
+        cardsList: [
           {
             imagePath: reportVitamin,
             name: "Vitamin"
@@ -229,13 +229,13 @@ export default (function () {
       cardsList: [
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1 ,
+          imagePath: clientMessage1,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         },
         {
           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1 ,
+          imagePath: clientMessage1,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         }

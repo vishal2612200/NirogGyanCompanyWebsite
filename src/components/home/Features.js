@@ -106,7 +106,7 @@ const ContentLeft = ({ content }) => {
     <Grid item>
       <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
         <div>
-          <CardsList content={content.cardsData} />
+          <CardsList content={content.cardsList} />
         </div>
       </Grow>
     </Grid>
