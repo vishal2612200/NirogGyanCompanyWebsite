@@ -1,5 +1,3 @@
-import * as path from "path";
-
 import heroImage from "../home/static/imgs/hero-image.png"
 
 import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.png"
@@ -154,7 +152,6 @@ export default (function () {
     Bytes: {
       header: {
         heading: [{ text: "NirogGyan Bytes" }],
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto pariatur quas repellendus numquam assumenda, mollitia possimus similique sed modi, iure dicta velit, quaerat voluptatibus saepe aliquam in libero est commodi.",
       },
       videoLinks: [
         "https://www.youtube.com/embed/H0cHIewcQ2M/",
@@ -228,13 +225,82 @@ export default (function () {
       backgroundImage: clientMessageBackground,
       cardsList: [
         {
-          message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          message: "Lorem 1  ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
           imagePath: clientMessage1,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         },
         {
-          message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          message: "Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        },
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        }
+        ,
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        }
+        ,
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          imagePath: clientMessage1,
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
+        }
+        ,
+        {
+          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
           imagePath: clientMessage1,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"

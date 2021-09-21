@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Box } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel, { slidesToShowPlugin, Dots } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+import { useMediaQuery, useTheme } from "@material-ui/core"
 import HeadingWithText from "../utils/HeadingWithText"
 
 const useStyles = makeStyles((theme) => ({
@@ -69,7 +70,6 @@ export default function ClientMessage({ state: clientMessage }) {
         <HeadingWithText content={clientMessage.header} />
 
         <Grid container item md={8} style={{ marginTop: "-3rem" }}>
-
             <CardsList content={clientMessage.cardsList} ></CardsList>
         </Grid>
         <Grid item></Grid>
@@ -78,10 +78,45 @@ export default function ClientMessage({ state: clientMessage }) {
 
 
 const CardsList = ({ content }) => {
-    return <Carousel showThumbs={false} showStatus={false} showArrows={false} autoPlay={false}>
+    const [dotIndex, setDotIndex] = useState(0);
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-        {content.map((props, index) => (<Card {...props} key={index} />))}
-    </Carousel>
+    let dots = [];
+    for (let i = 0; i < content.length; i++) {
+        dots.push(<BlueDot />)
+    }
+    const maxDots = Math.min(4, content.length);
+    let plugins = [
+        'infinite',
+        {
+            resolve: slidesToShowPlugin,
+            options: {
+                numberOfSlides: 1
+            }
+        },
+    ]
+
+    if (!isSmallScreen) {
+       plugins.push('arrows')
+
+    }
+    return <Grid container item direction="column" justifyContent="center" alignItems="center">
+        <Carousel
+            plugins={plugins}
+            value={dotIndex} onChange={(index) => setDotIndex(index)}
+            slides={
+                content.map((props, index) => (
+                    <Card {...props} key={index} />))}
+        />
+        <Dots
+            value={dotIndex}
+            onChange={(index) => setDotIndex(index)}
+            number={maxDots}
+            thumbnails={dots}
+
+        />
+    </Grid>
 
 
 }
@@ -89,7 +124,7 @@ const CardsList = ({ content }) => {
 
 const Card = ({ message, imagePath, name, organisation, }) => {
     const classes = useStyles();
-    return (<Grid container  item justifyContent="space-around" alignItems="center" className={classes.card} >
+    return (<Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
         <Grid item>
             <Typography variant="h6" color="textSecondary" className={classes.message}>
                 <i>{message}</i>
@@ -97,7 +132,7 @@ const Card = ({ message, imagePath, name, organisation, }) => {
 
         </Grid>
 
-        <Grid item style={{marginTop:"5%"}}>
+        <Grid item style={{ marginTop: "5%" }}>
             <img src={imagePath} alt="client"
                 style={{ height: "100px", width: "100px", padding: "4px", borderRadius: "50%", border: "1px dashed grey" }} />
             <Typography variant="h5">
@@ -111,4 +146,8 @@ const Card = ({ message, imagePath, name, organisation, }) => {
         </Grid>
     </Grid>
     )
+}
+
+const BlueDot = () => {
+    return <div style={{ backgroundColor: "#3cd0ff", borderRadius: "50%", height: "20px", width: "20px" }}>o0hg</div>
 }
