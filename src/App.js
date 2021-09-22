@@ -24,6 +24,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Skeleton from '@material-ui/lab/Skeleton';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import review from "./components/codereview.gif"
 
 export const PageContext = createContext()
 
@@ -36,10 +37,11 @@ export const PageContext = createContext()
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    height: '100%'
+    height: '60%'
   },
   media: {
-    height: '54vh',
+    height: '77vh',
+    // height: '54vh',
   },
   section: {
     display: "flex",
@@ -152,9 +154,12 @@ function App() {
             />
             {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
 
-            <Box overflow="hidden">
-              <Media loading />
-            </Box>
+            {/* <Box overflow="hidden">
+               <Media loading /> 
+            </Box> */}
+            <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
+              <img width="80%" height="90%" src={review} alt="review" />
+            </Grid>
              
           <CardContent>
             <Grid container wrap="nowrap">
