@@ -20,20 +20,11 @@ import specsnavbar from "./components/specs/navbar"
 import specsgetintouch from "./components/specs/getintouch"
 
 import { makeStyles } from '@material-ui/core/styles';
-<<<<<<< HEAD
 import { Card, CardHeader, CardContent, Grid, Box } from '@material-ui/core';
 import { Skeleton } from "@material-ui/lab"
 import Footer from './components/footer/Footer';
 import GetInTouch from "./components/getintouch/GetInTouch"
-=======
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import Skeleton from '@material-ui/lab/Skeleton';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import review from "./components/codereview.gif"
->>>>>>> vishal/master
 
 export const PageContext = createContext()
 
