@@ -8,7 +8,7 @@ import reportPdf from "../howitworks/static/imgs/report-pdf.png"
 
 import mainApiIntegration from "../howitworks/static/imgs/main-api-integration.svg"
 import mainSoftware from "../howitworks/static/imgs/main-software.svg"
-import mainReport from "../howitworks/static/imgs/main-report.svg"
+import mainReport from "../howitworks/static/imgs/main-customer.svg"
 import mainCustomer from "../howitworks/static/imgs/main-customer.svg"
 
 import arrow1 from "../howitworks/static/imgs/arrow1.svg"

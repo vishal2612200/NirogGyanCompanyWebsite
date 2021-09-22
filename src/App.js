@@ -20,10 +20,20 @@ import specsnavbar from "./components/specs/navbar"
 import specsgetintouch from "./components/specs/getintouch"
 
 import { makeStyles } from '@material-ui/core/styles';
+<<<<<<< HEAD
 import { Card, CardHeader, CardContent, Grid, Box } from '@material-ui/core';
 import { Skeleton } from "@material-ui/lab"
 import Footer from './components/footer/Footer';
 import GetInTouch from "./components/getintouch/GetInTouch"
+=======
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import Skeleton from '@material-ui/lab/Skeleton';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import review from "./components/codereview.gif"
+>>>>>>> vishal/master
 
 export const PageContext = createContext()
 
@@ -36,10 +46,11 @@ export const PageContext = createContext()
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    height: '100%'
+    height: '60%'
   },
   media: {
-    height: '54vh',
+    height: '77vh',
+    // height: '54vh',
   },
   section: {
     display: "flex",
@@ -123,25 +134,28 @@ function App() {
 
   return (
     <div className="App">
-      {loading
-        ?
-        <Card className={classes.card}>
-          <CardHeader
-            avatar={
-              <Skeleton animation="wave" variant="circle" width={40} height={40} />
-            }
-            title={
-              // 'Niroggyan'
-              <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
-            }
-            subheader={<Skeleton animation="wave" height={10} width="40%" />}
-          />
-          {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
+      { loading
+          ?
+          <Card className={classes.card}>
+            <CardHeader
+              avatar={
+                  <Skeleton animation="wave" variant="circle" width={40} height={40} />
+              }
+              title={ 
+                // 'Niroggyan'
+                  <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
+              }
+              subheader={ <Skeleton animation="wave" height={10} width="40%" /> }
+            />
+            {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
 
-          <Box overflow="hidden">
-            <Media loading />
-          </Box>
-
+            {/* <Box overflow="hidden">
+               <Media loading /> 
+            </Box> */}
+            <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
+              <img width="80%" height="90%" src={review} alt="review" />
+            </Grid>
+             
           <CardContent>
             <Grid container wrap="nowrap">
               {Array.from(new Array(3)).map((item, index) => (
