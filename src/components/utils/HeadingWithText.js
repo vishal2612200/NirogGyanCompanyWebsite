@@ -9,6 +9,7 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles({
     root: {
         padding: "3rem 0",
+        paddingBottom: "2rem",
         textAlign: "center",
     }
 })

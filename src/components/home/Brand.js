@@ -14,14 +14,12 @@ const useStyles = makeStyles((theme) => ({
   whatsapp: {
     position: "fixed",
     right: "0",
-    top: "50%",
+    top: "80%",
     zIndex: "1000",
-    [theme.breakpoints.down("sm")]: {
-      width: "80px",
-    }
-  },
-  image: {
-    width: "95%",
+    width:"80px",
+    // [theme.breakpoints.down("sm")]: {
+    //   width: "80px",
+    // }
   },
   card: {
     padding: "2rem 0",
