@@ -14,7 +14,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Box from '@material-ui/core/Box';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     cardsList: {
         justifyContent: "center",
         alignItems: "stretch",
@@ -46,16 +46,22 @@ const useStyles = makeStyles({
           }
     },
     media: {
-        height: 280,
+        height: 180,
     },
     iconStyle:{
         border: "1px solid #B8BBBD",
         borderRadius: "50%",
         padding: "5px",
 
+    },
+    title:  {
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "1.8rem",
+
+        }
     }
-}
-)
+
+}));
 
 
 export default function CardsList({ cardsList }) {
@@ -87,7 +93,7 @@ const TeamCard = ({ imgPath, heading, content }) => {
             image={imgPath}
           />
           <CardContent >
-          <Typography variant="h4" color="textSecondary">
+          <Typography variant="h4" color="textSecondary" className={classes.title}>
                 <Box textAlign="center">
                 {heading}
                 </Box>

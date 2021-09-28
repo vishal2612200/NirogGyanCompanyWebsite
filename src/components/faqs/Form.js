@@ -26,6 +26,12 @@ const useStyles = makeStyles((theme) => ({
     textfieldmargin: {
         margin: theme.spacing(1),
     },
+    textfieldwidth: {
+        width:"92%",
+        [theme.breakpoints.down('sm')]: {
+            width:"75%"
+        }
+    },
     textfieldinternal:{
         margin: theme.spacing(3),
         
@@ -79,7 +85,7 @@ export default function Form({ state: form }) {
                                 </Grid>
                             </Grid>
                             <Grid item container className={classes.textfieldmargin}>
-                                <Grid item md={11}>
+                                <Grid item className={classes.textfieldwidth}>
                                     <TextField multiline rows={4} fullWidth className={classes.textfieldinternal} label="Your Message" variant="outlined" required />
                                 </Grid>
                             </Grid>

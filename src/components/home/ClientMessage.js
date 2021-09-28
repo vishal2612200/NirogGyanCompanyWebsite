@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         paddingBottom: theme.spacing(4),
+        backgroundAttachment: "fixed"
     },
     headerContainer: {
         textAlign: "center",
