@@ -47,7 +47,7 @@ export default (function () {
       contentLeft: {
         heading: { line1: "Simplifying", line2: "Medical Reports" },
         description:
-          "NirogGyan makes lab tests engaging so that you understand your health better, with easy-to-understand and visual SmartReports. We are B2B and work with healthcare providers.",
+          "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
         buttons: { services: "our Services", watchVideo: "Watch Video" },
       },
       contentRight: {
@@ -61,6 +61,7 @@ export default (function () {
           { text: "Trusted by the best" },
           { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight: "200" } }
         ],
+        description: "We partner with the best Diagnostic providers (Thyrocare, Dr.Dangs, Max Labs, Al Arab, itDose, Creliohealth, Practo, Lupin, Northstar, IQVIA)"
       },
       trustedBrandsLogoImages: [
         brandCrelioHealth,
@@ -74,9 +75,9 @@ export default (function () {
     Features: {
       contentLeft: {
         header: {
-          line1: <><span style={{ color: "#3567D6", fontWeight: "200" }}>Health Knowledge</span>  +   <b>Modern Design</b></>,
-          line2: <b>Combine to give you the most</b>,
-          line3: "Understandable Medical Reports",
+          line1: <><span style={{ color: "#3567D6", fontWeight: "200" }}>Health Knowledge</span>  +   <b>Modern Design </b> <b>Combine to give you the most</b> Understandable Medical Reports</>,
+          line2: "",
+          line3: "",
         },
         cardsList: [
           {

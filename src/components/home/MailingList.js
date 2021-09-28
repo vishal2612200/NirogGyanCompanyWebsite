@@ -7,10 +7,14 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: "2rem 6rem",
+        padding: "2rem",
         color: "#fff",
         backgroundColor: "#3567D6",
-
+        justifyContent: "flex-start",
+        alignItems: "center",
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: "center"
+        }
     },
     heading: {
         paddingBottom: "1rem",
@@ -18,11 +22,18 @@ const useStyles = makeStyles((theme) => ({
     },
     block1: {
         fontSize: "1.5rem",
+        padding:"0 auto",
+
         [theme.breakpoints.down('sm')]: {
-            "& *": { textAlign: "center", }
+            "& *": {
+                textAlign: "center"
+            }
         }
     },
     block2: {
+        alignItems: "space-evenly",
+        padding: "1rem",
+        
         [theme.breakpoints.down('sm')]: {
             justifyContent: "center",
         }
@@ -42,7 +53,8 @@ const useStyles = makeStyles((theme) => ({
         padding: "1rem 1.5rem",
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
-        width: "100%",
+        minWidth: "80%",
+        maxWidth: "60%",
         "&::placeholder": {
             color: "#fff",
             [theme.breakpoints.down('sm')]: {
@@ -57,10 +69,10 @@ const useStyles = makeStyles((theme) => ({
 
     inputContainer:
     {
-        width: "inherit",
         padding: "0.5rem",
         paddingLeft: "0rem",
         paddingTop: "0rem",
+        margin:"2rem"
     },
     button: {
 
@@ -83,9 +95,9 @@ const useStyles = makeStyles((theme) => ({
 export default function MailingList({ state: mailingList }) {
     const classes = useStyles();
     return <form action={mailingList.actionurl} method="post">
-        <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch">
-            <Block1 content={mailingList.block1} md={5} />
-            <Block2 content={mailingList.block2} md={7} />
+        <Grid container className={classes.root}>
+            <Block1 content={mailingList.block1} md={6} />
+            <Block2 content={mailingList.block2} md={6} />
         </Grid>
     </form>
 }
@@ -119,16 +131,15 @@ const Block1 = ({ content, ...props }) => {
 const Block2 = ({ content, ...props }) => {
     const classes = useStyles()
     const [email, setEmail] = useState("")
-    return <Grid container item className={classes.block2} alignItems="center" {...props}>
-        <Grid item md={5} className={classes.inputContainer}>
+    return <Grid container item className={classes.block2} alignItems="center" justifyContent="center" {...props}>
+        <Grid item md={6}>
             <input className={classes.input}
                 name="email"
                 value={email}
                 placeholder={content.placeholderText}
                 onChange={e => setEmail(e.target.value)} />
         </Grid>
-        <Grid item className={classes.buttonContainer} md={6}>
-
+        <Grid item md={6}>
             <Button variant="contained" className={classes.button} type="submit">
                 {content.buttonText}
             </Button>
