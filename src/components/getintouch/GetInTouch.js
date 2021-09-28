@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         textAlign: "left",
         color: "#fff !important",
+        maxHeight:"10rem",
         [theme.breakpoints.down('sm')]: {
             textAlign: "center",
             margin: "auto auto",
@@ -61,7 +62,7 @@ const Block = ({ content }) => {
 const Block2 = ({ content }) => {
     const classes = useStyles()
     return <Grid container item md={4} className={classes.block2} direction="column" justifyContent="space-evenly">
-        <Grid item >
+        <Grid item>
             <Typography variant="h5" style={{ color: "#fff" }}>
                 {content.line1}
             </Typography>

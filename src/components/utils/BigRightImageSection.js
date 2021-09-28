@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 export default function BigRightImageSection({ contentLeft, image, ...props }) {
     const classes = useStyles();
     return (
-        <Grid container className={classes.root} justifyContent="space-around" {...props} >
+        <Grid container className={classes.root} justifyContent="space-evenly" {...props} >
             <Grid item md={6}>
                 {contentLeft}
             </Grid>

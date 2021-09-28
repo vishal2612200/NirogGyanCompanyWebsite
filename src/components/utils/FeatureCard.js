@@ -11,18 +11,18 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         borderRadius: "10px",
     },
-    
+
     card: {
         border: "1px solid #B8BBBD",
         marginBottom: "2rem",
         borderRadius: "10px",
     }, imageBox: {
         textAlign: "center",
-        padding: "1rem",
+        padding: "50px 0",
         backgroundColor: "#E9F5FF",
         borderTopLeftRadius: "10px",
         borderBottomLeftRadius: "10px",
-
+       
         "&>img": {
             margin: "auto",
             maxHeight: "100%",
@@ -47,7 +47,7 @@ export default function FeatureCard({ imagePath, textThin, textBold }) {
     return (
         <Grid container className={classes.card}  >
             <Grid item xs={4} className={classes.imageBox}>
-                <img src={imagePath} alt="feature" />
+                <img src={imagePath} alt="feature" width="60px" />
             </Grid>
             <Grid item xs={8} className={classes.textBox}>
                 <Typography component="div">

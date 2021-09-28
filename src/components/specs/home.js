@@ -75,8 +75,8 @@ export default (function () {
     Features: {
       contentLeft: {
         header: {
-          line1: <><span style={{ color: "#3567D6", fontWeight: "200" }}>Health Knowledge</span>  +   <b>Modern Design </b> <b>Combine to give you the most</b> Understandable Medical Reports</>,
-          line2: "",
+          line1: "Knowledge, Design and Technology combine to transform medical data into something",
+          line2: "Smart",
           line3: "",
         },
         cardsList: [
@@ -105,12 +105,11 @@ export default (function () {
     Services: {
       header: {
         heading: [
-          { text: "The best" },
-          { text: "Patient-Engagement Tool", style: { color: "#3567D6", fontWeight: "200" } },
-          { text: " out there" }
+          { text: "The Ultimate Tool to Engage Patients" },
+        
         ],
         description:
-          "We value the organisation that you’ve built. Hence, so many choices for the perfect fit for your use-case.",
+          "We’ve put 3 years to guarantee you the best user-experience in lab reporting.",
       },
       cardsList: [
         {
@@ -223,7 +222,7 @@ export default (function () {
     ClientMessage: {
       header: {
         heading: [{ text: "What Our Clients Say" }],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
+        description: "We work to make every report just right for our clients’ needs",
       },
       backgroundImage: clientMessageBackground,
       cardsList: [

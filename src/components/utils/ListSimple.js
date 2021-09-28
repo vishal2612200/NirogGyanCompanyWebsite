@@ -14,9 +14,6 @@ export default function ListSimple({ content: { heading, description } }) {
         </ListSubheader>
         {description.map(item => (
             <ListItem>
-                <ListItemIcon>
-                    <FiberManualRecordIcon />
-                </ListItemIcon>
                 <ListItemText
                     primary={
                         <Typography variant="h6" color="textSecondary">
