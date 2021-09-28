@@ -17,12 +17,21 @@ const useStyles = makeStyles((theme) => ({
     margin: {
         margin: theme.spacing(3),
         [theme.breakpoints.down('sm')]: {
-            marginLeft: theme.spacing(5)
+            // marginLeft: theme.spacing(5)
+            margin: theme.spacing(2.4),
 
         }
     },
+
     textfieldmargin: {
         margin: theme.spacing(1),
+    },
+    textfieldinternal:{
+        margin: theme.spacing(3),
+        
+        [theme.breakpoints.down('sm')]: {
+            margin: theme.spacing(2.8),
+        }
     },
     buttonfieldmargin: {
         margin: theme.spacing(4),
@@ -71,7 +80,7 @@ export default function Form({ state: form }) {
                             </Grid>
                             <Grid item container className={classes.textfieldmargin}>
                                 <Grid item md={11}>
-                                    <TextField multiline rows={4} fullWidth className={classes.margin} label="Your Message" variant="outlined" required />
+                                    <TextField multiline rows={4} fullWidth className={classes.textfieldinternal} label="Your Message" variant="outlined" required />
                                 </Grid>
                             </Grid>
                             <Grid container item xs={12} className={classes.sendButton}>
