@@ -9,6 +9,7 @@ import Carousel, { slidesToShowPlugin, Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery, useTheme } from "@material-ui/core"
 import HeadingWithText from "../utils/HeadingWithText"
+import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,47 +79,10 @@ export default function ClientMessage({ state: clientMessage }) {
 
 
 const CardsList = ({ content }) => {
-    const [dotIndex, setDotIndex] = useState(0);
-    const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
-    let dots = [];
-    for (let i = 0; i < content.length; i++) {
-        dots.push(<BlueDot />)
-    }
-    const maxDots = Math.min(4, content.length);
-    let plugins = [
-        'infinite',
-        {
-            resolve: slidesToShowPlugin,
-            options: {
-                numberOfSlides: 1
-            }
-        },
-    ]
-
-    if (!isSmallScreen) {
-       plugins.push('arrows')
-
-    }
-    return <Grid container item direction="column" justifyContent="center" alignItems="center">
-        <Carousel
-            plugins={plugins}
-            value={dotIndex} onChange={(index) => setDotIndex(index)}
-            slides={
-                content.map((props, index) => (
-                    <Card {...props} key={index} />))}
-        />
-        <Dots
-            value={dotIndex}
-            onChange={(index) => setDotIndex(index)}
-            number={maxDots}
-            thumbnails={dots}
-
-        />
-    </Grid>
-
-
+    const classes = useStyles();
+    return <Grid container className={classes.cardList} item justifyContent="center" alignItems="center">
+    <CarousalWithArrowsOnDesktop card={<Card />} content={content}></CarousalWithArrowsOnDesktop>
+</Grid>
 }
 
 

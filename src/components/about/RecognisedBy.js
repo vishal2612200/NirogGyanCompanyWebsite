@@ -20,7 +20,7 @@ export default function RecognisedBy({ state: recognisedBy }) {
     <Grid container className={classes.root}>
       <HeadingWithText content={recognisedBy.header} />
       <Grid container item className={classes.imagesContainer}  justifyContent="space-evenly">
-        {recognisedBy.trustedBrandsLogoImages.map(item => <Grid item><img src={item} alt="client logo" /></Grid>)}
+        {recognisedBy.trustedBrandsLogoImages.map((item, index) => <Grid item key={index}><img src={item} alt="client logo" /></Grid>)}
       </Grid>
     </Grid>
   );

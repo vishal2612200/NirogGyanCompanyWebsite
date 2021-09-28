@@ -102,7 +102,7 @@ export default function Report({ state: report }) {
 
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
-    return <Grid item direction="column" xs={12} md={6} className={classes.contentLeft}>
+    return <Grid item  xs={12} md={6} className={classes.contentLeft}>
         <Header content={content.header} />
         <CardList content={content.cardsList} />
         <Footer content={content.footer} />

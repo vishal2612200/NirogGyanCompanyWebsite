@@ -52,7 +52,7 @@ export default function Achievements({ state: achievements }) {
         padding: "2.5rem 0",
         backgroundAttachment: "fixed"
       }}>
-        {achievements.cardsList.slice(0, 2).map((achievement) => (<Card content={achievement} />))}
+        {achievements.cardsList.slice(0, 2).map((achievement, index) => (<Card content={achievement} key={index} />))}
       </Grid>
       <Grid container item md={6} justifyContent="space-around" style={{
         backgroundImage: `url(${achievements.backgroundImage.right})`,

@@ -31,6 +31,8 @@ import achievementsBackground1 from "../home/static/imgs/achievements-background
 import achievementsBackground2 from "../home/static/imgs/achievements-background-2.png"
 
 import clientMessage1 from "../home/static/imgs/client-message-1.png"
+import clientMessage2 from "../home/static/imgs/client-message-2.png"
+import clientMessage3 from "../home/static/imgs/client-message-3.png"
 import clientMessageBackground from "../home/static/imgs/client-message-background.png"
 
 
@@ -225,87 +227,25 @@ export default (function () {
       backgroundImage: clientMessageBackground,
       cardsList: [
         {
-          message: "Lorem 1  ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
+          message: "It seems like yesterday when I met the founders to explore the possibility of providing patient- friendly reports, both to my walk -in and B2B customers.The team kept it sweet & simple.With minimal integration using APIs, we’ve been live since more than a year.",
           imagePath: clientMessage1,
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         },
         {
-          message: "Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
+          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.", imagePath: clientMessage1,
+          imagePath: clientMessage2,
+          name: "Dr.Soumik Kalita",
+          organisation: "Founder, FamPhy"
         },
         {
-          message: "Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        }
-        ,
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        }
-        ,
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
-          message: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus lectus eget ex malesuada, et viverra ex ultrices. Aliquam quis sodales massa, ac pellentesque est. Integer malesuada lobortis tellus, a venenatis tellus sagittis sit amet.",
-          imagePath: clientMessage1,
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        }
-      ]
+          message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.", imagePath: clientMessage1,
+          imagePath: clientMessage3,
 
+          name: "Zubair Ahmed",
+          organisation: "Journalist, BBC India"
+        },
+      ]
     },
     MailingList: {
       block1: {
