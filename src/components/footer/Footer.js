@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: "2rem 6rem",
+        padding: "2rem 6rem 0rem 6rem",
         color: "#fff",
         backgroundColor: "#163B76",
 
@@ -85,7 +85,7 @@ const Block4 = ({ content, ...props }) => {
 
     return <Grid item {...props}>
         <Typography variant="h5">
-            <Box fontWeight="fontWeightMedium" mb={2} mt={1} >
+            <Box fontWeight="fontWeightMedium"  mt={1} >
                 {content.heading}
             </Box>
         </Typography>

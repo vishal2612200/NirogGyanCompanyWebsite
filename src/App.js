@@ -144,7 +144,7 @@ function App() {
                <Media loading /> 
             </Box> */}
             <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
-              <img width="80%" height="90%" src={review} alt="review" />
+              <img width="60%" height="80%" src={review} alt="review" />
             </Grid>
              
           <CardContent>

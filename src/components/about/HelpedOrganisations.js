@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: "30% 70%",
         backgroundRepeat: "no-repeat",
         color: "#fff",
+        backgroundAttachment: "fixed"
 
     },
     text: {
@@ -32,13 +33,21 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Nunito Sans"',
         fontSize: "24px",
         // textOverflow: "ellipsis"
-        borderRadius: "40px"
+        borderRadius: "40px",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "12px",
+        }
     },
     text: {
         margin: theme.spacing(1),
         color: "05152E"
-
     },
+    title: {
+        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "2rem",
+        }
+    }
 }));
 
 
@@ -64,9 +73,7 @@ const HeadingWithText = ({ content }) => {
         <Grid item className={classes.heading}>
             <Typography
                 variant="h3" gutterBottom
-                style={{
-                    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-                }}>
+                className={classes.title}>
                 {content.heading.map(
                     ({ text, style = {} }, index) => <span key={index} style={style}>{text}</span>
                 )}

@@ -17,7 +17,7 @@ export default (
                 },
                 block3: {
                     heading: "Further information",
-                    items: ["Community", "Guidelines", "Terms of Services", "Privacy Policy"]
+                    items: ["Terms of Services", "Privacy Policy"]
                 },
                 block4: {
                     heading: "Community",
