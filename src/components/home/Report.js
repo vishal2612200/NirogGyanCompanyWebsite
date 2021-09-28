@@ -57,11 +57,12 @@ const useStyles = makeStyles((theme) => ({
     },
     card: {
         boxShadow: "0px 2px 4px 4px #B8BBBD",
-        width: "220px",
+        width: "200px",
         height: "180px",
-        padding: "2rem",
+        padding: "1rem",
         borderRadius: "20px",
         backgroundColor: "#fff",
+     
         "&:hover": { backgroundColor: "#E9F5FF" },
     },
     description: {
@@ -109,16 +110,6 @@ const ContentLeft = ({ content }) => {
     </Grid>
 }
 
-const ContentRight = ({ content }) => {
-    const classes = useStyles();
-
-    return <Grid container item direction="column" xs={12} md={6} className={classes.contentRight}>
-        <Grid item>
-            <img src={content.imagePath} alt="report-sample" />
-        </Grid>
-    </Grid>
-}
-
 const Header = ({ content }) => {
     const classes = useStyles();
     return <Grid item className={classes.headerContainer} >
@@ -155,9 +146,11 @@ const Card = ({ imagePath, name }) => {
     const classes = useStyles();
     return (
         <Grid container item xs={12} sm={6} justifyContent="center" className={classes.cardContainer} >
-            <Grid item className={classes.card}>
-                <img src={imagePath} alt="feature" />
-                <Typography variant="h6">{name}</Typography>
+            <Grid container item className={classes.card} direction="column" justifyContent="center" >
+                <Grid item><img src={imagePath} alt="feature" width="auto" height="50px"/></Grid>
+                <Grid item>
+                    <Typography variant="h6">{name}</Typography>
+                </Grid>
             </Grid>
         </Grid>
     );
@@ -191,4 +184,14 @@ const Footer = ({ content }) => {
         </Grid>
     </Grid>
 
+}
+
+const ContentRight = ({ content }) => {
+    const classes = useStyles();
+
+    return <Grid container item direction="column" xs={12} md={6} className={classes.contentRight}>
+        <Grid item >
+            <img src={content.imagePath} alt="report-sample" />
+        </Grid>
+    </Grid>
 }

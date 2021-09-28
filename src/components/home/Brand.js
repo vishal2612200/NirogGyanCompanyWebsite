@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     right: "0",
     top: "80%",
     zIndex: "1000",
-    width:"80px",
+    width: "80px",
     // [theme.breakpoints.down("sm")]: {
     //   width: "80px",
     // }
@@ -40,7 +40,7 @@ export default function Brand({ state: brand }) {
       <Grid container item justifyContent="space-around">
 
         <HeadingWithText content={brand.header} />
-        <img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} />
+        {!isSmallScreen ? <img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} /> : ""}
 
       </Grid>
 

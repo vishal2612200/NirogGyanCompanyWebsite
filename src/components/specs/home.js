@@ -208,7 +208,7 @@ export default (function () {
         },
 
         {
-          textBig: <>4.7 <span style={{ color: "yellow", fontSize: "1.25em" }}>&#9733;</span></>,
+          textBig: <>4.7 <span style={{ color: "yellow" }}>&#9733;</span></>,
           textSmall: "Rating from Users",
         },
         {
@@ -310,7 +310,7 @@ export default (function () {
     MailingList: {
       block1: {
         heading: "Subscribe to our mailing list",
-        description: "We'll send you updates about NirogGyan",
+        description: "We'll keep sending you the best updates on Health Education",
         footer: <><span style={{ color: "#fff" }}>Get In Touch</span>  :   contact@niroggyan.com</>,
       },
       block2: {

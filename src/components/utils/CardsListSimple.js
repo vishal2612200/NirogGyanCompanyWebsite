@@ -85,7 +85,6 @@ const TeamCard = ({ imgPath, heading, content }) => {
           <CardMedia
             className={classes.media}
             image={imgPath}
-            title="Contemplative Reptile"
           />
           <CardContent >
           <Typography variant="h4" color="textSecondary">
@@ -102,9 +101,6 @@ const TeamCard = ({ imgPath, heading, content }) => {
               
             </Typography>
             
-            {/* <Typography variant="body2" color="textSecondary" component="p">
-              {content}
-            </Typography> */}
             
           </CardContent>
         </CardActionArea>
@@ -122,33 +118,6 @@ const TeamCard = ({ imgPath, heading, content }) => {
             
         </CardActions>
       </Card>
-        // <Grid container item className={classes.card} sm={3} >
-        //     <Grid item container>
-        //         <img src={imgPath} width="100%" alt="service"  />
-        //     </Grid>
-        //     <Grid item className={classes.personName}>
-        //         <Typography variant="h6" style={{color:"#716A6A", fontWeight:"bolder"}}>{heading}</Typography>
-        //     </Grid>
-        //     <Grid item className={classes.personName}>
-        //         <Typography variant="body1" color="textSecondary">{content}</Typography>
-        //     </Grid>
-
-        //     <Grid container item className={classes.iconContainer}>
-
-        //         {
-        //             icons.map(icon => (
-        //                 <Grid item className={classes.icon}>
-        //                     <IconButton>
-        //                         {icon}
-        //                     </IconButton>
-        //                 </Grid>
-        //             )
-        //             )
-        //         }
-
-        //     </Grid>
-        // </Grid >
-
     );
 }
 

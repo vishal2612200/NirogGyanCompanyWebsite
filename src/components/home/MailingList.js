@@ -11,9 +11,6 @@ const useStyles = makeStyles((theme) => ({
         color: "#fff",
         backgroundColor: "#3567D6",
 
-        "&>div": {
-            marginBottom: "2rem"
-        }
     },
     heading: {
         paddingBottom: "1rem",
