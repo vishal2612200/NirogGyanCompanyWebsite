@@ -20,15 +20,18 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100%",
     maxHeight: "auto%",
   },
+  imagePanel: {
+    transform:"translateY(-50px)"
+  }
 }));
 
 export default function Report({ state: report }) {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} justifyContent="center">
+    <Grid container className={classes.root} justifyContent="center" alignItems="flex-start">
       <HeadingWithText content={report.header} />
-      <Box p={2}>
+      <Box p={1}>
         <ImagePanel content={report.imagePanel} />
       </Box>
     </Grid>
@@ -45,8 +48,8 @@ const ImagePanel = ({ content }) => {
   
   return (
 
-    <Grid container item className={classes.imagePanel} direction="column" justifyContent="flex-start">
-      <Box p={2}>
+    <Grid container item className={classes.imagePanel} direction="column" justifyContent="flex-start" alignItems="flex-start">
+      <Box p={1}>
         <Grid container item className={classes.buttonSet}>
           {Object.entries(content).map(([key, val]) => (
             <Box m={1}>

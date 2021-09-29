@@ -73,7 +73,7 @@ export default function Main({ state: main }) {
       <Grid item md={6}>
         <ContentLeft content={main.contentLeft} />
       </Grid>
-      <Hidden smDown>
+      {/* <Hidden smDown>
         <Grid item md={1}></Grid>
       </Hidden>
       <Grid item md={3}>
@@ -81,7 +81,7 @@ export default function Main({ state: main }) {
       </Grid>
       <Hidden smDown>
         <Grid item md={1}></Grid>
-      </Hidden>
+      </Hidden> */}
     </Grid>
   );
 }
