@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button , Divider, Hidden} from "@material-ui/core";
+import { Grid, Button, Divider, Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(10),
   },
-  commonmargin:{
+  commonmargin: {
     marginTop: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
@@ -33,34 +33,34 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
     }
   },
-contentLeft: {
-  // fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-  // borderRadius: "10px",
-  [theme.breakpoints.down("sm")]: {
-    width: "90%",
-    margin: "0 5%",
-  }
+  contentLeft: {
+    // fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+    // borderRadius: "10px",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+      margin: "0 5%",
+    }
   },
-imageBox: {
-  textAlign: "center",
+  imageBox: {
+    textAlign: "center",
     padding: "1rem",
-      backgroundColor: "#E9F5FF",
-        "&>img": {
-    margin: "auto "
-  }
-},
-textBox: {
-  "&>*": {
-    textAlign: "left",
+    backgroundColor: "#E9F5FF",
+    "&>img": {
+      margin: "auto "
+    }
+  },
+  textBox: {
+    "&>*": {
+      textAlign: "left",
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        padding: "1rem",
-          textWrap: "word-break"
-  }
-},
-card: {
-  border: "1px solid #B8BBBD",
+      padding: "1rem",
+      textWrap: "word-break"
+    }
+  },
+  card: {
+    border: "1px solid #B8BBBD",
     marginBottom: "2rem"
-}
+  }
 })
 );
 export default function Main({ state: main }) {
@@ -73,7 +73,7 @@ export default function Main({ state: main }) {
       <Grid item md={6}>
         <ContentLeft content={main.contentLeft} />
       </Grid>
-      {/* <Hidden smDown>
+      <Hidden smDown>
         <Grid item md={1}></Grid>
       </Hidden>
       <Grid item md={3}>
@@ -81,7 +81,7 @@ export default function Main({ state: main }) {
       </Grid>
       <Hidden smDown>
         <Grid item md={1}></Grid>
-      </Hidden> */}
+      </Hidden>
     </Grid>
   );
 }
@@ -89,9 +89,9 @@ const ContentLeft = ({ content }) => {
   const Card = ({ imagePath, date, content, readmore }) => {
     const classes = useStyles();
     return (
-      <Grid className={classes.contentLeft} container item  alignContent="center" style={{marginBottom:"4%"}}>
+      <Grid className={classes.contentLeft} container item alignContent="center" style={{ marginBottom: "4%" }}>
         <Grid item>
-          <img width="100%" style={{ borderRadius: "15px"}} src={imagePath} alt="main" />
+          <img width="100%" style={{ borderRadius: "15px" }} src={imagePath} alt="main" />
         </Grid>
         <Grid item className={classes.commonmargin}>
           <Typography variant="h6" color="textSecondary">
@@ -106,7 +106,7 @@ const ContentLeft = ({ content }) => {
             variant="h6"
             color="textSecondary"
             className={classes.commonmargin}
-            >
+          >
             {content.description}
           </Typography>
         </Grid>
@@ -136,7 +136,8 @@ const ContentRight = ({ content }) => {
       return <Grid container item className={classes.commonmargin}>
         {
           cardsList.map(
-            (props, index) => (React.cloneElement(card, { ...props })))
+            (props, index) => <card.type  {...props} />
+          )
         }
       </Grid>
     }
@@ -155,7 +156,7 @@ const ContentRight = ({ content }) => {
     return (
       <Grid container className={classes.commonmargin}>
         <Grid item md={5}>
-          <img src={imagePath}  alt="doctor" />
+          <img src={imagePath} alt="doctor" />
         </Grid>
         <Grid item md={1}></Grid>
         <Grid item md={6} className={classes.textBox}>
@@ -166,9 +167,9 @@ const ContentRight = ({ content }) => {
             <Box fontWeight="fontWeightBold">
               {heading}
             </Box>
-        </Typography>
+          </Typography>
         </Grid>
-        
+
       </Grid>
     )
   }
@@ -190,7 +191,7 @@ const ContentRight = ({ content }) => {
   }
   return <Grid className={classes.contentRight} container item >
     <HeadingWithCardsList heading={popularPosts.heading} cardsList={popularPosts.cardsList} card={<Card1 />} />
-    <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} />
-    <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} />
+    {/* <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} /> */}
+    {/* <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} /> */}
   </Grid>
 }
