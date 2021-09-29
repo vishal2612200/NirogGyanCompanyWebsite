@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundSize: "cover",
     alignItems: "center",
+
   },
 
   headerContainer: {

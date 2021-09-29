@@ -107,7 +107,7 @@ export default (function () {
       header: {
         heading: [
           { text: "The Ultimate Tool to Engage Patients" },
-        
+
         ],
         description:
           "We’ve put 3 years to guarantee you the best user-experience in lab reporting.",
@@ -157,9 +157,9 @@ export default (function () {
         heading: [{ text: "NirogGyan Bytes" }],
       },
       videoLinks: [
-        "https://www.youtube.com/embed/H0cHIewcQ2M/",
-        "https://www.youtube.com/embed/MlLAXpoxNvQ/",
-        "https://www.youtube.com/embed/L4aPen8hCL8/",
+        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" },
+        { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/" },
+        { link: "https://www.youtube.com/embed/L4aPen8hCL8/" },
       ],
     },
     Report: {
