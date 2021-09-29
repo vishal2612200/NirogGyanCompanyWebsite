@@ -17,8 +17,9 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "2rem",
         borderRadius: "10px",
     }, imageBox: {
+        verticalAlign: "middle",
         textAlign: "center",
-        padding: "50px 0",
+        padding: "20px 0",
         backgroundColor: "#E9F5FF",
         borderTopLeftRadius: "10px",
         borderBottomLeftRadius: "10px",
@@ -45,9 +46,9 @@ export default function FeatureCard({ imagePath, textThin, textBold }) {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.card}  >
-            <Grid item xs={4} className={classes.imageBox}>
-                <img src={imagePath} alt="feature" width="60px" />
+        <Grid container className={classes.card}   >
+            <Grid container item xs={4} className={classes.imageBox} justifyContent="center" alignItems="center">
+                <Grid item ><img src={imagePath} alt="feature" width="60px" /></Grid>
             </Grid>
             <Grid item xs={8} className={classes.textBox}>
                 <Typography component="div">

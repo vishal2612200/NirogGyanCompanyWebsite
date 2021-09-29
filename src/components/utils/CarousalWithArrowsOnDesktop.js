@@ -8,61 +8,6 @@ import "@fontsource/open-sans";
 import Carousel, { slidesToShowPlugin, Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery, useTheme } from "@material-ui/core"
-import HeadingWithText from "./HeadingWithText"
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         justifyContent: "center",
-//         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-//         paddingBottom: theme.spacing(4),
-//     },
-//     headerContainer: {
-//         textAlign: "center",
-
-//     },
-//     card: {
-//         backgroundColor: "#fff",
-//         borderRadius: "15px",
-//         textAlign: "center",
-//         alignItems: "center",
-//         padding: "2rem",
-//         boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
-//         width: "90%",
-
-//         marginTop: "3%",
-//         marginLeft: "3%",
-//         marginBottom: "5%"
-//     },
-//     message: {
-//         fontSize: "1rem",
-//         "&::before": {
-//             content: "open-quote",
-//             fontSize: "2rem",
-//             lineHeight: 0,
-//             verticalAlign: "middle",
-
-//         },
-//         "&::after": {
-//             content: "close-quote",
-//             paddingTop: "0.5rem",
-//             fontSize: "2rem",
-//             lineHeight: 0,
-//             verticalAlign: "middle",
-//         },
-//         paddingBottom: "1rem"
-//     },
-//     large: {
-//         width: theme.spacing(20),
-//         height: theme.spacing(20),
-//     },
-// }
-
-// ));
-
-
-
-
-
 
 export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSlides = 1 }) {
     const [dotIndex, setDotIndex] = useState(0);
