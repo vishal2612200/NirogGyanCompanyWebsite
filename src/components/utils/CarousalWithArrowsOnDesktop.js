@@ -9,7 +9,7 @@ import Carousel, { slidesToShowPlugin, Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery, useTheme } from "@material-ui/core"
 
-export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSlides = 1 }) {
+export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSlides = 1, dotsOnDeskTop = false }) {
     const [dotIndex, setDotIndex] = useState(0);
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -24,7 +24,7 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
         {
             resolve: slidesToShowPlugin,
             options: {
-                numberOfSlides:parseInt(numberOfSlides),
+                numberOfSlides: parseInt(numberOfSlides),
             }
         },
     ]
@@ -40,13 +40,13 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
                 content.map((props, index) => (
                     <card.type {...card.props} {...props} key={index} />))}
         />
-        <Dots
+        {(isSmallScreen || dotsOnDeskTop) ? <Dots
             value={dotIndex}
             onChange={(index) => setDotIndex(index)}
             number={maxDots}
             thumbnails={dots}
 
-        />
+        /> : ""}
     </React.Fragment>
 
 }

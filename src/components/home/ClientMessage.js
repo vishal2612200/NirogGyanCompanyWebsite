@@ -82,7 +82,7 @@ export default function ClientMessage({ state: clientMessage }) {
 const CardsList = ({ content }) => {
     const classes = useStyles();
     return <Grid container className={classes.cardList} item justifyContent="center" alignItems="center">
-    <CarousalWithArrowsOnDesktop card={<Card />} content={content}></CarousalWithArrowsOnDesktop>
+        <CarousalWithArrowsOnDesktop card={<Card />} content={content} dotsOnDeskTop={true}></CarousalWithArrowsOnDesktop>
 </Grid>
 }
 

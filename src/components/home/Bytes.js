@@ -56,7 +56,7 @@ const CardList = ({ content }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return <Grid container className={classes.cardList}  item justifyContent="center" alignItems="center">
-    <CarousalWithArrowsOnDesktop card={<Card />} content={content} numberOfSlides={isSmallScreen ? 1 : 3} />
+    <CarousalWithArrowsOnDesktop card={<Card />} content={content} numberOfSlides={isSmallScreen ? 1 : 3}  />
   </Grid>
   // return <Grid container className={classes.cardList}>
 
