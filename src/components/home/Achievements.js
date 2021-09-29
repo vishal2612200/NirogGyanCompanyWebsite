@@ -10,9 +10,8 @@ import { useInView } from "react-intersection-observer"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: "linear-gradient(to right, #3567D6, #13DED2)",
+    backgroundSize: "cover",
     alignItems: "center",
-    overflow: "hidden",
   },
 
   headerContainer: {
@@ -42,28 +41,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Achievements({ state: achievements }) {
   const classes = useStyles();
-
+  console.log(achievements.backgroundImage)
   return (
-    <Grid container className={classes.root} justifyContent="center" alignItems="center"    >
-      <Grid container md={6} justifyContent="space-around" style={{
-        backgroundImage: `url(${achievements.backgroundImage.left})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        padding: "2.5rem 0",
-        backgroundAttachment: "fixed"
-      }}>
-        {achievements.cardsList.slice(0, 2).map((achievement, index) => (<Card content={achievement} key={index} />))}
-      </Grid>
-      <Grid container item md={6} justifyContent="space-around" style={{
-        backgroundImage: `url(${achievements.backgroundImage.right})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        padding: "2.5rem 0"
-
-
-      }}>
-        {achievements.cardsList.slice(2).map((achievement) => (<Card content={achievement} />))}
-      </Grid>
+    <Grid container className={classes.root} justifyContent="center" alignItems="center"
+      style={{ backgroundImage: ` url(${achievements.backgroundImage})` }}  >
+      {achievements.cardsList.map((achievement, index) => (<Card content={achievement} key={index} />))}
     </Grid>
   );
 }

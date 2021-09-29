@@ -27,8 +27,9 @@ import reportElectrolyte from "../home/static/imgs/report-electrolyte.png"
 import reportDiabetes from "../home/static/imgs/report-diabetes.png"
 import reportBigReport from "../home/static/imgs/report-big-report.png"
 
-import achievementsBackground1 from "../home/static/imgs/achievements-background-1.png"
-import achievementsBackground2 from "../home/static/imgs/achievements-background-2.png"
+import achievementsBackground from "../home/static/imgs/achievements-background.svg"
+// import achievementsBackground1 from "../home/static/imgs/achievements-background-1.png"
+// import achievementsBackground2 from "../home/static/imgs/achievements-background-2.png"
 
 import clientMessage1 from "../home/static/imgs/client-message-1.png"
 import clientMessage2 from "../home/static/imgs/client-message-2.png"
@@ -195,10 +196,7 @@ export default (function () {
       }
     },
     Achievements: {
-      backgroundImage: {
-        left: achievementsBackground1,
-        right: achievementsBackground2,
-      },
+      backgroundImage: achievementsBackground,
       cardsList: [
         {
           textBig: "40+",
