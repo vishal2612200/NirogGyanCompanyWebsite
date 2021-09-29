@@ -41,7 +41,7 @@ export default function HeadingWithText({ content, ...props }) {
                 color="textSecondary"
                 style={{
                     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-                    padding: "1rem"
+                    padding: "0.5rem"
                 }}>
                 {content.description}
             </Typography>}

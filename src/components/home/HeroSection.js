@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
     fontWeight: "700",
+    color: "white",
     [theme.breakpoints.down('sm')]: {
       textAlign: "center",
     }
@@ -134,7 +135,7 @@ const Heading = ({ text }) => {
   const classes = useStyles();
 
   return <Grid container item direction="column">
-    <Grid item style={{ marginBottom: "3%" }}>
+    <Grid item style={{ marginBottom: "1%" }}>
       <Typography
         variant="h3"
         className={classes.title}>
@@ -142,7 +143,7 @@ const Heading = ({ text }) => {
       </Typography>
     </Grid>
 
-    <Grid item>
+    <Grid item >
       <Typography
         variant="h3"
         className={classes.title}>

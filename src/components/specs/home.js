@@ -79,9 +79,9 @@ export default (function () {
         header: {
           heading: [{
             text:
-              "Knowledge, Design and Technology combine to transform medical data into something",
+              "Knowledge, design and technology combine to transform medical data into something",
           },
-          { text: "Smart", style: { color: "#3567D6", fontWeight: "200" } }
+          { text: "smart", style: { color: "#3567D6", fontWeight: "200" } }
           ],
         },
         cardsList: [
