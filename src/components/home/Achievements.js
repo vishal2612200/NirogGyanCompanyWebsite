@@ -36,7 +36,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "3rem 1rem",
     textAlign: "center",
     margin: "3%",
-    border: "2px dashed #fff"
+    border: "2px dashed #fff",
+    [theme.breakpoints.down('sm')]:{
+      width:"250px"
+    }
   }
 }));
 

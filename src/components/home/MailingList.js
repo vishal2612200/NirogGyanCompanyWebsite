@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
         
         [theme.breakpoints.down('sm')]: {
             justifyContent: "center",
+        },
+        "&> *": {
+            marginBottom: "1rem"
         }
     },
     buttonContainer: {
@@ -53,8 +56,8 @@ const useStyles = makeStyles((theme) => ({
         padding: "1rem 1.5rem",
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
-        minWidth: "80%",
-        maxWidth: "60%",
+        maxWidth: "70%",
+        minWidth: "60%",
         "&::placeholder": {
             color: "#fff",
             [theme.breakpoints.down('sm')]: {
@@ -104,26 +107,27 @@ export default function MailingList({ state: mailingList }) {
 
 const Block1 = ({ content, ...props }) => {
     const classes = useStyles()
-    return <Grid container item direction="column" justifyContent="space-around" alignItems="flex-start" className={classes.block1} {...props}>
-        <Grid item>
-            <Typography
-                variant="h5"
-                className={classes.heading}>
-                {content.heading}
-            </Typography>
-        </Grid>
-        <Grid item>
-            <Typography
-                variant="body1"
-                className={classes.description} style={{ color: "#CBDBFF" }}>
-                {content.description}
-            </Typography>
-        </Grid>
-
-        <Grid item style={{ marginTop: "0.5rem" }}>
-            {<Typography variant="body1" className={classes.footertext} style={{ color: "#CBDBFF" }}>
-                {content.footer}
-            </Typography>}
+    return <Grid container item sm={6} justifyContent="center" slignItems="center" {...props}>
+        <Grid container item md={10} direction="column" justifyContent="space-around" alignItems="flex-start" className={classes.block1} >
+            <Grid item>
+                <Typography
+                    variant="h5"
+                    className={classes.heading}>
+                    {content.heading}
+                </Typography>
+            </Grid>
+            <Grid item>
+                <Typography
+                    variant="body1"
+                    className={classes.description} style={{ color: "#CBDBFF" }}>
+                    {content.description}
+                </Typography>
+            </Grid>
+            <Grid item style={{ marginTop: "0.5rem" }}>
+                {<Typography variant="body1" className={classes.footertext} style={{ color: "#CBDBFF" }}>
+                    {content.footer}
+                </Typography>}
+            </Grid>
         </Grid>
     </Grid>
 }
@@ -132,7 +136,7 @@ const Block2 = ({ content, ...props }) => {
     const classes = useStyles()
     const [email, setEmail] = useState("")
     return <Grid container item className={classes.block2} alignItems="center" justifyContent="center" {...props}>
-        <Grid item md={6}>
+        <Grid item md={6} style={{textAlign: "center"}}>
             <input className={classes.input}
                 name="email"
                 value={email}

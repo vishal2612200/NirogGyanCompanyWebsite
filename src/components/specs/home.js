@@ -83,17 +83,17 @@ export default (function () {
         cardsList: [
           {
             imagePath: featuresItem1,
-            textThin: "Software covering 250+",
+            textThin: "250+ Biomarkers and Specialised Profiles",
             textBold: "Pathology Biomarkers",
           },
           {
             imagePath: featuresItem2,
-            textThin: "Knowledge Bank based by",
+            textThin: "Content and Design verified by Top Doctors",
             textBold: "Evidence-backed, Vetted Content",
           },
           {
             imagePath: featuresItem3,
-            textThin: "Add-ons : Multi - language",
+            textThin: "Analytics, Multi-language option, Customisable",
             textBold: "Content, Graphs, Analytics",
           },
         ],

@@ -12,13 +12,9 @@ const useStyles = makeStyles((theme) => ({
         minHeight: "75vh"
     },
     imageBox: {
-        minHeight: "70vh",
         backgroundSize: "contain", backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        [theme.breakpoints.down('md')]: {
-            minHeight: "50vh",
-
-        }
+        
     },
     contentRight: {
         textAlign: "center",
