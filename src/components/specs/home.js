@@ -106,7 +106,8 @@ export default (function () {
     Services: {
       header: {
         heading: [
-          { text: "The Ultimate Tool to Engage Patients" },
+          { text: "The Ultimate Tool to" },
+          { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "200" } }
 
         ],
         description:
