@@ -75,10 +75,14 @@ export default (function () {
     },
     Features: {
       contentLeft: {
+
         header: {
-          line1: "Knowledge, Design and Technology combine to transform medical data into something",
-          line2: "Smart",
-          line3: "",
+          heading: [{
+            text:
+              "Knowledge, Design and Technology combine to transform medical data into something",
+          },
+          { text: "Smart", style: { color: "#3567D6", fontWeight: "200" } }
+          ],
         },
         cardsList: [
           {

@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: "2rem"
   },
-  headingfont:{
+  headingfont: {
     fontSize: "1.7rem",
     fontWeight: "900"
   },
   header: {
-     marginBottom: "2rem",
+    marginBottom: "2rem",
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
     }
@@ -74,6 +74,20 @@ const useStyles = makeStyles((theme) => ({
 
       }
     }
+  },
+  headingstyle: {
+    fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+    fontWeight: 900,
+    fontSize: "2.5rem",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "1.5rem",
+    }
+  },
+  contentLeft: {
+    padding: "3rem",
+    [theme.breakpoints.down('sm')]: {
+      padding: "0rem"
+    }
   }
 }));
 
@@ -99,7 +113,8 @@ const ContentLeft = ({ content }) => {
     threshold: 0.1,
   })
 
-  return <Grid container item direction="column" alignContent="center" ref={ref} md={10}>
+  return <Grid container item direction="column" alignContent="center" ref={ref}
+    className={classes.contentLeft}>
     <Grid item style={{ marginBottom: "4%" }}>
       <Header content={content.header} />
     </Grid>
@@ -115,22 +130,27 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content }) => {
   const classes = useStyles();
-  
-  return <Grid item  className={classes.header}>
-    <Typography className={classes.headingfont}
-      variant="h4" >
-      {content.line1}
-    </Typography>
 
-    <Typography className={classes.headingfont}
-      variant="h4">
-      {content.line2}
-    </Typography>
-    <Typography className={classes.headingfont}
-      variant="h4">
-      {content.line3}
-    </Typography>
-
+  return <Grid item className={classes.header}>
+    <Grid item >
+      <Typography
+        variant="h4" gutterBottom
+        className={classes.headingstyle}>
+        {
+          content.heading.map(
+            ({ text, style = {} }, index) => ((style && <span key={index} style={style}> {`${text} `}</span>) || `${text} `)
+          )}
+      </Typography>
+      {content?.description && <Typography
+        variant="body1"
+        color="textSecondary"
+        style={{
+          fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+          padding: "1rem"
+        }}>
+        {content.description}
+      </Typography>}
+    </Grid>
   </Grid>
 }
 
