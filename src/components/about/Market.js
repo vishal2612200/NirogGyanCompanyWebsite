@@ -9,18 +9,13 @@ import "@fontsource/open-sans";
 import clsx from 'clsx';
 import "../component.css"
 import Card from "../utils/FeatureCard"
+import BigRightImageSection from "../utils/BigRightImageSection";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     paddingTop: "3rem"
-  },
-  contentRight: {
-    textAlign: "center",
-    "& >img": {
-      maxWidth: "100%",
-      maxHeight: "100%"
-    }
   },
   header: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -33,14 +28,6 @@ const useStyles = makeStyles((theme) => ({
   contentLeft: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     borderRadius: "10px",
-  },
-  imageBox: {
-    textAlign: "center",
-    padding: "1rem",
-    backgroundColor: "#E9F5FF",
-    "&>img": {
-      margin: "auto "
-    }
   },
   cardsList: {
     marginTop: "2rem",
@@ -67,10 +54,11 @@ export default function Market({ state: market }) {
 
   return (
     <Grid container className={clsx(classes.root)} justifyContent="center" alignItems="center">
-      <Grid container item xs={10}>
-        <ContentLeft content={market.contentLeft} />
-        <ContentRight content={market.contentRight} />
-      </Grid>
+      <BigRightImageSection
+        contentLeft={<ContentLeft content={market.contentLeft} />}
+        image={{
+          imagePath: market.contentRight.imagePath, altText: "feature"
+        }} />
     </Grid>
   );
 }
@@ -78,9 +66,11 @@ export default function Market({ state: market }) {
 
 const ContentLeft = ({ content }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
-    <Header content={content.header} />
-    <CardsList content={content.cardsList} />
+  return <Grid container item direction="column"  className={classes.contentLeft} justifyContent="flex-end" alignItems="center">
+    <Grid item md={9}>
+      <Header content={content.header} />
+      <CardsList content={content.cardsList} />
+    </Grid>
   </Grid>
 }
 

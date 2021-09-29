@@ -10,6 +10,8 @@ import "@fontsource/open-sans";
 import clsx from 'clsx';
 import "../component.css";
 import ListSimple from "../utils/ListSimple";
+import BigRightImageSection from "../utils/BigRightImageSection";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -69,11 +71,12 @@ export default function Believe({ state: believe }) {
 
     return (
         <Grid container className={clsx(classes.root)} justifyContent="center" alignItems="center">
-            <Grid container item xs={10}>
+            <BigRightImageSection
+                contentLeft={<ContentLeft content={believe.contentLeft} />}
+                image={{
+                    imagePath: believe.contentRight.imagePath, altText: "feature"
+                }} />
 
-                <ContentLeft content={believe.contentLeft} />
-                <ContentRight content={believe.contentRight} />
-            </Grid>
         </Grid>
     );
 }
@@ -81,9 +84,13 @@ export default function Believe({ state: believe }) {
 
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item direction="column" xs={12} md={6} className={classes.contentLeft}>
-        <Header content={content.content} />
-        <CardsList content={content.cardsList} />
+    return <Grid container item direction="column" className={classes.contentLeft} justifyContent="flex-end" alignItems="center">
+        <Grid item md={9}>
+
+
+            <Header content={content.content} />
+            <CardsList content={content.cardsList} />
+        </Grid>
     </Grid>
 }
 

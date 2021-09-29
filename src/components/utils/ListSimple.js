@@ -7,7 +7,7 @@ export default function ListSimple({ content: { heading, description } }) {
     return <List >
 
         <ListSubheader color="primary" style={{ position: "relative" }}>
-            <Typography variant="h3" color="textPrimary" h3>
+            <Typography variant="h3" color="textPrimary" style={{marginBottom:"1rem"}}>
                 {heading}
             </Typography>
 
