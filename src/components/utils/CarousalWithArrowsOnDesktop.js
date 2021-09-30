@@ -6,6 +6,13 @@ import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery, useTheme } from "@material-ui/core"
 import Grid from "@material-ui/core/Grid";
 
+
+
+
+
+
+
+
 export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSlides = 1, dotsOnDeskTop = false }) {
     const [dotIndex, setDotIndex] = useState(0);
     const theme = useTheme();
@@ -29,7 +36,15 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
     if (!isSmallScreen) {
         plugins.push('arrows');
     }
+
+    const roundedArrowCss = `.BrainhubCarousel__arrows{
+                                        border-radius: 50%;
+                                    }`
     return <React.Fragment>
+        <style>
+            {roundedArrowCss}
+        </style>
+
         <Carousel
             plugins={plugins}
             value={dotIndex} onChange={(index) => setDotIndex(index)}
@@ -37,16 +52,16 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
                 content.map((props, index) => (
                     <card.type {...card.props} {...props} key={index} />))}
         />
-<Grid item style={{marginTop:"2rem" }}>
-    
+        <Grid item style={{ marginTop: "2rem" }}>
+
             {(isSmallScreen || dotsOnDeskTop) ? <Dots
                 value={dotIndex}
                 onChange={(index) => setDotIndex(index)}
                 number={maxDots}
                 thumbnails={dots}
-    
+
             /> : ""}
-</Grid>
+        </Grid>
     </React.Fragment>
 
 }
