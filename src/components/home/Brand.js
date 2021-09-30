@@ -17,9 +17,6 @@ const useStyles = makeStyles((theme) => ({
     top: "80%",
     zIndex: "1000",
     width: "80px",
-    // [theme.breakpoints.down("sm")]: {
-    //   width: "80px",
-    // }
   },
   card: {
     padding: "2rem 0",

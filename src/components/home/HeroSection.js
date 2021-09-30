@@ -192,7 +192,7 @@ const ButtonWatchVideo = ({ text }) => {
   const classes = useStyles();
   return <Grid container item className={classes.buttonWatchVideoContainer}>
     <Grid item>
-      
+
       <IconButton className={classes.watchVideoButton} style={{ display: "inline-block", textAlign: "center" }}>
         <PlayCircleFilledIcon className={classes.videoButtonIcon} />
         <Typography variant="subtitle2" >
@@ -208,7 +208,7 @@ const ButtonWatchVideo = ({ text }) => {
 const ContentRight = ({ content, ...props }) => {
   const classes = useStyles();
 
-  return <Grid item  className={classes.imageBox} {...props}>
+  return <Grid item className={classes.imageBox} {...props}>
     <img src={content.imagePath} alt="hero" width="100%" />
   </Grid>
 }
