@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button, Divider, Hidden } from "@material-ui/core";
+import { Grid, Divider, Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -16,10 +16,6 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   contentRight: {
-    // "& >img": {
-    //   maxWidth: "100%",
-    //   maxHeight: "100%"
-    // },
     [theme.breakpoints.down("sm")]: {
       width: "90%",
       margin: "0 5%",
@@ -34,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   contentLeft: {
-    // fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-    // borderRadius: "10px",
     [theme.breakpoints.down("sm")]: {
       width: "90%",
       margin: "0 5%",
@@ -129,7 +123,7 @@ const ContentLeft = ({ content }) => {
 }
 const ContentRight = ({ content }) => {
   const classes = useStyles();
-  const { popularPosts, categoriesList, categoriesButtons } = content;
+  const { popularPosts } = content;
   const HeadingWithCardsList = ({ heading, cardsList, card }) => {
     const CardsList = () => {
       const classes = useStyles();
@@ -173,25 +167,8 @@ const ContentRight = ({ content }) => {
       </Grid>
     )
   }
-  const Card2 = ({ text, key }) => {
-    return (<Grid container item className={classes.commonmargin}>
-      <Grid item style={{ marginRight: "10px" }}>
-        <Typography variant="h4" color="primary" > <>  &#8226; </></Typography>
-      </Grid>
-      <Typography variant="h6" color="textSecondary" >
-        {text}...{key}
-      </Typography>
-    </Grid>)
-  }
-  const Card3 = ({ text }) => {
-    return (<Grid item md={6} className={classes.commonmargin}>
-      <Button variant="outlined">{text}</Button>
-    </Grid>
-    )
-  }
+
   return <Grid className={classes.contentRight} container item >
     <HeadingWithCardsList heading={popularPosts.heading} cardsList={popularPosts.cardsList} card={<Card1 />} />
-    {/* <HeadingWithCardsList heading={categoriesList.heading} cardsList={categoriesList.cardsList} card={<Card2 />} /> */}
-    {/* <HeadingWithCardsList heading={categoriesButtons.heading} cardsList={categoriesButtons.cardsList} card={<Card3 />} /> */}
   </Grid>
 }

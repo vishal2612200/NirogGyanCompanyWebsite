@@ -2,8 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import HeadingWithText from "../utils/HeadingWithText";
-import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery, useTheme } from "@material-ui/core"
 import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
@@ -55,42 +53,31 @@ const CardList = ({ content }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  return <Grid container className={classes.cardList}  item justifyContent="center" alignItems="center">
-    <CarousalWithArrowsOnDesktop card={<Card />} content={content} numberOfSlides={isSmallScreen ? 1 : 3}  />
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  let numberOfSlides = 3;
+  if (isSmallScreen)
+    numberOfSlides = 1;
+  else if (isMediumScreen)
+    numberOfSlides = 2;
+  else
+    numberOfSlides = 3;
+
+  return <Grid container className={classes.cardList} item justifyContent="center" alignItems="center">
+    <CarousalWithArrowsOnDesktop card={<Card />} content={content} numberOfSlides={numberOfSlides} />
   </Grid>
-  // return <Grid container className={classes.cardList}>
-
-  //   <Carousel
-  //     plugins={[
-  //       'infinite',
-  //       'arrows',
-  //       {
-  //         resolve: slidesToShowPlugin,
-  //         options: {
-  //           numberOfSlides: isSmallScreen ? 1 : 3
-  //         }
-  //       },
-  //     ]}
-  //   >
-  //     {cardsList.map((link, index) => (
-  //       <Card link={link} key={index} />
-  //     ))}
-  //   </Carousel>
-
-
 }
 
 const Card = ({ link, title = "YouTube video player" }) => {
   const classes = useStyles();
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Grid item className={classes.card}  >
       <iframe style={{
         borderRadius: "10px",
+        aspectRatio: "475/280"
       }}
-        
+        height="240px"
+        rel="prefetch"
         src={link}
         title={title}
         frameborder="2"

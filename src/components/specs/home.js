@@ -236,15 +236,14 @@ export default (function () {
           organisation: "Niramaya Pathlab"
         },
         {
-          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.", imagePath: clientMessage1,
+          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.", 
           imagePath: clientMessage2,
           name: "Dr.Soumik Kalita",
           organisation: "Founder, FamPhy"
         },
         {
-          message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.", imagePath: clientMessage1,
+          message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.", 
           imagePath: clientMessage3,
-
           name: "Zubair Ahmed",
           organisation: "Journalist, BBC India"
         },

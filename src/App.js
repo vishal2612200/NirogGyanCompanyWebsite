@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: '77vh',
-    // height: '54vh',
   },
   section: {
     display: "flex",
@@ -96,19 +95,6 @@ const useStyles = makeStyles((theme) => ({
     }
   }
 }));
-
-
-function Media(props) {
-  const { loading = false } = props;
-  const classes = useStyles();
-
-  return (
-    <section className={classes.section}>
-      <div className={classes.loader}></div>
-    </section>
-
-  );
-}
 
 
 function App() {

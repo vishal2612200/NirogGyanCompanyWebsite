@@ -46,10 +46,10 @@ const useStyles = makeStyles((theme) => ({
         padding: "2rem",
     },
     cardContainer: {
-        justifyContent: "stretch",
+   //     justifyContent: "stretch",
         alignItems: "center",
         textAlign: "center",
-        padding: "2rem",
+        padding: "1rem",
         // "&:first-child>div": {
 
         //     backgroundColor: "#E9F5FF"
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     card: {
         boxShadow: "0px 2px 4px 4px #B8BBBD",
         width: "200px",
-        height: "180px",
+        height: "160px",
         padding: "1rem",
         borderRadius: "20px",
         backgroundColor: "#fff",

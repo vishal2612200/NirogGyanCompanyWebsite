@@ -137,16 +137,6 @@ const Card = ({ imagePath, textThin, textBold }) => {
     )
 }
 
-const ContentRight = ({ content }) => {
-    const classes = useStyles();
-
-    return <Grid item xs={12} md={6} className={classes.contentRight}>
-        <img src={content.imagePath} alt="doctor" />
-    </Grid>
-}
-
-
-
 
 
 

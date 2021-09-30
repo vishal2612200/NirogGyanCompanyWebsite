@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from '@material-ui/core/Box';
-import { Grid,  Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-        color: "#05152E"
+        color: "#05152E",
+        margin: theme.spacing(1),
     },
     headingWithText: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -28,19 +29,14 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         fontWeight: "bold",
-        // padding: "1.5rem 3rem",
+
         backgroundColor: "#3CD0FF",
         fontFamily: '"Nunito Sans"',
         fontSize: "24px",
-        // textOverflow: "ellipsis"
         borderRadius: "40px",
         [theme.breakpoints.down("sm")]: {
             fontSize: "12px",
         }
-    },
-    text: {
-        margin: theme.spacing(1),
-        color: "05152E"
     },
     title: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
