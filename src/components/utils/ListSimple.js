@@ -1,6 +1,4 @@
 import React from 'react';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { List, ListItem, ListItemText, ListSubheader, Typography } from '@material-ui/core';
 
 export default function ListSimple({ content: { heading, description } }) {

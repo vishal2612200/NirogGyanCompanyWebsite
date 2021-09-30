@@ -28,6 +28,11 @@ const useStyles = makeStyles((theme) => ({
   contentLeft: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     borderRadius: "10px",
+    padding: "3rem",
+    [theme.breakpoints.down('sm')]: {
+      padding: "0rem"
+    }
+
   },
   imageBox: {
     textAlign: "center",
@@ -83,18 +88,12 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1.5rem",
     }
   },
-  contentLeft: {
-    padding: "3rem",
-    [theme.breakpoints.down('sm')]: {
-      padding: "0rem"
-    }
-  }
+
 }));
 
 
 export default function Features({ state: features }) {
 
-  const classes = useStyles();
 
   return (
     <BigRightImageSection

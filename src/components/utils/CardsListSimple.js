@@ -6,7 +6,6 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { IconButton } from "@material-ui/core";
-
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -15,6 +14,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        maxWidth: "90%",
+        '@media (max-width: 780px)': {
+            margin: '5%',
+            maxWidth: '100%'
+        }
+    },
     cardsList: {
         justifyContent: "center",
         alignItems: "stretch",
@@ -38,23 +44,16 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignContent: "center",
     },
-    root: {
-        maxWidth: "90%",
-        '@media (max-width: 780px)' : {
-            margin:'5%',
-            maxWidth:'100%'
-          }
-    },
     media: {
         height: 180,
     },
-    iconStyle:{
+    iconStyle: {
         border: "1px solid #B8BBBD",
         borderRadius: "50%",
         padding: "5px",
 
     },
-    title:  {
+    title: {
         [theme.breakpoints.down('sm')]: {
             fontSize: "1.8rem",
 
@@ -65,7 +64,6 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function CardsList({ cardsList }) {
-    const classes = useStyles();
 
     return <Grid container item alignItems="center">
         {cardsList.map(({ imgPath, heading, content }, index) => (
@@ -82,48 +80,48 @@ const TeamCard = ({ imgPath, heading, content }) => {
 
     const classes = useStyles();
     const icons = [
-        <FacebookIcon className={classes.iconStyle}/>,
-        <InstagramIcon className={classes.iconStyle}/>,
-        <TwitterIcon className={classes.iconStyle}/>]
+        <FacebookIcon className={classes.iconStyle} />,
+        <InstagramIcon className={classes.iconStyle} />,
+        <TwitterIcon className={classes.iconStyle} />]
     return (
         <Card className={classes.root} >
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={imgPath}
-          />
-          <CardContent >
-          <Typography variant="h4" color="textSecondary" className={classes.title}>
-                <Box textAlign="center">
-                {heading}
-                </Box>
-            </Typography>
-            <Typography variant="body1" color="textSecondary">
-                <Box textAlign="center">
-                    {content}
-                </Box>
-            </Typography>
-            <Typography variant="h5">
-              
-            </Typography>
-            
-            
-          </CardContent>
-        </CardActionArea>
-        <CardActions style={{justifyContent: 'center'}}>
+            <CardActionArea>
+                <CardMedia
+                    className={classes.media}
+                    image={imgPath}
+                />
+                <CardContent >
+                    <Typography variant="h4" color="textSecondary" className={classes.title}>
+                        <Box textAlign="center">
+                            {heading}
+                        </Box>
+                    </Typography>
+                    <Typography variant="body1" color="textSecondary">
+                        <Box textAlign="center">
+                            {content}
+                        </Box>
+                    </Typography>
+                    <Typography variant="h5">
+
+                    </Typography>
+
+
+                </CardContent>
+            </CardActionArea>
+            <CardActions style={{ justifyContent: 'center' }}>
                 <Box >
                     {
                         icons.map(icon => (
                             <IconButton>
                                 {icon}
-                            </IconButton>  
-                            )
-                            )
-                        }
+                            </IconButton>
+                        )
+                        )
+                    }
                 </Box>
-            
-        </CardActions>
-      </Card>
+
+            </CardActions>
+        </Card>
     );
 }
 

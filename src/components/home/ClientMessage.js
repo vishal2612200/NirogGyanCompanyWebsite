@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import Carousel, { slidesToShowPlugin, Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
-import { useMediaQuery, useTheme } from "@material-ui/core"
 import HeadingWithText from "../utils/HeadingWithText"
 import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
@@ -39,17 +36,17 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "1rem",
         "&::before": {
             content: "open-quote",
-            fontSize: "2rem",
+            fontSize: "4rem",
             lineHeight: 0,
-            verticalAlign: "middle",
+            verticalAlign: "bottom",
 
         },
         "&::after": {
             content: "close-quote",
-            paddingTop: "0.5rem",
-            fontSize: "2rem",
+            paddingTop: "1rem",
+            fontSize: "3rem",
             lineHeight: 0,
-            verticalAlign: "middle",
+            verticalAlign: "bottom",
         },
         paddingBottom: "1rem"
     },
@@ -111,8 +108,4 @@ const Card = ({ message, imagePath, name, organisation, }) => {
         </Grid>
     </Grid>
     )
-}
-
-const BlueDot = () => {
-    return <div style={{ backgroundColor: "#3cd0ff", borderRadius: "50%", height: "20px", width: "20px" }}>o0hg</div>
 }
