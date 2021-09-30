@@ -12,14 +12,12 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Box from '@material-ui/core/Box';
+import { useMediaQuery, useTheme } from "@material-ui/core"
+import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: "90%",
-        '@media (max-width: 780px)': {
-            margin: '5%',
-            maxWidth: '100%'
-        }
+
     },
     cardsList: {
         justifyContent: "center",
@@ -64,19 +62,26 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function CardsList({ cardsList }) {
+    const classes = useStyles();
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
+    let numberOfSlides = 4;
+    if (isSmallScreen)
+        numberOfSlides = 1;
+    else if (isMediumScreen)
+        numberOfSlides = 2;
+    else
+        numberOfSlides = 4;
 
-    return <Grid container item alignItems="center">
-        {cardsList.map(({ imgPath, heading, content }, index) => (
-            <Grid item md={4} xs={12} justifyContent="center">
-                <TeamCard {...{ imgPath, heading, content }} key={index} />
-            </Grid>
-        ))
-        }
+    return <Grid container className={classes.cardList} item justifyContent="center" alignItems="center">
+        <CarousalWithArrowsOnDesktop card={<TeamCard />} content={cardsList} numberOfSlides={numberOfSlides} />
     </Grid>
 }
 
 
-const TeamCard = ({ imgPath, heading, content }) => {
+
+export const TeamCard = ({ imgPath, heading, content }) => {
 
     const classes = useStyles();
     const icons = [

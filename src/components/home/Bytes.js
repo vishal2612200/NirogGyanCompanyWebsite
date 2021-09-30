@@ -43,13 +43,13 @@ export default function Bytes({ state: bytes }) {
   return (
     <Grid container direction="column">
       <HeadingWithText content={bytes.header} />
-      <CardList content={bytes.videoLinks} />
+      <CardsList content={bytes.videoLinks} />
     </Grid>
   );
 
 }
 
-const CardList = ({ content }) => {
+const CardsList = ({ content }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
