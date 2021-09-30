@@ -17,7 +17,7 @@ import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-
+        width: "300px"
     },
     cardsList: {
         justifyContent: "center",
@@ -66,11 +66,15 @@ export default function CardsList({ cardsList }) {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
-    let numberOfSlides = 4;
+    const isLargeScreen = useMediaQuery(theme.breakpoints.between("md", "lg"));
+
+    let numberOfSlides;
     if (isSmallScreen)
         numberOfSlides = 1;
     else if (isMediumScreen)
         numberOfSlides = 2;
+    else if (isLargeScreen)
+        numberOfSlides = 3;
     else
         numberOfSlides = 4;
 
@@ -90,11 +94,8 @@ export const TeamCard = ({ imgPath, heading, content }) => {
         <TwitterIcon className={classes.iconStyle} />]
     return (
         <Card className={classes.root} >
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={imgPath}
-                />
+            <CardActionArea style={{ textAlign: "center" }}>
+                <img src={imgPath} alt="hello there" width="100%" height="auto" />
                 <CardContent >
                     <Typography variant="h4" color="textSecondary" className={classes.title}>
                         <Box textAlign="center">

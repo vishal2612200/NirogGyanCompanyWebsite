@@ -134,7 +134,8 @@ const Header = ({ content }) => {
     <Grid item >
       <Typography
         variant="h4" gutterBottom
-        className={classes.headingstyle}>
+        className={classes.headingstyle}
+      style={{fontSize:"22px"}}>
         {
           content.heading.map(
             ({ text, style = {} }, index) => ((style && <span key={index} style={style}> {`${text} `}</span>) || `${text} `)
