@@ -55,8 +55,9 @@ const useStyles = makeStyles((theme) => ({
     "&>*": {
       textAlign: "left",
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      padding: "1rem",
-      textWrap: "word-break"
+      paddingBottom: "1rem",
+      textWrap: "word-break",
+      
     }
   },
 })

@@ -61,7 +61,7 @@ export default (function () {
         Market: {
             contentLeft: {
                 header: {
-                    heading: [{ text: "As the first point-of-evidence.Diagnostic data is the most effective tool to tell the status of a person's health and compel them to be proactive." }],
+                    heading: [{ text: "As the first point-of-evidence, Diagnostic data is the most effective tool to tell the status of a person's health and compel them to be proactive." }],
                     description: [
                         { text: "Yet, they are extremely difficult to interpret by anyone who is not a doctor, leading to low health literacy and ineffective long-term measures." },
                         { text: "Born out of a need almost everyone over the age of 30 has faced at least once in their lives, NirogGyan emerged as an innovative startup in a space which needed evolution for a long time. We keep it simple with our easy-to-understand medical test reports." }

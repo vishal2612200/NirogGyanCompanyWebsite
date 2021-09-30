@@ -17,7 +17,7 @@ import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "300px"
+        width: "90%"
         
     },
     cardsList: {
@@ -53,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
 
     },
     title: {
+        fontSize: "1.75rem",
+        fontWeight: "700",
         [theme.breakpoints.down('sm')]: {
             fontSize: "1.8rem",
 
