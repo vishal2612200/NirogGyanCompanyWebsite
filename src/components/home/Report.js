@@ -15,15 +15,22 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
         textAlign: "left",
         padding: "3rem",
+        [theme.breakpoints.down('sm')]: {
+            textAlign: "center",
+        }
     },
     title: {
         wordWrap: "break-word",
         fontWeight: "700",
     },
     contentLeft: {
-        alignItems: "center",
-        justifyContent: "space-evenly",
+
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+
+        "&>*": {
+            marginBottom: "2rem"
+
+        }
     },
     contentRight: {
         textAlign: "center",
@@ -34,26 +41,25 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     headerContainer: {
-        textAlign: "center",
-        [theme.breakpoints.up('sm')]: {
-            paddingLeft: "4rem",
-            textAlign: "left",
 
+        [theme.breakpoints.down('sm')]: {
+            textAlign: "center",
         }
+
     },
     cardList: {
+        marginTop: "2rem",
         justifyContent: "space-around",
-        padding: "2rem",
     },
     cardContainer: {
-   //     justifyContent: "stretch",
         alignItems: "center",
         textAlign: "center",
-        padding: "1rem",
-        // "&:first-child>div": {
+        padding: "1rem 0",
+        justifyContent: "flex-start",
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: "center",
 
-        //     backgroundColor: "#E9F5FF"
-        // }
+        }
     },
     card: {
         boxShadow: "0px 2px 4px 4px #B8BBBD",
@@ -62,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "1rem",
         borderRadius: "20px",
         backgroundColor: "#fff",
-     
+
         "&:hover": { backgroundColor: "#E9F5FF" },
     },
     description: {
@@ -102,20 +108,24 @@ export default function Report({ state: report }) {
 
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
-    return <Grid item  xs={12} md={6} className={classes.contentLeft}>
+    return <Grid container item xs={12} md={6} className={classes.contentLeft} >
+     
+
+        <Grid item md={2}></Grid>
+        <Grid item md={10}>
         <Header content={content.header} />
         <CardList content={content.cardsList} />
         <Footer content={content.footer} />
+     </Grid>
+     
 
     </Grid>
 }
 
 const Header = ({ content }) => {
-    const classes = useStyles();
-    return <Grid item className={classes.headerContainer} >
+    return <Grid item  style={{paddingBottom:"1rem"}}>
         <Typography
             variant="h3"
-            className={classes.heading}
             style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
         >
             {content.heading}
@@ -123,7 +133,6 @@ const Header = ({ content }) => {
         <Typography
             variant="h6"
             color="textSecondary"
-            className={classes.description}
             style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
         >
             {content.description}
@@ -134,10 +143,15 @@ const Header = ({ content }) => {
 
 const CardList = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item className={classes.cardList} >
-        {content.map(({ imagePath, name }, index) => (
-            <Card {...{ imagePath, name }} key={index} />
-        ))}
+    return <Grid container item justifyContent="space-evenly" alignItems="center" style={{ paddingBottom: "1rem" }}>
+       
+        {content.map((props, index) => (
+                
+
+                <Card {...props} key={index} />
+
+            ))}
+       
     </Grid>
 }
 
@@ -145,9 +159,9 @@ const Card = ({ imagePath, name }) => {
 
     const classes = useStyles();
     return (
-        <Grid container item xs={12} sm={6} justifyContent="center" className={classes.cardContainer} >
+        <Grid container item sm={6} className={classes.cardContainer} >
             <Grid container item className={classes.card} direction="column" justifyContent="center" >
-                <Grid item><img src={imagePath} alt="feature" width="auto" height="50px"/></Grid>
+                <Grid item><img src={imagePath} alt="feature" width="auto" height="50px" /></Grid>
                 <Grid item>
                     <Typography variant="h6">{name}</Typography>
                 </Grid>
@@ -157,21 +171,19 @@ const Card = ({ imagePath, name }) => {
 }
 const Footer = ({ content }) => {
     const classes = useStyles();
-    return <Grid container direction="column" item className={classes.footer} md={10} justifyContent="flex-start">
+    return <Grid container item direction="column" md={11}>
         <Grid item>
             <Typography
-                variant="h5"
+                variant="h6"
                 color="textSecondary"
-                className={classes.textThin}
                 style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
             >
                 {content.textThin}
             </Typography>
         </Grid>
         <Grid item>
-
             <Typography
-                variant="h5"
+                variant="h6"
                 style={{
                     fontSize: "2rem",
                     fontWeight: "950",
@@ -179,7 +191,7 @@ const Footer = ({ content }) => {
                     color: "#05152E"
                 }}
             >
-                <b>{content.textBold}</b>
+                {content.textBold}
             </Typography>
         </Grid>
     </Grid>

@@ -6,11 +6,10 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-
-import clsx from 'clsx';
+import { List, ListItem, ListItemText, ListSubheader } from '@material-ui/core';
 import "../component.css";
-import ListSimple from "../utils/ListSimple";
 import BigRightImageSection from "../utils/BigRightImageSection";
+import clsx from 'clsx';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,13 +17,6 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         paddingTop: "3rem"
 
-    },
-    contentRight: {
-        textAlign: "center",
-        "& >img": {
-            maxWidth: "100%",
-            maxHeight: "100%"
-        }
     },
     header: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
@@ -37,14 +29,6 @@ const useStyles = makeStyles((theme) => ({
     contentLeft: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         borderRadius: "10px",
-    },
-    imageBox: {
-        textAlign: "center",
-        padding: "1rem",
-        backgroundColor: "#E9F5FF",
-        "&>img": {
-            margin: "auto "
-        }
     },
     cardsList: {
         marginTop: "2rem",
@@ -87,55 +71,44 @@ const ContentLeft = ({ content }) => {
     return <Grid container item direction="column" className={classes.contentLeft} justifyContent="flex-end" alignItems="center">
         <Grid item md={9}>
 
-
             <Header content={content.content} />
-            <CardsList content={content.cardsList} />
         </Grid>
     </Grid>
 }
 
 
-const Header = ({ content }) => {
+const Header = ({ content: { heading, description } }) => {
     const classes = useStyles();
     return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly">
         <Grid item>
-            <ListSimple content={content} />
+
+            <List >
+
+                <ListSubheader color="primary" style={{ position: "relative" }}>
+                    <Typography variant="h4" color="textPrimary" style={{ marginBottom: "1rem" }}>
+                        {heading}
+                    </Typography>
+
+                </ListSubheader>
+                {description.map((item, index) => (
+                    <ListItem>
+                        <ListItemText
+                            primary={
+                                <Typography variant="body1" color="textSecondary" key={index}>
+                                    {item}
+                                </Typography>
+                            }
+
+                        />
+                    </ListItem>
+
+                )
+                )}
+            </List>
         </Grid>
     </Grid>
 }
 
-
-
-
-const CardsList = ({ content }) => {
-    const classes = useStyles();
-    return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}>
-        {content.map(({ imagePath, textThin, textBold }, index) => (<Card {...{ imagePath, textThin, textBold }} key={index} />))}
-    </Grid>
-
-
-}
-
-
-const Card = ({ imagePath, textThin, textBold }) => {
-    const classes = useStyles();
-
-    return (
-        <Grid container className={classes.card}  >
-            <Grid item xs={4} className={classes.imageBox}>
-                <img src={imagePath} alt="market" />
-            </Grid>
-            <Grid item xs={8} className={classes.textBox}>
-                <Typography variant="h6" color="textSecondary">
-                    {textThin}
-                </Typography>
-                <Typography variant="h6" color="textSecondary" style={{ fontWeight: "bolder" }}>
-                    {textBold}
-                </Typography>
-            </Grid>
-        </Grid>
-    )
-}
 
 
 

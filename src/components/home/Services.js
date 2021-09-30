@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardList: {
     justifyContent: "center",
-    // alignItems: "stretch",
   },
 
   serviceCard: {
@@ -46,9 +45,9 @@ export default function Services({ state: services }) {
   const classes = useStyles();
   return (
     <Grid container direction="column" className={classes.root} style={{ backgroundImage: `url(${services.backgroundImage})` }}>
-      <HeadingWithText content={services.header}/>
+      <HeadingWithText content={services.header} />
       <Grid item style={{ height: "1rem" }}></Grid>
-      <CardList cardsList={services.cardsList}/>
+      <CardList cardsList={services.cardsList} />
     </Grid>);
 }
 
@@ -71,20 +70,20 @@ const Card = ({ imgPath, heading, content }) => {
   })
 
   return (
-    <Grid container item direction="column" className={classes.serviceCard} xs={12} sm={6} md={4} lg={3}  ref={ref}>
-      <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
-        <span>
-        <Grid item className={`${classes.serviceCard}__logo-box`} >
-          <img src={imgPath} alt="service" />
-          <Typography variant="h5">{heading}</Typography>
+    <Grid container item direction="column" className={classes.serviceCard} alignItems="baseline" xs={12} sm={6} md={4} lg={3} ref={ref}>
+        <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
+        <Grid item >
+          <Grid item className={`${classes.serviceCard}__logo-box`} style={{marginBottom:"1rem"}}>
+            <img src={imgPath} alt="service" width="60px" height="60px"/>
+            <Typography variant="h5">{heading}</Typography>
+          </Grid>
+          <Grid item className={`${classes.serviceCard}__content`}>
+            <Typography variant="body1" color="textSecondary">{content}</Typography>
+          </Grid>
         </Grid>
+    </Grow>
+      </Grid>
 
-        <Grid item className={`${classes.serviceCard}__content`}>
-          <Typography variant="body1" color="textSecondary">{content}</Typography>
-        </Grid>
-        </span>
-      </Grow>
-    </Grid>
 
   );
 }

@@ -18,9 +18,9 @@ export default function About({ state, children }) {
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
          <Believe state={state.Believe} /> 
-        <ExpertTeam state={state.ExpertTeam} />
+          <ExpertTeam state={state.ExpertTeam} />  
         <HelpedOrganisations state={state.HelpedOrganisations} />
-        <ProductConsultant state={state.ProductConsultant} />
+        <ProductConsultant state={state.ProductConsultant} /> 
         <RecognisedBy state={state.RecognisedBy} /> 
         {children}
     </React.Fragment>

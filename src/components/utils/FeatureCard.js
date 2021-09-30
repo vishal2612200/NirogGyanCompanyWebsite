@@ -48,7 +48,9 @@ export default function FeatureCard({ imagePath, textThin, textBold }) {
     return (
         <Grid container className={classes.card}   >
             <Grid container item xs={4} className={classes.imageBox} justifyContent="center" alignItems="center">
-                <Grid item ><img src={imagePath} alt="feature" width="60px" /></Grid>
+                <Grid item >
+                    <img src={imagePath} alt="feature" width="60px" height="60px" />
+                </Grid>
             </Grid>
             <Grid item xs={8} className={classes.textBox}>
                 <Typography component="div">

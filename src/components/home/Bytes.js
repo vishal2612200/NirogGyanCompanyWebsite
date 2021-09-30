@@ -76,7 +76,7 @@ const Card = ({ link, title = "YouTube video player" }) => {
         borderRadius: "10px",
         aspectRatio: "425/280"
       }}
-        height="240px"
+        height="220px"
         rel="prefetch"
         src={link}
         title={title}

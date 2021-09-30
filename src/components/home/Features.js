@@ -158,7 +158,7 @@ const Header = ({ content }) => {
 const CardsList = ({ content }) => {
   const classes = useStyles();
   return <Grid container item direction="column" justifyContent="space-evenly" className={classes.cardsList}>
-    {content.map(({ imagePath, textThin, textBold }, index) => (<Card {...{ imagePath, textThin, textBold }} key={index} />))}
+    {content.map((props, index) => (<Card {...props} key={index} />))}
   </Grid>
 
 
