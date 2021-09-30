@@ -18,6 +18,7 @@ import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "300px"
+        
     },
     cardsList: {
         justifyContent: "center",
@@ -95,7 +96,7 @@ export const TeamCard = ({ imgPath, heading, content }) => {
     return (
         <Card className={classes.root} >
             <CardActionArea style={{ textAlign: "center" }}>
-                <img src={imgPath} alt="hello there" width="100%" height="auto" />
+                <img src={imgPath} alt="hello there" width="100%" height="200px" />
                 <CardContent >
                     <Typography variant="h4" color="textSecondary" className={classes.title}>
                         <Box textAlign="center">

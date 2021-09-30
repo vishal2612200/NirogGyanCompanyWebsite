@@ -4,6 +4,7 @@ import "@fontsource/open-sans";
 import Carousel, { slidesToShowPlugin, Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery, useTheme } from "@material-ui/core"
+import Grid from "@material-ui/core/Grid";
 
 export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSlides = 1, dotsOnDeskTop = false }) {
     const [dotIndex, setDotIndex] = useState(0);
@@ -36,13 +37,16 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
                 content.map((props, index) => (
                     <card.type {...card.props} {...props} key={index} />))}
         />
-        {(isSmallScreen || dotsOnDeskTop) ? <Dots
-            value={dotIndex}
-            onChange={(index) => setDotIndex(index)}
-            number={maxDots}
-            thumbnails={dots}
-
-        /> : ""}
+<Grid item style={{marginTop:"2rem" }}>
+    
+            {(isSmallScreen || dotsOnDeskTop) ? <Dots
+                value={dotIndex}
+                onChange={(index) => setDotIndex(index)}
+                number={maxDots}
+                thumbnails={dots}
+    
+            /> : ""}
+</Grid>
     </React.Fragment>
 
 }

@@ -6,6 +6,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
+import BigRightImageSection from "../utils/BigRightImageSection1";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -97,8 +98,11 @@ export default function Report({ state: report }) {
     const classes = useStyles();
     return (
         <Grid container className={classes.root}>
-            <ContentLeft content={report.contentLeft} />
-            <ContentRight content={report.contentRight} />
+            <BigRightImageSection
+                contentLeft={<ContentLeft content={report.contentLeft} />}
+                image={{
+                    imagePath: report.contentRight.imagePath, altText: "feature"
+                }} />
         </Grid>
     );
 
@@ -109,9 +113,7 @@ export default function Report({ state: report }) {
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
     return <Grid container item xs={12} md={6} className={classes.contentLeft} >
-     
-
-        <Grid item md={2}></Grid>
+      <Grid item md={2}></Grid>
         <Grid item md={10}>
         <Header content={content.header} />
         <CardList content={content.cardsList} />

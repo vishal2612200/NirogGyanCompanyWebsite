@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
         border: "1px solid #B8BBBD",
         marginBottom: "2rem",
         borderRadius: "10px",
-    }, imageBox: {
+    },
+    imageBox: {
         verticalAlign: "middle",
         textAlign: "center",
         padding: "20px 0",
