@@ -1,25 +1,25 @@
 
 import * as path from "path";
 
-import heroImage from "../about/static/imgs/hero-image.png"
+import heroImage from "../about/static/imgs/hero-image.svg"
 
 import recognisedBy1 from "../about/static/imgs/recognised-by-1.png"
 import recognisedBy2 from "../about/static/imgs/recognised-by-2.png"
 import recognisedBy3 from "../about/static/imgs/recognised-by-3.png"
 
 import marketCardItem1 from "../about/static/imgs/market-card-item-1.png"
-import marketBackground from "../about/static/imgs/market-background.png"
+import marketBackground from "../about/static/imgs/market-background.svg"
 
-import believeBackground from "../about/static/imgs/believe-background.png"
+import believeBackground from "../about/static/imgs/believe-background.svg"
 
 
-import expertTeamShweta from "../about/static/imgs/expertteam-shweta.png"
-import expertTeamJoy from "../about/static/imgs/expertteam-joy.png"
-import expertTeamKartik from "../about/static/imgs/expertteam-kartik.png"
+import expertTeamShweta from "../about/static/imgs/expertteam-shweta.svg"
+import expertTeamJoy from "../about/static/imgs/expertteam-joy.svg"
+import expertTeamKartik from "../about/static/imgs/expertteam-kartik.svg"
 
 import productConsultantAyush from "../about/static/imgs/product-consultant-ayush.png"
-import productConsultantErik from "../about/static/imgs/product-consultant-erik.png"
-import productConsultantKartik from "../about/static/imgs/product-consultant-kartik.png"
+import productConsultantErik from "../about/static/imgs/product-consultant-erik.svg"
+import productConsultantKartik from "../about/static/imgs/expertteam-kartik.svg"
 
 import helpedOrganisationsBackground from "../about/static/imgs/helped-organisations-background.png"
 
@@ -70,7 +70,7 @@ export default (function () {
                 cardsList: [{
                     imagePath: marketCardItem1,
                     items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 300,000+ Reports"],
-           }],
+                }],
             },
             contentRight: {
                 imagePath: marketBackground

@@ -1,4 +1,4 @@
-import heroImage from "../home/static/imgs/hero-image.png"
+import heroImage from "../home/static/imgs/hero-image.svg"
 
 import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.png"
 import brandDrDangLabs from "../home/static/imgs/brand-dr-dang-labs.png"
@@ -28,8 +28,6 @@ import reportDiabetes from "../home/static/imgs/report-diabetes.png"
 import reportBigReport from "../home/static/imgs/report-big-report.png"
 
 import achievementsBackground from "../home/static/imgs/achievements-background.svg"
-// import achievementsBackground1 from "../home/static/imgs/achievements-background-1.png"
-// import achievementsBackground2 from "../home/static/imgs/achievements-background-2.png"
 
 import clientMessage1 from "../home/static/imgs/client-message-1.png"
 import clientMessage2 from "../home/static/imgs/client-message-2.png"
@@ -37,7 +35,7 @@ import clientMessage3 from "../home/static/imgs/client-message-3.png"
 import clientMessageBackground from "../home/static/imgs/client-message-background.png"
 
 
-import featuresBig from "../home/static/imgs/features-big.png"
+import featuresBig from "../home/static/imgs/features-background.svg"
 
 
 

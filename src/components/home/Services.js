@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
   },
-  cardList: {
+  cardsList: {
     justifyContent: "center",
   },
 
@@ -47,14 +47,14 @@ export default function Services({ state: services }) {
     <Grid container direction="column" className={classes.root} style={{ backgroundImage: `url(${services.backgroundImage})` }}>
       <HeadingWithText content={services.header} />
       <Grid item style={{ height: "1rem" }}></Grid>
-      <CardList cardsList={services.cardsList} />
+      <CardsList cardsList={services.cardsList} />
     </Grid>);
 }
 
-const CardList = ({ cardsList }) => {
+const CardsList = ({ cardsList }) => {
   const classes = useStyles();
 
-  return <Grid container item className={classes.cardList} >
+  return <Grid container item className={classes.cardsList} >
     {cardsList.map(({ imgPath, heading, content }, index) => (
       <Card {...{ imgPath, heading, content }} key={index} />
     ))

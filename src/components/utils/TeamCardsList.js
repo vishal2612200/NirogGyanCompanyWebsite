@@ -1,24 +1,18 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { IconButton } from "@material-ui/core";
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Box from '@material-ui/core/Box';
-import { useMediaQuery, useTheme } from "@material-ui/core"
-import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
+import { Typography, IconButton, Card, CardActionArea, CardActions, CardContent, Box } from "@material-ui/core";
+import CarousalWithArrowsOnDesktop from "./CarousalWithArrowsOnDesktop"
+import { useNumberOfSlides } from "../cutomHooks"
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "300px"
-        
+
     },
     cardsList: {
         justifyContent: "center",
@@ -35,17 +29,6 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "10px",
     },
 
-    image: {
-        maxWidth: "100%",
-        maxHeight: "auto"
-    },
-    iconContainer: {
-        justifyContent: "center",
-        alignContent: "center",
-    },
-    media: {
-        height: 180,
-    },
     iconStyle: {
         border: "1px solid #B8BBBD",
         borderRadius: "50%",
@@ -62,31 +45,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function CardsList({ cardsList }) {
+
+export default function TeamCardsList({ content }) {
     const classes = useStyles();
-    const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
-    const isLargeScreen = useMediaQuery(theme.breakpoints.between("md", "lg"));
+    const numberOfSlides = useNumberOfSlides();
 
-    let numberOfSlides;
-    if (isSmallScreen)
-        numberOfSlides = 1;
-    else if (isMediumScreen)
-        numberOfSlides = 2;
-    else if (isLargeScreen)
-        numberOfSlides = 3;
-    else
-        numberOfSlides = 4;
-
-    return <Grid container className={classes.cardList} item justifyContent="center" alignItems="center">
-        <CarousalWithArrowsOnDesktop card={<TeamCard />} content={cardsList} numberOfSlides={numberOfSlides} />
+    return <Grid container className={classes.cardsList} item justifyContent="center" alignItems="space-around" >
+        <CarousalWithArrowsOnDesktop card={<TeamCard />} content={content} dotsOnDeskTop={true} numberOfSlides={numberOfSlides}></CarousalWithArrowsOnDesktop>
     </Grid>
 }
 
 
-
-export const TeamCard = ({ imgPath, heading, content }) => {
+const TeamCard = ({ imgPath, heading, content }) => {
 
     const classes = useStyles();
     const icons = [
@@ -117,18 +87,12 @@ export const TeamCard = ({ imgPath, heading, content }) => {
             </CardActionArea>
             <CardActions style={{ justifyContent: 'center' }}>
                 <Box >
-                    {
-                        icons.map(icon => (
-                            <IconButton>
-                                {icon}
-                            </IconButton>
-                        )
-                        )
-                    }
+                    {icons.map(icon => (<IconButton>{icon}</IconButton>))}
                 </Box>
 
             </CardActions>
         </Card>
     );
 }
+
 

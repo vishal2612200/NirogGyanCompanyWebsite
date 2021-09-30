@@ -1,6 +1,6 @@
 import * as path from "path";
 
-import heroImage from "../blog/static/imgs/hero-image.png"
+import heroImage from "../blog/static/imgs/hero-image.svg"
 
 import blogHealthLiteracy from "../blog/static/imgs/blog-health-literacy.png"
 import blogDoctor from "../blog/static/imgs/blog-doctor.png"

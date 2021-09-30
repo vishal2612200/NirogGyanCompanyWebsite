@@ -2,7 +2,7 @@ import * as path from "path";
 
 
 
-import heroImage from "../faqs/static/imgs/hero-image.png"
+import heroImage from "../faqs/static/imgs/hero-image.svg"
 
 export default (function () {
     return {

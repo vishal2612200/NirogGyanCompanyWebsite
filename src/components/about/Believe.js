@@ -1,21 +1,14 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import {
-    Grid,
-} from "@material-ui/core";
+import { Typography, Grid, List, ListItem, ListItemText, ListSubheader } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import { List, ListItem, ListItemText, ListSubheader } from '@material-ui/core';
-import "../component.css";
 import BigRightImageSection from "../utils/BigRightImageSection";
-import clsx from 'clsx';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        paddingTop: "3rem"
 
     },
     header: {
@@ -29,48 +22,27 @@ const useStyles = makeStyles((theme) => ({
     contentLeft: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         borderRadius: "10px",
-    },
-    cardsList: {
-        marginTop: "2rem",
-    },
-
-    card: {
-        border: "1px solid #B8BBBD",
-        marginBottom: "2rem"
-
-    },
-    textBox: {
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-        padding: "1rem",
-        textWrap: "word-break",
-        alignItems: "flex-end",
     }
-
 })
 );
 
 export default function Believe({ state: believe }) {
 
-    const classes = useStyles();
-
     return (
-        <Grid container className={clsx(classes.root)} justifyContent="center" alignItems="center">
-            <BigRightImageSection
-                contentLeft={<ContentLeft content={believe.contentLeft} />}
-                image={{
-                    imagePath: believe.contentRight.imagePath, altText: "feature"
-                }} />
+        <BigRightImageSection
+            contentLeft={<ContentLeft content={believe.contentLeft} />}
+            image={{
+                imagePath: believe.contentRight.imagePath, altText: "feature"
+            }} />
 
-        </Grid>
     );
 }
 
 
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
-    return <Grid container item direction="column" className={classes.contentLeft} justifyContent="flex-end" alignItems="center">
+    return <Grid container item direction="column" className={classes.contentLeft} justifyContent="flex-end" alignItems="center" md={6}>
         <Grid item md={9}>
-
             <Header content={content.content} />
         </Grid>
     </Grid>
@@ -79,33 +51,31 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content: { heading, description } }) => {
     const classes = useStyles();
-    return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly">
-        <Grid item>
+    return <Grid item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
 
-            <List >
+        <List >
 
-                <ListSubheader color="primary" style={{ position: "relative" }}>
-                    <Typography variant="h4" color="textPrimary" style={{ marginBottom: "1rem" }}>
-                        {heading}
-                    </Typography>
+            <ListSubheader color="primary" style={{ position: "relative" }}>
+                <Typography variant="h4" color="textPrimary" style={{ marginBottom: "1rem" }}>
+                    {heading}
+                </Typography>
 
-                </ListSubheader>
-                {description.map((item, index) => (
-                    <ListItem>
-                        <ListItemText
-                            primary={
-                                <Typography variant="body1" color="textSecondary" key={index}>
-                                    {item}
-                                </Typography>
-                            }
+            </ListSubheader>
+            {description.map((item, index) => (
+                <ListItem>
+                    <ListItemText
+                        primary={
+                            <Typography variant="body1" color="textSecondary" key={index}>
+                                {item}
+                            </Typography>
+                        }
 
-                        />
-                    </ListItem>
+                    />
+                </ListItem>
 
-                )
-                )}
-            </List>
-        </Grid>
+            )
+            )}
+        </List>
     </Grid>
 }
 

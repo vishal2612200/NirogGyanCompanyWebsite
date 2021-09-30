@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     minHeight: "20vh",
   },
-  cardList: {
+  cardsList: {
     padding: "1rem auto",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -62,7 +62,7 @@ const CardsList = ({ content }) => {
   else
     numberOfSlides = 3;
 
-  return <Grid container className={classes.cardList} item justifyContent="center" alignItems="center">
+  return <Grid container className={classes.cardsList} item justifyContent="center" alignItems="center">
     <CarousalWithArrowsOnDesktop card={<Card />} content={content} numberOfSlides={numberOfSlides} />
   </Grid>
 }

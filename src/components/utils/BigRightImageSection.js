@@ -8,46 +8,49 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: "0.5rem",
-        minHeight: "75vh"
-    },
-    imageBox: {
-        backgroundSize: "contain", backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        
+        flexGrow: 1,
+        padding:"2rem 0",
+        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+        textAlign: "left",
+     
+        [theme.breakpoints.down('sm')]: {
+            textAlign: "center",
+        }
     },
     contentRight: {
         textAlign: "center",
-        "& >img": {
+        margin: "auto",
+        "& img": {
             maxWidth: "100%",
-            maxHeight: "100%"
+            height: "auto"
         }
     }
-}));
+}
+));
+
+
+
+
 
 
 export default function BigRightImageSection({ contentLeft, image, ...props }) {
     const classes = useStyles();
     return (
-        <Grid container className={classes.root} justifyContent="space-evenly" {...props} >
-            <Grid item md={6}>
-                {contentLeft}
-            </Grid>
-            <Grid item md={6}>
-                <ImageBox image={image} />
-            </Grid>
+        <Grid container className={classes.root} {...props} >
+            {contentLeft}
+            <ImageBox image={image} />
         </Grid>
-    )
+    );
 
 }
-
-
 
 
 const ImageBox = ({ image: { imagePath, altText = "logo" } }) => {
     const classes = useStyles();
 
-    return <Grid container item justifyContent="flex-start" className={classes.imageBox}>
-        <img src={imagePath} alt={altText} width="100%" />
+    return <Grid container item direction="column" md={6} className={classes.contentRight}>
+        <Grid container item>
+            <img src={imagePath} alt={altText} width="90%" />
+        </Grid>
     </Grid>
 }

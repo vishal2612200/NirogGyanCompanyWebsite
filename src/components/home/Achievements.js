@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundSize: "cover",
     alignItems: "center",
-
+    backgroundAttachment: "fixed"
   },
 
   headerContainer: {
@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     margin: "3%",
     border: "2px dashed #fff",
-    [theme.breakpoints.down('sm')]:{
-      width:"250px"
+    [theme.breakpoints.down('sm')]: {
+      width: "250px"
     }
   }
 }));

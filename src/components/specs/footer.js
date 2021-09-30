@@ -1,4 +1,4 @@
-import logoIcon from "../footer/static/imgs/logo-icon.png"
+import logoIcon from "../footer/static/imgs/logo-icon.svg"
 import facebook from "../footer/static/imgs/facebook.svg"
 import twitter from "../footer/static/imgs/twitter.svg"
 import instagram from "../footer/static/imgs/instagram.svg"

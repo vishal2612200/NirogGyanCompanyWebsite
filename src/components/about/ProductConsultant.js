@@ -3,10 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
 import HeadingWithText from "../utils/HeadingWithText";
-import CardsListSimple, { TeamCard } from "../utils/CardsListSimple";
-import { useMediaQuery, useTheme } from "@material-ui/core"
-
-import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
+import TeamCardsList from "../utils/TeamCardsList";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -68,29 +65,11 @@ export default function ProductConsultant({ state: productConsultant }) {
         <Grid container direction="column" className={classes.root}>
             <HeadingWithText content={productConsultant.header}></HeadingWithText>
             <Grid container item  >
-                <CardsList content={productConsultant.cardsList}></CardsList>
+                <TeamCardsList content={productConsultant.cardsList} />
             </Grid>
         </Grid>);
 
 }
 
-
-const CardsList = ({ content }) => {
-    const classes = useStyles();
-    const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
-    let numberOfSlides = 4;
-    if (isSmallScreen)
-        numberOfSlides = 1;
-    else if (isMediumScreen)
-        numberOfSlides = 2;
-    else
-        numberOfSlides = 4;
-
-    return <Grid container className={classes.cardList} item justifyContent="center" alignItems="space-around" >
-        <CarousalWithArrowsOnDesktop card={<TeamCard />} content={content} dotsOnDeskTop={true} numberOfSlides={numberOfSlides}></CarousalWithArrowsOnDesktop>
-    </Grid>
-}
 
 
