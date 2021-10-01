@@ -45,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Achievements({ state: achievements }) {
   const classes = useStyles();
-  console.log(achievements.backgroundImage)
   return (
     <Grid container className={classes.root} justifyContent="center" alignItems="center"
       style={{ backgroundImage: ` url(${achievements.backgroundImage})` }}  >

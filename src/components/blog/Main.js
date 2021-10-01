@@ -55,10 +55,13 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #B8BBBD",
     marginBottom: "2rem"
   }
-})
-);
+}));
+
+
+
 export default function Main({ state: main }) {
   const classes = useStyles();
+
   return (
     <Grid container className={classes.root}>
       <Hidden smDown>
@@ -80,12 +83,14 @@ export default function Main({ state: main }) {
   );
 }
 const ContentLeft = ({ content }) => {
-  const Card = ({ imagePath, date, content, readmore }) => {
+
+  
+  const Card = ({ image: { imagePath, altText = "logo-default" }, date, content, readmore }) => {
     const classes = useStyles();
     return (
       <Grid className={classes.contentLeft} container item alignContent="center" style={{ marginBottom: "4%" }}>
         <Grid item>
-          <img width="100%" style={{ borderRadius: "15px" }} src={imagePath} alt="main" />
+          <img width="100%" style={{ borderRadius: "15px" }} src={imagePath} alt={altText} />
         </Grid>
         <Grid item className={classes.commonmargin}>
           <Typography variant="h6" color="textSecondary">
@@ -112,25 +117,40 @@ const ContentLeft = ({ content }) => {
       </Grid>
     )
   }
+
   const CardsList = ({ content }) => {
     return <Grid container item>
       {
-        content.map(
-          ({ imagePath, date, content, readmore }, index) => (<Card {...{ imagePath, date, content, readmore }} key={index} />))}
+        content.map(({ image, date, content, readmore }, index) => (
+          <Card {...{ image, date, content, readmore }} key={index} />))
+      }
     </Grid>
   }
+
+
   return <CardsList content={content.cardsList} />
 }
+
+
+
+
+
+
 const ContentRight = ({ content }) => {
   const classes = useStyles();
   const { popularPosts } = content;
+
+
+
+
+
   const HeadingWithCardsList = ({ heading, cardsList, card }) => {
     const CardsList = () => {
       const classes = useStyles();
       return <Grid container item className={classes.commonmargin}>
         {
           cardsList.map(
-            (props, index) => <card.type  {...props} />
+            (props, index) => <card.type  {...props} key={index} />
           )
         }
       </Grid>
@@ -145,12 +165,14 @@ const ContentRight = ({ content }) => {
       <CardsList />
     </Grid>
   }
-  const Card1 = ({ imagePath, date, heading }) => {
+
+
+  const Card1 = ({ image: { imagePath, altText = "logo-default" }, date, heading }) => {
     const classes = useStyles();
     return (
       <Grid container className={classes.commonmargin}>
         <Grid item md={5}>
-          <img src={imagePath} alt="doctor" />
+          <img src={imagePath} alt={altText} />
         </Grid>
         <Grid item md={1}></Grid>
         <Grid item md={6} className={classes.textBox}>
@@ -168,7 +190,7 @@ const ContentRight = ({ content }) => {
     )
   }
 
-  return <Grid className={classes.contentRight} container item >
+  return <Grid container item className={classes.contentRight}>
     <HeadingWithCardsList heading={popularPosts.heading} cardsList={popularPosts.cardsList} card={<Card1 />} />
   </Grid>
 }

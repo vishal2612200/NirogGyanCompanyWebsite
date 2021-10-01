@@ -207,8 +207,8 @@ const ButtonWatchVideo = ({ text }) => {
 
 const ContentRight = ({ content, ...props }) => {
   const classes = useStyles();
-
+  const { imagePath, altText = "logo-default" } = content.image;
   return <Grid item className={classes.imageBox} {...props}>
-    <img src={content.imagePath} alt="hero" width="100%" />
+    <img src={imagePath} alt={altText} width="100%" />
   </Grid>
 }

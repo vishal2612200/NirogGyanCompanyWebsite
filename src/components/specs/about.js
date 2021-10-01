@@ -43,7 +43,7 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: heroImage,
+                image: {imagePath:heroImage, altText:"hero"},
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
 
@@ -56,7 +56,12 @@ export default (function () {
                 }],
 
             },
-            trustedBrandsLogoImages: [recognisedBy1, recognisedBy2, recognisedBy3],
+
+            trustedBrandsLogoImages: [
+                { imagePath: recognisedBy1, altText: "recognisedBy1" },
+                { imagePath: recognisedBy2, altText: "recognisedBy2" },
+                { imagePath: recognisedBy3, altText: "recognisedBy3" },
+            ],
         },
         Market: {
             contentLeft: {
@@ -68,12 +73,12 @@ export default (function () {
                     ]
                 },
                 cardsList: [{
-                    imagePath: marketCardItem1,
+                    image: { imagePath: marketCardItem1, altText: "marketCardItem1" },
                     items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 300,000+ Reports"],
                 }],
             },
             contentRight: {
-                imagePath: marketBackground
+                image: { imagePath: marketBackground, altText: "marketBackground" },
             }
         },
 
@@ -90,7 +95,7 @@ export default (function () {
                 }
             },
             contentRight: {
-                imagePath: believeBackground
+                image: { imagePath: believeBackground, altText: "believeBackground" },
             }
         },
 
@@ -103,17 +108,20 @@ export default (function () {
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
             cardsList: [{
-                imgPath: expertTeamShweta,
+                image: { imagePath: expertTeamShweta, altText: "expertTeamShweta" },
+
                 heading: "Shweta Gandhi",
                 content: "Co-Founder and CEO",
             },
             {
-                imgPath: expertTeamJoy,
+                image: { imagePath: expertTeamJoy, altText: "expertTeamJoy" },
+
                 heading: "Joyneel Acharya",
                 content: "Product Management",
             },
             {
-                imgPath: expertTeamKartik,
+                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
+
                 heading: "Kartik Tyagi",
                 content: "Technical Head",
             }
@@ -129,17 +137,20 @@ export default (function () {
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
             cardsList: [{
-                imgPath: productConsultantAyush,
+                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+
                 heading: "Ayush Vora",
                 content: "Technology Expert at NirogGyan",
             },
             {
-                imgPath: productConsultantErik,
+                image: { imagePath: productConsultantErik, altText: "productConsultantErik" },
+
                 heading: "Erik Azulay",
                 content: "International Strategy",
             },
             {
-                imgPath: productConsultantKartik,
+                image: { imagePath: productConsultantKartik, altText: "productConsultantKartik" },
+
                 heading: "Kartik Tyagi",
                 content: "Technical Head",
             }

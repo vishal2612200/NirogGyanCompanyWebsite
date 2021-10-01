@@ -31,9 +31,7 @@ export default function Believe({ state: believe }) {
     return (
         <BigRightImageSection
             contentLeft={<ContentLeft content={believe.contentLeft} />}
-            image={{
-                imagePath: believe.contentRight.imagePath, altText: "feature"
-            }} />
+            image={believe.contentRight.image} />
 
     );
 }

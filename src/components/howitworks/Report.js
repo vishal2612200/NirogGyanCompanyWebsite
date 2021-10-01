@@ -15,13 +15,12 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center"
     }
   },
-  imagesContainer: {},
   image: {
     maxWidth: "100%",
     maxHeight: "auto%",
   },
   imagePanel: {
-    transform:"translateY(-50px)"
+    transform: "translateY(-50px)"
   }
 }));
 
@@ -43,9 +42,7 @@ export default function Report({ state: report }) {
 const ImagePanel = ({ content }) => {
   const classes = useStyles();
   const [activeReport, setActiveReport] = useState("pdf");
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  
+
   return (
 
     <Grid container item className={classes.imagePanel} direction="column" justifyContent="flex-start" alignItems="flex-start">
@@ -67,13 +64,22 @@ const ImagePanel = ({ content }) => {
         </Grid>
       </Box>
 
-      <Grid container item className={classes.imagesContainer} justifyContent="center">
-        {content[activeReport].images.slice(0, isSmallScreen ? 1 : 3).map((imagePath) => (
-          <Grid item>
-            <img src={imagePath} alt="report" className={classes.image} />
-          </Grid>
-        ))}
-      </Grid>
+      <ImageContainer content={content} activeReport={activeReport} />
     </Grid>
   );
 };
+
+const ImageContainer = ({ content, activeReport }) => {
+  const classes = useStyles()
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const images = content[activeReport].images;
+
+  return <Grid container item className={classes.imagesContainer} justifyContent="center">
+    {images.slice(0, isSmallScreen ? 1 : 3).map(({ imagePath, altText = "logo-default" }, index) => (
+      <Grid item>
+        <img src={imagePath} alt={altText} className={classes.image} key={index} />
+      </Grid>
+    ))}
+  </Grid>
+}

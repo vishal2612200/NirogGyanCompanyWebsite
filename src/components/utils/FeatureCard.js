@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#E9F5FF",
         borderTopLeftRadius: "10px",
         borderBottomLeftRadius: "10px",
-       
+
         "&>img": {
             margin: "auto",
             maxHeight: "100%",
@@ -43,14 +43,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FeatureCard({ imagePath, textThin, textBold }) {
+export default function FeatureCard({ image: { imagePath, altText }, textThin, textBold }) {
     const classes = useStyles();
 
     return (
         <Grid container className={classes.card}   >
             <Grid container item xs={4} className={classes.imageBox} justifyContent="center" alignItems="center">
                 <Grid item >
-                    <img src={imagePath} alt="feature" height="60px" />
+                    <img src={imagePath} alt={altText} height="60px" />
                 </Grid>
             </Grid>
             <Grid item xs={8} className={classes.textBox}>

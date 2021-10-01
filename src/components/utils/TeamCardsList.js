@@ -56,7 +56,7 @@ export default function TeamCardsList({ content }) {
 }
 
 
-const TeamCard = ({ imgPath, heading, content }) => {
+const TeamCard = ({ image:{ imagePath, altText}, heading, content }) => {
 
     const classes = useStyles();
     const icons = [
@@ -66,7 +66,7 @@ const TeamCard = ({ imgPath, heading, content }) => {
     return (
         <Card className={classes.root} >
             <CardActionArea style={{ textAlign: "center" }}>
-                <img src={imgPath} alt="hello there" width="100%" height="200px" />
+                <img src={imagePath} alt={altText} width="100%" height="200px" />
                 <CardContent >
                     <Typography variant="h4" color="textSecondary" className={classes.title}>
                         <Box textAlign="center">

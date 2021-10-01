@@ -55,14 +55,14 @@ const CardsList = ({ cardsList }) => {
   const classes = useStyles();
 
   return <Grid container item className={classes.cardsList} >
-    {cardsList.map(({ imgPath, heading, content }, index) => (
-      <Card {...{ imgPath, heading, content }} key={index} />
+    {cardsList.map((props, index) => (
+      <Card {...props} key={index} />
     ))
     }
   </Grid>
 }
 
-const Card = ({ imgPath, heading, content }) => {
+const Card = ({ image: { imagePath, altText="logo-default" }, heading, content }) => {
 
   const classes = useStyles();
   const [ref, inView] = useInView({
@@ -71,18 +71,18 @@ const Card = ({ imgPath, heading, content }) => {
 
   return (
     <Grid container item direction="column" className={classes.serviceCard} alignItems="baseline" xs={12} sm={6} md={4} lg={3} ref={ref}>
-        <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
+      <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
         <Grid item >
-          <Grid item className={`${classes.serviceCard}__logo-box`} style={{marginBottom:"1rem"}}>
-            <img src={imgPath} alt="service" width="60px" height="60px"/>
+          <Grid item className={`${classes.serviceCard}__logo-box`} style={{ marginBottom: "1rem" }}>
+            <img src={imagePath} alt={altText} width="60px" height="60px" />
             <Typography variant="h5">{heading}</Typography>
           </Grid>
           <Grid item className={`${classes.serviceCard}__content`}>
             <Typography variant="body1" color="textSecondary">{content}</Typography>
           </Grid>
         </Grid>
-    </Grow>
-      </Grid>
+      </Grow>
+    </Grid>
 
 
   );

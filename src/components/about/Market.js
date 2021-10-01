@@ -9,7 +9,6 @@ import "@fontsource/open-sans";
 import "../component.css"
 import BigRightImageSection from "../utils/BigRightImageSection";
 import { List, ListSubheader, ListItem, ListItemText } from "@material-ui/core"
-import * as path from "path"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,9 +69,7 @@ export default function Market({ state: market }) {
   return (
     <BigRightImageSection
       contentLeft={<ContentLeft content={market.contentLeft} />}
-      image={{
-        imagePath: market.contentRight.imagePath, altText: "feature"
-      }} />
+      image={market.contentRight.image} />
   );
 }
 
@@ -130,9 +127,9 @@ const CardsList = ({ content }) => {
 
 
 
-const Card = ({ imagePath, items, alt = `${path.basename(__filename, path.extname(__filename))}` }) => {
+const Card = ({ image: { imagePath, altText = "logo-default" }, items }) => {
   const classes = useStyles();
- 
+
   var path = require('path');
   var scriptName = path.basename(__filename);
   console.log(scriptName)
@@ -140,7 +137,7 @@ const Card = ({ imagePath, items, alt = `${path.basename(__filename, path.extnam
     <Grid container className={classes.card}   >
       <Grid container item xs={4} className={classes.imageBox} justifyContent="center" alignItems="center">
         <Grid item  >
-          <img src={imagePath} alt={alt} width="60px" height="60px" />
+          <img src={imagePath} alt={altText} width="60px" height="60px" />
         </Grid>
       </Grid>
       <Grid item xs={8} className={classes.textBox}>

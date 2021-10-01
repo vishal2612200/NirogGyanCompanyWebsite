@@ -47,7 +47,7 @@ export default function Report({ state: report }) {
     return (
         <BigRightImageSection
             contentLeft={<ContentLeft content={report.contentLeft} />}
-            image={{ imagePath: report.contentRight.imagePath, altText: "feature" }}
+            image={report.contentRight.image}
             style={{ backgroundColor: "#EAEEF3" }} />
     );
 
@@ -57,6 +57,7 @@ export default function Report({ state: report }) {
 
 const ContentLeft = ({ content }) => {
     const classes = useStyles();
+
     return <Grid container item xs={12} md={6} className={classes.contentLeft} >
         <Grid item md={2}></Grid>
         <Grid item md={10}>
@@ -89,20 +90,24 @@ const Header = ({ content }) => {
 }
 
 const CardsList = ({ content }) => {
+    console.log(content, "Report")
+
     return <Grid container item justifyContent="space-evenly" alignItems="center" style={{ paddingBottom: "1rem" }}>
-        {content.map((props, index) => (
-            <Card {...props} key={index} />
+        {content.map(({ image, name }, index) => (
+            <Card image={image} name={name} key={index} />
         ))}
     </Grid>
 }
 
-const Card = ({ imagePath, name }) => {
-
+const Card = ({ image: { imagePath, altText = "logo-default" }, name }) => {
     const classes = useStyles();
+
     return (
         <Grid container item sm={6} className={classes.cardContainer} >
             <Grid container item className={classes.card} direction="column" justifyContent="center" >
-                <Grid item><img src={imagePath} alt="feature" width="auto" height="50px" /></Grid>
+                <Grid item>
+                    <img src={imagePath} alt={altText} width="auto" height="50px" />
+                </Grid>
                 <Grid item>
                     <Typography variant="h6">{name}</Typography>
                 </Grid>

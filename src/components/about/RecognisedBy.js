@@ -56,8 +56,8 @@ export default function RecognisedBy({ state: recognisedBy }) {
         ]}
         animationSpeed={1000}
       >
-        {logoImages.map((item, index) =>
-          <img key={index} src={item} alt="logo" />
+        {logoImages.map(({ imagePath, altText}, index) =>
+          <img src={imagePath} alt={altText} key={index}  />
         )}
       </Carousel>
       <Grid item >

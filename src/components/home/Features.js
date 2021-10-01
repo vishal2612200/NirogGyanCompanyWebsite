@@ -94,13 +94,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Features({ state: features }) {
 
-
   return (
     <BigRightImageSection
       contentLeft={<ContentLeft content={features.contentLeft} />}
-      image={{
-        imagePath: features.contentRight.imagePath, altText: "feature"
-      }} />
+      image={features.contentRight.image} />
 
   );
 }

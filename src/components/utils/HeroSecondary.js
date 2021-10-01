@@ -40,22 +40,22 @@ const useStyles = makeStyles((theme) => ({
     },
     contentRight: {
         alignItems: "flex-end",
-       verticalAlign: "middle",
-    padding:"2rem 2rem 0 0",
+        verticalAlign: "middle",
+        padding: "2rem 2rem 0 0",
         "& >img": {
             maxWidth: "100%",
             maxHeight: "auto"
         }
     },
     breadcrumbs: {
-        [theme.breakpoints.down('sm')]:{
-        justifyContent: "center",
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: "center",
         }
     }
 }));
 
 
-export default function HeroSecondary({ state: heroSection}) {
+export default function HeroSecondary({ state: heroSection }) {
     const classes = useStyles();
 
     return (
@@ -111,8 +111,8 @@ const ContentLeft = ({ content }) => {
 
 const ContentRight = ({ content }) => {
     const classes = useStyles();
-
-    return <Grid  item md={6} className={classes.contentRight} >
-        <img src={content.imagePath} alt="doctor" />
+    const { imagePath, altText = "logo-default" } = content.image;
+    return <Grid item md={6} className={classes.contentRight} >
+        <img src={imagePath} alt={altText} />
     </Grid>
 }

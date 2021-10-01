@@ -9,10 +9,10 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        padding:"2rem 0",
+        padding: "2rem 0",
         fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
         textAlign: "left",
-     
+
         [theme.breakpoints.down('sm')]: {
             textAlign: "center",
         }
@@ -45,12 +45,12 @@ export default function BigRightImageSection({ contentLeft, image, ...props }) {
 }
 
 
-const ImageBox = ({ image: { imagePath, altText = "logo" } }) => {
+const ImageBox = ({ image: { imagePath, altText = "logo-default" } }) => {
     const classes = useStyles();
 
-    return <Grid container item direction="column" md={6} className={classes.contentRight}>
-        <Grid container item>
-            <img src={imagePath} alt={altText} width="calc(0.9*90%)" />
+    return <Grid container item direction="column" md={6} className={classes.contentRight} justifyContent="center" alignItems="center">
+        <Grid container item justifyContent="center" alignItems="center">
+            <img src={imagePath} alt={altText} width={`calc(${0.9 * 90}%)`} />
         </Grid>
     </Grid>
 }

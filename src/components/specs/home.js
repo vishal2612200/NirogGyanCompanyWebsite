@@ -50,7 +50,10 @@ export default (function () {
         buttons: { services: "our Services", watchVideo: "Watch Video" },
       },
       contentRight: {
-        imagePath: heroImage,
+        image: {
+          imagePath: heroImage,
+          altText: "hero"
+        }
       },
       linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
@@ -63,10 +66,10 @@ export default (function () {
         description: "We partner with the best Diagnostic providers (Thyrocare, Dr.Dangs, Max Labs, Al Arab, itDose, Creliohealth, Practo, Lupin, Northstar, IQVIA)"
       },
       trustedBrandsLogoImages: [
-        brandCrelioHealth,
-        brandDrDangLabs,
-        brandMedlife,
-        brandNiramaya,
+        { imagePath: brandCrelioHealth, altText: "brandCrelioHealth" },
+        { imagePath: brandDrDangLabs, altText: "brandDrDangLabs" },
+        { imagePath: brandMedlife, altText: "brandMedlife" },
+        { imagePath: brandNiramaya, altText: "brandNiramaya" },
       ],
       whatsapp: brandWhatsappIcon,
 
@@ -84,27 +87,29 @@ export default (function () {
         },
         cardsList: [
           {
-            imagePath: featuresItem1,
+            image: { imagePath: featuresItem1, altText: "featuresItem1" },
             textThin: "250+ Biomarkers and Specialised Profiles",
             textBold: "Pathology Biomarkers",
           },
           {
-            imagePath: featuresItem2,
+            image: { imagePath: featuresItem2, altText: "featuresItem2" },
             textThin: "Content and Design verified by Top Doctors",
             textBold: "Evidence-backed, Vetted Content",
           },
           {
-            imagePath: featuresItem3,
+            image: { imagePath: featuresItem3, altText: "featuresItem3" },
             textThin: "Analytics, Multi-language option, Customisable",
             textBold: "Content, Graphs, Analytics",
           },
         ],
       },
       contentRight: {
-        imagePath: featuresBig
+        image: {
+          imagePath: featuresBig,
+          altText: "features"
+        },
       },
     },
-
     Services: {
       header: {
         heading: [
@@ -117,37 +122,37 @@ export default (function () {
       },
       cardsList: [
         {
-          imgPath: servicesTemplates,
+          image: { imagePath: servicesTemplates, altText: "reports" },
           heading: "Multiple Reporting Templates",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
         },
         {
-          imgPath: servicesInstant,
+          image: { imagePath: servicesInstant, altText: "instant" },
           heading: "Instant, Automated, Secure",
           content:
             "Buy  your medicines with our mobile application with a simple delivery system",
         },
         {
-          imgPath: servicesPdfWhatsapp,
+          image: { imagePath: servicesPdfWhatsapp, altText: "PdfWhatsapp" },
           heading: "PDF, App, E-mail, Whatsapp",
           content:
             "Free consultation with our trusted doctors and get the best recomendations",
         },
         {
-          imgPath: servicesMarketing,
+          image: { imagePath: servicesMarketing, altText: "Marketing" },
           heading: "Unique Whitelabel - Marketing",
           content:
             "Free consultation with our trusted doctors and get the best recomendations",
         },
         {
-          imgPath: servicesAffordable,
+          image: { imagePath: servicesAffordable, altText: "Affordable" },
           heading: "Special Corporate Offerings",
           content:
             "You can get 24/7 urgent care for yourself or your children and your lovely family",
         },
         {
-          imgPath: servicesCorporateOfferings,
+          image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
           heading: "Affordable & Doctor-friendly",
           content: "Track and save your medical history and health data",
         },
@@ -177,25 +182,28 @@ export default (function () {
         },
         cardsList: [
           {
-            imagePath: reportVitamin,
+            image: { imagePath: reportVitamin, altText: "vitamin" },
             name: "Vitamin"
           },
           {
-            imagePath: reportKidney,
+            image: { imagePath: reportKidney, altText: "kidney" },
             name: "Kidney"
           },
           {
-            imagePath: reportElectrolyte,
+            image: { imagePath: reportElectrolyte, altText: "electrolyte" },
             name: "Electrolyte"
           },
           {
-            imagePath: reportDiabetes,
+            image: { imagePath: reportDiabetes, altText: "diabetes" },
             name: "Diabetes"
           }
         ]
       },
       contentRight: {
-        imagePath: reportBigReport
+        image: {
+          imagePath: reportBigReport,
+          altText: "report"
+        }
       }
     },
     Achievements: {
@@ -229,19 +237,19 @@ export default (function () {
       cardsList: [
         {
           message: "It seems like yesterday when I met the founders to explore the possibility of providing patient- friendly reports, both to my walk -in and B2B customers.The team kept it sweet & simple.With minimal integration using APIs, we’ve been live since more than a year.",
-          imagePath: clientMessage1,
+          image: { imagePath: clientMessage1, altText: "clientMessage1" },
           name: "Sanjeev Malhotra",
           organisation: "Niramaya Pathlab"
         },
         {
-          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.", 
-          imagePath: clientMessage2,
+          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.",
+          image: { imagePath: clientMessage2, altText: "clientMessage2" },
           name: "Dr.Soumik Kalita",
           organisation: "Founder, FamPhy"
         },
         {
-          message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.", 
-          imagePath: clientMessage3,
+          message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.",
+          image: { imagePath: clientMessage3, altText: "clientMessage3" },
           name: "Zubair Ahmed",
           organisation: "Journalist, BBC India"
         },

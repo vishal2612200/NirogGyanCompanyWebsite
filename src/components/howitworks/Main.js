@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50%",
     boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
     [theme.breakpoints.down("sm")]: {
-      marginTop:"44%"
+      marginTop: "44%"
     }
 
   },
@@ -64,13 +64,14 @@ export default function Main({ state: main }) {
   const { ref: refSoftware, inView: inViewSoftware } = useInView({ threshold: 0.6 });
   const { ref: refReport, inView: inViewReport } = useInView({ threshold: 0.4 });
   const { ref: refCustomer, inView: inViewCustomer } = useInView({ threshold: 0.6 });
- 
+  
+
   return (
     <Grid container className={classes.root} justifyContent="center" >
       <HeadingWithText content={main.header} />
       <Grid container item justifyContent="space-evenly" md={10}>
         <Grid container item className={classes.evenCard}>
-          <Image reference={refApi} inView={inViewApi} imagePath={main.cardsList[0].imagePath} />
+          <Image reference={refApi} inView={inViewApi} image={main.cardsList[0].image} />
           <Grid container item xs={7} >
 
             <Grid item container style={{ marginTop: "15%" }} xs={8}>
@@ -105,8 +106,8 @@ export default function Main({ state: main }) {
           </Grid>
         </Grid>
         <Grid container item className={classes.oddCard}>
-          <Image reference={refSoftware} inView={inViewSoftware} imagePath={main.cardsList[1].imagePath} />
-          <Grid container item xs={7} alignContent="left" >
+          <Image reference={refSoftware} inView={inViewSoftware} image={main.cardsList[1].image} />
+          <Grid container item xs={7} alignItems="left" >
             <Hidden smDown>
               <Grid item xs={3}></Grid>
             </Hidden>
@@ -127,7 +128,7 @@ export default function Main({ state: main }) {
         </Grid>
 
         <Grid container item className={classes.evenCard}>
-            <Image reference={refReport} inView={inViewReport} imagePath={main.cardsList[2].imagePath} />
+          <Image reference={refReport} inView={inViewReport} image={main.cardsList[2].image} />
           <Grid container item xs={7} >
             <Grid item xs={8}>
               <Typography variant="h4" color="textPrimary" style={{ marginTop: "15%" }}>
@@ -156,8 +157,8 @@ export default function Main({ state: main }) {
         </Grid>
 
         <Grid container item className={classes.oddCard}>
-          <Image reference={refCustomer} inView={inViewCustomer} imagePath={main.cardsList[3].imagePath} />
-          <Grid container item xs={7} alignContent="left">
+          <Image reference={refCustomer} inView={inViewCustomer} image={main.cardsList[3].image} />
+          <Grid container item xs={7} alignItems="left">
             <Hidden smDown>
               <Grid item container xs={3}>
                 <Grid item md={11}></Grid>
@@ -190,9 +191,9 @@ export default function Main({ state: main }) {
   );
 }
 
-const Image = ({ reference, inView, imagePath }) => {
+const Image = ({ reference, inView, image: { imagePath, altText = "logo-default" } }) => {
   const classes = useStyles();
   return <Grid item xs={5} ref={reference} >
-    <img width="95%" src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")}  alt="doctor" />
+    <img width="95%" src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")} alt={altText} />
   </Grid>
 }

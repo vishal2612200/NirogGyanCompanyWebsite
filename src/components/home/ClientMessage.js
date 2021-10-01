@@ -54,6 +54,13 @@ const useStyles = makeStyles((theme) => ({
         width: theme.spacing(20),
         height: theme.spacing(20),
     },
+    clientImage: {
+        height: "100px",
+        width: "100px",
+        padding: "4px",
+        borderRadius: "50%",
+        border: "1px dashed grey"
+    }
 }
 
 ));
@@ -80,11 +87,11 @@ const CardsList = ({ content }) => {
     const classes = useStyles();
     return <Grid container className={classes.cardsList} item justifyContent="center" alignItems="center">
         <CarousalWithArrowsOnDesktop card={<Card />} content={content} dotsOnDeskTop={true}></CarousalWithArrowsOnDesktop>
-</Grid>
+    </Grid>
 }
 
 
-const Card = ({ message, imagePath, name, organisation, }) => {
+const Card = ({ message, image:{imagePath, altText="logo-default"}, name, organisation, }) => {
     const classes = useStyles();
     return (<Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
         <Grid item>
@@ -95,8 +102,7 @@ const Card = ({ message, imagePath, name, organisation, }) => {
         </Grid>
 
         <Grid item style={{ marginTop: "5%" }}>
-            <img src={imagePath} alt="client"
-                style={{ height: "100px", width: "100px", padding: "4px", borderRadius: "50%", border: "1px dashed grey" }} />
+            <img src={imagePath} alt={altText} className={classes.clientImage} />
             <Typography variant="h5">
                 <Typography color="textPrimary" variant="h5">
                     {name}

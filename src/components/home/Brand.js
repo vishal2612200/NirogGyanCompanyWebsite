@@ -28,44 +28,53 @@ const useStyles = makeStyles((theme) => ({
 export default function Brand({ state: brand }) {
   const classes = useStyles();
   const logoImages = brand.trustedBrandsLogoImages;
-
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmallScreen = useSmallScreen();
+  const { whatsapp, altText } = brand.whatsapp;
   return (
     <Grid container className={classes.root} direction="column" justifyContent="center" alignItems="center">
 
       <Grid container item justifyContent="space-around">
 
         <HeadingWithText content={brand.header} />
-        {!isSmallScreen ? <img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} /> : ""}
+        {!isSmallScreen ? <img src={whatsapp} alt={altText} className={classes.whatsapp} /> : ""}
 
       </Grid>
-
-      <Carousel
-        plugins={[
-          'infinite',
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: isSmallScreen ? 1 : 4
-            }
-          },
-          {
-            resolve: autoplayPlugin,
-            options: {
-              interval: 1000,
-            }
-          },
-        ]}
-        animationSpeed={1000}
-      >
-        {logoImages.map((item, index) =>
-          <img key={index} src={item} alt="logo" />
-        )}
-      </Carousel>
+      <CarouselInfinite logoImages={logoImages} />
       <Grid item >
         <Box p={2}></Box>
       </Grid>
     </Grid>
   );
+}
+
+const CarouselInfinite = ({ logoImages }) => {
+  const isSmallScreen = useSmallScreen();
+  return <Carousel
+    plugins={[
+      'infinite',
+      {
+        resolve: slidesToShowPlugin,
+        options: {
+          numberOfSlides: isSmallScreen ? 1 : 4
+        }
+      },
+      {
+        resolve: autoplayPlugin,
+        options: {
+          interval: 1000,
+        }
+      },
+    ]}
+    animationSpeed={1000}
+  >
+    {logoImages.map(({ imagePath, altText = "logo-default" }, index) =>
+      <img key={index} src={imagePath} alt={altText} />
+    )}
+  </Carousel>
+}
+
+function useSmallScreen() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  return isSmallScreen;
 }

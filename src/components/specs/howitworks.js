@@ -1,6 +1,5 @@
 import * as path from "path";
 
-
 import heroImage from "../howitworks/static/imgs/hero-image.svg"
 
 import reportDigital from "../howitworks/static/imgs/report-digital.png"
@@ -34,7 +33,7 @@ export default (function () {
             },
             contentRight: {
 
-                imagePath: heroImage,
+                image: { imagePath: heroImage, altText: "heroImage" },
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
@@ -47,14 +46,14 @@ export default (function () {
             imagePanel: {
                 digital: {
                     buttonText: "Digital Smart Report",
-                    images: [reportDigital]
+                    images: [{ imagePath: reportDigital, altText: "reportDigital" }],
                 },
                 pdf: {
                     buttonText: "PDF Smart Report",
                     images: [
-                        reportPdf,
-                        reportPdf,
-                        reportPdf
+                        { imagePath: reportPdf, altText: "reportPdf" },
+                        { imagePath: reportPdf, altText: "reportPdf" },
+                        { imagePath: reportPdf, altText: "reportPdf" }
                     ]
                 },
 
@@ -68,26 +67,26 @@ export default (function () {
             },
             cardsList: [
                 {
-                    imagePath: mainApiIntegration,
+                    image: { imagePath: mainApiIntegration, altText: "mainApiIntegration" },
                     heading: "API Integration",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
                     arrowPath: arrow3,
                     linePath: line2,
                 },
                 {
-                    imagePath: mainSoftware,
+                    image: { imagePath: mainSoftware, altText: "mainSoftware" },
                     heading: "Software",
                     description: "NirogGyan’s software creates the perfect SmartReport - each test is atomised as ‘card’ & each panel is linked witth the ‘knowledge bank’",
                 },
                 {
-                    imagePath: mainReport,
+                    image: { imagePath: mainReport, altText: "mainReport" },
                     heading: "Reports",
                     description: "Clients LIS send anonymised patient's data to NirogGyan's API in real time.",
                     arrowPath: arrow1,
                     linePath: line1,
                 },
                 {
-                    imagePath: mainCustomer,
+                    image: { imagePath: mainCustomer, altText: "mainCustomer" },
                     heading: "Customers",
                     description: "Complete Automation ensures seamless delivery to all customers of clients (the labs)",
                     arrowPath: arrow2,

@@ -20,7 +20,7 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: heroImage,
+                image: { imagePath: heroImage, altText: "heroImage" },
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
         },
@@ -28,7 +28,7 @@ export default (function () {
             contentLeft: {
                 cardsList: [
                     {
-                        imagePath: blogHealthLiteracy,
+                        image: { imagePath: blogHealthLiteracy , altText:"fhgj"},
                         date: "Sept 02, 2021",
                         content: {
                             heading: "No Health Literacy? No Health.",
@@ -37,7 +37,7 @@ export default (function () {
                         readmore: <>Read More &rarr;</>
                     },
                     {
-                        imagePath: blogHealthLiteracy,
+                        image: { imagePath: blogHealthLiteracy, altText:" fdghj" },
                         date: "Sept 02, 2021",
                         content: {
                             heading: "No Health Literacy? No Health.",
@@ -53,47 +53,22 @@ export default (function () {
                     heading: "Popular Posts",
                     cardsList: [
                         {
-                            imagePath: blogDoctor,
+                            image: { imagePath: blogDoctor, altText: "doctor" },
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         },
                         {
-                            imagePath: blogDoctor,
+                            image: { imagePath: blogDoctor, altText: "doctor" },
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         },
                         {
-                            imagePath: blogDoctor,
+                            image: { imagePath: blogDoctor, altText: "doctor" },
                             date: "Sept 02, 2021",
                             heading: "No Health Literacy? No Health.",
                         }
                     ]
-                },
-                categoriesList: {
-                    heading: "Categories",
-                    cardsList: [
-                        {
-                            text: "Corporate Business"
-                        },
-                        {
-                            text: "Corporate Business"
-                        },
-                        {
-                            text: "Corporate Business"
-                        }
-                    ]
-                },
-                categoriesButtons: {
-                    heading: "Categories",
-                    cardsList: [
-                        { text: "Adventure", key: "1" },
-                        { text: "Portfolio", key: "2" },
-                        { text: "Digital", key: "3" }, 
-                        { text: "Adventure", key: "4" }, 
-                        { text: "Portfolio", key: "5" }, 
-                        { text: "Digital", key: "6" },],
-                },
-
+                }
 
             }
         },
