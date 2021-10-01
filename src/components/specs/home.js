@@ -25,6 +25,7 @@ import reportVitamin from "../home/static/imgs/report-vitamin.png"
 import reportKidney from "../home/static/imgs/report-kidney.png"
 import reportElectrolyte from "../home/static/imgs/report-electrolyte.png"
 import reportDiabetes from "../home/static/imgs/report-diabetes.png"
+
 import reportPdfVitamin from "../home/static/imgs/report-pdf-vitamin.png"
 import reportPdfKidney from "../home/static/imgs/report-pdf-kidney.png"
 import reportPdfLiver from "../home/static/imgs/report-pdf-liver.png"

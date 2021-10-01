@@ -3,12 +3,16 @@ import * as path from "path";
 import heroImage from "../howitworks/static/imgs/hero-image.svg"
 
 import reportDigital from "../howitworks/static/imgs/report-digital.png"
-import reportPdf from "../howitworks/static/imgs/report-pdf.png"
+
+import reportPdfKidney from "../home/static/imgs/report-pdf-kidney.png"
+import reportPdfLiver from "../home/static/imgs/report-pdf-liver.png"
+import reportPdfCovid from "../home/static/imgs/report-pdf-covid.png"
 
 import mainApiIntegration from "../howitworks/static/imgs/main-api-integration.svg"
 import mainSoftware from "../howitworks/static/imgs/main-software.svg"
 import mainReport from "../howitworks/static/imgs/main-report.svg"
 import mainCustomer from "../howitworks/static/imgs/main-customer.svg"
+
 
 import arrow1 from "../howitworks/static/imgs/arrow1.svg"
 import arrow2 from "../howitworks/static/imgs/arrow2.svg"
@@ -51,9 +55,9 @@ export default (function () {
                 pdf: {
                     buttonText: "PDF Smart Report",
                     images: [
-                        { imagePath: reportPdf, altText: "reportPdf" },
-                        { imagePath: reportPdf, altText: "reportPdf" },
-                        { imagePath: reportPdf, altText: "reportPdf" }
+                         { imagePath: reportPdfCovid, altText: "covid" },
+                         { imagePath: reportPdfKidney, altText: "kidney" },
+                         { imagePath: reportPdfLiver, altText: "liver" },
                     ]
                 },
 

@@ -75,10 +75,10 @@ const ImageContainer = ({ content, activeReport }) => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const images = content[activeReport].images;
 
-  return <Grid container item className={classes.imagesContainer} justifyContent="center">
-    {images.slice(0, isSmallScreen ? 1 : 3).map(({ imagePath, altText = "logo-default" }, index) => (
-      <Grid item>
-        <img src={imagePath} alt={altText} className={classes.image} key={index} />
+  return <Grid container item className={classes.imagesContainer} justifyContent="center" alignItems="center">
+    {images.map(({ imagePath, altText = "logo-default" }, index) => (
+      <Grid container item md={activeReport === "pdf" ? 4 : 12} justifyContent="center" alignItems="center" style={{paddingBottom:"1rem"}}>
+        <img src={imagePath} alt={altText} className={classes.image} key={index} width={activeReport === "pdf" ? "90%" : "100%"} />
       </Grid>
     ))}
   </Grid>

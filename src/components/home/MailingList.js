@@ -107,7 +107,7 @@ export default function MailingList({ state: mailingList }) {
 
 const Block1 = ({ content, ...props }) => {
     const classes = useStyles()
-    return <Grid container item sm={6} justifyContent="center" slignItems="center" {...props}>
+    return <Grid container item sm={6} justifyContent="center" alignItems="center" {...props}>
         <Grid container item md={10} direction="column" justifyContent="space-around" alignItems="flex-start" className={classes.block1} >
             <Grid item>
                 <Typography

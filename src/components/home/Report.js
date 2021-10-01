@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import BigRightImageSection from "../utils/BigRightImageSection";
+import { useTheme, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     contentLeft: {
@@ -42,11 +43,14 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const ReportContext = React.createContext();
+const ReportContext = createContext();
 
 export default function Report({ state: report }) {
     const [reportName, setReportName] = useState(Object.keys(report.contentRight)[0]);
     const reportImage = report.contentRight[reportName];
+
+    
+
     return (
         <BigRightImageSection
             contentLeft={
@@ -109,9 +113,13 @@ const CardsList = ({ content }) => {
 const Card = ({ image: { imagePath, altText = "logo-default" }, name, imageIdentity }) => {
     const classes = useStyles();
     const { setReportName } = useContext(ReportContext);
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
+
         <Grid container item sm={6} className={classes.cardContainer} >
-            <Grid container item className={classes.card} direction="column" justifyContent="center" onMouseOver={() => setReportName(imageIdentity)}>
+            <Grid container item className={classes.card} direction="column" justifyContent="center" onMouseOver={() => !isSmallScreen ? setReportName(imageIdentity) : ""}>
                 <Grid item>
                     <img src={imagePath} alt={altText} width="auto" height="50px" />
                 </Grid>
@@ -120,6 +128,7 @@ const Card = ({ image: { imagePath, altText = "logo-default" }, name, imageIdent
                 </Grid>
             </Grid>
         </Grid>
+
     );
 }
 const Footer = ({ content }) => {
