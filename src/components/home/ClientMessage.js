@@ -103,14 +103,12 @@ const Card = ({ message, image:{imagePath, altText="logo-default"}, name, organi
 
         <Grid item style={{ marginTop: "5%" }}>
             <img src={imagePath} alt={altText} className={classes.clientImage} />
-            <Typography variant="h5">
                 <Typography color="textPrimary" variant="h5">
                     {name}
                 </Typography>
                 <Typography color="textSecondary" variant="h6">
                     {organisation}
                 </Typography>
-            </Typography>
         </Grid>
     </Grid>
     )

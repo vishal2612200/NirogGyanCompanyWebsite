@@ -161,7 +161,7 @@ export default (function () {
                 heading: [{
                     text: "We have helped 100+ organizations"
                 }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar maximus leo, non dignissim risus aliquam eget",
+                description: "Labs, hospitals, startups and corporates have tried our Patient-Engagement solutions (with Smart Reports, specialised profiles, dashboards and analytics). Why don't you join the list as well?",
             },
             buttonText: "Discover & Get Support From Our Team",
             backgroundImage: helpedOrganisationsBackground

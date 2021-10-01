@@ -25,7 +25,10 @@ import reportVitamin from "../home/static/imgs/report-vitamin.png"
 import reportKidney from "../home/static/imgs/report-kidney.png"
 import reportElectrolyte from "../home/static/imgs/report-electrolyte.png"
 import reportDiabetes from "../home/static/imgs/report-diabetes.png"
-import reportBigReport from "../home/static/imgs/report-big-report.png"
+import reportPdfVitamin from "../home/static/imgs/report-pdf-vitamin.png"
+import reportPdfKidney from "../home/static/imgs/report-pdf-kidney.png"
+import reportPdfLiver from "../home/static/imgs/report-pdf-liver.png"
+import reportPdfCovid from "../home/static/imgs/report-pdf-covid.png"
 
 import achievementsBackground from "../home/static/imgs/achievements-background.svg"
 
@@ -183,27 +186,32 @@ export default (function () {
         cardsList: [
           {
             image: { imagePath: reportVitamin, altText: "vitamin" },
-            name: "Vitamin"
+            name: "Vitamin",
+            imageIdentity:"vitamin"
           },
           {
             image: { imagePath: reportKidney, altText: "kidney" },
-            name: "Kidney"
+            name: "Kidney",
+            imageIdentity:"kidney"
           },
           {
             image: { imagePath: reportElectrolyte, altText: "electrolyte" },
-            name: "Electrolyte"
+            name: "Electrolyte",
+            imageIdentity:"covid"
           },
           {
             image: { imagePath: reportDiabetes, altText: "diabetes" },
-            name: "Diabetes"
+            name: "Diabetes",
+            imageIdentity:"liver"
           }
         ]
       },
       contentRight: {
-        image: {
-          imagePath: reportBigReport,
-          altText: "report"
-        }
+        vitamin: { imagePath: reportPdfVitamin, altText: "vitamin" },
+        covid: { imagePath: reportPdfCovid, altText: "covid" },
+        kidney: { imagePath: reportPdfKidney, altText: "kidney" },
+        liver: { imagePath: reportPdfLiver, altText: "liver" },
+
       }
     },
     Achievements: {

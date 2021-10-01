@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext, createContext } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
@@ -42,13 +42,21 @@ const useStyles = makeStyles((theme) => ({
 
 
 
+const ReportContext = React.createContext();
 
 export default function Report({ state: report }) {
+    const [reportName, setReportName] = useState(Object.keys(report.contentRight)[0]);
+    const reportImage = report.contentRight[reportName];
     return (
         <BigRightImageSection
-            contentLeft={<ContentLeft content={report.contentLeft} />}
-            image={report.contentRight.image}
+            contentLeft={
+                <ReportContext.Provider value={{ setReportName }}>
+                    <ContentLeft content={report.contentLeft} />
+                </ ReportContext.Provider >
+            }
+            image={reportImage}
             style={{ backgroundColor: "#EAEEF3" }} />
+
     );
 
 }
@@ -90,21 +98,20 @@ const Header = ({ content }) => {
 }
 
 const CardsList = ({ content }) => {
-    console.log(content, "Report")
 
     return <Grid container item justifyContent="space-evenly" alignItems="center" style={{ paddingBottom: "1rem" }}>
-        {content.map(({ image, name }, index) => (
-            <Card image={image} name={name} key={index} />
+        {content.map(({ image, name, imageIdentity }, index) => (
+            <Card image={image} name={name} key={index} imageIdentity={imageIdentity} />
         ))}
     </Grid>
 }
 
-const Card = ({ image: { imagePath, altText = "logo-default" }, name }) => {
+const Card = ({ image: { imagePath, altText = "logo-default" }, name, imageIdentity }) => {
     const classes = useStyles();
-
+    const { setReportName } = useContext(ReportContext);
     return (
         <Grid container item sm={6} className={classes.cardContainer} >
-            <Grid container item className={classes.card} direction="column" justifyContent="center" >
+            <Grid container item className={classes.card} direction="column" justifyContent="center" onMouseOver={() => setReportName(imageIdentity)}>
                 <Grid item>
                     <img src={imagePath} alt={altText} width="auto" height="50px" />
                 </Grid>
