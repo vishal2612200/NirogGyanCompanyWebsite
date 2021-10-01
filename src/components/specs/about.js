@@ -69,7 +69,7 @@ export default (function () {
                 },
                 cardsList: [{
                     imagePath: marketCardItem1,
-                    items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 300,000+ Reports"],
+                    items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 Founders from IIM - BITS backgrounds"],
            }],
             },
             contentRight: {
@@ -105,18 +105,52 @@ export default (function () {
             cardsList: [{
                 imgPath: expertTeamShweta,
                 heading: "Shweta Gandhi",
-                content: "Co-Founder and CEO",
+                content: "Co-Founder, Business Head",
+                linkedin: ""
             },
             {
                 imgPath: expertTeamJoy,
                 heading: "Joyneel Acharya",
-                content: "Product Management",
+                content: "Co-Founder, Product Head",
+                linkedin: ""
             },
             {
                 imgPath: expertTeamKartik,
                 heading: "Kartik Tyagi",
-                content: "Technical Head",
+                content: "Technical Lead",
+                linkedin: ""
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Ranjeet Jha",
+                content: "Head of Design",
+                linkedin: ""
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Vishal Sharma",
+                content: "Software Engineer",
+                linkedin: ""
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Abhishek Soni",
+                content: "Software Engineer",
+                linkedin: "https://www.linkedin.com/in/hello-abhishek/"
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Nithish",
+                content: "Software Engineer",
+                linkedin: ""
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Yash Marmat",
+                content: "Web Developer",
+                linkedin: "https://www.linkedin.com/in/yash-marmat/"
             }
+
             ],
         },
 
@@ -150,7 +184,7 @@ export default (function () {
                 heading: [{
                     text: "We have helped 100+ organizations"
                 }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar maximus leo, non dignissim risus aliquam eget",
+                description: "Labs, hospitals, startups and corporates have tried our Patient-Engagement solutions (with Smart Reports, specialised profiles, dashboards and analytics). Why don't you join the list as well?",
             },
             buttonText: "Discover & Get Support From Our Team",
             backgroundImage: helpedOrganisationsBackground

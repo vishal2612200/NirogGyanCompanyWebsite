@@ -66,7 +66,7 @@ export default function ClientMessage({ state: clientMessage }) {
     return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})`, padding: "2rem" }} >
         <HeadingWithText content={clientMessage.header} />
 
-        <Grid container item md={8} style={{ marginTop: "-3rem" }}>
+        <Grid container item md={8} style={{ marginTop: "1.25rem" }}>
             <CardsList content={clientMessage.cardsList} ></CardsList>
         </Grid>
         <Grid item></Grid>

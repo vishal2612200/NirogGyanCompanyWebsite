@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         fontWeight: 700,
         fontSize: "2.25rem",
-        lineHeight: "1.4em",
+        // lineHeight: "1.4em",
         [theme.breakpoints.down('sm')]: {
             fontSize: "32px",
 
@@ -43,7 +43,7 @@ export default function HeadingWithText({ content, ...props }) {
                 color="textSecondary"
                 style={{
                     fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-                    padding: "0.5rem",
+                    padding: "0rem 0.5rem 0.5rem 0.5rem",
                 }}>
                 {content.description}
             </Typography>}

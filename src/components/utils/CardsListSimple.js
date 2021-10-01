@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { IconButton } from "@material-ui/core";
@@ -14,6 +14,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Box from '@material-ui/core/Box';
 import { useMediaQuery, useTheme } from "@material-ui/core"
 import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -89,13 +90,11 @@ export default function CardsList({ cardsList }) {
 
 
 
-export const TeamCard = ({ imgPath, heading, content }) => {
+export const TeamCard = ({ imgPath, heading, content, linkedin }) => {
 
     const classes = useStyles();
     const icons = [
-        <FacebookIcon className={classes.iconStyle} />,
-        <InstagramIcon className={classes.iconStyle} />,
-        <TwitterIcon className={classes.iconStyle} />]
+        <LinkedinIcon className={classes.iconStyle} />]
     return (
         <Card className={classes.root} >
             <CardActionArea style={{ textAlign: "center" }}>
@@ -108,29 +107,29 @@ export const TeamCard = ({ imgPath, heading, content }) => {
                     </Typography>
                     <Typography variant="body1" color="textSecondary">
                         <Box textAlign="center">
-                            {content}
+                            {content}{linkedin}
                         </Box>
                     </Typography>
                     <Typography variant="h5">
-
-                    </Typography>
-
-
-                </CardContent>
-            </CardActionArea>
-            <CardActions style={{ justifyContent: 'center' }}>
-                <Box >
+                    <Box >
                     {
                         icons.map(icon => (
-                            <IconButton>
+                            // <a href={linkedin} tar>{icon}</a>
+                            <IconButton 
+                                component={Link}
+                                to={linkedin}
+                                target="_blank">
                                 {icon}
                             </IconButton>
                         )
                         )
                     }
                 </Box>
+                    </Typography>
 
-            </CardActions>
+
+                </CardContent>
+            </CardActionArea>
         </Card>
     );
 }

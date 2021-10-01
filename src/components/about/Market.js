@@ -111,7 +111,8 @@ const Header = ({ content, ...props }) => {
           key={index}
           style={{
             fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-            padding: "0.5rem"
+            // padding: "0.5rem"
+            paddingBottom: "0.5rem"
           }}>
           {text}
         </Typography>

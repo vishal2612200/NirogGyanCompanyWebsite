@@ -37,7 +37,7 @@ export default function Brand({ state: brand }) {
       <Grid container item justifyContent="space-around">
 
         <HeadingWithText content={brand.header} />
-        {!isSmallScreen ? <img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} /> : ""}
+        {!isSmallScreen ? <a href={brand.whatsappurl} target="_blank"><img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} /></a> : ""}
 
       </Grid>
 
@@ -60,7 +60,7 @@ export default function Brand({ state: brand }) {
         animationSpeed={1000}
       >
         {logoImages.map((item, index) =>
-          <img key={index} src={item} alt="logo" />
+          <img width="289" height="131" key={index} src={item} alt="logo" />
         )}
       </Carousel>
       <Grid item >

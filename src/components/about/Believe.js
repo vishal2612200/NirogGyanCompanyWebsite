@@ -15,7 +15,7 @@ import clsx from 'clsx';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        paddingTop: "3rem"
+        // paddingTop: "3rem"
 
     },
     header: {

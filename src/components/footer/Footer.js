@@ -88,7 +88,7 @@ const Block4 = ({ content, ...props }) => {
             </Box>
         </Typography>
         <Box style={{ height: "1.7rem" }} />
-        {content.svgitems.map((imagePath, index) => <img key={index} style={{ marginRight: "1rem" }} src={imagePath} alt="logo" />)}
+        {Object.entries(content.svgitems).map(([imagePath, url]) => <a href={url[1]} target="_blank"><img style={{ marginRight: "1rem" }} src={url[0]} alt="logo" /></a>)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
 }

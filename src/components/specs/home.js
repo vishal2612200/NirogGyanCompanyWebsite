@@ -1,9 +1,14 @@
 import heroImage from "../home/static/imgs/hero-image.png"
 
-import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.png"
+import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.jpg"
 import brandDrDangLabs from "../home/static/imgs/brand-dr-dang-labs.png"
 import brandMedlife from "../home/static/imgs/brand-medlife.png"
 import brandNiramaya from "../home/static/imgs/brand-niramaya.png"
+import brandIqvia from "../home/static/imgs/brand-iqvia.png"
+import brandItdose from "../home/static/imgs/brand-itdose.png"
+import brandPracto from "../home/static/imgs/brand-practo.jpg"
+import brandMaxlab from "../home/static/imgs/brand-maxlab.jpg"
+import brandThyrocare from "../home/static/imgs/brand-thyrocare.png"
 
 
 import brandWhatsappIcon from "../home/static/imgs/brand-whatsapp-icon.svg"
@@ -60,45 +65,48 @@ export default (function () {
       header: {
         heading: [
           { text: "Trusted by the best" },
-          { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight: "200" } }
+          { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight: "700" } }
         ],
-        description: "We partner with the best Diagnostic providers (Thyrocare, Dr.Dangs, Max Labs, Al Arab, itDose, Creliohealth, Practo, Lupin, Northstar, IQVIA)"
+        description: "We partner with the best Diagnostic providers"
       },
       trustedBrandsLogoImages: [
         brandCrelioHealth,
         brandDrDangLabs,
-        brandMedlife,
-        brandNiramaya,
+        brandIqvia,
+        brandItdose,
+        brandPracto,
+        brandMaxlab,
+        brandThyrocare
       ],
       whatsapp: brandWhatsappIcon,
+      whatsappurl: "https://wa.me/917678277891"
 
     },
     Features: {
       contentLeft: {
-
         header: {
           heading: [{
             text:
               "Knowledge, design and technology combine to transform medical data into something",
           },
-          { text: "smart", style: { color: "#3567D6", fontWeight: "200" } }
+          { text: "smart", style: { color: "#3567D6", fontWeight: "700" } }
           ],
         },
         cardsList: [
           {
             imagePath: featuresItem1,
-            textThin: "250+ Biomarkers and Specialised Profiles",
-            textBold: "Pathology Biomarkers",
+            textThin: " 250+ Biomarkers and, Specialised Profiles",
+            textBold: "",
           },
           {
             imagePath: featuresItem2,
             textThin: "Content and Design verified by Top Doctors",
-            textBold: "Evidence-backed, Vetted Content",
+            textBold: "",
           },
           {
             imagePath: featuresItem3,
             textThin: "Analytics, Multi-language option, Customisable",
-            textBold: "Content, Graphs, Analytics",
+            textBold: "",
           },
         ],
       },
@@ -111,7 +119,7 @@ export default (function () {
       header: {
         heading: [
           { text: "The Ultimate Tool to" },
-          { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "200" } }
+          { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "700" } }
 
         ],
         description:
@@ -122,36 +130,36 @@ export default (function () {
           imgPath: servicesTemplates,
           heading: "Multiple Reporting Templates",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
+            "We cater to every type of audience with different styling & language options",
         },
         {
           imgPath: servicesInstant,
           heading: "Instant, Automated, Secure",
           content:
-            "Buy  your medicines with our mobile application with a simple delivery system",
+            "Don't wait for Smart Reports : Instant download using our secure API",
         },
         {
           imgPath: servicesPdfWhatsapp,
           heading: "PDF, App, E-mail, Whatsapp",
           content:
-            "Free consultation with our trusted doctors and get the best recomendations",
+            "Reach your customers the way they prefer, with our multiple integrations",
         },
         {
           imgPath: servicesMarketing,
           heading: "Unique Whitelabel - Marketing",
           content:
-            "Free consultation with our trusted doctors and get the best recomendations",
+            "Enhance your brand with whitelabel reports and product-centric marketing",
         },
         {
           imgPath: servicesAffordable,
           heading: "Special Corporate Offerings",
           content:
-            "You can get 24/7 urgent care for yourself or your children and your lovely family",
+            "A gamified Health-Check Dashboard for companies to take healthier decisions",
         },
         {
           imgPath: servicesCorporateOfferings,
           heading: "Affordable & Doctor-friendly",
-          content: "Track and save your medical history and health data",
+          content: "Organisations and medical experts love our offerings & packages",
         },
       ],
       backgroundImage: servicesBackground
@@ -162,8 +170,11 @@ export default (function () {
         heading: [{ text: "NirogGyan Bytes" }],
       },
       videoLinks: [
-        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" },
+        { link: "https://www.youtube.com/embed/7oLpkU2wCRU/" },
         { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/" },
+        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" },
+        { link: "https://www.youtube.com/embed/p7XAjIv7YRI/" },
+        { link: "https://www.youtube.com/embed/XVKS1rtTkbg/" },
         { link: "https://www.youtube.com/embed/L4aPen8hCL8/" },
       ],
     },
@@ -171,7 +182,7 @@ export default (function () {
       contentLeft: {
         header: {
           heading: "Believe what you see.",
-          description: "Checkout our SmartReports below and know the difference",
+          description: "Checkout our Smart Reports below and know the difference",
         },
         footer: {
           textThin: "My Smart Diabetes Report helped me get the timely shock that I needed to correct myself. Thank you!",
@@ -236,7 +247,7 @@ export default (function () {
           organisation: "Niramaya Pathlab"
         },
         {
-          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.", 
+          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide Smart Reports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.", 
           imagePath: clientMessage2,
           name: "Dr.Soumik Kalita",
           organisation: "Founder, FamPhy"

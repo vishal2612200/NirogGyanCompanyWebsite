@@ -21,8 +21,12 @@ export default (
                 },
                 block4: {
                     heading: "Community",
-
-                    svgitems: [facebook, twitter, instagram]
+                    svgitems: {
+                        facebook : [facebook, "https://www.facebook.com/niroggyan"],
+                        twitter :  [twitter, "https://twitter.com/"],
+                        instagram: [instagram, "https://www.instagram.com/niroggyan_reports"]
+                    },
+                    
                 }
             }
         }

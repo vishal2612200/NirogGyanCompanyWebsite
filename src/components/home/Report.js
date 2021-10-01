@@ -187,7 +187,7 @@ const Footer = ({ content }) => {
             <Typography
                 variant="h6"
                 style={{
-                    fontSize: "2rem",
+                    // fontSize: "2rem",
                     fontWeight: "950",
                     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
                     color: "#05152E"
