@@ -60,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
       
     }
   },
+  headingstyle: {
+      fontSize: "1.5rem",
+  }
 })
 );
 

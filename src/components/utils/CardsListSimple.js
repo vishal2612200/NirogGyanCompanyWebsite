@@ -17,7 +17,8 @@ import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "90%"
+        width: "90%",
+        marginBottom: "0.5rem",
         
     },
     cardsList: {

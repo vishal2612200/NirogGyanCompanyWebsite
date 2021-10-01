@@ -8,8 +8,8 @@ import "@fontsource/open-sans";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: "3rem 0",
-        paddingBottom: "2rem",
+        paddingTop: "2rem",
+        paddingBottom: "0.5rem",
         textAlign: "center",
     },
     headingstyle:{

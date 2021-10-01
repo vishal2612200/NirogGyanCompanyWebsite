@@ -39,6 +39,7 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
 
     const roundedArrowCss = `.BrainhubCarousel__arrows{
                                         border-radius: 50%;
+                                        background-color: #163b76;
                                     }`
     return <React.Fragment>
         <style>
@@ -68,5 +69,5 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
 
 
 const BlueDot = () => {
-    return <div style={{ backgroundColor: "#3cd0ff", borderRadius: "50%", height: "20px", width: "20px" }}>o0hg</div>
+    return <div style={{ backgroundColor: "#163b76", borderRadius: "50%", height: "20px", width: "20px" }}>o0hg</div>
 }

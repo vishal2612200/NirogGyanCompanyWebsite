@@ -27,8 +27,6 @@ const useStyles = makeStyles((theme) => ({
     },
     block: {
         minWidth: "min-content",
-       
-
     },
     container: {
         marginRight: "2rem"
@@ -56,7 +54,7 @@ const Block1 = ({ content, ...props }) => {
         </Grid>
         <Grid item>
             <Typography variant="h6">
-                <Box fontWeight="fontWeightMedium" m={1}>
+                <Box fontWeight="fontWeightMedium" m={1} style={{ fontSize:"1rem" }}>
                     {content.copyrightText}
                 </Box>
             </Typography>

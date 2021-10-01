@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         textAlign: "left",
         fontWeight: "700",
+        color: "#fff",
         [theme.breakpoints.down('sm')]: {
             textAlign: "center",
         }
@@ -79,7 +80,7 @@ const ContentLeft = ({ content }) => {
             <Grid item>
                 <Typography
                     variant="h2"
-                    style={{ color: "#fff" }}
+                    style={{fontSize: "2.5rem" }}
                     className={classes.title}>
                     {content.heading}
                 </Typography>
@@ -95,7 +96,7 @@ const ContentLeft = ({ content }) => {
                         content.breadcrumbs.map(({ text, link }, index) => <Link color="inherit" href={link} >
                             <Typography
                                 variant="h6"
-                                style={{ color: "#fff" }}
+                                style={{ fontSize: "1rem" }}
                                 className={classes.title}>
                                 {text}
                             </Typography>

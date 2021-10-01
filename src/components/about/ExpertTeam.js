@@ -19,19 +19,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
 
   },
-  card: {
-    backgroundColor: "#fff",
-    borderRadius: "15px",
-    textAlign: "center",
-    alignItems: "center",
-    padding: "2rem",
-    boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
-    width: "90%",
-
-    marginTop: "3%",
-    marginLeft: "3%",
-    marginBottom: "5%"
-  },
   message: {
     fontSize: "1rem",
     "&::before": {

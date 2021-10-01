@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   buttonSet: {
+    marginBottom:"2rem",
     [theme.breakpoints.down('sm')]: {
       justifyContent: "center"
     }
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "auto%",
   },
   imagePanel: {
-    transform:"translateY(-50px)"
+    // transform:"translateY(-50px)"
   }
 }));
 

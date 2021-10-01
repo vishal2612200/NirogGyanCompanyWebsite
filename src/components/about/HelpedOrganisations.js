@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         fontWeight: "bold",
-
         backgroundColor: "#3CD0FF",
         fontFamily: '"Nunito Sans"',
         fontSize: "24px",
