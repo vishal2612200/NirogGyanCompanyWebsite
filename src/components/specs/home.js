@@ -39,6 +39,8 @@ import achievementsBackground from "../home/static/imgs/achievements-background.
 import clientMessage1 from "../home/static/imgs/client-message-1.png"
 import clientMessage2 from "../home/static/imgs/client-message-2.png"
 import clientMessage3 from "../home/static/imgs/client-message-3.png"
+import clientMessage4 from "../home/static/imgs/client-message-4.png"
+import clientMessage5 from "../home/static/imgs/client-message-5.png"
 import clientMessageBackground from "../home/static/imgs/client-message-background.png"
 
 
@@ -257,6 +259,18 @@ export default (function () {
           imagePath: clientMessage3,
           name: "Zubair Ahmed",
           organisation: "Journalist, BBC India"
+        },
+        {
+          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.", 
+          imagePath: clientMessage4,
+          name: "Ashwani Mishra",
+          organisation: "Product Manager"
+        },
+        {
+          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.", 
+          imagePath: clientMessage5,
+          name: "Anita Sharma",
+          organisation: "Housewife"
         },
       ]
     },

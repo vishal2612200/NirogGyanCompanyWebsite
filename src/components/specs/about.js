@@ -106,19 +106,19 @@ export default (function () {
                 imgPath: expertTeamShweta,
                 heading: "Shweta Gandhi",
                 content: "Co-Founder, Business Head",
-                linkedin: ""
+                linkedin: "https://www.linkedin.com/in/shweta-gandhi/"
             },
             {
                 imgPath: expertTeamJoy,
                 heading: "Joyneel Acharya",
                 content: "Co-Founder, Product Head",
-                linkedin: ""
+                linkedin: "https://www.linkedin.com/in/joyneel-acharya/"
             },
             {
                 imgPath: expertTeamKartik,
                 heading: "Kartik Tyagi",
                 content: "Technical Lead",
-                linkedin: ""
+                linkedin: "https://www.linkedin.com/in/kartiktyagi3/"
             },
             {
                 imgPath: expertTeamKartik,
@@ -130,7 +130,7 @@ export default (function () {
                 imgPath: expertTeamKartik,
                 heading: "Vishal Sharma",
                 content: "Software Engineer",
-                linkedin: ""
+                linkedin: "https://www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
                 imgPath: expertTeamKartik,
