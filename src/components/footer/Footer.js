@@ -87,7 +87,7 @@ const Block4 = ({ content, ...props }) => {
                 {content.heading}
             </Box>
         </Typography>
-        <Box style={{ height: ".4rem" }} />
+        <Box style={{ height: "1.7rem" }} />
         {content.svgitems.map((imagePath, index) => <img key={index} style={{ marginRight: "1rem" }} src={imagePath} alt="logo" />)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
