@@ -51,7 +51,7 @@ export default function TeamCardsList({ content }) {
     const numberOfSlides = useNumberOfSlides();
 
     return <Grid container className={classes.cardsList} item justifyContent="center" alignItems="space-around" >
-        <CarousalWithArrowsOnDesktop card={<TeamCard />} content={content} dotsOnDeskTop={true} numberOfSlides={numberOfSlides}></CarousalWithArrowsOnDesktop>
+        <CarousalWithArrowsOnDesktop card={<TeamCard />} content={content} dotsOnDeskTop={true} numberOfSlides={numberOfSlides}/>
     </Grid>
 }
 

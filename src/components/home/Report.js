@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     contentLeft: {
 
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-
+        paddingTop: "2rem",
         "&>*": {
             marginBottom: "2rem"
 

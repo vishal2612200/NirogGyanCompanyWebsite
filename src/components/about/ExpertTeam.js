@@ -63,7 +63,7 @@ export default function ExpertTeam({ state: expertTeam }) {
 
   return (
     <Grid container direction="column" className={classes.root}>
-      <HeadingWithText content={expertTeam.header}></HeadingWithText>
+      <HeadingWithText content={expertTeam.header} />
       <Grid container item  >
         <TeamCardsList content={expertTeam.cardsList} />
       </Grid>
