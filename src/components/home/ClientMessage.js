@@ -47,6 +47,8 @@ const useStyles = makeStyles((theme) => ({
             fontSize: "3rem",
             lineHeight: 0,
             verticalAlign: "bottom",
+            display: "inline-block",
+            transform: "translateY(20px)",
         },
         paddingBottom: "1rem"
     },

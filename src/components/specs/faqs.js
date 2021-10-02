@@ -16,8 +16,8 @@ export default (function () {
 
             },
             contentRight: {
-                imagePath: heroImage,
-            },
+                image: { imagePath: heroImage, altText: "heroImage" },
+  },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
 
         },

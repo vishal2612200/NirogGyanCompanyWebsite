@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         backgroundColor: "#3567D6",
         backgroundPosition: "30% 70%",
-        backgroundRepeat: "no-repeat",
         color: "#fff",
         backgroundAttachment: "fixed"
 
