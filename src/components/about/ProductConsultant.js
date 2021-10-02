@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         justifyContent: "center",
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
-        paddingBottom: theme.spacing(4),
+        // paddingBottom: theme.spacing(4),
         backgroundAttachment: "fixed"
     },
     headerContainer: {

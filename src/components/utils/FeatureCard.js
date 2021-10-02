@@ -50,7 +50,7 @@ export default function FeatureCard({ image: { imagePath, altText }, textThin, t
         <Grid container className={classes.card}   >
             <Grid container item xs={4} className={classes.imageBox} justifyContent="center" alignItems="center">
                 <Grid item >
-                    <img src={imagePath} alt={altText} height="60px" />
+                    <img src={imagePath} alt="feature" width="50px" height="50px" />
                 </Grid>
             </Grid>
             <Grid item xs={8} className={classes.textBox}>

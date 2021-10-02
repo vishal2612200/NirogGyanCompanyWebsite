@@ -57,7 +57,7 @@ export default function RecognisedBy({ state: recognisedBy }) {
         animationSpeed={1000}
       >
         {logoImages.map(({ imagePath, altText}, index) =>
-          <img src={imagePath} alt={altText} key={index}  />
+          <img src={imagePath} alt={altText} key={index} width="95%"  />
         )}
       </Carousel>
       <Grid item >
@@ -68,27 +68,5 @@ export default function RecognisedBy({ state: recognisedBy }) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // <Grid container className={classes.root}>
-    //   <HeadingWithText content={recognisedBy.header} />
-
-    //   <Grid container item className={classes.imagesContainer} justifyContent="space-evenly">
-    //     {recognisedBy.trustedBrandsLogoImages.map((item, index) => <Grid item key={index}><img src={item} alt="client logo" /></Grid>)}
-    //   </Grid>
-    // </Grid>
   );
 }

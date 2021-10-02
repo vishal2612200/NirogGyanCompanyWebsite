@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from '@material-ui/core/Box';
 import { Grid, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import { Link } from 'react-router-dom';
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
@@ -28,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         fontWeight: "bold",
-
         backgroundColor: "#3CD0FF",
         fontFamily: '"Nunito Sans"',
         fontSize: "24px",
@@ -53,7 +53,10 @@ export default function HelpedOrganisations({ state: helpedOrganisations }) {
         <Grid container direction="column" justifyContent="center" alignItems="center" className={classes.root} style={
             { backgroundImage: `url(${helpedOrganisations.backgroundImage})` }}>
             <HeadingWithText content={helpedOrganisations.header}></HeadingWithText>
-            <Button variant="contained" size="large" className={classes.button}>
+            <Button variant="contained" size="large" className={classes.button} 
+                component={Link}
+                to="/faqs"
+                target="_blank">
                 <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3}>
                     {helpedOrganisations.buttonText}
                 </Box>

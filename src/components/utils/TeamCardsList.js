@@ -1,18 +1,26 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import FacebookIcon from '@material-ui/icons/Facebook';
+import Typography from "@material-ui/core/Typography";
+import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Typography, IconButton, Card, CardActionArea, CardActions, CardContent, Box } from "@material-ui/core";
-import CarousalWithArrowsOnDesktop from "./CarousalWithArrowsOnDesktop"
-import { useNumberOfSlides } from "../cutomHooks"
-
+import { IconButton } from "@material-ui/core";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Box from '@material-ui/core/Box';
+import { useMediaQuery, useTheme } from "@material-ui/core"
+import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "300px"
-
+        width: "90%",
+        marginBottom: "0.5rem",
+        
     },
     cardsList: {
         justifyContent: "center",
@@ -36,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
 
     },
     title: {
+        fontSize: "1.75rem",
+        fontWeight: "700",
         [theme.breakpoints.down('sm')]: {
             fontSize: "1.8rem",
 
@@ -60,9 +70,7 @@ const TeamCard = ({ image:{ imagePath, altText}, heading, content }) => {
 
     const classes = useStyles();
     const icons = [
-        <FacebookIcon className={classes.iconStyle} />,
-        <InstagramIcon className={classes.iconStyle} />,
-        <TwitterIcon className={classes.iconStyle} />]
+        <LinkedinIcon className={classes.iconStyle} />]
     return (
         <Card className={classes.root} >
             <CardActionArea style={{ textAlign: "center" }}>
@@ -75,22 +83,29 @@ const TeamCard = ({ image:{ imagePath, altText}, heading, content }) => {
                     </Typography>
                     <Typography variant="body1" color="textSecondary">
                         <Box textAlign="center">
-                            {content}
+                            {content}{linkedin}
                         </Box>
                     </Typography>
                     <Typography variant="h5">
-
+                    <Box >
+                    {
+                        icons.map(icon => (
+                            // <a href={linkedin} tar>{icon}</a>
+                            <IconButton 
+                                component={Link}
+                                to={linkedin}
+                                target="_blank">
+                                {icon}
+                            </IconButton>
+                        )
+                        )
+                    }
+                </Box>
                     </Typography>
 
 
                 </CardContent>
             </CardActionArea>
-            <CardActions style={{ justifyContent: 'center' }}>
-                <Box >
-                    {icons.map(icon => (<IconButton>{icon}</IconButton>))}
-                </Box>
-
-            </CardActions>
         </Card>
     );
 }

@@ -38,8 +38,14 @@ const useStyles = makeStyles((theme) => ({
   card1: {
     borderRadius: "50%",
     boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+    width:"75%",
     [theme.breakpoints.down("sm")]: {
+<<<<<<< HEAD
       marginTop: "44%"
+=======
+      marginTop:"44%",
+      width:"100%",
+>>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
     }
 
   },
@@ -87,7 +93,7 @@ export default function Main({ state: main }) {
                   </Box>
                 </Typography>
                 <Hidden smDown>
-                  <Box m={1} style={{ marginTop: "10%", marginLeft: "-10%" }}>
+                  <Box m={1} style={{ marginTop: "10%", marginLeft: "-27%" }}>
                     <img width="100%" src={main.cardsList[0].linePath} alt="doctor" />
                   </Box>
                 </Hidden>
@@ -150,7 +156,7 @@ export default function Main({ state: main }) {
             </Grid>
             <Hidden smDown>
               <Grid item>
-                <img width="90%" src={main.cardsList[2].linePath} alt="doctor" />
+                <img width="95%" src={main.cardsList[2].linePath} alt="doctor" />
               </Grid>
             </Hidden>
           </Grid>
@@ -163,7 +169,7 @@ export default function Main({ state: main }) {
               <Grid item container xs={3}>
                 <Grid item md={11}></Grid>
                 <Grid item md={1}>
-                  <img height="66%" src={main.cardsList[3].linePath} alt="doctor" />
+                  <img height="82%" src={main.cardsList[3].linePath} alt="doctor" />
                 </Grid>
               </Grid>
             </Hidden>
@@ -194,6 +200,10 @@ export default function Main({ state: main }) {
 const Image = ({ reference, inView, image: { imagePath, altText = "logo-default" } }) => {
   const classes = useStyles();
   return <Grid item xs={5} ref={reference} >
+<<<<<<< HEAD
     <img width="95%" src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")} alt={altText} />
+=======
+    <img src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")}  alt="doctor" />
+>>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
   </Grid>
 }

@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     },
     headerContainer: {
         textAlign: "center",
-
     },
     card: {
         backgroundColor: "#fff",
@@ -25,9 +24,8 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         alignItems: "center",
         padding: "2rem",
-        boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
+        boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;",
         width: "90%",
-
         marginTop: "3%",
         marginLeft: "3%",
         marginBottom: "5%"
@@ -77,7 +75,7 @@ export default function ClientMessage({ state: clientMessage }) {
     return <Grid container className={classes.root} style={{ backgroundImage: `url(${clientMessage.backgroundImage})`, padding: "2rem" }} >
         <HeadingWithText content={clientMessage.header} />
 
-        <Grid container item md={8} style={{ marginTop: "-3rem" }}>
+        <Grid container item md={8} style={{ marginTop: "1.25rem" }}>
             <CardsList content={clientMessage.cardsList} ></CardsList>
         </Grid>
         <Grid item></Grid>

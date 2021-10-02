@@ -156,8 +156,8 @@ const Heading = ({ text }) => {
 
 const Description = ({ text }) => {
   const classes = useStyles();
-  return <Grid container item className={classes.text} style={{ marginTop: "5%", marginBottom: "5%" }}>
-    <Typography variant="body2" >
+  return <Grid container item className={classes.text} style={{ marginTop: "1%", marginBottom: "5%" }}>
+    <Typography variant="body2" style={{fontSize:"1rem"}}>
       {text}
     </Typography>
   </Grid>

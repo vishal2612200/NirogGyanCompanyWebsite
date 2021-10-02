@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
 
   },
+<<<<<<< HEAD
   card: {
     backgroundColor: "#fff",
     borderRadius: "15px",
@@ -27,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
     margin: "3% auto 5% 3%",  //clockwise  top, right, bottom , left
   },
+=======
+>>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
   message: {
     fontSize: "1rem",
     "&::before": {

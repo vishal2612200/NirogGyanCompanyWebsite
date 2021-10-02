@@ -56,10 +56,14 @@ const useStyles = makeStyles((theme) => ({
     "&>*": {
       textAlign: "left",
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      padding: "1rem",
-      textWrap: "word-break"
+      paddingBottom: "1rem",
+      textWrap: "word-break",
+      
     }
   },
+  headingstyle: {
+      fontSize: "1.5rem",
+  }
 })
 );
 
@@ -103,7 +107,8 @@ const Header = ({ content, ...props }) => {
           key={index}
           style={{
             fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-            padding: "0.5rem"
+            // padding: "0.5rem"
+            paddingBottom: "0.5rem"
           }}>
           {text}
         </Typography>

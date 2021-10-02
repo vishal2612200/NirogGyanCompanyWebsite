@@ -45,7 +45,7 @@ export default (function () {
         Report: {
             header: {
                 heading: [{ text: "One idea, branched into multiple avatars" }],
-                description: "Every human being is at a different stage of ‘health’. Our SmartReports come in various forms, for the best impact on your diagnostics business.",
+                description: "Every human being is at a different stage of ‘health’. Our Smart Reports come in various forms, for the best impact on your diagnostics business.",
             },
             imagePanel: {
                 digital: {
@@ -102,11 +102,11 @@ export default (function () {
         Video: {
             header: {
                 heading: [{ text: "Digital Solutions for Smart Labs & Patients" }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo."
+                description: ""
             },
             videoPanel: {
-                title: "Main Video",
-                videoLink: "https://www.youtube.com/embed/H0cHIewcQ2M"
+                title: "Niroggyan Startup Explanation",
+                videoLink: "https://www.youtube.com/embed/G9tW9HKKnE4/"
             },
         },
     };

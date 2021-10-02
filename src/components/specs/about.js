@@ -66,16 +66,22 @@ export default (function () {
         Market: {
             contentLeft: {
                 header: {
-                    heading: [{ text: "As the first point-of-evidence.Diagnostic data is the most effective tool to tell the status of a person's health and compel them to be proactive." }],
+                    heading: [{ text: "As the first point-of-evidence, Diagnostic data is the most effective tool to tell the status of a person's health and compel them to be proactive." }],
                     description: [
                         { text: "Yet, they are extremely difficult to interpret by anyone who is not a doctor, leading to low health literacy and ineffective long-term measures." },
                         { text: "Born out of a need almost everyone over the age of 30 has faced at least once in their lives, NirogGyan emerged as an innovative startup in a space which needed evolution for a long time. We keep it simple with our easy-to-understand medical test reports." }
                     ]
                 },
                 cardsList: [{
+<<<<<<< HEAD
                     image: { imagePath: marketCardItem1, altText: "marketCardItem1" },
                     items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 300,000+ Reports"],
                 }],
+=======
+                    imagePath: marketCardItem1,
+                    items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 Founders from IIM - BITS backgrounds"],
+           }],
+>>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
             },
             contentRight: {
                 image: { imagePath: marketBackground, altText: "marketBackground" },
@@ -111,20 +117,54 @@ export default (function () {
                 image: { imagePath: expertTeamShweta, altText: "expertTeamShweta" },
 
                 heading: "Shweta Gandhi",
-                content: "Co-Founder and CEO",
+                content: "Co-Founder, Business Head",
+                linkedin: "https://www.linkedin.com/in/shweta-gandhi/"
             },
             {
                 image: { imagePath: expertTeamJoy, altText: "expertTeamJoy" },
 
                 heading: "Joyneel Acharya",
-                content: "Product Management",
+                content: "Co-Founder, Product Head",
+                linkedin: "https://www.linkedin.com/in/joyneel-acharya/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
 
                 heading: "Kartik Tyagi",
-                content: "Technical Head",
+                content: "Technical Lead",
+                linkedin: "https://www.linkedin.com/in/kartiktyagi3/"
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Ranjeet Jha",
+                content: "Head of Design",
+                linkedin: ""
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Vishal Sharma",
+                content: "Software Engineer",
+                linkedin: "https://www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Abhishek Soni",
+                content: "Software Engineer",
+                linkedin: "https://www.linkedin.com/in/hello-abhishek/"
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Nithish",
+                content: "Software Engineer",
+                linkedin: ""
+            },
+            {
+                imgPath: expertTeamKartik,
+                heading: "Yash Marmat",
+                content: "Web Developer",
+                linkedin: "https://www.linkedin.com/in/yash-marmat/"
             }
+
             ],
         },
 

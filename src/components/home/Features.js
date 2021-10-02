@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
   headingstyle: {
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     fontWeight: 900,
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     [theme.breakpoints.down('sm')]: {
       fontSize: "1.5rem",
     }

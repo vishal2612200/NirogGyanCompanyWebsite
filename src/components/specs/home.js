@@ -1,9 +1,14 @@
 import heroImage from "../home/static/imgs/hero-image.svg"
 
-import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.png"
+import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.jpg"
 import brandDrDangLabs from "../home/static/imgs/brand-dr-dang-labs.png"
 import brandMedlife from "../home/static/imgs/brand-medlife.png"
 import brandNiramaya from "../home/static/imgs/brand-niramaya.png"
+import brandIqvia from "../home/static/imgs/brand-iqvia.png"
+import brandItdose from "../home/static/imgs/brand-itdose.png"
+import brandPracto from "../home/static/imgs/brand-practo.jpg"
+import brandMaxlab from "../home/static/imgs/brand-maxlab.jpg"
+import brandThyrocare from "../home/static/imgs/brand-thyrocare.png"
 
 
 import brandWhatsappIcon from "../home/static/imgs/brand-whatsapp-icon.svg"
@@ -36,6 +41,8 @@ import achievementsBackground from "../home/static/imgs/achievements-background.
 import clientMessage1 from "../home/static/imgs/client-message-1.png"
 import clientMessage2 from "../home/static/imgs/client-message-2.png"
 import clientMessage3 from "../home/static/imgs/client-message-3.png"
+import clientMessage4 from "../home/static/imgs/client-message-4.png"
+import clientMessage5 from "../home/static/imgs/client-message-5.png"
 import clientMessageBackground from "../home/static/imgs/client-message-background.png"
 
 
@@ -65,28 +72,33 @@ export default (function () {
       header: {
         heading: [
           { text: "Trusted by the best" },
-          { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight: "200" } }
+          { text: "Healthcare Brands", style: { color: "#3567D6", fontWeight: "700" } }
         ],
-        description: "We partner with the best Diagnostic providers (Thyrocare, Dr.Dangs, Max Labs, Al Arab, itDose, Creliohealth, Practo, Lupin, Northstar, IQVIA)"
+        description: "We partner with the best Diagnostic providers"
       },
       trustedBrandsLogoImages: [
+        { imagePath: brandIqvia, altText: "brandIqvia" },
+        { imagePath: brandItdose, altText: "brandItdose" },
+        { imagePath: brandPracto, altText: "brandPracto" },
+        { imagePath: brandMaxlab, altText: "brandMaxlab" },
+        { imagePath: brandThyrocare, altText: "brandThyrocare" },
         { imagePath: brandCrelioHealth, altText: "brandCrelioHealth" },
         { imagePath: brandDrDangLabs, altText: "brandDrDangLabs" },
         { imagePath: brandMedlife, altText: "brandMedlife" },
         { imagePath: brandNiramaya, altText: "brandNiramaya" },
       ],
       whatsapp: brandWhatsappIcon,
+      whatsappurl: "https://wa.me/917678277891"
 
     },
     Features: {
       contentLeft: {
-
         header: {
           heading: [{
             text:
               "Knowledge, design and technology combine to transform medical data into something",
           },
-          { text: "smart", style: { color: "#3567D6", fontWeight: "200" } }
+          { text: "smart", style: { color: "#3567D6", fontWeight: "700" } }
           ],
         },
         cardsList: [
@@ -98,12 +110,12 @@ export default (function () {
           {
             image: { imagePath: featuresItem2, altText: "featuresItem2" },
             textThin: "Content and Design verified by Top Doctors",
-            textBold: "Evidence-backed, Vetted Content",
+            textBold: "",
           },
           {
             image: { imagePath: featuresItem3, altText: "featuresItem3" },
             textThin: "Analytics, Multi-language option, Customisable",
-            textBold: "Content, Graphs, Analytics",
+            textBold: "",
           },
         ],
       },
@@ -118,7 +130,7 @@ export default (function () {
       header: {
         heading: [
           { text: "The Ultimate Tool to" },
-          { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "200" } }
+          { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "700" } }
 
         ],
         description:
@@ -129,36 +141,36 @@ export default (function () {
           image: { imagePath: servicesTemplates, altText: "reports" },
           heading: "Multiple Reporting Templates",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel auctor mauris. Proin convallis lobortis risus,",
+            "We cater to every type of audience with different styling & language options",
         },
         {
           image: { imagePath: servicesInstant, altText: "instant" },
           heading: "Instant, Automated, Secure",
           content:
-            "Buy  your medicines with our mobile application with a simple delivery system",
+            "Don't wait for Smart Reports : Instant download using our secure API",
         },
         {
           image: { imagePath: servicesPdfWhatsapp, altText: "PdfWhatsapp" },
           heading: "PDF, App, E-mail, Whatsapp",
           content:
-            "Free consultation with our trusted doctors and get the best recomendations",
+            "Reach your customers the way they prefer, with our multiple integrations",
         },
         {
           image: { imagePath: servicesMarketing, altText: "Marketing" },
           heading: "Unique Whitelabel - Marketing",
           content:
-            "Free consultation with our trusted doctors and get the best recomendations",
+            "Enhance your brand with whitelabel reports and product-centric marketing",
         },
         {
           image: { imagePath: servicesAffordable, altText: "Affordable" },
           heading: "Special Corporate Offerings",
           content:
-            "You can get 24/7 urgent care for yourself or your children and your lovely family",
+            "A gamified Health-Check Dashboard for companies to take healthier decisions",
         },
         {
           image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
           heading: "Affordable & Doctor-friendly",
-          content: "Track and save your medical history and health data",
+          content: "Organisations and medical experts love our offerings & packages",
         },
       ],
       backgroundImage: servicesBackground
@@ -169,8 +181,11 @@ export default (function () {
         heading: [{ text: "NirogGyan Bytes" }],
       },
       videoLinks: [
-        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" },
+        { link: "https://www.youtube.com/embed/7oLpkU2wCRU/" },
         { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/" },
+        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" },
+        { link: "https://www.youtube.com/embed/p7XAjIv7YRI/" },
+        { link: "https://www.youtube.com/embed/XVKS1rtTkbg/" },
         { link: "https://www.youtube.com/embed/L4aPen8hCL8/" },
       ],
     },
@@ -178,7 +193,7 @@ export default (function () {
       contentLeft: {
         header: {
           heading: "Believe what you see.",
-          description: "Checkout our SmartReports below and know the difference",
+          description: "Checkout our Smart Reports below and know the difference",
         },
         footer: {
           textThin: "My Smart Diabetes Report helped me get the timely shock that I needed to correct myself. Thank you!",
@@ -261,6 +276,18 @@ export default (function () {
           image: { imagePath: clientMessage3, altText: "clientMessage3" },
           name: "Zubair Ahmed",
           organisation: "Journalist, BBC India"
+        },
+        {
+          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.", 
+          imagePath: clientMessage4,
+          name: "Ashwani Mishra",
+          organisation: "Product Manager"
+        },
+        {
+          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.", 
+          imagePath: clientMessage5,
+          name: "Anita Sharma",
+          organisation: "Housewife"
         },
       ]
     },

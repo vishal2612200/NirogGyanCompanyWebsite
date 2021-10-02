@@ -27,8 +27,6 @@ const useStyles = makeStyles((theme) => ({
     },
     block: {
         minWidth: "min-content",
-       
-
     },
     container: {
         marginRight: "2rem"
@@ -56,7 +54,7 @@ const Block1 = ({ content, ...props }) => {
         </Grid>
         <Grid item>
             <Typography variant="h6">
-                <Box fontWeight="fontWeightMedium" m={1}>
+                <Box fontWeight="fontWeightMedium" m={1} style={{ fontSize:"1rem" }}>
                     {content.copyrightText}
                 </Box>
             </Typography>
@@ -89,8 +87,8 @@ const Block4 = ({ content, ...props }) => {
                 {content.heading}
             </Box>
         </Typography>
-        <Box style={{ height: ".4rem" }} />
-        {content.svgitems.map((imagePath, index) => <img key={index} style={{ marginRight: "1rem" }} src={imagePath} alt="logo" />)}
+        <Box style={{ height: "1.7rem" }} />
+        {Object.entries(content.svgitems).map(([imagePath, url]) => <a href={url[1]} target="_blank"><img style={{ marginRight: "1rem" }} src={url[0]} alt="logo" /></a>)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
 }

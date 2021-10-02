@@ -36,10 +36,39 @@ export default function Brand({ state: brand }) {
       <Grid container item justifyContent="space-around">
 
         <HeadingWithText content={brand.header} />
+<<<<<<< HEAD
         {!isSmallScreen ? <img src={whatsapp} alt={altText} className={classes.whatsapp} /> : ""}
 
       </Grid>
       <CarouselInfinite logoImages={logoImages} />
+=======
+        {!isSmallScreen ? <a href={brand.whatsappurl} target="_blank"><img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} /></a> : ""}
+
+      </Grid>
+
+      <Carousel
+        plugins={[
+          'infinite',
+          {
+            resolve: slidesToShowPlugin,
+            options: {
+              numberOfSlides: isSmallScreen ? 1 : 4
+            }
+          },
+          {
+            resolve: autoplayPlugin,
+            options: {
+              interval: 1000,
+            }
+          },
+        ]}
+        animationSpeed={1000}
+      >
+        {logoImages.map((item, index) =>
+          <img width="289" height="131" key={index} src={item} alt="logo" />
+        )}
+      </Carousel>
+>>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
       <Grid item >
         <Box p={2}></Box>
       </Grid>
