@@ -111,49 +111,49 @@ export default (function () {
                 image: { imagePath: expertTeamShweta, altText: "expertTeamShweta" },
                 heading: "Shweta Gandhi",
                 content: "Co-Founder, Business Head",
-                linkedin: "https://www.linkedin.com/in/shweta-gandhi/"
+                linkedin: "www.linkedin.com/in/shweta-gandhi/"
             },
             {
                 image: { imagePath: expertTeamJoy, altText: "expertTeamJoy" },
                 heading: "Joyneel Acharya",
                 content: "Co-Founder, Product Head",
-                linkedin: "https://www.linkedin.com/in/joyneel-acharya/"
+                linkedin: "www.linkedin.com/in/joyneel-acharya/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Kartik Tyagi",
                 content: "Technical Lead",
-                linkedin: "https://www.linkedin.com/in/kartiktyagi3/"
+                linkedin: "www.linkedin.com/in/kartiktyagi3/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Ranjeet Jha",
                 content: "Head of Design",
-                linkedin: "https://www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
+                linkedin: "www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Vishal Sharma",
                 content: "Software Engineer",
-                linkedin: "https://www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
+                linkedin: "www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Abhishek Soni",
                 content: "Software Engineer",
-                linkedin: "https://www.linkedin.com/in/hello-abhishek/"
+                linkedin: "www.linkedin.com/in/hello-abhishek/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Nithish",
                 content: "Software Engineer",
-                linkedin: ""
+                linkedin: "www.linkedin.com/in/yash-marmat/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Yash Marmat",
                 content: "Web Developer",
-                linkedin: "https://www.linkedin.com/in/yash-marmat/"
+                linkedin: "www.linkedin.com/in/yash-marmat/"
             }],
         },
 

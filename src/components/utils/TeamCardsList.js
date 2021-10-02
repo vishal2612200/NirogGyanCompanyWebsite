@@ -59,11 +59,13 @@ export default function TeamCardsList({ content }) {
 }
 
 
-const TeamCard = ({ image: { imagePath, altText ="logo-default"}, heading, content, linkedin }) => {
+const TeamCard = ({ image: { imagePath, altText = "logo-default" }, heading, content, linkedin }) => {
 
     const classes = useStyles();
     const icons = [
         <LinkedinIcon className={classes.iconStyle} />]
+    const absoluteurl = `\\${linkedin}`;
+   
     return (
         <Card className={classes.root} >
             <CardActionArea style={{ textAlign: "center" }}>
@@ -76,17 +78,18 @@ const TeamCard = ({ image: { imagePath, altText ="logo-default"}, heading, conte
                     </Typography>
                     <Typography variant="body1" color="textSecondary">
                         <Box textAlign="center">
-                            {content}{linkedin}
+                            {content}
+                            <br />
+                            {linkedin}
                         </Box>
                     </Typography>
                     <Typography variant="h5">
                         <Box >
                             {
                                 icons.map(icon => (
-                                    // <a href={linkedin} tar>{icon}</a>
                                     <IconButton
                                         component={Link}
-                                        to={linkedin}
+                                        to={absoluteurl}
                                         target="_blank">
                                         {icon}
                                     </IconButton>

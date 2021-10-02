@@ -80,7 +80,7 @@ const Card = ({ link, title = "YouTube video player" }) => {
         rel="prefetch"
         src={link}
         title={title}
-        frameborder="2"
+        frameBorder="2"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       ></iframe>
     </Grid>
