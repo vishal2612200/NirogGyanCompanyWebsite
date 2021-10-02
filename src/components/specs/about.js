@@ -6,6 +6,7 @@ import heroImage from "../about/static/imgs/hero-image.png"
 import recognisedBy1 from "../about/static/imgs/recognised-by-1.png"
 import recognisedBy2 from "../about/static/imgs/recognised-by-2.png"
 import recognisedBy3 from "../about/static/imgs/recognised-by-3.png"
+import recognisedBy4 from "../about/static/imgs/recognised-by-4.jpg"
 
 import marketCardItem1 from "../about/static/imgs/market-card-item-1.png"
 import marketBackground from "../about/static/imgs/market-background.png"
@@ -56,7 +57,12 @@ export default (function () {
                 }],
 
             },
-            trustedBrandsLogoImages: [recognisedBy1, recognisedBy2, recognisedBy3],
+            trustedBrandsLogoImages: {
+                recognisedBy1: [recognisedBy1, "https://yourstory.com/2021/07/funding-saas-startup-niroggyan-seed-round-healthcare/amp"],
+                recognisedBy2: [recognisedBy2, "https://saasindustry.com/news/niroggyan-raises-an-undisclosed-seed-round-from-healthcare-industry-veterans/"],
+                recognisedBy3: [recognisedBy3, "https://entrackr.com/2021/07/funding-in-indian-startups-this-week-12-july-17-july/"],
+                recognisedBy4: [recognisedBy4, "https://www.biospectrumindia.com/news/20/15236/nha-nathealth-hosts-innovation-carnival-for-healthcare-startups.html"],
+            }
         },
         Market: {
             contentLeft: {
@@ -142,7 +148,7 @@ export default (function () {
                 imgPath: expertTeamKartik,
                 heading: "Nithish",
                 content: "Software Engineer",
-                linkedin: ""
+                linkedin: "https://www.linkedin.com/in/nithish-976b76218/"
             },
             {
                 imgPath: expertTeamKartik,
@@ -162,21 +168,62 @@ export default (function () {
                 }],
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
             },
-            cardsList: [{
-                imgPath: productConsultantAyush,
-                heading: "Ayush Vora",
-                content: "Technology Expert at NirogGyan",
-            },
-            {
-                imgPath: productConsultantErik,
-                heading: "Erik Azulay",
-                content: "International Strategy",
-            },
-            {
-                imgPath: productConsultantKartik,
-                heading: "Kartik Tyagi",
-                content: "Technical Head",
-            }
+            cardsList: [
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Mr. Teji HS",
+                    content: "Global Head in Oracle, Singapore national & works with Healthtech startups",
+                    linkedin: "https://www.linkedin.com/in/teji-hs-9765143/"
+                },
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Mr. Arindam Haldar",
+                    content: "Ex-CEO of SRL & Thyrocare, and IIM-C alum",
+                    linkedin: "https://www.linkedin.com/in/arindamhaldar/"
+                },
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Ruchira Roy",
+                    content: "Managing Partner, Positron and IIM-A alum",
+                    linkedin: "https://www.linkedin.com/in/ruchira-roy-a155855/"
+                },
+                
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "PIEDS, BITS Pilani",
+                    content: "Incubator of BITS Pilani",
+                    linkedin: "https://www.linkedin.com/company/pilani-innovation-entrepreneurship-development-society-pieds-bits-pilani/"
+                },
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Mr. Gaurav Rautela",
+                    content: "Senior Tech Lead at Gojek",
+                    linkedin: "https://www.linkedin.com/in/gaurav-rautela-5b0223b9/"
+                },
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Mr. Sumit Bagaria",
+                    content: "CEO, Hemogenomics & IIM-C alum",
+                    linkedin: "https://www.linkedin.com/in/sumit-bagaria-8170a81/"
+                },
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Mr. Rakesh Luthra",
+                    content: "Director at Novo Nordisk",
+                    linkedin: "https://www.linkedin.com/in/rakeshluthra1984/"
+                },
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Mr. Vish Sathappan",
+                    content: "Director at Times of India Group",
+                    linkedin: "https://www.linkedin.com/in/vish-sathappan-8b170b13/"
+                },
+                {
+                    imgPath: productConsultantKartik,
+                    heading: "Mr. Sanjeev Kathpalia",
+                    content: "IIM-C alum in healthcare",
+                    linkedin: "https://www.linkedin.com/in/sanjeevkathpalia/"
+                }
             ],
         },
         HelpedOrganisations: {

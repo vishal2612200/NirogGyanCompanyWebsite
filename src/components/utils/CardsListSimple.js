@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "90%",
-        marginBottom: "0.5rem",
+        marginBottom: "0.25rem",
         
     },
     cardsList: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     card: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
         justifyContent: "space-evenly",
-        margin: "2%",
+        // margin: "2%",
         alignContent: "center",
         border: "1px solid #B8BBBD",
         textAlign: "center",
@@ -107,7 +107,7 @@ export const TeamCard = ({ imgPath, heading, content, linkedin }) => {
                     </Typography>
                     <Typography variant="body1" color="textSecondary">
                         <Box textAlign="center">
-                            {content}{linkedin}
+                            {content}
                         </Box>
                     </Typography>
                     <Typography variant="h5">
