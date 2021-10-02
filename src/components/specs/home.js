@@ -164,8 +164,7 @@ export default (function () {
         {
           image: { imagePath: servicesAffordable, altText: "Affordable" },
           heading: "Special Corporate Offerings",
-          content:
-            "A gamified Health-Check Dashboard for companies to take healthier decisions",
+          content: "A gamified Health-Check Dashboard for companies to take healthier decisions",
         },
         {
           image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
@@ -203,22 +202,22 @@ export default (function () {
           {
             image: { imagePath: reportVitamin, altText: "vitamin" },
             name: "Vitamin",
-            imageIdentity:"vitamin"
+            imageIdentity: "vitamin"
           },
           {
             image: { imagePath: reportKidney, altText: "kidney" },
             name: "Kidney",
-            imageIdentity:"kidney"
+            imageIdentity: "kidney"
           },
           {
             image: { imagePath: reportElectrolyte, altText: "electrolyte" },
             name: "Electrolyte",
-            imageIdentity:"covid"
+            imageIdentity: "covid"
           },
           {
             image: { imagePath: reportDiabetes, altText: "diabetes" },
             name: "Diabetes",
-            imageIdentity:"liver"
+            imageIdentity: "liver"
           }
         ]
       },
@@ -278,14 +277,14 @@ export default (function () {
           organisation: "Journalist, BBC India"
         },
         {
-          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.", 
-          imagePath: clientMessage4,
+          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.",
+          image: { imagePath: clientMessage4, altText: "clientMessage4" },
           name: "Ashwani Mishra",
           organisation: "Product Manager"
         },
         {
-          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.", 
-          imagePath: clientMessage5,
+          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.",
+          image: { imagePath: clientMessage5, altText: "clientMessage5" },
           name: "Anita Sharma",
           organisation: "Housewife"
         },

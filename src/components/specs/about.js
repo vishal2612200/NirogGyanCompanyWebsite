@@ -43,7 +43,7 @@ export default (function () {
 
             },
             contentRight: {
-                image: {imagePath:heroImage, altText:"hero"},
+                image: { imagePath: heroImage, altText: "hero" },
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
 
@@ -73,15 +73,9 @@ export default (function () {
                     ]
                 },
                 cardsList: [{
-<<<<<<< HEAD
                     image: { imagePath: marketCardItem1, altText: "marketCardItem1" },
                     items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 300,000+ Reports"],
                 }],
-=======
-                    imagePath: marketCardItem1,
-                    items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 Founders from IIM - BITS backgrounds"],
-           }],
->>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
             },
             contentRight: {
                 image: { imagePath: marketBackground, altText: "marketBackground" },
@@ -115,57 +109,52 @@ export default (function () {
             },
             cardsList: [{
                 image: { imagePath: expertTeamShweta, altText: "expertTeamShweta" },
-
                 heading: "Shweta Gandhi",
                 content: "Co-Founder, Business Head",
                 linkedin: "https://www.linkedin.com/in/shweta-gandhi/"
             },
             {
                 image: { imagePath: expertTeamJoy, altText: "expertTeamJoy" },
-
                 heading: "Joyneel Acharya",
                 content: "Co-Founder, Product Head",
                 linkedin: "https://www.linkedin.com/in/joyneel-acharya/"
             },
             {
                 image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
-
                 heading: "Kartik Tyagi",
                 content: "Technical Lead",
                 linkedin: "https://www.linkedin.com/in/kartiktyagi3/"
             },
             {
-                imgPath: expertTeamKartik,
+                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Ranjeet Jha",
                 content: "Head of Design",
-                linkedin: ""
+                linkedin: "https://www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
-                imgPath: expertTeamKartik,
+                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Vishal Sharma",
                 content: "Software Engineer",
                 linkedin: "https://www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
-                imgPath: expertTeamKartik,
+                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Abhishek Soni",
                 content: "Software Engineer",
                 linkedin: "https://www.linkedin.com/in/hello-abhishek/"
             },
             {
-                imgPath: expertTeamKartik,
+                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Nithish",
                 content: "Software Engineer",
                 linkedin: ""
             },
             {
-                imgPath: expertTeamKartik,
+                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
                 heading: "Yash Marmat",
                 content: "Web Developer",
                 linkedin: "https://www.linkedin.com/in/yash-marmat/"
-            }
-
-            ],
+            }],
         },
 
         ProductConsultant: {

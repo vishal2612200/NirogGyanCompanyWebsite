@@ -56,7 +56,7 @@ export default function RecognisedBy({ state: recognisedBy }) {
         ]}
         animationSpeed={1000}
       >
-        {logoImages.map(({ imagePath, altText}, index) =>
+        {logoImages.map(({ imagePath, altText = "logo-default"}, index) =>
           <img src={imagePath} alt={altText} key={index} width="95%"  />
         )}
       </Carousel>

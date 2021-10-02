@@ -17,11 +17,11 @@ export default function About({ state, children }) {
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
-         <Believe state={state.Believe} /> 
-          <ExpertTeam state={state.ExpertTeam} />  
+        <Believe state={state.Believe} />
+        <ExpertTeam state={state.ExpertTeam} />
         <HelpedOrganisations state={state.HelpedOrganisations} />
-        <ProductConsultant state={state.ProductConsultant} /> 
-        <RecognisedBy state={state.RecognisedBy} /> 
+        <ProductConsultant state={state.ProductConsultant} />
+        <RecognisedBy state={state.RecognisedBy} />
         {children}
     </React.Fragment>
 }

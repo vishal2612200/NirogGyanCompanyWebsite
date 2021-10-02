@@ -21,11 +21,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "auto%",
   },
   imagePanel: {
-<<<<<<< HEAD
     transform: "translateY(-50px)"
-=======
-    // transform:"translateY(-50px)"
->>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
   }
 }));
 

@@ -16,20 +16,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
 
   },
-<<<<<<< HEAD
-  card: {
-    backgroundColor: "#fff",
-    borderRadius: "15px",
-    textAlign: "center",
-    alignItems: "center",
-    padding: "2rem",
-    boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
-    width: "90%",
-
-    margin: "3% auto 5% 3%",  //clockwise  top, right, bottom , left
-  },
-=======
->>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
   message: {
     fontSize: "1rem",
     "&::before": {
@@ -67,7 +53,7 @@ export default function ExpertTeam({ state: expertTeam }) {
   return (
     <Grid container direction="column" className={classes.root}>
       <HeadingWithText content={expertTeam.header} />
-      <Grid container item  >
+      <Grid container item >
         <TeamCardsList content={expertTeam.cardsList} />
       </Grid>
     </Grid>);

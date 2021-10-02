@@ -40,12 +40,8 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
     width:"75%",
     [theme.breakpoints.down("sm")]: {
-<<<<<<< HEAD
-      marginTop: "44%"
-=======
       marginTop:"44%",
       width:"100%",
->>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
     }
 
   },
@@ -200,10 +196,6 @@ export default function Main({ state: main }) {
 const Image = ({ reference, inView, image: { imagePath, altText = "logo-default" } }) => {
   const classes = useStyles();
   return <Grid item xs={5} ref={reference} >
-<<<<<<< HEAD
-    <img width="95%" src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")} alt={altText} />
-=======
-    <img src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")}  alt="doctor" />
->>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
+    <img  src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")} alt={altText} />
   </Grid>
 }

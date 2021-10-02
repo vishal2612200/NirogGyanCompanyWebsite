@@ -9,10 +9,6 @@ import BigRightImageSection from "../utils/BigRightImageSection";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-<<<<<<< HEAD
-=======
-        // paddingTop: "3rem"
->>>>>>> e6577c4d385bce7ec7a8c0054dfb62d43a33e16b
 
     },
     header: {
