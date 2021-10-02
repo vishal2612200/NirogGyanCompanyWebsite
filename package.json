@@ -17,16 +17,13 @@
     "netlify-cli": "^6.9.6",
     "progress": "^2.0.3",
     "react": "^17.0.2",
-    "react-alice-carousel": "^2.5.1",
     "react-dom": "^17.0.2",
     "react-intersection-observer": "^8.32.1",
-    "react-multi-carousel": "^2.6.5",
-    "react-responsive-carousel": "^3.2.21",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-lazy-youtube": "^1.0.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-spring": "^9.2.4",
-    "react-touch-carousel": "^0.10.2",
-    "react-transition-group": "^4.4.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

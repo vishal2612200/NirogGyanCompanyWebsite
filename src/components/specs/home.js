@@ -180,12 +180,12 @@ export default (function () {
         heading: [{ text: "NirogGyan Bytes" }],
       },
       videoLinks: [
-        { link: "https://www.youtube.com/embed/7oLpkU2wCRU/" },
-        { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/" },
-        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" },
-        { link: "https://www.youtube.com/embed/p7XAjIv7YRI/" },
-        { link: "https://www.youtube.com/embed/XVKS1rtTkbg/" },
-        { link: "https://www.youtube.com/embed/L4aPen8hCL8/" },
+        { link: "https://www.youtube.com/embed/7oLpkU2wCRU/", videoId:"7oLpkU2wCRU"  },
+        { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/" ,videoId:"MlLAXpoxNvQ" },
+        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" ,videoId:"H0cHIewcQ2M" },
+        { link: "https://www.youtube.com/embed/p7XAjIv7YRI/" ,videoId:"p7XAjIv7YRI" },
+        { link: "https://www.youtube.com/embed/XVKS1rtTkbg/" ,videoId:"XVKS1rtTkbg" },
+        { link: "https://www.youtube.com/embed/L4aPen8hCL8/" ,videoId:"L4aPen8hCL8" },
       ],
     },
     Report: {
