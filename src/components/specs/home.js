@@ -87,8 +87,8 @@ export default (function () {
         { imagePath: brandMedlife, altText: "brandMedlife" },
         { imagePath: brandNiramaya, altText: "brandNiramaya" },
       ],
-      whatsapp: brandWhatsappIcon,
-      whatsappurl: "https://wa.me/917678277891"
+      whatsapp: { image: { imagePath: brandWhatsappIcon, altText: "brandWhatsapp" }, url: "https://wa.me/917678277891"},
+      
 
     },
     Features: {

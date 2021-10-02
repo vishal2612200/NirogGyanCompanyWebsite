@@ -4,7 +4,7 @@ import { Grid, Box } from "@material-ui/core";
 import HeadingWithText from "../utils/HeadingWithText";
 import Carousel, { autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import { useMediaQuery, useTheme } from "@material-ui/core"
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -29,14 +29,18 @@ export default function Brand({ state: brand }) {
   const classes = useStyles();
   const logoImages = brand.trustedBrandsLogoImages;
   const isSmallScreen = useSmallScreen();
-  const { whatsapp, altText = "logo-default" } = brand.whatsapp;
+  const { image: { imagePath, altText = "logo-default" }, url } = brand.whatsapp;
   return (
     <Grid container className={classes.root} direction="column" justifyContent="center" alignItems="center">
 
       <Grid container item justifyContent="space-around">
-
         <HeadingWithText content={brand.header} />
-        {!isSmallScreen ? <a href={brand.whatsappurl} target="_blank"><img src={brand.whatsapp} alt="whatsapp" className={classes.whatsapp} /></a> : ""}
+        {
+          !isSmallScreen?
+            <a href={url} target="_blank">
+              <img src={imagePath} alt={altText} className={classes.whatsapp} />
+            </a> : ""
+        }
 
       </Grid>
 
@@ -59,7 +63,7 @@ export default function Brand({ state: brand }) {
         animationSpeed={1000}
       >
         {logoImages.map(({ imagePath, altText = "logo-default" }, index) =>
-          <img key={index} src={imagePath} alt={altText} width="289" height="131" style={{ filter:"grayscale(100%)"}}/>
+          <img key={index} src={imagePath} alt={altText} width="289" height="131" style={{ filter: "grayscale(100%)" }} />
         )}
       </Carousel>
       <Grid item >

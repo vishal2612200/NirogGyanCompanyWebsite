@@ -11,13 +11,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: "1.5rem 0"
   },
-  whatsapp: {
-    position: "fixed",
-    right: "0",
-    top: "80%",
-    zIndex: "1000",
-    width: "80px",
-  },
   card: {
     padding: "2rem 0",
     margin: "1rem",
