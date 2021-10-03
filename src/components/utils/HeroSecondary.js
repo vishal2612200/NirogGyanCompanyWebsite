@@ -114,6 +114,6 @@ const ContentRight = ({ content }) => {
     const classes = useStyles();
     const { imagePath, altText = "logo-default" } = content.image;
     return <Grid item md={6} className={classes.contentRight} >
-        <img src={imagePath} alt={altText} />
+        <img rel="preload" src={imagePath} alt={altText} />
     </Grid>
 }

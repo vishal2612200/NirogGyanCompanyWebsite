@@ -118,6 +118,7 @@ export const TeamCard = ({ imgPath, heading, content, linkedin }) => {
                             <IconButton 
                                 component={Link}
                                 to={linkedin}
+                                rel="noreferrer"
                                 target="_blank">
                                 {icon}
                             </IconButton>

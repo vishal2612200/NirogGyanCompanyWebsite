@@ -97,7 +97,7 @@ const Block4 = ({ content, ...props }) => {
         </Typography>
         <Box style={{ height: "1.7rem" }} />
         {content.images.map(
-            ({ imagePath, altText = "logo-default", link }, index) => <a key={index} href={link} target="_blank">
+            ({ imagePath, altText = "logo-default", link }, index) => <a key={index} href={link} rel="noreferrer" target="_blank">
                 <img style={{ marginRight: "1rem" }} src={imagePath} alt={altText} />
             </a>)}
         <Typography variant="h6">{content.copyrightText}</Typography>

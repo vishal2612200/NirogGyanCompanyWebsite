@@ -37,7 +37,7 @@ export default function Brand({ state: brand }) {
         <HeadingWithText content={brand.header} />
         {
           !isSmallScreen?
-            <a href={url} target="_blank">
+            <a href={url} rel="noreferrer" target="_blank">
               <img src={imagePath} alt={altText} className={classes.whatsapp} />
             </a> : ""
         }

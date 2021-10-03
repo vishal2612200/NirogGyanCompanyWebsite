@@ -112,7 +112,7 @@ const ContentLeft = ({ content }) => {
         </Grid>
         <Grid item className={classes.commonmargin}>    
             <Typography variant="h6" color="primary">
-              <a style={{textDecoration:"none"}} href={blogurl}  target="_blank">  
+            <a style={{ textDecoration: "none" }} href={blogurl} rel="noreferrer" target="_blank">
                 {readmore}
               </a>  
             </Typography>
@@ -176,7 +176,7 @@ const ContentRight = ({ content }) => {
     return (
       <Grid container className={classes.commonmargin}>
         <Grid item md={5}>
-          <a href={blogurl} target="_blank">
+          <a href={blogurl} rel="noreferrer" target="_blank">
             <img src={imagePath} alt={altText} />
           </a>
         </Grid>

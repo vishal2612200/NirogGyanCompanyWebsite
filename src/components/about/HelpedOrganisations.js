@@ -56,6 +56,7 @@ export default function HelpedOrganisations({ state: helpedOrganisations }) {
             <Button variant="contained" size="large" className={classes.button} 
                 component={Link}
                 to="/faqs"
+                rel="noreferrer"
                 target="_blank">
                 <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3}>
                     {helpedOrganisations.buttonText}

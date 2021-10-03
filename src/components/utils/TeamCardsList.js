@@ -88,6 +88,7 @@ const TeamCard = ({ image: { imagePath, altText = "logo-default" }, heading, con
                                     <IconButton
                                         component={Link}
                                         to={absoluteurl}
+                                        rel="noreferrer"
                                         target="_blank">
                                         {icon}
                                     </IconButton>

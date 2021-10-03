@@ -40,11 +40,11 @@ export default (function () {
                         date: "May 24, 2020",
                         content: {
                             heading: "A Tale of Two Reports",
-                            description: "Let’s imagine the medical tale of two people.\
-                                          Our lead characters, A and B—who we are going to call Ay and Bee,\
-                                          respectively, for storytelling reasons—are both middle-aged men who\
-                                          are experiencing early signs of type-2 diabetes. Ay or Bee don’t spend\
-                                          any of their time exercising or being active in general.…",
+                            description: `Let’s imagine the medical tale of two people.
+                                          Our lead characters, A and B—who we are going to call Ay and Bee,
+                                          respectively, for storytelling reasons—are both middle-aged men who
+                                          are experiencing early signs of type-2 diabetes. Ay or Bee don’t spend
+                                          any of their time exercising or being active in general.…`,
                         },
                         readmore: <>Read More &rarr;</>,
                         blogurl: "https://niroggyan.medium.com/a-tale-of-two-reports-6c3e2fd9d600"
@@ -54,10 +54,10 @@ export default (function () {
                         date: "July 06, 2020",
                         content: {
                             heading: "Niroggyan Case Study — Corporate",
-                            description: "Recently at Niroggyan, we worked with Getactive — a workforce fitness provider.\
-                                          We assisted them in providing health reports for a complete health checkup they\
-                                          had been conducting for IQVIA — one of the largest health data science and \
-                                          contract research organisations in the world. …",
+                            description: `Recently at Niroggyan, we worked with Getactive — a workforce fitness provider.
+                                          We assisted them in providing health reports for a complete health checkup they
+                                          had been conducting for IQVIA — one of the largest health data science and 
+                                          contract research organisations in the world. …`,
                         },
                         readmore: <>Read More &rarr;</>,
                         blogurl: "https://niroggyan.medium.com/niroggyan-case-study-corporate-dbbac642f68d"

@@ -50,7 +50,7 @@ export default function RecognisedBy({ state: recognisedBy }) {
         animationSpeed={1000}
       >
         {logoImages.map(({ imagePath, altText = "logo-default", link}, index) =>
-          <a href={link} target="_blank"><img src={imagePath} alt={altText} key={index} width="95%" style={{filter:"grayscale(100%)"}}  /></a >
+          <a href={link} rel="noreferrer" target="_blank"><img src={imagePath} alt={altText} key={index} width="95%" style={{filter:"grayscale(100%)"}}  /></a >
         )}
       </Carousel>
       <Grid item >
