@@ -68,5 +68,5 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
 
 
 const BlueDot = () => {
-    return <div style={{ backgroundColor: "#163b76", borderRadius: "50%", height: "20px", width: "20px" }}>o0hg</div>
+    return <div style={{ backgroundColor: "#163b76", borderRadius: "50%", height: "20px", width: "20px" }}></div>
 }
