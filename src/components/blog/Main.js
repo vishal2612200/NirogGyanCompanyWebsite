@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import Box from '@material-ui/core/Box';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(10),
@@ -85,7 +86,7 @@ export default function Main({ state: main }) {
 const ContentLeft = ({ content }) => {
 
   
-  const Card = ({ image: { imagePath, altText = "logo-default" }, date, content, readmore }) => {
+  const Card = ({ image: { imagePath, altText = "logo-default" }, date, content, readmore, blogurl }) => {
     const classes = useStyles();
     return (
       <Grid className={classes.contentLeft} container item alignContent="center" style={{ marginBottom: "4%" }}>
@@ -109,10 +110,13 @@ const ContentLeft = ({ content }) => {
             {content.description}
           </Typography>
         </Grid>
-        <Grid item className={classes.commonmargin}>
-          <Typography variant="h6" color="primary">
-            {readmore}
-          </Typography>
+        <Grid item className={classes.commonmargin}>    
+            <Typography variant="h6" color="primary">
+              <a style={{textDecoration:"none"}} href={blogurl}  target="_blank">  
+                {readmore}
+              </a>  
+            </Typography>
+            
         </Grid>
       </Grid>
     )
@@ -121,8 +125,8 @@ const ContentLeft = ({ content }) => {
   const CardsList = ({ content }) => {
     return <Grid container item>
       {
-        content.map(({ image, date, content, readmore }, index) => (
-          <Card {...{ image, date, content, readmore }} key={index} />))
+        content.map((props, index) => (
+          <Card {...props} key={index} />))
       }
     </Grid>
   }
@@ -167,12 +171,14 @@ const ContentRight = ({ content }) => {
   }
 
 
-  const Card1 = ({ image: { imagePath, altText = "logo-default" }, date, heading }) => {
+  const Card1 = ({ image: { imagePath, altText = "logo-default" }, date, heading, blogurl }) => {
     const classes = useStyles();
     return (
       <Grid container className={classes.commonmargin}>
         <Grid item md={5}>
-          <img src={imagePath} alt={altText} />
+          <a href={blogurl} target="_blank">
+            <img src={imagePath} alt={altText} />
+          </a>
         </Grid>
         <Grid item md={1}></Grid>
         <Grid item md={6} className={classes.textBox}>
