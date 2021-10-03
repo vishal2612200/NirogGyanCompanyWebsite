@@ -166,7 +166,7 @@ export default (function () {
                 heading: [{
                     text: "Product Consultant"
                 }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
+                description: "People helping out Niroggyan to grow its reach and expand more at a faster pace.",
             },
             cardsList: [
                 {

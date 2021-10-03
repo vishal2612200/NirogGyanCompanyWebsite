@@ -5,6 +5,16 @@ import heroImage from "../blog/static/imgs/hero-image.png"
 import blogHealthLiteracy from "../blog/static/imgs/blog-health-literacy.png"
 import blogDoctor from "../blog/static/imgs/blog-doctor.png"
 
+import blog1 from "../blog/static/imgs/blog-1.png"
+import blog2 from "../blog/static/imgs/blog-2.png"
+
+import sideblog1 from "../blog/static/imgs/side-blog-1.jpeg"
+import sideblog2 from "../blog/static/imgs/side-blog-2.png"
+import sideblog3 from "../blog/static/imgs/side-blog-3.gif"
+import sideblog4 from "../blog/static/imgs/side-blog-4.jpeg"
+import sideblog5 from "../blog/static/imgs/side-blog-5.png"
+import sideblog6 from "../blog/static/imgs/side-blog-6.jpeg"
+import sideblog7 from "../blog/static/imgs/side-blog-7.gif"
 
 
 
@@ -28,22 +38,31 @@ export default (function () {
             contentLeft: {
                 cardsList: [
                     {
-                        imagePath: blogHealthLiteracy,
-                        date: "Sept 02, 2021",
+                        imagePath: blog1,
+                        date: "May 24, 2020",
                         content: {
-                            heading: "No Health Literacy? No Health.",
-                            description: "To make any major decision in life, vital information is the key, right? ☝ On a visit to the doctor, after walking in and paying the amount, we aren’t really worried about whether we understand the disease or the ailment. …",
+                            heading: "A Tale of Two Reports",
+                            description: "Let’s imagine the medical tale of two people.\
+                                          Our lead characters, A and B—who we are going to call Ay and Bee,\
+                                          respectively, for storytelling reasons—are both middle-aged men who\
+                                          are experiencing early signs of type-2 diabetes. Ay or Bee don’t spend\
+                                          any of their time exercising or being active in general.…",
                         },
-                        readmore: <>Read More &rarr;</>
+                        readmore: <>Read More &rarr;</>,
+                        blogurl: "https://niroggyan.medium.com/a-tale-of-two-reports-6c3e2fd9d600"
                     },
                     {
-                        imagePath: blogHealthLiteracy,
-                        date: "Sept 02, 2021",
+                        imagePath: blog2,
+                        date: "July 06, 2020",
                         content: {
-                            heading: "No Health Literacy? No Health.",
-                            description: "To make any major decision in life, vital information is the key, right? ☝ On a visit to the doctor, after walking in and paying the amount, we aren’t really worried about whether we understand the disease or the ailment. …",
+                            heading: "Niroggyan Case Study — Corporate",
+                            description: "Recently at Niroggyan, we worked with Getactive — a workforce fitness provider.\
+                                          We assisted them in providing health reports for a complete health checkup they\
+                                          had been conducting for IQVIA — one of the largest health data science and \
+                                          contract research organisations in the world. …",
                         },
-                        readmore: <>Read More &rarr;</>
+                        readmore: <>Read More &rarr;</>,
+                        blogurl: "https://niroggyan.medium.com/niroggyan-case-study-corporate-dbbac642f68d"
                     },
                 ]
             },
@@ -53,20 +72,48 @@ export default (function () {
                     heading: "Popular Posts",
                     cardsList: [
                         {
-                            imagePath: blogDoctor,
-                            date: "Sept 02, 2021",
-                            heading: "No Health Literacy? No Health.",
+                            imagePath: sideblog1,
+                            date: "August 17, 2021",
+                            heading: "I’ve got a bone to pick with you!",
+                            blogurl: "https://niroggyan.medium.com/ive-got-a-bone-to-pick-with-you-31b62be14d9d"
                         },
                         {
-                            imagePath: blogDoctor,
-                            date: "Sept 02, 2021",
-                            heading: "No Health Literacy? No Health.",
+                            imagePath: sideblog2,
+                            date: "August 14, 2021",
+                            heading: "A Sound Sleep — From A to Zzz",
+                            blogurl: "https://niroggyan.medium.com/a-sound-sleep-from-a-to-zzz-5614d76f7623"
                         },
                         {
-                            imagePath: blogDoctor,
-                            date: "Sept 02, 2021",
+                            imagePath: sideblog3,
+                            date: "June 02, 2021",
+                            heading: "The vaccine conundrum.",
+                            blogurl: "https://niroggyan.medium.com/the-vaccine-conundrum-afc6d3243770"
+                        },
+                        {
+                            imagePath: sideblog4,
+                            date: "Sept 19, 2020",
                             heading: "No Health Literacy? No Health.",
+                            blogurl: "https://niroggyan.medium.com/no-health-literacy-no-health-dd708a5e7237"
+                        },
+                        {
+                            imagePath: sideblog5,
+                            date: "August 02, 2020",
+                            heading: "Healthcare, democratised.",
+                            blogurl: "https://niroggyan.medium.com/healthcare-democratised-7f61aa0aced0"
+                        },
+                        {
+                            imagePath: sideblog6,
+                            date: "May 29, 2020",
+                            heading: "Niroggyan Q&A #1.",
+                            blogurl: "https://niroggyan.medium.com/niroggyan-q-a-1-99592ae3c37c"
+                        },
+                        {
+                            imagePath: sideblog7,
+                            date: "May 09, 2020",
+                            heading: "The Other Epidemic",
+                            blogurl: "https://niroggyan.medium.com/the-other-epidemic-bf8d2995bb13"
                         }
+
                     ]
                 },
                 categoriesList: {

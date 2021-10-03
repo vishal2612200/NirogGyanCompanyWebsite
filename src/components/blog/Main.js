@@ -1,10 +1,11 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Divider, Hidden } from "@material-ui/core";
+import { Grid, Divider, Hidden, IconButton } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import Box from '@material-ui/core/Box';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(10),
@@ -80,7 +81,7 @@ export default function Main({ state: main }) {
   );
 }
 const ContentLeft = ({ content }) => {
-  const Card = ({ imagePath, date, content, readmore }) => {
+  const Card = ({ imagePath, date, content, readmore, blogurl }) => {
     const classes = useStyles();
     return (
       <Grid className={classes.contentLeft} container item alignContent="center" style={{ marginBottom: "4%" }}>
@@ -104,10 +105,13 @@ const ContentLeft = ({ content }) => {
             {content.description}
           </Typography>
         </Grid>
-        <Grid item className={classes.commonmargin}>
-          <Typography variant="h6" color="primary">
-            {readmore}
-          </Typography>
+        <Grid item className={classes.commonmargin}>    
+            <Typography variant="h6" color="primary">
+              <a style={{textDecoration:"none"}} href={blogurl}  target="_blank">  
+                {readmore}
+              </a>  
+            </Typography>
+            
         </Grid>
       </Grid>
     )
@@ -116,7 +120,7 @@ const ContentLeft = ({ content }) => {
     return <Grid container item>
       {
         content.map(
-          ({ imagePath, date, content, readmore }, index) => (<Card {...{ imagePath, date, content, readmore }} key={index} />))}
+          ({ imagePath, date, content, readmore, blogurl }, index) => (<Card {...{ imagePath, date, content, readmore, blogurl }} key={index} />))}
     </Grid>
   }
   return <CardsList content={content.cardsList} />
@@ -145,12 +149,14 @@ const ContentRight = ({ content }) => {
       <CardsList />
     </Grid>
   }
-  const Card1 = ({ imagePath, date, heading }) => {
+  const Card1 = ({ imagePath, date, heading, blogurl }) => {
     const classes = useStyles();
     return (
       <Grid container className={classes.commonmargin}>
         <Grid item md={5}>
-          <img src={imagePath} alt="doctor" />
+          <a href={blogurl} target="_blank">
+            <img src={imagePath} alt="doctor" />
+          </a>
         </Grid>
         <Grid item md={1}></Grid>
         <Grid item md={6} className={classes.textBox}>

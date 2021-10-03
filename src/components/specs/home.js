@@ -267,7 +267,7 @@ export default (function () {
           organisation: "Product Manager"
         },
         {
-          message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.", 
+          message: "Understanding health data has been always a difficult process, but the way Niroggyan is simplifying health data, helped me understand my health insights better and making life simpler.", 
           imagePath: clientMessage5,
           name: "Anita Sharma",
           organisation: "Housewife"
