@@ -80,7 +80,7 @@ const ContentLeft = ({ content }) => {
             <Grid item>
                 <Typography
                     variant="h2"
-                    style={{fontSize: "2.5rem" }}
+                    style={{ fontSize: "2.5rem" }}
                     className={classes.title}>
                     {content.heading}
                 </Typography>
@@ -93,7 +93,7 @@ const ContentLeft = ({ content }) => {
                     ›
                 </Typography>} aria-label="breadcrumb">
                     {
-                        content.breadcrumbs.map(({ text, link }, index) => <Link color="inherit" href={link} >
+                        content.breadcrumbs.map(({ text, link }, index) => <Link color="inherit" href={link} key={index}>
                             <Typography
                                 variant="h6"
                                 style={{ fontSize: "1rem" }}

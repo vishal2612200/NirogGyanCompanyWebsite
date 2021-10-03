@@ -13,20 +13,24 @@ export default (
                 },
                 block2: {
                     heading: "Company",
-                    items: ["About us", "How it works", "Blog"]
+                    items: [
+                        { text: "About us", link: "/about" },
+                        { text: "How it works", link: "/how-it-works" },
+                        { text: "Blog", link: "/blog" }
+                    ]
                 },
                 block3: {
                     heading: "Further information",
-                    items: ["Terms of Services", "Privacy Policy"]
+                    items: [{ text: "Terms of Services", link: "#" }, { text: "Privacy Policy", link: "#" }]
                 },
                 block4: {
                     heading: "Community",
-                    svgitems: {
-                        facebook : [facebook, "https://www.facebook.com/niroggyan/"],
-                        linkedin : [linkedin, "https://www.linkedin.com/company/niroggyan/mycompany/"],
-                        instagram: [instagram, "https://www.instagram.com/niroggyan_reports"]
-                    },
-                    
+                    images: [
+                        { imagePath: facebook, altText: "fghj", link: "https://www.facebook.com/niroggyan/" },
+                        { imagePath: linkedin, altText: "fc", link: "https://www.linkedin.com/company/niroggyan/mycompany/" },
+                        { imagePath: instagram, altText: "dx", link: "https://www.instagram.com/niroggyan_reports" }
+                    ],
+
                 }
             }
         }

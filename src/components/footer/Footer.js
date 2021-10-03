@@ -1,10 +1,13 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import Box from '@material-ui/core/Box';
+import {
+    Box,
+    Grid,
+    Link
+} from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +56,7 @@ const Block1 = ({ content, ...props }) => {
         </Grid>
         <Grid item>
             <Typography variant="h6">
-                <Box fontWeight="fontWeightMedium" m={1} style={{ fontSize:"1rem" }}>
+                <Box fontWeight="fontWeightMedium" m={1} style={{ fontSize: "1rem" }}>
                     {content.copyrightText}
                 </Box>
             </Typography>
@@ -70,25 +73,33 @@ const Block = ({ content, ...props }) => {
             </Box>
         </Typography>
         <Box style={{ height: ".25rem" }} />
-        {content.items.map((link,  index) => <Typography key={index}>
+        {content.items.map(({link, text}, index) => <Typography key={index}>
             <Box fontWeight="fontWeightMedium" m={2}>
-                {link}
+                <Link color="inherit" href={link} key={index}>
+                    <Typography
+                        variant="h6"
+                        style={{ fontSize: "1rem" }}
+                        className={classes.title}>
+                        {text}
+                    </Typography>
+                </Link>          
             </Box>
         </Typography>)}
     </Grid>
 }
 
 const Block4 = ({ content, ...props }) => {
-
     return <Grid item {...props}>
         <Typography variant="h5">
-            <Box fontWeight="fontWeightMedium"  mt={1} >
+            <Box fontWeight="fontWeightMedium" mt={1} >
                 {content.heading}
             </Box>
         </Typography>
         <Box style={{ height: "1.7rem" }} />
-        {Object.entries(content.svgitems).map(
-            ([imagePath, url], index) => <a key={index} href={url[1]} target="_blank"><img style={{ marginRight: "1rem" }} src={url[0]} alt="logo" /></a>)}
+        {content.images.map(
+            ({ imagePath, altText = "logo-default", link }, index) => <a key={index} href={link} target="_blank">
+                <img style={{ marginRight: "1rem" }} src={imagePath} alt={altText} />
+            </a>)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>
 }
