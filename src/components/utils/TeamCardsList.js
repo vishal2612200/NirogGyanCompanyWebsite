@@ -79,8 +79,6 @@ const TeamCard = ({ image: { imagePath, altText = "logo-default" }, heading, con
                     <Typography variant="body1" color="textSecondary">
                         <Box textAlign="center">
                             {content}
-                            <br />
-                            {linkedin}
                         </Box>
                     </Typography>
                     <Typography variant="h5">

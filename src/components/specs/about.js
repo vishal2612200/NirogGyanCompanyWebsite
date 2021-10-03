@@ -108,7 +108,7 @@ export default (function () {
                 heading: [{
                     text: "Our Expert Team"
                 }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
+                description: "Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilisation work.",
             },
             cardsList: [{
                 image: { imagePath: expertTeamShweta, altText: "expertTeamShweta" },
