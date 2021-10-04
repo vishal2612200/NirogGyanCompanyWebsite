@@ -17,23 +17,21 @@ import believeBackground from "../about/static/imgs/believe-background.svg"
 import expertTeamShweta from "../about/static/imgs/expertteam-shweta.png"
 import expertTeamJoy from "../about/static/imgs/expertteam-joy.png"
 import expertTeamKartik from "../about/static/imgs/expertteam-kartik.png"
-import expertTeamVishal from "../about/static/imgs/expertteam-vishal.png"
+import expertTeamVishal from "../about/static/imgs/expertteam-vishal.jpg"
 import expertTeamAbhishek from "../about/static/imgs/expertteam-abhishek.jpg"
 import expertTeamYash from "../about/static/imgs/expertteam-yash.jpg"
-import expertTeamNitish from "../about/static/imgs/expertteam-nitish.png"
-import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.jpg"
+import expertTeamNithish from "../about/static/imgs/expertteam-nitish.png"
+import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.png"
 
-import productConsultant1 from "../about/static/imgs/product-consultant-1.jpeg"
-import productConsultant2 from "../about/static/imgs/product-consultant-2.jpeg"
-import productConsultant3 from "../about/static/imgs/product-consultant-3.jpeg"
-import productConsultant4 from "../about/static/imgs/product-consultant-4.png"
-import productConsultant5 from "../about/static/imgs/product-consultant-5.jpeg"
-import productConsultant6 from "../about/static/imgs/product-consultant-6.jpeg"
-import productConsultant7 from "../about/static/imgs/product-consultant-7.jpeg"
-import productConsultant8 from "../about/static/imgs/product-consultant-8.jpeg"
-import productConsultant9 from "../about/static/imgs/product-consultant-9.jpeg"
-
-import productConsultantKartik from "../about/static/imgs/product-consultant-kartik.png"
+import productConsultantTeji from "../about/static/imgs/product-consultant-teji.jpeg"
+import productConsultantArindam from "../about/static/imgs/product-consultant-arindam.jpeg"
+import productConsultantRuchira from "../about/static/imgs/product-consultant-ruchira.jpeg"
+import productConsultantPIEDS from "../about/static/imgs/product-consultant-PIEDS.png"
+import productConsultantGaurav from "../about/static/imgs/product-consultant-gaurav.jpeg"
+import productConsultantAyush from "../about/static/imgs/product-consultant-ayush.png"
+import productConsultantRakesh from "../about/static/imgs/product-consultant-rakesh.jpeg"
+import productConsultantVish from "../about/static/imgs/product-consultant-vish.jpeg"
+import productConsultantSanjeev from "../about/static/imgs/product-consultant-sanjeev.jpeg"
 
 import helpedOrganisationsBackground from "../about/static/imgs/helped-organisations-background.png"
 
@@ -71,13 +69,13 @@ export default (function () {
 
             },
             trustedBrandsLogoImages: [
-                { imagePath: recognisedBy1, altText: "recognisedBy1", link:"https://yourstory.com/2021/07/funding-saas-startup-niroggyan-seed-round-healthcare/amp" },
-                { imagePath: recognisedBy2, altText: "recognisedBy2", link:"https://saasindustry.com/news/niroggyan-raises-an-undisclosed-seed-round-from-healthcare-industry-veterans/" },
-                { imagePath: recognisedBy3, altText: "recognisedBy3", link:"https://entrackr.com/2021/07/funding-in-indian-startups-this-week-12-july-17-july/" },
-                { imagePath: recognisedBy4, altText: "recognisedBy4", link:"https://www.biospectrumindia.com/news/20/15236/nha-nathealth-hosts-innovation-carnival-for-healthcare-startups.html" },
+                { imagePath: recognisedBy1, altText: "recognisedBy1", link: "https://yourstory.com/2021/07/funding-saas-startup-niroggyan-seed-round-healthcare/amp" },
+                { imagePath: recognisedBy2, altText: "recognisedBy2", link: "https://saasindustry.com/news/niroggyan-raises-an-undisclosed-seed-round-from-healthcare-industry-veterans/" },
+                { imagePath: recognisedBy3, altText: "recognisedBy3", link: "https://entrackr.com/2021/07/funding-in-indian-startups-this-week-12-july-17-july/" },
+                { imagePath: recognisedBy4, altText: "recognisedBy4", link: "https://www.biospectrumindia.com/news/20/15236/nha-nathealth-hosts-innovation-carnival-for-healthcare-startups.html" },
 
             ]
-            
+
         },
         Market: {
             contentLeft: {
@@ -189,50 +187,50 @@ export default (function () {
                     linkedin: "www.linkedin.com/in/teji-hs-9765143/"
                 },
                 {
-                image: { imagePath: productConsultantArindam, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantArindam, altText: "productConsultantAyush" },
                     heading: "Mr. Arindam Haldar",
                     content: "Ex-CEO of SRL & Thyrocare, and IIM-C alum",
                     linkedin: "www.linkedin.com/in/arindamhaldar/"
                 },
                 {
-                image: { imagePath: productConsultantRuchira, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantRuchira, altText: "productConsultantAyush" },
                     heading: "Ruchira Roy",
                     content: "Managing Partner, Positron and IIM-A alum",
                     linkedin: "www.linkedin.com/in/ruchira-roy-a155855/"
                 },
 
                 {
-                image: { imagePath: productConsultantPIEDS, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantPIEDS, altText: "productConsultantAyush" },
                     heading: "PIEDS, BITS Pilani",
                     content: "Incubator of BITS Pilani",
                     linkedin: "www.linkedin.com/company/pilani-innovation-entrepreneurship-development-society-pieds-bits-pilani/"
                 },
                 {
-                image: { imagePath: productConsultantGaurav, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantGaurav, altText: "productConsultantAyush" },
                     heading: "Mr. Gaurav Rautela",
                     content: "Senior Tech Lead at Gojek",
                     linkedin: "www.linkedin.com/in/gaurav-rautela-5b0223b9/"
                 },
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
                     heading: "Mr. Sumit Bagaria",
                     content: "CEO, Hemogenomics & IIM-C alum",
                     linkedin: "www.linkedin.com/in/sumit-bagaria-8170a81/"
                 },
                 {
-                image: { imagePath: productConsultantRakesh, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantRakesh, altText: "productConsultantAyush" },
                     heading: "Mr. Rakesh Luthra",
                     content: "Director at Novo Nordisk",
                     linkedin: "www.linkedin.com/in/rakeshluthra1984/"
                 },
                 {
-                image: { imagePath: productConsultantVish, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantVish, altText: "productConsultantAyush" },
                     heading: "Mr. Vish Sathappan",
                     content: "Director at Times of India Group",
                     linkedin: "www.linkedin.com/in/vish-sathappan-8b170b13/"
                 },
                 {
-                image: { imagePath: productConsultantSanjeev, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantSanjeev, altText: "productConsultantAyush" },
                     heading: "Mr. Sanjeev Kathpalia",
                     content: "IIM-C alum in healthcare",
                     linkedin: "www.linkedin.com/in/sanjeevkathpalia/"

@@ -63,7 +63,7 @@ export default function Brand({ state: brand }) {
         animationSpeed={1000}
       >
         {logoImages.map(({ imagePath, altText = "logo-default" }, index) =>
-          <img loading="lazy" key={index} src={imagePath} alt={altText} width="289" height="131" style={{ filter: "grayscale(100%)" }} />
+          <img loading="lazy" key={index} src={imagePath} alt={altText} width="289" height="131"  />
         )}
       </Carousel>
       <Grid item >
