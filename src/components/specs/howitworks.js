@@ -4,9 +4,9 @@ import heroImage from "../howitworks/static/imgs/hero-image.svg"
 
 import reportDigital from "../howitworks/static/imgs/report-digital.png"
 
-import reportPdfKidney from "../howitworks/static/imgs/report-pdf-kidney.png"
-import reportPdfLiver from "../howitworks/static/imgs/report-pdf-liver.png"
-import reportPdfCovid from "../howitworks/static/imgs/report-pdf-covid.png"
+import reportPdfKidney from "../howitworks/static/imgs/report-pdf-kidney.svg"
+import reportPdfLiver from "../howitworks/static/imgs/report-pdf-liver.svg"
+import reportPdfCovid from "../howitworks/static/imgs/report-pdf-covid.svg"
 
 import mainApiIntegration from "../howitworks/static/imgs/main-api-integration.svg"
 import mainSoftware from "../howitworks/static/imgs/main-software.svg"
@@ -67,7 +67,7 @@ export default (function () {
         Main: {
             header: {
                 heading: [{ text: "How It Works" }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
+                description: "How does different things are interlinked with each other to form streamline."
             },
             cardsList: [
                 {

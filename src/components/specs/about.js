@@ -14,13 +14,26 @@ import marketBackground from "../about/static/imgs/market-background.svg"
 import believeBackground from "../about/static/imgs/believe-background.svg"
 
 
-import expertTeamShweta from "../about/static/imgs/expertteam-shweta.svg"
-import expertTeamJoy from "../about/static/imgs/expertteam-joy.svg"
-import expertTeamKartik from "../about/static/imgs/expertteam-kartik.svg"
+import expertTeamShweta from "../about/static/imgs/expertteam-shweta.png"
+import expertTeamJoy from "../about/static/imgs/expertteam-joy.png"
+import expertTeamKartik from "../about/static/imgs/expertteam-kartik.png"
+import expertTeamVishal from "../about/static/imgs/expertteam-vishal.png"
+import expertTeamAbhishek from "../about/static/imgs/expertteam-abhishek.jpg"
+import expertTeamYash from "../about/static/imgs/expertteam-yash.jpg"
+import expertTeamNitish from "../about/static/imgs/expertteam-nitish.png"
+import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.jpg"
 
-import productConsultantAyush from "../about/static/imgs/product-consultant-ayush.png"
-import productConsultantErik from "../about/static/imgs/product-consultant-erik.svg"
-import productConsultantKartik from "../about/static/imgs/expertteam-kartik.svg"
+import productConsultant1 from "../about/static/imgs/product-consultant-1.jpeg"
+import productConsultant2 from "../about/static/imgs/product-consultant-2.jpeg"
+import productConsultant3 from "../about/static/imgs/product-consultant-3.jpeg"
+import productConsultant4 from "../about/static/imgs/product-consultant-4.png"
+import productConsultant5 from "../about/static/imgs/product-consultant-5.jpeg"
+import productConsultant6 from "../about/static/imgs/product-consultant-6.jpeg"
+import productConsultant7 from "../about/static/imgs/product-consultant-7.jpeg"
+import productConsultant8 from "../about/static/imgs/product-consultant-8.jpeg"
+import productConsultant9 from "../about/static/imgs/product-consultant-9.jpeg"
+
+import productConsultantKartik from "../about/static/imgs/product-consultant-kartik.png"
 
 import helpedOrganisationsBackground from "../about/static/imgs/helped-organisations-background.png"
 
@@ -129,31 +142,31 @@ export default (function () {
                 linkedin: "www.linkedin.com/in/kartiktyagi3/"
             },
             {
-                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
+                image: { imagePath: expertTeamRanjeet, altText: "expertTeamKartik" },
                 heading: "Ranjeet Jha",
                 content: "Head of Design",
                 linkedin: "www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
-                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
+                image: { imagePath: expertTeamVishal, altText: "expertTeamVishal" },
                 heading: "Vishal Sharma",
                 content: "Software Engineer",
                 linkedin: "www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
-                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
+                image: { imagePath: expertTeamAbhishek, altText: "expertTeamAbhishek" },
                 heading: "Abhishek Soni",
                 content: "Software Engineer",
                 linkedin: "www.linkedin.com/in/hello-abhishek/"
             },
             {
-                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
+                image: { imagePath: expertTeamNithish, altText: "expertTeamNithish" },
                 heading: "Nithish",
                 content: "Software Engineer",
                 linkedin: "www.linkedin.com/in/nithish-976b76218/"
             },
             {
-                image: { imagePath: expertTeamKartik, altText: "expertTeamKartik" },
+                image: { imagePath: expertTeamYash, altText: "expertTeamYash" },
                 heading: "Yash Marmat",
                 content: "Web Developer",
                 linkedin: "www.linkedin.com/in/yash-marmat/"
@@ -170,32 +183,32 @@ export default (function () {
             },
             cardsList: [
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantTeji, altText: "productConsultantAyush" },
                     heading: "Mr. Teji HS",
                     content: "Global Head in Oracle, Singapore national & works with Healthtech startups",
                     linkedin: "www.linkedin.com/in/teji-hs-9765143/"
                 },
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                image: { imagePath: productConsultantArindam, altText: "productConsultantAyush" },
                     heading: "Mr. Arindam Haldar",
                     content: "Ex-CEO of SRL & Thyrocare, and IIM-C alum",
                     linkedin: "www.linkedin.com/in/arindamhaldar/"
                 },
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                image: { imagePath: productConsultantRuchira, altText: "productConsultantAyush" },
                     heading: "Ruchira Roy",
                     content: "Managing Partner, Positron and IIM-A alum",
                     linkedin: "www.linkedin.com/in/ruchira-roy-a155855/"
                 },
 
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                image: { imagePath: productConsultantPIEDS, altText: "productConsultantAyush" },
                     heading: "PIEDS, BITS Pilani",
                     content: "Incubator of BITS Pilani",
                     linkedin: "www.linkedin.com/company/pilani-innovation-entrepreneurship-development-society-pieds-bits-pilani/"
                 },
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                image: { imagePath: productConsultantGaurav, altText: "productConsultantAyush" },
                     heading: "Mr. Gaurav Rautela",
                     content: "Senior Tech Lead at Gojek",
                     linkedin: "www.linkedin.com/in/gaurav-rautela-5b0223b9/"
@@ -207,19 +220,19 @@ export default (function () {
                     linkedin: "www.linkedin.com/in/sumit-bagaria-8170a81/"
                 },
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                image: { imagePath: productConsultantRakesh, altText: "productConsultantAyush" },
                     heading: "Mr. Rakesh Luthra",
                     content: "Director at Novo Nordisk",
                     linkedin: "www.linkedin.com/in/rakeshluthra1984/"
                 },
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                image: { imagePath: productConsultantVish, altText: "productConsultantAyush" },
                     heading: "Mr. Vish Sathappan",
                     content: "Director at Times of India Group",
                     linkedin: "www.linkedin.com/in/vish-sathappan-8b170b13/"
                 },
                 {
-                image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                image: { imagePath: productConsultantSanjeev, altText: "productConsultantAyush" },
                     heading: "Mr. Sanjeev Kathpalia",
                     content: "IIM-C alum in healthcare",
                     linkedin: "www.linkedin.com/in/sanjeevkathpalia/"
