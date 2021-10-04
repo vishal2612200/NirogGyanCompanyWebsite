@@ -49,7 +49,7 @@ export default function Report({ state: report }) {
     const [reportName, setReportName] = useState(Object.keys(report.contentRight)[0]);
     const reportImage = report.contentRight[reportName];
 
-    
+
 
     return (
         <BigRightImageSection
@@ -121,7 +121,7 @@ const Card = ({ image: { imagePath, altText = "logo-default" }, name, imageIdent
         <Grid container item sm={6} className={classes.cardContainer} >
             <Grid container item className={classes.card} direction="column" justifyContent="center" onMouseOver={() => !isSmallScreen ? setReportName(imageIdentity) : ""}>
                 <Grid item>
-                    <img src={imagePath} alt={altText} width="auto" height="50px" />
+                    <img loading="lazy" src={imagePath} alt={altText} width="auto" height="50px" />
                 </Grid>
                 <Grid item>
                     <Typography variant="h6">{name}</Typography>

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         textAlign: "left",
         color: "#fff !important",
-        maxHeight:"10rem",
+        maxHeight: "10rem",
         [theme.breakpoints.down('sm')]: {
             textAlign: "center",
             margin: "auto auto",
@@ -52,7 +52,7 @@ const Block = ({ content }) => {
     const classes = useStyles()
     return <Grid container item md={4} className={classes.block} alignItems="center" justifyContent="center">
         <Grid item style={{ textAlign: "right" }}>
-            <img src={content.imagePath} className={classes.image} alt="" />
+            <img loading="lazy" src={content.imagePath} className={classes.image} alt="" />
         </Grid>
     </Grid>
 

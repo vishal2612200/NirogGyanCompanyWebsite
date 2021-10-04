@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: "90%",
         marginBottom: "0.25rem",
-        
+
     },
     cardsList: {
         justifyContent: "center",
@@ -98,7 +98,7 @@ export const TeamCard = ({ imgPath, heading, content, linkedin }) => {
     return (
         <Card className={classes.root} >
             <CardActionArea style={{ textAlign: "center" }}>
-                <img src={imgPath} alt="hello there" width="100%" height="200px" />
+                <img loading="lazy" src={imgPath} alt="hello there" width="100%" height="200px" />
                 <CardContent >
                     <Typography variant="h4" color="textSecondary" className={classes.title}>
                         <Box textAlign="center">
@@ -111,21 +111,21 @@ export const TeamCard = ({ imgPath, heading, content, linkedin }) => {
                         </Box>
                     </Typography>
                     <Typography variant="h5">
-                    <Box >
-                    {
-                        icons.map(icon => (
-                            // <a href={linkedin} tar>{icon}</a>
-                            <IconButton 
-                                component={Link}
-                                to={linkedin}
-                                rel="noreferrer"
-                                target="_blank">
-                                {icon}
-                            </IconButton>
-                        )
-                        )
-                    }
-                </Box>
+                        <Box >
+                            {
+                                icons.map(icon => (
+                                    // <a href={linkedin} tar>{icon}</a>
+                                    <IconButton
+                                        component={Link}
+                                        to={linkedin}
+                                        rel="noreferrer"
+                                        target="_blank">
+                                        {icon}
+                                    </IconButton>
+                                )
+                                )
+                            }
+                        </Box>
                     </Typography>
 
 

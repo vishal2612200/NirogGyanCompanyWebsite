@@ -62,7 +62,7 @@ const CardsList = ({ cardsList }) => {
   </Grid>
 }
 
-const Card = ({ image: { imagePath, altText="logo-default" }, heading, content }) => {
+const Card = ({ image: { imagePath, altText = "logo-default" }, heading, content }) => {
 
   const classes = useStyles();
   const [ref, inView] = useInView({
@@ -74,7 +74,7 @@ const Card = ({ image: { imagePath, altText="logo-default" }, heading, content }
       <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
         <Grid item >
           <Grid item className={`${classes.serviceCard}__logo-box`} style={{ marginBottom: "1rem" }}>
-            <img src={imagePath} alt={altText} width="60px" height="60px" />
+            <img loading="lazy" src={imagePath} alt={altText} width="60px" height="60px" />
             <Typography variant="h5">{heading}</Typography>
           </Grid>
           <Grid item className={`${classes.serviceCard}__content`}>

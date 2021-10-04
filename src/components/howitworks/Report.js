@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   buttonSet: {
-    marginBottom:"2rem",
+    marginBottom: "2rem",
     [theme.breakpoints.down('sm')]: {
       justifyContent: "center"
     }
@@ -77,8 +77,8 @@ const ImageContainer = ({ content, activeReport }) => {
 
   return <Grid container item className={classes.imagesContainer} justifyContent="center" alignItems="center">
     {images.map(({ imagePath, altText = "logo-default" }, index) => (
-      <Grid container item md={activeReport === "pdf" ? 4 : 12} justifyContent="center" alignItems="center" style={{paddingBottom:"1rem"}}>
-        <img src={imagePath} alt={altText} className={classes.image} key={index} width={activeReport === "pdf" ? "90%" : "100%"} />
+      <Grid container item md={activeReport === "pdf" ? 4 : 12} justifyContent="center" alignItems="center" style={{ paddingBottom: "1rem" }}>
+        <img loading="lazy" src={imagePath} alt={altText} className={classes.image} key={index} width={activeReport === "pdf" ? "90%" : "100%"} />
       </Grid>
     ))}
   </Grid>

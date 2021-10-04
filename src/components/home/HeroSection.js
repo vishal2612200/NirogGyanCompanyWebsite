@@ -157,7 +157,7 @@ const Heading = ({ text }) => {
 const Description = ({ text }) => {
   const classes = useStyles();
   return <Grid container item className={classes.text} style={{ marginTop: "1%", marginBottom: "5%" }}>
-    <Typography variant="body2" style={{fontSize:"1rem"}}>
+    <Typography variant="body2" style={{ fontSize: "1rem" }}>
       {text}
     </Typography>
   </Grid>
@@ -209,6 +209,6 @@ const ContentRight = ({ content, ...props }) => {
   const classes = useStyles();
   const { imagePath, altText = "logo-default" } = content.image;
   return <Grid item className={classes.imageBox} {...props}>
-    <img src={imagePath} alt={altText} width="100%" />
+    <img loading="lazy" src={imagePath} alt={altText} width="100%" />
   </Grid>
 }

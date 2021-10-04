@@ -21,7 +21,7 @@ export default (
                 },
                 block3: {
                     heading: "Further information",
-                    items: [{ text: "Terms of Services", link: "#" }, { text: "Privacy Policy", link: "#" }]
+                    items: [{ text: "Terms of Services", link: "/terms-of-services" }, { text: "Privacy Policy", link: "/privacy-policy" }]
                 },
                 block4: {
                     heading: "Community",

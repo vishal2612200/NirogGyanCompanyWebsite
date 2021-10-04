@@ -50,7 +50,7 @@ const ImageBox = ({ image: { imagePath, altText = "logo-default" } }) => {
 
     return <Grid container item direction="column" md={6} className={classes.contentRight} justifyContent="center" alignItems="center">
         <Grid container item justifyContent="center" alignItems="center">
-            <img src={imagePath} alt={altText} width={`calc(${0.9 * 90}%)`} />
+            <img loading="lazy" src={imagePath} alt={altText} width={`calc(${0.9 * 90}%)`} />
         </Grid>
     </Grid>
 }

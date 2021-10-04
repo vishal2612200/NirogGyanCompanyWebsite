@@ -85,13 +85,13 @@ export default function Main({ state: main }) {
 }
 const ContentLeft = ({ content }) => {
 
-  
+
   const Card = ({ image: { imagePath, altText = "logo-default" }, date, content, readmore, blogurl }) => {
     const classes = useStyles();
     return (
       <Grid className={classes.contentLeft} container item alignContent="center" style={{ marginBottom: "4%" }}>
         <Grid item>
-          <img width="100%" style={{ borderRadius: "15px" }} src={imagePath} alt={altText} />
+          <img loading="lazy" width="100%" style={{ borderRadius: "15px" }} src={imagePath} alt={altText} />
         </Grid>
         <Grid item className={classes.commonmargin}>
           <Typography variant="h6" color="textSecondary">
@@ -110,13 +110,13 @@ const ContentLeft = ({ content }) => {
             {content.description}
           </Typography>
         </Grid>
-        <Grid item className={classes.commonmargin}>    
-            <Typography variant="h6" color="primary">
+        <Grid item className={classes.commonmargin}>
+          <Typography variant="h6" color="primary">
             <a style={{ textDecoration: "none" }} href={blogurl} rel="noreferrer" target="_blank">
-                {readmore}
-              </a>  
-            </Typography>
-            
+              {readmore}
+            </a>
+          </Typography>
+
         </Grid>
       </Grid>
     )
@@ -177,7 +177,7 @@ const ContentRight = ({ content }) => {
       <Grid container className={classes.commonmargin}>
         <Grid item md={5}>
           <a href={blogurl} rel="noreferrer" target="_blank">
-            <img src={imagePath} alt={altText} />
+            <img loading="lazy" src={imagePath} alt={altText} />
           </a>
         </Grid>
         <Grid item md={1}></Grid>

@@ -100,7 +100,7 @@ const Card1 = ({ main }) => {
           </Typography>
           <Hidden smDown>
             <Box m={1} style={{ marginTop: "10%", marginLeft: "-27%" }}>
-              <img width="100%" src={main.cardsList[0].linePath} alt="doctor" />
+              <img loading="lazy" width="100%" src={main.cardsList[0].linePath} alt="doctor" />
             </Box>
           </Hidden>
         </Grid>
@@ -109,7 +109,7 @@ const Card1 = ({ main }) => {
             <Grid item xs={11}>
             </Grid>
             <Grid item xs={1}>
-              <img src={main.cardsList[0].arrowPath} alt="doctor" />
+              <img loading="lazy" src={main.cardsList[0].arrowPath} alt="doctor" />
             </Grid>
           </Grid>
         </Hidden>
@@ -165,14 +165,14 @@ const Card3 = ({ main }) => {
         </Typography>
         <Hidden smDown>
           <Box m={1} style={{ marginTop: "8%", marginRight: "-1%" }}>
-            <img width="100%" src={main.cardsList[2].arrowPath} alt="doctor" />
+            <img loading="lazy" width="100%" src={main.cardsList[2].arrowPath} alt="doctor" />
           </Box>
         </Hidden>
 
       </Grid>
       <Hidden smDown>
         <Grid item>
-          <img width="95%" src={main.cardsList[2].linePath} alt="doctor" />
+          <img loading="lazy" width="95%" src={main.cardsList[2].linePath} alt="doctor" />
         </Grid>
       </Hidden>
     </Grid>
@@ -190,7 +190,7 @@ const Card4 = ({ main }) => {
         <Grid item container xs={3}>
           <Grid item md={11}></Grid>
           <Grid item md={1}>
-            <img height="82%" src={main.cardsList[3].linePath} alt="doctor" />
+            <img loading="lazy" height="82%" src={main.cardsList[3].linePath} alt="doctor" />
           </Grid>
         </Grid>
       </Hidden>
@@ -207,7 +207,7 @@ const Card4 = ({ main }) => {
         </Typography>
         <Hidden smDown>
           <Box m={1} style={{ marginTop: "8%", marginLeft: "-2%" }}>
-            <img width="100%" src={main.cardsList[3].arrowPath} alt="doctor" />
+            <img loading="lazy" width="100%" src={main.cardsList[3].arrowPath} alt="doctor" />
           </Box>
         </Hidden>
       </Grid>
@@ -218,6 +218,6 @@ const Card4 = ({ main }) => {
 const Image = ({ reference, inView, image: { imagePath, altText = "logo-default" }, ...props }) => {
   const classes = useStyles();
   return <Grid item ref={reference} {...props}>
-    <img src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")} alt={altText} />
+    <img loading="lazy" src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")} alt={altText} />
   </Grid>
 }

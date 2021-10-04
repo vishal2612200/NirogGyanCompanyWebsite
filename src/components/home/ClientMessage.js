@@ -90,7 +90,7 @@ const CardsList = ({ content }) => {
 }
 
 
-const Card = ({ message, image:{imagePath, altText="logo-default"}, name, organisation, }) => {
+const Card = ({ message, image: { imagePath, altText = "logo-default" }, name, organisation, }) => {
     const classes = useStyles();
     return (<Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
         <Grid item>
@@ -101,13 +101,13 @@ const Card = ({ message, image:{imagePath, altText="logo-default"}, name, organi
         </Grid>
 
         <Grid item style={{ marginTop: "5%" }}>
-            <img src={imagePath} alt={altText} className={classes.clientImage} />
-                <Typography color="textPrimary" variant="h5">
-                    {name}
-                </Typography>
-                <Typography color="textSecondary" variant="h6">
-                    {organisation}
-                </Typography>
+            <img loading="lazy" src={imagePath} alt={altText} className={classes.clientImage} />
+            <Typography color="textPrimary" variant="h5">
+                {name}
+            </Typography>
+            <Typography color="textSecondary" variant="h6">
+                {organisation}
+            </Typography>
         </Grid>
     </Grid>
     )

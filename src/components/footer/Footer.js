@@ -52,7 +52,7 @@ const Block1 = ({ content, ...props }) => {
     const classes = useStyles()
     return <Grid item className={classes.block} {...props}>
         <Grid item>
-            <img width="83%" src={content.logoImage} alt="logo" />
+            <img loading="lazy" width="83%" src={content.logoImage} alt="logo" />
         </Grid>
         <Grid item>
             <Typography variant="h6">
@@ -73,7 +73,7 @@ const Block = ({ content, ...props }) => {
             </Box>
         </Typography>
         <Box style={{ height: ".25rem" }} />
-        {content.items.map(({link, text}, index) => <Typography key={index}>
+        {content.items.map(({ link, text }, index) => <Typography key={index}>
             <Box fontWeight="fontWeightMedium" m={2}>
                 <Link color="inherit" href={link} key={index}>
                     <Typography
@@ -82,7 +82,7 @@ const Block = ({ content, ...props }) => {
                         className={classes.title}>
                         {text}
                     </Typography>
-                </Link>          
+                </Link>
             </Box>
         </Typography>)}
     </Grid>
@@ -98,7 +98,7 @@ const Block4 = ({ content, ...props }) => {
         <Box style={{ height: "1.7rem" }} />
         {content.images.map(
             ({ imagePath, altText = "logo-default", link }, index) => <a key={index} href={link} rel="noreferrer" target="_blank">
-                <img style={{ marginRight: "1rem" }} src={imagePath} alt={altText} />
+                <img loading="lazy" style={{ marginRight: "1rem" }} src={imagePath} alt={altText} />
             </a>)}
         <Typography variant="h6">{content.copyrightText}</Typography>
     </Grid>

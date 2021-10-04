@@ -33,8 +33,8 @@ import reportDiabetes from "../home/static/imgs/report-diabetes.png"
 
 import reportPdfVitamin from "../home/static/imgs/report-pdf-vitamin.png"
 import reportPdfKidney from "../home/static/imgs/report-pdf-kidney.png"
-import reportPdfLiver from "../home/static/imgs/report-pdf-liver.png"
-import reportPdfCovid from "../home/static/imgs/report-pdf-covid.png"
+import reportPdfLiver from "../home/static/imgs/report-pdf-diabetes.png"
+import reportPdfCovid from "../home/static/imgs/report-pdf-electrolyte.png"
 
 import achievementsBackground from "../home/static/imgs/achievements-background.svg"
 
@@ -87,8 +87,8 @@ export default (function () {
         { imagePath: brandMedlife, altText: "brandMedlife" },
         { imagePath: brandNiramaya, altText: "brandNiramaya" },
       ],
-      whatsapp: { image: { imagePath: brandWhatsappIcon, altText: "brandWhatsapp" }, url: "https://wa.me/917678277891"},
-      
+      whatsapp: { image: { imagePath: brandWhatsappIcon, altText: "brandWhatsapp" }, url: "https://wa.me/917678277891" },
+
 
     },
     Features: {
@@ -180,12 +180,12 @@ export default (function () {
         heading: [{ text: "NirogGyan Bytes" }],
       },
       videoLinks: [
-        { link: "https://www.youtube.com/embed/7oLpkU2wCRU/", videoId:"7oLpkU2wCRU"  },
-        { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/" ,videoId:"MlLAXpoxNvQ" },
-        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/" ,videoId:"H0cHIewcQ2M" },
-        { link: "https://www.youtube.com/embed/p7XAjIv7YRI/" ,videoId:"p7XAjIv7YRI" },
-        { link: "https://www.youtube.com/embed/XVKS1rtTkbg/" ,videoId:"XVKS1rtTkbg" },
-        { link: "https://www.youtube.com/embed/L4aPen8hCL8/" ,videoId:"L4aPen8hCL8" },
+        { link: "https://www.youtube.com/embed/7oLpkU2wCRU/", videoId: "7oLpkU2wCRU" },
+        { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/", videoId: "MlLAXpoxNvQ" },
+        { link: "https://www.youtube.com/embed/H0cHIewcQ2M/", videoId: "H0cHIewcQ2M" },
+        { link: "https://www.youtube.com/embed/p7XAjIv7YRI/", videoId: "p7XAjIv7YRI" },
+        { link: "https://www.youtube.com/embed/XVKS1rtTkbg/", videoId: "XVKS1rtTkbg" },
+        { link: "https://www.youtube.com/embed/L4aPen8hCL8/", videoId: "L4aPen8hCL8" },
       ],
     },
     Report: {

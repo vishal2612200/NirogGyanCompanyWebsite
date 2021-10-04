@@ -178,7 +178,7 @@ function useSmallScreen() {
 
 const ImageBox = ({ imgPath }) => (
   <Grid key='imgBox' item xs={6} md={2} style={{ textAlign: "right" }}>
-    <img
+    <img loading="lazy"
       src={imgPath}
       alt="Logo"
     />

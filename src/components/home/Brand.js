@@ -36,9 +36,9 @@ export default function Brand({ state: brand }) {
       <Grid container item justifyContent="space-around">
         <HeadingWithText content={brand.header} />
         {
-          !isSmallScreen?
+          !isSmallScreen ?
             <a href={url} rel="noreferrer" target="_blank">
-              <img src={imagePath} alt={altText} className={classes.whatsapp} />
+              <img loading="lazy" src={imagePath} alt={altText} className={classes.whatsapp} />
             </a> : ""
         }
 
@@ -63,7 +63,7 @@ export default function Brand({ state: brand }) {
         animationSpeed={1000}
       >
         {logoImages.map(({ imagePath, altText = "logo-default" }, index) =>
-          <img key={index} src={imagePath} alt={altText} width="289" height="131" style={{ filter: "grayscale(100%)" }} />
+          <img loading="lazy" key={index} src={imagePath} alt={altText} width="289" height="131" style={{ filter: "grayscale(100%)" }} />
         )}
       </Carousel>
       <Grid item >

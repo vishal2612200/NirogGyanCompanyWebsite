@@ -58,11 +58,11 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
       paddingBottom: "1rem",
       textWrap: "word-break",
-      
+
     }
   },
   headingstyle: {
-      fontSize: "1.5rem",
+    fontSize: "1.5rem",
   }
 })
 );
@@ -142,7 +142,7 @@ const Card = ({ image: { imagePath, altText = "logo-default" }, items }) => {
     <Grid container className={classes.card}   >
       <Grid container item xs={4} className={classes.imageBox} justifyContent="center" alignItems="center">
         <Grid item  >
-          <img src={imagePath} alt={altText} width="60px" height="60px" />
+          <img loading="lazy" src={imagePath} alt={altText} width="60px" height="60px" />
         </Grid>
       </Grid>
       <Grid item xs={8} className={classes.textBox}>

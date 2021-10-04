@@ -43,14 +43,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FeatureCard({ image: { imagePath, altText="logo-default" }, textThin, textBold }) {
+export default function FeatureCard({ image: { imagePath, altText = "logo-default" }, textThin, textBold }) {
     const classes = useStyles();
 
     return (
         <Grid container className={classes.card}   >
             <Grid container item xs={4} className={classes.imageBox} justifyContent="center" alignItems="center">
                 <Grid item >
-                    <img src={imagePath} alt={altText} width="50px" height="50px" />
+                    <img loading="lazy" src={imagePath} alt={altText} width="50px" height="50px" />
                 </Grid>
             </Grid>
             <Grid item xs={8} className={classes.textBox}>

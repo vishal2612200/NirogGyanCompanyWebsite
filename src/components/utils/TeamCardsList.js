@@ -65,11 +65,11 @@ const TeamCard = ({ image: { imagePath, altText = "logo-default" }, heading, con
     const icons = [
         <LinkedinIcon className={classes.iconStyle} />]
     const absoluteurl = `\\${linkedin}`;
-   
+
     return (
         <Card className={classes.root} >
             <CardActionArea style={{ textAlign: "center" }}>
-                <img src={imagePath} alt={altText} width="100%" height="200px" />
+                <img loading="lazy" src={imagePath} alt={altText} width="100%" height="200px" />
                 <CardContent >
                     <Typography variant="h4" color="textSecondary" className={classes.title}>
                         <Box textAlign="center">

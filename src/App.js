@@ -14,6 +14,8 @@ import About from './components/about';
 import HowItWorks from './components/howitworks';
 import Blog from './components/blog';
 import FAQS from './components/faqs';
+import TermsOfServices from "./components/termsOfServices"
+import PrivacyPolicy from "./components/privacyPolicy"
 
 import specsfooter from "./components/specs/footer"
 import specsnavbar from "./components/specs/navbar"
@@ -22,8 +24,10 @@ import specsgetintouch from "./components/specs/getintouch"
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardContent, Grid, Box } from '@material-ui/core';
 import { Skeleton } from "@material-ui/lab"
+
 import Footer from './components/footer/Footer';
 import GetInTouch from "./components/getintouch/GetInTouch"
+
 import review from "./components/codereview.gif"
 
 export const PageContext = createContext()
@@ -101,7 +105,6 @@ function App() {
   // https://github.com/facebook/create-react-app/issues/1765
   // BUG FIX: state is undefined , look in state.js and the corresponding state file of the component 
   const [state,] = useReducer(function (state, action) { }, { ...specsnavbar, ...specs, ...specsgetintouch, ...specsfooter });
-
   const [page, setPage] = useState("home");
   const [loading, setLoading] = useState("true");
   const classes = useStyles();
@@ -111,28 +114,28 @@ function App() {
 
   return (
     <div className="App">
-      { loading
-          ?
-          <Card className={classes.card}>
-            <CardHeader
-              avatar={
-                  <Skeleton animation="wave" variant="circle" width={40} height={40} />
-              }
-              title={ 
-                // 'Niroggyan'
-                  <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
-              }
-              subheader={ <Skeleton animation="wave" height={10} width="40%" /> }
-            />
-            {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
+      {loading
+        ?
+        <Card className={classes.card}>
+          <CardHeader
+            avatar={
+              <Skeleton animation="wave" variant="circle" width={40} height={40} />
+            }
+            title={
+              // 'Niroggyan'
+              <Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />
+            }
+            subheader={<Skeleton animation="wave" height={10} width="40%" />}
+          />
+          {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
 
-            {/* <Box overflow="hidden">
+          {/* <Box overflow="hidden">
                <Media loading /> 
             </Box> */}
-            <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
-              <img width="60%" height="80%" src={review} alt="review" />
-            </Grid>
-             
+          <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
+            <img loading="lazy" width="60%" height="80%" src={review} alt="review" />
+          </Grid>
+
           <CardContent>
             <Grid container wrap="nowrap">
               {Array.from(new Array(3)).map((item, index) => (
@@ -177,6 +180,13 @@ function App() {
               <Route path="/faqs">
                 <FAQS state={state.faqs} />
               </Route>
+              <Route path="/terms-of-services">
+                <TermsOfServices state={state.termsOfServices} />
+              </Route>
+              <Route path="/privacy-policy">
+                <PrivacyPolicy state={state.privacyPolicy} />
+              </Route>
+
               <Route path="/">
                 <Home state={state.home} />
               </Route>
