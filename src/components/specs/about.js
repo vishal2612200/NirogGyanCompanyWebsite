@@ -14,12 +14,25 @@ import marketBackground from "../about/static/imgs/market-background.png"
 import believeBackground from "../about/static/imgs/believe-background.png"
 
 
-import expertTeamShweta from "../about/static/imgs/expertteam-shweta.png"
-import expertTeamJoy from "../about/static/imgs/expertteam-joy.png"
-import expertTeamKartik from "../about/static/imgs/expertteam-kartik.png"
+import expertTeam1 from "../about/static/imgs/expertteam-1.png"
+import expertTeam2 from "../about/static/imgs/expertteam-2.png"
+import expertTeam3 from "../about/static/imgs/expertteam-3.png"
+// import expertTeam4 from "../about/static/imgs/expertteam-4.png"
+import expertTeam5 from "../about/static/imgs/expertteam-5.jpg"
+import expertTeam6 from "../about/static/imgs/expertteam-6.jpg"
+// import expertTeam7 from "../about/static/imgs/expertteam-7.png"
+import expertTeam8 from "../about/static/imgs/expertteam-8.jpg"
 
-import productConsultantAyush from "../about/static/imgs/product-consultant-ayush.png"
-import productConsultantErik from "../about/static/imgs/product-consultant-erik.png"
+import productConsultant1 from "../about/static/imgs/product-consultant-1.jpeg"
+// import productConsultant2 from "../about/static/imgs/product-consultant-2.jpeg"
+import productConsultant3 from "../about/static/imgs/product-consultant-3.jpeg"
+import productConsultant4 from "../about/static/imgs/product-consultant-4.png"
+import productConsultant5 from "../about/static/imgs/product-consultant-5.jpeg"
+import productConsultant6 from "../about/static/imgs/product-consultant-6.jpeg"
+// import productConsultant7 from "../about/static/imgs/product-consultant-7.jpeg"
+// import productConsultant8 from "../about/static/imgs/product-consultant-8.jpeg"
+import productConsultant9 from "../about/static/imgs/product-consultant-9.jpeg"
+
 import productConsultantKartik from "../about/static/imgs/product-consultant-kartik.png"
 
 import helpedOrganisationsBackground from "../about/static/imgs/helped-organisations-background.png"
@@ -106,52 +119,52 @@ export default (function () {
                 heading: [{
                     text: "Our Expert Team"
                 }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
+                description: "Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilisation work.",
             },
             cardsList: [{
-                imgPath: expertTeamShweta,
+                imgPath: expertTeam1,
                 heading: "Shweta Gandhi",
                 content: "Co-Founder, Business Head",
                 linkedin: "https://www.linkedin.com/in/shweta-gandhi/"
             },
             {
-                imgPath: expertTeamJoy,
+                imgPath: expertTeam2,
                 heading: "Joyneel Acharya",
                 content: "Co-Founder, Product Head",
                 linkedin: "https://www.linkedin.com/in/joyneel-acharya/"
             },
             {
-                imgPath: expertTeamKartik,
+                imgPath: expertTeam3,
                 heading: "Kartik Tyagi",
                 content: "Technical Lead",
                 linkedin: "https://www.linkedin.com/in/kartiktyagi3/"
             },
             {
-                imgPath: expertTeamKartik,
+                imgPath: expertTeam5,
                 heading: "Ranjeet Jha",
                 content: "Head of Design",
                 linkedin: ""
             },
             {
-                imgPath: expertTeamKartik,
+                imgPath: expertTeam5,
                 heading: "Vishal Sharma",
                 content: "Software Engineer",
                 linkedin: "https://www.linkedin.com/in/vishal-sharma-gbpecdelhi/"
             },
             {
-                imgPath: expertTeamKartik,
+                imgPath: expertTeam6,
                 heading: "Abhishek Soni",
                 content: "Software Engineer",
                 linkedin: "https://www.linkedin.com/in/hello-abhishek/"
             },
             {
-                imgPath: expertTeamKartik,
+                imgPath: expertTeam5,
                 heading: "Nithish",
                 content: "Software Engineer",
                 linkedin: "https://www.linkedin.com/in/nithish-976b76218/"
             },
             {
-                imgPath: expertTeamKartik,
+                imgPath: expertTeam8,
                 heading: "Yash Marmat",
                 content: "Web Developer",
                 linkedin: "https://www.linkedin.com/in/yash-marmat/"
@@ -170,56 +183,56 @@ export default (function () {
             },
             cardsList: [
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: productConsultant1,
                     heading: "Mr. Teji HS",
                     content: "Global Head in Oracle, Singapore national & works with Healthtech startups",
                     linkedin: "https://www.linkedin.com/in/teji-hs-9765143/"
                 },
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: expertTeam5,
                     heading: "Mr. Arindam Haldar",
                     content: "Ex-CEO of SRL & Thyrocare, and IIM-C alum",
                     linkedin: "https://www.linkedin.com/in/arindamhaldar/"
                 },
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: productConsultant3,
                     heading: "Ruchira Roy",
                     content: "Managing Partner, Positron and IIM-A alum",
                     linkedin: "https://www.linkedin.com/in/ruchira-roy-a155855/"
                 },
                 
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: productConsultant4,
                     heading: "PIEDS, BITS Pilani",
                     content: "Incubator of BITS Pilani",
                     linkedin: "https://www.linkedin.com/company/pilani-innovation-entrepreneurship-development-society-pieds-bits-pilani/"
                 },
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: productConsultant5,
                     heading: "Mr. Gaurav Rautela",
                     content: "Senior Tech Lead at Gojek",
                     linkedin: "https://www.linkedin.com/in/gaurav-rautela-5b0223b9/"
                 },
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: productConsultant6,
                     heading: "Mr. Sumit Bagaria",
                     content: "CEO, Hemogenomics & IIM-C alum",
                     linkedin: "https://www.linkedin.com/in/sumit-bagaria-8170a81/"
                 },
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: expertTeam5,
                     heading: "Mr. Rakesh Luthra",
                     content: "Director at Novo Nordisk",
                     linkedin: "https://www.linkedin.com/in/rakeshluthra1984/"
                 },
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: expertTeam5,
                     heading: "Mr. Vish Sathappan",
                     content: "Director at Times of India Group",
                     linkedin: "https://www.linkedin.com/in/vish-sathappan-8b170b13/"
                 },
                 {
-                    imgPath: productConsultantKartik,
+                    imgPath: productConsultant9,
                     heading: "Mr. Sanjeev Kathpalia",
                     content: "IIM-C alum in healthcare",
                     linkedin: "https://www.linkedin.com/in/sanjeevkathpalia/"

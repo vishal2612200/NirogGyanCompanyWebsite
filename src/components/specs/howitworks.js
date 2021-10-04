@@ -5,9 +5,9 @@ import heroImage from "../howitworks/static/imgs/hero-image.png"
 
 import reportDigital from "../howitworks/static/imgs/report-digital.png"
 import reportPdf from "../howitworks/static/imgs/report-pdf.png"
-import reportPdf1 from "../howitworks/static/imgs/report-pdf1.png"
-import reportPdf2 from "../howitworks/static/imgs/report-pdf2.png"
-import reportPdf3 from "../howitworks/static/imgs/report-pdf3.png"
+import reportPdf1 from "../howitworks/static/imgs/report-pdf1.svg"
+import reportPdf2 from "../howitworks/static/imgs/report-pdf2.svg"
+import reportPdf3 from "../howitworks/static/imgs/report-pdf3.svg"
 
 import mainApiIntegration from "../howitworks/static/imgs/main-api-integration.svg"
 import mainSoftware from "../howitworks/static/imgs/main-software.svg"
@@ -55,9 +55,9 @@ export default (function () {
                 pdf: {
                     buttonText: "PDF Smart Report",
                     images: [
-                        reportPdf,
-                        reportPdf,
-                        reportPdf
+                        reportPdf2,
+                        reportPdf1,
+                        reportPdf3
                     ]
                 },
 
@@ -67,7 +67,7 @@ export default (function () {
         Main: {
             header: {
                 heading: [{ text: "How It Works" }],
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut velit ac odio euismod facilisis tincidunt eu enim. Suspendisse massa diam, porta eget tristique in, feugiat eu justo.",
+                description: "How does different things are interlinked with each other to form streamline."
             },
             cardsList: [
                 {

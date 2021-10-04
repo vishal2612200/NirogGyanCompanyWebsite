@@ -48,9 +48,15 @@ const useStyles = makeStyles((theme) => ({
     "&>*": {
       textAlign: "left",
       fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
-      padding: "1rem",
+      padding: "0.2rem 1rem",
       textWrap: "word-break"
     }
+  },
+  datecss: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    }
+
   },
   card: {
     border: "1px solid #B8BBBD",
@@ -160,8 +166,10 @@ const ContentRight = ({ content }) => {
         </Grid>
         <Grid item md={1}></Grid>
         <Grid item md={6} className={classes.textBox}>
-          <Typography variant="paragraph" color="textSecondary">
+          <Typography paragraph color="textSecondary">
+            <Box className={classes.datecss}>
             {date}
+            </Box>
           </Typography>
           <Typography color="textPrimary" paragraph>
             <Box fontWeight="fontWeightBold">

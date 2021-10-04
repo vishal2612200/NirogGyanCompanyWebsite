@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Nunito Sans"',
         fontSize: "24px",
         borderRadius: "40px",
+        '&:hover': {
+            backgroundColor: '#163b76',
+            color: '#fff'
+        },
         [theme.breakpoints.down("sm")]: {
             fontSize: "12px",
         }
