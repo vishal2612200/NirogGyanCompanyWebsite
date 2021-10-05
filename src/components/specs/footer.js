@@ -3,6 +3,7 @@ import facebook from "../footer/static/imgs/facebook.svg"
 import instagram from "../footer/static/imgs/instagram.svg"
 import linkedin from "../footer/static/imgs/linkedin.svg"
 
+
 export default (
     function () {
         return {
@@ -14,8 +15,8 @@ export default (
                 block2: {
                     heading: "Company",
                     items: [
-                        { text: "About us", link: "/about" },
-                        { text: "How it works", link: "/how-it-works" },
+                        { text: "About Us", link: "/about" },
+                        { text: "How It works", link: "/how-it-works" },
                         { text: "Blog", link: "/blog" }
                     ]
                 },

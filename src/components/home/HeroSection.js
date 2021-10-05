@@ -4,8 +4,9 @@ import {
   Grid,
   Button,
   IconButton,
+  Link, makeStyles, Fab
+
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
     fontWeight: "700",
-    color: "white",
+    color: "#3668d6",
     [theme.breakpoints.down('sm')]: {
       textAlign: "center",
     }
@@ -167,23 +168,26 @@ const Description = ({ text }) => {
 const ButtonSet = ({ content }) => {
   const classes = useStyles();
   return <Grid container item className={classes.buttonSet}>
-    <Grid item md={4}>
-      <ButtonServices text={content.services} />
+    <Grid item md={8}>
+      <ButtonServices button={content.services} />
     </Grid>
-    <Grid item md={4}>
-      <ButtonWatchVideo text={content.watchVideo} />
-    </Grid>
+    {/* <Grid item md={4}>
+     <ButtonWatchVideo text={content.watchVideo} /> 
+    </Grid> */}
     <Grid item md={4}></Grid>
   </Grid>
 }
 
 
-const ButtonServices = ({ text }) => {
+const ButtonServices = ({ button: { text, link } }) => {
   const classes = useStyles();
   return <Grid container item className={classes.buttonServicesContainer}>
-    <Button variant="contained" color="primary">
+    <Fab variant="extended" color="primary" component={Link}
+      href={link}
+      rel="noreferrer"
+      target="_blank">
       {text}
-    </Button>
+    </Fab>
   </Grid>
 }
 

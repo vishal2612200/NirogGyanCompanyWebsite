@@ -17,16 +17,18 @@ import FAQS from './components/faqs';
 import TermsOfServices from "./components/termsOfServices"
 import PrivacyPolicy from "./components/privacyPolicy"
 
-import specsfooter from "./components/specs/footer"
-import specsnavbar from "./components/specs/navbar"
-import specsgetintouch from "./components/specs/getintouch"
+import specsFooter from "./components/specs/footer"
+import specsNavbar from "./components/specs/navbar"
+// import specsGetInTouch from "./components/specs/getintouch"
+import specsSubscribe from "./components/specs/subscribe"
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardContent, Grid, Box } from '@material-ui/core';
 import { Skeleton } from "@material-ui/lab"
 
 import Footer from './components/footer/Footer';
-import GetInTouch from "./components/getintouch/GetInTouch"
+// import GetInTouch from "./components/getintouch/GetInTouch"
+import Subscribe from "./components/subscribe/Subscribe"
 
 import review from "./components/codereview.gif"
 
@@ -104,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   // https://github.com/facebook/create-react-app/issues/1765
   // BUG FIX: state is undefined , look in state.js and the corresponding state file of the component 
-  const [state,] = useReducer(function (state, action) { }, { ...specsnavbar, ...specs, ...specsgetintouch, ...specsfooter });
+  const [state,] = useReducer(function (state, action) { }, { ...specsNavbar, ...specs, ...specsFooter, ...specsSubscribe});
   const [page, setPage] = useState("home");
   const [loading, setLoading] = useState("true");
   const classes = useStyles();
@@ -164,17 +166,14 @@ function App() {
               </Route>
               <Route path="/about">
                 <About state={state.about} >
-                  <GetInTouch state={state.GetInTouch} />
                 </About>
               </Route>
               <Route path="/how-it-works">
                 <HowItWorks state={state.howitworks} >
-                  <GetInTouch state={state.GetInTouch} />
                 </HowItWorks>
               </Route>
               <Route path="/blog">
                 <Blog state={state.blog} >
-                  <GetInTouch state={state.GetInTouch} />
                 </Blog>
               </Route>
               <Route path="/faqs">
@@ -192,6 +191,7 @@ function App() {
               </Route>
             </Switch>
           </Router>
+          <Subscribe state={state.Subscribe}/>
           <Footer state={state.Footer} />
         </PageContext.Provider>
       }

@@ -6,7 +6,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { Typography, IconButton, Card, CardActionArea, CardActions, CardContent, Box } from "@material-ui/core";
 import CarousalWithArrowsOnDesktop from "./CarousalWithArrowsOnDesktop"
-import { useNumberOfSlides } from "../cutomHooks"
+import { useNumberOfSlides } from "../customHooks"
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import { Link } from 'react-router-dom';
 

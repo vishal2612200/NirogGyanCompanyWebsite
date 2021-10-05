@@ -22,10 +22,12 @@ import expertTeamAbhishek from "../about/static/imgs/expertteam-abhishek.jpg"
 import expertTeamYash from "../about/static/imgs/expertteam-yash.jpg"
 import expertTeamNithish from "../about/static/imgs/expertteam-nitish.png"
 import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.png"
+import expertTeamJayanti from "../about/static/imgs/expertteam-jayanti.png"
 
 import productConsultantTeji from "../about/static/imgs/product-consultant-teji.jpeg"
 import productConsultantArindam from "../about/static/imgs/product-consultant-arindam.png"
 import productConsultantRuchira from "../about/static/imgs/product-consultant-ruchira.jpeg"
+import productConsultantGirish from "../about/static/imgs/product-consultant-girish.jpg"
 import productConsultantPIEDS from "../about/static/imgs/product-consultant-PIEDS.png"
 import productConsultantGaurav from "../about/static/imgs/product-consultant-gaurav.jpeg"
 import productConsultantRakesh from "../about/static/imgs/product-consultant-rakesh.png"
@@ -64,7 +66,7 @@ export default (function () {
         RecognisedBy: {
             header: {
                 heading: [{
-                    text: "Recognised By"
+                    text: "In the News"
                 }],
 
             },
@@ -140,6 +142,12 @@ export default (function () {
                 linkedin: "www.linkedin.com/in/kartiktyagi3/"
             },
             {
+                image: { imagePath: expertTeamJayanti, altText: "expertTeamJayanti" },
+                heading: "Dr. Jayanti",
+                content: "Medical Advisor",
+                linkedin: "www.linkedin.com/in/dr-jayanti-a-35862b7/"
+            },
+            {
                 image: { imagePath: expertTeamRanjeet, altText: "expertTeamKartik" },
                 heading: "Ranjeet Jha",
                 content: "Head of Design",
@@ -175,66 +183,71 @@ export default (function () {
             header: {
 
                 heading: [{
-                    text: "Product Consultant"
+                    text: "Believers in NirogGyan"
                 }],
-                description: "People helping out Niroggyan to grow its reach and expand more at a faster pace.",
+                description: "Industry and Technology experts, helping the novel idea spread its wings",
             },
             cardsList: [
                 {
+                    image: { imagePath: productConsultantArindam, altText: "productConsultantAyush" },
+                    heading: "Mr. Arindam Haldar",
+                    content: "CEO, Pure Health (labs)",
+                    linkedin: "www.linkedin.com/in/arindamhaldar/"
+                },
+                {
                     image: { imagePath: productConsultantTeji, altText: "productConsultantAyush" },
                     heading: "Mr. Teji HS",
-                    content: "Global Head in Oracle, Singapore national & works with Healthtech startups",
+                    content: "Global Head, Oracle",
                     linkedin: "www.linkedin.com/in/teji-hs-9765143/"
                 },
                 {
-                    image: { imagePath: productConsultantArindam, altText: "productConsultantAyush" },
-                    heading: "Mr. Arindam Haldar",
-                    content: "Ex-CEO of SRL & Thyrocare, and IIM-C alum",
-                    linkedin: "www.linkedin.com/in/arindamhaldar/"
+                    image: { imagePath: productConsultantGirish, altText: "productConsultantAyush" },
+                    heading: "Girish Mehta",
+                    content: "ex-CEO of MedGenome India",
+                    linkedin: "www.linkedin.com/in/girish-mehta-a8b88a67"
                 },
                 {
                     image: { imagePath: productConsultantRuchira, altText: "productConsultantAyush" },
                     heading: "Ruchira Roy",
-                    content: "Managing Partner, Positron and IIM-A alum",
+                    content: "Managing Partner, Positron",
                     linkedin: "www.linkedin.com/in/ruchira-roy-a155855/"
-                },
-
-                {
-                    image: { imagePath: productConsultantPIEDS, altText: "productConsultantAyush" },
-                    heading: "PIEDS, BITS Pilani",
-                    content: "Incubator of BITS Pilani",
-                    linkedin: "www.linkedin.com/company/pilani-innovation-entrepreneurship-development-society-pieds-bits-pilani/"
-                },
-                {
-                    image: { imagePath: productConsultantGaurav, altText: "productConsultantGaurav" },
-                    heading: "Mr. Gaurav Rautela",
-                    content: "Senior Tech Lead at Gojek",
-                    linkedin: "www.linkedin.com/in/gaurav-rautela-5b0223b9/"
-                },
-                {
-                    image: { imagePath: productConsultantSumit, altText: "productConsultantSumit" },
-                    heading: "Mr. Sumit Bagaria",
-                    content: "CEO, Hemogenomics & IIM-C alum",
-                    linkedin: "www.linkedin.com/in/sumit-bagaria-8170a81/"
                 },
                 {
                     image: { imagePath: productConsultantRakesh, altText: "productConsultantRakesh" },
                     heading: "Mr. Rakesh Luthra",
-                    content: "Director at Novo Nordisk",
+                    content: "Director, Novo Nordisk",
                     linkedin: "www.linkedin.com/in/rakeshluthra1984/"
                 },
                 {
                     image: { imagePath: productConsultantVish, altText: "productConsultantVish" },
                     heading: "Mr. Vish Sathappan",
-                    content: "Director at Times of India Group",
+                    content: "Director, Times of India Group",
                     linkedin: "www.linkedin.com/in/vish-sathappan-8b170b13/"
                 },
                 {
                     image: { imagePath: productConsultantSanjeev, altText: "productConsultantAyush" },
                     heading: "Mr. Sanjeev Kathpalia",
-                    content: "IIM-C alum in healthcare",
+                    content: "CEO & MD, Mindteck",
                     linkedin: "www.linkedin.com/in/sanjeevkathpalia/"
-                }
+                },
+                {
+                    image: { imagePath: productConsultantSumit, altText: "productConsultantSumit" },
+                    heading: "Mr. Sumit Bagaria",
+                    content: "CEO, Hemogenomics",
+                    linkedin: "www.linkedin.com/in/sumit-bagaria-8170a81/"
+                },
+                {
+                    image: { imagePath: productConsultantGaurav, altText: "productConsultantGaurav" },
+                    heading: "Mr. Gaurav Rautela",
+                    content: "Senior Tech Lead, Gojek",
+                    linkedin: "www.linkedin.com/in/gaurav-rautela-5b0223b9/"
+                },
+                {
+                    image: { imagePath: productConsultantPIEDS, altText: "productConsultantAyush" },
+                    heading: "PIEDS, BITS Pilani",
+                    content: "Startup Incubator",
+                    linkedin: "www.linkedin.com/company/pilani-innovation-entrepreneurship-development-society-pieds-bits-pilani/"
+                },
             ],
         },
         HelpedOrganisations: {
@@ -244,7 +257,9 @@ export default (function () {
                 }],
                 description: "Labs, hospitals, startups and corporates have tried our Patient-Engagement solutions (with Smart Reports, specialised profiles, dashboards and analytics). Why don't you join the list as well?",
             },
-            buttonText: "Discover & Get Support From Our Team",
+            button: {
+                text: { desktop: "Discover & Get Support From Our Team", mobile: "Discover more" }, link: "mailto:sales@niroggyan.com"
+            },
             backgroundImage: helpedOrganisationsBackground
         },
 

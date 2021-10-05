@@ -1,14 +1,12 @@
 import heroImage from "../home/static/imgs/hero-image.svg"
 
-import brandCrelioHealth from "../home/static/imgs/brand-crelio-health.jpg"
-import brandDrDangLabs from "../home/static/imgs/brand-dr-dang-labs.png"
-import brandMedlife from "../home/static/imgs/brand-medlife.png"
-import brandNiramaya from "../home/static/imgs/brand-niramaya.png"
-import brandIqvia from "../home/static/imgs/brand-iqvia.png"
-import brandItdose from "../home/static/imgs/brand-itdose.png"
-import brandPracto from "../home/static/imgs/brand-practo.jpg"
-import brandMaxlab from "../home/static/imgs/brand-maxlab.jpg"
-import brandThyrocare from "../home/static/imgs/brand-thyrocare.png"
+import brandAlArab from "../home/static/imgs/logo-1.jpg"
+import brandMax from "../home/static/imgs/logo-2.jpg"
+import brandDang from "../home/static/imgs/logo-3.jpg"
+import brandCrelio from "../home/static/imgs/logo-4.jpg"
+import brandIqvia from "../home/static/imgs/logo-5.jpg"
+import brandItdose from "../home/static/imgs/logo-6.jpg"
+import brandPracto from "../home/static/imgs/logo-7.jpg"
 
 
 import brandWhatsappIcon from "../home/static/imgs/brand-whatsapp-icon.svg"
@@ -28,16 +26,17 @@ import servicesInstant from "../home/static/imgs/services-instant.png"
 
 import reportVitamin from "../home/static/imgs/report-vitamin.png"
 import reportKidney from "../home/static/imgs/report-kidney.png"
-import reportElectrolyte from "../home/static/imgs/report-electrolyte.png"
+import reportLipid from "../home/static/imgs/report-electrolyte.png"
 import reportDiabetes from "../home/static/imgs/report-diabetes.png"
 
 import reportPdfVitamin from "../home/static/imgs/report-pdf-vitamin.png"
 import reportPdfKidney from "../home/static/imgs/report-pdf-kidney.png"
 import reportPdfLiver from "../home/static/imgs/report-pdf-diabetes.png"
-import reportPdfCovid from "../home/static/imgs/report-pdf-electrolyte.png"
+import reportPdfCovid from "../home/static/imgs/report-pdf-lipid.png"
 
 import achievementsBackground from "../home/static/imgs/achievements-background.svg"
 
+import clientMessage0 from "../home/static/imgs/client-message-0.png"
 import clientMessage1 from "../home/static/imgs/client-message-1.png"
 import clientMessage2 from "../home/static/imgs/client-message-2.png"
 import clientMessage3 from "../home/static/imgs/client-message-3.png"
@@ -58,7 +57,16 @@ export default (function () {
         heading: { line1: "Simplifying", line2: "Medical Reports" },
         description:
           "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-        buttons: { services: "our Services", watchVideo: "Watch Video" },
+        buttons: {
+          services: {
+            text: "Our Services",
+            link: "https://linktr.ee/niroggyan"
+          },
+          watchVideo: {
+            text: "Watch Video",
+            link: "https://linktr.ee/niroggyan"
+          }
+        }
       },
       contentRight: {
         image: {
@@ -77,15 +85,13 @@ export default (function () {
         description: "We partner with the best Diagnostic providers"
       },
       trustedBrandsLogoImages: [
+        { imagePath: brandAlArab, altText: "brandAlArab" },
+        { imagePath: brandMax, altText: "brandMax" },
+        { imagePath: brandDang, altText: "brandDang" },
+        { imagePath: brandCrelio, altText: "brandCrelio" },
         { imagePath: brandIqvia, altText: "brandIqvia" },
         { imagePath: brandItdose, altText: "brandItdose" },
         { imagePath: brandPracto, altText: "brandPracto" },
-        { imagePath: brandMaxlab, altText: "brandMaxlab" },
-        { imagePath: brandThyrocare, altText: "brandThyrocare" },
-        { imagePath: brandCrelioHealth, altText: "brandCrelioHealth" },
-        { imagePath: brandDrDangLabs, altText: "brandDrDangLabs" },
-        { imagePath: brandMedlife, altText: "brandMedlife" },
-        { imagePath: brandNiramaya, altText: "brandNiramaya" },
       ],
       whatsapp: { image: { imagePath: brandWhatsappIcon, altText: "brandWhatsapp" }, url: "https://wa.me/917678277891" },
 
@@ -192,11 +198,11 @@ export default (function () {
       contentLeft: {
         header: {
           heading: "Believe what you see.",
-          description: "Checkout our Smart Reports below and know the difference",
+          description: "Gamified health-check dashboard for companies to live healthier",
         },
         footer: {
-          textThin: "My Smart Diabetes Report helped me get the timely shock that I needed to correct myself. Thank you!",
-          textBold: "Zubair Ahmed, veteran journalist"
+          textThin: "Stop asking your medical questions on Whatsapp to people who can't answer everything. Instead, know your biomarkers better whenever you get tested.",
+          textBold: "Individual commitment or group effort — we do whatever it takes to make a team, a company, a society or a civilisation work."
         },
         cardsList: [
           {
@@ -210,8 +216,8 @@ export default (function () {
             imageIdentity: "kidney"
           },
           {
-            image: { imagePath: reportElectrolyte, altText: "electrolyte" },
-            name: "Electrolyte",
+            image: { imagePath: reportLipid, altText: "electrolyte" },
+            name: "Lipid",
             imageIdentity: "covid"
           },
           {
@@ -259,28 +265,26 @@ export default (function () {
       backgroundImage: clientMessageBackground,
       cardsList: [
         {
-          message: "It seems like yesterday when I met the founders to explore the possibility of providing patient- friendly reports, both to my walk -in and B2B customers.The team kept it sweet & simple.With minimal integration using APIs, we’ve been live since more than a year.",
-          image: { imagePath: clientMessage1, altText: "clientMessage1" },
-          name: "Sanjeev Malhotra",
-          organisation: "Niramaya Pathlab"
-        },
-        {
+          message: "NirogGyan’s smart reports are phenomenal! They provide crystal-clear information to the physician and easy to understand insights to the patients. The team is committed to deliver and their patient centric approach is commendable .",
+          image: { imagePath: clientMessage0, altText: "clientMessage0" },
+          name: "Dr. Arjun Dang",
+          organisation: "Dr Dangs Lab"
+        }, {
           message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.",
           image: { imagePath: clientMessage2, altText: "clientMessage2" },
           name: "Dr.Soumik Kalita",
           organisation: "Founder, FamPhy"
-        },
-        {
-          message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.",
-          image: { imagePath: clientMessage3, altText: "clientMessage3" },
-          name: "Zubair Ahmed",
-          organisation: "Journalist, BBC India"
-        },
-        {
+        }, {
           message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.",
           image: { imagePath: clientMessage4, altText: "clientMessage4" },
           name: "Ashwani Mishra",
           organisation: "Product Manager"
+        },
+        {
+          message: "It seems like yesterday when I met the founders to explore the possibility of providing patient- friendly reports, both to my walk -in and B2B customers.The team kept it sweet & simple.With minimal integration using APIs, we’ve been live since more than a year.",
+          image: { imagePath: clientMessage1, altText: "clientMessage1" },
+          name: "Sanjeev Malhotra",
+          organisation: "Niramaya Pathlab"
         },
         {
           message: "Understanding health data has been always a difficult process, but the way Niroggyan is simplifying health data, helped me understand my health insights better and making life simpler.",
@@ -288,6 +292,13 @@ export default (function () {
           name: "Anita Sharma",
           organisation: "Housewife"
         },
+        {
+          message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.",
+          image: { imagePath: clientMessage3, altText: "clientMessage3" },
+          name: "Zubair Ahmed",
+          organisation: "Journalist, BBC India"
+        },
+
       ]
     },
     MailingList: {

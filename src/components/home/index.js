@@ -7,7 +7,6 @@ import Features from './Features';
 import Report from './Report';
 import Achievements from './Achievements';
 import ClientMessage from './ClientMessage';
-import MailingList from './MailingList';
 
 
 
@@ -23,6 +22,5 @@ export default function Home({ state }) {
             <Report state={state.Report} />
             <Achievements state={state.Achievements} />
             <ClientMessage state={state.ClientMessage} />
-            <MailingList state={state.MailingList} /> 
         </React.Fragment>)
 }

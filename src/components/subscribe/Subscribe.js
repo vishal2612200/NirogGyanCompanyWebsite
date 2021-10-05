@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Button, Fab } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
@@ -144,12 +144,9 @@ const Block2 = ({ content, ...props }) => {
                 onChange={e => setEmail(e.target.value)} />
         </Grid>
         <Grid item md={6}>
-            <Fab variant="extended" type="submit">
+            <Button variant="contained" className={classes.button} type="submit">
                 {content.buttonText}
-            </Fab>
-            {/* <Button variant="contained" className={classes.button} type="submit">
-                {content.buttonText}
-            </Button> */}
+            </Button>
         </Grid>
 
     </Grid>

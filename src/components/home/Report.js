@@ -93,7 +93,7 @@ const Header = ({ content }) => {
         <Typography
             variant="h6"
             color="textSecondary"
-            style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
+            style={{ fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif' }}
         >
             {content.description}
         </Typography>

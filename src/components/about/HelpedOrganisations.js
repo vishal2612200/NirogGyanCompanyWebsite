@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import { Link } from 'react-router-dom';
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-
+import { useSmallScreen } from "../customHooks"
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: "4rem",
@@ -53,17 +53,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HelpedOrganisations({ state: helpedOrganisations }) {
     const classes = useStyles();
+    const { link, text } = helpedOrganisations.button;
+    const absoluteurl = `\\${link}`;
+    const isSmallScreen = useSmallScreen();
     return (
         <Grid container direction="column" justifyContent="center" alignItems="center" className={classes.root} style={
             { backgroundImage: `url(${helpedOrganisations.backgroundImage})` }}>
             <HeadingWithText content={helpedOrganisations.header}></HeadingWithText>
-            <Button variant="contained" size="large" className={classes.button} 
+            <Button variant="contained" size="large" className={classes.button}
                 component={Link}
-                to="/faqs"
+                to={absoluteurl}
                 rel="noreferrer"
                 target="_blank">
-                <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3}>
-                    {helpedOrganisations.buttonText}
+                <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3} style={textAlign="center"}>
+
+                    {isSmallScreen ? text.mobile : text.desktop}
                 </Box>
             </Button>
         </Grid>)

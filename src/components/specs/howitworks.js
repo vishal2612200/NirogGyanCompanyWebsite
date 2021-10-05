@@ -28,7 +28,7 @@ export default (function () {
         HeroSection: {
             contentLeft: {
 
-                heading: "How it Works",
+                heading: "How It Works",
                 breadcrumbs: [
                     { text: "Home", link: "/home" },
                     { text: "How It Works", link: "/how-it-works" }
@@ -45,7 +45,6 @@ export default (function () {
         Report: {
             header: {
                 heading: [{ text: "One idea, branched into multiple avatars" }],
-                description: "Every human being is at a different stage of ‘health’. Our Smart Reports come in various forms, for the best impact on your diagnostics business.",
             },
             imagePanel: {
                 digital: {
