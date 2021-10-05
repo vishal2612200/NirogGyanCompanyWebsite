@@ -65,7 +65,7 @@ export default function HelpedOrganisations({ state: helpedOrganisations }) {
                 to={absoluteurl}
                 rel="noreferrer"
                 target="_blank">
-                <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3} style={textAlign="center"}>
+                <Box fontWeight="fontWeightBold" m={1} ml={3} mr={3} style={{ textAlign: "center" }}>
 
                     {isSmallScreen ? text.mobile : text.desktop}
                 </Box>

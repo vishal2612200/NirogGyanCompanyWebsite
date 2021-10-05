@@ -16,6 +16,12 @@ const useStyles = makeStyles((theme) => ({
 
         }
     },
+    contentLeft: {
+        padding: "3rem",
+        [theme.breakpoints.down('sm')]: {
+            padding: "1rem"
+        }
+    },
     cardContainer: {
         alignItems: "center",
         textAlign: "center",

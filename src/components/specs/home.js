@@ -202,7 +202,7 @@ export default (function () {
         },
         footer: {
           textThin: "Stop asking your medical questions on Whatsapp to people who can't answer everything. Instead, know your biomarkers better whenever you get tested.",
-          textBold: "Individual commitment or group effort — we do whatever it takes to make a team, a company, a society or a civilisation work."
+          textBold: ""
         },
         cardsList: [
           {
@@ -218,7 +218,7 @@ export default (function () {
           {
             image: { imagePath: reportLipid, altText: "electrolyte" },
             name: "Lipid",
-            imageIdentity: "covid"
+            imageIdentity: "lipid"
           },
           {
             image: { imagePath: reportDiabetes, altText: "diabetes" },
@@ -229,7 +229,7 @@ export default (function () {
       },
       contentRight: {
         vitamin: { imagePath: reportPdfVitamin, altText: "vitamin" },
-        covid: { imagePath: reportPdfCovid, altText: "covid" },
+        lipid: { imagePath: reportPdfCovid, altText: "lipid" },
         kidney: { imagePath: reportPdfKidney, altText: "kidney" },
         liver: { imagePath: reportPdfLiver, altText: "liver" },
 

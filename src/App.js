@@ -12,7 +12,7 @@ import {
 import Home from './components/home';
 import About from './components/about';
 import HowItWorks from './components/howitworks';
-import Blog from './components/blog';
+import Blogs from './components/blogs';
 import FAQS from './components/faqs';
 import TermsOfServices from "./components/termsOfServices"
 import PrivacyPolicy from "./components/privacyPolicy"
@@ -173,8 +173,8 @@ function App() {
                 </HowItWorks>
               </Route>
               <Route path="/blog">
-                <Blog state={state.blog} >
-                </Blog>
+                <Blogs state={state.blogs} >
+                </Blogs>
               </Route>
               <Route path="/faqs">
                 <FAQS state={state.faqs} />

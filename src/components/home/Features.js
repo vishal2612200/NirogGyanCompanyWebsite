@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     padding: "3rem",
     [theme.breakpoints.down('sm')]: {
-      padding: "0rem"
+      padding: "1rem"
     }
 
   },

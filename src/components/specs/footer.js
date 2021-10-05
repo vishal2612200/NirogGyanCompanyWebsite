@@ -17,7 +17,7 @@ export default (
                     items: [
                         { text: "About Us", link: "/about" },
                         { text: "How It works", link: "/how-it-works" },
-                        { text: "Blog", link: "/blog" }
+                        { text: "Blogs", link: "/blogs" }
                     ]
                 },
                 block3: {

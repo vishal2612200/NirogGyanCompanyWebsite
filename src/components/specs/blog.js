@@ -1,18 +1,18 @@
 import * as path from "path";
 
-import heroImage from "../blog/static/imgs/hero-image.svg"
+import heroImage from "../blogs/static/imgs/hero-image.svg"
 
 
-import blog1 from "../blog/static/imgs/blog-1.png"
-import blog2 from "../blog/static/imgs/blog-2.png"
+import blog1 from "../blogs/static/imgs/blog-1.png"
+import blog2 from "../blogs/static/imgs/blog-2.png"
 
-import sideblog1 from "../blog/static/imgs/side-blog-1.jpeg"
-import sideblog2 from "../blog/static/imgs/side-blog-2.png"
-import sideblog3 from "../blog/static/imgs/side-blog-3.gif"
-import sideblog4 from "../blog/static/imgs/side-blog-4.jpeg"
-import sideblog5 from "../blog/static/imgs/side-blog-5.png"
-import sideblog6 from "../blog/static/imgs/side-blog-6.jpeg"
-import sideblog7 from "../blog/static/imgs/side-blog-7.gif"
+import sideblog1 from "../blogs/static/imgs/side-blog-1.jpeg"
+import sideblog2 from "../blogs/static/imgs/side-blog-2.png"
+import sideblog3 from "../blogs/static/imgs/side-blog-3.gif"
+import sideblog4 from "../blogs/static/imgs/side-blog-4.jpeg"
+import sideblog5 from "../blogs/static/imgs/side-blog-5.png"
+import sideblog6 from "../blogs/static/imgs/side-blog-6.jpeg"
+import sideblog7 from "../blogs/static/imgs/side-blog-7.gif"
 
 
 
@@ -21,8 +21,8 @@ export default (function () {
         HeroSection: {
             contentLeft: {
 
-                heading: "Blog",
-                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "Blog", link: "/blog" }],
+                heading: "Blogs",
+                breadcrumbs: [{ text: "Home", link: "/home" }, { text: "Blogs", link: "/blogs" }],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
 
 

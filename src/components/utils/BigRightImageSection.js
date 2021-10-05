@@ -35,9 +35,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BigRightImageSection({ contentLeft, image, ...props }) {
     const classes = useStyles();
+    
     return (
         <Grid container className={classes.root} {...props} >
-            {contentLeft}
+         {contentLeft}
             <ImageBox image={image} />
         </Grid>
     );

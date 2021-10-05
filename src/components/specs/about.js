@@ -174,7 +174,7 @@ export default (function () {
             {
                 image: { imagePath: expertTeamYash, altText: "expertTeamYash" },
                 heading: "Yash Marmat",
-                content: "Web Developer",
+                content: "Software Engineer",
                 linkedin: "www.linkedin.com/in/yash-marmat/"
             }],
         },
