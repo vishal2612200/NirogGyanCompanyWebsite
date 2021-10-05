@@ -24,14 +24,14 @@ import expertTeamNithish from "../about/static/imgs/expertteam-nitish.png"
 import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.png"
 
 import productConsultantTeji from "../about/static/imgs/product-consultant-teji.jpeg"
-import productConsultantArindam from "../about/static/imgs/product-consultant-arindam.jpeg"
+import productConsultantArindam from "../about/static/imgs/product-consultant-arindam.png"
 import productConsultantRuchira from "../about/static/imgs/product-consultant-ruchira.jpeg"
 import productConsultantPIEDS from "../about/static/imgs/product-consultant-PIEDS.png"
 import productConsultantGaurav from "../about/static/imgs/product-consultant-gaurav.jpeg"
-import productConsultantAyush from "../about/static/imgs/product-consultant-ayush.png"
-import productConsultantRakesh from "../about/static/imgs/product-consultant-rakesh.jpeg"
-import productConsultantVish from "../about/static/imgs/product-consultant-vish.jpeg"
+import productConsultantRakesh from "../about/static/imgs/product-consultant-rakesh.png"
+import productConsultantVish from "../about/static/imgs/product-consultant-vish.png"
 import productConsultantSanjeev from "../about/static/imgs/product-consultant-sanjeev.jpeg"
+import productConsultantSumit from "../about/static/imgs/product-consultant-sumit.jpeg"
 
 import helpedOrganisationsBackground from "../about/static/imgs/helped-organisations-background.png"
 
@@ -206,25 +206,25 @@ export default (function () {
                     linkedin: "www.linkedin.com/company/pilani-innovation-entrepreneurship-development-society-pieds-bits-pilani/"
                 },
                 {
-                    image: { imagePath: productConsultantGaurav, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantGaurav, altText: "productConsultantGaurav" },
                     heading: "Mr. Gaurav Rautela",
                     content: "Senior Tech Lead at Gojek",
                     linkedin: "www.linkedin.com/in/gaurav-rautela-5b0223b9/"
                 },
                 {
-                    image: { imagePath: productConsultantAyush, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantSumit, altText: "productConsultantSumit" },
                     heading: "Mr. Sumit Bagaria",
                     content: "CEO, Hemogenomics & IIM-C alum",
                     linkedin: "www.linkedin.com/in/sumit-bagaria-8170a81/"
                 },
                 {
-                    image: { imagePath: productConsultantRakesh, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantRakesh, altText: "productConsultantRakesh" },
                     heading: "Mr. Rakesh Luthra",
                     content: "Director at Novo Nordisk",
                     linkedin: "www.linkedin.com/in/rakeshluthra1984/"
                 },
                 {
-                    image: { imagePath: productConsultantVish, altText: "productConsultantAyush" },
+                    image: { imagePath: productConsultantVish, altText: "productConsultantVish" },
                     heading: "Mr. Vish Sathappan",
                     content: "Director at Times of India Group",
                     linkedin: "www.linkedin.com/in/vish-sathappan-8b170b13/"
