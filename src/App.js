@@ -172,7 +172,7 @@ function App() {
                 <HowItWorks state={state.howitworks} >
                 </HowItWorks>
               </Route>
-              <Route path="/blog">
+              <Route path="/blogs">
                 <Blogs state={state.blogs} >
                 </Blogs>
               </Route>
