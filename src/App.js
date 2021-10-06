@@ -111,7 +111,7 @@ function App() {
   const [loading, setLoading] = useState("true");
   const classes = useStyles();
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000)
+    setTimeout(() => setLoading(false), 1000)
   }, []);
 
   return (
