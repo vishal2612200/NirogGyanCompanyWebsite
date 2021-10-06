@@ -9,7 +9,6 @@ import BigRightImageSection from "../utils/BigRightImageSection";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-
     },
     header: {
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',

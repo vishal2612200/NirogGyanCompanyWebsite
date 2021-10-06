@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "300px",
+        width: "97%",
         marginBottom: "0.5rem",
     },
     cardsList: {

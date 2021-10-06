@@ -9,7 +9,7 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        padding: "2rem 0",
+        // padding: "2rem 0",
         fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
         textAlign: "left",
 

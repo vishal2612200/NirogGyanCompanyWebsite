@@ -135,7 +135,7 @@ function App() {
                <Media loading /> 
             </Box> */}
           <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
-            <img loading="lazy" width="60%" height="80%" src={review} alt="review" />
+            <img loading="lazy" width="35%" height="80%" src={review} alt="review" />
           </Grid>
 
           <CardContent>
