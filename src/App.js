@@ -56,7 +56,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#001d30",
     animation: `$changeBg 5s linear infinite`,
   },
-
+  loadergif:{
+    width: "45%",
+    [theme.breakpoints.up('sm')]: {
+      width: "90%",
+    }
+  },
   loader: {
     // position: "absolute",
     width: "150px",
@@ -135,7 +140,7 @@ function App() {
                <Media loading /> 
             </Box> */}
           <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
-            <img loading="lazy" width="35%" height="80%" src={review} alt="review" />
+            <img loading="lazy" className={classes.loadergif} height="80%" src={review} alt="review" />
           </Grid>
 
           <CardContent>
