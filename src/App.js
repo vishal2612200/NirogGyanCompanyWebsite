@@ -57,9 +57,9 @@ const useStyles = makeStyles((theme) => ({
     animation: `$changeBg 5s linear infinite`,
   },
   loadergif:{
-    width: "45%",
+    width: "40%",
     [theme.breakpoints.up('sm')]: {
-      width: "90%",
+      width: "80%",
     }
   },
   loader: {
