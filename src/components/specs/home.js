@@ -198,10 +198,10 @@ export default (function () {
       contentLeft: {
         header: {
           heading: "Believe what you see.",
-          description: "Gamified health-check dashboard for companies to live healthier",
+          description: "Like your favourite musician, we keep taking our offerings to newer heights",
         },
         footer: {
-          textThin: "Stop asking your medical questions on Whatsapp to people who can't answer everything. Instead, know your biomarkers better whenever you get tested.",
+          textThin: "Stop asking medical questions on Whatsapp to those who can't answer everything. Instead, know your biomarkers better after every test.",
           textBold: ""
         },
         cardsList: [
@@ -217,7 +217,7 @@ export default (function () {
           },
           {
             image: { imagePath: reportLipid, altText: "electrolyte" },
-            name: "Lipid",
+            name: "Lipids",
             imageIdentity: "lipid"
           },
           {
@@ -270,7 +270,7 @@ export default (function () {
           name: "Dr. Arjun Dang",
           organisation: "Dr Dangs Lab"
         }, {
-          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide SmartReports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.",
+          message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide Smart Reports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.",
           image: { imagePath: clientMessage2, altText: "clientMessage2" },
           name: "Dr.Soumik Kalita",
           organisation: "Founder, FamPhy"

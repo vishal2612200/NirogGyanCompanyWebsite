@@ -28,11 +28,11 @@ export default (function () {
             cardsList: [
                 {
                     heading: "What does NirogGyan offer?",
-                    content: "For the 21st century patients, NirogGyan offers diagnostic test reports which are 'Smart Reports' - all terms explained in simple language, interesting content, and world-class design. While a normal test report is just an A4 sheet with terms & measurements on it, our SmartReport is comprehensive but concise at the same time. Labs, doctors and patients in the post-pandemic world are all evolving with these informative reports.",
+                    content: "For the 21st century patients, NirogGyan offers diagnostic test reports which are 'Smart Reports' - all terms explained in simple language, interesting content, and world-class design. While a normal test report is just an A4 sheet with terms & measurements on it, our Smart Report is comprehensive but concise at the same time. Labs, doctors and patients in the post-pandemic world are all evolving with these informative reports.",
                 },
                 {
                     heading: "What are the types of Smart Reports available?",
-                    content: "NirogGyan covers 150+ tests in its Smart format, which include LFT, KFT, CBC, COVID-19 and almost every other test covered by pathology labs.\nWe offer Smart Reports in 3 views:\n1) Advanced : Every test described in detail, with multiple actionable items\n2) Compact : Crisp information, smaller visualisation\n3) Dynamic : Focus on abnormal tests\n\n\nThe above three can be clubbed with these add-ons:\n1) Summary : Two-page report summary\n2) Hindi / Arabic : Entire SmartReport in the language of your choice\n3) Corporate Dashboard : Company-level health report",
+                    content: "NirogGyan covers 150+ tests in its Smart format, which include LFT, KFT, CBC, COVID-19 and almost every other test covered by pathology labs.\nWe offer Smart Reports in 3 views:\n1) Advanced : Every test described in detail, with multiple actionable items\n2) Compact : Crisp information, smaller visualisation\n3) Dynamic : Focus on abnormal tests\n\n\nThe above three can be clubbed with these add-ons:\n1) Summary : Two-page report summary\n2) Hindi / Arabic : Entire Smart Report in the language of your choice\n3) Corporate Dashboard : Company-level health report",
                 },
                 {
                     heading: "What do doctors say about Smart Reports?",
@@ -51,7 +51,7 @@ export default (function () {
                     content: "  The integration process takes less than 2 days. Do contact the customer care for more details.",
                 },
                 {
-                    heading: "How much time does the software take to process the test results and generate a SmartReport?",
+                    heading: "How much time does the software take to process the test results and generate a Smart Report?",
                     content: "  Less than 15 seconds!",
                 },
                 {
@@ -60,7 +60,7 @@ export default (function () {
                 },
                 {
                     heading: "How can I rely on the content in Smart Reports?",
-                    content: "NirogGyan’s policy regarding providing health-related content:‘be descriptive, not prescriptive’.  Our team of dedicated doctors and pharmacy graduates curate all the information through a ‘triple check’ process, before our software visualises and generates it on your SmartReport.",
+                    content: "NirogGyan’s policy regarding providing health-related content:‘be descriptive, not prescriptive’.  Our team of dedicated doctors and pharmacy graduates curate all the information through a ‘triple check’ process, before our software visualises and generates it on your Smart Report.",
                 },
                 {
                     heading: "Who is behind NirogGyan?",
@@ -74,8 +74,7 @@ export default (function () {
         },
         Form: {
             header: {
-                heading: [{ text: "Reach Out with any query" }],
-
+                heading: [{ text: "Reach out with your queries" }],
             }
         }
     };

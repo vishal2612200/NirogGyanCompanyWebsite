@@ -66,7 +66,7 @@ export default (function () {
         Main: {
             header: {
                 heading: [{ text: "How It Works" }],
-                description: "How does different things are interlinked with each other to form streamline."
+                description: "The technical magic behind the scenes : 100% automated and error-free."
             },
             cardsList: [
                 {
@@ -79,7 +79,7 @@ export default (function () {
                 {
                     image: { imagePath: mainSoftware, altText: "mainSoftware" },
                     heading: "Software",
-                    description: "NirogGyan’s software creates the perfect SmartReport - each test is atomised as ‘card’ & each panel is linked witth the ‘knowledge bank’",
+                    description: "NirogGyan’s software creates the perfect Smart Report - each test is atomised as ‘card’ & each panel is linked witth the ‘knowledge bank’",
                 },
                 {
                     image: { imagePath: mainReport, altText: "mainReport" },

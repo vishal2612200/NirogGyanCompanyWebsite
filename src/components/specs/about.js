@@ -14,15 +14,15 @@ import marketBackground from "../about/static/imgs/market-background.svg"
 import believeBackground from "../about/static/imgs/believe-background.svg"
 
 
-import expertTeamShweta from "../about/static/imgs/expertteam-shweta.png"
+import expertTeamShweta from "../about/static/imgs/expertteam-shweta.jpg"
 import expertTeamJoy from "../about/static/imgs/expertteam-joy.jpg"
 import expertTeamKartik from "../about/static/imgs/expertteam-kartik.png"
 import expertTeamVishal from "../about/static/imgs/expertteam-vishal.png"
 import expertTeamAbhishek from "../about/static/imgs/expertteam-abhishek.png"
 import expertTeamYash from "../about/static/imgs/expertteam-yash.png"
 import expertTeamNithish from "../about/static/imgs/expertteam-nitish.png"
-import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.png"
-import expertTeamJayanti from "../about/static/imgs/expertteam-jayanti.png"
+import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.jpg"
+import expertTeamJayanti from "../about/static/imgs/expertteam-jayanti.jpg"
 
 import productConsultantTeji from "../about/static/imgs/product-consultant-teji.png"
 import productConsultantArindam from "../about/static/imgs/product-consultant-arindam.png"

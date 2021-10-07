@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
     textAlign: "left",
     fontWeight: "700",
-    color: "#3668d6",
+    // color: "#3668d6",
     [theme.breakpoints.down('sm')]: {
       textAlign: "center",
     }

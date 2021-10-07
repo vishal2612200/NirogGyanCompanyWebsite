@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   loadergif:{
     width: "40%",
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       width: "80%",
     }
   },

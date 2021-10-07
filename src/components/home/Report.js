@@ -41,6 +41,15 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#fff",
 
         "&:hover": { backgroundColor: "#E9F5FF" },
+    },
+    heading:{
+        fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+        fontSize: "2.25rem",
+        fontWeight: "700"
+    },
+    description:{
+        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+        fontSize: "1rem"
     }
 }
 ));
@@ -89,17 +98,19 @@ const ContentLeft = ({ content }) => {
 }
 
 const Header = ({ content }) => {
+    const classes = useStyles();
+
     return <Grid item style={{ paddingBottom: "1rem" }}>
         <Typography
             variant="h3"
-            style={{ fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif' }}
+            className={classes.heading}
         >
             {content.heading}
         </Typography>
         <Typography
             variant="h6"
             color="textSecondary"
-            style={{ fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif' }}
+            className = {classes.description}
         >
             {content.description}
         </Typography>
