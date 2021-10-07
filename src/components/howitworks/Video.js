@@ -41,6 +41,7 @@ export default function Video({ state: video }) {
             
             className={classes.video}
             width="100%"
+            rel="preload"
             
             src={video.videoPanel.videoLink}
             title={video.videoPanel.title}

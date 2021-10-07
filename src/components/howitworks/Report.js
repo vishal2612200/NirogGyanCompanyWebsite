@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import HeadingWithText from "../utils/HeadingWithText";
-import { useMediaQuery, useTheme } from "@material-ui/core"
+// import { useTheme } from "@material-ui/core"
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#E5E5E5"
@@ -71,8 +71,8 @@ const ImagePanel = ({ content }) => {
 
 const ImageContainer = ({ content, activeReport }) => {
   const classes = useStyles()
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  // const theme = useTheme();
+  // const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const images = content[activeReport].images;
 
   return <Grid container item className={classes.imagesContainer} justifyContent="center" alignItems="center">

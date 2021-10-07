@@ -1,10 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import { Typography, IconButton, Card, CardActionArea, CardActions, CardContent, Box } from "@material-ui/core";
+import { Typography, IconButton, Card, CardActionArea, CardContent, Box } from "@material-ui/core";
 import CarousalWithArrowsOnDesktop from "./CarousalWithArrowsOnDesktop"
 import { useNumberOfSlides } from "../customHooks"
 import LinkedinIcon from '@material-ui/icons/LinkedIn';

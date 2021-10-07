@@ -116,7 +116,7 @@ function App() {
   const [loading, setLoading] = useState("true");
   const classes = useStyles();
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000)
+    setTimeout(() => setLoading(false), 500)
   }, []);
 
   return (
@@ -139,7 +139,7 @@ function App() {
           {/* <Box overflow="hidden">
                <Media loading /> 
             </Box> */}
-          <Grid container spacing={0} direction="column" alignItems="center" justify="center" className={classes.media}>
+          <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" className={classes.media}>
             <img className={classes.loadergif} height="80%" src={review} alt="review" />
           </Grid>
 

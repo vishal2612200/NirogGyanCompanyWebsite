@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import HeadingWithText from "../utils/HeadingWithText";
-import Grow from "@material-ui/core/Grow"
-import { useInView } from "react-intersection-observer"
+// import Grow from "@material-ui/core/Grow"
+// import { useInView } from "react-intersection-observer"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -65,13 +65,13 @@ const CardsList = ({ cardsList }) => {
 const Card = ({ image: { imagePath, altText = "logo-default" }, heading, content }) => {
 
   const classes = useStyles();
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-  })
+  // const [ref, inView] = useInView({
+  //   threshold: 0.2,
+  // })
 
   return (
-    <Grid container item direction="column" className={classes.serviceCard} alignItems="baseline" xs={12} sm={6} md={4} lg={3} ref={ref}>
-      <Grow in={inView} {...(inView ? { timeout: 3000 } : {})} >
+    <Grid container item direction="column" className={classes.serviceCard} alignItems="baseline" xs={12} sm={6} md={4} lg={3} >
+      {/* <Grow in={inView} {...(inView ? { timeout: 1000 } : {})} > */}
         <Grid item >
           <Grid item className={`${classes.serviceCard}__logo-box`} style={{ marginBottom: "1rem" }}>
             <img loading="lazy" src={imagePath} alt={altText} width="60px" height="60px" />
@@ -81,7 +81,7 @@ const Card = ({ image: { imagePath, altText = "logo-default" }, heading, content
             <Typography variant="body1" color="textSecondary">{content}</Typography>
           </Grid>
         </Grid>
-      </Grow>
+      {/* </Grow> */}
     </Grid>
 
 

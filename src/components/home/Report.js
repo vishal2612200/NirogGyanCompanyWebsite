@@ -8,18 +8,15 @@ import { useTheme, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     contentLeft: {
-
         fontFamily: '"Nunito Sans", "Helvetica", "Arial", sans-serif',
+        padding: "3rem",
         paddingTop: "2rem",
+        [theme.breakpoints.down('sm')]: {
+            padding: "1rem"
+        },
         "&>*": {
             marginBottom: "2rem"
 
-        }
-    },
-    contentLeft: {
-        padding: "3rem",
-        [theme.breakpoints.down('sm')]: {
-            padding: "1rem"
         }
     },
     cardContainer: {

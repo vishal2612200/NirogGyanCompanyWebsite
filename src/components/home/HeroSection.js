@@ -2,12 +2,11 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import {
   Grid,
-  Button,
-  IconButton,
+  // IconButton,
   Link, makeStyles, Fab
 
 } from "@material-ui/core";
-import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+// import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
@@ -192,21 +191,21 @@ const ButtonServices = ({ button: { text, link } }) => {
 }
 
 
-const ButtonWatchVideo = ({ text }) => {
-  const classes = useStyles();
-  return <Grid container item className={classes.buttonWatchVideoContainer}>
-    <Grid item>
+// const ButtonWatchVideo = ({ text }) => {
+//   const classes = useStyles();
+//   return <Grid container item className={classes.buttonWatchVideoContainer}>
+//     <Grid item>
 
-      <IconButton className={classes.watchVideoButton} style={{ display: "inline-block", textAlign: "center" }}>
-        <PlayCircleFilledIcon className={classes.videoButtonIcon} />
-        <Typography variant="subtitle2" >
-          {text}
-        </Typography>
-      </IconButton>
-    </Grid>
+//       <IconButton className={classes.watchVideoButton} style={{ display: "inline-block", textAlign: "center" }}>
+//         <PlayCircleFilledIcon className={classes.videoButtonIcon} />
+//         <Typography variant="subtitle2" >
+//           {text}
+//         </Typography>
+//       </IconButton>
+//     </Grid>
 
-  </Grid>
-}
+//   </Grid>
+// }
 
 
 const ContentRight = ({ content, ...props }) => {
