@@ -1,24 +1,45 @@
-import React from 'react';
-import PrivacyPolicy from "./PrivacyPolicy"
-import InformationCollectionAndUse from "./InformationCollectionAndUse"
-import LogData from "./LogData"
-import Communications from "./Communications"
-import Cookies from "./Cookies"
-import Security from "./Security"
-import ChangesToThisPrivacyPolicy from "./ChangesToThisPrivacyPolicy"
-import ContactUs from "./ContactUs"
+import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Header from "../utils/Header";
+import "@fontsource/nunito-sans";
+import "@fontsource/open-sans";
+
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: "2rem 0rem",
+
+        "&>div": {
+            marginBottom: "2rem"
+        },
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "center",
+            justifyContent: "center",
+        }
+    },
+}));
+
 
 export default function Index({ state }) {
-    console.log(state)
     return (
         <React.Fragment>
-            <PrivacyPolicy state={state.PrivacyPolicy} />
-            <InformationCollectionAndUse state={state.InformationCollectionAndUse} />
-            <LogData state={state.LogData} />
-            <Communications state={state.Communications} />
-            <Cookies state={state.Cookies} />
-            <Security state={state.Security} />
-            <ChangesToThisPrivacyPolicy state={state.ChangesToThisPrivacyPolicy} />
-            <ContactUs state={state.ContactUs} />
+            <HeaderWrapper state={state.PrivacyPolicy} />
+            <HeaderWrapper state={state.InformationCollectionAndUse} />
+            <HeaderWrapper state={state.LogData} />
+            <HeaderWrapper state={state.Communications} />
+            <HeaderWrapper state={state.Cookies} />
+            <HeaderWrapper state={state.Security} />
+            <HeaderWrapper state={state.ChangesToThisPrivacyPolicy} />
+            <HeaderWrapper state={state.ContactUs} />
         </React.Fragment>)
+}
+
+
+const HeaderWrapper =  function ({ state }) {
+    const classes = useStyles();
+    return <Grid container className={classes.root} justifyContent="center" alignItems="center">
+        <Header content={state.header} xs={10} />
+    </Grid>
+
 }

@@ -3,7 +3,8 @@ import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import Carousel, { slidesToShowPlugin, Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import { useMediaQuery, useTheme } from "@material-ui/core"
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
 

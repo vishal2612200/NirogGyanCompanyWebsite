@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
@@ -12,7 +12,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 // import CardMedia from '@material-ui/core/CardMedia';
 import Box from '@material-ui/core/Box';
-import { useMediaQuery, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 import { Link } from 'react-router-dom';
 

@@ -21,7 +21,7 @@ import specsNavbar from "./components/specs/navbar"
 // import specsGetInTouch from "./components/specs/getintouch"
 import specsSubscribe from "./components/specs/subscribe"
 
-import makeStyles from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from "@material-ui/core/Card";
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
@@ -119,7 +119,7 @@ function App() {
   const [loading, setLoading] = useState("true");
   const classes = useStyles();
   useEffect(() => {
-    setTimeout(() => setLoading(false), 500)
+    setTimeout(() => setLoading(false), 300)
   }, []);
 
   return (

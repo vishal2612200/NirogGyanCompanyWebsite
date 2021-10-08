@@ -3,7 +3,7 @@ import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import makeStyles from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles((theme) => ({

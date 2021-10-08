@@ -1,8 +1,8 @@
 
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core/Grid";
-import { TextField } from "@material-ui/core/TextField";
+import Grid from "@material-ui/core/Grid";
+import TextField from "@material-ui/core/TextField";
 import Paper from '@material-ui/core/Paper';
 import Fab from '@material-ui/core/Fab';
 import HeadingWithText from "../utils/HeadingWithText";

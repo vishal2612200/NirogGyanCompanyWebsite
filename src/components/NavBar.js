@@ -7,7 +7,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import MenuIcon from "@material-ui/icons/Menu";
-import { useMediaQuery } from "@material-ui/core/UseMediaQuery";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useSpring, animated } from 'react-spring'
 import { PageContext } from "../App";
 
