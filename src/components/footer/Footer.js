@@ -3,11 +3,9 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import {
-    Box,
-    Grid,
-    Link
-} from "@material-ui/core";
+import { Link } from "@material-ui/core/Link";
+import { Box } from "@material-ui/core/Box";
+import { Grid } from "@material-ui/core/Grid";
 
 
 const useStyles = makeStyles((theme) => ({

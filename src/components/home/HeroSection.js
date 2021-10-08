@@ -1,11 +1,9 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import {
-  Grid,
-  // IconButton,
-  Link, makeStyles, Fab
-
-} from "@material-ui/core";
+import { Grid } from "@material-ui/core/Grid";
+import { Link } from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+import { Fab } from "@material-ui/core";
 // import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";

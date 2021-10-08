@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/open-sans";
 
@@ -8,9 +8,9 @@ import "@fontsource/open-sans";
 const useStyles = makeStyles((theme) => ({
     root: {
         background: "#3567D6",
-        "&> *": {
-            // padding: "0.5rem"
-        },
+        // "&> *": {
+        //     // padding: "0.5rem"
+        // },
     },
     block2: {
         flexGrow: 1,

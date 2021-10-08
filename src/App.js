@@ -1,6 +1,5 @@
-import React, { createContext } from 'react';
 import NavBar from './components/NavBar';
-import { useReducer, useState, useEffect } from 'react';
+import React, { useReducer, useState, useEffect, createContext } from 'react';
 import specs from "./components/specs/state"
 
 import {
@@ -23,8 +22,12 @@ import specsNavbar from "./components/specs/navbar"
 import specsSubscribe from "./components/specs/subscribe"
 
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardHeader, CardContent, Grid, Box } from '@material-ui/core';
-import { Skeleton } from "@material-ui/lab"
+import { Card } from "@material-ui/core/Card";
+import { CardHeader } from '@material-ui/core/CardHeader';
+import { CardContent } from '@material-ui/core/CardContent';
+import { Grid } from "@material-ui/core/Grid";
+import { Box } from "@material-ui/core/Box";
+import { Skeleton } from "@material-ui/lab/Skeleton";
 
 import Footer from './components/footer/Footer';
 // import GetInTouch from "./components/getintouch/GetInTouch"

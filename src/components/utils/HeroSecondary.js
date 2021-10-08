@@ -1,10 +1,8 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import {
-    Grid,
-    Breadcrumbs,
-    Link
-} from "@material-ui/core";
+import { Grid } from "@material-ui/core/Grid";
+import { Breadcrumbs } from "@material-ui/core/Breadcrumbs";
+import { Link } from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";

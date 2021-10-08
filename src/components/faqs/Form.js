@@ -1,10 +1,11 @@
 
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, TextField } from "@material-ui/core";
+import { Grid } from "@material-ui/core/Grid";
+import { TextField } from "@material-ui/core/TextField";
 import Paper from '@material-ui/core/Paper';
 import Fab from '@material-ui/core/Fab';
-import HeadingWithText from "../utils/HeadingWithText"
+import HeadingWithText from "../utils/HeadingWithText";
 
 
 const useStyles = makeStyles((theme) => ({

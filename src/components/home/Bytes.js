@@ -1,8 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core/Grid";
 import HeadingWithText from "../utils/HeadingWithText";
-import { useMediaQuery, useTheme } from "@material-ui/core"
+import { useMediaQuery, useTheme } from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/useTheme";
 import CarousalWithArrowsOnDesktop from "../utils/CarousalWithArrowsOnDesktop"
 
 const useStyles = makeStyles((theme) => ({
