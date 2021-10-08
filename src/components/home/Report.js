@@ -5,8 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import BigRightImageSection from "../utils/BigRightImageSection";
-import { useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 
 const useStyles = makeStyles((theme) => ({
     contentLeft: {
@@ -129,13 +128,11 @@ const CardsList = ({ content }) => {
 const Card = ({ image: { imagePath, altText = "logo-default" }, name, imageIdentity }) => {
     const classes = useStyles();
     const { setReportName } = useContext(ReportContext);
-    const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
 
         <Grid container item sm={6} className={classes.cardContainer} >
-            <Grid container item className={classes.card} direction="column" justifyContent="center" onMouseOver={() => !isSmallScreen ? setReportName(imageIdentity) : ""}>
+            <Grid container item className={classes.card} direction="column" justifyContent="center" onMouseOver={() => setReportName(imageIdentity)}>
                 <Grid item>
                     <img loading="lazy" src={imagePath} alt={altText} width="auto" height="50px" />
                 </Grid>

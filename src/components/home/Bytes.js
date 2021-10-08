@@ -101,7 +101,7 @@ const Card = ({ link, title = "YouTube video player", videoId, altText="video" }
         src={link}
         title={title}
         frameBorder="2"
-        srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:53px/1.5 sans-serif;color:white;border:12px red;text-shadow:0 0 0.8em black}</style><a href=https://www.youtube.com/embed/${videoId}?autoplay=1><img src=https://img.youtube.com/vi/${videoId}/hqdefault.jpg alt='${altText}'><span>▶</span></a>`}
+        srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:53px/1.5 sans-serif;color:white;border:12px red;text-shadow:0 0 0.8em black}</style><a href=https://www.youtube.com/embed/${videoId}?autoplay=1><img src=https://img.youtube.com/vi/${videoId}/hqdefault.jpg alt='${altText}'><span>▶</span></a>`}
       ></iframe>
     </Grid>
 
