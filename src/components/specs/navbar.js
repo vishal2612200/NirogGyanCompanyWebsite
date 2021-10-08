@@ -11,7 +11,7 @@ export default (
                     { text: "Blogs", id: "blogs" },
                     { text: "FAQs", id: "faqs" }
                 ],
-                logoImg: path.join(process.env.PUBLIC_URL, "/logo-icon.png"),
+                logoImg: path.join(process.env.PUBLIC_URL, "/logo-icon.svg"),
             }
         }
     }
