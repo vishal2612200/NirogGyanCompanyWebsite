@@ -29,7 +29,7 @@ export default function FrequentQuestions({ state: frequentquestions }) {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" className={classes.root} alignItems="space-evenly">
+    <Grid container item direction="column" className={classes.root} alignItems="center">
       <HeadingWithText content={frequentquestions.header} />
       <Container maxWidth="md">{
         frequentquestions.cardsList.map(

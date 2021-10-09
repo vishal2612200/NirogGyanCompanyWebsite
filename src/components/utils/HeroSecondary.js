@@ -74,7 +74,7 @@ const ContentLeft = ({ content }) => {
 
         { backgroundImage: `url(${content.backgroundImage})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "bottom" }}>
 
-        <Grid container md={8} direction="column">
+        <Grid container item md={8} direction="column">
             <Grid item>
                 <Typography
                     variant="h2"
@@ -112,6 +112,6 @@ const ContentRight = ({ content }) => {
     const classes = useStyles();
     const { imagePath, altText = "logo-default" } = content.image;
     return <Grid item md={6} className={classes.contentRight} >
-        <img loading="lazy" rel="preload" src={imagePath} alt={altText} />
+        <img loading="eager" src={imagePath} alt={altText} />
     </Grid>
 }

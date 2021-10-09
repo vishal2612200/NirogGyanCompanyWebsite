@@ -75,7 +75,8 @@ const Block = ({ content, ...props }) => {
             <Box fontWeight="fontWeightMedium" m={2}>
                 <Link color="inherit" href={link} key={index}>
                     <Typography
-                        variant="h6"
+                        component={'span'} 
+                        variant={'body2'}
                         style={{ fontSize: "1rem" }}
                         className={classes.title}>
                         {text}

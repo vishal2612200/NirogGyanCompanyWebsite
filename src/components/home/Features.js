@@ -114,9 +114,10 @@ const ContentLeft = ({ content }) => {
       <Header content={content.header} />
     </Grid>
     <Grid item>
+      <CardsList content={content.cardsList} />
       {/* <Grow in={inView} {...(inView ? { timeout: 1000 } : {})} >
         <div> */}
-          <CardsList content={content.cardsList} />
+          {/*  */}
         {/* </div>
       </Grow> */}
     </Grid>
@@ -138,7 +139,7 @@ const Header = ({ content }) => {
           )}
       </Typography>
       {content?.description && <Typography
-        variant="body1"
+        
         color="textSecondary"
         style={{
           fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
