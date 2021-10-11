@@ -1,25 +1,25 @@
 import * as path from "path";
 
-import heroImage from "../howitworks/static/imgs/hero-image.svg"
+const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/hero-image.svg"
 
-import reportDigital from "../howitworks/static/imgs/report-digital.png"
+const reportDigital = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-digital.png"
 
-import reportPdfKidney from "../howitworks/static/imgs/report-pdf-kidney.svg"
-import reportPdfLiver from "../howitworks/static/imgs/report-pdf-liver.svg"
-import reportPdfCovid from "../howitworks/static/imgs/report-pdf-covid.svg"
+const reportPdfKidney = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-pdf-kidney.svg"
+const reportPdfLiver = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-pdf-liver.svg"
+const reportPdfCovid = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-pdf-covid.svg"
 
-import mainApiIntegration from "../howitworks/static/imgs/main-api-integration.svg"
-import mainSoftware from "../howitworks/static/imgs/main-software.svg"
-import mainReport from "../howitworks/static/imgs/main-report.svg"
-import mainCustomer from "../howitworks/static/imgs/main-customer.svg"
+const mainApiIntegration = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-api-integration.svg"
+const mainSoftware = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-software.svg"
+const mainReport = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-report.svg"
+const mainCustomer = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-customer.svg"
 
 
-import arrow1 from "../howitworks/static/imgs/arrow1.svg"
-import arrow2 from "../howitworks/static/imgs/arrow2.svg"
-import arrow3 from "../howitworks/static/imgs/arrow3.svg"
+const arrow1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/arrow1.svg"
+const arrow2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/arrow2.svg"
+const arrow3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/arrow3.svg"
 
-import line1 from "../howitworks/static/imgs/line1.svg"
-import line2 from "../howitworks/static/imgs/line2.svg"
+const line1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/line1.svg"
+const line2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/line2.svg"
 
 
 

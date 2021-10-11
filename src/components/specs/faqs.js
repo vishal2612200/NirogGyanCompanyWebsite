@@ -2,7 +2,7 @@ import * as path from "path";
 
 
 
-import heroImage from "../faqs/static/imgs/hero-image.svg"
+const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/faqs/static/imgs/hero-image.svg"
 
 export default (function () {
     return {

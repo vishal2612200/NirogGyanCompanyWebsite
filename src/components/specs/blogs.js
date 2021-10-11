@@ -1,18 +1,19 @@
 import * as path from "path";
 
-import heroImage from "../blogs/static/imgs/hero-image.svg"
+const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/hero-image.svg"
 
 
-import blog1 from "../blogs/static/imgs/blog-1.png"
-import blog2 from "../blogs/static/imgs/blog-2.png"
+const blog1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/blog-1.png"
+const blog2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/blog-2.png"
 
-import sideblog1 from "../blogs/static/imgs/side-blog-1.jpeg"
-import sideblog2 from "../blogs/static/imgs/side-blog-2.png"
-import sideblog3 from "../blogs/static/imgs/side-blog-3.gif"
-import sideblog4 from "../blogs/static/imgs/side-blog-4.jpeg"
-import sideblog5 from "../blogs/static/imgs/side-blog-5.png"
-import sideblog6 from "../blogs/static/imgs/side-blog-6.jpeg"
-import sideblog7 from "../blogs/static/imgs/side-blog-7.gif"
+const sideblog1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/side-blog-1.jpeg"
+const sideblog2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/side-blog-2.png"
+const sideblog3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/side-blog-3.gif"
+const sideblog4 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/side-blog-4.jpeg"
+const sideblog5 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/side-blog-5.png"
+const sideblog6 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/side-blog-6.jpeg"
+const sideblog7 = "https://niroggyan.s3.ap-south-1.amazonaws.com/blogs/static/imgs/side-blog-7.gif"
+
 
 
 

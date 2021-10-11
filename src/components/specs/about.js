@@ -1,41 +1,41 @@
 
 import * as path from "path";
 
-import heroImage from "../about/static/imgs/hero-image.svg"
+const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/hero-image.svg"
 
-import recognisedBy1 from "../about/static/imgs/recognised-by-1.png"
-import recognisedBy2 from "../about/static/imgs/recognised-by-2.png"
-import recognisedBy3 from "../about/static/imgs/recognised-by-3.png"
-import recognisedBy4 from "../about/static/imgs/recognised-by-4.jpg"
+const recognisedBy1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-1.png"
+const recognisedBy2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-2.png"
+const recognisedBy3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-3.png"
+const recognisedBy4 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-4.jpg"
 
-import marketCardItem1 from "../about/static/imgs/market-card-item-1.png"
-import marketBackground from "../about/static/imgs/market-background.svg"
+const marketCardItem1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/market-card-item-1.png"
+const marketBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/market-background.svg"
 
-import believeBackground from "../about/static/imgs/believe-background.svg"
+const believeBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/believe-background.svg"
 
 
-import expertTeamShweta from "../about/static/imgs/expertteam-shweta.jpg"
-import expertTeamJoy from "../about/static/imgs/expertteam-joy.jpg"
-import expertTeamKartik from "../about/static/imgs/expertteam-kartik.png"
-import expertTeamVishal from "../about/static/imgs/expertteam-vishal.png"
-import expertTeamAbhishek from "../about/static/imgs/expertteam-abhishek.png"
-import expertTeamYash from "../about/static/imgs/expertteam-yash.png"
-import expertTeamNithish from "../about/static/imgs/expertteam-nitish.png"
-import expertTeamRanjeet from "../about/static/imgs/expertteam-ranjeet.jpg"
-import expertTeamJayanti from "../about/static/imgs/expertteam-jayanti.jpg"
+const expertTeamShweta = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-shweta.jpg"
+const expertTeamJoy = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-joy.jpg"
+const expertTeamKartik = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-kartik.png"
+const expertTeamVishal = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-vishal.png"
+const expertTeamAbhishek = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-abhishek.png"
+const expertTeamYash = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-yash.png"
+const expertTeamNithish = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-nitish.png"
+const expertTeamRanjeet = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-ranjeet.jpg"
+const expertTeamJayanti = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-jayanti.jpg"
 
-import productConsultantTeji from "../about/static/imgs/product-consultant-teji.png"
-import productConsultantArindam from "../about/static/imgs/product-consultant-arindam.png"
-import productConsultantRuchira from "../about/static/imgs/product-consultant-ruchira.png"
-import productConsultantGirish from "../about/static/imgs/product-consultant-girish.png"
-import productConsultantPIEDS from "../about/static/imgs/product-consultant-PIEDS.png"
-import productConsultantGaurav from "../about/static/imgs/product-consultant-gaurav.png"
-import productConsultantRakesh from "../about/static/imgs/product-consultant-rakesh.png"
-import productConsultantVish from "../about/static/imgs/product-consultant-vish.png"
-import productConsultantSanjeev from "../about/static/imgs/product-consultant-sanjeev.png"
-import productConsultantSumit from "../about/static/imgs/product-consultant-sumit.png"
+const productConsultantTeji = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-teji.png"
+const productConsultantArindam = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-arindam.png"
+const productConsultantRuchira = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-ruchira.png"
+const productConsultantGirish = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-girish.png"
+const productConsultantPIEDS = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-PIEDS.png"
+const productConsultantGaurav = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-gaurav.png"
+const productConsultantRakesh = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-rakesh.png"
+const productConsultantVish = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-vish.png"
+const productConsultantSanjeev = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-sanjeev.png"
+const productConsultantSumit = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-sumit.png"
 
-import helpedOrganisationsBackground from "../about/static/imgs/helped-organisations-background.png"
+const helpedOrganisationsBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/helped-organisations-background.png"
 
 
 export default (function () {

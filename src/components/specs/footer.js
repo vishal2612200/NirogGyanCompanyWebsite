@@ -1,7 +1,7 @@
-import logoIcon from "../footer/static/imgs/logo-icon.svg"
-import facebook from "../footer/static/imgs/facebook.svg"
-import instagram from "../footer/static/imgs/instagram.svg"
-import linkedin from "../footer/static/imgs/linkedin.svg"
+const logoIcon = "https://niroggyan.s3.ap-south-1.amazonaws.com/footer/static/imgs/logo-icon.svg"
+const facebook = "https://niroggyan.s3.ap-south-1.amazonaws.com/footer/static/imgs/facebook.svg"
+const instagram = "https://niroggyan.s3.ap-south-1.amazonaws.com/footer/static/imgs/instagram.svg"
+const linkedin = "https://niroggyan.s3.ap-south-1.amazonaws.com/footer/static/imgs/linkedin.svg"
 
 
 export default (

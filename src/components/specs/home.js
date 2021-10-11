@@ -1,51 +1,51 @@
-import heroImage from "../home/static/imgs/hero-image.svg"
+const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/hero-image.svg"
 
-import brandAlArab from "../home/static/imgs/logo-1.jpg"
-import brandMax from "../home/static/imgs/logo-2.jpg"
-import brandDang from "../home/static/imgs/logo-3.jpg"
-import brandCrelio from "../home/static/imgs/logo-4.jpg"
-import brandIqvia from "../home/static/imgs/logo-5.jpg"
-import brandItdose from "../home/static/imgs/logo-6.jpg"
-import brandPracto from "../home/static/imgs/logo-7.jpg"
-
-
-import brandWhatsappIcon from "../home/static/imgs/brand-whatsapp-icon.svg"
-
-import featuresItem1 from "../home/static/imgs/features-item-1.png"
-import featuresItem2 from "../home/static/imgs/features-item-2.png"
-import featuresItem3 from "../home/static/imgs/features-item-3.png"
+const brandAlArab = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-1.jpg"
+const brandMax = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-2.jpg"
+const brandDang = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-3.jpg"
+const brandCrelio = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-4.jpg"
+const brandIqvia = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-5.jpg"
+const brandItdose = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-6.jpg"
+const brandPracto = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-7.jpg"
 
 
-import servicesPdfWhatsapp from "../home/static/imgs/services-pdf-whatsapp.png"
-import servicesMarketing from "../home/static/imgs/services-marketing.png"
-import servicesAffordable from "../home/static/imgs/services-affordable.png"
-import servicesBackground from "../home/static/imgs/services-background.png"
-import servicesTemplates from "../home/static/imgs/services-templates.png"
-import servicesCorporateOfferings from "../home/static/imgs/services-corporate-offerings.png"
-import servicesInstant from "../home/static/imgs/services-instant.png"
+const brandWhatsappIcon = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/brand-whatsapp-icon.svg"
 
-import reportVitamin from "../home/static/imgs/report-vitamin.png"
-import reportKidney from "../home/static/imgs/report-kidney.png"
-import reportLipid from "../home/static/imgs/report-electrolyte.png"
-import reportDiabetes from "../home/static/imgs/report-diabetes.png"
-
-import reportPdfVitamin from "../home/static/imgs/report-pdf-vitamin.png"
-import reportPdfKidney from "../home/static/imgs/report-pdf-kidney.png"
-import reportPdfLiver from "../home/static/imgs/report-pdf-diabetes.png"
-import reportPdfCovid from "../home/static/imgs/report-pdf-lipid.png"
-
-import achievementsBackground from "../home/static/imgs/achievements-background.svg"
-
-import clientMessage0 from "../home/static/imgs/client-message-0.png"
-import clientMessage1 from "../home/static/imgs/client-message-1.png"
-import clientMessage2 from "../home/static/imgs/client-message-2.png"
-import clientMessage3 from "../home/static/imgs/client-message-3.png"
-import clientMessage4 from "../home/static/imgs/client-message-4.png"
-import clientMessage5 from "../home/static/imgs/client-message-5.png"
-import clientMessageBackground from "../home/static/imgs/client-message-background.png"
+const featuresItem1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-item-1.png"
+const featuresItem2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-item-2.png"
+const featuresItem3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-item-3.png"
 
 
-import featuresBig from "../home/static/imgs/features-background.svg"
+const servicesPdfWhatsapp = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-pdf-whatsapp.png"
+const servicesMarketing = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-marketing.png"
+const servicesAffordable = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-affordable.png"
+const servicesBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-background.png"
+const servicesTemplates = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-templates.png"
+const servicesCorporateOfferings = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-corporate-offerings.png"
+const servicesInstant = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-instant.png"
+
+const reportVitamin = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-vitamin.png"
+const reportKidney = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-kidney.png"
+const reportLipid = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-electrolyte.png"
+const reportDiabetes = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-diabetes.png"
+
+const reportPdfVitamin = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-vitamin.png"
+const reportPdfKidney = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-kidney.png"
+const reportPdfLiver = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-diabetes.png"
+const reportPdfCovid = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-lipid.png"
+
+const achievementsBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/achievements-background.svg"
+
+const clientMessage0 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-0.png"
+const clientMessage1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-1.png"
+const clientMessage2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-2.png"
+const clientMessage3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-3.png"
+const clientMessage4 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-4.png"
+const clientMessage5 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-5.png"
+const clientMessageBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-background.png"
+
+
+const featuresBig = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-background.svg"
 
 
 
@@ -249,7 +249,7 @@ export default (function () {
 
         {
           textBig: <>4.7 <span style={{ color: "yellow" }}>&#9733;</span></>,
-          textSmall: "Rating from Users",
+          textSmall: "Rating = Users",
         },
         {
           textBig: "04",
