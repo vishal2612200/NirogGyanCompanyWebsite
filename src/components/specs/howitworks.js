@@ -1,25 +1,25 @@
 import * as path from "path";
 
-const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/hero-image.svg"
+const heroImage = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/hero-image.svg"
 
-const reportDigital = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-digital.png"
+const reportDigital = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/report-digital.png"
 
-const reportPdfKidney = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-pdf-kidney.svg"
-const reportPdfLiver = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-pdf-liver.svg"
-const reportPdfCovid = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/report-pdf-covid.svg"
+const reportPdfKidney = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/report-pdf-kidney.svg"
+const reportPdfLiver = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/report-pdf-liver.svg"
+const reportPdfCovid = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/report-pdf-covid.svg"
 
-const mainApiIntegration = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-api-integration.svg"
-const mainSoftware = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-software.svg"
-const mainReport = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-report.svg"
-const mainCustomer = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/main-customer.svg"
+const mainApiIntegration = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/main-api-integration.svg"
+const mainSoftware = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/main-software.svg"
+const mainReport = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/main-report.svg"
+const mainCustomer = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/main-customer.svg"
 
 
-const arrow1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/arrow1.svg"
-const arrow2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/arrow2.svg"
-const arrow3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/arrow3.svg"
+const arrow1 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/arrow1.svg"
+const arrow2 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/arrow2.svg"
+const arrow3 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/arrow3.svg"
 
-const line1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/line1.svg"
-const line2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/howitworks/static/imgs/line2.svg"
+const line1 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/line1.svg"
+const line2 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/line2.svg"
 
 
 

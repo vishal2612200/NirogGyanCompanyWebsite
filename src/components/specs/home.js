@@ -1,51 +1,51 @@
-const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/hero-image.svg"
+const heroImage = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/hero-image.svg"
 
-const brandAlArab = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-1.jpg"
-const brandMax = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-2.jpg"
-const brandDang = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-3.jpg"
-const brandCrelio = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-4.jpg"
-const brandIqvia = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-5.jpg"
-const brandItdose = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-6.jpg"
-const brandPracto = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/logo-7.jpg"
-
-
-const brandWhatsappIcon = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/brand-whatsapp-icon.svg"
-
-const featuresItem1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-item-1.png"
-const featuresItem2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-item-2.png"
-const featuresItem3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-item-3.png"
+const brandAlArab = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-1.jpg"
+const brandMax = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-2.jpg"
+const brandDang = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-3.jpg"
+const brandCrelio = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-4.jpg"
+const brandIqvia = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-5.jpg"
+const brandItdose = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-6.jpg"
+const brandPracto = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-7.jpg"
 
 
-const servicesPdfWhatsapp = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-pdf-whatsapp.png"
-const servicesMarketing = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-marketing.png"
-const servicesAffordable = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-affordable.png"
-const servicesBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-background.png"
-const servicesTemplates = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-templates.png"
-const servicesCorporateOfferings = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-corporate-offerings.png"
-const servicesInstant = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/services-instant.png"
+const brandWhatsappIcon = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/brand-whatsapp-icon.svg"
 
-const reportVitamin = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-vitamin.png"
-const reportKidney = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-kidney.png"
-const reportLipid = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-electrolyte.png"
-const reportDiabetes = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-diabetes.png"
-
-const reportPdfVitamin = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-vitamin.png"
-const reportPdfKidney = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-kidney.png"
-const reportPdfLiver = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-diabetes.png"
-const reportPdfCovid = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/report-pdf-lipid.png"
-
-const achievementsBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/achievements-background.svg"
-
-const clientMessage0 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-0.png"
-const clientMessage1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-1.png"
-const clientMessage2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-2.png"
-const clientMessage3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-3.png"
-const clientMessage4 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-4.png"
-const clientMessage5 = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-5.png"
-const clientMessageBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/client-message-background.png"
+const featuresItem1 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-item-1.png"
+const featuresItem2 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-item-2.png"
+const featuresItem3 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-item-3.png"
 
 
-const featuresBig = "https://niroggyan.s3.ap-south-1.amazonaws.com/home/static/imgs/features-background.svg"
+const servicesPdfWhatsapp = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-pdf-whatsapp.png"
+const servicesMarketing = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-marketing.png"
+const servicesAffordable = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-affordable.png"
+const servicesBackground = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-background.png"
+const servicesTemplates = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-templates.png"
+const servicesCorporateOfferings = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-corporate-offerings.png"
+const servicesInstant = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-instant.png"
+
+const reportVitamin = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-vitamin.png"
+const reportKidney = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-kidney.png"
+const reportLipid = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-electrolyte.png"
+const reportDiabetes = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-diabetes.png"
+
+const reportPdfVitamin = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-vitamin.png"
+const reportPdfKidney = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-kidney.png"
+const reportPdfLiver = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-diabetes.png"
+const reportPdfCovid = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-lipid.png"
+
+const achievementsBackground = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/achievements-background.svg"
+
+const clientMessage0 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-0.png"
+const clientMessage1 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-1.png"
+const clientMessage2 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-2.png"
+const clientMessage3 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-3.png"
+const clientMessage4 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-4.png"
+const clientMessage5 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-5.png"
+const clientMessageBackground = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-background.png"
+
+
+const featuresBig = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-background.svg"
 
 
 

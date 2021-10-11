@@ -1,5 +1,5 @@
-const getInTouch1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/getintouch/static/imgs/get-in-touch-1.svg"
-const getInTouch2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/getintouch/static/imgs/get-in-touch-2.svg"
+const getInTouch1 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-1.svg"
+const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-2.svg"
 
 
 export default (

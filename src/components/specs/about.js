@@ -1,41 +1,41 @@
 
 import * as path from "path";
 
-const heroImage = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/hero-image.svg"
+const heroImage = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/hero-image.svg"
 
-const recognisedBy1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-1.png"
-const recognisedBy2 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-2.png"
-const recognisedBy3 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-3.png"
-const recognisedBy4 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/recognised-by-4.jpg"
+const recognisedBy1 = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/recognised-by-1.png"
+const recognisedBy2 = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/recognised-by-2.png"
+const recognisedBy3 = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/recognised-by-3.png"
+const recognisedBy4 = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/recognised-by-4.jpg"
 
-const marketCardItem1 = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/market-card-item-1.png"
-const marketBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/market-background.svg"
+const marketCardItem1 = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/market-card-item-1.png"
+const marketBackground = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/market-background.svg"
 
-const believeBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/believe-background.svg"
+const believeBackground = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/believe-background.svg"
 
 
-const expertTeamShweta = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-shweta.jpg"
-const expertTeamJoy = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-joy.jpg"
-const expertTeamKartik = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-kartik.png"
-const expertTeamVishal = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-vishal.png"
-const expertTeamAbhishek = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-abhishek.png"
-const expertTeamYash = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-yash.png"
-const expertTeamNithish = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-nitish.png"
-const expertTeamRanjeet = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-ranjeet.jpg"
-const expertTeamJayanti = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/expertteam-jayanti.jpg"
+const expertTeamShweta = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-shweta.jpg"
+const expertTeamJoy = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-joy.jpg"
+const expertTeamKartik = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-kartik.png"
+const expertTeamVishal = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-vishal.png"
+const expertTeamAbhishek = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-abhishek.png"
+const expertTeamYash = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-yash.png"
+const expertTeamNithish = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-nitish.png"
+const expertTeamRanjeet = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-ranjeet.jpg"
+const expertTeamJayanti = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/expertteam-jayanti.jpg"
 
-const productConsultantTeji = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-teji.png"
-const productConsultantArindam = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-arindam.png"
-const productConsultantRuchira = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-ruchira.png"
-const productConsultantGirish = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-girish.png"
-const productConsultantPIEDS = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-PIEDS.png"
-const productConsultantGaurav = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-gaurav.png"
-const productConsultantRakesh = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-rakesh.png"
-const productConsultantVish = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-vish.png"
-const productConsultantSanjeev = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-sanjeev.png"
-const productConsultantSumit = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/product-consultant-sumit.png"
+const productConsultantTeji = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-teji.png"
+const productConsultantArindam = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-arindam.png"
+const productConsultantRuchira = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-ruchira.png"
+const productConsultantGirish = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-girish.png"
+const productConsultantPIEDS = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-PIEDS.png"
+const productConsultantGaurav = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-gaurav.png"
+const productConsultantRakesh = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-rakesh.png"
+const productConsultantVish = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-vish.png"
+const productConsultantSanjeev = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-sanjeev.png"
+const productConsultantSumit = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/product-consultant-sumit.png"
 
-const helpedOrganisationsBackground = "https://niroggyan.s3.ap-south-1.amazonaws.com/about/static/imgs/helped-organisations-background.png"
+const helpedOrganisationsBackground = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/helped-organisations-background.png"
 
 
 export default (function () {
