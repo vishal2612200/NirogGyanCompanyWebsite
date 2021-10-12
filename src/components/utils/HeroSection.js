@@ -186,6 +186,6 @@ const ContentRight = ({ content }) => {
   const classes = useStyles();
 
   return <Grid item xs={12} md={5} className={classes.contentRight}>
-    <img loading="eager" src={content.imagePath} alt="doctor" />
+    <img loading="lazy" src={content.imagePath} alt="doctor" />
   </Grid>
 }
