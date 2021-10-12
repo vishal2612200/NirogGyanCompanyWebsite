@@ -16,7 +16,7 @@ export default (
                     heading: "Company",
                     items: [
                         { text: "About Us", link: "/about" },
-                        { text: "How It works", link: "/how-it-works" },
+                        { text: "How It Works", link: "/how-it-works" },
                         { text: "Blogs", link: "/blogs" }
                     ]
                 },
@@ -27,9 +27,9 @@ export default (
                 block4: {
                     heading: "Community",
                     images: [
-                        { imagePath: facebook, altText: "fghj", link: "https://www.facebook.com/niroggyan/" },
-                        { imagePath: linkedin, altText: "fc", link: "https://www.linkedin.com/company/niroggyan/mycompany/" },
-                        { imagePath: instagram, altText: "dx", link: "https://www.instagram.com/niroggyan_reports" }
+                        { imagePath: facebook, altText: "facebook", link: "https://www.facebook.com/niroggyan/" },
+                        { imagePath: linkedin, altText: "linkedin", link: "https://www.linkedin.com/company/niroggyan/mycompany/" },
+                        { imagePath: instagram, altText: "instagram", link: "https://www.instagram.com/niroggyan_reports" }
                     ],
 
                 }
