@@ -165,9 +165,16 @@ const Description = ({ text }) => {
 const ButtonSet = ({ content }) => {
   const classes = useStyles();
   return <Grid container item className={classes.buttonSet}>
-    <Grid item md={8}>
-      <ButtonServices button={content.services} />
+    <Grid item container md={8}>
+      <Grid item style={{ marginRight: "8px"}}>
+       <ButtonServices button={content.services} />
+      </Grid>
+      <Grid item>
+        <ButtonServices button={content.calendly}/>
+      </Grid>
     </Grid>
+    
+    
     {/* <Grid item md={4}>
      <ButtonWatchVideo text={content.watchVideo} /> 
     </Grid> */}

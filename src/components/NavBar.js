@@ -55,6 +55,25 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+  },
+  inActiveNavItemsStyling: {
+    margin: "8px 11px",
+    padding: "0px 17px",
+    color: "#5089B0",
+    '&:hover': {
+      color: "#fff",
+      backgroundColor: "#163b76",
+      
+      borderRadius: "25px",
+    },
+  },
+  activeNavItemsStyling: {
+      color: "#fff",
+      backgroundColor: "#163b76",
+      padding: "0px 17px",
+      borderRadius: "25px",
+      margin: "8px 13px"
+    
   }
 }));
 
@@ -142,7 +161,7 @@ const NavItemsMediumScreen = ({ links }) => {
   let navItems = useNavItems(links);
 
   return <> {!isSmallScreen ? (
-    <Grid container item key='navItems' spacing={7} md={10} justifyContent="flex-end">
+    <Grid container item key='navItems'  md={10} justifyContent="flex-end">
       {navItems}
     </Grid>
   ) : ""
@@ -150,6 +169,7 @@ const NavItemsMediumScreen = ({ links }) => {
 }
 
 function useNavItems(links) {
+  const classes = useStyles();
   const { page } = useContext(PageContext);
   return links.map(
     ({ text, id }, index) => {
@@ -160,7 +180,8 @@ function useNavItems(links) {
           <Typography
             variant="h6"
             // eslint-disable-next-line eqeqeq
-            color={page === id ? "primary" : "textSecondary"}>
+            // color={page === id ? "primary" : "textSecondary"}
+            className={page === id ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling}>
             {text}
           </Typography>
         </Link>

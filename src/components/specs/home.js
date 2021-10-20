@@ -62,6 +62,10 @@ export default (function () {
             text: "Our Services",
             link: "https://linktr.ee/niroggyan"
           },
+          calendly: {
+            text: "E-Meet Us",
+            link: "https://calendly.com/niroggyan_reports"
+          },
           watchVideo: {
             text: "Watch Video",
             link: "https://linktr.ee/niroggyan"
