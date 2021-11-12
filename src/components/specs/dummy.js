@@ -61,7 +61,39 @@ export default (function () {
         HeroSection: {
             contentLeft: {
                 heading: { line1: "Smart Wellbeing", line2: "-" },
-                descriptions:[
+                descriptions: [
+                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
+                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
+
+                ],
+                buttons: {
+                    services: {
+                        text: "Our Services",
+                        link: "https://linktr.ee/niroggyan"
+                    },
+                    calendly: {
+                        text: "E-Meet Us",
+                        link: "https://calendly.com/niroggyan_reports"
+                    },
+                    watchVideo: {
+                        text: "Watch Video",
+                        link: "https://linktr.ee/niroggyan"
+                    }
+                }
+            },
+            contentRight: {
+                image: {
+                    imagePath: heroImage,
+                    altText: "hero"
+                }
+            },
+            linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
+        },
+
+        HeroSection1: {
+            contentLeft: {
+                heading: { line1: "Smart Wellbeing", line2: "-" },
+                descriptions: [
                     "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
                     "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
 
@@ -184,17 +216,26 @@ export default (function () {
         },
         Market: {
             contentLeft: {
-                header: {
-                    heading: [{ text: "As the first point-of-evidence, Diagnostic data is the most effective tool to tell the status of a person's health and compel them to be proactive." }],
-                    description: [
-                        { text: "Yet, they are extremely difficult to interpret by anyone who is not a doctor, leading to low health literacy and ineffective long-term measures." },
-                        { text: "Born out of a need almost everyone over the age of 30 has faced at least once in their lives, NirogGyan emerged as an innovative startup in a space which needed evolution for a long time. We keep it simple with our easy-to-understand medical test reports." }
-                    ]
-                },
-                cardsList: [{
-                    image: { imagePath: marketCardItem1, altText: "marketCardItem1" },
-                    items: ["📈 3+ Years in Market", "📦 10+ Products", "📝 300,000+ Reports"],
-                }],
+                heading: { line1: "Smart Wellbeing", line2: "-" },
+                descriptions: [
+                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
+                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
+
+                ],
+                buttons: {
+                    services: {
+                        text: "Our Services",
+                        link: "https://linktr.ee/niroggyan"
+                    },
+                    calendly: {
+                        text: "E-Meet Us",
+                        link: "https://calendly.com/niroggyan_reports"
+                    },
+                    watchVideo: {
+                        text: "Watch Video",
+                        link: "https://linktr.ee/niroggyan"
+                    }
+                }
             },
             contentRight: {
                 image: { imagePath: marketBackground, altText: "marketBackground" },
