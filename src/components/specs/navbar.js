@@ -10,7 +10,9 @@ export default (
                     { text: "About Us", id: "about" },
                     { text: "How It Works", id: "how-it-works" },
                     { text: "Blogs", id: "blogs" },
-                    { text: "FAQs", id: "faqs" }
+                    { text: "FAQs", id: "faqs" },
+                    { text: "Dummy", id: "dummy" }
+
                 ],
                 // logoImg: path.join(process.env.PUBLIC_URL, "/logo-icon.svg"),
                 logoImg: navlogoIcon

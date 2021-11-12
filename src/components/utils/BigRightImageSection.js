@@ -31,14 +31,23 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function BigRightImageSection({ contentLeft, image, ...props }) {
+export default function BigRightImageSection({ contentLeft, image, invert = false, ...props }) {
     const classes = useStyles();
-    
+
     return (
         <Grid container className={classes.root} {...props} >
-         {contentLeft}
-            <ImageBox image={image} />
-        </Grid>
+            {!invert ?
+
+                <>
+                    {contentLeft}
+                    < ImageBox image={image} />
+                </> :
+                <>
+                    <ImageBox image={image} />
+                    {contentLeft}
+                </>
+            }
+        </Grid >
     );
 
 }

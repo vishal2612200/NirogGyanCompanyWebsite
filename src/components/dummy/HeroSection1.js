@@ -4,7 +4,6 @@ import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
-// import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
@@ -12,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "sticky",
 
-    backgroundImage: "linear-gradient(to right, #52BBE8, #69C3EB, #A3D8F1, #E1EFF8)",
     padding: "0.5rem",
   },
   title: {
@@ -105,8 +103,8 @@ export default function HeroSection({ state: heroSection }) {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} justifyContent="space-evenly">
-      <ContentLeft content={heroSection.contentLeft} md={6} />
       <ContentRight content={heroSection.contentRight} md={6} />
+      <ContentLeft content={heroSection.contentLeft} md={6} />
     </Grid>
   )
 
@@ -120,9 +118,8 @@ const ContentLeft = ({ content, ...props }) => {
     <Grid item >
       <Heading text={content.heading} />
     </Grid>
-      <Grid item>
-        {content.descriptions.map(description => <Description text={description} />
-        )}
+    <Grid item>
+      {content.descriptions.map(description => <Description text={description} />)}
     </Grid>
     <Grid item>
       <ButtonSet content={content.buttons} />
@@ -167,15 +164,15 @@ const ButtonSet = ({ content }) => {
   const classes = useStyles();
   return <Grid container item className={classes.buttonSet}>
     <Grid item container md={8}>
-      <Grid item style={{ marginRight: "8px"}}>
-       <ButtonServices button={content.services} />
+      <Grid item style={{ marginRight: "8px" }}>
+        <ButtonServices button={content.services} />
       </Grid>
       <Grid item>
-        <ButtonServices button={content.calendly}/>
+        <ButtonServices button={content.calendly} />
       </Grid>
     </Grid>
-    
-    
+
+
     {/* <Grid item md={4}>
      <ButtonWatchVideo text={content.watchVideo} /> 
     </Grid> */}
