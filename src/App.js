@@ -7,7 +7,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-
+import Dummy from "./components/dummy";
 import Home from './components/home';
 import About from './components/about';
 import HowItWorks from './components/howitworks';
@@ -114,7 +114,7 @@ export const PageContext = createContext()
 function App() {
   // https://github.com/facebook/create-react-app/issues/1765
   // BUG FIX: state is undefined , look in state.js and the corresponding state file of the component 
-  const [state,] = useReducer(function (state, action) { }, { ...specsNavbar, ...specs, ...specsFooter, ...specsSubscribe});
+  const [state,] = useReducer(function (state, action) { }, { ...specsNavbar, ...specs, ...specsFooter, ...specsSubscribe });
   const [page, setPage] = useState("home");
   // const [loading, setLoading] = useState("true");
   // const classes = useStyles();
@@ -137,15 +137,15 @@ function App() {
             }
             subheader={<Skeleton animation="wave" height={10} width="40%" />}
           /> */}
-          {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
+      {/* <Skeleton animation="wave" variant="rect" className={classes.media} /> */}
 
 
-          {/* <Box overflow="hidden">
+      {/* <Box overflow="hidden">
                <Media loading /> 
             </Box> */}
 
 
-          {/* <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" className={classes.media}>
+      {/* <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" className={classes.media}>
             <img className={classes.loadergif} height="80%" src={review} alt="review" />
           </Grid>
 
@@ -160,51 +160,56 @@ function App() {
                 </Box>
               ))}
             </Grid> */}
-            {/* <React.Fragment>
+      {/* <React.Fragment>
                 <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
                 <Skeleton animation="wave" height={10} width="80%" />
               </React.Fragment> */}
-          {/* </CardContent>
+      {/* </CardContent>
         </Card>
         : */}
-        <PageContext.Provider value={{ page, setPage }}>
-          <NavBar state={state.NavBar} />
+      <PageContext.Provider value={{ page, setPage }}>
+        <NavBar state={state.NavBar} />
 
-          <Router basename={process.env.PUBLIC_URL}>
-            <Switch>
-              <Route path="/home">
-                <Home state={state.home} />
-              </Route>
-              <Route path="/about">
-                <About state={state.about} >
-                </About>
-              </Route>
-              <Route path="/how-it-works">
-                <HowItWorks state={state.howitworks} >
-                </HowItWorks>
-              </Route>
-              <Route path="/blogs">
-                <Blogs state={state.blogs} >
-                </Blogs>
-              </Route>
-              <Route path="/faqs">
-                <FAQS state={state.faqs} />
-              </Route>
-              <Route path="/terms-of-services">
-                <TermsOfServices state={state.termsOfServices} />
-              </Route>
-              <Route path="/privacy-policy">
-                <PrivacyPolicy state={state.privacyPolicy} />
-              </Route>
+        <Router basename={process.env.PUBLIC_URL}>
+          <Switch>
+            <Route path="/dummy">
+              <Dummy state={state.dummy} >
+              </Dummy>
+            </Route>
 
-              <Route path="/">
-                <Home state={state.home} />
-              </Route>
-            </Switch>
-          </Router>
-          <Subscribe state={state.Subscribe}/>
-          <Footer state={state.Footer} />
-        </PageContext.Provider>
+            <Route path="/home">
+              <Home state={state.home} />
+            </Route>
+            <Route path="/about">
+              <About state={state.about} >
+              </About>
+            </Route>
+            <Route path="/how-it-works">
+              <HowItWorks state={state.howitworks} >
+              </HowItWorks>
+            </Route>
+            <Route path="/blogs">
+              <Blogs state={state.blogs} >
+              </Blogs>
+            </Route>
+            <Route path="/faqs">
+              <FAQS state={state.faqs} />
+            </Route>
+            <Route path="/terms-of-services">
+              <TermsOfServices state={state.termsOfServices} />
+            </Route>
+            <Route path="/privacy-policy">
+              <PrivacyPolicy state={state.privacyPolicy} />
+            </Route>
+
+            <Route path="/">
+              <Home state={state.home} />
+            </Route>
+          </Switch>
+        </Router>
+        <Subscribe state={state.Subscribe} />
+        <Footer state={state.Footer} />
+      </PageContext.Provider>
       {/* } */}
     </div>
   );

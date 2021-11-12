@@ -55,8 +55,9 @@ export default (function () {
     HeroSection: {
       contentLeft: {
         heading: { line1: "Simplifying", line2: "Medical Reports" },
-        description:
-          "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
+        descriptions: [
+          "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports."
+        ],
         buttons: {
           services: {
             text: "Our Services",
