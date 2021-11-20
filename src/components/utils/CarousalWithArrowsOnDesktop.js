@@ -8,12 +8,6 @@ import { useTheme } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
 
-
-
-
-
-
-
 export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSlides = 1, dotsOnDeskTop = false }) {
     const [dotIndex, setDotIndex] = useState(0);
     const theme = useTheme();

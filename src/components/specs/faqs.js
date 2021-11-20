@@ -6,6 +6,11 @@ const heroImage = "https://dn96iqv3kf32j.cloudfront.net/faqs/static/imgs/hero-im
 
 export default (function () {
     return {
+        DocumentHeader:{
+            title: "Frequently Asked Questions (FAQ) about Smart Reports | NirogGyan",
+            description: "All your queries about Smart Reports are answered here. If you don't find what you need, contact our customer care. Read Doctor's opinion about Smart Reports.",
+            canonical: "https://www.niroggyan.com/faqs",
+        },
         HeroSection: {
             contentLeft: {
 

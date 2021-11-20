@@ -51,7 +51,11 @@ const featuresBig = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/featu
 
 export default (function () {
   return {
-
+    DocumentHeader: {
+      title : "NirogGyan - Smart & Modern Diagnostic Reports for Pathology Labs",
+      description : "Simplifying Medical Reports for Pathology Labs & Diagnosis centers. Hospitals can do Rebrand their image with Smart Reports can scale their revenue by 30%.",
+      canonical : "https://niroggyan.com/",
+    },
     HeroSection: {
       contentLeft: {
         heading: { line1: "Simplifying", line2: "Medical Reports" },
@@ -59,11 +63,11 @@ export default (function () {
           "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
         buttons: {
           services: {
-            text: "Our Services",
+            text: "All Smart Offerings",
             link: "https://linktr.ee/niroggyan"
           },
           calendly: {
-            text: "E-Meet Us",
+            text: "Interested ?",
             link: "https://calendly.com/niroggyan_reports"
           },
           watchVideo: {

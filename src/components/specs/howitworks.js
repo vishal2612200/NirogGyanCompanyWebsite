@@ -25,6 +25,11 @@ const line2 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/line2
 
 export default (function () {
     return {
+        DocumentHeader:{
+            title: "Explore Smart Report Generation & Working Process for Pathology Labs",
+            description: "Understand the Actual Workflow of Smart Report along with API integration for Pathology Labs & Hospitals. Check out Digital Smart Reports available in PDF form.",
+            canonical: "https://niroggyan.com/how-it-works",
+        },
         HeroSection: {
             contentLeft: {
 

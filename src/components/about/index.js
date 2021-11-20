@@ -6,6 +6,7 @@ import ProductConsultant from './ProductConsultant';
 import HelpedOrganisations from './HelpedOrganisations';
 import Market from './Market';
 import Believe from './Believe';
+import DocumentHeader from '../utils/DocumentHeader';
 import { PageContext } from '../../App';
 
 export default function About({ state, children }) {
@@ -15,6 +16,7 @@ export default function About({ state, children }) {
     })
 
     return <React.Fragment>
+        <DocumentHeader state={state.DocumentHeader} />
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
         <Believe state={state.Believe} />

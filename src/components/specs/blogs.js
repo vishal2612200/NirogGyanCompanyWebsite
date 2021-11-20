@@ -19,14 +19,16 @@ const sideblog7 = "https://dn96iqv3kf32j.cloudfront.net/blogs/static/imgs/side-b
 
 export default (function () {
     return {
+        DocumentHeader: {
+            title: "NirogGyan Executive Blogs & Updates on Medical Industry",
+            description: "NirogGyan features insights, trends, latest medical updates & opinions to bridge the gap in medical and health industry. Explore our blog section now.",
+            canonical: "https://www.niroggyan.com/blogs"
+        },
         HeroSection: {
             contentLeft: {
-
                 heading: "Blogs",
                 breadcrumbs: [{ text: "Home", link: "/home" }, { text: "Blogs", link: "/blogs" }],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
-
-
             },
             contentRight: {
                 image: { imagePath: heroImage, altText: "heroImage" },

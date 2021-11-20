@@ -1,6 +1,11 @@
 export default (
     function () {
         return {
+            DocumentHeader: {
+                title: 'Terms & Conditions of Service | NirogGyan Smart Reports',
+                description: 'NirogGyan terms & conditions of service state Smart Reports information prepared by which diagnostics provider shares. Hence, Report is generic in nature.',
+                canonical: 'https://niroggyan.com/terms-of-services'
+            },
             Main: {
                 header: {
                     heading: [{ text: "Terms of Services" }],

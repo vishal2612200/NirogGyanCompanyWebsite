@@ -40,7 +40,11 @@ const helpedOrganisationsBackground = "https://dn96iqv3kf32j.cloudfront.net/abou
 
 export default (function () {
     return {
-
+        DocumentHeader: {
+            title: "Discover Our Story in Modernizing Medical Report - About NirogGyan",
+            description: "NirogGyan is First startup in india, who has modified medical reports and made it patient friendly. Meet our Investors & Execution Team of NirogGyan Now.",
+            canonical: "https://niroggyan.com/about"
+        },
         HeroSection: {
             contentLeft: {
 
@@ -53,15 +57,11 @@ export default (function () {
                     link: "/about"
                 }],
                 backgroundImage: path.join(process.env.PUBLIC_URL, "background-curve.png"),
-
-
             },
             contentRight: {
                 image: { imagePath: heroImage, altText: "hero" },
             },
             linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
-
-
         },
         RecognisedBy: {
             header: {

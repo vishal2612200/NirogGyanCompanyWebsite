@@ -4,6 +4,7 @@ import Report from './Report';
 import Main from './Main';
 import Video from './Video';
 import { PageContext } from '../../App';
+import DocumentHeader from '../utils/DocumentHeader';
 
 
 export default function HowItWorks({ state, children }) {
@@ -12,6 +13,7 @@ export default function HowItWorks({ state, children }) {
         setPage("how-it-works")
     })
     return <React.Fragment>
+        <DocumentHeader state={state.DocumentHeader}/>
         <HeroSection state={state.HeroSection} />
         <Report state={state.Report} />
         <Main state={state.Main} />
