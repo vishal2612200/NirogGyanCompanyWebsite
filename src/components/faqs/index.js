@@ -6,10 +6,10 @@ import { PageContext } from '../../App';
 
 
 export default function FAQS({ state, children }) {
-    const { setPage } = useContext(PageContext);
-    useEffect(() => {
-        setPage("faqs")
-    })
+    // const { setPage } = useContext(PageContext);
+    // useEffect(() => {
+    //     setPage("faqs")
+    // })
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
         <FrequentQuestions state={state.FrequentQuestions} />

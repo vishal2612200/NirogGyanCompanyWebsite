@@ -5,10 +5,10 @@ import { PageContext } from '../../App';
 
 
 export default function Blogs({ state, children }) {
-    const {  setPage } = useContext(PageContext);
-    useEffect(() => {
-        setPage("blogs")
-    })
+    // const {  setPage } = useContext(PageContext);
+    // useEffect(() => {
+    //     setPage("blogs")
+    // })
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />
         <Main state={state.Main} />

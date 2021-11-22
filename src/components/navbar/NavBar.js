@@ -1,15 +1,20 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
-import IconButton  from "@material-ui/core/IconButton";
-import AppBar  from "@material-ui/core/AppBar";
+import IconButton from "@material-ui/core/IconButton";
+import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import MenuIcon from "@material-ui/icons/Menu";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useSpring, animated } from 'react-spring'
-import { PageContext } from "../App";
+
+import {
+  BrowserRouter,
+  NavLink
+}
+  from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,23 +62,29 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   inActiveNavItemsStyling: {
+    textDecoration: "none",
+    fontSize: "1.25rem",
     margin: "8px 11px",
-    padding: "0px 17px",
+    padding: "1px 17px",
     color: "#5089B0",
+
     '&:hover': {
       color: "#fff",
       backgroundColor: "#163b76",
-      
+
       borderRadius: "25px",
     },
   },
   activeNavItemsStyling: {
-      color: "#fff",
-      backgroundColor: "#163b76",
-      padding: "0px 17px",
-      borderRadius: "25px",
-      margin: "8px 13px"
-    
+    fontSize: "1.25rem",
+
+    textDecoration: "none",
+    color: "#fff",
+    backgroundColor: "#163b76",
+    padding: "1px 17px",
+    borderRadius: "25px",
+    margin: "8px 13px"
+
   }
 }));
 
@@ -85,21 +96,20 @@ export default function NavBar({ state: navBar }) {
   const [isButtonPressed, setIsButtonPressed] = useState(false);
   const [activeLinkIndex, setActiveLinkIndex] = useState(0);
   const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
-
   return (
     <NavContext.Provider value={{ isButtonPressed, setIsButtonPressed, activeLinkIndex, setActiveLinkIndex }}>
       <animated.div className={classes.root} style={props}>
         <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
           <Toolbar className={classes.toolbar} >
             <Grid container >
-              <ImageBox imgPath={navBar.logoImg} />
+              <ImageBox image={navBar.logo} />
               <MenuOpenButton />
-              <NavItemsMediumScreen links={navBar.navLinks} />
+              <NavItemsMediumScreen links={navBar.links} />
             </Grid>
 
           </Toolbar>
           {
-            <NavItemsSmallScreen links={navBar.navLinks} />
+            <NavItemsSmallScreen links={navBar.links} />
 
           }
         </AppBar>
@@ -142,12 +152,10 @@ const NavItemsSmallScreen = ({ links }) => {
   const { isButtonPressed } = useContext(NavContext);
   const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, config: { duration: 500 }, reset: true })
 
-  let navItems = useNavItems(links);
-
   return <> {isSmallScreen && isButtonPressed ? (
     <animated.div style={props}>
-      <Grid container item key='navItems' sm={12} direction="column" justifyContent="flex-start" alignItems="center">
-        {navItems}
+      <Grid container item key='navItems' sm={12} direction="column" justifyContent="space-around" alignItems="center" style={{ gap: "0.5rem", padding: "0.5rem" }}>
+        <LinksMenu links={links} />
       </Grid>
     </animated.div>
   ) : ""
@@ -158,35 +166,33 @@ const NavItemsSmallScreen = ({ links }) => {
 const NavItemsMediumScreen = ({ links }) => {
   const isSmallScreen = useSmallScreen();
 
-  let navItems = useNavItems(links);
 
   return <> {!isSmallScreen ? (
-    <Grid container item key='navItems'  md={10} justifyContent="flex-end">
-      {navItems}
+    <Grid container item key='navItems' md={10} justifyContent="flex-end" style={{ gap: "1rem" }}>
+      <LinksMenu links={links} />
     </Grid>
   ) : ""
   }</>
 }
 
-function useNavItems(links) {
+const LinksMenu = ({ links }) => {
   const classes = useStyles();
-  const { page } = useContext(PageContext);
-  return links.map(
-    ({ text, id }, index) => {
-      return <Grid item key={index} >
-        <Link href={process.env.PUBLIC_URL + `/${id}`}
-          underline={page === id ? "always" : "none"}
-          style={{ textDecoration: 'none' }}>
-          <Typography
-            variant="h6"
-            // eslint-disable-next-line eqeqeq
-            // color={page === id ? "primary" : "textSecondary"}
-            className={page === id ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling}>
-            {text}
-          </Typography>
-        </Link>
-      </Grid>;
-    });
+
+  return <>
+    {
+      Object.entries(links).map(
+        ([pageName, { text, url }]) => {
+          return <Grid item key={pageName} >
+            <NavLink exact to={url}
+              className={isActive =>
+                isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
+              }>
+              {text}
+            </NavLink>
+          </Grid >
+        })
+    }
+  </>
 }
 
 function useSmallScreen() {
@@ -202,10 +208,10 @@ function useSmallScreen() {
 }
 
 
-const ImageBox = ({ imgPath }) => (
-  <Grid key='imgBox' item xs={6} md={2} style={{ textAlign: "right" }}>
+const ImageBox = ({ image: { imagePath, altText = "logo-default" } }) => (
+  <Grid key="imgBox" item xs={6} md={2} style={{ textAlign: "right" }} >
     <img loading="lazy"
-      src={imgPath}
-      alt="Logo"
+      src={imagePath}
+      alt={altText}
     />
   </Grid>)

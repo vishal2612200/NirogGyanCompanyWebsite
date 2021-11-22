@@ -50,163 +50,163 @@ const getInTouch1 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs
 const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-2.svg"
 
 
-export default (function () {
-    return {
+const dummy = {
+    self: { url: "/solutions", text: "Solutions", onNavbar: true },
 
-        HeroSection: {
-            contentLeft: {
-                heading: { line1: "Smart Wellbeing", line2: "-" },
-                descriptions: [
-                    "Are you planning to adopt modern technology for your lab? Don’t wait any further, just go for it!!. Our smart report features along with a lab report software is a key foundation for new age diagnostics. Modern lab report is increasing the importance and power of diagnostics in the health sector. Time has come for your medical lab test reports to take a leap forward from the outdated style of your grandparents' time to a more patient centric and dynamic style.",
-                ],
-                buttons: {
-                    services: {
-                        text: "Our Services",
-                        link: "https://linktr.ee/niroggyan"
-                    },
-                    calendly: {
-                        text: "E-Meet Us",
-                        link: "https://calendly.com/niroggyan_reports"
-                    },
-                    watchVideo: {
-                        text: "Watch Video",
-                        link: "https://linktr.ee/niroggyan"
-                    }
-                }
-            },
-            contentRight: {
-                image: {
-                    imagePath: heroImage,
-                    altText: "hero"
-                }
-            },
-            linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
-        },
-
-        HeroSection1: {
-            contentLeft: {
-                content: {
-                    heading: "Smart Report in different languages",
-                    description: [
-                        { url: "https://drive.google.com/file/d/1ECRdR74lhZZkFGmgEScEX_kkndA1Pfe0/view", text: "🏥 English Smart Reports" },
-                        { url: "https://drive.google.com/file/d/1fl1yrJV5IZPR5jzNgsPzSmSmoVyTFjmA/view", text: "🏥 Hindi Smart Reports" },
-                        { url: "https://drive.google.com/file/d/1LXi3tLI9u-gDIcUV14_h6lfucHwvdCpJ/view", text: "🏥 Arabic Smart Reports" },
-                    ]
-                }
-            },
-            contentRight: {
-                image: {
-                    imagePath: heroImage,
-                    altText: "hero"
-                }
-            },
-            linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
-        },
-
-        Believe: {
-            contentLeft: {
-                content: {
-
-                    heading: "Different types of Smart Reports",
-
-                    description: [
-                        { url: "https://drive.google.com/file/d/1ECRdR74lhZZkFGmgEScEX_kkndA1Pfe0/view", text: "🏥 Advanced Smart Report" },
-                        { url: "https://drive.google.com/file/d/1GqwSoSYf-Lr5ul1F3dOdBvErfL--yOxa/view", text: "🏥 Compact Smart Report" },
-                        { url: "https://drive.google.com/file/d/1rpQ70lC5xKwND7j2VDK1s5J2Rvh2OKB7/view", text: "🏥 Dynamic Smart Report" },
-                        { url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view", text: "🏥 Smart Summary Report" },
-                        { url: "https://drive.google.com/file/d/1DsOoghabqchcCDrrt8AstwcRMdKVrtrx/view", text: "🏥 Covid Smart Report" }
-                    ]
-                }
-            },
-            contentRight: {
-                image: { imagePath: heroImage, altText: "believeBackground" },
-            }
-        },
-        GetInTouch: {
-
-            block1: {
-                imagePath: getInTouch1,
-
-            },
-            block2: {
-                line1: "Get In Touch",
-                line2: "contact@niroggyan.com",
-                line3: "+91-7678277891",
-            },
-            block3: {
-                imagePath: getInTouch2,
-            }
-        },
-        Services: {
-            header: {
-                heading: [
-                    { text: "Simple Information with World Class-Design" },
-                    { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "700" } }
-                ],
-                description:
-                    "We’ve put 3 years to guarantee you the best user-experience in lab reporting.",
-            },
-            cardsList: [
-                {
-                    image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
-                    heading: "Simple Information with World Class-Design",
-                    content: "We give to the point, clear and reliable information to the patients. Our visuals are self explanatory which takes customer’s experience to a new level.",
-                },
-                {
-                    image: { imagePath: servicesTemplates, altText: "reports" },
-                    heading: "Print and Digital (PDF, App, Whatsapp, E-mail)",
-                    content: "Our patient friendly lab reports are accessible to the patients the way they want. Smart reports are more convenient and give personalized experience to patients, doctors as well as diagnostic labs.",
-                },
-                {
-                    image: { imagePath: servicesInstant, altText: "instant" },
-                    heading: "Advanced Analytics Tracking Dashboard",
-                    content: "Our software converts random medical data into a piece of meaningful and useful information. ",
-                },
-                {
-                    image: { imagePath: servicesPdfWhatsapp, altText: "PdfWhatsapp" },
-                    heading: "Instant and Automated Available",
-                    content: "let your e-lab report shine with your own unique brand colors, logos and formatting style. It is metaphorically like your lab test reports presenting niroggyan’s curated content in your brand’s own voice.",
-                },
-                {
-                    image: { imagePath: servicesAffordable, altText: "Affordable" },
-                    heading: "Unique White Label Lab Branding",
-                    content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
-                },
-                {
-                    image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
-                    heading: "Super Affordable",
-                    content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
-                },
+    HeroSection: {
+        contentLeft: {
+            heading: { line1: "Smart Wellbeing", line2: "-" },
+            descriptions: [
+                "Are you planning to adopt modern technology for your lab? Don’t wait any further, just go for it!!. Our smart report features along with a lab report software is a key foundation for new age diagnostics. Modern lab report is increasing the importance and power of diagnostics in the health sector. Time has come for your medical lab test reports to take a leap forward from the outdated style of your grandparents' time to a more patient centric and dynamic style.",
             ],
-            backgroundImage: servicesBackground
-
-        },
-        Market: {
-            contentLeft: {
-                heading: { line1: "Smart Wellbeing", line2: "-" },
-                descriptions: [
-                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-                ],
-                buttons: {
-                    services: {
-                        text: "Our Services",
-                        link: "https://linktr.ee/niroggyan"
-                    },
-                    calendly: {
-                        text: "E-Meet Us",
-                        link: "https://calendly.com/niroggyan_reports"
-                    },
-                    watchVideo: {
-                        text: "Watch Video",
-                        link: "https://linktr.ee/niroggyan"
-                    }
+            buttons: {
+                services: {
+                    text: "Our Services",
+                    link: "https://linktr.ee/niroggyan"
+                },
+                calendly: {
+                    text: "E-Meet Us",
+                    link: "https://calendly.com/niroggyan_reports"
+                },
+                watchVideo: {
+                    text: "Watch Video",
+                    link: "https://linktr.ee/niroggyan"
                 }
-            },
-            contentRight: {
-                image: { imagePath: marketBackground, altText: "marketBackground" },
             }
         },
-     
-    };
-})();
+        contentRight: {
+            image: {
+                imagePath: heroImage,
+                altText: "hero"
+            }
+        },
+        linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
+    },
+
+    HeroSection1: {
+        contentLeft: {
+            content: {
+                heading: "Smart Report in different languages",
+                description: [
+                    { url: "https://drive.google.com/file/d/1ECRdR74lhZZkFGmgEScEX_kkndA1Pfe0/view", text: "🏥 English Smart Reports" },
+                    { url: "https://drive.google.com/file/d/1fl1yrJV5IZPR5jzNgsPzSmSmoVyTFjmA/view", text: "🏥 Hindi Smart Reports" },
+                    { url: "https://drive.google.com/file/d/1LXi3tLI9u-gDIcUV14_h6lfucHwvdCpJ/view", text: "🏥 Arabic Smart Reports" },
+                ]
+            }
+        },
+        contentRight: {
+            image: {
+                imagePath: heroImage,
+                altText: "hero"
+            }
+        },
+        linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
+    },
+
+    Believe: {
+        contentLeft: {
+            content: {
+
+                heading: "Different types of Smart Reports",
+
+                description: [
+                    { url: "https://drive.google.com/file/d/1ECRdR74lhZZkFGmgEScEX_kkndA1Pfe0/view", text: "🏥 Advanced Smart Report" },
+                    { url: "https://drive.google.com/file/d/1GqwSoSYf-Lr5ul1F3dOdBvErfL--yOxa/view", text: "🏥 Compact Smart Report" },
+                    { url: "https://drive.google.com/file/d/1rpQ70lC5xKwND7j2VDK1s5J2Rvh2OKB7/view", text: "🏥 Dynamic Smart Report" },
+                    { url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view", text: "🏥 Smart Summary Report" },
+                    { url: "https://drive.google.com/file/d/1DsOoghabqchcCDrrt8AstwcRMdKVrtrx/view", text: "🏥 Covid Smart Report" }
+                ]
+            }
+        },
+        contentRight: {
+            image: { imagePath: heroImage, altText: "believeBackground" },
+        }
+    },
+    GetInTouch: {
+
+        block1: {
+            imagePath: getInTouch1,
+
+        },
+        block2: {
+            line1: "Get In Touch",
+            line2: "contact@niroggyan.com",
+            line3: "+91-7678277891",
+        },
+        block3: {
+            imagePath: getInTouch2,
+        }
+    },
+    Services: {
+        header: {
+            heading: [
+                { text: "Simple Information with World Class-Design" },
+                { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "700" } }
+            ],
+            description:
+                "We’ve put 3 years to guarantee you the best user-experience in lab reporting.",
+        },
+        cardsList: [
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: "Simple Information with World Class-Design",
+                content: "We give to the point, clear and reliable information to the patients. Our visuals are self explanatory which takes customer’s experience to a new level.",
+            },
+            {
+                image: { imagePath: servicesTemplates, altText: "reports" },
+                heading: "Print and Digital (PDF, App, Whatsapp, E-mail)",
+                content: "Our patient friendly lab reports are accessible to the patients the way they want. Smart reports are more convenient and give personalized experience to patients, doctors as well as diagnostic labs.",
+            },
+            {
+                image: { imagePath: servicesInstant, altText: "instant" },
+                heading: "Advanced Analytics Tracking Dashboard",
+                content: "Our software converts random medical data into a piece of meaningful and useful information. ",
+            },
+            {
+                image: { imagePath: servicesPdfWhatsapp, altText: "PdfWhatsapp" },
+                heading: "Instant and Automated Available",
+                content: "let your e-lab report shine with your own unique brand colors, logos and formatting style. It is metaphorically like your lab test reports presenting niroggyan’s curated content in your brand’s own voice.",
+            },
+            {
+                image: { imagePath: servicesAffordable, altText: "Affordable" },
+                heading: "Unique White Label Lab Branding",
+                content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
+            },
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: "Super Affordable",
+                content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
+            },
+        ],
+        backgroundImage: servicesBackground
+
+    },
+    Market: {
+        contentLeft: {
+            heading: { line1: "Smart Wellbeing", line2: "-" },
+            descriptions: [
+                "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
+                "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
+            ],
+            buttons: {
+                services: {
+                    text: "Our Services",
+                    link: "https://linktr.ee/niroggyan"
+                },
+                calendly: {
+                    text: "E-Meet Us",
+                    link: "https://calendly.com/niroggyan_reports"
+                },
+                watchVideo: {
+                    text: "Watch Video",
+                    link: "https://linktr.ee/niroggyan"
+                }
+            }
+        },
+        contentRight: {
+            image: { imagePath: marketBackground, altText: "marketBackground" },
+        }
+    },
+
+};
+export default dummy;

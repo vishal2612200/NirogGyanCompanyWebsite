@@ -22,9 +22,9 @@ const line1 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/line1
 const line2 = "https://dn96iqv3kf32j.cloudfront.net/howitworks/static/imgs/line2.svg"
 
 
+const howitworks = {
+    self: { url: "/how-it-works", text: "How It Works", onNavbar: true},
 
-export default (function () {
-    return {
         HeroSection: {
             contentLeft: {
 
@@ -109,4 +109,4 @@ export default (function () {
             },
         },
     };
-})();
+export default howitworks;

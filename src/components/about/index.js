@@ -9,10 +9,10 @@ import Believe from './Believe';
 import { PageContext } from '../../App';
 
 export default function About({ state, children }) {
-    const { setPage } = useContext(PageContext);
-    useEffect(() => {
-        setPage("about")
-    })
+    // const { setPage } = useContext(PageContext);
+    // useEffect(() => {
+    //     setPage("about")
+    // })
 
     return <React.Fragment>
         <HeroSection state={state.HeroSection} />

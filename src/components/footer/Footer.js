@@ -6,7 +6,7 @@ import "@fontsource/open-sans";
 import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-
+import { NavLink } from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,8 +28,31 @@ const useStyles = makeStyles((theme) => ({
     block: {
         minWidth: "min-content",
     },
+
     container: {
         marginRight: "2rem"
+    },
+    inActiveNavItemsStyling: {
+        textDecoration: "none",
+        fontSize: "1.2rem",
+        color: "#fff",
+        textAlign: "left",
+        '&:hover': {
+            color: "#fff",
+            textDecoration: "underline",
+        },
+    },
+    activeNavItemsStyling: {
+        fontSize: "1.2rem",
+        textDecoration: "none",
+        textAlign: "left",
+        color: "#fff",
+
+    },
+    icons: {
+        [theme.breakpoints.down("sm")]: {
+            justifyContent: "center"
+        }
     }
 }));
 
@@ -53,7 +76,7 @@ const Block1 = ({ content, ...props }) => {
             <img loading="lazy" width="83%" src={content.logoImage} alt="logo" />
         </Grid>
         <Grid item>
-            <Typography variant="h6">
+            <Typography variant="h6" component="div">
                 <Box fontWeight="fontWeightMedium" m={1} style={{ fontSize: "1rem" }}>
                     {content.copyrightText}
                 </Box>
@@ -64,41 +87,41 @@ const Block1 = ({ content, ...props }) => {
 
 const Block = ({ content, ...props }) => {
     const classes = useStyles();
-    return <Grid item className={classes.block} {...props}>
-        <Typography variant="h5">
-            <Box fontWeight="fontWeightMedium" m={1}>
+    return <Grid container item className={classes.block} {...props} direction="column">
+        <Grid item style={{ paddingBottom: "1rem" }}>
+            <Typography variant="h5">
                 {content.heading}
-            </Box>
-        </Typography>
-        <Box style={{ height: ".25rem" }} />
-        {content.items.map(({ link, text }, index) => <Typography key={index}>
-            <Box fontWeight="fontWeightMedium" m={2}>
-                <Link color="inherit" href={link} key={index}>
-                    <Typography
-                        component={'span'} 
-                        variant={'body2'}
-                        style={{ fontSize: "1rem" }}
-                        className={classes.title}>
+            </Typography>
+        </Grid>
+        <Grid container item direction="column">
+
+            {content.items.map(({ link, text }, index) =>
+                <Grid item style={{ marginBottom: "1rem" }}>
+                    <NavLink exact to={link} key={index}
+                        className={isActive =>
+                            isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
+                        }>
                         {text}
-                    </Typography>
-                </Link>
-            </Box>
-        </Typography>)}
-    </Grid>
+                    </NavLink>
+                </Grid>
+            )}
+        </Grid>
+    </Grid >
 }
 
 const Block4 = ({ content, ...props }) => {
-    return <Grid item {...props}>
-        <Typography variant="h5">
-            <Box fontWeight="fontWeightMedium" mt={1} >
+    const classes = useStyles()
+    return <Grid container item className={classes.block4} {...props} direction="column">
+        <Grid item style={{ paddingBottom: "1rem" }}>
+            <Typography variant="h5">
                 {content.heading}
-            </Box>
-        </Typography>
-        <Box style={{ height: "1.7rem" }} />
-        {content.images.map(
-            ({ imagePath, altText = "logo-default", link }, index) => <a key={index} href={link} rel="noreferrer" target="_blank">
-                <img loading="lazy" style={{ marginRight: "1rem" }} src={imagePath} alt={altText} />
-            </a>)}
-        <Typography variant="h6">{content.copyrightText}</Typography>
-    </Grid>
+            </Typography>
+        </Grid>
+        <Grid container item direction="row" className={classes.icons} >
+            {content.images.map(
+                ({ imagePath, altText = "logo-default", link }, index) => <Grid item ><a key={index} href={link} rel="noreferrer" target="_blank">
+                    <img loading="lazy" src={imagePath} alt={altText} />
+                </a></Grid>)}
+        </Grid>
+    </Grid >
 }
