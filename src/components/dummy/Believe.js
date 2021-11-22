@@ -9,6 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 import BigRightImageSection from "../utils/BigRightImageSection";
+import Link from "@material-ui/core/Link";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -51,6 +52,7 @@ const ContentLeft = ({ content }) => {
 }
 
 
+
 const Header = ({ content: { heading, description } }) => {
     const classes = useStyles();
     return <Grid item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
@@ -63,12 +65,18 @@ const Header = ({ content: { heading, description } }) => {
                 </Typography>
 
             </ListSubheader>
-            {description.map((item, index) => (
+            {description.map(({  url, text } , index) => (
                 <ListItem>
                     <ListItemText
                         primary={
                             <Typography variant="body1" color="textSecondary" key={index}>
-                                {item}
+                                <Link component={Link}
+                                    href={url}
+                                    rel="noreferrer"
+                                    target="_blank">
+                                    {text}
+                                </Link>
+
                             </Typography>
                         }
 

@@ -17,6 +17,8 @@ export default function Dummy({ state, children }) {
         <Services state={state.Services} />
         <Believe state={state.Believe} />
         <HeroSection1 state={state.HeroSection1} />
+        <HeroSection1 state={state.HeroSection2} />
+
         <GetInTouch state={state.GetInTouch} />
         {children}
     </React.Fragment>

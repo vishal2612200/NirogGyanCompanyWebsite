@@ -13,11 +13,6 @@ const marketCardItem1 = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/
 const marketBackground = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/market-background.svg"
 
 
-const brandWhatsappIcon = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/brand-whatsapp-icon.svg"
-
-const featuresItem1 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-item-1.png"
-const featuresItem2 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-item-2.png"
-const featuresItem3 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-item-3.png"
 
 
 const servicesPdfWhatsapp = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-pdf-whatsapp.png"
@@ -62,9 +57,7 @@ export default (function () {
             contentLeft: {
                 heading: { line1: "Smart Wellbeing", line2: "-" },
                 descriptions: [
-                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-
+                    "Are you planning to adopt modern technology for your lab? Don’t wait any further, just go for it!!. Our smart report features along with a lab report software is a key foundation for new age diagnostics. Modern lab report is increasing the importance and power of diagnostics in the health sector. Time has come for your medical lab test reports to take a leap forward from the outdated style of your grandparents' time to a more patient centric and dynamic style.",
                 ],
                 buttons: {
                     services: {
@@ -92,25 +85,13 @@ export default (function () {
 
         HeroSection1: {
             contentLeft: {
-                heading: { line1: "Smart Wellbeing", line2: "-" },
-                descriptions: [
-                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-                    "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-
-                ],
-                buttons: {
-                    services: {
-                        text: "Our Services",
-                        link: "https://linktr.ee/niroggyan"
-                    },
-                    calendly: {
-                        text: "E-Meet Us",
-                        link: "https://calendly.com/niroggyan_reports"
-                    },
-                    watchVideo: {
-                        text: "Watch Video",
-                        link: "https://linktr.ee/niroggyan"
-                    }
+                content: {
+                    heading: "Smart Report in different languages",
+                    description: [
+                        { url: "https://drive.google.com/file/d/1ECRdR74lhZZkFGmgEScEX_kkndA1Pfe0/view", text: "🏥 English Smart Reports" },
+                        { url: "https://drive.google.com/file/d/1fl1yrJV5IZPR5jzNgsPzSmSmoVyTFjmA/view", text: "🏥 Hindi Smart Reports" },
+                        { url: "https://drive.google.com/file/d/1LXi3tLI9u-gDIcUV14_h6lfucHwvdCpJ/view", text: "🏥 Arabic Smart Reports" },
+                    ]
                 }
             },
             contentRight: {
@@ -126,11 +107,14 @@ export default (function () {
             contentLeft: {
                 content: {
 
-                    heading: "We believe that",
+                    heading: "Different types of Smart Reports",
 
-                    description: ["🏥 To truly engage with patients, one has to understand what they are worried about and what they are trying to do",
-                        "🏥 Consumer health technologies have the potential to strengthen the patient-physician connection and improve health outcomes",
-                        "🏥 Good Health is easy once clearly understood and imbibed into everyday lives"
+                    description: [
+                        { url: "https://drive.google.com/file/d/1ECRdR74lhZZkFGmgEScEX_kkndA1Pfe0/view", text: "🏥 Advanced Smart Report" },
+                        { url: "https://drive.google.com/file/d/1GqwSoSYf-Lr5ul1F3dOdBvErfL--yOxa/view", text: "🏥 Compact Smart Report" },
+                        { url: "https://drive.google.com/file/d/1rpQ70lC5xKwND7j2VDK1s5J2Rvh2OKB7/view", text: "🏥 Dynamic Smart Report" },
+                        { url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view", text: "🏥 Smart Summary Report" },
+                        { url: "https://drive.google.com/file/d/1DsOoghabqchcCDrrt8AstwcRMdKVrtrx/view", text: "🏥 Covid Smart Report" }
                     ]
                 }
             },
@@ -156,7 +140,7 @@ export default (function () {
         Services: {
             header: {
                 heading: [
-                    { text: "The Ultimate Tool to" },
+                    { text: "Simple Information with World Class-Design" },
                     { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "700" } }
                 ],
                 description:
@@ -164,55 +148,38 @@ export default (function () {
             },
             cardsList: [
                 {
+                    image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                    heading: "Simple Information with World Class-Design",
+                    content: "We give to the point, clear and reliable information to the patients. Our visuals are self explanatory which takes customer’s experience to a new level.",
+                },
+                {
                     image: { imagePath: servicesTemplates, altText: "reports" },
-                    heading: "Multiple Reporting Templates",
-                    content:
-                        "We cater to every type of audience with different styling & language options",
+                    heading: "Print and Digital (PDF, App, Whatsapp, E-mail)",
+                    content: "Our patient friendly lab reports are accessible to the patients the way they want. Smart reports are more convenient and give personalized experience to patients, doctors as well as diagnostic labs.",
                 },
                 {
                     image: { imagePath: servicesInstant, altText: "instant" },
-                    heading: "Instant, Automated, Secure",
-                    content:
-                        "Don't wait for Smart Reports : Instant download using our secure API",
+                    heading: "Advanced Analytics Tracking Dashboard",
+                    content: "Our software converts random medical data into a piece of meaningful and useful information. ",
                 },
                 {
                     image: { imagePath: servicesPdfWhatsapp, altText: "PdfWhatsapp" },
-                    heading: "PDF, App, E-mail, Whatsapp",
-                    content:
-                        "Reach your customers the way they prefer, with our multiple integrations",
-                },
-                {
-                    image: { imagePath: servicesMarketing, altText: "Marketing" },
-                    heading: "Unique Whitelabel - Marketing",
-                    content:
-                        "Enhance your brand with whitelabel reports and product-centric marketing",
+                    heading: "Instant and Automated Available",
+                    content: "let your e-lab report shine with your own unique brand colors, logos and formatting style. It is metaphorically like your lab test reports presenting niroggyan’s curated content in your brand’s own voice.",
                 },
                 {
                     image: { imagePath: servicesAffordable, altText: "Affordable" },
-                    heading: "Special Corporate Offerings",
-                    content: "A gamified Health-Check Dashboard for companies to take healthier decisions",
+                    heading: "Unique White Label Lab Branding",
+                    content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
                 },
                 {
                     image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
-                    heading: "Affordable & Doctor-friendly",
-                    content: "Organisations and medical experts love our offerings & packages",
+                    heading: "Super Affordable",
+                    content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
                 },
             ],
             backgroundImage: servicesBackground
 
-        },
-        Bytes: {
-            header: {
-                heading: [{ text: "NirogGyan Bytes" }],
-            },
-            videoLinks: [
-                { link: "https://www.youtube.com/embed/7oLpkU2wCRU/", videoId: "7oLpkU2wCRU" },
-                { link: "https://www.youtube.com/embed/MlLAXpoxNvQ/", videoId: "MlLAXpoxNvQ" },
-                { link: "https://www.youtube.com/embed/H0cHIewcQ2M/", videoId: "H0cHIewcQ2M" },
-                { link: "https://www.youtube.com/embed/p7XAjIv7YRI/", videoId: "p7XAjIv7YRI" },
-                { link: "https://www.youtube.com/embed/XVKS1rtTkbg/", videoId: "XVKS1rtTkbg" },
-                { link: "https://www.youtube.com/embed/L4aPen8hCL8/", videoId: "L4aPen8hCL8" },
-            ],
         },
         Market: {
             contentLeft: {
@@ -220,7 +187,6 @@ export default (function () {
                 descriptions: [
                     "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
                     "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-
                 ],
                 buttons: {
                     services: {
@@ -241,126 +207,6 @@ export default (function () {
                 image: { imagePath: marketBackground, altText: "marketBackground" },
             }
         },
-
-        Report: {
-            contentLeft: {
-                header: {
-                    heading: "Believe what you see.",
-                    description: "Like your favourite musician, we keep taking our offerings to newer heights",
-                },
-                footer: {
-                    textThin: "Stop asking medical questions on Whatsapp to those who can't answer everything. Instead, know your biomarkers better after every test.",
-                    textBold: ""
-                },
-                cardsList: [
-                    {
-                        image: { imagePath: reportVitamin, altText: "vitamin" },
-                        name: "Vitamin",
-                        imageIdentity: "vitamin"
-                    },
-                    {
-                        image: { imagePath: reportKidney, altText: "kidney" },
-                        name: "Kidney",
-                        imageIdentity: "kidney"
-                    },
-                    {
-                        image: { imagePath: reportLipid, altText: "electrolyte" },
-                        name: "Lipids",
-                        imageIdentity: "lipid"
-                    },
-                    {
-                        image: { imagePath: reportDiabetes, altText: "diabetes" },
-                        name: "Diabetes",
-                        imageIdentity: "liver"
-                    }
-                ]
-            },
-            contentRight: {
-                vitamin: { imagePath: reportPdfVitamin, altText: "vitamin" },
-                lipid: { imagePath: reportPdfCovid, altText: "lipid" },
-                kidney: { imagePath: reportPdfKidney, altText: "kidney" },
-                liver: { imagePath: reportPdfLiver, altText: "liver" },
-
-            }
-        },
-        Achievements: {
-            backgroundImage: achievementsBackground,
-            cardsList: [
-                {
-                    textBig: "40+",
-                    textSmall: "Labs Running",
-                },
-                {
-                    textBig: "300,000",
-                    textSmall: "Reports Generated",
-                },
-
-                {
-                    textBig: <>4.7 <span style={{ color: "yellow" }}>&#9733;</span></>,
-                    textSmall: "Rating = Users",
-                },
-                {
-                    textBig: "04",
-                    textSmall: "Countries Reached",
-                },
-            ]
-        },
-        ClientMessage: {
-            header: {
-                heading: [{ text: "What Our Clients Say" }],
-                description: "We work to make every report just right for our clients’ needs",
-            },
-            backgroundImage: clientMessageBackground,
-            cardsList: [
-                {
-                    message: "NirogGyan’s smart reports are phenomenal! They provide crystal-clear information to the physician and easy to understand insights to the patients. The team is committed to deliver and their patient centric approach is commendable .",
-                    image: { imagePath: clientMessage0, altText: "clientMessage0" },
-                    name: "Dr. Arjun Dang",
-                    organisation: "Dr Dangs Lab"
-                }, {
-                    message: "I've been a firm supporter of this concept since long. Fortunately, we at FamPhy got to work with the bright NirogGyan team to provide Smart Reports & Analytics to our corporate client.The response was great, and it was an enjoyable experience for us.",
-                    image: { imagePath: clientMessage2, altText: "clientMessage2" },
-                    name: "Dr.Soumik Kalita",
-                    organisation: "Founder, FamPhy"
-                }, {
-                    message: "A wonderful concept to make diagnostic reports legible and easy to understand. NirogGyan has made a great product which is loved by customers. The integration is very easy and the team is super quick to adapt. Loved working with this exceptional team.",
-                    image: { imagePath: clientMessage4, altText: "clientMessage4" },
-                    name: "Ashwani Mishra",
-                    organisation: "Product Manager"
-                },
-                {
-                    message: "It seems like yesterday when I met the founders to explore the possibility of providing patient- friendly reports, both to my walk -in and B2B customers.The team kept it sweet & simple.With minimal integration using APIs, we’ve been live since more than a year.",
-                    image: { imagePath: clientMessage1, altText: "clientMessage1" },
-                    name: "Sanjeev Malhotra",
-                    organisation: "Niramaya Pathlab"
-                },
-                {
-                    message: "Understanding health data has been always a difficult process, but the way Niroggyan is simplifying health data, helped me understand my health insights better and making life simpler.",
-                    image: { imagePath: clientMessage5, altText: "clientMessage5" },
-                    name: "Anita Sharma",
-                    organisation: "Housewife"
-                },
-                {
-                    message: "I am extremely health conscious and an ex - diabetic.Got my wife and myself tested during the lockdown and was just blown away by these reports.For the first time in my life, I didn’t have to google terms to know about my health.",
-                    image: { imagePath: clientMessage3, altText: "clientMessage3" },
-                    name: "Zubair Ahmed",
-                    organisation: "Journalist, BBC India"
-                },
-
-            ]
-        },
-        MailingList: {
-            block1: {
-                heading: "Subscribe to our mailing list",
-                description: "We'll keep sending you the best updates on Health Education",
-                footer: <><span style={{ color: "#fff" }}>Get In Touch</span>  :   contact@niroggyan.com</>,
-            },
-            block2: {
-                placeholderText: "Enter your email address",
-                buttonText: "Subscribe",
-            },
-            actionurl: "https://niroggyan.us1.list-manage.com/subscribe/post?u=a8e8a8e8c9c8c8c8c8c8c8c8c&amp;id=8c8c8c8c8c8c8c8c8c8c8c8c8c",
-        },
-
+     
     };
 })();

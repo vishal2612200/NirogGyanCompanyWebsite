@@ -119,10 +119,7 @@ const ContentLeft = ({ content, ...props }) => {
       <Heading text={content.heading} />
     </Grid>
     <Grid item>
-      {content.descriptions.map(description => <Description text={description} />)}
-    </Grid>
-    <Grid item>
-      <ButtonSet content={content.buttons} />
+      {content.descriptions.map((description, index) => <Description key={index} text={description} />)}
     </Grid>
   </Grid>
 }

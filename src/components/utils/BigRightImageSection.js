@@ -40,7 +40,7 @@ export default function BigRightImageSection({ contentLeft, image, invert = fals
 
                 <>
                     {contentLeft}
-                    < ImageBox image={image} />
+                    <ImageBox image={image} />
                 </> :
                 <>
                     <ImageBox image={image} />
