@@ -45,7 +45,6 @@ function App() {
           {
             Object.entries(state.pages).map(([pageName, pageData]) => {
               const { url } = pageData.self;
-           console.log(url)   
               const Component = React.lazy(() => import(`./components/${pageName}`));
               return <Route key={url} path={url}
                 render={(props) => <Component {...props} state={pageData} />} />

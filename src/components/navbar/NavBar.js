@@ -191,7 +191,7 @@ const LinksMenu = ({ links }) => {
     {
       Object.entries(links).map(
         ([_, { text, url, subLinks }], index) => {
-          return  <Grid key={index} item>
+          return  <Grid key={text} item>
               <NavLink  to={url}
                 className={isActive =>
                   isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
