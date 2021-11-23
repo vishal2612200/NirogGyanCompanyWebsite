@@ -6,7 +6,6 @@ import ProductConsultant from './ProductConsultant';
 import HelpedOrganisations from './HelpedOrganisations';
 import Market from './Market';
 import Believe from './Believe';
-import { PageContext } from '../../App';
 
 export default function About({ state, children }) {
     // const { setPage } = useContext(PageContext);

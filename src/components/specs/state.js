@@ -5,12 +5,14 @@ import blogs from "./blogs";
 import faqs from "./faqs";
 import termsOfServices from "./termsOfServices";
 import privacyPolicy from "./privacyPolicy";
-import dummy from "./dummy"
+import solutions from "./solutions";
 
 import navbar from "./navbar";
 import subscribe from "./subscribe"
 import footer from "./footer"
-
+import labs from "./labs"
+import doctors from "./doctors"
+import corporates from "./corporates"
 const statesPages = {
     home,
     about,
@@ -19,7 +21,11 @@ const statesPages = {
     faqs,
     termsOfServices,
     privacyPolicy,
-    dummy
+    solutions,
+    labs,
+    doctors,
+    corporates
+
 };
 
 const statesComponents = {

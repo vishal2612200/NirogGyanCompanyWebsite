@@ -53,7 +53,7 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content: { heading, description } }) => {
     const classes = useStyles();
-    return <Grid item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
+    return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
 
         <List >
 

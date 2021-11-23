@@ -55,7 +55,7 @@ export default function TeamCardsList({ content }) {
     const classes = useStyles();
     const numberOfSlides = useNumberOfSlides();
 
-    return <Grid container className={classes.cardsList} item justifyContent="center" alignItems="space-around" >
+    return <Grid container className={classes.cardsList} item justifyContent="center" >
         <CarousalWithArrowsOnDesktop card={<TeamCard />} content={content} dotsOnDeskTop={true} numberOfSlides={numberOfSlides} />
     </Grid>
 }
@@ -86,8 +86,9 @@ const TeamCard = ({ image: { imagePath, altText = "logo-default" }, heading, con
                     <Typography variant="h5">
                         <Box >
                             {
-                                icons.map(icon => (
+                                icons.map((icon, index) => (
                                     <IconButton
+                                        key={index}
                                         component={Link}
                                         to={absoluteurl}
                                         rel="noreferrer"

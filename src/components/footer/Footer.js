@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
         padding: "2rem 6rem 0rem 6rem",
         color: "#fff",
         backgroundColor: "#163B76",
-
         "&>div": {
             marginBottom: "2rem"
         },
@@ -59,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer({ state: footer }) {
     const classes = useStyles();
-    return <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch">
+    return <Grid container className={classes.root} justifyContent="flex-start" alignItems="stretch" >
         <Block1 content={footer.block1} md={4} />
         <Block content={footer.block2} md={2} />
         <Block content={footer.block3} md={3} />

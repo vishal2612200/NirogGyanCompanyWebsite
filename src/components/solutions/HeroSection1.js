@@ -31,13 +31,13 @@ const useStyles = makeStyles((theme) => ({
 })
 );
 
-export default function Believe({ state: believe }) {
+export default function Believe({ state: believe, invert = false }) {
 
   return (
     <BigRightImageSection
       contentLeft={<ContentLeft content={believe.contentLeft} />}
       image={believe.contentRight.image}
-      invert={true}/>
+      invert={invert} />
 
   );
 }

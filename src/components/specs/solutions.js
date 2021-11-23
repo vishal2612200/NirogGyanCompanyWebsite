@@ -50,9 +50,13 @@ const getInTouch1 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs
 const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-2.svg"
 
 
-const dummy = {
+const solutions = {
     self: { url: "/solutions", text: "Solutions", onNavbar: true },
-
+    subLinks: [
+        { url: "/labs", text: "Labs" },
+        { url: "/doctors", text: "Doctors" },
+        { url: "/corporates", text: "Corporates" },
+    ],
     HeroSection: {
         contentLeft: {
             heading: { line1: "Smart Wellbeing", line2: "-" },
@@ -83,7 +87,8 @@ const dummy = {
         linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
 
-    HeroSection1: {
+
+    SmartReportsDifferentLanguages: {
         contentLeft: {
             content: {
                 heading: "Smart Report in different languages",
@@ -102,8 +107,29 @@ const dummy = {
         },
         linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
+    OurReports: {
+        contentLeft: {
+            content: {
+                heading: "Our Reports",
+                description: [
+                    { text: "Never give prescriptions to patients but bring awareness to them so that they know when to consult a doctor." },
+                    { text: "supports preventive health and empowers patients to take charge of their health." },
+                    { text: "Provide accurate medical facts relevant to the patient's health status. We never give incomplete and confusing information to patients." },
+                    { text: "Highlighting Data Analytics " },
+                    { text: "Clients logo" },
+                ]
+            }
+        },
+        contentRight: {
+            image: {
+                imagePath: heroImage,
+                altText: "hero"
+            }
+        },
+        linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
+    },
 
-    Believe: {
+    SmartReportTypes: {
         contentLeft: {
             content: {
 
@@ -121,6 +147,29 @@ const dummy = {
         contentRight: {
             image: { imagePath: heroImage, altText: "believeBackground" },
         }
+    },
+    WhyChooseUs: {
+        contentLeft: {
+
+            content: {
+                heading: "Advantages over other competitor reports (why choose us)",
+                description: [
+                    { text: "🏥 We listen to our clients and are always open to their suggestions. Our flexibility and ability to adapt with the individual client’s needs, is what makes us stand apart. We will customize your laboratory report format, the exact way you want." },
+                    { text: "🏥 Content goes through 3 stages of editing and reviewing before becoming part of our knowledge bank. Our verified medical knowledge bank is again reviewed and updated at regular intervals by our in-house team of researchers and doctors. You are most welcome to ask for a source/reference/citation of any part of our content." },
+                    { text: "🏥 Our Software As A Service (SAAS) is of the highest standards." },
+                    { text: "🏥 Our pathology reporting software is secure and updated.  Our strict, client friendly policies ensure protection of patient’s data." },
+                    { text: "🏥 We provide 1 month complementary marketing support to our clients. In this we also provide sales related analytical insights to our clients." },
+                ]
+            }
+        },
+        contentRight: {
+            image: {
+
+                imagePath: heroImage,
+                altText: "hero"
+            }
+        },
+        linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
     GetInTouch: {
 
@@ -209,4 +258,4 @@ const dummy = {
     },
 
 };
-export default dummy;
+export default solutions;

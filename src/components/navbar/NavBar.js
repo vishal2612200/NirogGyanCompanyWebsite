@@ -1,17 +1,17 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Link from "@material-ui/core/Link";
 import IconButton from "@material-ui/core/IconButton";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import MenuIcon from "@material-ui/icons/Menu";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useSpring, animated } from 'react-spring'
-
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {
-  BrowserRouter,
   NavLink
 }
   from "react-router-dom";
@@ -55,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
       flex: "1 2 auto",
       display: "flex",
       justifyContent: "space-evenly",
-      flexWrap: "wrap"
     }
   },
   menuButton: {
@@ -67,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "8px 11px",
     padding: "1px 17px",
     color: "#5089B0",
+    display: "block",
 
     '&:hover': {
       color: "#fff",
@@ -77,6 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
   activeNavItemsStyling: {
     fontSize: "1.25rem",
+    display: "block",
 
     textDecoration: "none",
     color: "#fff",
@@ -168,7 +169,7 @@ const NavItemsMediumScreen = ({ links }) => {
 
 
   return <> {!isSmallScreen ? (
-    <Grid container item key='navItems' md={10} justifyContent="flex-end" style={{ gap: "1rem" }}>
+    <Grid container item key='navItems' md={10} justifyContent="space-evenly" >
       <LinksMenu links={links} />
     </Grid>
   ) : ""
@@ -177,20 +178,49 @@ const NavItemsMediumScreen = ({ links }) => {
 
 const LinksMenu = ({ links }) => {
   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return <>
     {
       Object.entries(links).map(
-        ([pageName, { text, url }]) => {
-          return <Grid item key={pageName} >
-            <NavLink exact to={url}
-              className={isActive =>
-                isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
-              }>
-              {text}
-            </NavLink>
-          </Grid >
-        })
+        ([_, { text, url, subLinks }], index) => {
+          return  <Grid key={index} item>
+              <NavLink  to={url}
+                className={isActive =>
+                  isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
+                }>
+                {text}
+              {subLinks && <>
+                <IconButton size="small" style={{color: "#fff" }} >
+                  <ExpandMoreIcon onClick={handleClick} />
+                </IconButton>
+                <Menu
+                  anchorEl={anchorEl}
+                  keepMounted
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  {
+                    subLinks.map(({ text, url:suburl }, index) =>  <NavLink key={`sublink${index}`} exact to={`${url}${suburl}`}
+                        className={isActive =>
+                          isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
+                        }> {text}
+                      </NavLink>
+                  )
+                  }
+                </Menu>
+              </>
+              }
+              </NavLink>
+            </Grid>
+            })
     }
   </>
 }

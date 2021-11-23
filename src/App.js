@@ -1,13 +1,13 @@
 // import NavBar from './components/NavBar';
-import React, { Suspense, useState, createContext } from 'react';
-
+import React, { Suspense, useState } from 'react';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import appState from "./components/specs/state"
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
-  withRouter
+  Redirect
+
 } from "react-router-dom";
 
 // import { makeStyles } from '@material-ui/core/styles';
@@ -34,19 +34,20 @@ function App() {
   const [state,] = useState({ ...appState });
 
   const navLinks = Object.entries(state.pages)
-    .filter(([pageName, { self: { onNavbar } }]) => onNavbar)
-    .map(([pageName, { self: { url, text } }]) => ([pageName, { text, url }]));
+    .filter(([_, { self: { onNavbar } }]) => onNavbar)
+    .map(([pageName, { self: { url, text }, subLinks }]) => ([pageName, { text, url, subLinks }]));
 
   return <div className="App">
     <Router basename={process.env.PUBLIC_URL}>
       <NavBar state={{ ...state.components.navbar, links: Object.fromEntries(navLinks) }} />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LinearProgress />}>
         <Switch>
           {
             Object.entries(state.pages).map(([pageName, pageData]) => {
               const { url } = pageData.self;
+           console.log(url)   
               const Component = React.lazy(() => import(`./components/${pageName}`));
-              return <Route exact key={url} path={url}
+              return <Route key={url} path={url}
                 render={(props) => <Component {...props} state={pageData} />} />
             })}
           <Redirect from="/" to="/home" />
@@ -55,7 +56,6 @@ function App() {
       <Subscribe state={state.components.subscribe} />
       <Footer state={state.components.footer} />
     </Router>
-
   </div>
 }
 
