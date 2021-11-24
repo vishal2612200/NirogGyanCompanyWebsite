@@ -56,9 +56,9 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content: { heading, description } }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
+  return <Grid item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
 
-    <List>
+    <List >
 
       <ListSubheader color="primary" style={{ position: "relative" }}>
         <Typography variant="h4" color="textPrimary" style={{ marginBottom: "1rem" }}>
@@ -76,8 +76,8 @@ const Header = ({ content: { heading, description } }) => {
                   rel="noreferrer"
                   target="_blank">
                   {text}
-                </Link> : { text }
-                }
+                </Link> : text}
+
               </Typography>
             }
 

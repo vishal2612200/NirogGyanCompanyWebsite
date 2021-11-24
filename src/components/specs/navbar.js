@@ -2,16 +2,6 @@
 const navlogoIcon = "https://dn96iqv3kf32j.cloudfront.net/websitelogos/logo-icon.svg"
 
 const navBar = {
-    // navLinks: [
-    //     { text: "Home", id: "home" },
-    //     { text: "About Us", id: "about" },
-    //     { text: "How It Works", id: "how-it-works" },
-    //     { text: "Blogs", id: "blogs" },
-    //     { text: "FAQs", id: "faqs" },
-    //     { text: "Dummy", id: "dummy" }
-
-    // ],
-    // // logoImg: path.join(process.env.PUBLIC_URL, "/logo-icon.svg"),
     logo: { imagePath: navlogoIcon, altText: "logo" }
 }
 export default navBar;

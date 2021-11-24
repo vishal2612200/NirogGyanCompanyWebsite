@@ -20,7 +20,7 @@ import {
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
 import Subscribe from "./components/subscribe/Subscribe";
-
+import Labs from "./components/labs";
 
 /*  Links to read before reading the code    
     https://stackoverflow.com/questions/61391830/sass-like-interpolation-in-material-ui-to-get-bem-like-classnames
@@ -46,10 +46,9 @@ function App() {
             Object.entries(state.pages).map(([pageName, pageData]) => {
               const { url } = pageData.self;
               const Component = React.lazy(() => import(`./components/${pageName}`));
-              return <Route key={url} path={url}
-                render={(props) => <Component {...props} state={pageData} />} />
+              return <Route key={url}  exact path={url} render={(props) => <Component {...props} state={pageData} />} />
             })}
-          <Redirect from="/" to="/home" />
+          <Redirect exact from="/" to="/home" />
         </Switch>
       </Suspense>
       <Subscribe state={state.components.subscribe} />

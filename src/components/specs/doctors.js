@@ -50,12 +50,12 @@ const getInTouch1 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs
 const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-2.svg"
 
 
-const solutions = {
+const doctors = {
     self: { url: "/solutions/doctors", text: "Doctors", onNavbar: false },
 
     HeroSection: {
         contentLeft: {
-            heading: { line1: "Smart reports for Labs", line2: "-" },
+            heading: { line1: "Smart reports for Doctors", line2: "-" },
             descriptions: [
                 "If you are looking for a complete digital report solution for your lab then you are at the right place. ",
             ],
@@ -159,4 +159,4 @@ const solutions = {
     },
 
 };
-export default solutions;
+export default doctors;

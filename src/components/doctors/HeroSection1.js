@@ -56,7 +56,7 @@ const ContentLeft = ({ content }) => {
 
 const Header = ({ content: { heading, description } }) => {
   const classes = useStyles();
-  return <Grid container item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
+  return <Grid item direction="column" className={classes.header} justifyContent="space-evenly" alignItems="center">
 
     <List >
 
@@ -71,12 +71,12 @@ const Header = ({ content: { heading, description } }) => {
           <ListItemText
             primary={
               <Typography variant="body1" color="textSecondary" key={index}>
-                <Link component={Link}
+                {url ? <Link component={Link}
                   href={url}
                   rel="noreferrer"
                   target="_blank">
                   {text}
-                </Link>
+                </Link> : text}
 
               </Typography>
             }

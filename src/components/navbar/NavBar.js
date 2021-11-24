@@ -86,7 +86,16 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "25px",
     margin: "8px 13px"
 
+  },
+  dropdown: {
+    position: "absolute",
+    background: "#163b76",
+    zIndex: 1000,
+    transform: "translate(-5%, 5%)",
+    width: "max-content"
   }
+
+
 }));
 
 
@@ -178,52 +187,48 @@ const NavItemsMediumScreen = ({ links }) => {
 
 const LinksMenu = ({ links }) => {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [open, setOpen] = useState(false);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleClick = () => {
+    setOpen(!open)
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const SubMenu = ({ subLinks }) => <Grid container direction="column" className={classes.dropdown}>
+    {subLinks.map(({ text, url: suburl }, index) => <SubLink key={index} url={suburl} text={text} />)}
+  </Grid>
+
+  const SubLink = ({ url, text }) => <Grid item>
+    <NavLink exact to={url} onClick={handleClick} className={
+      isActive =>
+        isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
+    }>
+      {text}
+    </NavLink>
+  </Grid>
+
+  const NavItem = ({ text, url, subLinks }) => <>
+    <NavLink to={url}
+      className={isActive => isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling} >
+      {text}
+    {
+      subLinks &&
+      <IconButton size="small" style={{ color: "#fff" }}>
+        {"  "}|<ExpandMoreIcon onClick={handleClick} />
+      </IconButton>
+    }
+    {open && subLinks && <SubMenu subLinks={subLinks} />}
+    </NavLink>
+  </>
+
+
   return <>
     {
-      Object.entries(links).map(
-        ([_, { text, url, subLinks }], index) => {
-          return  <Grid key={text} item>
-              <NavLink  to={url}
-                className={isActive =>
-                  isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
-                }>
-                {text}
-              {subLinks && <>
-                <IconButton size="small" style={{color: "#fff" }} >
-                  <ExpandMoreIcon onClick={handleClick} />
-                </IconButton>
-                <Menu
-                  anchorEl={anchorEl}
-                  keepMounted
-                  open={Boolean(anchorEl)}
-                  onClose={handleClose}
-                >
-                  {
-                    subLinks.map(({ text, url:suburl }, index) =>  <NavLink key={`sublink${index}`} exact to={`${url}${suburl}`}
-                        className={isActive =>
-                          isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
-                        }> {text}
-                      </NavLink>
-                  )
-                  }
-                </Menu>
-              </>
-              }
-              </NavLink>
-            </Grid>
-            })
+      Object.values(links).map(({ text, url, subLinks }, index) => <NavItem key={index} text={text} url={url} subLinks={subLinks} />)
     }
   </>
 }
+
+
 
 function useSmallScreen() {
   const theme = useTheme();

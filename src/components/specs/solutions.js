@@ -51,11 +51,11 @@ const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs
 
 
 const solutions = {
-    self: { url: "/solutions", text: "Solutions", onNavbar: true },
+    self: { url: "/solutions/", text: "Solutions", onNavbar: true },
     subLinks: [
-        { url: "/labs", text: "Labs" },
-        { url: "/doctors", text: "Doctors" },
-        { url: "/corporates", text: "Corporates" },
+        { url: "/solutions/labs", text: "Labs" },
+         { url: "/solutions/doctors", text: "Doctors" },
+         { url: "/solutions/corporates", text: "Corporates" },
     ],
     HeroSection: {
         contentLeft: {
@@ -112,11 +112,11 @@ const solutions = {
             content: {
                 heading: "Our Reports",
                 description: [
-                    { text: "Never give prescriptions to patients but bring awareness to them so that they know when to consult a doctor." },
-                    { text: "supports preventive health and empowers patients to take charge of their health." },
-                    { text: "Provide accurate medical facts relevant to the patient's health status. We never give incomplete and confusing information to patients." },
-                    { text: "Highlighting Data Analytics " },
-                    { text: "Clients logo" },
+                    { text: "🏥 Never give prescriptions to patients but bring awareness to them so that they know when to consult a doctor." },
+                    { text: "🏥 supports preventive health and empowers patients to take charge of their health." },
+                    { text: "🏥 Provide accurate medical facts relevant to the patient's health status. We never give incomplete and confusing information to patients." },
+                    { text: "🏥 Highlighting Data Analytics " },
+                    { text: "🏥 Clients logo" },
                 ]
             }
         },

@@ -51,7 +51,7 @@ const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs
 
 
 const solutions = {
-    self: { url: "/solutions/corporate", text: "Corporate", onNavbar: false },
+    self: { url: "/solutions/corporates", text: "Corporate", onNavbar: false },
 
     HeroSection: {
         contentLeft: {

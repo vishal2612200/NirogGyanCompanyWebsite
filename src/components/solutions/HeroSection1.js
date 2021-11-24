@@ -71,12 +71,12 @@ const Header = ({ content: { heading, description } }) => {
           <ListItemText
             primary={
               <Typography variant="body1" color="textSecondary" key={index}>
-                <Link component={Link}
+                {url ? <Link component={Link}
                   href={url}
                   rel="noreferrer"
                   target="_blank">
                   {text}
-                </Link>
+                </Link> : text}
 
               </Typography>
             }

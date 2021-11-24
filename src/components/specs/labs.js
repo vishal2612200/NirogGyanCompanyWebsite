@@ -50,7 +50,7 @@ const getInTouch1 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs
 const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-2.svg"
 
 
-const solutions = {
+const labs = {
     self: { url: "/solutions/labs", text: "Labs", onNavbar: false },
 
     HeroSection: {
@@ -159,4 +159,4 @@ const solutions = {
     },
 
 };
-export default solutions;
+export default labs;
