@@ -54,7 +54,7 @@ export default (function () {
     DocumentHeader: {
       title : "NirogGyan - Smart & Modern Diagnostic Reports for Pathology Labs",
       description : "Simplifying Medical Reports for Pathology Labs & Diagnosis centers. Hospitals can do Rebrand their image with Smart Reports can scale their revenue by 30%.",
-      canonical : "https://niroggyan.com/",
+      canonical : "https://www.niroggyan.com/",
     },
     HeroSection: {
       contentLeft: {
@@ -319,7 +319,7 @@ export default (function () {
         placeholderText: "Enter your email address",
         buttonText: "Subscribe",
       },
-      actionurl: "https://niroggyan.us1.list-manage.com/subscribe/post?u=a8e8a8e8c9c8c8c8c8c8c8c8c&amp;id=8c8c8c8c8c8c8c8c8c8c8c8c8c",
+      actionurl: "https://www.niroggyan.us1.list-manage.com/subscribe/post?u=a8e8a8e8c9c8c8c8c8c8c8c8c&amp;id=8c8c8c8c8c8c8c8c8c8c8c8c8c",
     },
 
   };

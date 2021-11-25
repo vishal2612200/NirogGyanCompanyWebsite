@@ -11,7 +11,7 @@ export default (
                     placeholderText: "Enter your email address",
                     buttonText: "Subscribe",
                 },
-                actionurl: "https://niroggyan.us1.list-manage.com/subscribe/post?u=a8e8a8e8c9c8c8c8c8c8c8c8c&amp;id=8c8c8c8c8c8c8c8c8c8c8c8c8c",
+                actionurl: "https://www.niroggyan.us1.list-manage.com/subscribe/post?u=a8e8a8e8c9c8c8c8c8c8c8c8c&amp;id=8c8c8c8c8c8c8c8c8c8c8c8c8c",
             },
         }
     })();

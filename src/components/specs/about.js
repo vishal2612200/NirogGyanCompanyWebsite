@@ -43,7 +43,7 @@ export default (function () {
         DocumentHeader: {
             title: "Discover Our Story in Modernizing Medical Report - About NirogGyan",
             description: "NirogGyan is First startup in india, who has modified medical reports and made it patient friendly. Meet our Investors & Execution Team of NirogGyan Now.",
-            canonical: "https://niroggyan.com/about"
+            canonical: "https://www.niroggyan.com/about"
         },
         HeroSection: {
             contentLeft: {
