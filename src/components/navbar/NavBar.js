@@ -7,9 +7,6 @@ import Grid from "@material-ui/core/Grid";
 import MenuIcon from "@material-ui/icons/Menu";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useSpring, animated } from 'react-spring'
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {
   NavLink
@@ -61,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   inActiveNavItemsStyling: {
+    textAlign: "center",
     textDecoration: "none",
     fontSize: "1.25rem",
     margin: "8px 11px",
@@ -78,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   activeNavItemsStyling: {
     fontSize: "1.25rem",
     display: "block",
-
+    textAlign: "center",
     textDecoration: "none",
     color: "#fff",
     backgroundColor: "#163b76",
@@ -88,13 +86,21 @@ const useStyles = makeStyles((theme) => ({
 
   },
   dropdown: {
+    borderRadius: "10px",
     position: "absolute",
-    background: "#163b76",
+    background: "#fff",
     zIndex: 1000,
-    transform: "translate(-5%, 5%)",
+    transform: "translate(-10%, 60%)",
     width: "max-content"
-  }
+  },
+  iconButton: {
+    color: "#7a7878",
+    "&:hover": {
+      color: "#fff",
+      backgroundColor: "#163b76"
+    }
 
+  }
 
 }));
 
@@ -111,7 +117,7 @@ export default function NavBar({ state: navBar }) {
       <animated.div className={classes.root} style={props}>
         <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
           <Toolbar className={classes.toolbar} >
-            <Grid container >
+            <Grid container justifyContent="space-between" >
               <ImageBox image={navBar.logo} />
               <MenuOpenButton />
               <NavItemsMediumScreen links={navBar.links} />
@@ -164,8 +170,8 @@ const NavItemsSmallScreen = ({ links }) => {
 
   return <> {isSmallScreen && isButtonPressed ? (
     <animated.div style={props}>
-      <Grid container item key='navItems' sm={12} direction="column" justifyContent="space-around" alignItems="center" style={{ gap: "0.5rem", padding: "0.5rem" }}>
-        <LinksMenu links={links} />
+      <Grid container item sm={12} direction="column" justifyContent="space-around" alignItems="center" style={{ gap: "0.5rem", padding: "0.5rem" }}>
+        <NavLinksMenu links={links} />
       </Grid>
     </animated.div>
   ) : ""
@@ -175,52 +181,14 @@ const NavItemsSmallScreen = ({ links }) => {
 
 const NavItemsMediumScreen = ({ links }) => {
   const isSmallScreen = useSmallScreen();
-
-
-  return <> {!isSmallScreen ? (
-    <Grid container item key='navItems' md={10} justifyContent="space-evenly" >
-      <LinksMenu links={links} />
+  return <> {!isSmallScreen &&
+    <Grid container item style={{ width: "max-content" }} >
+      <NavLinksMenu links={links} />
     </Grid>
-  ) : ""
   }</>
 }
 
-const LinksMenu = ({ links }) => {
-  const classes = useStyles();
-  const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen(!open)
-  };
-
-  const SubMenu = ({ subLinks }) => <Grid container direction="column" className={classes.dropdown}>
-    {subLinks.map(({ text, url: suburl }, index) => <SubLink key={index} url={suburl} text={text} />)}
-  </Grid>
-
-  const SubLink = ({ url, text }) => <Grid item>
-    <NavLink exact to={url} onClick={handleClick} className={
-      isActive =>
-        isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
-    }>
-      {text}
-    </NavLink>
-  </Grid>
-
-  const NavItem = ({ text, url, subLinks }) => <>
-    <NavLink to={url}
-      className={isActive => isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling} >
-      {text}
-    {
-      subLinks &&
-      <IconButton size="small" style={{ color: "#fff" }}>
-        {"  "}|<ExpandMoreIcon onClick={handleClick} />
-      </IconButton>
-    }
-    {open && subLinks && <SubMenu subLinks={subLinks} />}
-    </NavLink>
-  </>
-
-
+const NavLinksMenu = ({ links }) => {
   return <>
     {
       Object.values(links).map(({ text, url, subLinks }, index) => <NavItem key={index} text={text} url={url} subLinks={subLinks} />)
@@ -229,6 +197,52 @@ const LinksMenu = ({ links }) => {
 }
 
 
+const NavItem = ({ text, url, subLinks }) => {
+
+  const classes = useStyles();
+  const [overButton, setOverButton] = useState(false);
+  const [overMenu, setOverMenu] = useState(false);
+
+  const SubMenu = ({ subLinks }) => <Grid container direction="column" className={classes.dropdown}
+    onMouseEnter={() => setOverMenu(true)}
+    onMouseLeave={() => setOverMenu(false)}
+  >
+    {subLinks.map(({ text, url: suburl }, index) => <SubLink key={index} url={suburl} text={text} />)}
+  </Grid>
+
+  const SubLink = ({ url, text }) => <Grid item>
+    <NavLink exact to={url} className={
+      isActive =>
+        isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
+    }>
+      {text}
+    </NavLink>
+  </Grid>
+
+
+  return <Grid container item style={{ width: "max-content" }} justifyContent="center" alignItems="center">
+    <Grid item>
+      <NavLink to={url}
+        className={isActive => isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling} >
+        {text}
+      </NavLink>
+    </Grid>
+    <Grid item style={{ transform: "translateX(-70%)" }}>
+      {
+        subLinks &&
+        <IconButton size="small" className={classes.iconButton}
+          onMouseEnter={() => setOverButton(true)}
+          onMouseLeave={() => setOverButton(false)}
+        >
+
+          <ExpandMoreIcon />
+        </IconButton>
+      }
+    </Grid>
+    {(overButton || overMenu) && subLinks && <SubMenu subLinks={subLinks} />}
+  </Grid>
+
+}
 
 function useSmallScreen() {
   const theme = useTheme();
@@ -244,7 +258,7 @@ function useSmallScreen() {
 
 
 const ImageBox = ({ image: { imagePath, altText = "logo-default" } }) => (
-  <Grid key="imgBox" item xs={6} md={2} style={{ textAlign: "right" }} >
+  <Grid item xs={6} md={2} style={{ textAlign: "right" }} >
     <img loading="lazy"
       src={imagePath}
       alt={altText}

@@ -1,6 +1,5 @@
 
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
@@ -55,14 +54,12 @@ export default function FeatureCard({ image: { imagePath, altText = "logo-defaul
                 </Grid>
             </Grid>
             <Grid item xs={8} className={classes.textBox}>
-                <Typography>
                     <Box fontWeight="fontWeightLight" m={1}>
                         {textThin}
                     </Box>
                     <Box fontWeight="fontWeightBold" m={1}>
                         {textBold}
                     </Box>
-                </Typography>
             </Grid>
         </Grid>
     )

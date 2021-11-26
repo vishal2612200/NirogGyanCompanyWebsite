@@ -73,18 +73,18 @@ const TeamCard = ({ image: { imagePath, altText = "logo-default" }, heading, con
             <CardActionArea style={{ textAlign: "center" }}>
                 <img loading="lazy" src={imagePath} alt={altText} width="100%" height="200px" />
                 <CardContent >
-                    <Typography variant="h4" color="textSecondary" className={classes.title}>
+                    <Typography variant="h4" color="textSecondary" className={classes.title} component="div">
                         <Box textAlign="center">
                             {heading}
                         </Box>
                     </Typography>
-                    <Typography variant="body1" color="textSecondary">
+                    <Typography variant="body1" color="textSecondary" component="div">
                         <Box textAlign="center">
                             {content}
                         </Box>
                     </Typography>
                     <Typography variant="h5">
-                        <Box >
+                        <Box>
                             {
                                 icons.map((icon, index) => (
                                     <IconButton

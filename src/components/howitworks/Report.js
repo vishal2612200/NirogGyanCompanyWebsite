@@ -50,12 +50,12 @@ const ImagePanel = ({ content }) => {
     <Grid container item className={classes.imagePanel} direction="column" justifyContent="flex-start" alignItems="flex-start">
       <Box p={1}>
         <Grid container item className={classes.buttonSet}>
-          {Object.entries(content).map(([key, val]) => (
-            <Box m={1}>
-              <Grid item style={{ marginRight: "1rem" }}>
+          {Object.entries(content).map(([key, val], index) => (
+            <Box m={1} key={index}>
+              <Grid item style={{ marginRight: "1rem", color: "#cfc2c2" }}>
                 <Fab
                   variant="extended"
-                  color={activeReport === key ? "primary" : "textSecondary"}
+                  color={activeReport === key ? "primary" : "inherit"}
                   onClick={() => setActiveReport(key)}
                 >
                   {val.buttonText}
@@ -73,13 +73,11 @@ const ImagePanel = ({ content }) => {
 
 const ImageContainer = ({ content, activeReport }) => {
   const classes = useStyles()
-  // const theme = useTheme();
-  // const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const images = content[activeReport].images;
 
   return <Grid container item className={classes.imagesContainer} justifyContent="center" alignItems="center">
     {images.map(({ imagePath, altText = "logo-default" }, index) => (
-      <Grid container item md={activeReport === "pdf" ? 4 : 12} justifyContent="center" alignItems="center" style={{ paddingBottom: "1rem" }}>
+      <Grid key={index} container item md={activeReport === "pdf" ? 4 : 12} justifyContent="center" alignItems="center" style={{ paddingBottom: "1rem" }}>
         <img loading="lazy" src={imagePath} alt={altText} className={classes.image} key={index} width={activeReport === "pdf" ? "90%" : "100%"} />
       </Grid>
     ))}

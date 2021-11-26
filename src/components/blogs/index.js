@@ -1,17 +1,12 @@
-import React, { useContext, useEffect} from 'react';
+import React from 'react';
 import HeroSection from './HeroSection';
 import Main from './Main';
-import { PageContext } from '../../App';
-
+import Grid from "@material-ui/core/Grid"
 
 export default function Blogs({ state, children }) {
-    // const {  setPage } = useContext(PageContext);
-    // useEffect(() => {
-    //     setPage("blogs")
-    // })
-    return <React.Fragment>
+
+    return <Grid container direction="column">
         <HeroSection state={state.HeroSection} />
         <Main state={state.Main} />
-        {children}
-    </React.Fragment>
+    </Grid>
 }

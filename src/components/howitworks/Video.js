@@ -39,14 +39,12 @@ export default function Video({ state: video }) {
           
         <Box justifyContent="center" width="80%">
             <iframe 
-            
             className={classes.video}
             width="100%"
             rel="preload"
-            
             src={video.videoPanel.videoLink}
             title={video.videoPanel.title}
-            frameborder="2"
+            frameBorder="2"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             ></iframe>

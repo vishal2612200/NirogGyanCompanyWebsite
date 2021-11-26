@@ -7,13 +7,13 @@ import Features from './Features';
 import Report from './Report';
 import Achievements from './Achievements';
 import ClientMessage from './ClientMessage';
-
+import Grid from "@material-ui/core/Grid";
 
 
 export default function Home({ state }) {
 
     return (
-        <React.Fragment>
+        <Grid container direction="column">
             <HeroSection state={state.HeroSection} />
             <Brand state={state.Brand} />
             <Features state={state.Features} />
@@ -22,5 +22,5 @@ export default function Home({ state }) {
             <Report state={state.Report} />
             <Achievements state={state.Achievements} />
             <ClientMessage state={state.ClientMessage} />
-        </React.Fragment>)
+        </Grid>)
 }

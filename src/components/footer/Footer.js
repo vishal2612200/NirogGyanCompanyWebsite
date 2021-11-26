@@ -3,7 +3,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
-import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import { NavLink } from "react-router-dom"
@@ -11,11 +10,9 @@ import { NavLink } from "react-router-dom"
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: "2rem 6rem 0rem 6rem",
+
         color: "#fff",
         backgroundColor: "#163B76",
-        "&>div": {
-            marginBottom: "2rem"
-        },
         [theme.breakpoints.down("sm")]: {
             textAlign: "center",
             justifyContent: "center",
@@ -77,7 +74,7 @@ const Block1 = ({ content, ...props }) => {
         <Grid item>
             <Typography variant="h6" component="div">
                 <Box fontWeight="fontWeightMedium" m={1} style={{ fontSize: "1rem" }}>
-                    {content.copyrightText}
+                    {content.copyrightText.map((item, index) => <Box key={index}>{item}</Box>)}
                 </Box>
             </Typography>
         </Grid>
@@ -95,7 +92,7 @@ const Block = ({ content, ...props }) => {
         <Grid container item direction="column">
 
             {content.items.map(({ link, text }, index) =>
-                <Grid item style={{ marginBottom: "1rem" }}>
+                <Grid key={index} item style={{ marginBottom: "1rem" }}>
                     <NavLink exact to={link} key={index}
                         className={isActive =>
                             isActive ? classes.activeNavItemsStyling : classes.inActiveNavItemsStyling
@@ -118,9 +115,11 @@ const Block4 = ({ content, ...props }) => {
         </Grid>
         <Grid container item direction="row" className={classes.icons} >
             {content.images.map(
-                ({ imagePath, altText = "logo-default", link }, index) => <Grid item ><a key={index} href={link} rel="noreferrer" target="_blank">
-                    <img loading="lazy" src={imagePath} alt={altText} />
-                </a></Grid>)}
+                ({ imagePath, altText = "logo-default", link }, index) => <Grid item key={index} >
+                    <a key={index} href={link} rel="noreferrer" target="_blank">
+                        <img loading="lazy" src={imagePath} alt={altText} />
+                    </a>
+                </Grid>)}
         </Grid>
     </Grid >
 }

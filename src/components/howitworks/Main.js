@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
   card1: {
     borderRadius: "50%",
     boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
-    width:"75%",
+    width: "75%",
     [theme.breakpoints.down("sm")]: {
-      marginTop:"44%",
-      width:"100%",
+      marginTop: "44%",
+      width: "100%",
     }
 
   },
@@ -68,7 +68,7 @@ export default function Main({ state: main }) {
   const { ref: refSoftware, inView: inViewSoftware } = useInView({ threshold: 0.6 });
   const { ref: refReport, inView: inViewReport } = useInView({ threshold: 0.4 });
   const { ref: refCustomer, inView: inViewCustomer } = useInView({ threshold: 0.6 });
- 
+
   return (
     <Grid container className={classes.root} justifyContent="center" >
       <HeadingWithText content={main.header} />
@@ -79,12 +79,12 @@ export default function Main({ state: main }) {
 
             <Grid item container style={{ marginTop: "15%" }} xs={8}>
               <Grid item>
-                <Typography variant="h4" color="textPrimary">
+                <Typography variant="h4" color="textPrimary" component="div">
                   <Box fontWeight="fontWeightMedium" m={1}>
                     {main.cardsList[0].heading}
                   </Box>
                 </Typography>
-                <Typography variant="paragraph" color="textSecondary" >
+                <Typography color="textSecondary" component="div">
                   <Box m={1} style={{ marginTop: "5%" }}>
                     {main.cardsList[0].description}
                   </Box>
@@ -110,7 +110,7 @@ export default function Main({ state: main }) {
         </Grid>
         <Grid container item className={classes.oddCard}>
           <Image reference={refSoftware} inView={inViewSoftware} image={main.cardsList[1].image} />
-          <Grid container item xs={7} alignContent="left" >
+          <Grid container item xs={7}  >
             <Hidden smDown>
               <Grid item xs={3}></Grid>
             </Hidden>
@@ -121,7 +121,7 @@ export default function Main({ state: main }) {
                   {main.cardsList[1].heading}
                 </Box>
               </Typography>
-              <Typography variant="paragraph" color="textSecondary" >
+              <Typography color="textSecondary" component="div" >
                 <Box m={1} style={{ marginTop: "5%" }}>
                   {main.cardsList[1].description}
                 </Box>
@@ -131,7 +131,7 @@ export default function Main({ state: main }) {
         </Grid>
 
         <Grid container item className={classes.evenCard}>
-            <Image reference={refReport} inView={inViewReport} image={main.cardsList[2].image} />
+          <Image reference={refReport} inView={inViewReport} image={main.cardsList[2].image} />
           <Grid container item xs={7} >
             <Grid item xs={8}>
               <Typography variant="h4" color="textPrimary" style={{ marginTop: "15%" }}>
@@ -139,7 +139,7 @@ export default function Main({ state: main }) {
                   {main.cardsList[2].heading}
                 </Box>
               </Typography>
-              <Typography variant="paragraph" color="textSecondary" >
+              <Typography color="textSecondary" component="div">
                 <Box m={1} style={{ marginTop: "5%" }}>
                   {main.cardsList[2].description}
                 </Box>
@@ -161,7 +161,7 @@ export default function Main({ state: main }) {
 
         <Grid container item className={classes.oddCard}>
           <Image reference={refCustomer} inView={inViewCustomer} image={main.cardsList[3].image} />
-          <Grid container item xs={7} alignContent="left">
+          <Grid container item xs={7} >
             <Hidden smDown>
               <Grid item container xs={3}>
                 <Grid item md={11}></Grid>
@@ -176,27 +176,27 @@ export default function Main({ state: main }) {
                   {main.cardsList[3].heading}
                 </Box>
               </Typography>
-              <Typography variant="paragraph" color="textSecondary" >
-                <Box m={1} style={{ marginTop: "5%" }}>
-                  {main.cardsList[3].description}
-                </Box>
-              </Typography>
-              <Hidden smDown>
-                <Box m={1} style={{ marginTop: "8%", marginLeft: "-2%" }}>
-                  <img width="100%" src={main.cardsList[3].arrowPath} alt="doctor" />
-                </Box>
-              </Hidden>
-            </Grid>
+              <Typography component="div" color="textSecondary" >
+              <Box m={1} style={{ marginTop: "5%" }}>
+                {main.cardsList[3].description}
+              </Box>
+            </Typography>
+            <Hidden smDown>
+              <Box m={1} style={{ marginTop: "8%", marginLeft: "-2%" }}>
+                <img width="100%" src={main.cardsList[3].arrowPath} alt="doctor" />
+              </Box>
+            </Hidden>
           </Grid>
         </Grid>
       </Grid>
     </Grid>
+    </Grid >
   );
 }
 
 const Image = ({ reference, inView, image: { imagePath, altText } }) => {
   const classes = useStyles();
   return <Grid item xs={5} ref={reference} >
-    <img src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")}   alt={altText} />
+    <img src={imagePath} className={clsx(classes.card1, inView ? "background-change" : "")} alt={altText} />
   </Grid>
 }

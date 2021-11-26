@@ -1,50 +1,16 @@
 const heroImage = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/hero-image.svg"
 
-const brandAlArab = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-1.jpg"
-const brandMax = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-2.jpg"
-const brandDang = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-3.jpg"
-const brandCrelio = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-4.jpg"
-const brandIqvia = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-5.jpg"
-const brandItdose = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-6.jpg"
-const brandPracto = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-7.jpg"
-
-
-const marketCardItem1 = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/market-card-item-1.png"
-const marketBackground = "https://dn96iqv3kf32j.cloudfront.net/about/static/imgs/market-background.svg"
-
 
 
 
 const servicesPdfWhatsapp = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-pdf-whatsapp.png"
-const servicesMarketing = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-marketing.png"
 const servicesAffordable = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-affordable.png"
 const servicesBackground = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-background.png"
 const servicesTemplates = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-templates.png"
 const servicesCorporateOfferings = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-corporate-offerings.png"
 const servicesInstant = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-instant.png"
 
-const reportVitamin = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-vitamin.png"
-const reportKidney = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-kidney.png"
-const reportLipid = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-electrolyte.png"
-const reportDiabetes = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-diabetes.png"
 
-const reportPdfVitamin = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-vitamin.png"
-const reportPdfKidney = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-kidney.png"
-const reportPdfLiver = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-diabetes.png"
-const reportPdfCovid = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/report-pdf-lipid.png"
-
-const achievementsBackground = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/achievements-background.svg"
-
-const clientMessage0 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-0.png"
-const clientMessage1 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-1.png"
-const clientMessage2 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-2.png"
-const clientMessage3 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-3.png"
-const clientMessage4 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-4.png"
-const clientMessage5 = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-5.png"
-const clientMessageBackground = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/client-message-background.png"
-
-
-const featuresBig = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-background.svg"
 
 const getInTouch1 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-1.svg"
 const getInTouch2 = "https://dn96iqv3kf32j.cloudfront.net/getintouch/static/imgs/get-in-touch-2.svg"
@@ -54,28 +20,156 @@ const solutions = {
     self: { url: "/solutions/", text: "Solutions", onNavbar: true },
     subLinks: [
         { url: "/solutions/labs", text: "Labs" },
-         { url: "/solutions/doctors", text: "Doctors" },
-         { url: "/solutions/corporates", text: "Corporates" },
+        { url: "/solutions/doctors", text: "Doctors" },
+        { url: "/solutions/corporates", text: "Corporates" },
     ],
     HeroSection: {
         contentLeft: {
-            heading: { line1: "Smart Wellbeing", line2: "-" },
+            heading: { line1: "Introduction", line2: "" },
             descriptions: [
-                "Are you planning to adopt modern technology for your lab? Don’t wait any further, just go for it!!. Our smart report features along with a lab report software is a key foundation for new age diagnostics. Modern lab report is increasing the importance and power of diagnostics in the health sector. Time has come for your medical lab test reports to take a leap forward from the outdated style of your grandparents' time to a more patient centric and dynamic style.",
+                [{ text: "Looking at modern technology-based solutions to automate lab processes ?", style: { display: "block" } },
+                { text: "Patients cribbing about the quality of their medical lab test reports ?", style: { display: "block" } },
+                { text: "Medical marketing campaigns getting stagnant with generic content?" }],
+                [{ text: "These problems require innovative solutions.Look no further as we have the friend every new-age diagnostics provider needs: the SMART REPORT." }],
+                [{ text: "The ultimate lab reporting software that helps you take a leap forward from an outdated format to a more patient- centric and dynamic style." }]
+            ]
+        },
+        contentRight: {
+            image: {
+                imagePath: heroImage,
+                altText: "hero"
+            }
+        },
+        linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
+    },
+    Services: {
+        header: {
+            heading: [
+                { text: "Simple Information with World Class-Design" },
+                { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "700" } }
             ],
-            buttons: {
-                services: {
-                    text: "Our Services",
-                    link: "https://linktr.ee/niroggyan"
+            description:
+                "We’ve put 3 years to guarantee you the best user-experience in lab reporting.",
+        },
+        cardsList: [
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: "Simple Content with world-class Design",
+                content: "We give to the point, clear and reliable information to the patients. Our visuals are self explanatory which takes customer’s experience to a new level.",
+            },
+            {
+                image: { imagePath: servicesTemplates, altText: "reports" },
+                heading: "Print and Digital(Whatsapp, SMS, E-mail, Print, App) ",
+                content: "Our patient friendly lab reports are accessible to the patients the way they want. Smart reports are more convenient and give personalized experience to patients, doctors as well as diagnostic labs.",
+            },
+            {
+                image: { imagePath: servicesInstant, altText: "instant" },
+                heading: "Advanced Analytics",
+                content: "See where you can create the maximum impact for your patients, and your business.",
+            },
+            {
+                image: { imagePath: servicesPdfWhatsapp, altText: "PdfWhatsapp" },
+                heading: "Instant & Automated",
+                content: "Zero change in lab workflow, and elaborate LIMS integration to give you completely automated and instant online reports.",
+            },
+            {
+                image: { imagePath: servicesAffordable, altText: "Affordable" },
+                heading: "Unique White Label Lab Branding",
+                content: "Let your e-lab report shine with your own unique brand colors, logos and formatting style. Our software, your brand.",
+            },
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: "Budget-friendly",
+                content: "We are value-for-money to all clients across the world.",
+            },
+        ],
+        backgroundImage: servicesBackground
+
+    },
+    SmartReportTypes: {
+
+        header: {
+            heading: [{ text: "Different types of Smart Reports" }],
+            description: "We’ve put 3 years to guarantee you the best user-experience in lab reporting.",
+        },
+        cardsList: [
+            [{
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: {
+                    text: "Advanced",
+                    url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view",
                 },
-                calendly: {
-                    text: "E-Meet Us",
-                    link: "https://calendly.com/niroggyan_reports"
+                content: [{ text: "Comprehensive reports for those who want to know the most about their tests and results, with simple explanations for all biomarkers, large visuals, and elaborate tips(causes, symptoms, diet and lifestyle tips relevant for disease profiles)." }]
+            },
+
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: {
+                    text: "Compact",
+                    url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view",
                 },
-                watchVideo: {
-                    text: "Watch Video",
-                    link: "https://linktr.ee/niroggyan"
-                }
+                content: [{ text: "Simple and tabular Smart Reports for those who want to quickly check their visualised results.Customisable and with compact graphs, short tips, minimal text and lesser pages." }]
+            },
+
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: {
+                    text: "Dynamic",
+                    url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view",
+                },
+                content: [{ text: "Highlight elaborate information for all abnormal results, while normal values are represented in the ‘Compact’ way.It’s the ultimate tool to deliver personalised reports to users and get them to act on their problematic areas." }]
+            },
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: {
+                    text: "Trend Report(historical analysis)",
+                    url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view",
+                },
+                content: [{ text: "Graphical representation of disease progression.We show the patient's medical report data from past to present in a single picture. Helps both patients and doctors to keep track of biomarkers and measure effectiveness of treatments over time." }]
+            }
+            ],
+            [{
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: {
+                    text: "Body Summary(add-on)",
+                    url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view",
+                },
+                content: [{ text: "All test results represented on a digital human body, with their respective profiles and organs." }]
+            },
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: {
+                    text: "Smart Reports in other languages",
+                    url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view",
+                },
+                content: [{ text: "1) Hindi", style: { display: "block" } }, { text: "2) Arabic", style: { display: "block" } }],
+            },
+
+            {
+                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
+                heading: {
+                    text: "Summary(add-on)",
+                    url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view",
+                },
+                content: [{ text: "Entire report summarised in a couple of pages, with focus on the out-of-range biomarkers." }]
+            },
+
+            ]
+        ],
+        backgroundImage: servicesBackground
+
+    },
+    OurReports: {
+        contentLeft: {
+            content: {
+                heading: "Our Reports",
+                description: [
+                    { text: "🏥 Never give prescriptions to patients but bring awareness to them so that they know when to consult a doctor." },
+                    { text: "🏥 supports preventive health and empowers patients to take charge of their health." },
+                    { text: "🏥 Provide accurate medical facts relevant to the patient's health status. We never give incomplete and confusing information to patients." },
+                    { text: "🏥 Highlighting Data Analytics " },
+                    { text: "🏥 Clients logo" },
+                ]
             }
         },
         contentRight: {
@@ -107,47 +201,8 @@ const solutions = {
         },
         linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
     },
-    OurReports: {
-        contentLeft: {
-            content: {
-                heading: "Our Reports",
-                description: [
-                    { text: "🏥 Never give prescriptions to patients but bring awareness to them so that they know when to consult a doctor." },
-                    { text: "🏥 supports preventive health and empowers patients to take charge of their health." },
-                    { text: "🏥 Provide accurate medical facts relevant to the patient's health status. We never give incomplete and confusing information to patients." },
-                    { text: "🏥 Highlighting Data Analytics " },
-                    { text: "🏥 Clients logo" },
-                ]
-            }
-        },
-        contentRight: {
-            image: {
-                imagePath: heroImage,
-                altText: "hero"
-            }
-        },
-        linearGradient: "linear-gradient(to right, #455BCD, #52BBE8)"
-    },
 
-    SmartReportTypes: {
-        contentLeft: {
-            content: {
 
-                heading: "Different types of Smart Reports",
-
-                description: [
-                    { url: "https://drive.google.com/file/d/1ECRdR74lhZZkFGmgEScEX_kkndA1Pfe0/view", text: "🏥 Advanced Smart Report" },
-                    { url: "https://drive.google.com/file/d/1GqwSoSYf-Lr5ul1F3dOdBvErfL--yOxa/view", text: "🏥 Compact Smart Report" },
-                    { url: "https://drive.google.com/file/d/1rpQ70lC5xKwND7j2VDK1s5J2Rvh2OKB7/view", text: "🏥 Dynamic Smart Report" },
-                    { url: "https://drive.google.com/file/d/1r59UUrtsCO_DzJelT-1Cx6HzGWfrmbft/view", text: "🏥 Smart Summary Report" },
-                    { url: "https://drive.google.com/file/d/1DsOoghabqchcCDrrt8AstwcRMdKVrtrx/view", text: "🏥 Covid Smart Report" }
-                ]
-            }
-        },
-        contentRight: {
-            image: { imagePath: heroImage, altText: "believeBackground" },
-        }
-    },
     WhyChooseUs: {
         contentLeft: {
 
@@ -184,76 +239,6 @@ const solutions = {
         },
         block3: {
             imagePath: getInTouch2,
-        }
-    },
-    Services: {
-        header: {
-            heading: [
-                { text: "Simple Information with World Class-Design" },
-                { text: "Engage Patients", style: { color: "#3567D6", fontWeight: "700" } }
-            ],
-            description:
-                "We’ve put 3 years to guarantee you the best user-experience in lab reporting.",
-        },
-        cardsList: [
-            {
-                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
-                heading: "Simple Information with World Class-Design",
-                content: "We give to the point, clear and reliable information to the patients. Our visuals are self explanatory which takes customer’s experience to a new level.",
-            },
-            {
-                image: { imagePath: servicesTemplates, altText: "reports" },
-                heading: "Print and Digital (PDF, App, Whatsapp, E-mail)",
-                content: "Our patient friendly lab reports are accessible to the patients the way they want. Smart reports are more convenient and give personalized experience to patients, doctors as well as diagnostic labs.",
-            },
-            {
-                image: { imagePath: servicesInstant, altText: "instant" },
-                heading: "Advanced Analytics Tracking Dashboard",
-                content: "Our software converts random medical data into a piece of meaningful and useful information. ",
-            },
-            {
-                image: { imagePath: servicesPdfWhatsapp, altText: "PdfWhatsapp" },
-                heading: "Instant and Automated Available",
-                content: "let your e-lab report shine with your own unique brand colors, logos and formatting style. It is metaphorically like your lab test reports presenting niroggyan’s curated content in your brand’s own voice.",
-            },
-            {
-                image: { imagePath: servicesAffordable, altText: "Affordable" },
-                heading: "Unique White Label Lab Branding",
-                content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
-            },
-            {
-                image: { imagePath: servicesCorporateOfferings, altText: "CorporateOfferings" },
-                heading: "Super Affordable",
-                content: "We are committed to provide value for money to our clients around the world. We know how to make pocket friendly modern lab reports.",
-            },
-        ],
-        backgroundImage: servicesBackground
-
-    },
-    Market: {
-        contentLeft: {
-            heading: { line1: "Smart Wellbeing", line2: "-" },
-            descriptions: [
-                "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-                "For effective healthcare, it is crucial that correct and easily-to-follow medical information reaches patients every time. NirogGyan helps you achieve just that with Smart Reports.",
-            ],
-            buttons: {
-                services: {
-                    text: "Our Services",
-                    link: "https://linktr.ee/niroggyan"
-                },
-                calendly: {
-                    text: "E-Meet Us",
-                    link: "https://calendly.com/niroggyan_reports"
-                },
-                watchVideo: {
-                    text: "Watch Video",
-                    link: "https://linktr.ee/niroggyan"
-                }
-            }
-        },
-        contentRight: {
-            image: { imagePath: marketBackground, altText: "marketBackground" },
         }
     },
 

@@ -106,7 +106,7 @@ const ContentLeft = ({ content }) => {
             {date}
           </Typography>
         </Grid>
-        <Grid item className={classes.commonmargin}>
+        <Grid item className={classes.commonmargin} >
           <Typography variant="h4">
             {content.heading}
           </Typography>
@@ -162,7 +162,10 @@ const ContentRight = ({ content }) => {
       return <Grid container item className={classes.commonmargin}>
         {
           cardsList.map(
-            (props, index) => <card.type  {...props} key={index} />
+            (props, index) => {
+              let p = { ...props, key: index }
+              return <card.type  {...p} />
+            }
           )
         }
       </Grid>
@@ -190,12 +193,12 @@ const ContentRight = ({ content }) => {
         </Grid>
         <Grid item md={1}></Grid>
         <Grid item md={6} className={classes.textBox}>
-          <Typography paragraph color="textSecondary">
+          <Typography  color="textSecondary" component="div">
             <Box className={classes.datecss}>
-            {date}
+              {date}
             </Box>
           </Typography>
-          <Typography color="textPrimary" paragraph>
+          <Typography color="textPrimary" component="div">
             <Box fontWeight="fontWeightBold">
               {heading}
             </Box>

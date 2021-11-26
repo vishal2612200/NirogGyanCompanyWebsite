@@ -1,19 +1,15 @@
-import React, {useContext, useEffect} from 'react';
+import React from 'react';
 import HeroSection from './HeroSection';
 import FrequentQuestions from './FrequentQuestions';
 import Form from './Form';
-import { PageContext } from '../../App';
+import Grid from "@material-ui/core/Grid"
 
 
 export default function FAQS({ state, children }) {
-    // const { setPage } = useContext(PageContext);
-    // useEffect(() => {
-    //     setPage("faqs")
-    // })
-    return <React.Fragment>
+
+    return <Grid container direction="column">
         <HeroSection state={state.HeroSection} />
         <FrequentQuestions state={state.FrequentQuestions} />
         <Form state={state.Form} />
-        {children}
-    </React.Fragment>
+    </Grid>
 }

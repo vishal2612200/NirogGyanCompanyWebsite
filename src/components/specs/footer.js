@@ -6,7 +6,7 @@ const linkedin = "https://dn96iqv3kf32j.cloudfront.net/footer/static/imgs/linked
 const footer = {
     block1: {
         logoImage: logoIcon,
-        copyrightText: <>Copyright 2020 © NirogGyan<br />All rights reserved.</>,
+        copyrightText: ["Copyright 2020 © NirogGyan", "All rights reserved."],
     },
     block2: {
         heading: "Company",
@@ -18,7 +18,10 @@ const footer = {
     },
     block3: {
         heading: "Further information",
-        items: [{ text: "Terms of Services", link: "/terms-of-services" }, { text: "Privacy Policy", link: "/privacy-policy" }]
+        items: [
+            { text: "Terms of Services", link: "/terms-of-services" },
+            { text: "Privacy Policy", link: "/privacy-policy" }
+        ]
     },
     block4: {
         heading: "Community",

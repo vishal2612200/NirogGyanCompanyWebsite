@@ -46,7 +46,7 @@ const blogs = {
                                           are experiencing early signs of type-2 diabetes. Ay or Bee don’t spend
                                           any of their time exercising or being active in general.…`,
                     },
-                    readmore: <>Read More &rarr;</>,
+                    readmore: "Read More →",
                     blogurl: "https://niroggyan.medium.com/a-tale-of-two-reports-6c3e2fd9d600"
                 },
                 {
@@ -59,7 +59,7 @@ const blogs = {
                                           had been conducting for IQVIA — one of the largest health data science and 
                                           contract research organisations in the world. …`,
                     },
-                    readmore: <>Read More &rarr;</>,
+                    readmore: "Read More →",
                     blogurl: "https://niroggyan.medium.com/niroggyan-case-study-corporate-dbbac642f68d"
                 },
             ]

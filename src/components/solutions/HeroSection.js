@@ -1,9 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
-import Fab from "@material-ui/core/Fab";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
@@ -115,12 +113,15 @@ const ContentLeft = ({ content, ...props }) => {
   const classes = useStyles();
   return <Grid container item direction="column" className={classes.content} {...props}>
     <Grid item style={{ marginBottom: "12%" }}></Grid>
-    <Grid item >
+    <Grid item>
       <Heading text={content.heading} />
     </Grid>
-    <Grid item>
-      {content.descriptions.map((description, index) => <Description key={index} text={description} />)}
-    </Grid>
+    {content.descriptions.map((paragraph, index) => <Grid key={index} item>
+      <Typography variant="body2" style={{ fontSize: "1rem" }}>
+        <Description paragraph={paragraph} />
+      </Typography>
+    </Grid>)
+    }
   </Grid>
 }
 
@@ -135,7 +136,6 @@ const Heading = ({ text }) => {
         {text.line1}
       </Typography>
     </Grid>
-
     <Grid item >
       <Typography
         variant="h3"
@@ -147,65 +147,12 @@ const Heading = ({ text }) => {
 }
 
 
-const Description = ({ text }) => {
-  const classes = useStyles();
-  return <Grid container item className={classes.text} style={{ marginTop: "1%", marginBottom: "5%" }}>
-    <Typography variant="body2" style={{ fontSize: "1rem" }}>
-      {text}
-    </Typography>
-  </Grid>
+const Description = ({ paragraph }) => {
+  return paragraph.map(({ text, style = {} }, index) => style ?
+    <span key={index} style={style}> {`${text} `}</span> :
+    `${text} `
+  )
 }
-
-
-const ButtonSet = ({ content }) => {
-  const classes = useStyles();
-  return <Grid container item className={classes.buttonSet}>
-    <Grid item container md={8}>
-      <Grid item style={{ marginRight: "8px" }}>
-        <ButtonServices button={content.services} />
-      </Grid>
-      <Grid item>
-        <ButtonServices button={content.calendly} />
-      </Grid>
-    </Grid>
-
-
-    {/* <Grid item md={4}>
-     <ButtonWatchVideo text={content.watchVideo} /> 
-    </Grid> */}
-    <Grid item md={4}></Grid>
-  </Grid>
-}
-
-
-const ButtonServices = ({ button: { text, link } }) => {
-  const classes = useStyles();
-  return <Grid container item className={classes.buttonServicesContainer}>
-    <Fab variant="extended" color="primary" component={Link}
-      href={link}
-      rel="noreferrer"
-      target="_blank">
-      {text}
-    </Fab>
-  </Grid>
-}
-
-
-// const ButtonWatchVideo = ({ text }) => {
-//   const classes = useStyles();
-//   return <Grid container item className={classes.buttonWatchVideoContainer}>
-//     <Grid item>
-
-//       <IconButton className={classes.watchVideoButton} style={{ display: "inline-block", textAlign: "center" }}>
-//         <PlayCircleFilledIcon className={classes.videoButtonIcon} />
-//         <Typography variant="subtitle2" >
-//           {text}
-//         </Typography>
-//       </IconButton>
-//     </Grid>
-
-//   </Grid>
-// }
 
 
 const ContentRight = ({ content, ...props }) => {
