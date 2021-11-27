@@ -3,8 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import HeadingWithText from "../utils/HeadingWithText";
-// import Grow from "@material-ui/core/Grow"
-// import { useInView } from "react-intersection-observer"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -65,23 +63,20 @@ const CardsList = ({ cardsList }) => {
 const Card = ({ image: { imagePath, altText = "logo-default" }, heading, content }) => {
 
   const classes = useStyles();
-  // const [ref, inView] = useInView({
-  //   threshold: 0.2,
-  // })
 
   return (
-    <Grid container item direction="column" className={classes.serviceCard} alignItems="baseline" xs={12} sm={5}  >
-      {/* <Grow in={inView} {...(inView ? { timeout: 1000 } : {})} > */}
-        <Grid item >
-          <Grid item className={`${classes.serviceCard}__logo-box`} style={{ marginBottom: "1rem" }}>
-            <img loading="lazy" src={imagePath} alt={altText} width="60px" height="60px" />
-            <Typography variant="h5">{heading}</Typography>
-          </Grid>
-          <Grid item className={`${classes.serviceCard}__content`}>
-            <Typography variant="body1" color="textSecondary">{content}</Typography>
-          </Grid>
+    <Grid container item direction="column" className={classes.serviceCard} alignItems="baseline" xs={12} sm={5}  md={2} >
+      <Grid item >
+        <Grid item className={`${classes.serviceCard}__logo-box`} style={{ marginBottom: "1rem" }}>
+          <img loading="lazy" src={imagePath} alt={altText} width="60px" height="60px" />
+          <Typography variant="h5">
+            <a style={{textDecoration: "none"}} href={heading.url}> {heading.text}</a>
+          </Typography>
         </Grid>
-      {/* </Grow> */}
+        <Grid item className={`${classes.serviceCard}__content`}>
+          {content.map((text, index) => <Typography key={index} variant="body1" color="textSecondary">{text}</Typography>)}
+        </Grid>
+      </Grid>
     </Grid>
 
 

@@ -113,15 +113,12 @@ const ContentLeft = ({ content, ...props }) => {
   const classes = useStyles();
   return <Grid container item direction="column" className={classes.content} {...props}>
     <Grid item style={{ marginBottom: "12%" }}></Grid>
-    <Grid item>
+    <Grid item >
       <Heading text={content.heading} />
     </Grid>
-    {content.descriptions.map((paragraph, index) => <Grid key={index} item>
-      <Typography variant="body2" style={{ fontSize: "1rem" }}>
-        <Description paragraph={paragraph} />
-      </Typography>
-    </Grid>)
-    }
+    <Grid item>
+      {content.descriptions.map((description, index) => <Description key={index} text={description} />)}
+    </Grid>
   </Grid>
 }
 
@@ -136,6 +133,7 @@ const Heading = ({ text }) => {
         {text.line1}
       </Typography>
     </Grid>
+
     <Grid item >
       <Typography
         variant="h3"
@@ -147,11 +145,13 @@ const Heading = ({ text }) => {
 }
 
 
-const Description = ({ paragraph }) => {
-  return paragraph.map(({ text, style = {} }, index) => style ?
-    <span key={index} style={style}> {`${text} `}</span> :
-    `${text} `
-  )
+const Description = ({ text }) => {
+  const classes = useStyles();
+  return <Grid container item className={classes.text} style={{ marginTop: "1%", marginBottom: "5%" }}>
+    <Typography variant="body2" style={{ fontSize: "1rem" }}>
+      {text}
+    </Typography>
+  </Grid>
 }
 
 
