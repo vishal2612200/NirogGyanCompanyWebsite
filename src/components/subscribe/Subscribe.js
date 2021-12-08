@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
-import Grid  from "@material-ui/core/Grid";
+import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import axios from "axios";
 import "@fontsource/nunito-sans";
 import "@fontsource/open-sans";
 
@@ -136,20 +137,112 @@ const Block1 = ({ content, ...props }) => {
 const Block2 = ({ content, ...props }) => {
     const classes = useStyles()
     const [email, setEmail] = useState("")
-    return <Grid container item className={classes.block2} alignItems="center" justifyContent="center" {...props}>
-        <Grid item md={6} style={{ textAlign: "center" }}>
-            <input className={classes.input}
-                name="email"
-                value={email}
-                placeholder={content.placeholderText}
-                onChange={e => setEmail(e.target.value)} />
-        </Grid>
-        <Grid item md={6}>
-            <Button variant="contained" className={classes.button} type="submit">
-                {content.buttonText}
-            </Button>
-        </Grid>
+    const [emailError, setEmailError] = useState("")
+    const [showEmailError, setShowEmailError] = useState(false)
+    const [sendEmailStatus, setSendEmailStatus] = useState(false)
+    const [ip, setIP] = useState("");
 
-    </Grid>
+    const getIpData = async () => {
+        const res = await axios.get("https://geolocation-db.com/json/");
+        console.log(res.data);
+        setIP(res.data.IPv4);
+    };
+
+    useEffect(() => {
+        //passing getData method to the lifecycle method
+        getIpData();
+    }, []);
+
+
+    let todaysDate = new Date().toISOString().slice(0, 10)
+    let message = `\nNew Subscriber: "${email}"
+    \nIP Address: ${ip}
+    \nBrowser CodeName: ${navigator.appCodeName}
+    \nBrowser Name: ${navigator.appName}
+    \nBrowser Version: ${navigator.appVersion}
+    \nCookies Enabled: ${navigator.cookieEnabled}
+    \nUser-agent header: ${navigator.userAgent}
+    `
+
+    let formattedBody = `${message} \n\nThanks`
+    let mailToLink = `mailto:niroggyan.med@gmail.com?subject=Mailing List Subscription ${todaysDate}&body=${encodeURIComponent(encodeURI(formattedBody))}`
+
+    const validEmailHandler = () => {
+        console.log("valid email handler called.")
+        setSendEmailStatus(true)
+        let contentBeforeAt = email.split("@")[0]
+        let contentAfterAt = email.split("@")[1].toLowerCase()
+        let newEmail = `${contentBeforeAt}@${contentAfterAt}`
+        console.log("new email", newEmail)
+        setEmail(newEmail)
+        window.location.href = mailToLink;
+    }
+
+    const emailHandler = () => {
+
+        console.log("Email", email)
+        console.log("EmailError", emailError)
+        console.log("sendemail", sendEmailStatus)
+
+        if (email === "") {
+            setShowEmailError(true)
+            setEmailError("Email cannot be empty!")
+            setTimeout(() => {
+                setShowEmailError(false)
+            }, 3500)
+        }
+        if (email !== "") {
+            let findAtSymbol = email.indexOf("@")
+            if (findAtSymbol !== -1) {
+                console.log("yes @ is present.")
+                let requiredFormat = email.split("@")[1].toLowerCase()
+                if (requiredFormat === "gmail.com") {
+                    validEmailHandler()
+                } else {
+                    setShowEmailError(true)
+                    setEmailError("Invalid Email Provided!")
+                    setTimeout(() => {
+                        setShowEmailError(false)
+                    }, 3500)
+                }
+            } else {
+                setShowEmailError(true)
+                setEmailError("Invalid Email Provided!")
+                setTimeout(() => {
+                    setShowEmailError(false)
+                }, 3500)
+            }
+        }
+    }
+
+
+
+    return (
+        <Grid container item className={classes.block2} alignItems="center" justifyContent="center" {...props}>
+            <Grid item md={6} style={{ textAlign: "center" }}>
+                <input className={classes.input}
+                    name="email"
+                    value={email}
+                    placeholder={content.placeholderText}
+                    onChange={e => setEmail(e.target.value)} />
+                <div
+                    hidden={!showEmailError}
+                    style={{ fontSize: "12px", marginTop: "2px", color: "yellow" }}>
+                    <i className="fas fa-exclamation-triangle"></i> {emailError}</div>
+            </Grid>
+            <Grid item md={6}>
+                <Button variant="contained" className={classes.button}>
+                    {!sendEmailStatus ? <span onClick={emailHandler}>{content.buttonText}</span>
+                        :
+                        <span onClick={emailHandler}>{content.buttonText}</span>
+                    }
+                </Button>
+
+                {/* <Button variant="contained" className={classes.button} type="submit">
+                {content.buttonText}
+            </Button> */}
+            </Grid>
+        </Grid>
+    )
 
 }

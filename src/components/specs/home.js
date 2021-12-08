@@ -47,8 +47,6 @@ const clientMessageBackground = "https://dn96iqv3kf32j.cloudfront.net/home/stati
 
 const featuresBig = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/features-background.svg"
 
-
-
 export default (function () {
   return {
     DocumentHeader: {

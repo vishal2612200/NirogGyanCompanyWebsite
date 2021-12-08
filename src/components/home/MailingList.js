@@ -135,8 +135,15 @@ const Block1 = ({ content, ...props }) => {
 }
 
 const Block2 = ({ content, ...props }) => {
+
     const classes = useStyles()
     const [email, setEmail] = useState("")
+
+    let message = `Hi, im interested in your servies, pls accept my subscription. My email address is ${email}`
+
+    let formattedBody = `${message} \n\nThanks`
+    let mailToLink = `mailto:niroggyan.med@gmail.com?subject=Mailing List Subscription&body=${encodeURIComponent(formattedBody)}`
+
     return <Grid container item className={classes.block2} alignItems="center" justifyContent="center" {...props}>
         <Grid item md={6} style={{ textAlign: "center" }}>
             <input className={classes.input}
@@ -146,9 +153,12 @@ const Block2 = ({ content, ...props }) => {
                 onChange={e => setEmail(e.target.value)} />
         </Grid>
         <Grid item md={6}>
-            <Fab variant="extended" type="submit">
-                {content.buttonText}
+            <Fab variant="extended">
+                <a href={mailToLink} target="_blank">{content.buttonText}</a>
             </Fab>
+            {/* <Fab variant="extended" type="submit">
+                {content.buttonText}
+            </Fab> */}
             {/* <Button variant="contained" className={classes.button} type="submit">
                 {content.buttonText}
             </Button> */}
