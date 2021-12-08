@@ -20,6 +20,7 @@ import specsFooter from "./components/specs/footer"
 import specsNavbar from "./components/specs/navbar"
 // import specsGetInTouch from "./components/specs/getintouch"
 import specsSubscribe from "./components/specs/subscribe"
+import { Helmet } from "react-helmet";
 
 // import { makeStyles } from '@material-ui/core/styles';
 // import Card from "@material-ui/core/Card";
