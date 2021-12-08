@@ -22,9 +22,10 @@ export default function About({ state, children }) {
     return <React.Fragment>
         {/* <DocumentHeader state={state.DocumentHeader} /> */}
         <Helmet>
-            <title>{ state.DocumentHeader.title }</title>
-            <meta name="description" content={state.DocumentHeader.description} />
+            <title>{state.DocumentHeader.title}</title>
+            <meta property='og:description' content={state.DocumentHeader.description} />
             <link rel="canonical" href={state.DocumentHeader.canonical} />
+
         </Helmet>
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
