@@ -7,20 +7,28 @@ import Features from './Features';
 import Report from './Report';
 import Achievements from './Achievements';
 import ClientMessage from './ClientMessage';
-import DocumentHeader from '../utils/DocumentHeader';
+//import DocumentHeader from '../utils/DocumentHeader';
 
 export default function Home({ state }) {
 
     return (
-        <React.Fragment>
-            <DocumentHeader state={state.DocumentHeader} />
-            <HeroSection state={state.HeroSection} />
-            <Brand state={state.Brand} />
-            <Features state={state.Features} />
-            <Services state={state.Services} />
-            <Bytes state={state.Bytes} />
-            <Report state={state.Report} />
-            <Achievements state={state.Achievements} />
-            <ClientMessage state={state.ClientMessage} />
-        </React.Fragment>)
+        <div>
+            <Helmet>
+                <title>Home Page</title>
+                <meta name="description" content="description of home page" />
+                <link rel="canonical" href="https://www.niroggyan.com/" />
+
+                <React.Fragment>
+                    {/* <DocumentHeader state={state.DocumentHeader} /> */}
+                    <HeroSection state={state.HeroSection} />
+                    <Brand state={state.Brand} />
+                    <Features state={state.Features} />
+                    <Services state={state.Services} />
+                    <Bytes state={state.Bytes} />
+                    <Report state={state.Report} />
+                    <Achievements state={state.Achievements} />
+                    <ClientMessage state={state.ClientMessage} />
+                </React.Fragment>
+            </Helmet>
+        </div>)
 }
