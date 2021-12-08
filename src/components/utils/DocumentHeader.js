@@ -1,12 +1,15 @@
-import { Helmet } from "react-helmet";
+//import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function DocumentHeader({ state: documentHeader }) {
 
     return (
-        <Helmet>
-            <title>{ documentHeader.title }</title>
-            <meta name="description" content={documentHeader.description} />
-            <link rel="canonical" href={documentHeader.canonical} />
-        </Helmet>
+        <HelmetProvider>
+            <Helmet>
+                <title>{documentHeader.title}</title>
+                <meta name="description" content={documentHeader.description} />
+                <link rel="canonical" href={documentHeader.canonical} />
+            </Helmet>
+        </HelmetProvider>
     );
 }
