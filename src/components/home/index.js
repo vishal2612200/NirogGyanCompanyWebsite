@@ -7,20 +7,13 @@ import Features from './Features';
 import Report from './Report';
 import Achievements from './Achievements';
 import ClientMessage from './ClientMessage';
-//import DocumentHeader from '../utils/DocumentHeader';
-import { Helmet } from "react-helmet";
+import DocumentHeader from '../utils/DocumentHeader';
 
 export default function Home({ state }) {
 
     return (
-
         <React.Fragment>
-            <Helmet>
-                <title>Home Page</title>
-                <meta name="description" content="description of home page" />
-                <link rel="canonical" href="https://www.niroggyan.com/" />
-                {/* <DocumentHeader state={state.DocumentHeader} /> */}
-            </Helmet>
+            <DocumentHeader state={state.DocumentHeader} />
             <HeroSection state={state.HeroSection} />
             <Brand state={state.Brand} />
             <Features state={state.Features} />
@@ -29,6 +22,5 @@ export default function Home({ state }) {
             <Report state={state.Report} />
             <Achievements state={state.Achievements} />
             <ClientMessage state={state.ClientMessage} />
-        </React.Fragment>
-    )
+        </React.Fragment>)
 }
