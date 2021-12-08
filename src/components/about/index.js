@@ -8,6 +8,8 @@ import Market from './Market';
 import Believe from './Believe';
 import DocumentHeader from '../utils/DocumentHeader';
 import { PageContext } from '../../App';
+import { Helmet } from "react-helmet";
+
 
 export default function About({ state, children }) {
     const { setPage } = useContext(PageContext);
@@ -15,8 +17,15 @@ export default function About({ state, children }) {
         setPage("about")
     })
 
+    console.log("on about pagen\n", state.documentHeader.description)
+
     return <React.Fragment>
-        <DocumentHeader state={state.DocumentHeader} />
+        {/* <DocumentHeader state={state.DocumentHeader} /> */}
+        <Helmet>
+            <title>{ state.documentHeader.title }</title>
+            <meta name="description" content={state.documentHeader.description} />
+            <link rel="canonical" href={state.documentHeader.canonical} />
+        </Helmet>
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
         <Believe state={state.Believe} />
