@@ -17,14 +17,14 @@ export default function About({ state, children }) {
         setPage("about")
     })
 
-    console.log("on about pagen\n", state.documentHeader.description)
+    console.log("on about pagen\n", state.DocumentHeader.description)
 
     return <React.Fragment>
         {/* <DocumentHeader state={state.DocumentHeader} /> */}
         <Helmet>
-            <title>{ state.documentHeader.title }</title>
-            <meta name="description" content={state.documentHeader.description} />
-            <link rel="canonical" href={state.documentHeader.canonical} />
+            <title>{ state.DocumentHeader.title }</title>
+            <meta name="description" content={state.DocumentHeader.description} />
+            <link rel="canonical" href={state.DocumentHeader.canonical} />
         </Helmet>
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
