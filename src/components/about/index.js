@@ -23,9 +23,8 @@ export default function About({ state, children }) {
         {/* <DocumentHeader state={state.DocumentHeader} /> */}
         <Helmet>
             <title>{state.DocumentHeader.title}</title>
-            <meta property='og:description' content={state.DocumentHeader.description} />
-            <link rel="canonical" href={state.DocumentHeader.canonical} />
-
+            <meta name="description" content="All our exciting products for diagnostics services!" />
+            <meta name="title" description="NirogGyan" />
         </Helmet>
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
