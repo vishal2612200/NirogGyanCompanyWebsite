@@ -5,6 +5,7 @@ import blogs from "./blogs";
 import faqs from "./faqs";
 import termsOfServices from "./termsOfServices";
 import privacyPolicy from "./privacyPolicy";
+import solutions from "./solutions";
 
 export default (function () {
     return {
@@ -14,7 +15,7 @@ export default (function () {
         blogs,
         faqs,
         termsOfServices,
-        privacyPolicy
-
+        privacyPolicy,
+        solutions
     }
 })();

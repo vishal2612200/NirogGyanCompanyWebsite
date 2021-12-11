@@ -10,6 +10,7 @@ import {
 
 import Home from './components/home';
 import About from './components/about';
+import Solutions from './components/solutions';
 import HowItWorks from './components/howitworks';
 import Blogs from './components/blogs';
 import FAQS from './components/faqs';
@@ -195,7 +196,11 @@ function App() {
               </Route>
               <Route path="/privacy-policy">
                 <PrivacyPolicy state={state.privacyPolicy} />
+              </Route>              
+              <Route path="/solutions">
+                <Solutions state={state.solutions} />
               </Route>
+              
 
               <Route path="/">
                 <Home state={state.home} />

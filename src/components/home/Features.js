@@ -104,6 +104,9 @@ export default function Features({ state: features }) {
 
 
 const ContentLeft = ({ content }) => {
+
+  console.log("content on homepage", content)
+
   const classes = useStyles();
   // const [ref, inView] = useInView({
   //   threshold: 0.1,

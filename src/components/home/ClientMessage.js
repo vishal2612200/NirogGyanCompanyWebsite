@@ -91,6 +91,7 @@ const CardsList = ({ content }) => {
 
 
 const Card = ({ message, image: { imagePath, altText = "logo-default" }, name, organisation, }) => {
+    //console.log("message in card", message)
     const classes = useStyles();
     return (<Grid container item justifyContent="space-around" alignItems="center" className={classes.card} >
         <Grid item>

@@ -130,7 +130,7 @@ const ContentLeft = ({ content }) => {
     )
   }
 
-  const CardsList = ({ content }) => {
+  const CardsList = ({ content }) => {    
     return <Grid container item>
       {
         content.map((props, index) => (
