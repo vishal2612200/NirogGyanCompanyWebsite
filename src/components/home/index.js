@@ -8,12 +8,19 @@ import Report from './Report';
 import Achievements from './Achievements';
 import ClientMessage from './ClientMessage';
 import DocumentHeader from '../utils/DocumentHeader';
+import MetaTags from 'react-meta-tags';
 
 export default function Home({ state }) {
 
     return (
         <React.Fragment>
-            <DocumentHeader state={state.DocumentHeader} />
+            {/* <DocumentHeader state={state.DocumentHeader} /> */}
+            <MetaTags>
+                <title>NirogGyan Homepage</title>
+                <meta name="description" content="Some description." />
+                <meta property="og:title" content="MyApp" />
+            </MetaTags>
+
             <HeroSection state={state.HeroSection} />
             <Brand state={state.Brand} />
             <Features state={state.Features} />
