@@ -8,7 +8,6 @@ import Market from './Market';
 import Believe from './Believe';
 import DocumentHeader from '../utils/DocumentHeader';
 import { PageContext } from '../../App';
-import {ReactTitle} from 'react-meta-tags';
 
 export default function About({ state, children }) {
     const { setPage } = useContext(PageContext);
@@ -17,8 +16,7 @@ export default function About({ state, children }) {
     })
 
     return <React.Fragment>
-        {/* <DocumentHeader state={state.DocumentHeader} /> */}
-        <ReactTitle title="Page 2"/>
+        <DocumentHeader state={state.DocumentHeader} />
         <HeroSection state={state.HeroSection} />
         <Market state={state.Market} />
         <Believe state={state.Believe} />
