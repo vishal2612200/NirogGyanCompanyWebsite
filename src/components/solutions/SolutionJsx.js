@@ -16,7 +16,6 @@ import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import Button from '@mui/material/Button';
-import { Helmet } from "react-helmet";
 
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
@@ -104,13 +103,6 @@ const SolutionJsx = ({ state: pageData }) => {
 
     return (
         <div>
-
-            <Helmet>
-                <title>Solution Page</title>
-                <meta name="description" content="sol page description" />
-                <link rel="canonical" href="https://www.niroggyan.com/solutions" />
-                <meta name="theme-color" content="#008f68" />
-            </Helmet>
 
             {/* Introduction Component Starts */}
             <div>
@@ -283,11 +275,11 @@ const SolutionJsx = ({ state: pageData }) => {
                                                 each.languageDetails.map(every => (
                                                     <span>
                                                         <ul class="fa-ul">
-                                                            <li style={{ display: "flex" }}>
+                                                            <li style={{ display: "flex"}}>
                                                                 <Avatar sx={{ bgcolor: deepPurple[500] }} style={{ padding: "5px" }}>{every.letter}</Avatar>
                                                                 <div style={{ margin: "12px 0px 0px 5px" }}>{every.name}</div>
                                                             </li>
-                                                        </ul>
+                                                        </ul>                                                      
                                                     </span>
 
                                                 ))

@@ -13,7 +13,7 @@ export default function Home({ state }) {
 
     return (
         <React.Fragment>
-            {/* <DocumentHeader state={state.DocumentHeader} /> */}
+            <DocumentHeader state={state.DocumentHeader} />
             <HeroSection state={state.HeroSection} />
             <Brand state={state.Brand} />
             <Features state={state.Features} />
