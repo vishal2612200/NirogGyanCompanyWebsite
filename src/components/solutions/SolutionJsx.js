@@ -104,6 +104,13 @@ const SolutionJsx = ({ state: pageData }) => {
     return (
         <div>
 
+            <Helmet>
+                <title>Solution Page</title>
+                <meta name="description" content="sol page description" />
+                <link rel="canonical" href="https://www.niroggyan.com/solutions" />
+                <meta name="theme-color" content="#008f68" />
+            </Helmet>
+
             {/* Introduction Component Starts */}
             <div>
                 <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="introComponentCss">
@@ -275,11 +282,11 @@ const SolutionJsx = ({ state: pageData }) => {
                                                 each.languageDetails.map(every => (
                                                     <span>
                                                         <ul class="fa-ul">
-                                                            <li style={{ display: "flex"}}>
+                                                            <li style={{ display: "flex" }}>
                                                                 <Avatar sx={{ bgcolor: deepPurple[500] }} style={{ padding: "5px" }}>{every.letter}</Avatar>
                                                                 <div style={{ margin: "12px 0px 0px 5px" }}>{every.name}</div>
                                                             </li>
-                                                        </ul>                                                      
+                                                        </ul>
                                                     </span>
 
                                                 ))
