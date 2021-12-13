@@ -21,6 +21,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
 import ButtonBase from '@mui/material/ButtonBase';
+import { useHistory } from "react-router-dom";
 
 
 const Img = styled('img')({
@@ -96,6 +97,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const SolutionJsx = ({ state: pageData }) => {
 
+    let history = useHistory()
     const classes = useStyles();
     console.log("pageData \n", pageData)
 
@@ -150,7 +152,11 @@ const SolutionJsx = ({ state: pageData }) => {
 
             <div style={{ display: "flex", justifyContent: "center" }}>
                 {pageData.redirectLinks.map(each => (
-                    <BootstrapButton disableRipple id="redirect-button-css" variant="contained">{each.linkName}</BootstrapButton>
+                    <BootstrapButton
+                        onClick={() => window.open(`${each.linkAddress}`, "_blank")}
+                        disableRipple id="redirect-button-css" variant="contained">
+                        {each.linkName}
+                    </BootstrapButton>
                 ))}
             </div>
 
@@ -275,11 +281,11 @@ const SolutionJsx = ({ state: pageData }) => {
                                                 each.languageDetails.map(every => (
                                                     <span>
                                                         <ul class="fa-ul">
-                                                            <li style={{ display: "flex"}}>
+                                                            <li style={{ display: "flex" }}>
                                                                 <Avatar sx={{ bgcolor: deepPurple[500] }} style={{ padding: "5px" }}>{every.letter}</Avatar>
                                                                 <div style={{ margin: "12px 0px 0px 5px" }}>{every.name}</div>
                                                             </li>
-                                                        </ul>                                                      
+                                                        </ul>
                                                     </span>
 
                                                 ))

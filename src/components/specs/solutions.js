@@ -28,9 +28,9 @@ export default (function () {
                 introImage: "https://i.ibb.co/TqQm6pY/1-Laptop-Book-Pro-1.png"
             },
             redirectLinks: [
-                { linkName: "Labs", linkAddress: "" },
-                { linkName: "Doctors", linkAddress: "" },
-                { linkName: "Corporates", linkAddress: "" },
+                { linkName: "Labs", linkAddress: "https://brochure.niroggyan.com" },
+                { linkName: "Doctors", linkAddress: "https://brochure.niroggyan.com" },
+                { linkName: "Corporates", linkAddress: "https://brochure.niroggyan.com" },
             ],
             mainHeading: "Features of NirogGyan Smart Reports",
             infoText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a nisi ac metus vehicula sodales sed ut nisi.",
