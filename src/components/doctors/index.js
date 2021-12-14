@@ -1,9 +1,9 @@
 import React, {useContext, useEffect} from 'react';
 import { PageContext } from '../../App';
 import DocumentHeader from '../utils/DocumentHeader';
-import SolutionJsx from './SolutionJsx';
+import DoctorsJsx from './DoctorsJsx';
 
-export default function Solutions({ state, children }) {
+export default function Doctors({ state, children }) {
     const { setPage } = useContext(PageContext);
     useEffect(() => {
         setPage("solutions")
@@ -11,7 +11,7 @@ export default function Solutions({ state, children }) {
 
     return <React.Fragment>
         <DocumentHeader state={state.DocumentHeader} />
-        <SolutionJsx state={state.PageContentHolder} />
+        <DoctorsJsx state={state.PageContentHolder} />
         {children}
     </React.Fragment>
 }

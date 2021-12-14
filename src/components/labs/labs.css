@@ -1,0 +1,225 @@
+/* MOBILE CSS (BELOW) */
+
+@media (max-width: 600px) {
+  #whyChooseUs-image-css {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #introComponentCss {
+    background-color: #f1f4f5;
+    margin-bottom: 40px;
+  }
+
+  #sol-page-heading-css {
+    margin: 50px 0px 0px 0px;
+    font-size: 18px;
+    display: flex;
+    font-weight: 500;
+    padding: 12px;
+    justify-content: center;
+  }
+
+  #sol-page-info-text-css {
+    font-size: 12px;
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    color: #7d7987;
+  }
+
+  #intro-title-css {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  #intro-points-css {
+    font-size: 16px;
+    color: #606262;
+  }
+
+  #intro-sub-heading-css {
+    font-size: 12px;
+    margin-top: 12px;
+    color: #888b8b;
+  }
+
+  #intro-image-resol-css {
+    margin-bottom: -33px;
+  }
+
+  #redirect-button-css {
+    border: 1px solid #f7f7f7;
+    background-color: #fafafa;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    border-radius: 22px;
+  }
+
+  #redirect-button-css:hover {
+    border: 1px solid #3567d6;
+    background-color: #3567d6;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    border-radius: 22px;
+  }
+
+  #whyChooseUs-background-css {
+    background-color: #f1f4f5;
+  }
+
+  #whyChooseUs-heading-css {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #whyChooseUs-numbers-css {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 10px 0px 0px;
+  }
+
+  #whyChooseUs-reason-css {
+    text-align: justify;
+    font-size: 12px;
+    color: #606262;
+    margin: 10px 0px 0px 0px;
+  }
+
+  #whyChooseUs-image-css {
+    height: 12rem;
+    position: relative;
+    margin-bottom: 26px;
+    float: right;
+    display: none;
+  }
+
+  #report-type-heading-css {
+    margin: 20px 0px 20px 0px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+}
+
+/* DESKTOP CSS (BELOW) */
+
+@media not all and (max-width: 500px) {
+  #introComponentCss {
+    background-color: #f1f4f5;
+    margin-bottom: 60px;
+  }
+
+  #sol-page-heading-css {
+    margin: 70px 0px 0px 0px;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+
+  #sol-page-info-text-css {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    color: #7d7987;
+    margin: 18px 0px 18px 0px;
+  }
+
+  #intro-title-css {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  #intro-points-css {
+    font-size: 16px;
+    color: #606262;
+  }
+
+  #intro-sub-heading-css {
+    font-size: 14px;
+    margin-top: 12px;
+    color: #888b8b;
+  }
+
+  #intro-image-resol-css {
+    margin-bottom: -54px;
+    filter: brightness(1.12);
+    margin-right: 32px;
+  }
+
+  #intro-contents-resol-css {
+    padding: 42px;
+  }
+
+  #redirect-button-css {
+    border: 1px solid #f7f7f7;
+    background-color: #fafafa;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    border-radius: 22px;
+  }
+
+  #redirect-button-css:hover {
+    border: 1px solid #3567d6;
+    background-color: #3567d6;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    border-radius: 22px;
+  }
+
+  #whyChooseUs-background-css {
+    background-color: #f1f4f5;
+  }
+
+  #whyChooseUs-heading-css {
+    font-size: 34px;
+    font-weight: bold;
+  }
+
+  #whyChooseUs-numbers-css {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 10px 0px 0px;
+  }
+
+  #whyChooseUs-reason-css {
+    text-align: justify;
+    font-size: 14px;
+    color: #606262;
+    margin: 10px 0px 0px 0px;
+  }
+
+  #whyChooseUs-image-css {
+    height: 18rem;
+    position: relative;
+    top: 43%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  #report-type-heading-css {
+    margin: 40px 0px 20px 0px;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+}

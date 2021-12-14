@@ -6,6 +6,9 @@ import faqs from "./faqs";
 import termsOfServices from "./termsOfServices";
 import privacyPolicy from "./privacyPolicy";
 import solutions from "./solutions";
+import labs from './labs'
+import doctors from './doctors'
+import corporates from './corporates'
 
 export default (function () {
     return {
@@ -16,6 +19,9 @@ export default (function () {
         faqs,
         termsOfServices,
         privacyPolicy,
-        solutions
+        solutions,
+        labs,
+        doctors,
+        corporates
     }
 })();

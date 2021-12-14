@@ -10,12 +10,15 @@ import {
 
 import Home from './components/home';
 import About from './components/about';
-import Solutions from './components/solutions';
 import HowItWorks from './components/howitworks';
 import Blogs from './components/blogs';
 import FAQS from './components/faqs';
 import TermsOfServices from "./components/termsOfServices"
 import PrivacyPolicy from "./components/privacyPolicy"
+import Solutions from './components/solutions';
+import Labs from './components/labs';
+import Doctors from './components/doctors';
+import Corporates from './components/corporates';
 
 import specsFooter from "./components/specs/footer"
 import specsNavbar from "./components/specs/navbar"
@@ -199,6 +202,15 @@ function App() {
               </Route>              
               <Route path="/solutions">
                 <Solutions state={state.solutions} />
+              </Route>
+              <Route path="/labs">
+                <Labs state={state.labs} />
+              </Route>
+              <Route path="/doctors">
+                <Doctors state={state.doctors} />
+              </Route>
+              <Route path="/corporates">
+                <Corporates state={state.corporates} />
               </Route>
               
 

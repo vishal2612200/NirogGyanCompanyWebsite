@@ -10,7 +10,7 @@ const solpageBackgroundImage = "https://dn96iqv3kf32j.cloudfront.net/home/static
 export default (function () {
     return {
         DocumentHeader: {
-            title: "Solution Page",
+            title: "Solutions (labs, doctors, corporates)",
             description: "solution page description",
         },
         PageContentHolder: {
@@ -28,9 +28,9 @@ export default (function () {
                 introImage: "https://i.ibb.co/TqQm6pY/1-Laptop-Book-Pro-1.png"
             },
             redirectLinks: [
-                { linkName: "Labs", linkAddress: "https://brochure.niroggyan.com" },
-                { linkName: "Doctors", linkAddress: "https://brochure.niroggyan.com" },
-                { linkName: "Corporates", linkAddress: "https://brochure.niroggyan.com" },
+                { linkName: "Labs", linkAddress: "/labs" },
+                { linkName: "Doctors", linkAddress: "/doctors" },
+                { linkName: "Corporates", linkAddress: "/corporates" },
             ],
             mainHeading: "Features of NirogGyan Smart Reports",
             infoText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a nisi ac metus vehicula sodales sed ut nisi.",
@@ -68,7 +68,7 @@ export default (function () {
                 {
                     heading: "Budget-friendly",
                     description: "We are value-for-money and global by nature",
-                    featureImgLink: "https://i.ibb.co/X4nGwKZ/multiple-Report-pic.png"
+                    featureImgLink: "https://i.ibb.co/6srw8Hc/budget-friendly-pic.png"
                 },
             ],
             backgroundImage: solpageBackgroundImage,
@@ -81,16 +81,31 @@ export default (function () {
             ],
             chooseUsImage: "https://i.ibb.co/52rLnVQ/Group-6807-1.png",
             mainHeading3: "Report Types",
-            reportIcon: "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-pdf-whatsapp.png",
             reportTypes: [
-                { type: "Advanced", reportDes: "Comprehensive reports for those who want to know the most about their tests and results, with simple explanations for all biomarkers, large visuals, and elaborate tips (causes, symptoms, diet and lifestyle tips relevant for disease profiles)." },
-                { type: "Compact", reportDes: "Simple and tabular Smart Reports for those who want to quickly check their visualised results. Customisable and with compact graphs, short tips, minimal text and lesser pages." },
-                { type: "Dynamic", reportDes: "Highlight elaborate information for all abnormal results, while normal values are represented in the ‘Compact’ way. It’s the ultimate tool to deliver personalised reports to users and get them to act on their problematic areas." },
-                { type: "Covid", reportDes: "QR-code-enabled COVID reports, with self-care tips." },
-                { type: "Summary (add-on)", reportDes: "Entire report summarised in a couple of pages, with focus on the out-of-range biomarkers." },
-                { type: "Body Summary (add-on)", reportDes: "All test results represented on a digital human body, with their respective profiles and organs." },
-                { type: "Trend Report (historical analysis)", reportDes: "Graphical representation of disease progression. We show the patient's medical report data from past to present in a single picture. Helps both patients and doctors to keep track of biomarkers and measure effectiveness of treatments over time." },
+                { 
+                    imageUrl: "https://i.ibb.co/mB147sk/Advanced-Report-icon.jpg",
+                    type: "Advanced", reportDes: "Comprehensive reports for those who want to know the most about their tests and results, with simple explanations for all biomarkers, large visuals, and elaborate tips (causes, symptoms, diet and lifestyle tips relevant for disease profiles)." },
+                { 
+                    imageUrl: "https://i.ibb.co/RcZ6z0X/Compact-Report-icon.jpg",
+                    type: "Compact", reportDes: "Simple and tabular Smart Reports for those who want to quickly check their visualised results. Customisable and with compact graphs, short tips, minimal text and lesser pages." },
+                { 
+                    imageUrl: "https://i.ibb.co/SXKX79G/Dynamic-Reports-icon.jpg",
+                    type: "Dynamic", reportDes: "Highlight elaborate information for all abnormal results, while normal values are represented in the ‘Compact’ way. It’s the ultimate tool to deliver personalised reports to users and get them to act on their problematic areas." },
+                { 
+                    imageUrl: "https://i.ibb.co/mvfDsJh/COVID-reports-icon.jpg",
+                    type: "Covid", reportDes: "QR-code-enabled COVID reports, with self-care tips." },
+                { 
+                    imageUrl: "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-pdf-whatsapp.png",
+                    type: "Summary (add-on)", reportDes: "Entire report summarised in a couple of pages, with focus on the out-of-range biomarkers." },
+                { 
+                    imageUrl: "https://i.ibb.co/hLDyKbv/body-summary-icon.jpg",
+                    type: "Body Summary (add-on)", reportDes: "All test results represented on a digital human body, with their respective profiles and organs." },
+                { 
+                    imageUrl: "https://i.ibb.co/qy57qQD/Trend-Report-icon.jpg",
+                    type: "Trend Report (historical analysis)", reportDes: "Graphical representation of disease progression. We show the patient's medical report data from past to present in a single picture. Helps both patients and doctors to keep track of biomarkers and measure effectiveness of treatments over time." },
                 {
+                    
+                    imageUrl: "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-pdf-whatsapp.png",
                     type: "Smart Reports in other languages",
                     languageDetails: [
                         { name: " Hindi Language", letter: "हिन्दी" },
