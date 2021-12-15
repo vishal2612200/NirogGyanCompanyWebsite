@@ -7,12 +7,12 @@
 }
 
 @media (max-width: 500px) {
-  #introComponentCss {
+  #corporates-introComponentCss {
     background-color: #f1f4f5;
     margin-bottom: 60px;
   }
 
-  #sol-page-heading-css {
+  #corporates-page-heading-css {
     margin: 50px 0px 0px 0px;
     font-size: 18px;
     display: flex;
@@ -21,7 +21,7 @@
     justify-content: center;
   }
 
-  #sol-page-info-text-css {
+  #corporates-page-info-text-css {
     font-size: 12px;
     display: flex;
     padding: 12px;
@@ -103,7 +103,7 @@
     display: none;
   }
 
-  #report-type-heading-css {
+  #corporates-report-type-heading-css {
     margin: 20px 0px 20px 0px;
     font-size: 18px;
     display: flex;
@@ -115,25 +115,25 @@
 /* DESKTOP CSS (BELOW) */
 
 @media not all and (max-width: 500px) {
-  #introComponentCss {
+  #corporates-introComponentCss {
     background-color: #f1f4f5;
     margin-bottom: 60px;
   }
 
-  #sol-page-heading-css {
-    margin: 70px 0px 0px 0px;
+  #corporates-page-heading-css {
+    margin: 25px 0px 0px 0px;
     font-size: 34px;
     display: flex;
     justify-content: center;
     font-weight: 500;
   }
 
-  #sol-page-info-text-css {
+  #corporates-page-info-text-css {
     font-size: 16px;
     display: flex;
     justify-content: center;
     color: #7d7987;
-    margin: 18px 0px 18px 0px;
+    margin: 5px 0px 12px 0px;
   }
 
   #intro-title-css {
@@ -215,7 +215,7 @@
     transform: translateY(-50%) translateX(-50%);
   }
 
-  #report-type-heading-css {
+  #corporates-report-type-heading-css {
     margin: 40px 0px 10px 0px;
     font-size: 34px;
     display: flex;

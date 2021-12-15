@@ -30,6 +30,7 @@ export default (function () {
             ],
             brochureImage: "https://i.ibb.co/QJ3jrWM/niroggyanvitaminreport-1.png",
             brochureLink: "https://brochure.niroggyan.com/",
+            backgroundImage: "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/services-background.png",
             
             mainHeading2: "The Niro Advantage",
             mainHeading2InfoText: "Data Analytics Solutions (dashboard images & features explained & Adding Corporate Dashboard Explainer Video)",

@@ -119,7 +119,7 @@ const CorporatesJsx = ({ state: pageData }) => {
 
             {/* Introduction Component Starts */}
             <div>
-                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="introComponentCss">
+                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="corporates-introComponentCss">
                     <Grid container spacing={2}>
 
                         <Grid item xs={12} sm container>
@@ -155,7 +155,7 @@ const CorporatesJsx = ({ state: pageData }) => {
             {/* What we offer starts */}
 
             <div
-                id="report-type-heading-css"
+                id="corporates-report-type-heading-css"
             >
                 {pageData.mainHeading}
             </div>
@@ -218,11 +218,11 @@ const CorporatesJsx = ({ state: pageData }) => {
 
             {/* Niro Advantage Component Stars */}
 
-            <div id="sol-page-heading-css">
+            <div id="corporates-page-heading-css">
                 {pageData.mainHeading2}
             </div>            
 
-            <span id="sol-page-info-text-css">{pageData.mainHeading2InfoText}</span>
+            <span id="corporates-page-info-text-css">{pageData.mainHeading2InfoText}</span>
 
             <div className={classes.root2}
                 style={{ backgroundImage: `url(${pageData.backgroundImage})` }}>

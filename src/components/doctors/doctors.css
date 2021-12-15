@@ -7,9 +7,13 @@
 }
 
 @media (max-width: 500px) {
-  #introComponentCss {
+  #doctors-introComponentCss {
     background-color: #f1f4f5;
-    margin-bottom: 40px;
+  }
+
+  #doctor-image-css {
+    width: 320px;
+    height: 350px;
   }
 
   #sol-page-heading-css {
@@ -21,7 +25,7 @@
     justify-content: center;
   }
 
-  #sol-page-info-text-css {
+  #doctors-page-info-text-css {
     font-size: 12px;
     display: flex;
     padding: 12px;
@@ -99,8 +103,8 @@
     display: none;
   }
 
-  #report-type-heading-css {
-    margin: 20px 0px 0px 0px;
+  #doctors-report-type-heading-css {
+    margin: 15px 0px -5px 0px;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -111,9 +115,14 @@
 /* DESKTOP CSS (BELOW) */
 
 @media not all and (max-width: 500px) {
-  #introComponentCss {
+  #doctors-introComponentCss {
     background-color: #f1f4f5;
     /* margin-bottom: 50px; */
+  }
+
+  #doctor-image-css {
+    width: 320px;
+    height: 350px;
   }
 
   #sol-page-heading-css {
@@ -124,7 +133,8 @@
     font-weight: 500;
   }
 
-  #sol-page-info-text-css {
+  #doctors-page-info-text-css {
+    margin: 5px 0px 10px 0px;
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -177,8 +187,8 @@
     border-radius: 22px;
   }
 
-  #report-type-heading-css {
-    margin: 40px 0px 0px 0px;
+  #doctors-report-type-heading-css {
+    margin: 25px 0px 0px 0px;
     font-size: 34px;
     display: flex;
     justify-content: center;

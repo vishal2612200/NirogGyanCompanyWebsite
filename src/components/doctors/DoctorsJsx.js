@@ -119,7 +119,7 @@ const DoctorsJsx = ({ state: pageData }) => {
 
             {/* Introduction Component Starts */}
             <div>
-                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="introComponentCss">
+                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="doctors-introComponentCss">
                     <Grid container spacing={2}>
 
                         <Grid item xs={12} sm container>
@@ -143,7 +143,7 @@ const DoctorsJsx = ({ state: pageData }) => {
                         </Grid>
 
                         <Grid item>
-                            <Img style={{ width: "320px", height: "350px" }} alt="complex" src={pageData.introduction.introImage} />
+                            <Img id="doctor-image-css" alt="complex" src={pageData.introduction.introImage} />
                         </Grid>
                     </Grid>
                 </Paper>
@@ -152,16 +152,16 @@ const DoctorsJsx = ({ state: pageData }) => {
             {/* Introduction Component Ends */}
 
             <div
-                id="report-type-heading-css"
+                id="doctors-report-type-heading-css"
             >
                 {pageData.mainHeading}
             </div>
 
-            <span id="sol-page-info-text-css">{pageData.mainHeadingText}</span>
+            <span id="doctors-page-info-text-css">{pageData.mainHeadingText}</span>
 
 
             <div>
-                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="introComponentCss">
+                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="doctors-introComponentCss">
                     <Grid container spacing={2}>
 
                         <Grid item xs={12} sm container>

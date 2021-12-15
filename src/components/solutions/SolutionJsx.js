@@ -165,10 +165,11 @@ const SolutionJsx = ({ state: pageData }) => {
 
             {/* Features of Niroggyan Component Stars */}
 
-            <div id="sol-page-heading-css">
+            <div id="sol-page-heading">
                 {pageData.mainHeading}
             </div>
-            <span id="sol-page-info-text-css">{pageData.infoText}</span>
+            
+            <span id="sol-page-info-text">{pageData.infoText}</span>
 
             <div className={classes.root2}
                 style={{ backgroundImage: `url(${pageData.backgroundImage})` }}>

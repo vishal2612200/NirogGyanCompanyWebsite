@@ -124,14 +124,14 @@ const LabsJsx = ({ state: pageData }) => {
 
             {/* How it works Component Starts */}
             <div>
-                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="introComponentCss">
+                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="lab-introComponentCss">
                     <Grid container spacing={2}>
 
                         <Grid item xs={12} sm container>
-                            <Grid item xs container direction="column" spacing={2} id="intro-contents-resol-css">
+                            <Grid item xs container direction="column" spacing={2} id="lab-intro-contents-resol-css">
                                 <Grid item>
                                     <Typography gutterBottom variant="subtitle1" component="div">
-                                        <span id="intro-title-css">{pageData.mainHeading}</span>
+                                        <span id="lab-intro-title-css">{pageData.mainHeading}</span>
                                     </Typography>
                                     <Typography variant="body2" gutterBottom>
                                         {pageData.howItWorksPoints.map(each => (
@@ -184,12 +184,12 @@ const LabsJsx = ({ state: pageData }) => {
             {/* A Game Changer Component Stars */}
 
             <div
-                id="report-type-heading-css"
+                id="lab-report-type-heading-css"
             >
                 {pageData.mainHeading2}
             </div>
 
-            <span id="sol-page-info-text-css">{pageData.heading2InfoText1}</span>
+            <span id="lab-sol-page-info-text-css">{pageData.heading2InfoText1}</span>
 
             <div className={classes.root2}
                 style={{ backgroundImage: `url(${pageData.backgroundImage})` }}>
@@ -233,7 +233,7 @@ const LabsJsx = ({ state: pageData }) => {
 
 
             <div>
-                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="introComponentCss">
+                <Paper sx={{ boxShadow: 0, p: 2, margin: 'auto', maxWidth: '100%' }} id="lab-introComponentCss">
                     <Grid container spacing={2}>
 
                         <Grid item xs={12} sm container>
