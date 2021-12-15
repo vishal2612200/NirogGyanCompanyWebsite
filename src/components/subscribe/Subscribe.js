@@ -153,19 +153,30 @@ const Block2 = ({ content, ...props }) => {
         getIpData();
     }, []);
 
+    // os identifier
+    var OSName = "Unknown";
+    if (window.navigator.userAgent.indexOf("Windows NT 10.0") != -1) OSName = "Windows 10";
+    if (window.navigator.userAgent.indexOf("Windows NT 6.3") != -1) OSName = "Windows 8.1";
+    if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName = "Windows 8";
+    if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName = "Windows 7";
+    if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName = "Windows Vista";
+    if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName = "Windows XP";
+    if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName = "Windows 2000";
+    if (window.navigator.userAgent.indexOf("Mac") != -1) OSName = "Mac/iOS";
+    if (window.navigator.userAgent.indexOf("X11") != -1) OSName = "UNIX";
+    if (window.navigator.userAgent.indexOf("Linux") != -1) OSName = "Linux";
+
 
     let todaysDate = new Date().toISOString().slice(0, 10)
     let message = `\nNew Subscriber: "${email}"
     \nIP Address: ${ip}
-    \nBrowser CodeName: ${navigator.appCodeName}
-    \nBrowser Name: ${navigator.appName}
-    \nBrowser Version: ${navigator.appVersion}
-    \nCookies Enabled: ${navigator.cookieEnabled}
-    \nUser-agent header: ${navigator.userAgent}
+    \nBrowser: ${navigator.appCodeName}
+    \nOperating System: ${OSName}
+    \nDate & time: ${todaysDate}
     `
 
     let formattedBody = `${message} \n\nThanks`
-    let mailToLink = `mailto:niroggyan.med@gmail.com?subject=Mailing List Subscription ${todaysDate}&body=${encodeURIComponent(encodeURI(formattedBody))}`
+    let mailToLink = `mailto:niroggyan.med@gmail.com?subject=Mailing List Subscription ${todaysDate}&body=${encodeURIComponent(formattedBody)}`
 
     const validEmailHandler = () => {
         console.log("valid email handler called.")
@@ -194,17 +205,7 @@ const Block2 = ({ content, ...props }) => {
         if (email !== "") {
             let findAtSymbol = email.indexOf("@")
             if (findAtSymbol !== -1) {
-                console.log("yes @ is present.")
-                let requiredFormat = email.split("@")[1].toLowerCase()
-                if (requiredFormat === "gmail.com") {
-                    validEmailHandler()
-                } else {
-                    setShowEmailError(true)
-                    setEmailError("Invalid Email Provided!")
-                    setTimeout(() => {
-                        setShowEmailError(false)
-                    }, 3500)
-                }
+                validEmailHandler()
             } else {
                 setShowEmailError(true)
                 setEmailError("Invalid Email Provided!")
