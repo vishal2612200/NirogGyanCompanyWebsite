@@ -10,7 +10,7 @@ export default function Solutions({ state, children }) {
     })
 
     return <React.Fragment>
-        {/* <DocumentHeader state={state.DocumentHeader} /> */}
+        <DocumentHeader state={state.DocumentHeader} />
         <SolutionJsx state={state.PageContentHolder} />
         {children}
     </React.Fragment>
