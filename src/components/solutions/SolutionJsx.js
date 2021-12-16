@@ -22,6 +22,7 @@ import Avatar from '@mui/material/Avatar';
 
 import ButtonBase from '@mui/material/ButtonBase';
 import { useHistory } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const Img = styled('img')({
@@ -105,6 +106,11 @@ const SolutionJsx = ({ state: pageData }) => {
 
     return (
         <div>
+            <Helmet>
+                <title>Solutions Page.</title>
+                <meta name="description" content="sol page description" />
+                <link rel="canonical" href="https://www.niroggyan.com/solutions" />
+            </Helmet>
 
             {/* Introduction Component Starts */}
             <div>
@@ -168,7 +174,7 @@ const SolutionJsx = ({ state: pageData }) => {
             <div id="sol-page-heading">
                 {pageData.mainHeading}
             </div>
-            
+
             <span id="sol-page-info-text">{pageData.infoText}</span>
 
             <div className={classes.root2}
