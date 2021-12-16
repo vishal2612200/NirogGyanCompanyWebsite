@@ -108,7 +108,7 @@ const SolutionJsx = ({ state: pageData }) => {
         <div>
             <Helmet>
                 <title>Solutions Page.</title>
-                <meta name="description" content="sol page description" />
+                <meta name="description" content="sol page description" data-react-helmet="true" />
                 <link rel="canonical" href="https://www.niroggyan.com/solutions" />
             </Helmet>
 
