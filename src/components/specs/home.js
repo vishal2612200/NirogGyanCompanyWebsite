@@ -7,6 +7,7 @@ const brandCrelio = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-
 const brandIqvia = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-5.jpg"
 const brandItdose = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-6.jpg"
 const brandPracto = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/logo-7.jpg"
+const brandblal = "https://i.ibb.co/zhXyLs4/Dr-B-Lal-logo.jpg"
 
 
 const brandWhatsappIcon = "https://dn96iqv3kf32j.cloudfront.net/home/static/imgs/brand-whatsapp-icon.svg"
@@ -98,6 +99,7 @@ export default (function () {
         { imagePath: brandIqvia, altText: "brandIqvia" },
         { imagePath: brandItdose, altText: "brandItdose" },
         { imagePath: brandPracto, altText: "brandPracto" },
+        { imagePath: brandblal, altText: "brandblal" },
       ],
       whatsapp: { image: { imagePath: brandWhatsappIcon, altText: "brandWhatsapp" }, url: "https://wa.me/917678277891" },
 
