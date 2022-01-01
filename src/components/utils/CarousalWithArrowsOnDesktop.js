@@ -13,6 +13,7 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     let dots = [];
+    console.log("content: ", content)
     for (let i = 0; i < content.length; i++) {
         dots.push(<BlueDot key={i} />)
     }
@@ -47,6 +48,7 @@ export default function CarousalWithArrowsOnDesktop({ card, content, numberOfSli
             onChange={(index) => setDotIndex(index)}
             slides={content.map((props, index) => (<card.type {...card.props} {...props}  />))}
         />
+
         <Grid item style={{ marginTop: "2rem" }}>
 
             {(isSmallScreen || dotsOnDeskTop) ? <Dots
