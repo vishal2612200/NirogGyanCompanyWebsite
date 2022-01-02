@@ -16,14 +16,13 @@ const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
   hydrate(
     <>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+      
       <App />
     </>
     , rootElement);
 } else {
   render(
     <>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       <App />
     </>
     , rootElement);
